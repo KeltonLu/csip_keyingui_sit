@@ -1,0 +1,510 @@
+2021-11-03 09:53:10,867 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 09:53:11,281 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 09:53:11,281 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 09:53:11,282 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 09:53:11,282 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 09:53:11,324 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 09:53:11,528 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 09:53:11,702 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 09:53:11,703 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 09:53:11,705 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 09:53:11,706 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 09:53:11,740 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 09:53:11,876 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 09:53:40,238 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 09:53:40,239 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 09:53:40,239 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 09:53:40,240 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 09:53:40,261 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 09:53:40,487 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 09:53:40,567 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 09:53:40,568 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 09:53:40,570 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 09:53:40,571 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 09:53:40,590 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 09:53:40,704 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 09:54:41,028 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 09:54:41,445 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-03 09:54:41,629 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 09:54:42,142 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；CardFlow_Default_CallEMFS SUCCESS
+2021-11-03 09:54:42,250 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 09:54:42,251 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 09:54:42,251 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 09:54:42,252 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：10
+2021-11-03 09:54:42,273 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 09:54:42,593 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 09:54:42,716 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 09:54:42,717 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 09:54:42,718 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 09:54:42,719 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 09:54:42,743 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 09:54:42,865 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 10:12:59,835 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 10:12:59,837 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 10:12:59,839 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 10:12:59,840 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 10:12:59,864 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 10:13:00,120 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 10:13:00,210 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 10:13:00,211 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 10:13:00,211 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 10:13:00,212 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 10:13:00,241 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 10:13:00,387 INFO SessionID：k0vkdw3qhi11cj0w0etarxgi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:39:42,326 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:39:46,990 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:39:46,991 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:39:46,992 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 13:39:46,993 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 13:39:47,028 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:39:47,419 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:39:47,599 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:39:47,600 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:39:47,601 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 13:39:47,602 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 13:39:47,637 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:39:49,172 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:44:11,072 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:44:11,073 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:44:11,074 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 13:44:11,074 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 13:44:11,094 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:44:11,400 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:44:11,476 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:44:11,478 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:44:11,478 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 13:44:11,479 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 13:44:11,499 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:44:11,712 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:45:32,251 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:45:32,252 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:45:32,253 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：11
+2021-11-03 13:45:32,254 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：12
+2021-11-03 13:45:32,276 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:45:32,564 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:45:32,703 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:45:32,704 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:45:32,705 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 13:45:32,705 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 13:45:32,726 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:45:33,121 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:52:24,470 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:52:24,471 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:52:24,471 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 13:52:24,472 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 13:52:24,491 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:52:24,787 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 13:52:24,878 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 13:52:24,879 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 13:52:24,880 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 13:52:24,881 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 13:52:24,912 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 13:52:25,181 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:01:44,439 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 14:01:44,981 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-03 14:01:45,162 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 14:01:45,640 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；CardFlow_Default_CallEMFS SUCCESS
+2021-11-03 14:01:45,722 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:01:45,723 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:01:45,724 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:01:45,724 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:01:45,747 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:01:45,995 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:08:51,785 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:08:51,786 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:08:51,786 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:08:51,787 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:08:51,808 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:08:52,098 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:08:52,200 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:08:52,201 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:08:52,202 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:08:52,202 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:08:52,228 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:08:52,478 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:08:58,982 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:08:58,983 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:08:58,984 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:08:58,984 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:08:59,016 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:08:59,310 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:08:59,397 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:08:59,398 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:08:59,399 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:08:59,400 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:08:59,426 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:08:59,693 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:09:04,057 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:09:04,058 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:09:04,059 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:09:04,061 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:09:04,083 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:09:04,364 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:09:04,451 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:09:04,452 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:09:04,452 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:09:04,453 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:09:04,474 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:09:05,688 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:09:38,065 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:09:38,066 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:09:38,067 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:09:38,068 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:09:38,090 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:09:38,398 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:09:38,495 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:09:38,496 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:09:38,496 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:09:38,497 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:09:38,516 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:09:38,694 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:09:42,651 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:09:42,651 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:09:42,652 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:09:42,653 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:09:42,673 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:09:42,932 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:09:43,009 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:09:43,011 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:09:43,011 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:09:43,012 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:09:43,036 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:09:43,272 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:13:17,105 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:13:17,106 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:13:17,107 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：13
+2021-11-03 14:13:17,109 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：14
+2021-11-03 14:13:17,136 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:13:17,499 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:13:17,647 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:13:17,648 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:13:17,648 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:13:17,649 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:13:17,675 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:13:18,853 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:15:28,682 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:15:28,682 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:15:28,682 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:15:28,683 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:15:28,707 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:15:29,996 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:15:30,081 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:15:30,082 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:15:30,082 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:15:30,083 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:15:30,112 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:15:30,394 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:19:06,781 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 14:19:06,898 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-03 14:19:07,088 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 14:19:07,339 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；CardFlow_Default_CallEMFS SUCCESS
+2021-11-03 14:19:07,425 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:19:07,426 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:19:07,427 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:19:07,428 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:19:07,458 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:19:07,704 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:24:15,823 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:24:15,824 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:24:15,825 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:24:15,826 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:24:15,849 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:24:16,365 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:24:16,455 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:24:16,456 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:24:16,457 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:24:16,458 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:24:16,494 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:24:16,955 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:25:42,958 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:25:42,959 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:25:42,960 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:25:42,960 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:25:42,981 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:25:43,502 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:25:43,599 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:25:43,599 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:25:43,600 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:25:43,601 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:25:43,622 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:25:43,905 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:25:56,639 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:25:56,639 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:25:56,639 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:25:56,640 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:25:56,666 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:25:57,140 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:29:42,552 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:29:42,553 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:29:42,553 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:29:42,554 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:29:42,576 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:29:44,115 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:29:44,200 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:29:44,201 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:29:44,201 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:29:44,202 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:29:44,224 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:29:44,482 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:30:55,960 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 14:30:59,078 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-03 14:30:59,276 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-03 14:30:59,520 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；CardFlow_Default_CallEMFS SUCCESS
+2021-11-03 14:30:59,617 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:30:59,619 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:30:59,620 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:30:59,620 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:30:59,645 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:31:00,598 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:03,413 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:03,414 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:03,415 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:03,415 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:03,437 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:03,764 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:03,855 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:03,855 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:03,856 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:03,856 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:03,878 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:04,125 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:12,251 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:12,252 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:12,253 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:12,254 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:12,276 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:12,515 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:12,590 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:12,591 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:12,591 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:12,592 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:12,612 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:12,842 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:16,834 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:16,835 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:16,835 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:16,836 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:16,856 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:17,130 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:17,216 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:17,217 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:17,218 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:17,218 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:17,241 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:17,521 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:38,851 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:38,852 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:38,853 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:38,854 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:38,877 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:39,174 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:39,265 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:39,266 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:39,267 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:39,268 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:39,289 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:39,532 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:43,173 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:43,173 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:43,174 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:43,175 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:43,196 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:43,469 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:43,553 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:43,554 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:43,555 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:43,555 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:43,578 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:43,795 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:47,580 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:47,580 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:47,581 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:47,582 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:47,603 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:47,894 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:47,980 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:47,981 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:47,982 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:47,983 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:48,004 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:48,554 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:52,735 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:52,736 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:52,736 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:52,737 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:52,758 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:53,036 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:53,132 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:53,133 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:53,133 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:53,134 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:53,156 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:53,394 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:57,085 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:57,086 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:57,086 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:36:57,087 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:36:57,108 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:57,361 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:36:57,463 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:36:57,465 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:36:57,466 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:36:57,467 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:36:57,506 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:36:58,177 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:37:01,918 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:37:01,919 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:37:01,919 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:37:01,920 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:37:01,942 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:37:02,225 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:37:02,313 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:37:02,314 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:37:02,315 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:37:02,316 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:37:02,336 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:37:02,554 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:37:06,763 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:37:06,764 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:37:06,765 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-03 14:37:06,766 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-03 14:37:06,787 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:37:07,078 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 14:37:07,160 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-03 14:37:07,161 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-03 14:37:07,162 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-03 14:37:07,162 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-03 14:37:07,183 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 14:37:07,426 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-03 15:43:55,603 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-11-03 15:43:55,613 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-11-03 15:43:55,613 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-11-03 15:43:55,614 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：119
+2021-11-03 15:43:55,651 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 15:43:55,792 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 15:43:56,324 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 15:43:56,652 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-11-03 15:43:56,770 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-11-03 15:43:56,773 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-11-03 15:43:56,773 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-11-03 15:43:56,774 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：32
+2021-11-03 15:43:56,802 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-03 15:43:57,240 INFO SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-11-03 15:48:39,252 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Invalid object name 'CSIP.dbo.M_USER'.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteScalar(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command, String CommandText)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& MaxRecordCount) in D:\CSIP2.0\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 182
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& TotalCount) in D:\CSIP2.0\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 812
+2021-11-03 15:48:46,165 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Object reference not set to an instance of an object.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:App_Code.opfjpdjd,
+StackTrace:   at CSIPKeyInGUI.BusinessRules_new.BRCustomer_Log.SearchCustomer_Log(String strKey, Int32 intPageIndex, Int32 intPageSize, Int32& intTotolCount, String& strMsgID) in d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\BRCustomer_Log.cs:line 106
+2021-11-03 15:48:50,018 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Invalid object name 'CSIP.dbo.M_USER'.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteScalar(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command, String CommandText)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& MaxRecordCount) in D:\CSIP2.0\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 182
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& TotalCount) in D:\CSIP2.0\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 812
+2021-11-03 15:48:56,403 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Object reference not set to an instance of an object.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:App_Code.opfjpdjd,
+StackTrace:   at CSIPKeyInGUI.BusinessRules_new.BRCustomer_Log.SearchCustomer_Log(String strKey, Int32 intPageIndex, Int32 intPageSize, Int32& intTotolCount, String& strMsgID) in d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\BRCustomer_Log.cs:line 106
+2021-11-03 15:49:07,729 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Invalid object name 'CSIP.dbo.M_USER'.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteScalar(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command, String CommandText)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& MaxRecordCount) in D:\CSIP2.0\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 182
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& TotalCount) in D:\CSIP2.0\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 812
+2021-11-03 15:49:14,033 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Object reference not set to an instance of an object.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:App_Code.opfjpdjd,
+StackTrace:   at CSIPKeyInGUI.BusinessRules_new.BRCustomer_Log.SearchCustomer_Log(String strKey, Int32 intPageIndex, Int32 intPageSize, Int32& intTotolCount, String& strMsgID) in d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\BRCustomer_Log.cs:line 106
+2021-11-03 15:49:33,284 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Invalid object name 'CSIP.dbo.M_USER'.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteScalar(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command, String CommandText)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& MaxRecordCount) in D:\CSIP2.0\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 182
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& TotalCount) in D:\CSIP2.0\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 812
+2021-11-03 15:49:34,709 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Object reference not set to an instance of an object.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:App_Code.opfjpdjd,
+StackTrace:   at CSIPKeyInGUI.BusinessRules_new.BRCustomer_Log.SearchCustomer_Log(String strKey, Int32 intPageIndex, Int32 intPageSize, Int32& intTotolCount, String& strMsgID) in d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\BRCustomer_Log.cs:line 106
+2021-11-03 15:49:45,043 INFO  Message：Application and Jobs End
+2021-11-03 15:50:02,536 INFO  Message：Application and Jobs End
+2021-11-03 15:51:26,441 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Invalid object name 'CSIP.dbo.M_USER'.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteScalar(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteScalar(DbCommand command, String CommandText)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& MaxRecordCount) in D:\CSIP2.0\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 182
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command, Int32 PageIndex, Int32 PageSize, Int32& TotalCount) in D:\CSIP2.0\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 812
+2021-11-03 15:51:43,023 ERROR SessionID：52dyqdkvhguijhr52rt1iw1p UserID：Z00040883 FunctionID：02010000 Layer：BusinessRule Message：Object reference not set to an instance of an object.,
+Type:CSIPKeyInGUI.EntityLayer.EntityCUSTOMER_LOG, 
+Source:App_Code.higwurfi,
+StackTrace:   at CSIPKeyInGUI.BusinessRules_new.BRCustomer_Log.SearchCustomer_Log(String strKey, Int32 intPageIndex, Int32 intPageSize, Int32& intTotolCount, String& strMsgID) in d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\BRCustomer_Log.cs:line 106
+2021-11-03 15:52:38,305 INFO  Message：Application and Jobs End
+2021-11-03 15:52:39,598 INFO  Message：Application and Jobs End
+2021-11-03 15:52:51,225 INFO  Message：Application and Jobs End
+2021-11-03 15:53:08,054 INFO  Message：Application and Jobs End
+2021-11-03 15:53:13,894 INFO  Message：Application and Jobs End
+2021-11-03 15:53:25,820 INFO  Message：Application and Jobs End

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value=""/>
+    <data id="applicationId" value="CSIP"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="P4A_JC68"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="FUNCTION_CODE" value=""/>            
+      <data id="MESSAGE_TYPE" value=""/>
+      <data id="PROGRAM_ID" value="JCGUA68"/>
+      <data id="USER_ID" value=""/>
+      <data id="TRAN_ID" value="JC68"/>
+      <data id="ID" value=""/>
+      <data id="MESSAGE_CHI" value=""/>
+      <data id="LONG_NAME" value=""/>
+      <data id="PINYIN_NAME" value=""/>         
+    </msgBody>
+  </line>
+</hostgateway>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="EMFS-YGFzY9tE5e8MSPHJzsm-5qZ04858"/>
+    <data id="applicationId" value="EMFS"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="PCMM_P4_sessionA"/>
+  </header>
+  <body>
+    <data id="Shop_Id" value=""/>
+    <data id="MerchantName" value="１１１１１１１１１１１１１１"/>
+      <data id="EnglishName" value="222222222222222222222222"/>
+      <data id="Introduces" value="ｋｇｈ"/>
+      <data id="JunctionPersonTel1" value="777"/>
+      <data id="JunctionPersonTel2" value="7777777"/>
+      <data id="JunctionPersonTel3" value="77777"/>
+      <data id="Commadd1" value="３３３"/>
+      <data id="Comaddr2" value="ｋｋｋｋｋｋｋｋｋｋｋｋｋｋ"/>
+      <data id="Zip" value="200"/>
+      <data id="UndertakerEngName" value="fgdfgdfgdfgdgdfgdfgdfgdfg"/>
+      <data id="HOLDSTMT" value="9"/>
+      <data id="IntroduceFlag" value="12345"/>
+      <data id="Result" value=""/>
+      <data id="RecordName" value="測試股份有限公司"/>
+      <data id="BusinessName" value="測試"/>
+      <data id="Undertaker" value="95133.00"/>
+      <data id="UndertakerID" value="20050110"/>
+      <data id="UndertakerTel1" value="256927.00"/>
+      <data id="UndertakerTel2" value="A100076201"/>
+      <data id="UndertakerTel3" value="20050923"/>
+      <data id="UndertakerAdd1" value="70585.00"/>
+      <data id="UndertakerAdd2" value="10000022"/>
+      <data id="UndertakerAdd3" value="22222"/>
+      <data id="RealPerson" value=""/>
+      <data id="RealPersonID" value="0.00"/>
+      <data id="RealPersonTel1" value="20031001"/>
+      <data id="RealPersonTel2" value="鞏一瀅"/>
+      <data id="RealPersonTel3" value="777777777777777777777777"/>
+      <data id="JunctionPerson" value="01"/>
+      <data id="JunctionPersonFax1" value="234"/>
+      <data id="JunctionPersonFax2" value="95133.00"/>
+      <data id="JunctionPersonRecadd1" value="19230128"/>
+      <data id="JunctionPersonRecadd2" value=""/>
+      <data id="JunctionPersonRecadd3" value="JCEI"/>
+      <data id="JunctionPersonRealadd1" value="01"/>
+      <data id="JunctionPersonRealadd2" value="Z60005"/>
+      <data id="JunctionPersonRealadd3" value="311.00"/>
+      <data id="Black" value="1"/>
+      <data id="Class" value="22815.00"/>
+      <data id="RealaddZip" value="20031002"/>
+      <data id="InvoiceCycle" value="350000"/>
+      <data id="tdShopID" value="95133.00"/>
+      <data id="ShopName" value="台北縣永和市"/>
+      <data id="Moddate" value="A100076201"/>
+      <data id="STATUS- 07" value="1"/>
+      <data id="STATUS- 08" value="1"/>
+      <data id="STATUS- 01" value="1"/>
+      <data id="STATUS- 02" value="1"/>
+      <data id="STATUS- 03" value="1"/>
+      <data id="STATUS- 04" value="1"/>
+      <data id="STATUS- 05" value="1"/>
+      <data id="STATUS- 06" value="1"/>
+      <data id="STATUS- 13" value="1"/>
+      <data id="STATUS- 14" value="1"/>
+      <data id="STATUS- 09" value="1"/>
+      <data id="STATUS- 10" value="1"/>
+      <data id="STATUS- 11" value="1"/>
+      <data id="STATUS- 12" value="1"/>
+      <data id="STATUS- 15" value="1"/>
+      <data id="Flag- 01" value="1"/>
+      <data id="Flag- 02" value="1"/>
+      <data id="Flag- 03" value="1"/>
+      <data id="Flag- 04" value="1"/>
+      <data id="Flag- 05" value="1"/>
+      <data id="Flag- 06" value="1"/>
+      <data id="Flag- 07" value="1"/>
+      <data id="Flag- 08" value="1"/>
+      <data id="Flag- 09" value="1"/>
+      <data id="Flag- 10" value="1"/>
+      <data id="Flag- 11" value="1"/>
+      <data id="Flag- 12" value="1"/>
+      <data id="Flag- 13" value="1"/>
+      <data id="Flag- 14" value="1"/>
+      <data id="Flag- 15" value="1"/>
+      <data id="Fee01" value="2"/>
+      <data id="Fee02" value="2"/>
+      <data id="Fee03" value="2"/>
+      <data id="Fee04" value="2"/>
+      <data id="Fee05" value="2"/>
+      <data id="Fee06" value="2"/>
+      <data id="Fee07" value="2"/>
+      <data id="Fee08" value="2"/>
+      <data id="Fee09" value="2"/>
+      <data id="Fee10" value="2"/>
+      <data id="Fee11" value="2"/>
+      <data id="Fee12" value="2"/>
+      <data id="Fee13" value="2"/>
+      <data id="Fee14" value="2"/>
+      <data id="Fee15" value="2"/>
+      <data id="ddano1" value="334440"/>
+      <data id="ddano2" value="234454545"/>
+      <data id="BankName" value="sdfsdfs"/>
+      <data id="BranchName" value="aaaaa"/>
+      <data id="CheckNum" value="20020805"/>
+      <data id="Account" value="D"/>
+      <data id="CancelDate" value="0968123456"/>
+      <data id="CancelCode1" value="9"/>
+      <data id="CancelCode2" value="1"/>
+      <data id="user1 codes-3" value="0"/>
+      <data id="Imp1Count" value="20020805"/>
+      <data id="Pos1Count" value="D"/>
+      <data id="Edc1Count" value="0968123456"/>
+      <data id="Imp2Count" value="1"/>
+      <data id="Pos2Count" value="1"/>
+      <data id="EdcCount" value="1"/>
+      <data id="EdcType" value="0"/>
+      <data id="IMP(18-17)" value="NO"/>
+      <data id="IMP(18-25)" value="001"/>
+      <data id="IMP(18-38)" value="000"/>
+      <data id="IMP(18-44)" value="000"/>
+      <data id="POS(19-17)" value="001"/>
+      <data id="POS(19-38)" value="000"/>
+      <data id="POS(19-25)" value="001"/>
+      <data id="POS(19-44)" value="000"/>
+      <data id="EDC(20-17)" value="001"/>
+      <data id="EDC(20-38)" value="000"/>
+      <data id="EDC(20-25)" value="001"/>
+      <data id="EDC(20-44)" value="000"/>
+      <data id="ImpMoney" value="000"/>
+      <data id="PosMoney" value="000"/>
+      <data id="EdcMoney" value="000"/>
+      <data id="Imp1" value="000"/>
+      <data id="Imp2" value="000"/>
+      <data id="Pos1" value="000"/>
+      <data id="Pos2" value="000"/>
+      <data id="Edc1" value="000"/>
+      <data id="Edc2" value="000"/>
+      <data id="CheckNumS" value="000"/>
+    </body>
+    </hostgateway>
+

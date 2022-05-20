@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4D_PCTI" />
+  </header>
+  <line no="1">
+    <msgBody>
+      <data id="TRAN_ID" value="PCTI" />
+      <data id="USER_ID" value="" />
+      <data id="FUNCTION_ID" value="PCMH1" />
+      <data id="CARD_NO" value="" />
+      <data id="CARD_CODE" value="" />
+      <data id="CARD_DATA" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="BLOCK_CODE" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="PAYMENT_TYPE" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="FIXED_PAYMENT" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="CURR" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="XDAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="30DAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="60DAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="90DAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="120DAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="150DAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="180DAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="210DAY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="HIST" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="CHPM_CODE" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="CATEGORY" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="MEMO" value="" />
+
+      <!--以下為一定會出現的tag-->
+      <data id="ERR_MSG_NO" value="" />
+      <data id="ERR_MSG_CODE" value="999" />
+      <data id="ERR_MSG_DATA" value="00999" />
+    </msgBody>
+  </line>
+</hostgateway>
+

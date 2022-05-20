@@ -1,0 +1,640 @@
+2022-04-15 09:34:39,307 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 283 毫秒
+2022-04-15 09:34:39,313 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 09:34:39,315 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 09:37:32,054 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 91 毫秒
+2022-04-15 09:37:32,054 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 09:37:32,054 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 09:38:10,837 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 97 毫秒
+2022-04-15 09:38:10,837 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 09:38:10,838 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:05:25,414 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 109 毫秒
+2022-04-15 10:05:25,415 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 10:05:25,415 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:06:14,430 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 106 毫秒
+2022-04-15 10:06:14,430 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 10:06:14,430 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:06:28,351 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 98 毫秒
+2022-04-15 10:06:28,351 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 10:06:28,351 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:07:19,950 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 148 毫秒
+2022-04-15 10:07:19,951 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 10:07:19,951 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:07:40,229 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 114 毫秒
+2022-04-15 10:07:40,230 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 10:07:40,230 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:07:51,497 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 106 毫秒
+2022-04-15 10:07:51,497 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 10:07:51,497 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:08:05,467 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 98 毫秒
+2022-04-15 10:08:05,468 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 10:08:05,468 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 10:11:14,485 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 76 毫秒
+2022-04-15 10:11:14,486 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.HCOP_HEADQUATERS_CORP_NO = @TaxNo  ) V  order by CASE_NO desc 
+2022-04-15 10:11:14,486 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@TaxNo 參數值：00356326；
+2022-04-15 10:11:25,752 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 93 毫秒
+2022-04-15 10:11:25,753 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.HCOP_HEADQUATERS_CORP_NO = @TaxNo  ) V  order by CASE_NO desc 
+2022-04-15 10:11:25,753 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@TaxNo 參數值：00356326；
+2022-04-15 10:11:28,199 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 93 毫秒
+2022-04-15 10:11:28,199 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.HCOP_HEADQUATERS_CORP_NO = @TaxNo  ) V  order by CASE_NO desc 
+2022-04-15 10:11:28,199 INFO SessionID：jh0siayffg0n55urybaqphdf UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@TaxNo 參數值：00356326；
+2022-04-15 13:59:15,053 INFO SessionID：4yd3ylrtsc335zy0gtqy2cjr UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 233 毫秒
+2022-04-15 13:59:15,085 INFO SessionID：4yd3ylrtsc335zy0gtqy2cjr UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 13:59:15,085 INFO SessionID：4yd3ylrtsc335zy0gtqy2cjr UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 13:59:34,305 INFO SessionID：4yd3ylrtsc335zy0gtqy2cjr UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 80 毫秒
+2022-04-15 13:59:34,305 INFO SessionID：4yd3ylrtsc335zy0gtqy2cjr UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.HCOP_HEADQUATERS_CORP_NO = @TaxNo  ) V  order by CASE_NO desc 
+2022-04-15 13:59:34,306 INFO SessionID：4yd3ylrtsc335zy0gtqy2cjr UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@TaxNo 參數值：00356326；
+2022-04-15 14:16:42,401 INFO  Message：Application and Jobs End
+2022-04-15 14:16:55,907 INFO  Message：Application and Jobs End
+2022-04-15 16:08:19,425 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 188 毫秒
+2022-04-15 16:08:19,436 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:08:19,437 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:11:53,446 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 185 毫秒
+2022-04-15 16:11:53,446 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:11:53,446 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:14:10,289 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 151 毫秒
+2022-04-15 16:14:10,289 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:14:10,289 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:14:26,850 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 101 毫秒
+2022-04-15 16:14:26,851 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:14:26,851 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:14:39,440 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 119 毫秒
+2022-04-15 16:14:39,440 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:14:39,441 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:15:58,432 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 125 毫秒
+2022-04-15 16:15:58,432 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:15:58,433 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:19:20,067 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 112 毫秒
+2022-04-15 16:19:20,067 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:19:20,068 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:27:05,932 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 109 毫秒
+2022-04-15 16:27:05,932 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 16:27:05,933 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========
+2022-04-15 16:27:16,567 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 310 毫秒
+2022-04-15 16:27:16,567 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.CASE_NO = @CaseNo  ) V  order by CASE_NO desc 
+2022-04-15 16:27:16,567 INFO SessionID：zahwu1w2tl0bhjw1laxahr03 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@CaseNo 參數值：20211101000004；
+2022-04-15 16:34:49,257 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 81 毫秒
+2022-04-15 16:34:49,257 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.CASE_NO = @CaseNo  ) V  order by CASE_NO desc 
+2022-04-15 16:34:49,257 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@CaseNo 參數值：20211101000004；
+2022-04-15 16:36:12,255 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 129 毫秒
+2022-04-15 16:36:12,255 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.CASE_NO = @CaseNo  ) V  order by CASE_NO desc 
+2022-04-15 16:36:12,256 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@CaseNo 參數值：20211101000004；
+2022-04-15 16:44:34,611 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 112 毫秒
+2022-04-15 16:44:34,611 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.CASE_NO = @CaseNo  ) V  order by CASE_NO desc 
+2022-04-15 16:44:34,611 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@CaseNo 參數值：20211101000004；
+2022-04-15 16:44:39,515 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 56 毫秒
+2022-04-15 16:44:39,515 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  and  A.CASE_NO = @CaseNo  ) V  order by CASE_NO desc 
+2022-04-15 16:44:39,516 INFO SessionID：23pqcqkdh2y31hqcuzsh3qk1 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========參數名：@CaseNo 參數值：20220330800003；
+2022-04-15 17:33:53,967 INFO SessionID：yu1imv53cs00bgvtjypempc4 UserID：1 FunctionID：01080114 Message：結案案件列表-查詢，耗時： 291 毫秒
+2022-04-15 17:33:53,967 INFO SessionID：yu1imv53cs00bgvtjypempc4 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 語法如下========== WITH NOTELOG_DISTINCT (CASE_NO,NL_DATETIME)
+	                        AS (
+				                        SELECT NL_CASE_NO AS CASE_NO,MAX(NL_DATETIME) NL_DATETIME 
+				                        FROM NOTELOG  A WITH(NOLOCK) JOIN AML_HQ_WORK  B WITH(NOLOCK) ON  A.NL_CASE_NO = B.CASE_NO AND B.[CaseProcess_Status] IN ('2','23','24','25')
+				                        WHERE NL_TYPE IN ('CaseOK' ,'NonCooperatedDone','CaseClosedDone','OtherClosedDone')
+				                        GROUP BY NL_CASE_NO 
+	                        )       select   ROW_NUMBER() OVER( order by CASE_NO desc ) AS Row# ,  * from (      SELECT  
+                                            A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,  RTRIM(LTRIM(A.HCOP_REG_NAME)) as HCOP_REG_NAME ,b.OriginalRiskRanking
+                                            ,b.DataDate, 
+                                             case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+                                             dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+                                            ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+                                            ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+											(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+                                            ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO  + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo, C.Incorporated,D.NL_DateTime
+                                            FROM AML_HQ_Work A  WITH(NOLOCK) JOIN AML_Edata_Work B  WITH(NOLOCK)  on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+                                             left join AML_Cdata_Work C  WITH(NOLOCK)  on C.CustomerID = b.CustomerID
+                                            JOIN NOTELOG_DISTINCT XL ON XL.CASE_NO = B.CASE_NO 
+                                             INNER JOIN NoteLog D  WITH(NOLOCK)   ON D.NL_CASE_NO =XL.CASE_NO AND D.NL_DATETIME = XL.NL_DATETIME 
+                                            WHERE B.[HomeBranch] ='0049'   and  [CaseProcess_Status] IN ('2','23','24','25')  ) V  order by CASE_NO desc 
+2022-04-15 17:33:53,967 INFO SessionID：yu1imv53cs00bgvtjypempc4 UserID：1 FunctionID：01080114 Message：==========結案案件列表-查詢 SQL 參數如下==========

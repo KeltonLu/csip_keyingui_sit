@@ -1,0 +1,13 @@
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\CSIPKeyInGUI.Entity.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\CSIPKeyInGUI.Entity.pdb
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\Framework.Common.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\Framework.Data.OM.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\Framework.WebControls.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\ldapapi.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\CSIPCommonModel.BaseItem.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\bin\Release\nunit.framework.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\obj\Release\Entity.csprojAssemblyReference.cache
+D:\CSIP2.0\csip_keyingui_sit\Entity\obj\Release\Entity.csproj.CoreCompileInputs.cache
+D:\CSIP2.0\csip_keyingui_sit\Entity\obj\Release\Entity.csproj.CopyComplete
+D:\CSIP2.0\csip_keyingui_sit\Entity\obj\Release\CSIPKeyInGUI.Entity.dll
+D:\CSIP2.0\csip_keyingui_sit\Entity\obj\Release\CSIPKeyInGUI.Entity.pdb

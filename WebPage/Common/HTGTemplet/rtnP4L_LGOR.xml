@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+	<header>
+		<action type="transaction" />
+		<data id="sessionId" value="" />
+		<data id="applicationId" value="CSIP" />
+		<data id="luType" value="LU62" />
+		<data id="transactionId" value="P4L_LGOR" />
+	</header>
+	<line no="1">
+		<msgBody>
+			<data id="TRAN_ID" value="" />
+			<data id="PROGRAM_ID" value="" />
+			<data id="USER_ID" value="" />
+			<data id="FUNCTION_CODE" value="" />
+			<data id="MSG_SEQ" value="" />
+			<data id="MSG_ERR" value="" />
+			<data id="IN_ORG" value="" />
+			<data id="IN_MERCHANT" value="" />
+			<data id="IN_PROD_CODE" value="" />
+			<data id="IN_CARD_TYPE" value="" />
+			<data id="PROGID" value="" />
+			<data id="MERRATE" value="" />
+			<data id="LIMITR" value="" />
+			<data id="CHPOINT" value="" />
+			<data id="CHAMT" value="" />
+			<data id="USER_EXIT" value="" />
+			<data id="CYLCO" value="" />
+			<data id="STARTU" value="" />
+			<data id="ENDU" value="" />
+			<data id="LIMITU" value="" />
+			<data id="CHPOINTU" value="" />
+			<data id="CHAMTU" value="" />
+			<data id="BIRTH" value="" />
+			<data id="STARTB" value="" />
+			<data id="ENDB" value="" /> 
+			<data id="LIMITB" value="" />
+			<data id="CHPOINTB" value="" />
+			<data id="CHAMTB" value="" />
+		</msgBody>
+	</line>
+</hostgateway>

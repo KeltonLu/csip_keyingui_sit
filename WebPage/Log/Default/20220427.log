@@ -1,0 +1,195 @@
+2022-04-27 09:40:38,522 INFO SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-27 09:41:00,402 ERROR SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-27 09:41:09,110 ERROR SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：Util Message：System.NullReferenceException: Object reference not set to an instance of an object.
+   at Page_P010801030001.showeditDate() in d:\中信專案檔\csip_keyingui_sit\WebPage\Page\P010801030001.aspx.cs:line 1463
+2022-04-27 09:41:21,569 INFO SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-27 09:41:43,320 ERROR SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-27 09:41:53,965 ERROR SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：Util Message：System.NullReferenceException: Object reference not set to an instance of an object.
+   at Page_P010801030001.showeditDate() in d:\中信專案檔\csip_keyingui_sit\WebPage\Page\P010801030001.aspx.cs:line 1463
+2022-04-27 09:43:18,324 INFO SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-27 09:43:39,518 ERROR SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-27 09:43:39,519 ERROR SessionID：nnd4gez3d0hroaw5wponpkvm UserID：1 FunctionID：01080103 Layer：Util Message：System.NullReferenceException: Object reference not set to an instance of an object.
+   at Page_P010801030001.showeditDate() in d:\中信專案檔\csip_keyingui_sit\WebPage\Page\P010801030001.aspx.cs:line 1463
+2022-04-27 09:46:40,932 INFO  Message：Application and Jobs End
+2022-04-27 10:15:06,466 INFO  Message：Application and Jobs End
+2022-04-27 10:15:19,832 INFO  Message：Application and Jobs End
+2022-04-27 10:17:44,845 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：getRtnHostBegin
+2022-04-27 10:17:44,858 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：FALSE 
+2022-04-27 10:17:44,858 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：9
+2022-04-27 10:17:44,858 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：295
+2022-04-27 10:17:44,992 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：getRtnHostEnd
+2022-04-27 10:17:44,994 ERROR SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：P4A_JC66:主機電文錯誤
+2022-04-27 10:18:34,714 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：getRtnHostBegin
+2022-04-27 10:18:34,720 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：FALSE 
+2022-04-27 10:18:34,724 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：9
+2022-04-27 10:18:34,725 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：295
+2022-04-27 10:18:34,905 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：getRtnHostEnd
+2022-04-27 10:18:34,905 ERROR SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：P4A_JC66:主機電文錯誤
+2022-04-27 10:41:53,378 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：getRtnHostBegin
+2022-04-27 10:41:53,630 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：FALSE 
+2022-04-27 10:41:53,631 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：9
+2022-04-27 10:41:53,631 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：295
+2022-04-27 10:41:54,041 INFO SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：getRtnHostEnd
+2022-04-27 10:41:54,042 ERROR SessionID：4mg4uuyzpmjox35jd3v2qcag UserID：1 FunctionID：01080103 Layer：HTG Message：P4A_JC66:主機電文錯誤
+2022-04-27 12:05:06,545 INFO  Message：Application and Jobs End
+2022-04-27 16:17:49,354 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:17:49,365 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:17:49,366 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:17:49,366 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:17:49,428 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:17:49,468 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-27 16:17:49,468 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:19:06,373 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:19:06,373 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:19:06,373 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:19:06,373 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:19:06,409 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:19:06,442 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-27 16:19:06,443 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:21:49,076 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:21:49,292 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:21:49,505 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:21:49,729 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:21:50,179 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:23:11,936 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-27 16:23:11,936 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:23:24,881 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:23:24,881 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:23:24,882 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:23:24,882 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:23:24,918 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:23:45,596 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-27 16:25:34,720 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:25:37,695 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:25:37,695 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:25:37,695 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:25:37,696 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:25:37,732 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:26:12,474 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-27 16:26:12,475 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:26:15,236 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:26:15,236 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:26:15,237 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:26:15,238 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:26:15,274 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:26:22,964 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-27 16:26:22,964 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:26:25,593 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:26:25,593 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:26:25,593 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:26:25,593 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:26:25,632 INFO SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:28:21,490 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-27 16:28:21,490 ERROR SessionID：y4fob2f4tycyxziix13wdwx3 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:29:23,507 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:29:23,507 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:29:23,507 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:29:23,507 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:29:23,649 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:29:37,879 ERROR SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_USER'  Key being added: 'CREATE_USER'
+2022-04-27 16:29:37,879 ERROR SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:29:48,144 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:29:48,144 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:29:48,144 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:29:48,144 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:29:48,182 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:30:30,098 ERROR SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_USER'  Key being added: 'CREATE_USER'
+2022-04-27 16:30:30,098 ERROR SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:30:35,471 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:30:35,471 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:30:35,472 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:30:35,472 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:30:35,507 INFO SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:30:55,507 ERROR SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_USER'  Key being added: 'CREATE_USER'
+2022-04-27 16:30:55,507 ERROR SessionID：0pftorrby3fxgsgvmuykf5ct UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:34:08,086 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:34:08,086 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:34:08,087 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:34:08,087 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:34:08,182 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:34:20,203 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'SPL_76'  Key being added: 'SPL_76'
+2022-04-27 16:34:20,211 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:34:36,887 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:34:36,887 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:34:36,888 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:34:36,888 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:34:36,923 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:34:36,955 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'SPL_76'  Key being added: 'SPL_76'
+2022-04-27 16:34:36,955 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:34:43,929 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:34:43,930 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:34:43,930 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:34:43,930 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:34:43,993 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:35:58,660 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'SPL_76'  Key being added: 'SPL_76'
+2022-04-27 16:35:58,661 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:36:37,303 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:36:37,303 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:36:37,303 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:36:37,304 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:36:37,342 INFO SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:36:44,235 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'SPL_76'  Key being added: 'SPL_76'
+2022-04-27 16:36:44,236 ERROR SessionID：0cr5tx2ust5mmyotvmt0ldev UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:37:56,273 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:37:56,273 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:37:56,274 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:37:56,274 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:37:56,418 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:37:56,451 ERROR SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'UPDATE_DATE'  Key being added: 'UPDATE_DATE'
+2022-04-27 16:37:56,451 ERROR SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:38:06,163 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:38:06,163 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:38:06,163 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:38:06,163 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:38:06,201 INFO SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:38:10,671 ERROR SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'UPDATE_DATE'  Key being added: 'UPDATE_DATE'
+2022-04-27 16:38:10,672 ERROR SessionID：0svscubxnuldsmbkxtkl511o UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-27 16:39:08,553 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:39:08,553 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:39:08,554 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:39:08,554 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:39:08,686 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:39:58,128 ERROR SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤
+2022-04-27 16:41:01,910 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:41:01,910 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:41:01,911 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:41:01,911 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:41:01,946 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:41:01,946 ERROR SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤
+2022-04-27 16:42:59,661 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:42:59,661 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:42:59,661 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:42:59,661 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:42:59,698 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:42:59,699 ERROR SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤
+2022-04-27 16:43:19,525 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:43:19,525 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:43:19,526 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:43:19,526 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:43:19,561 INFO SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:44:16,833 ERROR SessionID：4gl5vivtq0bwoxa2bhsvsfql UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤
+2022-04-27 16:47:08,600 INFO SessionID：jl4txe041zokukrjuus2apgz UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:47:08,600 INFO SessionID：jl4txe041zokukrjuus2apgz UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:47:08,601 INFO SessionID：jl4txe041zokukrjuus2apgz UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:47:08,601 INFO SessionID：jl4txe041zokukrjuus2apgz UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:47:08,640 INFO SessionID：jl4txe041zokukrjuus2apgz UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:51:44,448 INFO SessionID：qawzjqwke2ewo4xe1n3bxddi UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:51:44,449 INFO SessionID：qawzjqwke2ewo4xe1n3bxddi UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:51:44,449 INFO SessionID：qawzjqwke2ewo4xe1n3bxddi UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:51:44,449 INFO SessionID：qawzjqwke2ewo4xe1n3bxddi UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:51:44,486 INFO SessionID：qawzjqwke2ewo4xe1n3bxddi UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:54:18,084 INFO SessionID：vgov3sezsxswe1q4bf1ez2kb UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:54:18,084 INFO SessionID：vgov3sezsxswe1q4bf1ez2kb UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:54:18,085 INFO SessionID：vgov3sezsxswe1q4bf1ez2kb UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:54:18,085 INFO SessionID：vgov3sezsxswe1q4bf1ez2kb UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:54:18,122 INFO SessionID：vgov3sezsxswe1q4bf1ez2kb UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:55:14,761 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:55:14,761 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:55:14,761 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:55:14,762 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:55:14,801 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-27 16:55:58,294 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-27 16:55:58,294 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-27 16:55:58,294 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-27 16:55:58,295 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-27 16:55:58,329 INFO SessionID：syb4qex5mulu3bfhgoek4l1e UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd

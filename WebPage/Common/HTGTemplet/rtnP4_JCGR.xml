@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4_JCGR" />
+  </header>
+  <line no="1">
+    <msgBody>
+      <data id="TRAN_ID" value="" />
+      <data id="PROGRAM_ID" value="" />
+      <data id="USER_ID" value="" />
+      <data id="MESSAGE_TYPE" value="0000" />
+      <data id="MESSAGE_CHI" value="" />
+      <data id="FUNCTION_CODE" value="" />
+      <data id="MERCHANT_NO" value="" />
+      <data id="BUILD_DATE" value="" />
+      <data id="MERCHANDISE" value="" />
+      <data id="CREDIT_NO" value="" />
+      <data id="CAPITAL" value="" />
+      <data id="REG_NAME" value="測試股份有限公司" />
+      <data id="ORGAN_TYPE" value="" />
+      <data id="MERCH_PICT" value="" />
+      <data id="BUSINESS_NAME" value="測試" />
+      <data id="RISK_FLAG" value="" />
+      <data id="DISOBEY" value="" />
+      <data id="DDA_BANK_NAME" value="" />
+      <data id="DDA_BANK_BRANCH" value="" />
+      <data id="CHECK_CODE" value="" />
+      <data id="MERCH_VCR" value="" />
+      <data id="DDA_ACCT_NAME" value="" />
+      <data id="OWNER_NAME" value="" />
+      <data id="OWNER_ID" value="" />
+      <data id="OWNER_PHONE_AREA" value="" />
+      <data id="OWNER_PHONE_NO" value="" />
+      <data id="OWNER_PHONE_EXT" value="" />
+      <data id="OWNER_CITY" value="" />
+      <data id="OWNER_ADDR1" value="" />
+      <data id="OWNER_ADDR2" value="" />
+      <data id="MANAGER_NAME" value="" />
+      <data id="MANAGER_ID" value="" />
+      <data id="MANAGER_PHONE_AREA" value="" />
+      <data id="MANAGER_PHONE_NO" value="" />
+      <data id="MANAGER_PHONE_EXT" value="" />
+      <data id="REMITTANCE_NAME" value="" />
+      <data id="REMITTANCE_ID" value="" />
+      <data id="PROJECT_NO" value="" />
+      <data id="CONTACT_NAME" value="" />
+      <data id="CONTACT_PHONE_AREA" value="" />
+      <data id="CONTACT_PHONE_NO" value="" />
+      <data id="CONTACT_PHONE_EXT" value="" />
+      <data id="FAX_AREA" value="" />
+      <data id="FAX_PHONE_NO" value="" />
+      <data id="REG_CITY" value="" />
+      <data id="REG_ADDR1" value="" />
+      <data id="REG_ADDR2" value="" />
+      <data id="REAL_CITY" value="" />
+      <data id="REAL_ADDR1" value="" />
+      <data id="REAL_ADDR2" value="" />
+      <data id="REAL_ZIP" value="" />
+      <data id="REDEEM_CYCLE" value="" />
+      <data id="IMPRINTER_TYPE1" value="" />
+      <data id="IMPRINTER_TYPE2" value="" />
+      <data id="IMPRINTER_QTY1" value="" />
+      <data id="IMPRINTER_QTY2" value="" />
+      <data id="IMPRINTER_DEPO" value="" />
+      <data id="POS_TYPE1" value="" />
+      <data id="POS_TYPE2" value="" />
+      <data id="POS_QTY1" value="" />
+      <data id="POS_QTY2" value="" />
+      <data id="POS_DEPO" value="" />
+      <data id="EDC_TYPE1" value="" />
+      <data id="EDC_TYPE2" value="" />
+      <data id="EDC_QTY1" value="" />
+      <data id="EDC_QTY2" value="" />
+      <data id="EDC_DEPO" value="" />
+      <data id="BLACK_CODE" value="" />
+      <data id="BLACK_QTY" value="" />
+      <data id="SALE_NAME" value="" />
+      <data id="JOINT_TYPE" value="" />
+      <data id="INVOICE_CYCLKE" value="" />
+      <data id="CORP_NO" value="" />
+      <data id="CORP_SEQ" value="" />
+      <data id="APPL_NO" value="" />
+      <data id="MERCHANT_TYPE" value="" />
+      <data id="MARGIN_FLAG" value="" />
+      <data id="USER_DATA" value="" />
+      <data id="FILE_NO" value="" />
+      <data id="UPDATE_DATE" value="" />
+      <data id="UPDATE_USER" value="" />
+      <data id="APPROVED_DATE" value="" />
+      <data id="REG_ZIP_CODE" value=""/>
+      <data id="LAST_UPD_BRANCH" value=""/>
+      <data id="LAST_UPD_CHECKER" value=""/>
+      <data id="LAST_UPD_MAKER" value=""/>
+      <data id="LAST_UPD_SOURCE" value="CSIPJCGR"/>
+    </msgBody>
+  </line>
+</hostgateway>

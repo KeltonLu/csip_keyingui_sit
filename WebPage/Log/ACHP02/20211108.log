@@ -1,0 +1,58 @@
+2021-11-08 15:23:56,845 INFO  Layer：BusinessRule Message：ACHP02JOB啟動,
+
+2021-11-08 15:23:56,916 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2021-11-08 15:23:56,917 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2021-11-08 15:23:56,918 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2021-11-08 15:23:56,936 INFO  Layer：BusinessRule Message：開始清空DB ACHP02_Tmp,
+
+2021-11-08 15:23:56,956 INFO  Layer：BusinessRule Message：清空DB ACHP02_Tmp：成功！,
+
+2021-11-08 15:23:56,957 INFO  Layer：BusinessRule Message：開始新增ACHP02_Tmp資料[表頭],
+
+2021-11-08 15:23:56,963 INFO  Layer：BusinessRule Message：新增ACHP02_Tmp資料[表頭]:成功！(總共1筆),
+
+2021-11-08 15:23:56,964 INFO  Layer：BusinessRule Message：開始新增ACHP02_Tmp資料[來源:Other_Bank_Temp],
+
+2021-11-08 15:23:56,972 INFO  Layer：BusinessRule Message：新增ACHP02_Tmp資料[來源:Other_Bank_Temp]:成功！(總共3筆),
+
+2021-11-08 15:23:56,972 INFO  Layer：BusinessRule Message：開始更新ACHP02_Tmp資料,
+
+2021-11-08 15:23:56,979 INFO  Layer：BusinessRule Message：更新ACHP02_Tmp資料:成功！(總共3筆),
+
+2021-11-08 15:23:56,979 INFO  Layer：BusinessRule Message：開始更新ACHP02_Tmp資料,
+
+2021-11-08 15:23:56,985 INFO  Layer：BusinessRule Message：更新ACHP02_Tmp資料:成功！(總共3筆),
+
+2021-11-08 15:23:56,986 INFO  Layer：BusinessRule Message：開始新增ACHP02_Tmp資料[表尾],
+
+2021-11-08 15:23:56,992 INFO  Layer：BusinessRule Message：新增ACHP02_Tmp資料[表尾]:成功！(總共1筆),
+
+2021-11-08 15:23:56,993 INFO  Layer：BusinessRule Message：開始匯出檔案,
+
+2021-11-08 15:23:57,008 INFO  Layer：BusinessRule Message：匯出檔案：成功！(預計匯入5筆。（成功:5筆）),
+
+2021-11-08 15:23:57,009 INFO  Layer：BusinessRule Message：開始上傳檔案至FTP,
+
+2021-11-08 15:23:57,086 INFO  Layer：BusinessRule Message：上傳檔案至FTP：來源目錄：D:\CSIP2.0\csip_keyingui_sit\WebPage\FileUpload\ACHP02\,
+
+2021-11-08 15:23:57,087 INFO  Layer：BusinessRule Message：上傳檔案至FTP：來源檔案：ACHP02_01101109_03077208.txt,
+
+2021-11-08 15:23:57,088 INFO  Layer：BusinessRule Message：上傳檔案至FTP：上傳成功！,
+
+2021-11-08 15:23:57,088 INFO  Layer：BusinessRule Message：開始更新Batch資料,
+
+2021-11-08 15:23:57,096 INFO  Layer：BusinessRule Message：更新Batch資料:成功！(總共1筆),
+
+2021-11-08 15:23:57,097 INFO  Layer：BusinessRule Message：開始寄信！,
+
+2021-11-08 15:23:57,334 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available,
+
+2021-11-08 15:23:57,335 ERROR  Layer：BusinessRule Message：寄信失敗！,
+
+2021-11-08 15:23:57,368 INFO  Layer：BusinessRule Message：ACHP02執行於:2021/11/8 下午 03:23:56,
+
+2021-11-08 15:23:57,388 INFO  Layer：BusinessRule Message：ACHP02JOB結束,
+

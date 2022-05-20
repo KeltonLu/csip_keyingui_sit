@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="default"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4_JCF7"/>
+    </header>
+    <line no="1">
+       <msgBody>
+            <data id="TRAN_ID" value=""/>
+            <data id="PROGRAM_ID" value=""/>
+            <data id="PROGRAM_VERSION" value=""/>
+            <data id="USER_ID" value=""/>
+            <data id="MESSAGE_TYPE" value="0001"/>
+            <data id="FUNCTION_CODE" value=""/>
+            <data id="LINE_CNT" value=""/>
+            <data id="ACCT_NBR" value=""/>
+						<data id="PYMT_FLAG" value="8"/>          
+						<data id="FIXED_PYMT_AMNT" value="12123131313"/>    
+						<data id="CURR_DUE" value="43565665656"/>           
+						<data id="PAST_DUE" value="45645242424"/>           
+						<data id="30DAYS_DELQ" value="31313133133"/>        
+						<data id="60DAYS_DELQ" value="43411313131"/>        
+						<data id="90DAYS_DELQ" value="57576756755"/>        
+						<data id="120DAYS_DELQ" value="87878768674"/>       
+						<data id="150DAYS_DELQ" value="12312423422"/>       
+						<data id="180DAYS_DELQ" value="22422342344"/>       
+						<data id="210DAYS_DELQ" value="56464564564"/>       
+						<data id="USER_CODE" value=""/>          
+						<data id="USER_CODE_2" value=""/>        
+						<data id="BLOCK_CODE" value=""/>         
+						<data id="CHGOFF_STATUS_FLAG" value="2"/> 
+						<data id="SHORT_NAME" value="TEST"/>         
+						<data id="CARD_EXPIR_DTE" value=""/>     
+						<data id="DELQ_HIST1" value=""/>
+						<data id="DELQ_HIST2" value=""/>        
+						<data id="DELQ_HIST3" value=""/>        
+						<data id="DELQ_HIST4" value=""/>        
+						<data id="DELQ_HIST5" value=""/>        
+						<data id="DELQ_HIST6" value=""/>        
+						<data id="DELQ_HIST7" value=""/>        
+						<data id="DELQ_HIST8" value=""/>        
+						<data id="DELQ_HIST9" value=""/>        
+						<data id="DELQ_HIST10" value=""/>        
+						<data id="DELQ_HIST11" value=""/>        
+						<data id="DELQ_HIST12" value=""/>        																																								
+						<data id="DELQ_HIST13" value=""/>
+						<data id="DELQ_HIST14" value=""/>        
+						<data id="DELQ_HIST15" value=""/>        
+						<data id="DELQ_HIST16" value=""/>        
+						<data id="DELQ_HIST17" value=""/>        
+						<data id="DELQ_HIST18" value=""/>        
+						<data id="DELQ_HIST19" value=""/>        
+						<data id="DELQ_HIST20" value=""/>        
+						<data id="DELQ_HIST21" value=""/>        
+						<data id="DELQ_HIST22" value=""/>        
+						<data id="DELQ_HIST23" value=""/>        
+						<data id="DELQ_HIST24" value=""/> 
+        </msgBody>
+    </line>
+</hostgateway>
+
+
+
+

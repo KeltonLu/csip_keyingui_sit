@@ -1,0 +1,98 @@
+2022-04-20 16:38:18,675 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 16:38:19,146 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-20 16:38:19,146 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-20 16:38:19,146 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-20 16:38:19,148 ERROR  Message：FTP 取檔開始
+2022-04-20 16:39:09,381 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 16:39:14,716 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-20 16:40:22,553 ERROR  Message：[FAIL] 檔案: MFAN_20220420.TXT 不存在， FTP 取檔失敗
+2022-04-20 16:43:33,909 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 16:43:48,103 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-20 16:43:52,395 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-20 16:43:53,696 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-20 16:44:14,842 ERROR  Message：FTP 取檔開始
+2022-04-20 16:46:14,970 ERROR  Message：[FAIL] 檔案: MFAN_20220420.TXT 不存在， FTP 取檔失敗
+2022-04-20 16:52:58,276 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 16:52:58,510 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-20 16:52:58,510 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-20 16:52:58,511 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-20 16:53:43,914 ERROR  Message：FTP 取檔開始
+2022-04-20 16:54:58,306 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 16:54:58,438 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-20 16:55:02,251 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 16:55:02,381 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-20 16:56:00,463 ERROR  Message：[FAIL] 檔案: MFAN_20220420.TXT 不存在， FTP 取檔失敗
+2022-04-20 16:58:43,619 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:參數 'addresses' 不可為空字串。
+參數名稱: addresses,
+
+2022-04-20 17:07:00,729 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 17:07:00,966 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-20 17:07:00,966 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-20 17:07:00,966 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-20 17:07:00,968 ERROR  Message：FTP 取檔開始
+2022-04-20 17:09:09,992 ERROR  Message：[FAIL] 檔案: MFAN_20220420.TXT 不存在， FTP 取檔失敗
+2022-04-20 17:09:20,394 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. 124-20020a621982000000b0050a73577a37sm11311971pfz.45 - gsmtp,
+
+2022-04-20 17:12:39,588 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 17:12:39,893 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-20 17:12:39,894 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-20 17:12:39,894 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-20 17:13:01,020 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-20 17:16:25,819 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 17:16:26,054 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-20 17:16:26,054 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-20 17:16:26,054 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-20 17:16:45,072 ERROR  Message：資料檢核開始
+2022-04-20 17:16:47,315 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-20 17:16:47,316 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-20 17:17:37,666 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料失敗！
+2022-04-20 17:17:38,689 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. y2-20020a056a00190200b004fa865d1fd3sm20605336pfi.86 - gsmtp,
+
+2022-04-20 17:18:27,674 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-20 17:18:28,071 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-20 17:18:28,071 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-20 17:18:28,071 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-20 17:18:56,869 ERROR  Message：資料檢核開始
+2022-04-20 17:19:07,852 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-20 17:19:22,309 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-20 17:19:32,967 ERROR  Message：資料檢核結束
+2022-04-20 17:19:34,930 INFO  Message：資料匯入開始
+2022-04-20 17:19:36,347 INFO  Message：無資料需匯入
+2022-04-20 17:19:38,081 INFO  Message：資料匯入結束
+2022-04-20 17:19:41,160 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+

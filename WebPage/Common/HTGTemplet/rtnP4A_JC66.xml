@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="CSIPpXTMO90rb9xUcAJxE0imVECZ04991"/>
+    <data id="applicationId" value="CSIP"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="P4A_JC66"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="USER_ID" value=""/>
+      <data id="MESSAGE_TYPE" value=""/>
+      <data id="MESSAGE_CHI" value=""/>
+      <data id="FUNCTION_CODE" value=""/>
+      <data id="BRCH_CORP_NO" value=""/>
+      <data id="BRCH_SEQ" value=""/>
+      <data id="HCOP_CORP_NO" value=""/>
+      <data id="HCOP_CORP_SEQ" value=""/>
+      <data id="CORP_TYPE" value=""/>
+      <data id="NATION" value=""/>
+      <data id="BIRTH_DATE" value=""/>
+      <data id="PERM_CITY" value=""/>
+      <data id="PERM_ADDR1" value=""/>
+      <data id="PERM_ADDR2" value=""/>
+      <data id="CHINESE_NAME" value=""/>
+      <data id="ENGLISH_NAME" value=""/>
+      <data id="ID" value=""/>
+      <data id="OWNER_ID_ISSUE_DATE" value=""/>
+      <data id="OWNER_ID_ISSUE_PLACE" value=""/>
+      <data id="OWNER_ID_REPLACE_TYPE" value=""/>
+      <data id="ID_PHOTO_FLAG" value=""/>
+      <data id="PASSPORT" value=""/>
+      <data id="PASSPORT_EXP_DATE" value=""/>
+      <data id="RESIDENT_NO" value=""/>
+      <data id="RESIDENT_EXP_DATE" value=""/>
+      <data id="OTHER_CERT" value=""/>
+      <data id="OTHER_CERT_EXP_DATE" value=""/>
+      <data id="COMP_TEL" value=""/>
+      <data id="COUNTRY_CODE_2" value=""/>
+      <data id="CC_2" value=""/>
+      <data id="CC_3" value=""/>
+      <data id="OC" value=""/>
+      <data id="INCOME_SOURCE" value=""/>
+      <data id="GENDER" value=""/>
+      <data id="TITLE" value=""/>
+      <data id="LAST_UPD_MAKER" value=""/>
+      <data id="LAST_UPD_CHECKER" value=""/>
+      <data id="LAST_UPDATE_BRANCH" value=""/>
+      <data id="ID_OLD" value=""/>
+      <data id="LAST_UPDATE_DATE" value=""/>
+      <data id="LAST_UPDATE_SOURCE" value="CSIPJC66"/>
+      <data id="EXAMINE_FLAG" value=""/>
+    </msgBody>
+  </line>
+</hostgateway>

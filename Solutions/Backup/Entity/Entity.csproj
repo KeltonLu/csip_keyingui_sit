@@ -1,0 +1,104 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE6E9302-E122-43EB-87B4-80BB710C95DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSIPKeyInGUI.Entity</RootNamespace>
+    <AssemblyName>CSIPKeyInGUI.Entity</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityACCUMGroupTable_Award.cs" />
+    <Compile Include="EntityACCUMGroupTable_Redeem.cs" />
+    <Compile Include="EntityACCUMTYPEList_Award.cs" />
+    <Compile Include="EntityACCUMTYPEList_Redeem.cs" />
+    <Compile Include="EntityACH598DATA.cs" />
+    <Compile Include="EntityACH_RTN_INFO.cs" />
+    <Compile Include="EntityArtificial_Signing_Batch_Data.cs" />
+    <Compile Include="EntityArtificial_Signing_Detail.cs" />
+    <Compile Include="EntityArtificial_Signing_Error.cs" />
+    <Compile Include="EntityArtificial_Signing_Primary.cs" />
+    <Compile Include="EntityAuto_Balance_Trans.cs" />
+    <Compile Include="EntityAuto_Pay_Popul.cs" />
+    <Compile Include="EntityAuto_Pay_Status.cs" />
+    <Compile Include="EntityAwardSet.cs" />
+    <Compile Include="EntityAwardSet3270.cs" />
+    <Compile Include="EntityAwardSet_ATypeSet.cs" />
+    <Compile Include="EntityBATCH.cs" />
+    <Compile Include="EntityAUTO_PAY.cs" />
+    <Compile Include="EntityBoard.cs" />
+    <Compile Include="EntityCardTypeList_Award.cs" />
+    <Compile Include="EntityCardTypeList_Redeem.cs" />
+    <Compile Include="EntityCHANGE_BLK.cs" />
+    <Compile Include="EntityCUSTOMER_LOG.cs" />
+    <Compile Include="Entitycustomer_log_OtherBankTemp.cs" />
+    <Compile Include="EntityiPASS.cs" />
+    <Compile Include="EntityJOB_STATUS.cs" />
+    <Compile Include="EntityProgramList.cs" />
+    <Compile Include="EntityRedeem3270.cs" />
+    <Compile Include="EntityRedeemSet.cs" />
+    <Compile Include="EntityRedeemSet_ATypeSet.cs" />
+    <Compile Include="EntityRedeemUpload.cs" />
+    <Compile Include="EntitySHOP.cs" />
+    <Compile Include="EntitySHOP_6063.cs" />
+    <Compile Include="EntitySHOP_BASIC.cs" />
+    <Compile Include="EntitySHOP_PCAM.cs" />
+    <Compile Include="EntitySHOP_ReqAppro.cs" />
+    <Compile Include="EntitySHOP_UPLOAD.cs" />
+    <Compile Include="EntityOTHER_BANK_TEMP.cs" />
+    <Compile Include="Entity_FileInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntitySHOP_1KEYLOG.cs" />
+    <Compile Include="EntitySHOP_RPT.cs" />
+    <Compile Include="EntityTRANS_NUM.cs" />
+    <Compile Include="EntitySZIP.cs" />
+    <Compile Include="EntityREISSUE_CARD.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Framework.Data\OM\Framework.Data.OM.csproj">
+      <Project>{EFBB5F60-82AE-4C7F-A773-4E719EFDF037}</Project>
+      <Name>Framework.Data.OM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

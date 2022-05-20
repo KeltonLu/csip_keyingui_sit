@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+	<header>
+		<action type="transaction"/>
+		<data id="sessionId" value=""/>
+		<data id="applicationId" value="CSIP"/>
+		<data id="luType" value="LU0"/>
+		<data id="transactionId" value="000401"/>
+		<data id="lowValue" value="true"/>
+	</header>
+	<body>
+		<data id="ACCT_NO" value=""/>
+		<data id="FILLER5" value=""/>
+		<data id="CURRENCY" value="TWD"/>
+	</body>
+</hostgateway>

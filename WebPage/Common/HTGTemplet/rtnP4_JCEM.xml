@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="CSIP"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4_JCEM"/>
+    </header>
+    <line no="1">
+       <msgBody>
+            <data id="TRAN_ID" value=""/>
+            <data id="PROGRAM_ID" value=""/>
+            <data id="USER_ID" value=""/>
+            <data id="MESSAGE_TYPE" value="0001"/>
+            <data id="FUNCTION_CODE" value=""/>
+            <data id="LINE_CNT" value=""/>
+            <data id="ACCT_NBR" value=""/>
+						<data id="CARD_TAKE" value="0"/>      
+						<data id="EMBOSS_NAME" value="TEST"/>    
+						<data id="EMBOSS_TYPE" value="00"/>    
+						<data id="EXPIRE_DATE" value=""/>    
+						<data id="XFR_CARD_NO" value=""/>    
+						<data id="BLOCK_CODE" value=""/>     
+						<data id="STATUS" value=""/>         
+						<data id="PREV_ACTION" value="1"/>    
+						<data id="DTE_LST_REQ" value="20100120"/>    
+						<data id="MEM_NO" value="11111111111"/>         
+						<data id="CARDHOLDER_ID" value=""/>  
+						<data id="CARDHOLDER_NAME" value=""/>
+						<data id="CUSTOMER_NAME" value=""/>  
+						<data id="CITY" value=""/>           
+						<data id="ADDR_1" value=""/>         
+						<data id="ADDR_2" value=""/>         
+						<data id="EMBOSS_DATE" value=""/>    
+						<data id="EMBOSS_TIME" value=""/>    
+        </msgBody>
+    </line>
+</hostgateway>
+
+
+
+

@@ -1,0 +1,266 @@
+2021-10-26 09:56:51,845 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:56:52,248 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:56:52,249 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 09:56:52,250 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 09:56:52,250 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：119
+2021-10-26 09:56:52,272 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:56:52,437 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 09:56:52,561 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:56:52,562 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 09:56:52,562 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 09:56:52,563 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：32
+2021-10-26 09:56:52,583 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:56:52,682 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 09:58:22,463 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:58:22,464 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 09:58:22,464 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 09:58:22,465 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：119
+2021-10-26 09:58:22,487 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:58:22,668 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 09:58:22,752 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:58:22,753 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 09:58:22,753 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 09:58:22,754 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：32
+2021-10-26 09:58:22,777 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:58:22,929 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 09:59:49,867 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:59:49,868 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：TRUE
+2021-10-26 09:59:49,868 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：9
+2021-10-26 09:59:49,868 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：119
+2021-10-26 09:59:49,888 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:59:50,039 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：getRtnHostEnd
+2021-10-26 09:59:50,123 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:59:50,124 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：TRUE
+2021-10-26 09:59:50,125 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：9
+2021-10-26 09:59:50,125 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：32
+2021-10-26 09:59:50,147 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:59:50,232 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010600 Layer：HTG Message：getRtnHostEnd
+2021-10-26 09:59:55,609 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:59:55,609 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 09:59:55,609 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 09:59:55,610 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：119
+2021-10-26 09:59:55,631 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:59:55,769 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 09:59:55,849 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 09:59:55,850 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 09:59:55,851 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 09:59:55,851 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：32
+2021-10-26 09:59:55,874 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 09:59:55,960 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:01:54,635 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:01:54,635 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 10:01:54,636 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 10:01:54,636 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：119
+2021-10-26 10:01:54,656 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:01:54,820 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:01:54,922 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:01:54,923 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 10:01:54,923 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 10:01:54,924 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：32
+2021-10-26 10:01:54,941 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:01:55,040 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:05,854 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:08:05,855 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:08:05,856 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:08:05,856 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：119
+2021-10-26 10:08:05,877 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:08:06,053 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:06,152 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:08:06,153 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:08:06,153 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:08:06,154 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：32
+2021-10-26 10:08:06,175 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:08:06,260 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:06,261 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:08:13,517 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:08:13,518 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：TRUE
+2021-10-26 10:08:13,518 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：9
+2021-10-26 10:08:13,518 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：119
+2021-10-26 10:08:13,537 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:08:13,682 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:13,765 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:08:13,765 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：TRUE
+2021-10-26 10:08:13,766 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：9
+2021-10-26 10:08:13,766 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：32
+2021-10-26 10:08:13,787 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:08:13,879 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:13,880 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:08:33,886 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:08:33,887 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:08:33,887 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:08:33,888 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-10-26 10:08:33,909 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:08:34,064 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:34,178 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:08:34,179 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:08:34,179 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:08:34,180 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-10-26 10:08:34,200 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:08:34,438 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:34,524 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:08:34,525 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:08:34,525 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:08:34,526 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：32
+2021-10-26 10:08:34,546 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:08:34,869 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:08:34,870 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:11:31,006 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:11:31,007 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:11:31,007 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:11:31,008 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：119
+2021-10-26 10:11:31,026 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:11:31,179 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:11:31,255 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:11:31,255 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:11:31,256 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:11:31,256 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：32
+2021-10-26 10:11:31,276 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:11:31,384 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:11:31,386 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:12:08,966 INFO  Message：Application and Jobs End
+2021-10-26 10:12:48,532 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:13:09,726 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2021-10-26 10:13:25,898 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:13:46,977 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2021-10-26 10:13:55,318 INFO  Message：Application and Jobs End
+2021-10-26 10:14:37,580 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:14:38,017 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:14:38,018 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:14:38,019 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:14:38,019 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：119
+2021-10-26 10:14:38,042 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:14:38,219 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:14:38,304 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:14:38,305 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:14:38,306 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:14:38,307 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：32
+2021-10-26 10:14:38,327 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:14:38,473 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:14:38,475 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:14:58,473 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:14:58,474 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:14:58,474 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:14:58,474 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-10-26 10:14:58,496 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:14:58,743 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:14:58,744 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4_JCF6:
+2021-10-26 10:14:58,826 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:14:58,827 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:14:58,828 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:14:58,828 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-10-26 10:14:58,849 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:14:59,474 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:14:59,475 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4D_JCF6:
+2021-10-26 10:15:05,260 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:15:05,261 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:15:05,261 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:15:05,261 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-10-26 10:15:05,279 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:15:05,758 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:15:05,840 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:15:05,841 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:15:05,841 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:15:05,842 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-10-26 10:15:05,862 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:15:06,008 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:15:06,093 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:15:06,094 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-10-26 10:15:06,095 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-10-26 10:15:06,095 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：32
+2021-10-26 10:15:06,116 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:15:06,226 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:15:06,227 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:15:15,077 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:15:15,078 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:15:15,078 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:15:15,079 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：119
+2021-10-26 10:15:15,099 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:15:15,241 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:15:15,320 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:15:15,321 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:15:15,322 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:15:15,323 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：32
+2021-10-26 10:15:15,345 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:15:15,433 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:15:15,434 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:23:26,019 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:23:26,019 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:23:26,020 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:23:26,020 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：119
+2021-10-26 10:23:26,041 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:23:26,225 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:23:26,303 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:23:26,306 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:23:26,306 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:23:26,307 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：32
+2021-10-26 10:23:26,326 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:23:26,403 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:23:26,403 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：P4_JCDK:
+2021-10-26 10:28:01,541 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:28:01,541 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:28:01,542 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:28:01,542 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：119
+2021-10-26 10:28:01,563 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:28:01,714 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:28:01,815 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 10:28:01,815 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 10:28:01,816 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 10:28:01,816 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：32
+2021-10-26 10:28:01,836 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 10:28:01,935 INFO SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 10:28:01,937 ERROR SessionID：lw0qxngma2iisuuu3gde02rk UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：P4_JCDK:
+2021-10-26 13:22:01,805 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:22:02,550 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:22:02,552 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 13:22:02,553 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 13:22:02,555 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：119
+2021-10-26 13:22:02,594 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:22:02,920 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:22:03,073 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:22:03,073 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：TRUE
+2021-10-26 13:22:03,073 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：9
+2021-10-26 13:22:03,074 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：32
+2021-10-26 13:22:03,102 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:22:03,293 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010500 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:23:35,806 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:23:35,807 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 13:23:35,808 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 13:23:35,809 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：119
+2021-10-26 13:23:35,827 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:23:36,125 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:23:36,204 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:23:36,205 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 13:23:36,205 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 13:23:36,206 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：32
+2021-10-26 13:23:36,226 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:23:36,392 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:23:36,476 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:23:36,477 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：TRUE
+2021-10-26 13:23:36,478 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：9
+2021-10-26 13:23:36,478 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：4
+2021-10-26 13:23:36,499 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:23:37,182 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010700 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:26:21,384 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:26:21,385 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：TRUE
+2021-10-26 13:26:21,385 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：9
+2021-10-26 13:26:21,386 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：119
+2021-10-26 13:26:21,406 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:26:21,718 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:26:21,793 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:26:21,794 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：TRUE
+2021-10-26 13:26:21,795 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：9
+2021-10-26 13:26:21,795 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：32
+2021-10-26 13:26:21,816 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:26:21,985 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:26:31,821 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:26:31,822 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：TRUE
+2021-10-26 13:26:31,822 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：9
+2021-10-26 13:26:31,823 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：119
+2021-10-26 13:26:31,842 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:26:32,100 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostEnd
+2021-10-26 13:26:32,188 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostBegin
+2021-10-26 13:26:32,189 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：TRUE
+2021-10-26 13:26:32,190 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：9
+2021-10-26 13:26:32,190 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：32
+2021-10-26 13:26:32,214 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-10-26 13:26:32,610 INFO SessionID：xitdmopbc1aeyycb4zu1utlz UserID：Z00040883 FunctionID：01010900 Layer：HTG Message：getRtnHostEnd

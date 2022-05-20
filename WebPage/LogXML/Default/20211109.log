@@ -1,0 +1,2006 @@
+2021-11-09 10:29:11,678 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="establishSession" />
+  </header>
+  <body>
+      <data id="applicationId" value="CSIP" />
+      <data id="branchNo" value="0993" />
+      <data id="passWord" value="********" />
+      <data id="racfId" value="Z45120" />
+      <data id="racfPassWord" value="********" />
+      <data id="signOnLU0" value="no" />
+      <data id="userId" value="Z00040883" />
+  </body>
+</hostgateway>
+
+2021-11-09 10:29:13,681 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <rc value="700"/>
+
+ </header>
+
+ <body>
+
+  <msg value="700 SESSION 建立成功"/>
+
+  <data id="sessionId" value="CSIP203qMnbaVx+Ml3dIPKgJn14bn68Z45120"/>
+
+  <data id="loginServer" value="HTG203"/>
+
+ </body>
+
+</hostgateway>
+
+
+2021-11-09 10:29:13,849 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP203qMnbaVx+Ml3dIPKgJn14bn68Z45120" />
+      <data id="transactionId" value="P4_JCF6" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="N100175951" />
+      <data id="ADDR_1" value="" />
+      <data id="ADDR_2" value="" />
+      <data id="BILLING_CYCLE" value="" />
+      <data id="BIRTH_DATE" value="" />
+      <data id="CARD_ID1" value="" />
+      <data id="CARD_ID10" value="" />
+      <data id="CARD_ID11" value="" />
+      <data id="CARD_ID12" value="" />
+      <data id="CARD_ID13" value="" />
+      <data id="CARD_ID14" value="" />
+      <data id="CARD_ID15" value="" />
+      <data id="CARD_ID16" value="" />
+      <data id="CARD_ID17" value="" />
+      <data id="CARD_ID18" value="" />
+      <data id="CARD_ID2" value="" />
+      <data id="CARD_ID3" value="" />
+      <data id="CARD_ID4" value="" />
+      <data id="CARD_ID5" value="" />
+      <data id="CARD_ID6" value="" />
+      <data id="CARD_ID7" value="" />
+      <data id="CARD_ID8" value="" />
+      <data id="CARD_ID9" value="" />
+      <data id="CARD_NMBR1" value="" />
+      <data id="CARD_NMBR10" value="" />
+      <data id="CARD_NMBR11" value="" />
+      <data id="CARD_NMBR12" value="" />
+      <data id="CARD_NMBR13" value="" />
+      <data id="CARD_NMBR14" value="" />
+      <data id="CARD_NMBR15" value="" />
+      <data id="CARD_NMBR16" value="" />
+      <data id="CARD_NMBR17" value="" />
+      <data id="CARD_NMBR18" value="" />
+      <data id="CARD_NMBR2" value="" />
+      <data id="CARD_NMBR3" value="" />
+      <data id="CARD_NMBR4" value="" />
+      <data id="CARD_NMBR5" value="" />
+      <data id="CARD_NMBR6" value="" />
+      <data id="CARD_NMBR7" value="" />
+      <data id="CARD_NMBR8" value="" />
+      <data id="CARD_NMBR9" value="" />
+      <data id="CITY" value="" />
+      <data id="CO_OWNER" value="" />
+      <data id="CO_TAX_ID_TYPE" value="" />
+      <data id="DD_ID" value="" />
+      <data id="EMBOSSER_NAME_11" value="" />
+      <data id="EMBOSSER_NAME_110" value="" />
+      <data id="EMBOSSER_NAME_111" value="" />
+      <data id="EMBOSSER_NAME_112" value="" />
+      <data id="EMBOSSER_NAME_113" value="" />
+      <data id="EMBOSSER_NAME_114" value="" />
+      <data id="EMBOSSER_NAME_115" value="" />
+      <data id="EMBOSSER_NAME_116" value="" />
+      <data id="EMBOSSER_NAME_117" value="" />
+      <data id="EMBOSSER_NAME_118" value="" />
+      <data id="EMBOSSER_NAME_12" value="" />
+      <data id="EMBOSSER_NAME_13" value="" />
+      <data id="EMBOSSER_NAME_14" value="" />
+      <data id="EMBOSSER_NAME_15" value="" />
+      <data id="EMBOSSER_NAME_16" value="" />
+      <data id="EMBOSSER_NAME_17" value="" />
+      <data id="EMBOSSER_NAME_18" value="" />
+      <data id="EMBOSSER_NAME_19" value="" />
+      <data id="EMPLOYER" value="" />
+      <data id="EU_CUSTOMER_CLASS" value="" />
+      <data id="EU_DIRECT_MAIL" value="" />
+      <data id="EU_NBR_OF_DEPS" value="" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="GRADUATE_YYMM" value="" />
+      <data id="HOME_PHONE" value="" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MANAGE_ZIP_CODE" value="" />
+      <data id="MEMBER_SINCE" value="" />
+      <data id="MEMO_1" value="" />
+      <data id="MEMO_2" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="NAME_1" value="" />
+      <data id="NAME_1_2" value="" />
+      <data id="OFF_PHONE_FLAG" value="" />
+      <data id="OFFICE_PHONE" value="" />
+      <data id="SHORT_NAME1" value="" />
+      <data id="SHORT_NAME10" value="" />
+      <data id="SHORT_NAME11" value="" />
+      <data id="SHORT_NAME12" value="" />
+      <data id="SHORT_NAME13" value="" />
+      <data id="SHORT_NAME14" value="" />
+      <data id="SHORT_NAME15" value="" />
+      <data id="SHORT_NAME16" value="" />
+      <data id="SHORT_NAME17" value="" />
+      <data id="SHORT_NAME18" value="" />
+      <data id="SHORT_NAME2" value="" />
+      <data id="SHORT_NAME3" value="" />
+      <data id="SHORT_NAME4" value="" />
+      <data id="SHORT_NAME5" value="" />
+      <data id="SHORT_NAME6" value="" />
+      <data id="SHORT_NAME7" value="" />
+      <data id="SHORT_NAME8" value="" />
+      <data id="SHORT_NAME9" value="" />
+      <data id="TYPE1" value="" />
+      <data id="TYPE10" value="" />
+      <data id="TYPE11" value="" />
+      <data id="TYPE12" value="" />
+      <data id="TYPE13" value="" />
+      <data id="TYPE14" value="" />
+      <data id="TYPE15" value="" />
+      <data id="TYPE16" value="" />
+      <data id="TYPE17" value="" />
+      <data id="TYPE18" value="" />
+      <data id="TYPE2" value="" />
+      <data id="TYPE3" value="" />
+      <data id="TYPE4" value="" />
+      <data id="TYPE5" value="" />
+      <data id="TYPE6" value="" />
+      <data id="TYPE7" value="" />
+      <data id="TYPE8" value="" />
+      <data id="TYPE9" value="" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="WAIVE_FLAG" value="" />
+      <data id="ZIP" value="" />
+  </body>
+</hostgateway>
+
+2021-11-09 10:29:15,286 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP203qMnbaVx+Ml3dIPKgJn14bn68Z45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCF6"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="TYPE14" value=""/>
+
+   <data id="EMBOSSER_NAME_113" value=""/>
+
+   <data id="TYPE13" value=""/>
+
+   <data id="EMBOSSER_NAME_112" value=""/>
+
+   <data id="SHORT_NAME9" value=""/>
+
+   <data id="TYPE12" value=""/>
+
+   <data id="EMBOSSER_NAME_111" value=""/>
+
+   <data id="SHORT_NAME8" value=""/>
+
+   <data id="TYPE11" value=""/>
+
+   <data id="EMBOSSER_NAME_110" value=""/>
+
+   <data id="SHORT_NAME7" value=""/>
+
+   <data id="TYPE10" value=""/>
+
+   <data id="SHORT_NAME6" value=""/>
+
+   <data id="SHORT_NAME5" value=""/>
+
+   <data id="SHORT_NAME4" value=""/>
+
+   <data id="SHORT_NAME3" value=""/>
+
+   <data id="SHORT_NAME2" value="測試承雄"/>
+
+   <data id="EMBOSSER_NAME_19" value=""/>
+
+   <data id="SHORT_NAME1" value="測試承雄"/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="EMBOSSER_NAME_18" value=""/>
+
+   <data id="NAME_1" value="測試宏珠     "/>
+
+   <data id="EMBOSSER_NAME_17" value=""/>
+
+   <data id="NAME_1_2" value="測試宏珠     "/>
+
+   <data id="EMBOSSER_NAME_16" value=""/>
+
+   <data id="EMBOSSER_NAME_15" value=""/>
+
+   <data id="EMBOSSER_NAME_14" value=""/>
+
+   <data id="EMBOSSER_NAME_13" value=""/>
+
+   <data id="EMBOSSER_NAME_12" value="TESTNU-RLIEOIIT"/>
+
+   <data id="EMBOSSER_NAME_11" value="TESTNU-RLIEOIIT"/>
+
+   <data id="MANAGE_ZIP_CODE" value="100"/>
+
+   <data id="EU_NBR_OF_DEPS" value="00"/>
+
+   <data id="MEMBER_SINCE" value="15/02"/>
+
+   <data id="CO_OWNER" value=""/>
+
+   <data id="PROGRAM_ID" value="JCGU802"/>
+
+   <data id="GRADUATE_YYMM" value="00/00"/>
+
+   <data id="CARD_ID18" value=""/>
+
+   <data id="CARD_ID17" value=""/>
+
+   <data id="EMPLOYER" value="測試鴻二                    "/>
+
+   <data id="SHORT_NAME18" value=""/>
+
+   <data id="CARD_ID16" value=""/>
+
+   <data id="SHORT_NAME17" value=""/>
+
+   <data id="CARD_ID15" value=""/>
+
+   <data id="SHORT_NAME16" value=""/>
+
+   <data id="CARD_ID14" value=""/>
+
+   <data id="SHORT_NAME15" value=""/>
+
+   <data id="CARD_ID13" value=""/>
+
+   <data id="SHORT_NAME14" value=""/>
+
+   <data id="CARD_ID12" value=""/>
+
+   <data id="SHORT_NAME13" value=""/>
+
+   <data id="CARD_ID11" value=""/>
+
+   <data id="CO_TAX_ID_TYPE" value="0"/>
+
+   <data id="SHORT_NAME12" value=""/>
+
+   <data id="CARD_ID10" value=""/>
+
+   <data id="CITY" value="和結山市    "/>
+
+   <data id="SHORT_NAME11" value=""/>
+
+   <data id="SHORT_NAME10" value=""/>
+
+   <data id="CARD_NMBR9" value=""/>
+
+   <data id="CARD_NMBR8" value=""/>
+
+   <data id="TRAN_ID" value="JCF6"/>
+
+   <data id="CARD_NMBR7" value=""/>
+
+   <data id="CARD_NMBR6" value=""/>
+
+   <data id="CARD_NMBR5" value=""/>
+
+   <data id="CARD_NMBR4" value=""/>
+
+   <data id="CARD_NMBR3" value=""/>
+
+   <data id="TYPE9" value=""/>
+
+   <data id="CARD_NMBR2" value="5173571000379362"/>
+
+   <data id="TYPE8" value=""/>
+
+   <data id="CARD_NMBR1" value="5173571000370726"/>
+
+   <data id="TYPE7" value=""/>
+
+   <data id="CARD_ID9" value=""/>
+
+   <data id="TYPE6" value=""/>
+
+   <data id="CARD_ID8" value=""/>
+
+   <data id="TYPE5" value=""/>
+
+   <data id="CARD_ID7" value=""/>
+
+   <data id="TYPE4" value=""/>
+
+   <data id="CARD_ID6" value=""/>
+
+   <data id="BIRTH_DATE" value="01011980"/>
+
+   <data id="TYPE3" value=""/>
+
+   <data id="CARD_ID5" value=""/>
+
+   <data id="TYPE2" value="666"/>
+
+   <data id="CARD_ID4" value=""/>
+
+   <data id="TYPE1" value="666"/>
+
+   <data id="CARD_ID3" value=""/>
+
+   <data id="CARD_ID2" value="N100175951"/>
+
+   <data id="CARD_ID1" value="N100175951"/>
+
+   <data id="WAIVE_FLAG" value="0"/>
+
+   <data id="EU_CUSTOMER_CLASS" value="0 "/>
+
+   <data id="BILLING_CYCLE" value="15"/>
+
+   <data id="CARD_NMBR18" value=""/>
+
+   <data id="CARD_NMBR17" value=""/>
+
+   <data id="CARD_NMBR16" value=""/>
+
+   <data id="CARD_NMBR15" value=""/>
+
+   <data id="CARD_NMBR14" value=""/>
+
+   <data id="CARD_NMBR13" value=""/>
+
+   <data id="CARD_NMBR12" value=""/>
+
+   <data id="CARD_NMBR11" value=""/>
+
+   <data id="CARD_NMBR10" value=""/>
+
+   <data id="OFF_PHONE_FLAG" value="0"/>
+
+   <data id="EU_DIRECT_MAIL" value="5"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="DD_ID" value=""/>
+
+   <data id="PROGRAM_VERSION" value=""/>
+
+   <data id="MEMO_2" value=""/>
+
+   <data id="HOME_PHONE" value=""/>
+
+   <data id="MEMO_1" value=""/>
+
+   <data id="OFFICE_PHONE" value=""/>
+
+   <data id="ACCT_NBR" value="N100175951"/>
+
+   <data id="ZIP" value="100"/>
+
+   <data id="ADDR_2" value=""/>
+
+   <data id="ADDR_1" value="測試路測試巷１８號１５樓    "/>
+
+   <data id="LINE_CNT" value="2"/>
+
+   <data id="EMBOSSER_NAME_118" value=""/>
+
+   <data id="TYPE18" value=""/>
+
+   <data id="EMBOSSER_NAME_117" value=""/>
+
+   <data id="TYPE17" value=""/>
+
+   <data id="EMBOSSER_NAME_116" value=""/>
+
+   <data id="TYPE16" value=""/>
+
+   <data id="EMBOSSER_NAME_115" value=""/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="TYPE15" value=""/>
+
+   <data id="EMBOSSER_NAME_114" value=""/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-11-09 10:29:15,445 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：P4_JCBG Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP203qMnbaVx+Ml3dIPKgJn14bn68Z45120" />
+      <data id="transactionId" value="P4_JCBG" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="N100175951" />
+      <data id="CON_RPT" value="__" />
+      <data id="E_SERVICE_CODE" value="____" />
+      <data id="EBILL_FLAG" value="" />
+      <data id="EMAIL" value="__________________________________________________" />
+      <data id="FAX_NO" value="__________________" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="GRADE_SCHOOL" value="______________________" />
+      <data id="GRADE_SCHOOL_LOCATE" value="__________" />
+      <data id="INFORMANT_NAME_1" value="__________" />
+      <data id="INFORMANT_NAME_2" value="__________" />
+      <data id="INFORMANT_TEL_NO_1" value="__________________" />
+      <data id="INFORMANT_TEL_NO_2" value="__________________" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="MOBILE_PHONE" value="__________" />
+      <data id="OVERSEA_PHONE" value="__________________" />
+      <data id="PERM_ADDR_1" value="______________________________" />
+      <data id="PERM_ADDR_2" value="______________________________" />
+      <data id="PERM_CITY" value="______________" />
+      <data id="PERM_ZIP" value="_____" />
+      <data id="PROGRAM_ID" value="JCGU638" />
+      <data id="SAME_FLAG" value="" />
+      <data id="SMS_NP_FLAG" value="_" />
+      <data id="STUS_ADDB" value="__" />
+      <data id="STUS_ADDP" value="__" />
+      <data id="STUS_EMAIL" value="__" />
+      <data id="STUS_FAX" value="__" />
+      <data id="STUS_ID" value="__" />
+      <data id="STUS_MOBIL" value="__" />
+      <data id="STUS_TELH" value="__" />
+      <data id="STUS_TELO" value="__" />
+      <data id="STUS_TELP" value="__" />
+      <data id="TEL_PERM" value="__________________" />
+      <data id="TEMP_E_MAIL" value="" />
+      <data id="TEMP_E_MAIL_STATUS" value="" />
+      <data id="TITLE" value="____________" />
+      <data id="TMAL_CREATE_DATE" value="" />
+      <data id="TRAN_ID" value="JCBG" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="VALID_SEL" value="" />
+      <data id="VERIFY_SEQ_NO" value="" />
+  </body>
+</hostgateway>
+
+2021-11-09 10:29:16,346 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：P4_JCBG Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP203qMnbaVx+Ml3dIPKgJn14bn68Z45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCBG"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="STUS_MOBIL" value="10"/>
+
+   <data id="VALID_SEL" value=""/>
+
+   <data id="CON_RPT" value=""/>
+
+   <data id="INFORMANT_TEL_NO_2" value="   -"/>
+
+   <data id="PERM_CITY" value="測試市測試區"/>
+
+   <data id="INFORMANT_TEL_NO_1" value="   -"/>
+
+   <data id="OVERSEA_PHONE" value=""/>
+
+   <data id="FAX_NO" value=""/>
+
+   <data id="INFORMANT_NAME_2" value=""/>
+
+   <data id="INFORMANT_NAME_1" value=""/>
+
+   <data id="TRAN_ID" value="JCBG"/>
+
+   <data id="SAME_FLAG" value="N"/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="TEL_PERM" value="   -"/>
+
+   <data id="MOBILE_PHONE" value="0912345678"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="PERM_ADDR_2" value=""/>
+
+   <data id="PERM_ADDR_1" value="測試梅八梅梅八梅"/>
+
+   <data id="VERIFY_SEQ_NO" value="CSIP2021100110552647"/>
+
+   <data id="GRADE_SCHOOL_LOCATE" value="測試市"/>
+
+   <data id="E_SERVICE_CODE" value=""/>
+
+   <data id="TEMP_E_MAIL" value="exp302@test.com"/>
+
+   <data id="LINE_CNT" value="0000"/>
+
+   <data id="ACCT_NBR" value="N100175951"/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="GRADE_SCHOOL" value="測試國小"/>
+
+   <data id="STUS_EMAIL" value="51"/>
+
+   <data id="SMS_NP_FLAG" value="N"/>
+
+   <data id="TMAL_CREATE_DATE" value="20211001"/>
+
+   <data id="PROGRAM_ID" value="JCGU638"/>
+
+   <data id="EBILL_FLAG" value=""/>
+
+   <data id="TEMP_E_MAIL_STATUS" value="X"/>
+
+   <data id="EMAIL" value=""/>
+
+   <data id="PERM_ZIP" value="000"/>
+
+   <data id="STUS_FAX" value="01"/>
+
+   <data id="TITLE" value="工程師"/>
+
+   <data id="STUS_ADDP" value="00"/>
+
+   <data id="STUS_ID" value="00"/>
+
+   <data id="STUS_TELP" value="01"/>
+
+   <data id="STUS_TELO" value="00"/>
+
+   <data id="STUS_ADDB" value="00"/>
+
+   <data id="STUS_TELH" value="00"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-11-09 11:06:21,064 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP203qMnbaVx+Ml3dIPKgJn14bn68Z45120" />
+      <data id="transactionId" value="P4_JCF6" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="N100175951" />
+      <data id="ADDR_1" value="" />
+      <data id="ADDR_2" value="" />
+      <data id="BILLING_CYCLE" value="" />
+      <data id="BIRTH_DATE" value="" />
+      <data id="CARD_ID1" value="" />
+      <data id="CARD_ID10" value="" />
+      <data id="CARD_ID11" value="" />
+      <data id="CARD_ID12" value="" />
+      <data id="CARD_ID13" value="" />
+      <data id="CARD_ID14" value="" />
+      <data id="CARD_ID15" value="" />
+      <data id="CARD_ID16" value="" />
+      <data id="CARD_ID17" value="" />
+      <data id="CARD_ID18" value="" />
+      <data id="CARD_ID2" value="" />
+      <data id="CARD_ID3" value="" />
+      <data id="CARD_ID4" value="" />
+      <data id="CARD_ID5" value="" />
+      <data id="CARD_ID6" value="" />
+      <data id="CARD_ID7" value="" />
+      <data id="CARD_ID8" value="" />
+      <data id="CARD_ID9" value="" />
+      <data id="CARD_NMBR1" value="" />
+      <data id="CARD_NMBR10" value="" />
+      <data id="CARD_NMBR11" value="" />
+      <data id="CARD_NMBR12" value="" />
+      <data id="CARD_NMBR13" value="" />
+      <data id="CARD_NMBR14" value="" />
+      <data id="CARD_NMBR15" value="" />
+      <data id="CARD_NMBR16" value="" />
+      <data id="CARD_NMBR17" value="" />
+      <data id="CARD_NMBR18" value="" />
+      <data id="CARD_NMBR2" value="" />
+      <data id="CARD_NMBR3" value="" />
+      <data id="CARD_NMBR4" value="" />
+      <data id="CARD_NMBR5" value="" />
+      <data id="CARD_NMBR6" value="" />
+      <data id="CARD_NMBR7" value="" />
+      <data id="CARD_NMBR8" value="" />
+      <data id="CARD_NMBR9" value="" />
+      <data id="CITY" value="" />
+      <data id="CO_OWNER" value="" />
+      <data id="CO_TAX_ID_TYPE" value="" />
+      <data id="DD_ID" value="" />
+      <data id="EMBOSSER_NAME_11" value="" />
+      <data id="EMBOSSER_NAME_110" value="" />
+      <data id="EMBOSSER_NAME_111" value="" />
+      <data id="EMBOSSER_NAME_112" value="" />
+      <data id="EMBOSSER_NAME_113" value="" />
+      <data id="EMBOSSER_NAME_114" value="" />
+      <data id="EMBOSSER_NAME_115" value="" />
+      <data id="EMBOSSER_NAME_116" value="" />
+      <data id="EMBOSSER_NAME_117" value="" />
+      <data id="EMBOSSER_NAME_118" value="" />
+      <data id="EMBOSSER_NAME_12" value="" />
+      <data id="EMBOSSER_NAME_13" value="" />
+      <data id="EMBOSSER_NAME_14" value="" />
+      <data id="EMBOSSER_NAME_15" value="" />
+      <data id="EMBOSSER_NAME_16" value="" />
+      <data id="EMBOSSER_NAME_17" value="" />
+      <data id="EMBOSSER_NAME_18" value="" />
+      <data id="EMBOSSER_NAME_19" value="" />
+      <data id="EMPLOYER" value="" />
+      <data id="EU_CUSTOMER_CLASS" value="" />
+      <data id="EU_DIRECT_MAIL" value="" />
+      <data id="EU_NBR_OF_DEPS" value="" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="GRADUATE_YYMM" value="" />
+      <data id="HOME_PHONE" value="" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MANAGE_ZIP_CODE" value="" />
+      <data id="MEMBER_SINCE" value="" />
+      <data id="MEMO_1" value="" />
+      <data id="MEMO_2" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="NAME_1" value="" />
+      <data id="NAME_1_2" value="" />
+      <data id="OFF_PHONE_FLAG" value="" />
+      <data id="OFFICE_PHONE" value="" />
+      <data id="SHORT_NAME1" value="" />
+      <data id="SHORT_NAME10" value="" />
+      <data id="SHORT_NAME11" value="" />
+      <data id="SHORT_NAME12" value="" />
+      <data id="SHORT_NAME13" value="" />
+      <data id="SHORT_NAME14" value="" />
+      <data id="SHORT_NAME15" value="" />
+      <data id="SHORT_NAME16" value="" />
+      <data id="SHORT_NAME17" value="" />
+      <data id="SHORT_NAME18" value="" />
+      <data id="SHORT_NAME2" value="" />
+      <data id="SHORT_NAME3" value="" />
+      <data id="SHORT_NAME4" value="" />
+      <data id="SHORT_NAME5" value="" />
+      <data id="SHORT_NAME6" value="" />
+      <data id="SHORT_NAME7" value="" />
+      <data id="SHORT_NAME8" value="" />
+      <data id="SHORT_NAME9" value="" />
+      <data id="TYPE1" value="" />
+      <data id="TYPE10" value="" />
+      <data id="TYPE11" value="" />
+      <data id="TYPE12" value="" />
+      <data id="TYPE13" value="" />
+      <data id="TYPE14" value="" />
+      <data id="TYPE15" value="" />
+      <data id="TYPE16" value="" />
+      <data id="TYPE17" value="" />
+      <data id="TYPE18" value="" />
+      <data id="TYPE2" value="" />
+      <data id="TYPE3" value="" />
+      <data id="TYPE4" value="" />
+      <data id="TYPE5" value="" />
+      <data id="TYPE6" value="" />
+      <data id="TYPE7" value="" />
+      <data id="TYPE8" value="" />
+      <data id="TYPE9" value="" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="WAIVE_FLAG" value="" />
+      <data id="ZIP" value="" />
+  </body>
+</hostgateway>
+
+2021-11-09 11:06:21,173 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <rc value="435"/>
+
+ </header>
+
+ <body>
+
+  <msg value="435 未先建立 SESSION 或 SESSION 過期"/>
+
+ </body>
+
+</hostgateway>
+
+
+2021-11-09 11:06:21,191 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="establishSession" />
+  </header>
+  <body>
+      <data id="applicationId" value="CSIP" />
+      <data id="branchNo" value="0993" />
+      <data id="passWord" value="********" />
+      <data id="racfId" value="Z45120" />
+      <data id="racfPassWord" value="********" />
+      <data id="signOnLU0" value="no" />
+      <data id="userId" value="Z00040883" />
+  </body>
+</hostgateway>
+
+2021-11-09 11:06:23,066 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <rc value="700"/>
+
+ </header>
+
+ <body>
+
+  <msg value="700 SESSION 建立成功"/>
+
+  <data id="sessionId" value="CSIP203SSVUVsyesToYwLoVaqLgRBsDZ45120"/>
+
+  <data id="loginServer" value="HTG203"/>
+
+ </body>
+
+</hostgateway>
+
+
+2021-11-09 11:06:23,066 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP203SSVUVsyesToYwLoVaqLgRBsDZ45120" />
+      <data id="transactionId" value="P4_JCF6" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="N100175951" />
+      <data id="ADDR_1" value="" />
+      <data id="ADDR_2" value="" />
+      <data id="BILLING_CYCLE" value="" />
+      <data id="BIRTH_DATE" value="" />
+      <data id="CARD_ID1" value="" />
+      <data id="CARD_ID10" value="" />
+      <data id="CARD_ID11" value="" />
+      <data id="CARD_ID12" value="" />
+      <data id="CARD_ID13" value="" />
+      <data id="CARD_ID14" value="" />
+      <data id="CARD_ID15" value="" />
+      <data id="CARD_ID16" value="" />
+      <data id="CARD_ID17" value="" />
+      <data id="CARD_ID18" value="" />
+      <data id="CARD_ID2" value="" />
+      <data id="CARD_ID3" value="" />
+      <data id="CARD_ID4" value="" />
+      <data id="CARD_ID5" value="" />
+      <data id="CARD_ID6" value="" />
+      <data id="CARD_ID7" value="" />
+      <data id="CARD_ID8" value="" />
+      <data id="CARD_ID9" value="" />
+      <data id="CARD_NMBR1" value="" />
+      <data id="CARD_NMBR10" value="" />
+      <data id="CARD_NMBR11" value="" />
+      <data id="CARD_NMBR12" value="" />
+      <data id="CARD_NMBR13" value="" />
+      <data id="CARD_NMBR14" value="" />
+      <data id="CARD_NMBR15" value="" />
+      <data id="CARD_NMBR16" value="" />
+      <data id="CARD_NMBR17" value="" />
+      <data id="CARD_NMBR18" value="" />
+      <data id="CARD_NMBR2" value="" />
+      <data id="CARD_NMBR3" value="" />
+      <data id="CARD_NMBR4" value="" />
+      <data id="CARD_NMBR5" value="" />
+      <data id="CARD_NMBR6" value="" />
+      <data id="CARD_NMBR7" value="" />
+      <data id="CARD_NMBR8" value="" />
+      <data id="CARD_NMBR9" value="" />
+      <data id="CITY" value="" />
+      <data id="CO_OWNER" value="" />
+      <data id="CO_TAX_ID_TYPE" value="" />
+      <data id="DD_ID" value="" />
+      <data id="EMBOSSER_NAME_11" value="" />
+      <data id="EMBOSSER_NAME_110" value="" />
+      <data id="EMBOSSER_NAME_111" value="" />
+      <data id="EMBOSSER_NAME_112" value="" />
+      <data id="EMBOSSER_NAME_113" value="" />
+      <data id="EMBOSSER_NAME_114" value="" />
+      <data id="EMBOSSER_NAME_115" value="" />
+      <data id="EMBOSSER_NAME_116" value="" />
+      <data id="EMBOSSER_NAME_117" value="" />
+      <data id="EMBOSSER_NAME_118" value="" />
+      <data id="EMBOSSER_NAME_12" value="" />
+      <data id="EMBOSSER_NAME_13" value="" />
+      <data id="EMBOSSER_NAME_14" value="" />
+      <data id="EMBOSSER_NAME_15" value="" />
+      <data id="EMBOSSER_NAME_16" value="" />
+      <data id="EMBOSSER_NAME_17" value="" />
+      <data id="EMBOSSER_NAME_18" value="" />
+      <data id="EMBOSSER_NAME_19" value="" />
+      <data id="EMPLOYER" value="" />
+      <data id="EU_CUSTOMER_CLASS" value="" />
+      <data id="EU_DIRECT_MAIL" value="" />
+      <data id="EU_NBR_OF_DEPS" value="" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="GRADUATE_YYMM" value="" />
+      <data id="HOME_PHONE" value="" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MANAGE_ZIP_CODE" value="" />
+      <data id="MEMBER_SINCE" value="" />
+      <data id="MEMO_1" value="" />
+      <data id="MEMO_2" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="NAME_1" value="" />
+      <data id="NAME_1_2" value="" />
+      <data id="OFF_PHONE_FLAG" value="" />
+      <data id="OFFICE_PHONE" value="" />
+      <data id="SHORT_NAME1" value="" />
+      <data id="SHORT_NAME10" value="" />
+      <data id="SHORT_NAME11" value="" />
+      <data id="SHORT_NAME12" value="" />
+      <data id="SHORT_NAME13" value="" />
+      <data id="SHORT_NAME14" value="" />
+      <data id="SHORT_NAME15" value="" />
+      <data id="SHORT_NAME16" value="" />
+      <data id="SHORT_NAME17" value="" />
+      <data id="SHORT_NAME18" value="" />
+      <data id="SHORT_NAME2" value="" />
+      <data id="SHORT_NAME3" value="" />
+      <data id="SHORT_NAME4" value="" />
+      <data id="SHORT_NAME5" value="" />
+      <data id="SHORT_NAME6" value="" />
+      <data id="SHORT_NAME7" value="" />
+      <data id="SHORT_NAME8" value="" />
+      <data id="SHORT_NAME9" value="" />
+      <data id="TYPE1" value="" />
+      <data id="TYPE10" value="" />
+      <data id="TYPE11" value="" />
+      <data id="TYPE12" value="" />
+      <data id="TYPE13" value="" />
+      <data id="TYPE14" value="" />
+      <data id="TYPE15" value="" />
+      <data id="TYPE16" value="" />
+      <data id="TYPE17" value="" />
+      <data id="TYPE18" value="" />
+      <data id="TYPE2" value="" />
+      <data id="TYPE3" value="" />
+      <data id="TYPE4" value="" />
+      <data id="TYPE5" value="" />
+      <data id="TYPE6" value="" />
+      <data id="TYPE7" value="" />
+      <data id="TYPE8" value="" />
+      <data id="TYPE9" value="" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="WAIVE_FLAG" value="" />
+      <data id="ZIP" value="" />
+  </body>
+</hostgateway>
+
+2021-11-09 11:06:23,327 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP203SSVUVsyesToYwLoVaqLgRBsDZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCF6"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="TYPE14" value=""/>
+
+   <data id="EMBOSSER_NAME_113" value=""/>
+
+   <data id="TYPE13" value=""/>
+
+   <data id="EMBOSSER_NAME_112" value=""/>
+
+   <data id="SHORT_NAME9" value=""/>
+
+   <data id="TYPE12" value=""/>
+
+   <data id="EMBOSSER_NAME_111" value=""/>
+
+   <data id="SHORT_NAME8" value=""/>
+
+   <data id="TYPE11" value=""/>
+
+   <data id="EMBOSSER_NAME_110" value=""/>
+
+   <data id="SHORT_NAME7" value=""/>
+
+   <data id="TYPE10" value=""/>
+
+   <data id="SHORT_NAME6" value=""/>
+
+   <data id="SHORT_NAME5" value=""/>
+
+   <data id="SHORT_NAME4" value=""/>
+
+   <data id="SHORT_NAME3" value=""/>
+
+   <data id="SHORT_NAME2" value="測試承雄"/>
+
+   <data id="EMBOSSER_NAME_19" value=""/>
+
+   <data id="SHORT_NAME1" value="測試承雄"/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="EMBOSSER_NAME_18" value=""/>
+
+   <data id="NAME_1" value="測試宏珠     "/>
+
+   <data id="EMBOSSER_NAME_17" value=""/>
+
+   <data id="NAME_1_2" value="測試宏珠     "/>
+
+   <data id="EMBOSSER_NAME_16" value=""/>
+
+   <data id="EMBOSSER_NAME_15" value=""/>
+
+   <data id="EMBOSSER_NAME_14" value=""/>
+
+   <data id="EMBOSSER_NAME_13" value=""/>
+
+   <data id="EMBOSSER_NAME_12" value="TESTNU-RLIEOIIT"/>
+
+   <data id="EMBOSSER_NAME_11" value="TESTNU-RLIEOIIT"/>
+
+   <data id="MANAGE_ZIP_CODE" value="100"/>
+
+   <data id="EU_NBR_OF_DEPS" value="00"/>
+
+   <data id="MEMBER_SINCE" value="15/02"/>
+
+   <data id="CO_OWNER" value=""/>
+
+   <data id="PROGRAM_ID" value="JCGU802"/>
+
+   <data id="GRADUATE_YYMM" value="00/00"/>
+
+   <data id="CARD_ID18" value=""/>
+
+   <data id="CARD_ID17" value=""/>
+
+   <data id="EMPLOYER" value="測試鴻二                    "/>
+
+   <data id="SHORT_NAME18" value=""/>
+
+   <data id="CARD_ID16" value=""/>
+
+   <data id="SHORT_NAME17" value=""/>
+
+   <data id="CARD_ID15" value=""/>
+
+   <data id="SHORT_NAME16" value=""/>
+
+   <data id="CARD_ID14" value=""/>
+
+   <data id="SHORT_NAME15" value=""/>
+
+   <data id="CARD_ID13" value=""/>
+
+   <data id="SHORT_NAME14" value=""/>
+
+   <data id="CARD_ID12" value=""/>
+
+   <data id="SHORT_NAME13" value=""/>
+
+   <data id="CARD_ID11" value=""/>
+
+   <data id="CO_TAX_ID_TYPE" value="0"/>
+
+   <data id="SHORT_NAME12" value=""/>
+
+   <data id="CARD_ID10" value=""/>
+
+   <data id="CITY" value="和結山市    "/>
+
+   <data id="SHORT_NAME11" value=""/>
+
+   <data id="SHORT_NAME10" value=""/>
+
+   <data id="CARD_NMBR9" value=""/>
+
+   <data id="CARD_NMBR8" value=""/>
+
+   <data id="TRAN_ID" value="JCF6"/>
+
+   <data id="CARD_NMBR7" value=""/>
+
+   <data id="CARD_NMBR6" value=""/>
+
+   <data id="CARD_NMBR5" value=""/>
+
+   <data id="CARD_NMBR4" value=""/>
+
+   <data id="CARD_NMBR3" value=""/>
+
+   <data id="TYPE9" value=""/>
+
+   <data id="CARD_NMBR2" value="5173571000379362"/>
+
+   <data id="TYPE8" value=""/>
+
+   <data id="CARD_NMBR1" value="5173571000370726"/>
+
+   <data id="TYPE7" value=""/>
+
+   <data id="CARD_ID9" value=""/>
+
+   <data id="TYPE6" value=""/>
+
+   <data id="CARD_ID8" value=""/>
+
+   <data id="TYPE5" value=""/>
+
+   <data id="CARD_ID7" value=""/>
+
+   <data id="TYPE4" value=""/>
+
+   <data id="CARD_ID6" value=""/>
+
+   <data id="BIRTH_DATE" value="01011980"/>
+
+   <data id="TYPE3" value=""/>
+
+   <data id="CARD_ID5" value=""/>
+
+   <data id="TYPE2" value="666"/>
+
+   <data id="CARD_ID4" value=""/>
+
+   <data id="TYPE1" value="666"/>
+
+   <data id="CARD_ID3" value=""/>
+
+   <data id="CARD_ID2" value="N100175951"/>
+
+   <data id="CARD_ID1" value="N100175951"/>
+
+   <data id="WAIVE_FLAG" value="0"/>
+
+   <data id="EU_CUSTOMER_CLASS" value="0 "/>
+
+   <data id="BILLING_CYCLE" value="15"/>
+
+   <data id="CARD_NMBR18" value=""/>
+
+   <data id="CARD_NMBR17" value=""/>
+
+   <data id="CARD_NMBR16" value=""/>
+
+   <data id="CARD_NMBR15" value=""/>
+
+   <data id="CARD_NMBR14" value=""/>
+
+   <data id="CARD_NMBR13" value=""/>
+
+   <data id="CARD_NMBR12" value=""/>
+
+   <data id="CARD_NMBR11" value=""/>
+
+   <data id="CARD_NMBR10" value=""/>
+
+   <data id="OFF_PHONE_FLAG" value="0"/>
+
+   <data id="EU_DIRECT_MAIL" value="5"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="DD_ID" value=""/>
+
+   <data id="PROGRAM_VERSION" value=""/>
+
+   <data id="MEMO_2" value=""/>
+
+   <data id="HOME_PHONE" value=""/>
+
+   <data id="MEMO_1" value=""/>
+
+   <data id="OFFICE_PHONE" value=""/>
+
+   <data id="ACCT_NBR" value="N100175951"/>
+
+   <data id="ZIP" value="100"/>
+
+   <data id="ADDR_2" value=""/>
+
+   <data id="ADDR_1" value="測試路測試巷１８號１５樓    "/>
+
+   <data id="LINE_CNT" value="2"/>
+
+   <data id="EMBOSSER_NAME_118" value=""/>
+
+   <data id="TYPE18" value=""/>
+
+   <data id="EMBOSSER_NAME_117" value=""/>
+
+   <data id="TYPE17" value=""/>
+
+   <data id="EMBOSSER_NAME_116" value=""/>
+
+   <data id="TYPE16" value=""/>
+
+   <data id="EMBOSSER_NAME_115" value=""/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="TYPE15" value=""/>
+
+   <data id="EMBOSSER_NAME_114" value=""/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-11-09 11:06:23,452 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：P4_JCBG Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP203SSVUVsyesToYwLoVaqLgRBsDZ45120" />
+      <data id="transactionId" value="P4_JCBG" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="N100175951" />
+      <data id="CON_RPT" value="__" />
+      <data id="E_SERVICE_CODE" value="____" />
+      <data id="EBILL_FLAG" value="" />
+      <data id="EMAIL" value="__________________________________________________" />
+      <data id="FAX_NO" value="__________________" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="GRADE_SCHOOL" value="______________________" />
+      <data id="GRADE_SCHOOL_LOCATE" value="__________" />
+      <data id="INFORMANT_NAME_1" value="__________" />
+      <data id="INFORMANT_NAME_2" value="__________" />
+      <data id="INFORMANT_TEL_NO_1" value="__________________" />
+      <data id="INFORMANT_TEL_NO_2" value="__________________" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="MOBILE_PHONE" value="__________" />
+      <data id="OVERSEA_PHONE" value="__________________" />
+      <data id="PERM_ADDR_1" value="______________________________" />
+      <data id="PERM_ADDR_2" value="______________________________" />
+      <data id="PERM_CITY" value="______________" />
+      <data id="PERM_ZIP" value="_____" />
+      <data id="PROGRAM_ID" value="JCGU638" />
+      <data id="SAME_FLAG" value="" />
+      <data id="SMS_NP_FLAG" value="_" />
+      <data id="STUS_ADDB" value="__" />
+      <data id="STUS_ADDP" value="__" />
+      <data id="STUS_EMAIL" value="__" />
+      <data id="STUS_FAX" value="__" />
+      <data id="STUS_ID" value="__" />
+      <data id="STUS_MOBIL" value="__" />
+      <data id="STUS_TELH" value="__" />
+      <data id="STUS_TELO" value="__" />
+      <data id="STUS_TELP" value="__" />
+      <data id="TEL_PERM" value="__________________" />
+      <data id="TEMP_E_MAIL" value="" />
+      <data id="TEMP_E_MAIL_STATUS" value="" />
+      <data id="TITLE" value="____________" />
+      <data id="TMAL_CREATE_DATE" value="" />
+      <data id="TRAN_ID" value="JCBG" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="VALID_SEL" value="" />
+      <data id="VERIFY_SEQ_NO" value="" />
+  </body>
+</hostgateway>
+
+2021-11-09 11:06:24,710 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：P4_JCBG Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP203SSVUVsyesToYwLoVaqLgRBsDZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCBG"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="STUS_MOBIL" value="__"/>
+
+   <data id="VALID_SEL" value=""/>
+
+   <data id="CON_RPT" value="__"/>
+
+   <data id="INFORMANT_TEL_NO_2" value="__________________"/>
+
+   <data id="PERM_CITY" value="______________"/>
+
+   <data id="INFORMANT_TEL_NO_1" value="__________________"/>
+
+   <data id="OVERSEA_PHONE" value="__________________"/>
+
+   <data id="FAX_NO" value="__________________"/>
+
+   <data id="INFORMANT_NAME_2" value="__________"/>
+
+   <data id="INFORMANT_NAME_1" value="__________"/>
+
+   <data id="TRAN_ID" value="JCBG"/>
+
+   <data id="SAME_FLAG" value=""/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="TEL_PERM" value="__________________"/>
+
+   <data id="MOBILE_PHONE" value="__________"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="PERM_ADDR_2" value="______________________________"/>
+
+   <data id="PERM_ADDR_1" value="______________________________"/>
+
+   <data id="VERIFY_SEQ_NO" value=""/>
+
+   <data id="GRADE_SCHOOL_LOCATE" value="__________"/>
+
+   <data id="E_SERVICE_CODE" value="____"/>
+
+   <data id="TEMP_E_MAIL" value=""/>
+
+   <data id="LINE_CNT" value="0000"/>
+
+   <data id="ACCT_NBR" value="N100175951"/>
+
+   <data id="MESSAGE_TYPE" value="9999"/>
+
+   <data id="GRADE_SCHOOL" value="______________________"/>
+
+   <data id="STUS_EMAIL" value="__"/>
+
+   <data id="SMS_NP_FLAG" value="_"/>
+
+   <data id="TMAL_CREATE_DATE" value=""/>
+
+   <data id="PROGRAM_ID" value="JCGU638"/>
+
+   <data id="EBILL_FLAG" value=""/>
+
+   <data id="TEMP_E_MAIL_STATUS" value=""/>
+
+   <data id="EMAIL" value="__________________________________________________"/>
+
+   <data id="PERM_ZIP" value="_____"/>
+
+   <data id="STUS_FAX" value="__"/>
+
+   <data id="TITLE" value="____________"/>
+
+   <data id="STUS_ADDP" value="__"/>
+
+   <data id="STUS_ID" value="__"/>
+
+   <data id="STUS_TELP" value="__"/>
+
+   <data id="STUS_TELO" value="__"/>
+
+   <data id="STUS_ADDB" value="__"/>
+
+   <data id="STUS_TELH" value="__"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-11-09 11:11:55,818 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="establishSession" />
+  </header>
+  <body>
+      <data id="applicationId" value="CSIP" />
+      <data id="branchNo" value="0993" />
+      <data id="passWord" value="********" />
+      <data id="racfId" value="Z45120" />
+      <data id="racfPassWord" value="********" />
+      <data id="signOnLU0" value="no" />
+      <data id="userId" value="Z00040883" />
+  </body>
+</hostgateway>
+
+2021-11-09 11:11:56,422 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <rc value="700"/>
+
+ </header>
+
+ <body>
+
+  <msg value="700 SESSION 建立成功"/>
+
+  <data id="sessionId" value="CSIP2031h2gckNqCArHlG0pypqbGH9CZ45120"/>
+
+  <data id="loginServer" value="HTG203"/>
+
+ </body>
+
+</hostgateway>
+
+
+2021-11-09 11:11:56,460 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP2031h2gckNqCArHlG0pypqbGH9CZ45120" />
+      <data id="transactionId" value="P4_JCF6" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="N100175951" />
+      <data id="ADDR_1" value="" />
+      <data id="ADDR_2" value="" />
+      <data id="BILLING_CYCLE" value="" />
+      <data id="BIRTH_DATE" value="" />
+      <data id="CARD_ID1" value="" />
+      <data id="CARD_ID10" value="" />
+      <data id="CARD_ID11" value="" />
+      <data id="CARD_ID12" value="" />
+      <data id="CARD_ID13" value="" />
+      <data id="CARD_ID14" value="" />
+      <data id="CARD_ID15" value="" />
+      <data id="CARD_ID16" value="" />
+      <data id="CARD_ID17" value="" />
+      <data id="CARD_ID18" value="" />
+      <data id="CARD_ID2" value="" />
+      <data id="CARD_ID3" value="" />
+      <data id="CARD_ID4" value="" />
+      <data id="CARD_ID5" value="" />
+      <data id="CARD_ID6" value="" />
+      <data id="CARD_ID7" value="" />
+      <data id="CARD_ID8" value="" />
+      <data id="CARD_ID9" value="" />
+      <data id="CARD_NMBR1" value="" />
+      <data id="CARD_NMBR10" value="" />
+      <data id="CARD_NMBR11" value="" />
+      <data id="CARD_NMBR12" value="" />
+      <data id="CARD_NMBR13" value="" />
+      <data id="CARD_NMBR14" value="" />
+      <data id="CARD_NMBR15" value="" />
+      <data id="CARD_NMBR16" value="" />
+      <data id="CARD_NMBR17" value="" />
+      <data id="CARD_NMBR18" value="" />
+      <data id="CARD_NMBR2" value="" />
+      <data id="CARD_NMBR3" value="" />
+      <data id="CARD_NMBR4" value="" />
+      <data id="CARD_NMBR5" value="" />
+      <data id="CARD_NMBR6" value="" />
+      <data id="CARD_NMBR7" value="" />
+      <data id="CARD_NMBR8" value="" />
+      <data id="CARD_NMBR9" value="" />
+      <data id="CITY" value="" />
+      <data id="CO_OWNER" value="" />
+      <data id="CO_TAX_ID_TYPE" value="" />
+      <data id="DD_ID" value="" />
+      <data id="EMBOSSER_NAME_11" value="" />
+      <data id="EMBOSSER_NAME_110" value="" />
+      <data id="EMBOSSER_NAME_111" value="" />
+      <data id="EMBOSSER_NAME_112" value="" />
+      <data id="EMBOSSER_NAME_113" value="" />
+      <data id="EMBOSSER_NAME_114" value="" />
+      <data id="EMBOSSER_NAME_115" value="" />
+      <data id="EMBOSSER_NAME_116" value="" />
+      <data id="EMBOSSER_NAME_117" value="" />
+      <data id="EMBOSSER_NAME_118" value="" />
+      <data id="EMBOSSER_NAME_12" value="" />
+      <data id="EMBOSSER_NAME_13" value="" />
+      <data id="EMBOSSER_NAME_14" value="" />
+      <data id="EMBOSSER_NAME_15" value="" />
+      <data id="EMBOSSER_NAME_16" value="" />
+      <data id="EMBOSSER_NAME_17" value="" />
+      <data id="EMBOSSER_NAME_18" value="" />
+      <data id="EMBOSSER_NAME_19" value="" />
+      <data id="EMPLOYER" value="" />
+      <data id="EU_CUSTOMER_CLASS" value="" />
+      <data id="EU_DIRECT_MAIL" value="" />
+      <data id="EU_NBR_OF_DEPS" value="" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="GRADUATE_YYMM" value="" />
+      <data id="HOME_PHONE" value="" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MANAGE_ZIP_CODE" value="" />
+      <data id="MEMBER_SINCE" value="" />
+      <data id="MEMO_1" value="" />
+      <data id="MEMO_2" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="NAME_1" value="" />
+      <data id="NAME_1_2" value="" />
+      <data id="OFF_PHONE_FLAG" value="" />
+      <data id="OFFICE_PHONE" value="" />
+      <data id="SHORT_NAME1" value="" />
+      <data id="SHORT_NAME10" value="" />
+      <data id="SHORT_NAME11" value="" />
+      <data id="SHORT_NAME12" value="" />
+      <data id="SHORT_NAME13" value="" />
+      <data id="SHORT_NAME14" value="" />
+      <data id="SHORT_NAME15" value="" />
+      <data id="SHORT_NAME16" value="" />
+      <data id="SHORT_NAME17" value="" />
+      <data id="SHORT_NAME18" value="" />
+      <data id="SHORT_NAME2" value="" />
+      <data id="SHORT_NAME3" value="" />
+      <data id="SHORT_NAME4" value="" />
+      <data id="SHORT_NAME5" value="" />
+      <data id="SHORT_NAME6" value="" />
+      <data id="SHORT_NAME7" value="" />
+      <data id="SHORT_NAME8" value="" />
+      <data id="SHORT_NAME9" value="" />
+      <data id="TYPE1" value="" />
+      <data id="TYPE10" value="" />
+      <data id="TYPE11" value="" />
+      <data id="TYPE12" value="" />
+      <data id="TYPE13" value="" />
+      <data id="TYPE14" value="" />
+      <data id="TYPE15" value="" />
+      <data id="TYPE16" value="" />
+      <data id="TYPE17" value="" />
+      <data id="TYPE18" value="" />
+      <data id="TYPE2" value="" />
+      <data id="TYPE3" value="" />
+      <data id="TYPE4" value="" />
+      <data id="TYPE5" value="" />
+      <data id="TYPE6" value="" />
+      <data id="TYPE7" value="" />
+      <data id="TYPE8" value="" />
+      <data id="TYPE9" value="" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="WAIVE_FLAG" value="" />
+      <data id="ZIP" value="" />
+  </body>
+</hostgateway>
+
+2021-11-09 11:11:56,861 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：P4_JCF6 Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP2031h2gckNqCArHlG0pypqbGH9CZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCF6"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="TYPE14" value=""/>
+
+   <data id="EMBOSSER_NAME_113" value=""/>
+
+   <data id="TYPE13" value=""/>
+
+   <data id="EMBOSSER_NAME_112" value=""/>
+
+   <data id="SHORT_NAME9" value=""/>
+
+   <data id="TYPE12" value=""/>
+
+   <data id="EMBOSSER_NAME_111" value=""/>
+
+   <data id="SHORT_NAME8" value=""/>
+
+   <data id="TYPE11" value=""/>
+
+   <data id="EMBOSSER_NAME_110" value=""/>
+
+   <data id="SHORT_NAME7" value=""/>
+
+   <data id="TYPE10" value=""/>
+
+   <data id="SHORT_NAME6" value=""/>
+
+   <data id="SHORT_NAME5" value=""/>
+
+   <data id="SHORT_NAME4" value=""/>
+
+   <data id="SHORT_NAME3" value=""/>
+
+   <data id="SHORT_NAME2" value="測試承雄"/>
+
+   <data id="EMBOSSER_NAME_19" value=""/>
+
+   <data id="SHORT_NAME1" value="測試承雄"/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="EMBOSSER_NAME_18" value=""/>
+
+   <data id="NAME_1" value="測試宏珠     "/>
+
+   <data id="EMBOSSER_NAME_17" value=""/>
+
+   <data id="NAME_1_2" value="測試宏珠     "/>
+
+   <data id="EMBOSSER_NAME_16" value=""/>
+
+   <data id="EMBOSSER_NAME_15" value=""/>
+
+   <data id="EMBOSSER_NAME_14" value=""/>
+
+   <data id="EMBOSSER_NAME_13" value=""/>
+
+   <data id="EMBOSSER_NAME_12" value="TESTNU-RLIEOIIT"/>
+
+   <data id="EMBOSSER_NAME_11" value="TESTNU-RLIEOIIT"/>
+
+   <data id="MANAGE_ZIP_CODE" value="100"/>
+
+   <data id="EU_NBR_OF_DEPS" value="00"/>
+
+   <data id="MEMBER_SINCE" value="15/02"/>
+
+   <data id="CO_OWNER" value=""/>
+
+   <data id="PROGRAM_ID" value="JCGU802"/>
+
+   <data id="GRADUATE_YYMM" value="00/00"/>
+
+   <data id="CARD_ID18" value=""/>
+
+   <data id="CARD_ID17" value=""/>
+
+   <data id="EMPLOYER" value="測試鴻二                    "/>
+
+   <data id="SHORT_NAME18" value=""/>
+
+   <data id="CARD_ID16" value=""/>
+
+   <data id="SHORT_NAME17" value=""/>
+
+   <data id="CARD_ID15" value=""/>
+
+   <data id="SHORT_NAME16" value=""/>
+
+   <data id="CARD_ID14" value=""/>
+
+   <data id="SHORT_NAME15" value=""/>
+
+   <data id="CARD_ID13" value=""/>
+
+   <data id="SHORT_NAME14" value=""/>
+
+   <data id="CARD_ID12" value=""/>
+
+   <data id="SHORT_NAME13" value=""/>
+
+   <data id="CARD_ID11" value=""/>
+
+   <data id="CO_TAX_ID_TYPE" value="0"/>
+
+   <data id="SHORT_NAME12" value=""/>
+
+   <data id="CARD_ID10" value=""/>
+
+   <data id="CITY" value="和結山市    "/>
+
+   <data id="SHORT_NAME11" value=""/>
+
+   <data id="SHORT_NAME10" value=""/>
+
+   <data id="CARD_NMBR9" value=""/>
+
+   <data id="CARD_NMBR8" value=""/>
+
+   <data id="TRAN_ID" value="JCF6"/>
+
+   <data id="CARD_NMBR7" value=""/>
+
+   <data id="CARD_NMBR6" value=""/>
+
+   <data id="CARD_NMBR5" value=""/>
+
+   <data id="CARD_NMBR4" value=""/>
+
+   <data id="CARD_NMBR3" value=""/>
+
+   <data id="TYPE9" value=""/>
+
+   <data id="CARD_NMBR2" value="5173571000379362"/>
+
+   <data id="TYPE8" value=""/>
+
+   <data id="CARD_NMBR1" value="5173571000370726"/>
+
+   <data id="TYPE7" value=""/>
+
+   <data id="CARD_ID9" value=""/>
+
+   <data id="TYPE6" value=""/>
+
+   <data id="CARD_ID8" value=""/>
+
+   <data id="TYPE5" value=""/>
+
+   <data id="CARD_ID7" value=""/>
+
+   <data id="TYPE4" value=""/>
+
+   <data id="CARD_ID6" value=""/>
+
+   <data id="BIRTH_DATE" value="01011980"/>
+
+   <data id="TYPE3" value=""/>
+
+   <data id="CARD_ID5" value=""/>
+
+   <data id="TYPE2" value="666"/>
+
+   <data id="CARD_ID4" value=""/>
+
+   <data id="TYPE1" value="666"/>
+
+   <data id="CARD_ID3" value=""/>
+
+   <data id="CARD_ID2" value="N100175951"/>
+
+   <data id="CARD_ID1" value="N100175951"/>
+
+   <data id="WAIVE_FLAG" value="0"/>
+
+   <data id="EU_CUSTOMER_CLASS" value="0 "/>
+
+   <data id="BILLING_CYCLE" value="15"/>
+
+   <data id="CARD_NMBR18" value=""/>
+
+   <data id="CARD_NMBR17" value=""/>
+
+   <data id="CARD_NMBR16" value=""/>
+
+   <data id="CARD_NMBR15" value=""/>
+
+   <data id="CARD_NMBR14" value=""/>
+
+   <data id="CARD_NMBR13" value=""/>
+
+   <data id="CARD_NMBR12" value=""/>
+
+   <data id="CARD_NMBR11" value=""/>
+
+   <data id="CARD_NMBR10" value=""/>
+
+   <data id="OFF_PHONE_FLAG" value="0"/>
+
+   <data id="EU_DIRECT_MAIL" value="5"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="DD_ID" value=""/>
+
+   <data id="PROGRAM_VERSION" value=""/>
+
+   <data id="MEMO_2" value=""/>
+
+   <data id="HOME_PHONE" value=""/>
+
+   <data id="MEMO_1" value=""/>
+
+   <data id="OFFICE_PHONE" value=""/>
+
+   <data id="ACCT_NBR" value="N100175951"/>
+
+   <data id="ZIP" value="100"/>
+
+   <data id="ADDR_2" value=""/>
+
+   <data id="ADDR_1" value="測試路測試巷１８號１５樓    "/>
+
+   <data id="LINE_CNT" value="2"/>
+
+   <data id="EMBOSSER_NAME_118" value=""/>
+
+   <data id="TYPE18" value=""/>
+
+   <data id="EMBOSSER_NAME_117" value=""/>
+
+   <data id="TYPE17" value=""/>
+
+   <data id="EMBOSSER_NAME_116" value=""/>
+
+   <data id="TYPE16" value=""/>
+
+   <data id="EMBOSSER_NAME_115" value=""/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="TYPE15" value=""/>
+
+   <data id="EMBOSSER_NAME_114" value=""/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-11-09 11:11:56,986 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：REQ HTGName：P4_JCBG Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP2031h2gckNqCArHlG0pypqbGH9CZ45120" />
+      <data id="transactionId" value="P4_JCBG" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="N100175951" />
+      <data id="CON_RPT" value="__" />
+      <data id="E_SERVICE_CODE" value="____" />
+      <data id="EBILL_FLAG" value="" />
+      <data id="EMAIL" value="__________________________________________________" />
+      <data id="FAX_NO" value="__________________" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="GRADE_SCHOOL" value="______________________" />
+      <data id="GRADE_SCHOOL_LOCATE" value="__________" />
+      <data id="INFORMANT_NAME_1" value="__________" />
+      <data id="INFORMANT_NAME_2" value="__________" />
+      <data id="INFORMANT_TEL_NO_1" value="__________________" />
+      <data id="INFORMANT_TEL_NO_2" value="__________________" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="MOBILE_PHONE" value="__________" />
+      <data id="OVERSEA_PHONE" value="__________________" />
+      <data id="PERM_ADDR_1" value="______________________________" />
+      <data id="PERM_ADDR_2" value="______________________________" />
+      <data id="PERM_CITY" value="______________" />
+      <data id="PERM_ZIP" value="_____" />
+      <data id="PROGRAM_ID" value="JCGU638" />
+      <data id="SAME_FLAG" value="" />
+      <data id="SMS_NP_FLAG" value="_" />
+      <data id="STUS_ADDB" value="__" />
+      <data id="STUS_ADDP" value="__" />
+      <data id="STUS_EMAIL" value="__" />
+      <data id="STUS_FAX" value="__" />
+      <data id="STUS_ID" value="__" />
+      <data id="STUS_MOBIL" value="__" />
+      <data id="STUS_TELH" value="__" />
+      <data id="STUS_TELO" value="__" />
+      <data id="STUS_TELP" value="__" />
+      <data id="TEL_PERM" value="__________________" />
+      <data id="TEMP_E_MAIL" value="" />
+      <data id="TEMP_E_MAIL_STATUS" value="" />
+      <data id="TITLE" value="____________" />
+      <data id="TMAL_CREATE_DATE" value="" />
+      <data id="TRAN_ID" value="JCBG" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="VALID_SEL" value="" />
+      <data id="VERIFY_SEQ_NO" value="" />
+  </body>
+</hostgateway>
+
+2021-11-09 11:11:57,162 INFO SessionID：je0qe1saoxf4nongddkxqtbg UserID：Z00040883 FunctionID：01010100 HTGType：RTN HTGName：P4_JCBG Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP2031h2gckNqCArHlG0pypqbGH9CZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCBG"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="STUS_MOBIL" value="__"/>
+
+   <data id="VALID_SEL" value=""/>
+
+   <data id="CON_RPT" value="__"/>
+
+   <data id="INFORMANT_TEL_NO_2" value="__________________"/>
+
+   <data id="PERM_CITY" value="______________"/>
+
+   <data id="INFORMANT_TEL_NO_1" value="__________________"/>
+
+   <data id="OVERSEA_PHONE" value="__________________"/>
+
+   <data id="FAX_NO" value="__________________"/>
+
+   <data id="INFORMANT_NAME_2" value="__________"/>
+
+   <data id="INFORMANT_NAME_1" value="__________"/>
+
+   <data id="TRAN_ID" value="JCBG"/>
+
+   <data id="SAME_FLAG" value=""/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="TEL_PERM" value="__________________"/>
+
+   <data id="MOBILE_PHONE" value="__________"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="PERM_ADDR_2" value="______________________________"/>
+
+   <data id="PERM_ADDR_1" value="______________________________"/>
+
+   <data id="VERIFY_SEQ_NO" value=""/>
+
+   <data id="GRADE_SCHOOL_LOCATE" value="__________"/>
+
+   <data id="E_SERVICE_CODE" value="____"/>
+
+   <data id="TEMP_E_MAIL" value=""/>
+
+   <data id="LINE_CNT" value="0000"/>
+
+   <data id="ACCT_NBR" value="N100175951"/>
+
+   <data id="MESSAGE_TYPE" value="9999"/>
+
+   <data id="GRADE_SCHOOL" value="______________________"/>
+
+   <data id="STUS_EMAIL" value="__"/>
+
+   <data id="SMS_NP_FLAG" value="_"/>
+
+   <data id="TMAL_CREATE_DATE" value=""/>
+
+   <data id="PROGRAM_ID" value="JCGU638"/>
+
+   <data id="EBILL_FLAG" value=""/>
+
+   <data id="TEMP_E_MAIL_STATUS" value=""/>
+
+   <data id="EMAIL" value="__________________________________________________"/>
+
+   <data id="PERM_ZIP" value="_____"/>
+
+   <data id="STUS_FAX" value="__"/>
+
+   <data id="TITLE" value="____________"/>
+
+   <data id="STUS_ADDP" value="__"/>
+
+   <data id="STUS_ID" value="__"/>
+
+   <data id="STUS_TELP" value="__"/>
+
+   <data id="STUS_TELO" value="__"/>
+
+   <data id="STUS_ADDB" value="__"/>
+
+   <data id="STUS_TELH" value="__"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+

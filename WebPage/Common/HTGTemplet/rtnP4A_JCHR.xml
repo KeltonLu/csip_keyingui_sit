@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="CSIP"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4A_JCHR"/>
+    </header>
+  <line no="1">
+    <msgBody>
+        <data id="TRAN_ID" value="" />
+        <data id="PROGRAM_ID" value="" />
+				<data id="USER_ID" value="" />
+				<data id="MESSAGE_TYPE" value="0001" />
+        <data id="MESSAGE_CHI" value="成功 "/>
+        <data id="FUNCTION_CODE" value=""/>
+				<data id="ORGN" value="822"/>
+				<data id="ACCT" value=""/>
+				<data id="STATUS_FLAG" value="8"/>
+				<data id="ID_NAME" value="Test"/>
+				<data id="ID_CITY" value="111111"/>
+				<data id="CONTACT" value="Jack"/>
+				<data id="MERCH_MEMO" value="tom"/>
+				<data id="PHONE_NMBR1" value="027"/>
+				<data id="PHONE_NMBR2" value="12345678"/>
+				<data id="PHONE_NMBR3" value=""/>
+				<data id="OFFICER_ID" value="111"/>
+				<data id="DB_ACCT_NMBR" value="666666666666"/>
+				<data id="MERCH_TYPE" value="11"/>
+        <data id="MERCHANT_NAME" value="TESTER"/>
+        <data id="HOLD_STMT_FLAG" value="0"/>
+        <data id="ADDRESS1" value="111111"/>				
+				<data id="ADDRESS2" value="222222"/>
+				<data id="ADDRESS3" value="333333"/>
+				<data id="ZIP_CODE" value="400"/>
+				<data id="MCC" value="6666"/>
+				<data id="CHAIN_MER_NBR" value="1111111"/>
+				<data id="CHAIN_MER_LEVEL" value="1"/>
+				<data id="NBR_IMPRINTER1" value="111"/>
+				<data id="NBR_IMPRINTER2" value="222"/>
+				<data id="NBR_IMPRINTER3" value="333"/>
+				<data id="NBR_POS_DEV1" value="444"/>
+				<data id="NBR_POS_DEV2" value="555"/>
+				<data id="NBR_POS_DEV3" value="666"/>
+				<data id="DTE_LST_RTE_ADJ" value=""/>
+				<data id="DTE_USER_1" value="111111"/>
+				<data id="DTE_USER_2" value=""/>
+				<data id="USER_CODE_1" value=""/>
+				<data id="USER_CODE_2" value="22"/>
+				<data id="USER_CODE_3" value=""/>
+				<data id="PROJ_AVG_TKT" value="3333333"/>
+				<data id="PROJ_MTH_VOLUME" value="4444444444"/>
+				<data id="AVG_TKT_RANGES1" value=""/>
+				<data id="AVG_TKT_RANGES2" value=""/>
+				<data id="AVG_TKT_RANGES3" value=""/>
+				<data id="AVG_TKT_RANGES4" value=""/>
+				<data id="AGENT_BANK" value="001"/>
+				<data id="BRANCH" value="55555"/>
+				<data id="ROUTE_TRANSIT" value="888888888"/>
+				<data id="STMT_MSG_SUPPRESS" value=""/>
+				<data id="INTCHG_REJECT" value=""/>
+				<data id="CHAIN_STMT_IND" value=""/>
+				<data id="CHAIN_REPRT_IND" value=""/>
+				<data id="CHAIN_SETT_IND" value=""/>
+				<data id="CHAIN_DISC_IND" value=""/>
+				<data id="CHAIN_FEES_IND" value=""/>
+				<data id="CHAIN_DD_IND" value=""/>
+				<data id="USER_DATA1" value="999"/>
+				<data id="USER_DATA2" value="999999"/>
+				<data id="VISA_INTCHG_FLAG" value="1"/>
+				<data id="VISA_SPECL_COND_1" value=""/>
+				<data id="VISA_SPECL_COND_2" value=""/>
+				<data id="VISA_MAIL_PHONE_IND" value="2"/>
+				<data id="POS_CAP" value="3"/>
+				<data id="POS_MODE" value="44"/>
+				<data id="AUTH_SOURCE" value=""/>
+				<data id="CH_ID" value="5"/>
+				<data id="MC_INTCHG_FLAG" value="6"/>
+				<data id="CARD_STATUS1" value="1"/>
+				<data id="CARD_DISC_RATE1" value="11111"/>
+				<data id="CARD_STATUS2" value="2"/>
+				<data id="CARD_DISC_RATE2" value="22222"/>
+				<data id="CARD_STATUS3" value="3"/>
+				<data id="CARD_DISC_RATE3" value="33333"/>
+				<data id="CARD_STATUS4" value="4"/>
+				<data id="CARD_DISC_RATE4" value="44444"/>
+				<data id="CARD_STATUS5" value="5"/>
+				<data id="CARD_DISC_RATE5" value="55555"/>
+				<data id="CARD_STATUS6" value="6"/>
+				<data id="CARD_DISC_RATE6" value="66666"/>
+				<data id="CARD_STATUS7" value="7"/>
+				<data id="CARD_DISC_RATE7" value="77777"/>
+				<data id="CARD_STATUS8" value="8"/>
+				<data id="CARD_DISC_RATE8" value="88888"/>
+				<data id="CHAIN_STORE" value="222222222"/>
+				<data id="CARD_STATUS9" value=""/>
+				<data id="CARD_DISC_RATE9" value=""/>
+				<data id="CARD_STATUS10" value=""/>
+				<data id="CARD_DISC_RATE10" value=""/>
+				<data id="CARD_STATUS11" value=""/>
+				<data id="CARD_DISC_RATE11" value=""/>
+				<data id="CARD_STATUS12" value=""/>
+				<data id="CARD_DISC_RATE12" value=""/>
+				<data id="CARD_STATUS13" value=""/>
+				<data id="CARD_DISC_RATE13" value=""/>
+				<data id="CARD_STATUS14" value=""/>
+				<data id="CARD_DISC_RATE14" value=""/>
+				<data id="CARD_STATUS15" value=""/>
+				<data id="CARD_DISC_RATE15" value=""/>
+    </msgBody>
+  </line>
+</hostgateway>

@@ -1,0 +1,482 @@
+2021-03-11 15:44:48,396 INFO  Message：Application and Jobs start
+2021-03-11 15:44:49,097 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 15:44:49,101 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 15:44:49,105 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 15:44:49,109 INFO  Message：job_JobRefresher Start..
+2021-03-11 15:44:49,113 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 15:44:49,119 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 15:44:49,123 INFO  Message：job_jobAutoPay Start..
+2021-03-11 15:44:49,127 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 15:44:49,131 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 15:44:49,135 INFO  Message：job_jobTransDown Start..
+2021-03-11 15:44:49,139 INFO  Message：job_jobTransUp Start..
+2021-03-11 15:44:49,143 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 15:44:49,147 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 15:44:49,151 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 15:44:49,155 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 15:44:49,160 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 15:44:49,165 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 15:44:49,169 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 15:44:49,174 INFO  Message：job_jobBackup Start..
+2021-03-11 15:44:49,182 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 15:44:49,187 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 15:44:49,192 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 15:44:49,196 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 15:44:49,200 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 15:44:49,204 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 15:44:49,208 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 15:44:49,213 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 15:44:49,217 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 15:44:49,221 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 15:44:49,225 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 15:44:49,230 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 15:44:49,234 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 15:44:49,237 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 15:44:49,241 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 15:44:49,246 INFO  Message：job_BatchJob Start..
+2021-03-11 15:50:11,117 INFO  Message：Application and Jobs End
+2021-03-11 15:51:19,338 INFO  Message：Application and Jobs start
+2021-03-11 15:51:19,688 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 15:51:19,695 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 15:51:19,699 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 15:51:19,703 INFO  Message：job_JobRefresher Start..
+2021-03-11 15:51:19,707 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 15:51:19,713 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 15:51:19,718 INFO  Message：job_jobAutoPay Start..
+2021-03-11 15:51:19,721 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 15:51:19,725 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 15:51:19,731 INFO  Message：job_jobTransDown Start..
+2021-03-11 15:51:19,735 INFO  Message：job_jobTransUp Start..
+2021-03-11 15:51:19,739 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 15:51:19,742 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 15:51:19,747 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 15:51:19,751 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 15:51:19,756 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 15:51:19,760 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 15:51:19,764 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 15:51:19,768 INFO  Message：job_jobBackup Start..
+2021-03-11 15:51:19,773 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 15:51:19,777 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 15:51:19,781 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 15:51:19,785 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 15:51:19,789 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 15:51:19,792 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 15:51:19,797 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 15:51:19,801 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 15:51:19,805 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 15:51:19,809 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 15:51:19,814 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 15:51:19,818 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 15:51:19,823 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 15:51:19,826 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 15:51:19,831 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 15:51:19,834 INFO  Message：job_BatchJob Start..
+2021-03-11 15:51:40,511 INFO  Message：Application and Jobs End
+2021-03-11 15:51:53,013 INFO  Message：Application and Jobs start
+2021-03-11 15:51:53,673 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 15:51:53,678 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 15:51:53,683 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 15:51:53,687 INFO  Message：job_JobRefresher Start..
+2021-03-11 15:51:53,692 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 15:51:53,697 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 15:51:53,703 INFO  Message：job_jobAutoPay Start..
+2021-03-11 15:51:53,708 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 15:51:53,714 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 15:51:53,718 INFO  Message：job_jobTransDown Start..
+2021-03-11 15:51:53,723 INFO  Message：job_jobTransUp Start..
+2021-03-11 15:51:53,728 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 15:51:53,731 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 15:51:53,736 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 15:51:53,739 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 15:51:53,745 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 15:51:53,763 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 15:51:53,778 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 15:51:53,784 INFO  Message：job_jobBackup Start..
+2021-03-11 15:51:53,788 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 15:51:53,792 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 15:51:53,797 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 15:51:53,803 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 15:51:53,817 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 15:51:53,826 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 15:51:53,833 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 15:51:53,837 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 15:51:53,841 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 15:51:53,847 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 15:51:53,855 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 15:51:53,864 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 15:51:53,874 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 15:51:53,882 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 15:51:53,888 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 15:51:53,894 INFO  Message：job_BatchJob Start..
+2021-03-11 15:53:13,289 INFO  Message：Application and Jobs End
+2021-03-11 15:53:24,797 INFO  Message：Application and Jobs start
+2021-03-11 15:53:25,750 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 15:53:25,754 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 15:53:25,761 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 15:53:25,766 INFO  Message：job_JobRefresher Start..
+2021-03-11 15:53:25,770 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 15:53:25,775 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 15:53:25,781 INFO  Message：job_jobAutoPay Start..
+2021-03-11 15:53:25,786 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 15:53:25,791 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 15:53:25,796 INFO  Message：job_jobTransDown Start..
+2021-03-11 15:53:25,801 INFO  Message：job_jobTransUp Start..
+2021-03-11 15:53:25,805 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 15:53:25,811 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 15:53:25,817 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 15:53:25,821 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 15:53:25,825 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 15:53:25,830 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 15:53:25,834 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 15:53:25,838 INFO  Message：job_jobBackup Start..
+2021-03-11 15:53:25,842 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 15:53:25,848 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 15:53:25,853 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 15:53:25,857 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 15:53:25,861 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 15:53:25,865 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 15:53:25,870 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 15:53:25,876 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 15:53:25,881 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 15:53:25,885 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 15:53:25,888 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 15:53:25,893 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 15:53:25,897 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 15:53:25,901 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 15:53:25,905 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 15:53:25,908 INFO  Message：job_BatchJob Start..
+2021-03-11 15:54:21,953 INFO  Message：Application and Jobs End
+2021-03-11 15:54:31,617 INFO  Message：Application and Jobs start
+2021-03-11 15:54:32,175 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 15:54:32,179 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 15:54:32,185 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 15:54:32,190 INFO  Message：job_JobRefresher Start..
+2021-03-11 15:54:32,196 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 15:54:32,201 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 15:54:32,205 INFO  Message：job_jobAutoPay Start..
+2021-03-11 15:54:32,209 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 15:54:32,214 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 15:54:32,217 INFO  Message：job_jobTransDown Start..
+2021-03-11 15:54:32,222 INFO  Message：job_jobTransUp Start..
+2021-03-11 15:54:32,225 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 15:54:32,230 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 15:54:32,234 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 15:54:32,238 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 15:54:32,243 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 15:54:32,246 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 15:54:32,250 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 15:54:32,254 INFO  Message：job_jobBackup Start..
+2021-03-11 15:54:32,258 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 15:54:32,264 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 15:54:32,268 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 15:54:32,274 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 15:54:32,280 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 15:54:32,285 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 15:54:32,298 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 15:54:32,302 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 15:54:32,306 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 15:54:32,310 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 15:54:32,314 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 15:54:32,319 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 15:54:32,323 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 15:54:32,328 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 15:54:32,332 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 15:54:32,336 INFO  Message：job_BatchJob Start..
+2021-03-11 16:10:03,089 ERROR  Message：System.Net.Mail.SmtpException: 無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available
+   於 Framework.Common.Message.MailService.MailSenderBasic(String[] _To, String _From, String _Subject, String _Body, String AttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 265
+   於 Framework.Common.Message.MailService.MailSender(String[] _arrMailAdds, Int32 _mailTemplateId, NameValueCollection _coTags, String sAttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 95
+   於 AMLAFileRtnServiceFromAML.SendMail(String mailTitle, String mailBody, String status, DateTime startTime) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\AMLAFileRtnServiceFromAML.cs: 行 50
+2021-03-11 16:15:04,084 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-03-11 16:15:04,085 INFO  Layer：Util Message：remotePath:/aptoap/AML/TW/fromAml/
+2021-03-11 16:15:04,086 INFO  Layer：Util Message：remFileName:AML_TW_RMMOK_F_CARD_20210310.dat
+2021-03-11 16:15:04,086 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:15:04,088 ERROR  Layer：Util Message：下載檔案 AML_TW_RMMOK_F_CARD_20210310.dat 失敗(retry次數：0)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 327
+2021-03-11 16:15:14,540 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-03-11 16:15:14,541 INFO  Layer：Util Message：remotePath:/aptoap/AML/TW/fromAml/
+2021-03-11 16:15:14,542 INFO  Layer：Util Message：remFileName:AML_TW_RMMOK_F_CARD_20210310.dat
+2021-03-11 16:15:14,543 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:15:14,544 ERROR  Layer：Util Message：下載檔案 AML_TW_RMMOK_F_CARD_20210310.dat 失敗(retry次數：1)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 327
+2021-03-11 16:15:24,950 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-03-11 16:15:24,951 INFO  Layer：Util Message：remotePath:/aptoap/AML/TW/fromAml/
+2021-03-11 16:15:24,951 INFO  Layer：Util Message：remFileName:AML_TW_RMMOK_F_CARD_20210310.dat
+2021-03-11 16:15:24,952 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:15:24,953 ERROR  Layer：Util Message：下載檔案 AML_TW_RMMOK_F_CARD_20210310.dat 失敗(retry次數：2)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 327
+2021-03-11 16:15:35,658 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-03-11 16:15:35,659 INFO  Layer：Util Message：remotePath:/aptoap/AML/TW/fromAml/
+2021-03-11 16:15:35,660 INFO  Layer：Util Message：remFileName:AML_TW_RMMOK_F_CARD_20210310.ctl
+2021-03-11 16:15:35,660 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:15:35,661 ERROR  Layer：Util Message：下載檔案 AML_TW_RMMOK_F_CARD_20210310.ctl 失敗(retry次數：0)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 327
+2021-03-11 16:15:46,080 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-03-11 16:15:46,080 INFO  Layer：Util Message：remotePath:/aptoap/AML/TW/fromAml/
+2021-03-11 16:15:46,081 INFO  Layer：Util Message：remFileName:AML_TW_RMMOK_F_CARD_20210310.ctl
+2021-03-11 16:15:46,082 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:15:46,083 ERROR  Layer：Util Message：下載檔案 AML_TW_RMMOK_F_CARD_20210310.ctl 失敗(retry次數：1)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 327
+2021-03-11 16:15:56,494 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-03-11 16:15:56,495 INFO  Layer：Util Message：remotePath:/aptoap/AML/TW/fromAml/
+2021-03-11 16:15:56,496 INFO  Layer：Util Message：remFileName:AML_TW_RMMOK_F_CARD_20210310.ctl
+2021-03-11 16:15:56,496 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:15:56,497 ERROR  Layer：Util Message：下載檔案 AML_TW_RMMOK_F_CARD_20210310.ctl 失敗(retry次數：2)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 327
+2021-03-11 16:16:06,767 ERROR  Message：System.Net.Mail.SmtpException: 無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available
+   於 Framework.Common.Message.MailService.MailSenderBasic(String[] _To, String _From, String _Subject, String _Body, String AttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 265
+   於 Framework.Common.Message.MailService.MailSender(String[] _arrMailAdds, Int32 _mailTemplateId, NameValueCollection _coTags, String sAttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 95
+   於 AMLCaseRtnServiceFromAML.SendMail(String mailTitle, String mailBody, String status, DateTime startTime) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\AMLCaseRtnServiceFromAML.cs: 行 58
+2021-03-11 16:31:40,706 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-03-11 16:31:40,723 INFO  Layer：Util Message：remotePath:/aptoap/CSIP_AMLTOMAINFRAME/
+2021-03-11 16:31:40,724 INFO  Layer：Util Message：remFileName:AML_UPD_BR_20210311.txt
+2021-03-11 16:31:40,725 ERROR  Layer：Util Message：FTP上傳失敗：System.Net.WebException: 基礎連接已關閉: 接收時發生未預期的錯誤。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Abort(Exception e)
+   於 System.Net.CommandStream.CheckContinuePipeline()
+   於 System.Net.FtpWebRequest.DataStreamClosed(CloseExState closeState)
+   於 System.Net.FtpDataStream.System.Net.ICloseEx.CloseEx(CloseExState closeState)
+   於 System.Net.FtpDataStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 FTPFactory.Upload(String remotePath, String remFileName, String locFileName) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 612
+2021-03-11 16:31:51,219 ERROR  Message：System.Net.Mail.SmtpException: 無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available
+   於 Framework.Common.Message.MailService.MailSenderBasic(String[] _To, String _From, String _Subject, String _Body, String AttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 265
+   於 Framework.Common.Message.MailService.MailSender(String[] _arrMailAdds, Int32 _mailTemplateId, NameValueCollection _coTags, String sAttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 95
+   於 PostBranchService.SendMail(String jobID, String mailTitle, String mailBody, String status, DateTime startTime) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\PostBranchService.cs: 行 970
+2021-03-11 16:40:03,273 ERROR  Message：System.Net.Mail.SmtpException: 無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available
+   於 Framework.Common.Message.MailService.MailSenderBasic(String[] _To, String _From, String _Subject, String _Body, String AttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 265
+   於 Framework.Common.Message.MailService.MailSender(String[] _arrMailAdds, Int32 _mailTemplateId, NameValueCollection _coTags, String sAttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 95
+   於 PostAMLCaseService.SendMail(String jobID, String mailTitle, String mailBody, String status, DateTime startTime) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\PostAMLCaseService.cs: 行 1017
+2021-03-11 16:40:03,747 ERROR  Message：System.Net.Mail.SmtpException: 無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available
+   於 Framework.Common.Message.MailService.MailSenderBasic(String[] _To, String _From, String _Subject, String _Body, String AttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 265
+   於 Framework.Common.Message.MailService.MailSender(String[] _arrMailAdds, Int32 _mailTemplateId, NameValueCollection _coTags, String sAttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 95
+   於 PostAMLCaseService.SendMail(String jobID, String mailTitle, String mailBody, String status, DateTime startTime) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\PostAMLCaseService.cs: 行 1017
+2021-03-11 16:56:47,744 INFO  Layer：Util Message：FTP_IP:172.24.44.47
+2021-03-11 16:56:47,758 INFO  Layer：Util Message：remotePath:/aptoap/ach/
+2021-03-11 16:56:47,760 INFO  Layer：Util Message：remFileName:ACHP02_D.txt
+2021-03-11 16:56:47,760 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:56:47,763 ERROR  Layer：Util Message：獲取FTP目錄錯誤(0)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 228
+2021-03-11 16:56:57,904 INFO  Layer：Util Message：FTP_IP:172.24.44.47
+2021-03-11 16:56:57,905 INFO  Layer：Util Message：remotePath:/aptoap/ach/
+2021-03-11 16:56:57,906 INFO  Layer：Util Message：remFileName:ACHP02_D.txt
+2021-03-11 16:56:57,907 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:56:57,908 ERROR  Layer：Util Message：獲取FTP目錄錯誤(1)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 228
+2021-03-11 16:57:08,061 INFO  Layer：Util Message：FTP_IP:172.24.44.47
+2021-03-11 16:57:08,062 INFO  Layer：Util Message：remotePath:/aptoap/ach/
+2021-03-11 16:57:08,063 INFO  Layer：Util Message：remFileName:ACHP02_D.txt
+2021-03-11 16:57:08,064 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-03-11 16:57:08,064 ERROR  Layer：Util Message：獲取FTP目錄錯誤(2)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 228
+2021-03-11 16:57:18,069 ERROR  Layer：Util Message：檔案 ACHP02_D.txt 未找到！
+2021-03-11 17:22:10,422 INFO  Message：Application and Jobs End
+2021-03-11 17:25:23,114 INFO  Message：Application and Jobs start
+2021-03-11 17:25:23,632 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 17:25:23,637 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 17:25:23,640 INFO  Message：job_ACHP02 Start..
+2021-03-11 17:25:23,646 INFO  Message：job_ACHR02_H Start..
+2021-03-11 17:25:23,650 INFO  Message：job_ACHP02D Start..
+2021-03-11 17:25:23,654 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 17:25:23,659 INFO  Message：job_JobRefresher Start..
+2021-03-11 17:25:23,666 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 17:25:23,670 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 17:25:23,676 INFO  Message：job_jobAutoPay Start..
+2021-03-11 17:25:23,683 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 17:25:23,687 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 17:25:23,692 INFO  Message：job_jobTransDown Start..
+2021-03-11 17:25:23,697 INFO  Message：job_jobTransUp Start..
+2021-03-11 17:25:23,700 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 17:25:23,705 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 17:25:23,711 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 17:25:23,716 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 17:25:23,720 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 17:25:23,725 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 17:25:23,730 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 17:25:23,735 INFO  Message：job_jobBackup Start..
+2021-03-11 17:25:23,739 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 17:25:23,745 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 17:25:23,752 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 17:25:23,756 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 17:25:23,762 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 17:25:23,766 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 17:25:23,771 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 17:25:23,778 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 17:25:23,782 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 17:25:23,786 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 17:25:23,789 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 17:25:23,795 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 17:25:23,799 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 17:25:23,803 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 17:25:23,807 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 17:25:23,812 INFO  Message：job_BatchJob Start..
+2021-03-11 17:44:58,575 INFO  Message：Application and Jobs End
+2021-03-11 17:46:24,205 INFO  Message：Application and Jobs start
+2021-03-11 17:46:24,631 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 17:46:24,635 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 17:46:24,639 INFO  Message：job_ACHP02 Start..
+2021-03-11 17:46:24,643 INFO  Message：job_ACHR02_H Start..
+2021-03-11 17:46:24,647 INFO  Message：job_ACHP02D Start..
+2021-03-11 17:46:24,650 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 17:46:24,654 INFO  Message：job_JobRefresher Start..
+2021-03-11 17:46:24,658 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 17:46:24,662 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 17:46:24,665 INFO  Message：job_jobAutoPay Start..
+2021-03-11 17:46:24,669 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 17:46:24,673 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 17:46:24,677 INFO  Message：job_jobTransDown Start..
+2021-03-11 17:46:24,681 INFO  Message：job_jobTransUp Start..
+2021-03-11 17:46:24,686 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 17:46:24,691 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 17:46:24,696 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 17:46:24,700 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 17:46:24,703 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 17:46:24,708 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 17:46:24,714 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 17:46:24,719 INFO  Message：job_jobBackup Start..
+2021-03-11 17:46:24,723 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 17:46:24,728 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 17:46:24,732 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 17:46:24,736 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 17:46:24,739 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 17:46:24,743 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 17:46:24,748 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 17:46:24,753 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 17:46:24,757 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 17:46:24,762 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 17:46:24,766 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 17:46:24,770 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 17:46:24,774 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 17:46:24,779 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 17:46:24,782 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 17:46:24,786 INFO  Message：job_BatchJob Start..
+2021-03-11 17:47:16,823 INFO  Message：Application and Jobs End
+2021-03-11 17:47:26,452 INFO  Message：Application and Jobs start
+2021-03-11 17:47:27,063 INFO  Message：job_SendRMMAuditMail Start..
+2021-03-11 17:47:27,068 INFO  Message：job_GetRMMResultFromOMI Start..
+2021-03-11 17:47:27,072 INFO  Message：job_ACHP02 Start..
+2021-03-11 17:47:27,077 INFO  Message：job_ACHR02_H Start..
+2021-03-11 17:47:27,081 INFO  Message：job_ACHP02D Start..
+2021-03-11 17:47:27,084 INFO  Message：job_BatchJob_LGOR Start..
+2021-03-11 17:47:27,088 INFO  Message：job_JobRefresher Start..
+2021-03-11 17:47:27,092 INFO  Message：job_BatchJob_LGAT Start..
+2021-03-11 17:47:27,098 INFO  Message：job_BatchJob_SendToPost Start..
+2021-03-11 17:47:27,102 INFO  Message：job_jobAutoPay Start..
+2021-03-11 17:47:27,106 INFO  Message：job_LDAPUpdate Start..
+2021-03-11 17:47:27,111 INFO  Message：job_BatchJob_PostActive Start..
+2021-03-11 17:47:27,115 INFO  Message：job_jobTransDown Start..
+2021-03-11 17:47:27,118 INFO  Message：job_jobTransUp Start..
+2021-03-11 17:47:27,122 INFO  Message：job_BatchJob_GetAMLInfo Start..
+2021-03-11 17:47:27,127 INFO  Message：job_BatchJob_GetAMLCInfo Start..
+2021-03-11 17:47:27,131 INFO  Message：job_GetAMLBranchInfo Start..
+2021-03-11 17:47:27,135 INFO  Message：job_PostBranchToAML Start..
+2021-03-11 17:47:27,146 INFO  Message：job_SendlTwoMonthLabel Start..
+2021-03-11 17:47:27,150 INFO  Message：job_SendAddressLabel Start..
+2021-03-11 17:47:27,157 INFO  Message：job_PostToAMLCase Start..
+2021-03-11 17:47:27,163 INFO  Message：job_jobBackup Start..
+2021-03-11 17:47:27,166 INFO  Message：job_BatchJob_PostReply Start..
+2021-03-11 17:47:27,170 INFO  Message：job_GetBranchModifyRtn Start..
+2021-03-11 17:47:27,174 INFO  Message：job_GetCaseRtnInfo Start..
+2021-03-11 17:47:27,179 INFO  Message：job_GetAMLCaseRtnInfo Start..
+2021-03-11 17:47:27,183 INFO  Message：job_GetAFileFromAML Start..
+2021-03-11 17:47:27,187 INFO  Message：job_GetMainFrameRtnInfo Start..
+2021-03-11 17:47:27,191 INFO  Message：job_GetAMLRiskLevel_H Start..
+2021-03-11 17:47:27,195 INFO  Message：job_GetAMLRiskLevel_I Start..
+2021-03-11 17:47:27,198 INFO  Message：job_GetAMLRiskLevel_J Start..
+2021-03-11 17:47:27,203 INFO  Message：job_GetMainFrameMFAF Start..
+2021-03-11 17:47:27,208 INFO  Message：job_GetHcopStatus Start..
+2021-03-11 17:47:27,212 INFO  Message：job_PostMainframeOGCC Start..
+2021-03-11 17:47:27,216 INFO  Message：job_GetBRCHStatus Start..
+2021-03-11 17:47:27,221 INFO  Message：job_SendRegularAuditMail Start..
+2021-03-11 17:47:27,225 INFO  Message：job_GetMailResultFromOMI Start..
+2021-03-11 17:47:27,229 INFO  Message：job_BatchJob Start..
+2021-03-11 18:57:27,502 INFO  Message：Application and Jobs End

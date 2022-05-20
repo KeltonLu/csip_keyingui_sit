@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="defaultm0tsbPWr1kRP9Wn69G7q5PvZ60005"/>
+    <data id="applicationId" value="default"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="JCD032P4D"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="MESSAGE_TYPE" value="0001"/>
+      <data id="UserName" value="測試姓名"/>
+      <data id="UserId" value=""/>
+      <data id="UserStudy" value="1"/>
+      <data id="InfoYear" value="09"/>
+      <data id="InfoMonth" value="01"/>
+      <data id="BankId" value="016"/>
+      <data id="AccNo" value="123456789"/>
+      <data id="PayWay" value="0"/>      
+      <data id="AccID" value="123456789"/>   
+      <data id="BcycleCode" value="0"/>
+      <data id="Group" value="01"/>
+
+      <data id="CityName" value="臺北"/>
+      <data id="MerchantAdd1" value="臺北市"/>
+      <data id="MerchantAdd2" value="132號"/>
+      <data id="CompanyName" value="test"/>
+      <data id="HomeTel1" value="038"/>
+      <data id="HomeTel2" value="2222222"/>
+      <data id="CompanyTel1" value="038"/>
+      <data id="CompanyTel2" value="0382222"/>
+      <data id="PostalDistrict" value="111"/>
+      <data id="ZipCode" value="222"/>
+      <data id="Remark1" value="038"/>
+      <data id="Remark2" value="038"/>
+
+      <data id="Count" value="5"/>
+      <data id="Name" value="測試人"/>
+      <data id="EName" value="TEST"/>
+      <!--<data id="PostalDistrict" value="111"/>-->
+      <!--<data id="Remark1" value="038"/>
+      <data id="Remark2" value="038"/>-->
+      <data id="Birthday" value="10062009"/>
+
+      <data id="CName-1" value="測試人"/>
+      <data id="EName-1" value="TEST"/>
+      <data id="CardNum-1" value="2232456566777777"/>
+      <data id="ID-1" value="A123456789"/>
+      <data id="Type-1" value="660"/>
+
+      <data id="CName-2" value="測試人"/>
+      <data id="EName-2" value="TEST"/>
+      <data id="CardNum-2" value="3554535376676676"/>
+      <data id="ID-2" value="3333333333"/>
+      <data id="Type-2" value="660"/>
+
+      <data id="CName-3" value="測試人2"/>
+      <data id="EName-3" value="TEST2"/>
+      <data id="CardNum-3" value="2423434341111111"/>
+      <data id="ID-3" value="2222222222"/>
+      <data id="Type-3" value="660"/>
+
+      <data id="CName-4" value="測試人3"/>
+      <data id="EName-4" value="TEST3"/>
+      <data id="CardNum-4" value="888888881111111"/>
+      <data id="ID-4" value="A123456789"/>
+      <data id="Type-4" value="110"/>
+
+      <data id="CName-5" value="測試人5"/>
+      <data id="EName-5" value="TEST5"/>
+      <data id="CardNum-5" value="777777771111111"/>
+      <data id="ID-5" value="6666666666"/>
+      <data id="Type-5" value="110"/>
+
+      <!--<data id="HtgMsg" value="主機獲取資料失敗"/>-->
+    </msgBody>
+  </line>
+</hostgateway>

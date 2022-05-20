@@ -1,0 +1,781 @@
+2022-04-07 10:48:50,157 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 10:48:50,351 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 10:48:50,351 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 10:48:50,352 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 10:48:50,353 ERROR  Message：FTP 取檔開始
+2022-04-07 10:48:50,455 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 330
+2022-04-07 10:55:38,913 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 10:55:39,078 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 10:55:39,078 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 10:55:39,078 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 10:55:39,080 ERROR  Message：FTP 取檔開始
+2022-04-07 10:55:39,183 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 331
+2022-04-07 10:59:05,947 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 10:59:06,126 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 10:59:06,127 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 10:59:06,127 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 10:59:06,129 ERROR  Message：FTP 取檔開始
+2022-04-07 10:59:06,237 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 10:59:47,671 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. d21-20020a056a0010d500b004fd9ee64134sm20239228pfu.74 - gsmtp,
+
+2022-04-07 10:59:54,446 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 10:59:54,578 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 10:59:54,578 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 10:59:54,578 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 10:59:54,579 ERROR  Message：FTP 取檔開始
+2022-04-07 10:59:54,639 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:00:02,092 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. z6-20020a056a00240600b004e17ab23340sm21566077pfh.177 - gsmtp,
+
+2022-04-07 11:00:22,718 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:00:22,849 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:00:22,849 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:00:22,849 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:00:22,849 ERROR  Message：FTP 取檔開始
+2022-04-07 11:00:22,908 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:01:14,967 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. o17-20020a17090ad25100b001cabfe854b3sm6842559pjw.37 - gsmtp,
+
+2022-04-07 11:02:14,710 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:02:14,842 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:02:14,842 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:02:14,842 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:02:14,843 ERROR  Message：FTP 取檔開始
+2022-04-07 11:02:15,251 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:04:53,842 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. t184-20020a625fc1000000b004fa3bd9bef0sm502727pfb.110 - gsmtp,
+
+2022-04-07 11:05:03,593 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:05:03,722 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:05:03,722 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:05:03,722 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:05:03,722 ERROR  Message：FTP 取檔開始
+2022-04-07 11:05:03,778 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:05:22,086 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. m15-20020a638c0f000000b003827bfe1f5csm17270262pgd.7 - gsmtp,
+
+2022-04-07 11:08:39,732 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:08:39,877 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:08:39,878 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:08:39,878 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:08:39,878 ERROR  Message：FTP 取檔開始
+2022-04-07 11:08:39,957 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:08:53,778 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. 21-20020a630115000000b00382a0895661sm17308778pgb.11 - gsmtp,
+
+2022-04-07 11:09:11,440 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:09:11,574 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:09:11,575 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:09:11,575 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:09:11,575 ERROR  Message：FTP 取檔開始
+2022-04-07 11:09:11,634 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:09:25,874 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. nm11-20020a17090b19cb00b001cb0d587a7esm666548pjb.46 - gsmtp,
+
+2022-04-07 11:09:39,249 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:09:39,378 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:09:39,378 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:09:39,379 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:09:39,379 ERROR  Message：FTP 取檔開始
+2022-04-07 11:09:39,441 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:10:04,464 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. f21-20020a056a00239500b004fb02a7a45bsm20799536pfc.214 - gsmtp,
+
+2022-04-07 11:11:44,656 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:11:44,796 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:11:44,796 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:11:44,797 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:11:44,797 ERROR  Message：FTP 取檔開始
+2022-04-07 11:11:44,867 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:11:55,824 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. u17-20020a056a00159100b004faef351ebcsm20219173pfk.45 - gsmtp,
+
+2022-04-07 11:12:18,982 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:12:19,118 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:12:19,118 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:12:19,119 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:12:19,119 ERROR  Message：FTP 取檔開始
+2022-04-07 11:12:19,181 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:13:38,275 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. z2-20020aa79902000000b004fb05c04b53sm21811349pff.103 - gsmtp,
+
+2022-04-07 11:13:50,398 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:13:50,535 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:13:50,535 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:13:50,535 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:13:50,536 ERROR  Message：FTP 取檔開始
+2022-04-07 11:13:50,598 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:17:52,655 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. r4-20020a638f44000000b0038105776895sm17442290pgn.76 - gsmtp,
+
+2022-04-07 11:23:49,283 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:23:49,428 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:23:49,429 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:23:49,429 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:23:49,429 ERROR  Message：FTP 取檔開始
+2022-04-07 11:23:49,813 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:25:06,188 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. s10-20020a63924a000000b00399571b2f99sm6731436pgn.57 - gsmtp,
+
+2022-04-07 11:28:22,049 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:28:22,216 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:28:22,216 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:28:22,216 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:28:22,218 ERROR  Message：FTP 取檔開始
+2022-04-07 11:28:22,310 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:28:28,407 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. kk11-20020a17090b4a0b00b001c73933d803sm6943442pjb.10 - gsmtp,
+
+2022-04-07 11:28:31,462 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:28:31,600 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:28:31,600 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:28:31,600 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:28:31,697 ERROR  Message：FTP 取檔開始
+2022-04-07 11:28:31,760 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:28:34,553 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. 83-20020a621556000000b004fe5d8c5cf3sm2640558pfv.156 - gsmtp,
+
+2022-04-07 11:28:41,404 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:28:41,540 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:28:41,540 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:28:41,540 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:28:41,540 ERROR  Message：FTP 取檔開始
+2022-04-07 11:28:41,607 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:29:02,919 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. s20-20020a17090aad9400b001ca8fcfd1e9sm7040392pjq.26 - gsmtp,
+
+2022-04-07 11:29:34,623 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:29:34,765 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:29:34,766 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:29:34,766 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:29:34,766 ERROR  Message：FTP 取檔開始
+2022-04-07 11:29:34,841 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:29:39,794 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. h13-20020a056a00230d00b004f427ffd485sm22889485pfh.143 - gsmtp,
+
+2022-04-07 11:29:44,479 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:29:44,617 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:29:44,617 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:29:44,618 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:29:44,618 ERROR  Message：FTP 取檔開始
+2022-04-07 11:29:44,679 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:29:48,286 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. v24-20020a634818000000b0036407db4728sm17236808pga.26 - gsmtp,
+
+2022-04-07 11:29:54,167 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:29:54,385 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:29:54,385 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:29:54,385 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:29:54,385 ERROR  Message：FTP 取檔開始
+2022-04-07 11:29:54,482 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:30:39,202 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. c9-20020a63a409000000b0039912d50806sm11610640pgf.87 - gsmtp,
+
+2022-04-07 11:39:36,814 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:39:36,977 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:39:36,977 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:39:36,978 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:39:36,980 ERROR  Message：FTP 取檔開始
+2022-04-07 11:39:37,079 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:39:41,984 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. d5-20020a056a0024c500b004fae56b2921sm20862243pfv.167 - gsmtp,
+
+2022-04-07 11:39:48,769 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:39:48,899 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:39:48,899 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:39:48,899 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:39:48,900 ERROR  Message：FTP 取檔開始
+2022-04-07 11:39:48,964 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:41:02,730 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. y11-20020aa793cb000000b004fb597d85b2sm20442415pff.160 - gsmtp,
+
+2022-04-07 11:43:08,273 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:43:08,441 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:43:08,442 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:43:08,442 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:43:08,443 ERROR  Message：FTP 取檔開始
+2022-04-07 11:43:08,536 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:43:20,939 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. y20-20020aa79af4000000b005056a0171bdsm29488pfp.6 - gsmtp,
+
+2022-04-07 11:43:53,936 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:43:54,082 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:43:54,082 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:43:54,082 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:43:54,082 ERROR  Message：FTP 取檔開始
+2022-04-07 11:43:54,160 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:43:57,375 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. d5-20020a056a0024c500b004fae56b2921sm20872372pfv.167 - gsmtp,
+
+2022-04-07 11:44:05,747 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:44:05,885 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:44:05,885 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:44:05,886 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:44:05,886 ERROR  Message：FTP 取檔開始
+2022-04-07 11:44:05,946 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:44:21,399 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. u9-20020a056a00158900b004faad3ae570sm21494112pfk.189 - gsmtp,
+
+2022-04-07 11:51:23,935 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:51:24,076 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:51:24,077 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:51:24,077 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:51:24,077 ERROR  Message：FTP 取檔開始
+2022-04-07 11:51:24,149 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:51:28,911 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. w9-20020a056a0014c900b004fb2ca5f6d7sm21259154pfu.136 - gsmtp,
+
+2022-04-07 11:51:35,146 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:51:35,279 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:51:35,279 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:51:35,279 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:51:35,279 ERROR  Message：FTP 取檔開始
+2022-04-07 11:51:35,343 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:53:44,103 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. x63-20020a17090a6c4500b001caa8689492sm7339046pjj.0 - gsmtp,
+
+2022-04-07 11:53:49,682 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:53:49,815 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:53:49,815 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:53:49,815 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:53:49,815 ERROR  Message：FTP 取檔開始
+2022-04-07 11:53:49,877 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:57:36,675 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. e6-20020a056a001a8600b004fac74c8382sm20813926pfv.47 - gsmtp,
+
+2022-04-07 11:57:39,072 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:57:39,314 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:57:39,314 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:57:39,314 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:57:39,315 ERROR  Message：FTP 取檔開始
+2022-04-07 11:57:39,382 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:59:50,324 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 11:59:50,479 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 11:59:50,479 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 11:59:50,479 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 11:59:50,481 ERROR  Message：FTP 取檔開始
+2022-04-07 11:59:50,579 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 11:59:55,315 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. s35-20020a056a001c6300b004fb20b5d6c1sm20552067pfw.40 - gsmtp,
+
+2022-04-07 12:00:00,690 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 12:00:00,819 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 12:00:00,819 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 12:00:00,819 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 12:00:00,820 ERROR  Message：FTP 取檔開始
+2022-04-07 12:00:00,880 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 332
+2022-04-07 12:00:28,153 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-07 13:05:00,557 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 13:05:00,943 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 13:05:00,943 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 13:05:00,944 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 13:05:00,972 ERROR  Message：FTP 取檔開始
+2022-04-07 13:05:01,240 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 333
+2022-04-07 13:05:01,240 ERROR  Message：資料檢核開始
+2022-04-07 13:05:01,240 ERROR  Message：無資料需檢核
+2022-04-07 13:05:01,241 ERROR  Message：資料檢核結束
+2022-04-07 13:05:01,241 INFO  Message：資料匯入開始
+2022-04-07 13:05:01,241 INFO  Message：無資料需匯入
+2022-04-07 13:05:01,241 INFO  Message：資料匯入結束
+2022-04-07 13:05:01,343 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 13:05:52,965 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-07 13:07:41,654 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 13:07:41,823 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 13:07:41,823 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 13:07:41,824 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 13:07:41,824 ERROR  Message：資料檢核開始
+2022-04-07 13:07:41,824 ERROR  Message：無資料需檢核
+2022-04-07 13:07:41,824 ERROR  Message：資料檢核結束
+2022-04-07 13:07:41,825 INFO  Message：資料匯入開始
+2022-04-07 13:07:41,825 INFO  Message：無資料需匯入
+2022-04-07 13:07:41,825 INFO  Message：資料匯入結束
+2022-04-07 13:07:41,924 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 13:07:46,659 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. y30-20020a056a001c9e00b004fa9246adcbsm19847030pfw.144 - gsmtp,
+
+2022-04-07 13:07:53,143 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 13:07:53,286 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 13:07:53,287 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 13:07:53,287 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 13:07:53,287 ERROR  Message：資料檢核開始
+2022-04-07 13:07:53,287 ERROR  Message：無資料需檢核
+2022-04-07 13:07:53,288 ERROR  Message：資料檢核結束
+2022-04-07 13:07:53,288 INFO  Message：資料匯入開始
+2022-04-07 13:07:53,288 INFO  Message：無資料需匯入
+2022-04-07 13:07:53,288 INFO  Message：資料匯入結束
+2022-04-07 13:07:53,395 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 13:08:08,580 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-07 14:24:39,379 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 14:24:39,552 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 14:24:39,552 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 14:24:39,553 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 14:24:39,553 ERROR  Message：資料檢核開始
+2022-04-07 14:24:39,554 ERROR  Message：無資料需檢核
+2022-04-07 14:24:39,554 ERROR  Message：資料檢核結束
+2022-04-07 14:24:39,554 INFO  Message：資料匯入開始
+2022-04-07 14:24:39,554 INFO  Message：無資料需匯入
+2022-04-07 14:24:39,554 INFO  Message：資料匯入結束
+2022-04-07 14:24:39,658 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 14:26:54,066 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 14:26:54,197 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 14:26:54,197 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 14:26:54,197 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 14:26:54,198 ERROR  Message：資料檢核開始
+2022-04-07 14:26:54,198 ERROR  Message：無資料需檢核
+2022-04-07 14:26:54,198 ERROR  Message：資料檢核結束
+2022-04-07 14:26:54,198 INFO  Message：資料匯入開始
+2022-04-07 14:26:54,198 INFO  Message：無資料需匯入
+2022-04-07 14:26:54,199 INFO  Message：資料匯入結束
+2022-04-07 14:26:54,294 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 14:27:50,273 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 14:27:50,403 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 14:27:50,403 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 14:27:50,403 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 14:27:50,404 ERROR  Message：資料檢核開始
+2022-04-07 14:27:50,404 ERROR  Message：無資料需檢核
+2022-04-07 14:27:50,404 ERROR  Message：資料檢核結束
+2022-04-07 14:27:50,404 INFO  Message：資料匯入開始
+2022-04-07 14:27:50,404 INFO  Message：無資料需匯入
+2022-04-07 14:27:50,405 INFO  Message：資料匯入結束
+2022-04-07 14:27:50,494 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 14:59:08,985 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 14:59:09,140 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 14:59:09,140 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 14:59:09,140 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 14:59:09,141 ERROR  Message：FTP 取檔開始
+2022-04-07 14:59:09,355 ERROR  Message：[FAIL] System.IndexOutOfRangeException: 位置 0 沒有資料列。
+   於 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   於 System.Data.DataRowCollection.get_Item(Int32 index)
+   於 BatchJob_MFAN.DownloadFileFromFTP(String jobID, String localPath, String date, Boolean& isDownload, String& resultMsg) 於 d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BatchJob_MFAN.cs: 行 340
+2022-04-07 15:01:59,485 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 15:01:59,645 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 15:01:59,645 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 15:01:59,645 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 15:01:59,646 ERROR  Message：資料檢核開始
+2022-04-07 15:01:59,646 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 15:01:59,647 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 15:01:59,648 ERROR  Message：資料檢核結束
+2022-04-07 15:01:59,648 INFO  Message：資料匯入開始
+2022-04-07 15:02:00,054 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-07 15:02:00,219 INFO  Message：Delete AML_HQ_MFAN 失敗！
+2022-04-07 15:03:12,852 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. b16-20020a056a00115000b004f6ff260c9esm21093490pfm.207 - gsmtp,
+
+2022-04-07 15:05:24,394 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 15:05:24,552 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 15:05:24,553 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 15:05:24,553 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 15:05:24,554 ERROR  Message：資料檢核開始
+2022-04-07 15:05:24,554 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 15:05:24,555 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 15:05:24,555 ERROR  Message：資料檢核結束
+2022-04-07 15:05:24,555 INFO  Message：資料匯入開始
+2022-04-07 15:05:24,633 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-07 15:05:24,633 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-07 15:05:24,633 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-07 15:05:24,634 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-07 15:05:24,634 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-07 15:05:24,789 INFO  Message：Recovery - Delete AML_HQ_MFAN 失敗！
+2022-04-07 15:05:46,715 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. u3-20020a17090add4300b001ca56ea162bsm7436368pjv.33 - gsmtp,
+
+2022-04-07 15:23:24,925 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 15:23:25,085 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 15:23:25,085 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 15:23:25,085 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 15:23:25,086 ERROR  Message：資料檢核開始
+2022-04-07 15:23:25,086 ERROR  Message：無資料需檢核
+2022-04-07 15:23:25,086 ERROR  Message：資料檢核結束
+2022-04-07 15:23:25,086 INFO  Message：資料匯入開始
+2022-04-07 15:23:25,163 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-07 15:23:25,222 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-07 15:23:25,222 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-07 15:23:25,391 INFO  Message：Insert AML_HQ_MFAN ，成功 -5 筆，失敗 5 筆，共 0 筆！
+2022-04-07 15:23:50,968 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. g5-20020a17090a3c8500b001caad41cf1fsm8084071pjc.22 - gsmtp,
+
+2022-04-07 15:23:50,969 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-07 15:23:50,969 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-07 15:23:50,969 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-07 15:23:51,230 INFO  Message：Recovery - Delete AML_HQ_MFAN 失敗！
+2022-04-07 15:24:04,402 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. u12-20020a17090a890c00b001b8efcf8e48sm7688232pjn.14 - gsmtp,
+
+2022-04-07 16:13:58,984 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 16:13:59,143 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 16:13:59,143 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 16:13:59,143 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 16:13:59,144 ERROR  Message：資料檢核開始
+2022-04-07 16:13:59,144 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 16:13:59,145 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 16:13:59,145 ERROR  Message：資料檢核結束
+2022-04-07 16:13:59,146 INFO  Message：資料匯入開始
+2022-04-07 16:13:59,146 INFO  Message：無資料需匯入
+2022-04-07 16:13:59,154 INFO  Message：資料匯入結束
+2022-04-07 16:13:59,254 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 16:20:29,058 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 16:20:29,219 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 16:20:29,220 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 16:20:29,220 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 16:20:29,221 ERROR  Message：資料檢核開始
+2022-04-07 16:20:29,221 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 16:20:29,222 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 16:20:29,223 ERROR  Message：資料檢核結束
+2022-04-07 16:20:29,231 INFO  Message：資料匯入開始
+2022-04-07 16:20:29,231 INFO  Message：無資料需匯入
+2022-04-07 16:20:29,231 INFO  Message：資料匯入結束
+2022-04-07 16:20:29,330 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-07 16:22:27,402 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 16:22:27,557 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 16:22:27,558 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 16:22:27,558 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 16:22:27,558 ERROR  Message：資料檢核開始
+2022-04-07 16:22:27,559 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 16:22:27,560 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 16:22:27,774 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料失敗！
+2022-04-07 16:22:54,148 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-07 16:26:49,332 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 16:26:49,490 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 16:26:49,490 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 16:26:49,490 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 16:26:49,491 ERROR  Message：資料檢核開始
+2022-04-07 16:26:49,492 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 16:26:49,492 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 16:26:49,492 ERROR  Message：資料檢核結束
+2022-04-07 16:26:49,493 INFO  Message：資料匯入開始
+2022-04-07 16:26:49,568 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-07 16:26:49,720 INFO  Message：Delete AML_HQ_MFAN 失敗！
+2022-04-07 16:27:04,865 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-07 16:29:22,892 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 16:29:23,045 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 16:29:23,045 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 16:29:23,045 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 16:29:23,046 ERROR  Message：資料檢核開始
+2022-04-07 16:29:23,047 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 16:29:23,048 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 16:29:23,049 ERROR  Message：資料檢核結束
+2022-04-07 16:29:23,049 INFO  Message：資料匯入開始
+2022-04-07 16:29:23,141 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-07 16:29:23,204 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-07 16:29:23,204 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-07 16:29:23,296 INFO  Message：Insert AML_HQ_MFAN ，成功 -3 筆，失敗 3 筆，共 0 筆！
+2022-04-07 16:29:35,057 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. w4-20020a056a0014c400b004fb0c7b3813sm22499599pfu.134 - gsmtp,
+
+2022-04-07 16:29:35,058 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-07 16:29:35,058 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-07 16:29:35,058 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-07 16:29:35,208 INFO  Message：Recovery - Delete AML_HQ_MFAN 失敗！
+2022-04-07 16:29:38,654 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. s26-20020a65645a000000b0039cc7a70728sm1232198pgv.5 - gsmtp,
+
+2022-04-07 16:29:52,054 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 16:29:52,181 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 16:29:52,181 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 16:29:52,181 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 16:29:52,181 ERROR  Message：資料檢核開始
+2022-04-07 16:29:52,182 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 16:29:52,182 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 16:29:52,183 ERROR  Message：資料檢核結束
+2022-04-07 16:29:52,183 INFO  Message：資料匯入開始
+2022-04-07 16:29:52,251 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-07 16:29:52,307 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-07 16:29:52,307 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-07 16:29:52,400 INFO  Message：Insert AML_HQ_MFAN ，成功 -3 筆，失敗 3 筆，共 0 筆！
+2022-04-07 16:30:08,223 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. l192-20020a6391c9000000b003861d9431c7sm18493328pge.62 - gsmtp,
+
+2022-04-07 16:30:08,223 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-07 16:30:08,223 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-07 16:30:08,223 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-07 16:30:08,232 INFO  Message：Recovery - Delete AML_HQ_MFAN 失敗！
+2022-04-07 16:30:08,753 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. j2-20020a17090a588200b001ca37c215aasm7987951pji.2 - gsmtp,
+
+2022-04-07 16:31:13,253 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-07 16:31:13,397 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-07 16:31:13,397 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-07 16:31:13,397 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-07 16:31:13,397 ERROR  Message：資料檢核開始
+2022-04-07 16:31:13,397 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-07 16:31:13,398 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-07 16:31:13,398 ERROR  Message：資料檢核結束
+2022-04-07 16:31:13,398 INFO  Message：資料匯入開始
+2022-04-07 16:31:13,471 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-07 16:31:13,853 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-07 16:31:13,853 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-07 16:31:13,948 INFO  Message：Insert AML_HQ_MFAN ，成功 -3 筆，失敗 3 筆，共 0 筆！
+2022-04-07 16:31:45,014 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-07 16:31:45,015 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-07 16:31:45,015 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-07 16:31:45,015 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-07 16:31:45,163 INFO  Message：Recovery - Delete AML_HQ_MFAN 失敗！
+2022-04-07 16:32:45,826 INFO  Layer：BusinessRule Message：成功發送mail,
+

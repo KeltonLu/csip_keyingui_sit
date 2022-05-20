@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4_JCFA" />
+  </header>
+  <body>
+    <data id="PROGRAM_ID" value="JCGU670"/>
+    <data id="USER_ID" value="ZXXXXX"/>
+    <data id="MESSAGE_TYPE" value=""/>
+    <data id="FUNCTION_CODE" value="2"/>
+    <data id="LINE_CNT" value="0000"/>
+    <data id="SVCP_ID" value=""/>
+    <data id="CARD_NMBR" value="4311XXXXXXXX5139"/>
+    <data id="ISSUE_CNT" value=""/>
+    <data id="PURSE_ID" value=""/>
+    <!--<data id="GUFA-TRAN-ID-OK" value="JCFA" />
+    <data id="GUFA-PROGRAM-ID-OK" value="JCGU670" />
+    <data id="GUFA-USER-ID" value="" />
+    <data id="GUFA-MESSAGE-TYPE" value="0001" />
+    <data id="GUFA-FUNCTION-QUERY-ID" value="" />
+    <data id="GUFA-FUNCTION-QUERY-ACCT" value="2" />
+    <data id="GUFA-LINE-CNT" value="" />
+    <data id="GUFA-SVCP-ID" value="" />
+    <data id="GUFA-CARD-NMBR" value="" />
+    <data id="GUFA-ISSUE-CNT" value="" />
+    <data id="GUFA-PURSE-ID" value="" />
+    <data id="GUFA-KEY-NMBR" value="" />
+    <data id="GUFA-ID-IDN" value="" />
+    <data id="GUFA-EXPIR-YY1" value="" />
+    <data id="GUFA-EXPIR-YY2" value="" />
+    <data id="GUFA-EXPIR-MM" value="" />
+    <data id="GUFA-CARD-STATUS" value="" />
+    <data id="GUFA-CARD-STATUS-CODE" value="" />
+    <data id="GUFA-PURSE-STATUS" value="" />
+    <data id="GUFA-BLOCK-CODE" value="" />
+    <data id="GUFA-BLOCK-DATE" value="" />
+    <data id="GUFA-DETAIL-ISSUE-CNT" value="" />-->
+  </body>
+</hostgateway>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="defaultm0tsbPWr1kRP9Wn69G7q5PvZ60005"/>
+    <data id="applicationId" value="default"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="PCMH_P4"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="MESSAGE_TYPE" value="0000"/>
+      <data id="CardNo" value="1111111111111111"/>
+      <data id="StatusCode" value="1"/>
+      <data id="DealFund" value="8"/>
+      <data id="FixupDealFund" value="000342100"/>
+      <data id="ThisDealFund" value="00001589100"/>
+      <data id="Days" value="00001589100"/>
+      <data id="30Days" value="00001589100"/>
+      <data id="60Days" value="00001589100"/>
+      <data id="90Days" value="00001589100"/>
+      <data id="120Days" value="00000342100"/>
+      <data id="150Days" value="00000342100"/>
+      <data id="180Days" value="00000342100"/>
+      <data id="210Days" value="00000342100"/>
+      <data id="1-6Month-1" value="2"/>
+      <data id="1-6Month-2" value="3"/>
+      <data id="1-6Month-3" value="1"/>
+      <data id="1-6Month-4" value="4"/>
+      <data id="1-6Month-5" value="5"/>
+      <data id="1-6Month-6" value="2"/>
+      <data id="7-12Month-7" value="3"/>
+      <data id="7-12Month-8" value="2"/>
+      <data id="7-12Month-9" value="3"/>
+      <data id="7-12Month-10" value="1"/>
+      <data id="7-12Month-11" value="5"/>
+      <data id="7-12Month-12" value="5"/>
+      <data id="13-18Month-13" value="4"/>
+      <data id="13-18Month-14" value="8"/>
+      <data id="13-18Month-15" value="7"/>
+      <data id="13-18Month-16" value="6"/>
+      <data id="13-18Month-17" value="6"/>
+      <data id="13-18Month-18" value="5"/>
+      <data id="19-24Month-19" value="w"/>
+      <data id="19-24Month-20" value="s"/>
+      <data id="19-24Month-21" value="3"/>
+      <data id="19-24Month-22" value="5"/>
+      <data id="19-24Month-23" value="r"/>
+      <data id="19-24Month-24" value="s"/>
+      <data id="FavourableCode" value="11"/>
+      <data id="CardType" value="01"/>
+
+      <data id="BlkCode" value="A"/>
+      <data id="Memo" value="BAC4"/>
+
+      <data id="Name" value="測試人"/>
+      <data id="EName" value="TESTER"/>
+      <!--<data id="HtgMsg" value="222"/>-->
+    </msgBody>
+  </line>
+</hostgateway>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="CSIP"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4A_JCGX"/>
+    </header>
+    <body>
+        <data id="USER_ID" value=""/>
+        <data id="MESSAGE_TYPE" value=""/>
+        <data id="FUNCTION_CODE" value=""/>
+        <data id="LINE_CNT" value=""/>
+      	<data id="MERCH_ACCT" value=""/>
+      	<data id="CARD_TYPE" value=""/>
+      	<data id="AGENT_BANK_NMBR" value=""/>
+      	<data id="DISCOUNT_RATE" value=""/>
+      	<data id="AGENT_DESC" value=""/>
+    </body>
+</hostgateway>

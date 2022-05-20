@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="defaultm0tsbPWr1kRP9Wn69G7q5PvZ60005"/>
+    <data id="applicationId" value="default"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="PCMM_P4A_Submit"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="MESSAGE_TYPE" value="0000"/>
+      <data id="MsgCode" value="異動主機資料成功"/>
+
+      <!--<data id="HtgMsg" value="1"/>-->
+    </msgBody>
+  </line>
+</hostgateway>
+
+

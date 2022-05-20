@@ -1,0 +1,28 @@
+2021-11-05 15:15:45,596 INFO  Message：****************************** JobRefresher START ****************************** 
+2021-11-05 15:15:45,597 INFO  Message：****************************** JobRefresh 查詢資料檔L_BATCH_LOG，查看是否上次作業還未停止 ******************************
+2021-11-05 15:15:45,685 INFO  Message：job_BatchJob_SendToPost ERROR
+2021-11-05 15:15:45,720 ERROR  Message：System.Security.Cryptography.CryptographicException: 資料錯誤。
+
+   於 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   於 System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   於 System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   於 System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   於 System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 Framework.Common.Cryptography.DESEncrypt.DecryptString(String strContent) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Cryptography\DESEncrypt.cs: 行 292
+   於 jobRescheduleJob.Execute(JobExecutionContext context) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\jobRescheduleJob.cs: 行 137
+2021-11-05 15:15:45,721 INFO  Message：****************************** 41 Jobs Updated ******************************
+2021-11-05 15:16:42,965 INFO  Message：****************************** JobRefresher START ****************************** 
+2021-11-05 15:16:42,966 INFO  Message：****************************** JobRefresh 查詢資料檔L_BATCH_LOG，查看是否上次作業還未停止 ******************************
+2021-11-05 15:16:43,109 INFO  Message：job_BatchJob_SendToPost ERROR
+2021-11-05 15:16:43,110 ERROR  Message：System.Security.Cryptography.CryptographicException: 資料錯誤。
+
+   於 System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   於 System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   於 System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   於 System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   於 System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 Framework.Common.Cryptography.DESEncrypt.DecryptString(String strContent) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Cryptography\DESEncrypt.cs: 行 292
+   於 jobRescheduleJob.Execute(JobExecutionContext context) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\jobRescheduleJob.cs: 行 137
+2021-11-05 15:16:43,111 INFO  Message：****************************** 41 Jobs Updated ******************************

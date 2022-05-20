@@ -1,0 +1,246 @@
+2022-04-20 16:34:02,127 INFO  Message：Application and Jobs End
+2022-04-20 16:34:57,623 INFO  Message：Application and Jobs End
+2022-04-20 16:38:19,290 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:38:29,335 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:38:39,375 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:38:51,204 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:38:51,204 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:38:51,204 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:38:51,204 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:38:51,205 ERROR  Layer：Util Message：獲取FTP目錄錯誤(0)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:39:01,239 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:39:12,500 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:39:22,514 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:39:32,521 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:39:32,523 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:39:32,523 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:39:32,523 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:39:32,523 ERROR  Layer：Util Message：獲取FTP目錄錯誤(1)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:39:42,524 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:39:52,529 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:40:02,540 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:40:12,548 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:40:12,548 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:40:12,548 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:40:12,549 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:40:12,549 ERROR  Layer：Util Message：獲取FTP目錄錯誤(2)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:40:22,552 ERROR  Layer：Util Message：檔案 MFAN_20220420.TXT 未找到！
+2022-04-20 16:41:19,800 INFO  Message：Application and Jobs End
+2022-04-20 16:41:24,499 INFO  Message：Application and Jobs End
+2022-04-20 16:44:14,856 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:44:24,868 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:44:34,874 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:44:44,889 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:44:44,889 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:44:44,889 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:44:44,890 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:44:44,890 ERROR  Layer：Util Message：獲取FTP目錄錯誤(0)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:44:54,892 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:45:04,899 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:45:14,905 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:45:24,912 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:45:24,912 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:45:24,912 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:45:24,912 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:45:24,913 ERROR  Layer：Util Message：獲取FTP目錄錯誤(1)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:45:34,924 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:45:44,934 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:45:54,949 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:46:04,959 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:46:04,959 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:46:04,960 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:46:04,960 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:46:04,960 ERROR  Layer：Util Message：獲取FTP目錄錯誤(2)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:46:14,970 ERROR  Layer：Util Message：檔案 MFAN_20220420.TXT 未找到！
+2022-04-20 16:46:14,987 INFO  Message：Application and Jobs End
+2022-04-20 16:46:30,978 INFO  Message：Application and Jobs End
+2022-04-20 16:53:46,804 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:53:56,833 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:54:06,880 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:54:20,716 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:54:20,867 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:54:21,020 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:54:21,187 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:54:21,339 ERROR  Layer：Util Message：獲取FTP目錄錯誤(0)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:54:35,787 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:54:45,830 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:54:55,861 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:55:07,353 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:55:07,353 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:55:07,353 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:55:07,354 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:55:07,354 ERROR  Layer：Util Message：獲取FTP目錄錯誤(1)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:55:17,385 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:55:27,425 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:55:37,457 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 16:55:50,459 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 16:55:50,460 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 16:55:50,461 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 16:55:50,461 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 16:55:50,461 ERROR  Layer：Util Message：獲取FTP目錄錯誤(2)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 16:56:00,463 ERROR  Layer：Util Message：檔案 MFAN_20220420.TXT 未找到！
+2022-04-20 16:58:58,426 INFO  Message：Application and Jobs End
+2022-04-20 16:59:27,022 INFO  Message：Application and Jobs End
+2022-04-20 17:00:21,010 INFO  Message：Application and Jobs End
+2022-04-20 17:00:26,013 INFO  Message：Application and Jobs End
+2022-04-20 17:00:58,109 INFO  Message：Application and Jobs End
+2022-04-20 17:01:22,976 INFO  Message：Application and Jobs End
+2022-04-20 17:01:51,565 INFO  Message：Application and Jobs End
+2022-04-20 17:01:57,979 INFO  Message：Application and Jobs End
+2022-04-20 17:02:30,822 INFO  Message：Application and Jobs End
+2022-04-20 17:05:33,109 INFO  Message：Application and Jobs End
+2022-04-20 17:07:01,053 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:07:11,099 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:07:21,128 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:07:33,050 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 17:07:33,050 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 17:07:33,050 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 17:07:33,050 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 17:07:33,051 ERROR  Layer：Util Message：獲取FTP目錄錯誤(0)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 17:07:43,083 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:07:53,124 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:08:03,162 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:08:14,957 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 17:08:14,958 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 17:08:14,958 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 17:08:14,958 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 17:08:14,958 ERROR  Layer：Util Message：獲取FTP目錄錯誤(1)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 17:08:25,005 ERROR  Layer：Util Message：FTP登陸失敗(0)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:08:35,046 ERROR  Layer：Util Message：FTP登陸失敗(1)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:08:45,078 ERROR  Layer：Util Message：FTP登陸失敗(2)：System.UriFormatException: 無效的 URI: 無法剖析主機名稱。
+   於 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   於 System.Net.WebRequest.Create(String requestUriString)
+   於 FTPFactory.Login(String Host, String Path, String remFileName, String remoteUser, String remotePass) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 163
+2022-04-20 17:08:57,251 INFO  Layer：Util Message：FTP_IP:
+2022-04-20 17:08:57,252 INFO  Layer：Util Message：remotePath:/aptoap/MFAN/
+2022-04-20 17:08:57,252 INFO  Layer：Util Message：remFileName:MFAN_20220420.TXT
+2022-04-20 17:08:57,252 INFO  Layer：Util Message：Encoding is UTF8:False
+2022-04-20 17:08:57,252 ERROR  Layer：Util Message：獲取FTP目錄錯誤(2)：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 FTPFactory.GetFileList(String remotePath, String remFileName, Boolean isUtf8) 於 D:\中信專案檔\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 227
+2022-04-20 17:09:07,265 ERROR  Layer：Util Message：檔案 MFAN_20220420.TXT 未找到！
+2022-04-20 17:09:51,964 INFO  Message：Application and Jobs End
+2022-04-20 17:10:43,069 INFO  Message：Application and Jobs End
+2022-04-20 17:10:54,035 INFO  Message：Application and Jobs End
+2022-04-20 17:13:57,738 INFO  Message：Application and Jobs End
+2022-04-20 17:14:17,127 INFO  Message：Application and Jobs End
+2022-04-20 17:22:49,391 INFO  Message：Application and Jobs End
+2022-04-20 17:34:05,612 INFO SessionID：5jla0at4ptiii1sm3wbh30xe UserID：1 FunctionID：01080101 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-20 17:34:26,969 ERROR SessionID：5jla0at4ptiii1sm3wbh30xe UserID：1 FunctionID：01080101 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-20 17:34:32,892 ERROR SessionID：5jla0at4ptiii1sm3wbh30xe UserID：1 FunctionID：01080101 Message：System.NullReferenceException: Object reference not set to an instance of an object.
+   at Page_P010801010002.GetHTGMsg(String TaxID, Boolean& bResult, String& _Msg) in d:\中信專案檔\csip_keyingui_sit\WebPage\Page\P010801010002.aspx.cs:line 340

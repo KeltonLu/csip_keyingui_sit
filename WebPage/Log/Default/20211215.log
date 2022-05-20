@@ -1,0 +1,15 @@
+2021-12-15 09:52:56,128 INFO  Message¡GApplication and Jobs End
+2021-12-15 09:53:11,518 INFO  Message¡GApplication and Jobs End
+2021-12-15 09:55:19,974 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-12-15 09:55:20,772 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-12-15 09:55:20,774 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-12-15 09:55:20,776 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-12-15 09:55:20,779 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G119
+2021-12-15 09:55:20,807 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-12-15 09:55:21,851 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-12-15 09:55:21,966 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-12-15 09:55:21,967 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-12-15 09:55:21,967 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-12-15 09:55:21,968 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G42
+2021-12-15 09:55:21,987 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-12-15 09:55:22,357 INFO SessionID¡Gipvqg3usefhv3ks0q2gyuil1 UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd

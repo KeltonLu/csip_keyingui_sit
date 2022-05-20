@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="EMFS-YGFzY9tE5e8MSPHJzsm-5qZ04858"/>
+    <data id="applicationId" value="EMFS"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="PCMM_P4A_Submit"/>
+  </header>
+  <body>
+    <data id="ORGANIZATION" value=""/>
+    <data id="ShopId" value=""/>
+    <data id="EngName" value=""/>
+    <data id="City" value=""/>
+    <data id="Owner" value=""/>
+    <data id="SalesName" value=""/>
+    <data id="Phone" value=""/>
+    <data id="Source" value=""/>
+    <data id="Corp" value=""/>
+    <data id="Type" value=""/>
+    <data id="Store" value=""/>
+    <data id="MerchantName" value=""/>
+    <data id="HOLDSTMT" value=""/>
+    <data id="Address1" value=""/>
+    <data id="Address2" value=""/>
+    <data id="Address3" value=""/>
+    <data id="Zip" value=""/>
+    <data id="MCC_VISA" value=""/>
+    <data id="MCC_PL" value=""/>
+    <data id="MCC_MC" value=""/>
+    <data id="Merch" value=""/>
+    <data id="Level" value=""/>
+    <data id="Imp1" value=""/>
+    <data id="Pos1" value=""/>
+    <data id="Edc1" value=""/>
+    <data id="Imp2" value=""/>
+    <data id="Pos2" value=""/>
+    <data id="Edc2" value=""/>
+    <data id="Ave" value=""/>
+    <data id="Month" value=""/>
+    <data id="AgentBank" value=""/>
+    <data id="Branch" value=""/>
+    <data id="FileNo" value=""/>
+    <data id="STATEMENT" value=""/>
+    <data id="REPORTING" value=""/>
+    <data id="SETTLEMENT" value=""/>
+    <data id="DISCOUNT" value=""/>
+    <data id="FEES" value=""/>
+    <data id="DISC/DEE DD" value=""/>
+    <data id="DdaNo1" value=""/>
+    <data id="DdaNo2" value=""/>
+    <data id="INT" value=""/>
+    <data id="Mail" value=""/>
+    <data id="PosCa" value=""/>
+    <data id="PosMo" value=""/>
+    <data id="CH" value=""/>
+    <data id="MC" value=""/>
+    <data id="Status1" value=""/>
+    <data id="Status2" value=""/>
+    <data id="Status3" value=""/>
+    <data id="Status4" value=""/>
+    <data id="Status5" value=""/>
+    <data id="Status6" value=""/>
+    <data id="Status7" value=""/>
+    <data id="Status8" value=""/>
+    <data id="DisRate1" value=""/>
+    <data id="DisRate2" value=""/>
+    <data id="DisRate3" value=""/>
+    <data id="DisRate4" value=""/>
+    <data id="DisRate5" value=""/>
+    <data id="DisRate6" value=""/>
+    <data id="DisRate7" value=""/>
+    <data id="DisRate8" value=""/>
+  </body>
+</hostgateway>

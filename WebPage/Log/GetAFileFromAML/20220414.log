@@ -1,0 +1,151 @@
+2022-04-14 11:25:43,420 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:25:43,509 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:25:43,631 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:25:43,631 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:25:43,632 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:25:50,362 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:25:50,595 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:26:32,343 INFO  Message：資料庫寫檔開始！ masterID = 1135
+2022-04-14 11:26:32,343 INFO  Message：資料庫寫檔結束！
+2022-04-14 11:26:37,569 ERROR  Message：取得結案AML AFILE回檔批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！有出現A檔案_資料異常:請至AML_AFileImport查詢
+2022-04-14 11:26:49,452 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 成功！總筆數:2，匯入成功共2筆，匯入失敗O筆
+2022-04-14 11:27:00,952 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:27:00,952 INFO  Message：================================================================================================================================================
+2022-04-14 11:29:03,449 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:29:03,527 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:29:03,636 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:29:03,636 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:29:03,636 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:29:05,876 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:29:05,930 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:29:10,510 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！總筆數:0結案AML結案回檔已存在，如要重匯請刪除AML_IMP_LOG table那筆資料
+2022-04-14 11:29:29,389 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:29:29,389 INFO  Message：================================================================================================================================================
+2022-04-14 11:30:39,320 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:30:39,401 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:30:39,514 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:30:39,514 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:30:39,514 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:30:41,489 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:30:41,540 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:31:03,900 INFO  Message：資料庫寫檔開始！ masterID = 1136
+2022-04-14 11:31:03,900 INFO  Message：資料庫寫檔結束！
+2022-04-14 11:31:03,901 ERROR  Message：取得結案AML AFILE回檔批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！有出現A檔案_資料異常:請至AML_AFileImport查詢
+2022-04-14 11:31:04,050 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 成功！總筆數:2，匯入成功共2筆，匯入失敗O筆
+2022-04-14 11:31:13,026 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:31:13,026 INFO  Message：================================================================================================================================================
+2022-04-14 11:31:36,160 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:31:36,244 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:31:36,364 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:31:36,364 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:31:36,364 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:31:42,050 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:31:42,181 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:33:06,932 INFO  Message：資料庫寫檔開始！ masterID = 1137
+2022-04-14 11:33:06,932 INFO  Message：資料庫寫檔結束！
+2022-04-14 11:33:06,932 ERROR  Message：取得結案AML AFILE回檔批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！有出現A檔案_資料異常:請至AML_AFileImport查詢
+2022-04-14 11:33:07,054 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 成功！總筆數:2，匯入成功共2筆，匯入失敗O筆
+2022-04-14 11:33:19,742 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:33:19,742 INFO  Message：================================================================================================================================================
+2022-04-14 11:33:45,805 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:33:45,890 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:33:46,007 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:33:46,007 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:33:46,008 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:33:48,116 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:33:48,198 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:33:48,395 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！總筆數:0結案AML結案回檔已存在，如要重匯請刪除AML_IMP_LOG table那筆資料
+2022-04-14 11:33:59,096 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:33:59,096 INFO  Message：================================================================================================================================================
+2022-04-14 11:34:02,702 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:34:02,786 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:34:02,902 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:34:02,902 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:34:02,902 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:34:04,119 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:34:04,209 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:34:13,063 INFO  Message：資料庫寫檔開始！ masterID = 1138
+2022-04-14 11:34:13,063 INFO  Message：資料庫寫檔結束！
+2022-04-14 11:34:13,063 ERROR  Message：取得結案AML AFILE回檔批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！有出現A檔案_資料異常:請至AML_AFileImport查詢
+2022-04-14 11:34:13,183 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 成功！總筆數:2，匯入成功共2筆，匯入失敗O筆
+2022-04-14 11:34:21,318 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:34:21,319 INFO  Message：================================================================================================================================================
+2022-04-14 11:36:33,262 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:36:33,391 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:36:33,540 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:36:33,540 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:36:33,540 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:36:38,203 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:36:38,334 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:36:42,164 INFO  Message：資料庫寫檔開始！ masterID = 1139
+2022-04-14 11:36:42,164 INFO  Message：資料庫寫檔結束！
+2022-04-14 11:36:42,164 ERROR  Message：取得結案AML AFILE回檔批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！有出現A檔案_資料異常:請至AML_AFileImport查詢
+2022-04-14 11:36:42,292 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 成功！總筆數:2，匯入成功共2筆，匯入失敗O筆
+2022-04-14 11:36:56,389 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:36:56,389 INFO  Message：================================================================================================================================================
+2022-04-14 11:38:18,654 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:38:18,738 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:38:18,859 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:38:18,860 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:38:18,860 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:38:20,023 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:38:20,113 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:38:23,635 INFO  Message：資料庫寫檔開始！ masterID = 1140
+2022-04-14 11:38:23,635 INFO  Message：資料庫寫檔結束！
+2022-04-14 11:38:23,635 ERROR  Message：取得結案AML AFILE回檔批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！有出現A檔案_資料異常:請至AML_AFileImport查詢
+2022-04-14 11:38:23,755 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 成功！總筆數:2，匯入成功共2筆，匯入失敗O筆
+2022-04-14 11:38:30,914 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:38:30,914 INFO  Message：================================================================================================================================================
+2022-04-14 11:38:45,648 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:38:45,732 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:38:45,851 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:38:45,851 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:38:45,851 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:38:49,430 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:38:49,518 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:38:49,648 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！總筆數:0結案AML結案回檔已存在，如要重匯請刪除AML_IMP_LOG table那筆資料
+2022-04-14 11:38:58,217 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:38:58,217 INFO  Message：================================================================================================================================================
+2022-04-14 11:39:00,796 INFO  Message：*********** GetAFileFromAML 取得 結案AML AFile回檔 資料 批次 START ************** 
+2022-04-14 11:39:00,880 ERROR  Message：[FAIL] Job工作狀態為：停止！
+2022-04-14 11:39:01,000 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 11:39:01,000 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 11:39:01,000 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 11:39:01,980 INFO  Message：讀取要匯入A File 回檔資料!！
+2022-04-14 11:39:02,027 INFO  Message：讀取檔案資料結束！
+2022-04-14 11:39:05,271 INFO  Message：資料庫寫檔開始！ masterID = 1141
+2022-04-14 11:39:05,271 INFO  Message：資料庫寫檔結束！
+2022-04-14 11:39:05,272 ERROR  Message：取得結案AML AFILE回檔批次:AML_TW_RMMOK_A_CARD_20220414.dat 失敗！有出現A檔案_資料異常:請至AML_AFileImport查詢
+2022-04-14 11:39:05,393 ERROR  Message：取得結案AML AFILE回檔 批次:AML_TW_RMMOK_A_CARD_20220414.dat 成功！總筆數:2，匯入成功共2筆，匯入失敗O筆
+2022-04-14 11:39:14,307 INFO  Message：  取得 結案AML AFile回檔 檔資料 批次 Job 結束！
+2022-04-14 11:39:14,307 INFO  Message：================================================================================================================================================

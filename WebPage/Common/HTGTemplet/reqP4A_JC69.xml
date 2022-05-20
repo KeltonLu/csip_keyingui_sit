@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value=""/>
+    <data id="applicationId" value="CSIP"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="P4A_JC69"/>
+  </header>
+  <body>
+    <data id="USER_ID" value=""/>
+    <data id="MESSAGE_TYPE" value=""/>
+    <data id="FUNCTION_CODE" value=""/>
+    <data id="CORP_NO" value=""/>
+    <data id="CORP_SEQ" value=""/>
+    <data id="MESSAGE_CHI" value=""/>
+    <data id="HEAD_CORP_NO" value=""/>
+    <data id="HEAD_CORP_SEQ" value=""/>
+    <data id="CC" value=""/>
+    <data id="BUILD_DATE" value=""/>
+    <data id="BUSINESS_ORGAN_TYPE" value=""/>
+    <data id="REGISTER_NATION" value=""/>
+    <data id="REGISTER_US_STATE" value=""/>
+    <data id="REG_NAME" value=""/>
+    <data id="CORP_REG_ENG_NAME" value=""/>
+    <data id="REG_CITY" value=""/>
+    <data id="REG_ADDR1" value=""/>
+    <data id="REG_ADDR2" value=""/>
+    <data id="TEL" value=""/>
+    <data id="OWNER_CHINESE_NAME" value=""/>
+    <data id="OWNER_ENGLISH_NAME" value=""/>
+    <data id="OWNER_ID" value=""/>
+    <data id="OWNER_BIRTH_DATE" value=""/>
+    <data id="OWNER_ID_ISSUE_DATE" value=""/>
+    <data id="OWNER_ID_ISSUE_PLACE" value=""/>
+    <data id="OWNER_ID_REPLACE_TYPE" value=""/>
+    <data id="OWNER_NATION" value=""/>
+    <data id="ID_PHOTO_FLAG" value=""/>
+    <data id="PASSPORT" value=""/>
+    <data id="PASSPORT_EXP_DATE" value=""/>
+    <data id="RESIDENT_NO" value=""/>
+    <data id="RESIDENT_EXP_DATE" value=""/>
+    <data id="OWNER_TEL" value=""/>
+    <data id="OWNER_CITY" value=""/>
+    <data id="OWNER_ADDR1" value=""/>
+    <data id="OWNER_ADDR2" value=""/>
+    <data id="LONG_NAME_FLAG" value=""/>
+    <data id="DDA_BANK_NAME" value=""/>
+    <data id="DDA_BANK_BRANCH" value=""/>
+    <data id="DDA_BANK_ACCT" value=""/>
+    <data id="DDA_ACCT_NAME" value=""/>
+    <data id="UPDATE_DATE" value=""/>
+    <data id="CREATE_ID" value=""/>
+    <data id="UPDATE_ID" value=""/>
+    <data id="ARCHIVE_NO" value=""/>
+    <data id="CHECK_CODE" value=""/>
+    <data id="REG_ZIP_CODE" value=""/>    
+    <data id="LAST_UPD_BRANCH" value=""/>
+    <data id="LAST_UPD_CHECKER" value=""/>
+    <data id="LAST_UPD_MAKER" value=""/>
+  </body>
+</hostgateway>

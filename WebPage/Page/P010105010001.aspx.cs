@@ -1,0 +1,3140 @@
+﻿// *****************************************************************
+//   作    者：王予濠
+//   功能說明：特店AML資料新增/修改一次鍵檔
+//   創建日期：2019/01/10
+//   修改紀錄：2021/03/11_Ares_Stanley-修正粗框問題
+//   <author>            <time>            <TaskID>                <desc>
+//   Ares Luke          2020/11/19         20200031-CSIP EOS       調整取web.config加解密參數
+// ******************************************************************
+
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections.Generic;
+using System.Collections;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Framework.Common.Message;
+using CSIPCommonModel.EntityLayer;
+using CSIPNewInvoice.EntityLayer_new;
+using CSIPKeyInGUI.BusinessRules_new;
+using Framework.WebControls;
+using System.Drawing;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
+using System.Reflection;
+using Framework.Data.OM.OMAttribute;
+using System.Text;
+using CSIPCommonModel.EntityLayer_new;
+using Framework.Common.Utility;
+using Framework.Data.OM.Collections;
+using CSIPKeyInGUI.BusinessRules;
+using CSIPKeyInGUI.EntityLayer;
+using Framework.Common.Logging;
+
+public partial class Page_P010105010001 : PageBase
+{
+    #region 變數區
+    /// <summary>
+    /// Session變數集合
+    /// </summary>
+    private EntityAGENT_INFO eAgentInfo;
+    //20191023 修改：SOC所需資訊  by Peggy
+    private structPageInfo sPageInfo;//*記錄網頁訊息
+    /// <summary>
+    /// 切換測試電文
+    /// </summary>
+    private bool isTest;
+
+    /// <summary>
+    /// 通用字典，各項次機能以前兩碼區分
+    /// </summary>
+    Dictionary<string, string> DCCommonColl;
+    
+    #endregion
+
+    #region 事件區
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string isTEST = UtilHelper.GetAppSettings("isTest");
+        if (isTEST == "Y") { isTest = true; } else { isTest = false; }
+
+        if (!IsPostBack)
+        {
+            CommonFunction.SetControlsEnabled(pnlText, false);// 清空網頁中所有的輸入欄位
+            base.sbRegScript.Append(BaseHelper.SetFocus("txtTaxID"));// 將 總公司/總店統編 設為輸入焦點
+            init();//20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+
+            LoadDropDownList();
+        }
+
+        base.strClientMsg += "";
+        base.strHostMsg += "";
+        eAgentInfo = (EntityAGENT_INFO)this.Session["Agent"];// Session變數集合
+        sPageInfo = (structPageInfo)this.Session["PageInfo"];//20191023 修改：SOC所需資訊  by Peggy
+    }
+
+    //查詢機能
+    protected void btnSelect_Click(object sender, EventArgs e)
+    {
+        //查詢前先清除畫面上會用到的控制項，避免資料殘留
+        clearDataObjVal();
+        //20190614 Talas 查詢前清空
+        lblNoticeNew.Text = "";
+        init();//20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+
+        CommonFunction.SetControlsEnabled(pnlText, true);
+
+        //20191023 修改：SOC所需資訊  by Peggy
+        #region AuditLog to SOC
+        /*
+             Statement_Text：請提供以下屬性資料，各屬性間用'|'分隔，若無值仍需帶attribute name
+                                        Ex.  CUSTOMER_ID= |AC_NO=123456789012|BRANCH_ID=0901|ROLE_ID=CBABG01
+             (必輸)CUSTOMER_ID：客戶ID/統編
+             AC_NO：交易帳號/卡號
+             BRANCH_ID：帳務分行別
+             ROLE_ID：登入系統帳號之角色
+        */
+        EntityL_AP_LOG log = BRL_AP_LOG.getDefaultValue(eAgentInfo, sPageInfo.strPageCode);
+        log.Customer_Id = this.txtTaxID.Text.Trim() + txtTaxNo.Text.Trim();//查詢條件        
+        log.Statement_Text = string.Format("CUSTOMER_ID:{0}|AC_NO:{1}|BRANCH_ID:{2}|ROLE_ID:{3}", log.Customer_Id, log.Account_Nbr, log.Branch_Nbr, log.Role_Id); //查詢條件內容: 用 | 區隔
+        BRL_AP_LOG.Add(log);
+        #endregion
+
+        //先查本機資料，有資料直接帶出 ，若沒有就打電文 只帶1KEY資料
+        //新增查詢條件, keyin_day須為當天日期(yyyyMMdd) by Ares Stanley 20211217
+        string today = DateTime.Now.ToString("yyyyMMdd");
+        EntityAML_HeadOffice DataObj = BRAML_HeadOffice.Query(txtTaxID.Text, "", "1", today);
+
+        //刪除 keyin_day 非當日資料 by Ares Stanley 20211217
+        BRAML_HeadOffice.DeleteNotTodayKData(txtTaxID.Text, "1", today);
+
+        if (string.IsNullOrEmpty(DataObj.ID))
+        {
+            bool bResult = false;
+
+            DataObj = GetHTGMsg(txtTaxID.Text, txtTaxNo.Text, ref bResult);
+            if (DataObj == null)  //HTG電文查無資料           
+            {
+                if (bResult)
+                {
+                    //提示HTG電文回應訊息  無資料
+                    string strAlertMsg = MessageHelper.GetMessages("01_01050101_001");
+                    sbRegScript.Append("alert('" + strAlertMsg + "');");
+                    clearDataObjVal();
+                    txtBasicTaxID.Text = txtTaxID.Text;
+                    //20190614 Talas 增加提示本次作業為新增字樣
+                    lblNoticeNew.Text = strAlertMsg;
+                    txtBasicTaxID.Enabled = false;                    
+
+                    CheckBox_CheckedChanged(chkisLongName, null);
+                    CheckBox_CheckedChanged(chkisLongName_c, null);
+                    return;
+                }
+                else
+                {
+                    //打電文失敗
+                    CommonFunction.SetControlsEnabled(pnlText, false);
+                    return;
+                }
+
+            }
+            else//只要是從主機來的資料，是否已完成SCDD表(審查flag)就不跟主機資料綁定，每一次都要使用者自己勾選
+            {
+                //20210324-RQ-2021-004136-003 應姵晴要求(20210323MAIL所述，當是否已完成SCDD未勾選時，保持空白不帶N，請於下個變更異動
+                //DataObj.isSCDD = "N";
+                DataObj.isSCDD = "";
+            }
+        }
+        //電文有資料，
+        ShowPageData(DataObj);
+
+        // txtBasicTaxID.Text = txtTaxID.Text;
+        txtBasicTaxID.Enabled = false;
+        setLabNation();
+    }
+    /// <summary>
+    /// 行業別變更時
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void txtBasicAMLCC_TextChanged(object sender, EventArgs e)
+    {
+        //20190909 modify by Peggy
+        //setCCName(txtBasicAMLCC.Text);
+        hidCC.Value = checkCodeType("3", "txtBasicAMLCC", true, "HQlblHCOP_CC_Cname");
+        if (hidCC.Value != "")
+        {
+            HQlblHCOP_CC_Cname.Text = "";
+        }
+    }
+
+
+    /// <summary>
+    /// 存檔機能
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        //20210917_Ares_Jack - 檢核最後異動資料 
+        if(string.IsNullOrEmpty(txtLAST_UPD_BRANCH.Text))
+        {
+            base.sbRegScript.Append("alert('資料最後異動分行不為空!');$('#txtLAST_UPD_BRANCH').focus();");
+
+            return;
+        }
+        if (string.IsNullOrEmpty(txtLAST_UPD_MAKER.Text))
+        {
+            base.sbRegScript.Append("alert('資料最後異動MAKER不為空!');$('#txtLAST_UPD_MAKER').focus();");
+            return;
+        }
+        if (string.IsNullOrEmpty(txtLAST_UPD_CHECKER.Text))
+        {
+            base.sbRegScript.Append("alert('資料最後異動CHECKER不為空!');$('#txtLAST_UPD_CHECKER').focus();");
+            return;
+        }
+        //20210906_Ares_Stanley - 選取其他選項時, 文字欄位不可為空
+        if (this.radBasicOther.Checked && this.txtBasicOfficeEmailOther.Text.Replace(" ", "").Replace("　", "").Length <= 0)
+        {
+            base.sbRegScript.Append("alert('請輸入完整E-Mail!');$('#txtBasicOfficeEmailOther').focus();");
+            return;
+        }
+
+        //20210902_Ares_Stanley-檢查Email總長度為50; 20210913_Ares_Stanley-改共用function
+        string mailEnd = string.Empty;
+        if (this.radBasicGmail.Checked)
+        {
+            mailEnd = this.radBasicGmail.Text;
+        }
+        if (this.radBasicYahoo.Checked)
+        {
+            mailEnd = this.radBasicYahoo.Text;
+        }
+        if (this.radBasicHotmail.Checked)
+        {
+            mailEnd = this.radBasicHotmail.Text;
+        }
+        if (this.radBasicOther.Checked)
+        {
+            mailEnd = this.txtBasicOfficeEmailOther.Text;
+        }
+        if (!CommonFunction.CheckMailLength(this.txtBasicOfficeEmail.Text, mailEnd))
+        {
+            base.sbRegScript.Append("alert('Email總長度不可大於50碼');$('#txtBasicOfficeEmail').focus();");
+            return;
+        }
+
+        //20190806-RQ-2019-008595-002-長姓名需求 by Peggy↓
+        if (chkisLongName.Checked)
+        {
+            if (txtPrincipalNameCH_L.Text.Trim().Equals(""))
+            {
+                base.sbRegScript.Append("alert('負責人長姓名FLAG勾選時，請輸入中文長姓名');$('#txtPrincipalNameCH_L').focus();");
+                return;
+            }
+
+            if (txtPrincipalNameCH_Pinyin.Text.Trim().Equals(""))
+            {
+                base.sbRegScript.Append("alert('負責人長姓名FLAG勾選時，請輸入羅馬拼音');$('#txtPrincipalNameCH_Pinyin').focus();");
+                return;
+            }
+
+            if ((ToWide(txtPrincipalNameCH_L.Text.Trim()).Length + LongNameRomaClean(txtPrincipalNameCH_Pinyin.Text).Trim().Length) < 5)
+            {
+                base.sbRegScript.Append("alert('負責人長姓名FLAG勾選時，負責人姓名(中文+羅馬拼音)需超過4個字以上');$('#txtPrincipalNameCH_L').focus();");
+                return;
+            }
+        }
+
+        if (chkisLongName_c.Checked)
+        {
+            if (txtBasicContactMan_L.Text.Trim().Equals(""))
+            {
+                base.sbRegScript.Append("alert('聯絡人長姓名FLAG勾選時，請輸入中文長姓名');$('#txtBasicContactMan_L').focus();");
+                return;
+            }
+
+            if (txtBasicContactMan_Pinyin.Text.Trim().Equals(""))
+            {
+                base.sbRegScript.Append("alert('聯絡人長姓名FLAG勾選時，請輸入羅馬拼音');$('#txtBasicContactMan_Pinyin').focus();");
+                return;
+            }
+
+            if ((ToWide(txtBasicContactMan_L.Text.Trim()).Length + LongNameRomaClean(txtBasicContactMan_Pinyin.Text).Trim().Length) < 5)
+            {
+                base.sbRegScript.Append("alert('聯絡人長姓名FLAG勾選時，負責人姓名(中文+羅馬拼音)需超過4個字以上');$('#txtBasicContactMan_L').focus();");
+                return;
+            }
+        }
+
+        if (!txtPrincipalNameCH_Pinyin.Text.Trim().Equals(""))
+        {
+            if (!ValidRoma(txtPrincipalNameCH_Pinyin.Text.Trim()))
+            {
+                base.sbRegScript.Append("alert('負責人羅馬拼音輸入有誤');$('#txtPrincipalNameCH_Pinyin').focus();");
+                return;
+            }
+        }
+        if (!txtBasicContactMan_Pinyin.Text.Trim().Equals(""))
+        {
+            if (!ValidRoma(txtBasicContactMan_Pinyin.Text.Trim()))
+            {
+                base.sbRegScript.Append("alert('聯絡人羅馬拼音輸入有誤');$('#txtBasicContactMan_Pinyin').focus();");
+                return;
+            }
+        }
+        //20190806-RQ-2019-008595-002-長姓名需求 by Peggy↑
+
+        //20220106_Ares_Jack_國籍不得選無
+        if (this.txtBasicCountryCode.Text == "無")
+        {
+            base.sbRegScript.Append("alert('註冊國籍不得選無');$('#txtBasicCountryCode').focus();");
+            return;
+        }
+        if (this.txtPrincipalCountryCode.Text == "無")
+        {
+            base.sbRegScript.Append("alert('負責人國籍不得選無');$('#txtPrincipalCountryCode').focus();");
+            return;
+        }
+        if (this.txtSCCDCountryCode.Text == "無")
+        {
+            base.sbRegScript.Append("alert('註冊國籍不得選無');$('#txtSCCDCountryCode').focus();");
+            return;
+        }
+
+        // 20210527 EOS_AML(NOVA) 檢查最後異動分行 by Ares Dennis
+        string LAST_UPD_BRANCH = this.txtLAST_UPD_BRANCH.Text.Trim();
+        if (!string.IsNullOrEmpty(LAST_UPD_BRANCH))
+        {
+            //20211203_Ares_Jack_異動分行為9999不檢驗BRANCH, MAKER, CHECKER
+            if (!(LAST_UPD_BRANCH == "9999"))
+            {
+                if (!checkLAS_UPD_BRANCH(LAST_UPD_BRANCH))
+                {
+                    base.sbRegScript.Append("alert('異動分行不存在，請重新填寫');");
+                    return;
+                }
+            }
+        }
+        //20211122_EOS_AML(NOVA)_Ares_Jack_檢查MAKER
+        string LAST_UPD_MAKER = this.txtLAST_UPD_MAKER.Text.Trim();
+        if (!string.IsNullOrEmpty(LAST_UPD_MAKER))
+        {
+            //20211203_Ares_Jack_異動分行為9999不檢驗BRANCH, MAKER, CHECKER
+            if (!(LAST_UPD_BRANCH == "9999"))
+            {
+                if (!checkLAS_UPD_MAKER(LAST_UPD_MAKER))
+                {
+                    base.sbRegScript.Append("alert('MAKER不存在，請重新填寫');");
+                    return;
+                }
+            }
+        }
+        //20211122_EOS_AML(NOVA)_Ares_Jack_檢查CHECKER
+        string LAST_UPD_CHECKER = this.txtLAST_UPD_CHECKER.Text.Trim();
+        if (!string.IsNullOrEmpty(LAST_UPD_CHECKER))
+        {
+            //20211203_Ares_Jack_異動分行為9999不檢驗BRANCH, MAKER, CHECKER
+            if (!(LAST_UPD_BRANCH == "9999"))
+            {
+                if (!checkLAS_UPD_CHECKER(LAST_UPD_CHECKER))
+                {
+                    base.sbRegScript.Append("alert('CHECKER不存在，請重新填寫');");
+                    return;
+                }
+            }
+        }
+        // 20210527 EOS_AML(NOVA) 檢查郵遞區號 by Ares Dennis
+        string address = this.txtBasicBookAddr1.Text.Trim();
+        if (!string.IsNullOrEmpty(address) && !checkREG_ZIP_CODE(address))
+        {
+            base.sbRegScript.Append("alert('地址查無郵遞區號，請輸入正確地址或請聯繫MFA更新');");
+            return;
+        }
+
+        //20211022_Ares_Jack_新的一筆資料需檢核SCDD是否勾選
+        Hashtable htInput = new Hashtable();
+        htInput.Add("FUNCTION_CODE", "I");
+        htInput.Add("CORP_NO", txtTaxID.Text);
+        htInput.Add("CORP_SEQ", "0000");
+        Hashtable htReturn = MainFrameInfo.GetMainFrameInfo(HtgType.P4A_JC66, htInput, false, "11", eAgentInfo);
+        if (htReturn["MESSAGE_TYPE"] != null && htReturn["MESSAGE_TYPE"].ToString().Trim() == "0006" || htReturn["CREATE_ID"].ToString().Trim() == "")
+        {
+            if (chkSCCD.Checked != true)
+            {
+                base.sbRegScript.Append("alert('請先完成SCDD!');");
+                return;
+            }
+        }
+
+        string strAlertMsg = "";
+        //將畫面欄位轉換為物件
+        // 新增查詢條件, keyin_day須為當天日期(yyyyMMdd) by Ares Stanley 20211217
+        string today = DateTime.Now.ToString("yyyyMMdd");
+        EntityAML_HeadOffice DataObj = BRAML_HeadOffice.Query(txtTaxID.Text, txtTaxNo.Text, "1", today);
+
+        this.GetVal<EntityAML_HeadOffice>(ref DataObj);
+
+        //20201125-存檔時將地址直接轉全型存檔送出
+        //登記地址
+        DataObj.BasicBookAddr1 = ToWide(txtBasicBookAddr1.Text);
+        DataObj.BasicBookAddr2 = ToWide(txtBasicBookAddr2.Text);
+        DataObj.BasicBookAddr3 = ToWide(txtBasicBookAddr3.Text);
+        //通訊地址
+        DataObj.BasicContactAddr1 = ToWide(txtBasicContactAddr1.Text);
+        DataObj.BasicContactAddr2 = ToWide(txtBasicContactAddr2.Text);
+        DataObj.BasicContactAddr3 = ToWide(txtBasicContactAddr3.Text);
+        //戶籍地址
+        DataObj.PrincipalBookAddr1 = ToWide(txtPrincipalBookAddr1.Text);
+        DataObj.PrincipalBookAddr2 = ToWide(txtPrincipalBookAddr2.Text);
+        DataObj.PrincipalBookAddr3 = ToWide(txtPrincipalBookAddr3.Text);
+
+        //特殊欄位處理，如EMAIL
+        CollectEmail(ref DataObj);
+
+        //注意，若txtBasicEstablish長度為8碼，須轉民國年
+        if (txtBasicEstablish.Text.Length == 8)
+        {
+            DataObj.BasicEstablish = ConvertToROCYear(txtBasicEstablish.Text);
+        }
+
+        string sLineID = "";
+        int addItems = 0;//20191029 記錄新增筆數 add by Peggy
+        string _ID = "";
+        //讀取子項目
+        List<EntityAML_SeniorManager> managerColl = DataObj.AML_SeniorManagerColl;
+        List<string> errMsg = new List<string>();
+        for (int i = 0; i < 12; i++)
+        {
+            sLineID = (i + 1).ToString().Trim();
+            _ID = "";
+            EntityAML_SeniorManager dObj = null;
+            CustLabel IdentityID = this.FindControl("lblID_" + sLineID.Trim()) as CustLabel;//20190919-高管畫面重新排序 by Peggy
+            //20200210 未使用參數，刪除之
+            //CustCheckBox DelID = this.FindControl("chkSeniorManagerDelete_" + sLineID.Trim()) as CustCheckBox;//20191029-高管畫面重新排序 by Peggy
+            CustTextBox NameL = this.FindControl("txtSeniorManagerName_" + sLineID.Trim()) as CustTextBox;//20191029-高管畫面重新排序 by Peggy
+
+            if (!NameL.Text.Trim().Equals(""))
+            {
+                foreach (EntityAML_SeniorManager mob in managerColl)
+                {
+                    //20190919-高管畫面重新排序 by Peggy
+                    //if (mob.LineID == sLineID)
+                    //{
+                    //    dObj = mob;
+                    //    continue;
+                    //}
+                    
+                    //20191030 test mark by Peggy 
+                    //if (!IdentityID.Text.Trim().Equals("") && mob.ID.Trim().Equals(IdentityID.Text.Trim()))
+                    //{
+                    //    dObj = mob;
+                    //    dObj.LineID = sLineID;
+                    //    //dObj.Expdt = "";//201910月RC-姵晴要求，到期日要清空
+
+                    //    addItems++;
+                    //    break;
+                    //}
+
+                    if (mob.LineID == sLineID)
+                    {
+                        dObj = mob;
+                        _ID = mob.ID;
+                        if (IdentityID.Text.Trim().Equals(""))//因資料是抓畫面行數的資料，如畫面不重整，DB的LINEID與畫面行會不同，故先把LINEID的值先以畫面為主，抓完資料才變更回來
+                        {
+                            dObj.LineID = sLineID;
+                        }
+                        addItems++;
+                        break;
+                    }
+                }
+
+                //找不到舊資料
+                if (dObj == null)
+                {
+
+                    dObj = new EntityAML_SeniorManager();
+                    dObj.LineID = (i + 1).ToString().Trim();
+
+                    addItems++;//20191029 add by Peggy
+                    //填入欄位以外 
+                    managerColl.Add(dObj);
+                }
+
+                dObj.BasicTaxID = DataObj.BasicTaxID;  //以主畫面輸入統編為主
+                dObj.keyin_day = DateTime.Now.ToString("yyyyMMdd");
+                dObj.keyin_Flag = "1";
+                dObj.keyin_userID = eAgentInfo.agent_id;
+
+                this.GetVal<EntityAML_SeniorManager>(ref dObj);
+                if (dObj.ID.Trim().Equals("") && !_ID.Trim().Equals(""))
+                {
+                    dObj.ID = _ID.Trim();
+                }
+
+                if (dObj.isDEL == "1")
+                {
+                    addItems--;//20200210 -若為刪除的資料，則不對重新排序序號做加1動作
+                    //新增高階管理人資料來源判斷，若欲刪除資料來源為HTG需從List中移除，若來源為DB則須保留，後續刪除DB資料 by Ares Stanley 20220119
+                    EntityAML_HeadOffice headOfficeObj = BRAML_HeadOffice.Query(txtTaxID.Text, "", "1", today);
+                    if (string.IsNullOrEmpty(headOfficeObj.ID))
+                    {
+                        //取自電文
+                        managerColl.Remove(dObj);
+                    }
+                    continue;
+                }
+
+                if (!LoadInentity(dObj.LineID, dObj))
+                {
+                    errMsg.Add("高階經理人第 " + dObj.LineID + "行身分類型輸入值有誤\\n");
+                }
+
+                //20201102-202012RC 外國人新式統一證號
+                if (!LoadCheckFK(dObj.LineID, dObj))
+                {
+                    errMsg.Add("高階經理人第 " + dObj.LineID + "行，統一證號輸入錯誤，請重新輸入\\n");
+                }
+
+                //20220105 檢核 國籍TW 身分證為Z999999999, 身分證指定為1 by Ares Dennis
+                if (!checkIdNoType(dObj.LineID))
+                {
+                    errMsg.Add("高階經理人第 " + dObj.LineID + "行身分證類型輸入值有誤\\n");
+                }
+
+                //20220106_Ares_Jack_國籍不得輸入無
+                if (!checkCountry(dObj.LineID))
+                {
+                    errMsg.Add("高階經理人第 " + dObj.LineID + "行 國籍不得輸入無\\n");
+                }
+
+                //追加驗證
+                ValidVal<EntityAML_SeniorManager>(dObj, ref errMsg, (Page)this, dObj.LineID);
+                
+                //追加國籍與姓名轉換處理
+                checkNation(dObj, ref errMsg, dObj.LineID);
+                
+                if (!sLineID.Trim().Equals(addItems.ToString().Trim()))//FOR重新排序
+                {
+                    dObj.LineID = addItems.ToString().Trim();
+                }
+            }
+        }//高管12次結束
+
+        DataObj.AML_SeniorManagerColl = managerColl;
+
+
+        //以國籍設定公司型態 
+        DataObj.BasicCORP_TYPE = "4";
+        if (DataObj.BasicCountryCode == "TW")
+        {
+            DataObj.BasicCORP_TYPE = "1";
+        }
+        //追加驗證
+        ValidVal<EntityAML_HeadOffice>(DataObj, ref errMsg, (Page)this, "");
+        //特殊關聯欄位處理
+        //20190614 Talas 調整若電文回應無資料，為新增時，需檢核
+        if (!string.IsNullOrEmpty(lblNoticeNew.Text))
+        {
+            ValidLinkedFields_BAK(DataObj, ref errMsg);
+        }
+        else
+        {
+            ValidLinkedFields(DataObj, ref errMsg);
+        }
+        if (errMsg.Count > 0)
+        {
+            StringBuilder sb = new StringBuilder();
+            int linC = 0;
+            foreach (string oitem in errMsg)
+            {
+                sb.Append(oitem);
+                linC++;
+                if (linC > 10)
+                {
+                    sb.Append("---顯示前十筆，以下省略---");
+                    break;
+                }
+            }
+            strAlertMsg = @"『" + MessageHelper.GetMessage("01_01080105_007") + "』" + @"\n" + sb.ToString();
+            sbRegScript.Append("alert('" + strAlertMsg + "');");
+            return;
+        }
+
+
+        //是否為新建還是修改，以電文行業別判斷 ，若不存在則以資料庫讀出為主
+        if (Session["1KisNew" + txtTaxID.Text] != null)
+        {
+            DataObj.isNew = Session["1KisNew" + txtTaxID.Text].ToString();
+        }
+
+        //增加更新及USER基本資料
+        DataObj.keyin_day = DateTime.Now.ToString("yyyyMMdd");
+        DataObj.keyin_userID = eAgentInfo.agent_id;
+        //設定為1KEY
+        DataObj.keyin_Flag = "1";
+
+
+        //送出存檔
+        bool result = BRAML_HeadOffice.Insert(DataObj);
+
+        if (result)
+        {
+            strAlertMsg = @"『" + MessageHelper.GetMessage("01_01050101_002") + "』";
+            //clearDataObjVal();
+            CommonFunction.SetControlsEnabled(pnlText, false);// 清空網頁中所有的輸入欄位
+            HQlblHCOP_CC_Cname.Text = "";
+            chkSCCD.Checked = false;
+            init();//20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+        }
+        else
+        {
+            strAlertMsg = @"『" + MessageHelper.GetMessage("01_01050101_004") + "』";
+
+        }
+        sbRegScript.Append("alert('" + strAlertMsg + "');");
+
+    }
+    protected void txtHCOP_BENE_NATION_TextChanged(object sender, EventArgs e)
+    {
+        //找出LINEID 以控制像名稱檢核
+        CustTextBox mConteol = (CustTextBox)sender;
+        string sname = mConteol.ID;
+        string[] namePhase = sname.Split('_');
+        string LineID = "";
+        if (namePhase.Length == 2)
+        {
+            LineID = namePhase[1];
+        }
+        else { return; }
+
+
+        string strAlertMsg = "";
+        mConteol.Text = mConteol.Text.ToUpper();
+
+        strIsShow = "setfocus('" + "txtSeniorManagerIDNo_" + LineID + "');";
+
+
+        CustLabel myControl = FindControl("lblEnNotice_" + LineID) as CustLabel;
+        if (string.IsNullOrEmpty(mConteol.Text)) //空白不檢核
+        {
+            //開放該行
+            myControl.Visible = false;
+            return;
+        }
+        //   mConteol.BackColor = Color.Empty;
+        //檢核國籍       
+        //不正確的國籍
+        if (GetDcValue("CT_1_" + mConteol.Text) == "")
+        {
+
+            //      mConteol.BackColor = Color.Red;
+            strAlertMsg = MessageHelper.GetMessages("01_01080103_009") + "第" + LineID + "行\\n";
+            sbRegScript.Append("alert('" + strAlertMsg + "');");
+            mConteol.BackColor = Color.Red;//20190911 MODIFY BY Peggy
+            return;
+        }
+        myControl.Visible = true;
+        if (mConteol.Text != "TW")
+        {
+            myControl.ShowID = "01_01080103_057";
+        }
+        else
+        {
+            myControl.ShowID = "01_01080103_058";
+        }
+
+        setLabNation();        
+    }    
+
+    /// <summary>
+    /// 使用者輸入的地址解析後系統自動帶入
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void TextBox_AddrChanged(object sender, EventArgs e)
+    {
+        string strZipData = this.txtBasicBookAddr1.Text.Trim();
+
+        EntitySet<EntitySZIP> SZIPSet = null;
+        try
+        {
+            SZIPSet = BRSZIP.SelectEntitySet(strZipData);
+        }
+        catch
+        {
+            base.strClientMsg += MessageHelper.GetMessage("00_00000000_000");
+            return;
+        }
+
+        if (SZIPSet != null && SZIPSet.Count > 0)
+        {
+            this.txtREG_ZIP_CODE.Text = SZIPSet.GetEntity(0).zip_code;
+        }
+        else
+        {
+            this.txtREG_ZIP_CODE.Text = "";
+            if (this.txtBasicBookAddr1.Text.Trim() != "")//20220114_Ares_Jack_不等於空值才跳錯誤檢核
+            {
+                base.strClientMsg += "地址查無郵遞區號，請輸入正確地址或請聯繫MFA更新";
+                base.sbRegScript.Append("alert('地址查無郵遞區號，請輸入正確地址或請聯繫MFA更新');");
+            }  
+        }
+        base.sbRegScript.Append(BaseHelper.SetFocus("txtBasicBookAddr2"));// 將地址2設為輸入焦點
+    }
+    #endregion
+
+    #region 方法區
+    private void setLabNation()
+    {
+        for (int i = 1; i < 13; i++)
+        {
+            CustLabel myControl = FindControl("lblEnNotice_" + i.ToString()) as CustLabel;
+            CustTextBox myControlNat = FindControl("txtSeniorManagerCountryCode_" + i.ToString()) as CustTextBox;
+            if (string.IsNullOrEmpty(myControlNat.Text))
+            {
+                myControl.Visible = false;
+            }
+            else
+            {
+                if (myControlNat.Text.ToUpper() != "TW")
+                {
+                    myControl.ShowID = "01_01080103_057";
+                }
+                else
+                {
+                    myControl.ShowID = "01_01080103_058";
+                }
+            }
+        }
+    }
+    #region 20190614 Talas 修正驗證條件  暫時使用 
+    /// <summary>
+    /// 特殊關聯欄位處理
+    /// </summary>
+    /// <param name="dataObj"></param>
+    /// <param name="errMsg"></param>
+    private void ValidLinkedFields(EntityAML_HeadOffice dataObj, ref List<string> errMsg)
+    {
+
+        txtPrincipalIssuePlace.BackColor = System.Drawing.Color.Empty; //發證日期
+        txtPrincipalIssueDate.BackColor = System.Drawing.Color.Empty;  //發證地點
+        txtPrincipalRedemption.BackColor = System.Drawing.Color.Empty; //領補換別
+        //txtPrincipalHasPic.BackColor = System.Drawing.Color.Empty; //有無照片
+        txtPrincipalBirth.BackColor = System.Drawing.Color.Empty; //生日
+        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Empty; //護照效期
+        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Empty; //居留效期
+        txtPrincipalIDNo.BackColor = System.Drawing.Color.Empty; //身分證字號
+        txtBasicRegistyNameEN.BackColor = System.Drawing.Color.Empty; //英文名稱
+        //txtBasicCountryCode.BackColor = System.Drawing.Color.Empty; //國別//20190910 mark by Peggy
+        txtBasicEstablish.BackColor = System.Drawing.Color.Empty; //設立日期
+
+
+        DateTime realDate;
+        string date = "";
+
+        //行業編號不存在
+        if (!string.IsNullOrEmpty(hidCC.Value))
+        {
+            errMsg.Add("行業編號不存在\\n");
+            txtBasicAMLCC.BackColor = System.Drawing.Color.Red;
+        }
+
+
+        // 檢查設立日期
+        string establishDate = this.txtBasicEstablish.Text.Trim();
+        if (!string.IsNullOrEmpty(establishDate))
+        {
+            if (establishDate.Length != 7)
+            {
+                errMsg.Add("設立日期請輸入7碼數字\\n");
+                txtBasicEstablish.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                int year = int.Parse(establishDate.Substring(0, 3)) + 1911;
+                date = year + "/" + establishDate.Substring(3, 2) + "/" + establishDate.Substring(5, 2);
+                if (!DateTime.TryParse(date, out realDate))
+                {
+                    errMsg.Add("設立日期格式錯誤\\n");
+                    txtBasicEstablish.BackColor = System.Drawing.Color.Red;
+                }
+            }
+        }
+
+        //國籍非TW，則需填英文名
+        if (txtBasicCountryCode.Text.ToUpper() != "TW")
+        {
+            if (string.IsNullOrEmpty(txtBasicRegistyNameEN.Text))
+            {
+                errMsg.Add("國別非TW，需填公司英文名稱\\n");
+                txtBasicRegistyNameEN.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        //有身分證字號，須追加檢核
+        if (!string.IsNullOrEmpty(txtPrincipalIDNo.Text))
+        {
+            //生日空白
+            if (string.IsNullOrEmpty(txtPrincipalBirth.Text))
+            {
+                errMsg.Add("生日不可空白\\n");
+                txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                //檢核是否為數字
+                if (!isNumeric(txtPrincipalBirth.Text))
+                {
+                    errMsg.Add("生日需為數字\\n");
+                    txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+                }
+            }
+        }
+
+
+
+        // 檢查生日
+        string birthDate = this.txtPrincipalBirth.Text.Trim();
+        if (!string.IsNullOrEmpty(birthDate))
+        {
+            if (birthDate.Length != 7)
+            {
+                errMsg.Add("生日請輸入7碼數字\\n");
+                txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                int year = int.Parse(birthDate.Substring(0, 3)) + 1911;
+                date = year + "/" + birthDate.Substring(3, 2) + "/" + birthDate.Substring(5, 2);
+                if (!DateTime.TryParse(date, out realDate))
+                {
+                    errMsg.Add("生日格式錯誤\\n");
+                    txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+                }
+            }
+
+        }
+
+        //登記地址
+        if (!string.IsNullOrEmpty(txtBasicBookAddr1.Text) && string.IsNullOrEmpty(txtBasicBookAddr3.Text))
+        {
+            errMsg.Add("登記地址第一段不為空白，則登記地址3須為Ｘ\\n");
+            txtBasicBookAddr3.BackColor = System.Drawing.Color.Red;
+        }
+
+        //如果通訊地址第一段不是空白，那第三段就填Ｘ
+        if (!string.IsNullOrEmpty(txtBasicContactAddr1.Text) && string.IsNullOrEmpty(txtBasicContactAddr3.Text))
+        {
+            errMsg.Add("通訊地址第一段不為空白，則通訊地址3須為Ｘ\\n");
+            txtBasicContactAddr3.BackColor = System.Drawing.Color.Red;
+        }
+
+        //如果負責人戶籍地址第一段不是空白，那第三段就填Ｘ
+        if (!string.IsNullOrEmpty(txtPrincipalBookAddr1.Text) && string.IsNullOrEmpty(txtPrincipalBookAddr3.Text))
+        {
+            errMsg.Add("戶籍地址第一段不為空白，則戶籍地址3須為Ｘ\\n");
+            txtPrincipalBookAddr3.BackColor = System.Drawing.Color.Red;
+        }
+
+
+        if (txtBasicCountryCode.Text.Trim().ToUpper() == "US" && txtBasicCountryStateCode.Text.Trim() == "")
+        {
+            errMsg.Add("註冊國為美國者，請勾選州別\\n");
+            txtBasicCountryStateCode.BackColor = System.Drawing.Color.Red;
+        }
+
+        //20200617-RQ-2019-030155-000 開放能輸入&符號
+        /*
+        //HTG不支援&符號
+        if (txtBasicRegistyNameEN.Text.Contains("&"))
+        {
+            errMsg.Add("請檢查登記名稱(英文)，內容不可包含&特殊符號\\n");
+            txtBasicRegistyNameEN.BackColor = System.Drawing.Color.Red;
+        }
+        */
+        //20190813 add by Peggy
+        if (chkisLongName.Checked && txtPrincipalNameCH_L.Text.Trim().Equals(""))
+        {
+            errMsg.Add("負責人長姓名勾選時，請輸入負責人長姓名\\n");
+            txtPrincipalNameCH_L.BackColor = System.Drawing.Color.Red;
+        }
+        if (chkisLongName_c.Checked && txtBasicContactMan_L.Text.Trim().Equals(""))
+        {
+            errMsg.Add("負責人長姓名勾選時，請輸入聯絡人長姓名\\n");
+            txtBasicContactMan_L.BackColor = System.Drawing.Color.Red;
+        }
+
+        //如果負責人國籍非ＴＷ
+        if (!string.IsNullOrEmpty(txtPrincipalCountryCode.Text.Trim()) && txtPrincipalCountryCode.Text.Trim().ToUpper() != "TW")
+        {
+            if (string.IsNullOrEmpty(txtPrincipalPassportNo.Text) && string.IsNullOrEmpty(txtPrincipalResidentNo.Text))
+            {
+                errMsg.Add("負責人國籍非ＴＷ，護照號碼或統一證號擇一填寫\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                txtPrincipalPassportNo.BackColor = System.Drawing.Color.Red;
+                txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(txtPrincipalPassportExpdt.Text))
+                {
+                    if (string.IsNullOrEmpty(txtPrincipalPassportNo.Text))
+                    {
+                        errMsg.Add("負責人國籍非ＴＷ，護照號碼不可空白\\n");
+                        txtPrincipalPassportNo.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (txtPrincipalPassportExpdt.Text.Trim().Length != 8)
+                    {
+                        errMsg.Add("護照效期有誤，請輸入8位日期格式\\n");
+                        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (!checkDateTime(txtPrincipalPassportExpdt.Text.Trim()))//20191108
+                    {
+                        errMsg.Add("護照效期有誤，請輸入正確日期\\n");
+                        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+                
+                if (!string.IsNullOrEmpty(txtPrincipalResidentExpdt.Text))
+                {
+                    if (string.IsNullOrEmpty(txtPrincipalResidentNo.Text))
+                    {
+                        errMsg.Add("負責人國籍非ＴＷ，統一證號不可空白\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (txtPrincipalResidentExpdt.Text.Trim().Length != 8)
+                    {
+                        errMsg.Add("統一證號效期有誤，請輸入8位日期格式\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (!checkDateTime(txtPrincipalResidentExpdt.Text.Trim()))//20191108
+                    {
+                        errMsg.Add("統一證號效期有誤，請輸入正確日期\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+            }
+        }
+
+        DateTime realDate2;
+
+        //護照號碼不為空，護照效期需為數字
+        if (!string.IsNullOrEmpty(txtPrincipalPassportNo.Text))
+        {
+            //護照效期不為空白
+            if (!string.IsNullOrEmpty(txtPrincipalPassportExpdt.Text))
+            {
+                //檢核是否為數字
+                if (!isNumeric(txtPrincipalPassportExpdt.Text))
+                {
+                    errMsg.Add("護照效期需為數字\\n");
+                    txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                }
+
+                if (txtPrincipalPassportExpdt.Text.Length != 8)
+                {
+                    errMsg.Add("護照效期請輸入8碼數字\\n");
+                    txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    string date2 = this.txtPrincipalPassportExpdt.Text.Trim().Substring(0, 4) + "/" + this.txtPrincipalPassportExpdt.Text.Trim().Substring(4, 2) + "/" + this.txtPrincipalPassportExpdt.Text.Trim().Substring(6, 2);
+
+                    if (!DateTime.TryParse(date2, out realDate2))
+                    {
+                        errMsg.Add("護照效期格式錯誤\\n");
+                        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+            }
+        }
+        else//護照效期空白
+        {
+            //護照效期不為空，護照號碼就不能空
+            if (!string.IsNullOrEmpty(txtPrincipalPassportExpdt.Text))
+            {
+                errMsg.Add("護照號碼不可空白\\n");
+                txtPrincipalPassportNo.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        //居留證號碼不為空，居留證效期需為數字
+        if (!string.IsNullOrEmpty(txtPrincipalResidentNo.Text))
+        {
+            if (txtPrincipalResidentNo.Text.Length != 10)
+            {
+                errMsg.Add("統一證號須為10碼\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+            }
+
+            //20201021-RQ-2020-021027-003 統一證號碼(新+舊)邏輯檢核
+            if (!CheckResidentID(txtPrincipalResidentNo.Text.Trim()))
+            {
+                errMsg.Add("統一證號輸入錯誤，請重新輸入\\n");
+                txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+            }
+
+            //居留證效期空白
+            if (!string.IsNullOrEmpty(txtPrincipalResidentExpdt.Text))
+            {
+                //檢核是否為數字
+                if (!isNumeric(txtPrincipalResidentExpdt.Text))
+                {
+                    errMsg.Add("統一證號效期需為數字\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                    txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                }
+
+                if (txtPrincipalResidentExpdt.Text.Length != 8)
+                {
+                    errMsg.Add("統一證號效期請輸入8碼數字\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                    txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    string date2 = this.txtPrincipalResidentExpdt.Text.Trim().Substring(0, 4) + "/" + this.txtPrincipalResidentExpdt.Text.Trim().Substring(4, 2) + "/" + this.txtPrincipalResidentExpdt.Text.Trim().Substring(6, 2);
+
+                    if (!DateTime.TryParse(date2, out realDate2))
+                    {
+                        errMsg.Add("統一證號效期格式錯誤\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+            }
+        }
+        else//居留證空白
+        {
+            if (!string.IsNullOrEmpty(txtPrincipalResidentExpdt.Text))
+            {
+                //居留證效期不為空，居留證就不能空
+                errMsg.Add("統一證號不可空白\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+            }
+        }
+    }
+
+    #endregion 20190614 Talas 修正驗證條件  暫時使用 
+    #region 20190614 Talas 修正驗證條件  原方法改名保留  ValidLinkedFields => ValidLinkedFields_BAK
+    /// <summary>
+    /// 特殊關聯欄位處理
+    /// </summary>
+    /// <param name="dataObj"></param>
+    /// <param name="errMsg"></param>
+    private void ValidLinkedFields_BAK(EntityAML_HeadOffice dataObj, ref List<string> errMsg)
+    {
+
+        txtPrincipalIssuePlace.BackColor = System.Drawing.Color.Empty; //發證日期
+        txtPrincipalIssueDate.BackColor = System.Drawing.Color.Empty;  //發證地點
+        txtPrincipalRedemption.BackColor = System.Drawing.Color.Empty; //領補換別
+        //txtPrincipalHasPic.BackColor = System.Drawing.Color.Empty; //有無照片
+        txtPrincipalBirth.BackColor = System.Drawing.Color.Empty; //生日
+        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Empty; //護照效期
+        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Empty; //居留效期
+        txtPrincipalIDNo.BackColor = System.Drawing.Color.Empty; //身分證字號
+        txtBasicRegistyNameEN.BackColor = System.Drawing.Color.Empty; //英文名稱
+        //txtBasicCountryCode.BackColor = System.Drawing.Color.Empty; //國別;//20190910 mark by Peggy
+        txtBasicEstablish.BackColor = System.Drawing.Color.Empty; //設立日期
+
+
+        DateTime realDate;
+        string date = "";
+
+        //行業編號不存在
+        if (!string.IsNullOrEmpty(hidCC.Value))
+        {
+            errMsg.Add("行業編號不存在\\n");
+            txtBasicAMLCC.BackColor = System.Drawing.Color.Red;
+        }
+
+
+        // 檢查設立日期
+        string establishDate = this.txtBasicEstablish.Text.Trim();
+        if (!string.IsNullOrEmpty(establishDate))
+        {
+            if (establishDate.Length != 7)
+            {
+                errMsg.Add("設立日期請輸入7碼數字\\n");
+                txtBasicEstablish.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                int year = int.Parse(establishDate.Substring(0, 3)) + 1911;
+                date = year + "/" + establishDate.Substring(3, 2) + "/" + establishDate.Substring(5, 2);
+                if (!DateTime.TryParse(date, out realDate))
+                {
+                    errMsg.Add("設立日期格式錯誤\\n");
+                    txtBasicEstablish.BackColor = System.Drawing.Color.Red;
+                }
+            }
+        }
+
+
+        //國籍非TW，則需填英文名
+        if (txtBasicCountryCode.Text.ToUpper() != "TW")
+        {
+            if (string.IsNullOrEmpty(txtBasicRegistyNameEN.Text))
+            {
+                errMsg.Add("國別非TW，需填公司英文名稱\\n");
+                txtBasicRegistyNameEN.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        //if (txtBasicCountryCode.Text != txtSCCDCountryCode.Text)
+        //{
+        //    errMsg.Add("總公司註冊國籍和SCDD表註冊國籍不同\\n");
+        //    txtSCCDCountryCode.BackColor = System.Drawing.Color.Red;
+        //}
+
+        //if (txtBasicCountryStateCode.Text != txtSCCDCountryStateCode.Text)
+        //{
+        //    errMsg.Add("總公司州別和SCDD表州別不同\\n");
+        //    txtSCCDCountryStateCode.BackColor = System.Drawing.Color.Red;
+        //}
+
+
+        //有身分證字號，須追加檢核
+        if (!string.IsNullOrEmpty(txtPrincipalIDNo.Text))
+        {
+            //生日空白
+            if (string.IsNullOrEmpty(txtPrincipalBirth.Text))
+            {
+                errMsg.Add("生日不可空白\\n");
+                txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                //檢核是否為數字
+                if (!isNumeric(txtPrincipalBirth.Text))
+                {
+                    errMsg.Add("生日需為數字\\n");
+                    txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+                }
+
+            }
+
+            string eng = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+
+            //第一碼英文，後9碼數字，一定是台灣人，所以要判斷發證日期、發證地點領補換別、有無照片
+            if (eng.Contains(txtPrincipalIDNo.Text.Substring(0, 1)) && isNumeric(txtPrincipalIDNo.Text.Substring(1)))
+            {
+                //先檢核發證日期空白
+                if (string.IsNullOrEmpty(txtPrincipalIssueDate.Text))
+                {
+                    errMsg.Add("身分證發證日期不可空白\\n");
+                    txtPrincipalIssueDate.BackColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    //檢核是否為數字
+                    if (!isNumeric(txtPrincipalIssueDate.Text))
+                    {
+                        errMsg.Add("身分證發證日期需為數字\\n");
+                        txtPrincipalIssueDate.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+                //發證地點，不可空白
+                if (string.IsNullOrEmpty(txtPrincipalIssuePlace.Text))
+                {
+                    errMsg.Add("身分證發證地點不可空白\\n");
+                    txtPrincipalIssuePlace.BackColor = System.Drawing.Color.Red; //發證地點
+                }
+                //領補換別，不可空白
+                if (string.IsNullOrEmpty(txtPrincipalRedemption.Text))
+                {
+                    errMsg.Add("身分證領補換別不可空白\\n");
+                    txtPrincipalRedemption.BackColor = System.Drawing.Color.Red; //領補換別
+                }
+                //有無照片，不可空白
+                if (string.IsNullOrEmpty(txtPrincipalHasPic.Text))
+                {
+                    errMsg.Add("身分證有無照片不可空白\\n");
+                    txtPrincipalHasPic.BackColor = System.Drawing.Color.Red; //有無照片
+                }
+            }
+        }
+
+        // 檢查生日
+        string birthDate = this.txtPrincipalBirth.Text.Trim();
+        if (!string.IsNullOrEmpty(birthDate))
+        {
+            if (birthDate.Length != 7)
+            {
+                errMsg.Add("生日請輸入7碼數字\\n");
+                txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                int year = int.Parse(birthDate.Substring(0, 3)) + 1911;
+                date = year + "/" + birthDate.Substring(3, 2) + "/" + birthDate.Substring(5, 2);
+                if (!DateTime.TryParse(date, out realDate))
+                {
+                    errMsg.Add("生日格式錯誤\\n");
+                    txtPrincipalBirth.BackColor = System.Drawing.Color.Red;
+                }
+            }
+        }
+
+        //檢查發證日期
+        string issueDate = this.txtPrincipalIssueDate.Text.Trim();
+        if (!string.IsNullOrEmpty(issueDate))
+        {
+            if (issueDate.Length != 7)
+            {
+                errMsg.Add("發證日期請輸入7碼數字\\n");
+                txtPrincipalIssueDate.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                int year = int.Parse(issueDate.Substring(0, 3)) + 1911;
+                date = year + "/" + issueDate.Substring(3, 2) + "/" + issueDate.Substring(5, 2);
+                if (!DateTime.TryParse(date, out realDate))
+                {
+                    errMsg.Add("發證日期格式錯誤\\n");
+                    txtPrincipalIssueDate.BackColor = System.Drawing.Color.Red;
+                }
+            }
+        }
+
+        ////先檢核發證日期是否空白
+        //if (!string.IsNullOrEmpty(txtPrincipalIssueDate.Text))
+        //{
+        //    //檢核是否為數字
+        //    if (!isNumeric(txtPrincipalIssueDate.Text))
+        //    {
+        //        errMsg.Add("身分證發證日期需為數字\\n");
+        //        txtPrincipalIssueDate.BackColor = System.Drawing.Color.Red;
+        //    }
+        //}
+
+        //如果負責人國籍非ＴＷ
+        if (!string.IsNullOrEmpty(txtPrincipalCountryCode.Text.Trim()) && txtPrincipalCountryCode.Text.Trim().ToUpper() != "TW")
+        {
+            if (string.IsNullOrEmpty(txtPrincipalPassportNo.Text) && string.IsNullOrEmpty(txtPrincipalResidentNo.Text))
+            {
+                errMsg.Add("負責人國籍非ＴＷ，護照號碼或統一證號擇一填寫\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                txtPrincipalPassportNo.BackColor = System.Drawing.Color.Red;
+                txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(txtPrincipalPassportExpdt.Text))
+                {
+                    if (string.IsNullOrEmpty(txtPrincipalPassportNo.Text))
+                    {
+                        errMsg.Add("負責人國籍非ＴＷ，護照號碼不可空白\\n");
+                        txtPrincipalPassportNo.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (txtPrincipalPassportExpdt.Text.Trim().Length != 8)
+                    {
+                        errMsg.Add("護照效期有誤，請輸入8位日期格式\\n");
+                        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (!checkDateTime(txtPrincipalPassportExpdt.Text.Trim()))//20191108
+                    {
+                        errMsg.Add("護照效期有誤，請輸入正確日期\\n");
+                        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(txtPrincipalResidentExpdt.Text))
+                {
+                    if (string.IsNullOrEmpty(txtPrincipalResidentNo.Text))
+                    {
+                        errMsg.Add("負責人國籍非ＴＷ，統一證號不可空白\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (txtPrincipalResidentExpdt.Text.Trim().Length != 8)
+                    {
+                        errMsg.Add("統一證號效期有誤，請輸入8位日期格式\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                    if (!checkDateTime(txtPrincipalResidentExpdt.Text.Trim()))//20191108
+                    {
+                        errMsg.Add("統一證號效期有誤，請輸入正確日期\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+            }
+        }
+
+        DateTime realDate2;
+
+        //護照號碼不為空，護照效期需為數字
+        if (!string.IsNullOrEmpty(txtPrincipalPassportNo.Text))
+        {
+            //護照效期不為空白
+            if (!string.IsNullOrEmpty(txtPrincipalPassportExpdt.Text))
+            {
+                //檢核是否為數字
+                if (!isNumeric(txtPrincipalPassportExpdt.Text))
+                {
+                    errMsg.Add("護照效期需為數字\\n");
+                    txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                }
+
+                if (txtPrincipalPassportExpdt.Text.Length != 8)
+                {
+                    errMsg.Add("護照效期請輸入8碼數字\\n");
+                    txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    string date2 = this.txtPrincipalPassportExpdt.Text.Trim().Substring(0, 4) + "/" + this.txtPrincipalPassportExpdt.Text.Trim().Substring(4, 2) + "/" + this.txtPrincipalPassportExpdt.Text.Trim().Substring(6, 2);
+
+                    if (!DateTime.TryParse(date2, out realDate2))
+                    {
+                        errMsg.Add("護照效期格式錯誤\\n");
+                        txtPrincipalPassportExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+            }
+        }
+        else//護照效期空白
+        {
+            //護照效期不為空，護照號碼就不能空
+            if (!string.IsNullOrEmpty(txtPrincipalPassportExpdt.Text))
+            {
+                errMsg.Add("護照號碼不可空白\\n");
+                txtPrincipalPassportNo.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        //居留證號碼不為空，居留證效期需為數字
+        if (!string.IsNullOrEmpty(txtPrincipalResidentNo.Text))
+        {
+            if (txtPrincipalResidentNo.Text.Length != 10)
+            {
+                errMsg.Add("統一證號須為10碼\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+            }
+
+            //居留證效期空白
+            if (!string.IsNullOrEmpty(txtPrincipalResidentExpdt.Text))
+            {
+                //檢核是否為數字
+                if (!isNumeric(txtPrincipalResidentExpdt.Text))
+                {
+                    errMsg.Add("統一證號效期需為數字\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                    txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                }
+
+                if (txtPrincipalResidentExpdt.Text.Length != 8)
+                {
+                    errMsg.Add("統一證號效期請輸入8碼數字\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                    txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    string date2 = this.txtPrincipalResidentExpdt.Text.Trim().Substring(0, 4) + "/" + this.txtPrincipalResidentExpdt.Text.Trim().Substring(4, 2) + "/" + this.txtPrincipalResidentExpdt.Text.Trim().Substring(6, 2);
+
+                    if (!DateTime.TryParse(date2, out realDate2))
+                    {
+                        errMsg.Add("統一證號效期格式錯誤\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        txtPrincipalResidentExpdt.BackColor = System.Drawing.Color.Red;
+                    }
+                }
+            }
+        }
+        else//居留證空白
+        {
+            if (!string.IsNullOrEmpty(txtPrincipalResidentExpdt.Text))
+            {
+                //居留證效期不為空，居留證就不能空
+                errMsg.Add("統一證號不可空白\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                txtPrincipalResidentNo.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        //登記地址
+        if (!string.IsNullOrEmpty(txtBasicBookAddr1.Text) && string.IsNullOrEmpty(txtBasicBookAddr3.Text))
+        {
+            errMsg.Add("登記地址第一段不為空白，則登記地址3須為Ｘ\\n");
+            txtBasicBookAddr3.BackColor = System.Drawing.Color.Red;
+        }
+
+        //如果通訊地址第一段不是空白，那第三段就填Ｘ
+        if (!string.IsNullOrEmpty(txtBasicContactAddr1.Text) && string.IsNullOrEmpty(txtBasicContactAddr3.Text))
+        {
+            errMsg.Add("通訊地址第一段不為空白，則通訊地址3須為Ｘ\\n");
+            txtBasicContactAddr3.BackColor = System.Drawing.Color.Red;
+        }
+
+        //如果負責人戶籍地址第一段不是空白，那第三段就填Ｘ
+        if (!string.IsNullOrEmpty(txtPrincipalBookAddr1.Text) && string.IsNullOrEmpty(txtPrincipalBookAddr3.Text))
+        {
+            errMsg.Add("戶籍地址第一段不為空白，則戶籍地址3須為Ｘ\\n");
+            txtPrincipalBookAddr3.BackColor = System.Drawing.Color.Red;
+        }
+
+
+        if (txtBasicCountryCode.Text.Trim().ToUpper() == "US" && txtBasicCountryStateCode.Text.Trim() == "")
+        {
+            errMsg.Add("註冊國為美國者，請勾選州別\\n");
+            txtBasicCountryStateCode.BackColor = System.Drawing.Color.Red;
+        }
+
+
+        //HTG不支援&符號
+        if (txtBasicRegistyNameEN.Text.Contains("&"))
+        {
+            errMsg.Add("請檢查登記名稱(英文)，內容不可包含&特殊符號\\n");
+            txtBasicRegistyNameEN.BackColor = System.Drawing.Color.Red;
+        }
+
+        //20190813 add by Peggy
+        if (chkisLongName.Checked && txtPrincipalNameCH_L.Text.Trim().Equals(""))
+        {
+            errMsg.Add("負責人長姓名勾選時，請輸入負責人長姓名\\n");
+            txtPrincipalNameCH_L.BackColor = System.Drawing.Color.Red;
+        }
+        if (chkisLongName_c.Checked && txtBasicContactMan_L.Text.Trim().Equals(""))
+        {
+            errMsg.Add("負責人長姓名勾選時，請輸入聯絡人長姓名\\n");
+            txtBasicContactMan_L.BackColor = System.Drawing.Color.Red;
+        }
+    }
+
+    #endregion 20190614 Talas 修正驗證條件  原方法保留  ValidLinkedFields => ValidLinkedFields_BAK
+    private EntityAML_HeadOffice GetHTGMsg(string TaxID, string TaxNo, ref bool bResult)
+    {
+        EntityAML_HeadOffice rtn = new EntityAML_HeadOffice();
+
+        //建立HASHTABLE
+        Hashtable JC66OBj = new Hashtable();
+        JC66OBj.Add("FUNCTION_CODE", "I");
+        //自然人收單時，要合併統編加序號發查
+        JC66OBj.Add("CORP_NO", txtTaxID.Text);
+        JC66OBj.Add("CORP_SEQ", "0000");
+
+        //上送主機資料
+        //  Hashtable hstExmsP4A = MainFrameInfo.GetMainFrameInfo(HtgType.P4A_JC66, JC66OBj, false, "11", eAgentInfo);
+        // //測試用模擬資料
+        //// Hashtable hstExmsP4A = GetTestData();
+        Hashtable hstExmsP4A;
+        if (!isTest)
+        {
+            //上送主機資料
+            hstExmsP4A = MainFrameInfo.GetMainFrameInfo(HtgType.P4A_JC66, JC66OBj, false, "11", eAgentInfo);
+        }
+        else
+        {
+            ////測試用模擬資料
+            hstExmsP4A = GetTestData();
+        }
+
+        //20210406 error Modify by Peggy
+        string rMsg = string.Empty;
+
+        //2021/05/27 修正，當新增時會因HtgMsgFlag=0而不給新增問題, 調整為，當有MESSAGE_TYPE時，rMsg先接收當有MESSAGE_TYPE的訊息  by Peggy
+        //if (hstExmsP4A.Contains("HtgMsgFlag") && !string.IsNullOrEmpty(hstExmsP4A["HtgMsgFlag"].ToString()))
+        if (hstExmsP4A.Contains("MESSAGE_TYPE") && !string.IsNullOrEmpty(hstExmsP4A["MESSAGE_TYPE"].ToString()))
+        {
+            rMsg = hstExmsP4A["MESSAGE_TYPE"].ToString();
+        }
+        else
+            rMsg = hstExmsP4A["HtgMsgFlag"].ToString();
+
+        //檢核回傳欄位MESSAGE_TYPE 0000表示以存在總公司，故為修改  0006表示不存在，為新增
+        //string rMsg = hstExmsP4A["MESSAGE_TYPE"].ToString();
+        int rowIndex = 0;//20200427
+        switch (rMsg)
+        {
+            case "0000":
+                Session["1KisNew" + TaxID] = "0";
+                //取回後MAP至物件 
+                rtn = HTconvertToObj(hstExmsP4A);
+                if (hstExmsP4A.ContainsKey("OWNER_LNAM_FLAG") && hstExmsP4A["OWNER_LNAM_FLAG"].ToString().Trim().Equals("Y"))
+                {
+                    EntityHTG_JC68 htReturn_JC68 = GetJC68(hstExmsP4A["OWNER_ID"].ToString().Trim());//負責人身分證ID
+                    rtn.PrincipalNameCH_L = htReturn_JC68.LONG_NAME;
+                    rtn.PrincipalNameCH_Pinyin = htReturn_JC68.PINYIN_NAME;
+                }
+
+                if (hstExmsP4A.ContainsKey("CONTACT_LNAM_FLAG") && hstExmsP4A["CONTACT_LNAM_FLAG"].ToString().Trim().Equals("Y"))
+                {
+                    EntityHTG_JC68 htReturn_JC68 = GetJC68(txtTaxID.Text.Trim() + "0000");//負責人身分證ID
+                    rtn.BasicContactMan_L = htReturn_JC68.LONG_NAME;
+                    rtn.BasicContactMan_Pinyin = htReturn_JC68.PINYIN_NAME;
+                }
+
+                for (int i = 1; i < 13; i++)
+                {
+                    //20200103 移至下方顯示判斷
+                    //20190813 add by Peggy
+                    //if (hstExmsP4A.ContainsKey("BENE_LNAM_FLAG" + i) && !string.IsNullOrEmpty(hstExmsP4A["BENE_LNAM_FLAG" + i].ToString()))
+                    //{
+                    //    if (hstExmsP4A["BENE_LNAM_FLAG" + i].ToString().Trim().Equals("Y"))
+                    //    {
+                    //        EntityHTG_JC68 htReturn_JC68 = GetJC68(hstExmsP4A["BENE_ID" + i].ToString().Trim());//負責人身分證ID
+                    //        rtn.AML_SeniorManagerColl[i - 1].Name_L = htReturn_JC68.LONG_NAME;//負責人-中文長姓名
+                    //        rtn.AML_SeniorManagerColl[i - 1].Name_Pinyin = htReturn_JC68.PINYIN_NAME;//負責人-羅馬拼音
+                    //    }
+                    //}
+                    //20200427-RQ-2019-030155-005 重新排列高管順序
+                    if (hstExmsP4A.ContainsKey("BENE_NAME" + i) && !string.IsNullOrEmpty(hstExmsP4A["BENE_NAME" + i].ToString()))
+                    {
+                        rowIndex++;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    if (hstExmsP4A.ContainsKey("BENE_ID" + i) && !string.IsNullOrEmpty(hstExmsP4A["BENE_ID" + i].ToString()))
+                    {
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNoType = "1";
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNo = hstExmsP4A["BENE_ID" + i].ToString();
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNoType = "1";
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNo = hstExmsP4A["BENE_ID" + i].ToString();
+                    }
+
+                   if (hstExmsP4A.ContainsKey("BENE_PASSPORT" + i) && !string.IsNullOrEmpty(hstExmsP4A["BENE_PASSPORT" + i].ToString()))
+                    {
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNoType = "3";
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNo = hstExmsP4A["BENE_PASSPORT" + i].ToString();
+                        //rtn.AML_SeniorManagerColl[i - 1].Expdt = hstExmsP4A["BENE_PASSPORT_EXP" + i].ToString();
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNoType = "3";
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNo = hstExmsP4A["BENE_PASSPORT" + i].ToString();
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].Expdt = hstExmsP4A["BENE_PASSPORT_EXP" + i].ToString();
+                    }
+
+                    if (hstExmsP4A.ContainsKey("BENE_RESIDENT_NO" + i) && !string.IsNullOrEmpty(hstExmsP4A["BENE_RESIDENT_NO" + i].ToString()))
+                    {
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNoType = "4";
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNo = hstExmsP4A["BENE_RESIDENT_NO" + i].ToString();
+                        //rtn.AML_SeniorManagerColl[i - 1].Expdt = hstExmsP4A["BENE_RESIDENT_EXP" + i].ToString();
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNoType = "4";
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNo = hstExmsP4A["BENE_RESIDENT_NO" + i].ToString();
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].Expdt = hstExmsP4A["BENE_RESIDENT_EXP" + i].ToString();
+                    }
+
+                    if (hstExmsP4A.ContainsKey("BENE_OTH_CERT" + i) && !string.IsNullOrEmpty(hstExmsP4A["BENE_OTH_CERT" + i].ToString()))
+                    {
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNoType = "7";
+                        //rtn.AML_SeniorManagerColl[i - 1].IDNo = hstExmsP4A["BENE_OTH_CERT" + i].ToString();
+                        //rtn.AML_SeniorManagerColl[i - 1].Expdt = hstExmsP4A["BENE_OTH_CERT_EXP" + i].ToString();
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNoType = "7";
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].IDNo = hstExmsP4A["BENE_OTH_CERT" + i].ToString();
+                        rtn.AML_SeniorManagerColl[rowIndex - 1].Expdt = hstExmsP4A["BENE_OTH_CERT_EXP" + i].ToString();
+                    }
+
+                    //20200103：依據不同的證號去抓長姓名 Peggy
+                    if (hstExmsP4A.ContainsKey("BENE_LNAM_FLAG" + i) && !string.IsNullOrEmpty(hstExmsP4A["BENE_LNAM_FLAG" + i].ToString()))
+                    {
+                        if (hstExmsP4A["BENE_LNAM_FLAG" + i].ToString().Trim().Equals("Y"))
+                        {
+                            //EntityHTG_JC68 htReturn_JC68 = GetJC68(rtn.AML_SeniorManagerColl[i - 1].IDNo.ToString().Trim());//負責人身分證ID/居留證/護照/其他證號
+                            //rtn.AML_SeniorManagerColl[i - 1].Name_L = htReturn_JC68.LONG_NAME;//負責人-中文長姓名
+                            //rtn.AML_SeniorManagerColl[i - 1].Name_Pinyin = htReturn_JC68.PINYIN_NAME;//負責人-羅馬拼音
+                            EntityHTG_JC68 htReturn_JC68 = GetJC68(rtn.AML_SeniorManagerColl[rowIndex - 1].IDNo.ToString().Trim());//負責人身分證ID/居留證/護照/其他證號
+                            rtn.AML_SeniorManagerColl[rowIndex - 1].Name_L = htReturn_JC68.LONG_NAME;//負責人-中文長姓名
+                            rtn.AML_SeniorManagerColl[rowIndex - 1].Name_Pinyin = htReturn_JC68.PINYIN_NAME;//負責人-羅馬拼音
+                        }
+                    }
+                }
+                break;
+            case "0006":
+                bResult = true;
+                Session["1KisNew" + TaxID] = "1";
+                rtn = null;
+                break;
+
+            default:
+
+                bResult = false;
+                rtn = null;
+                if (hstExmsP4A.ContainsKey("HtgMsg"))
+                {
+                    strAlertMsg = hstExmsP4A["HtgMsg"].ToString();
+                }
+                else
+                {
+                    strAlertMsg = @"『" + MessageHelper.GetMessage("01_01050101_005") + "』";
+
+                }
+
+                break;
+
+        }
+        return rtn;
+    }
+
+    private EntityHTG_JC68 GetJC68(string strID)
+    {
+        EntityHTG_JC68 _result = new EntityHTG_JC68();
+        using (BRHTG_JC68 obj = new BRHTG_JC68("P010105010001"))
+        {
+            EntityHTG_JC68 _data = new EntityHTG_JC68();
+
+            _data.ID = strID;
+            _result = obj.getData(_data, eAgentInfo, "1");
+        }
+        return _result;
+    }
+
+    /// <summary>
+    /// 模擬測試用JC66電文回傳
+    /// </summary>
+    /// <returns></returns>
+    private Hashtable GetTestData()
+    {
+        //讀取D:\JC66_Download_TEST.txt做成HSAHTABLE
+        string[] lincoll = File.ReadAllLines(@"D:\JC66_Download_TEST.txt", Encoding.Default);
+        Hashtable JC66OBj = new Hashtable();
+        foreach (string oitem in lincoll)
+        {
+            string[] tmpColl = oitem.Split(new string[] { "<!>" }, StringSplitOptions.None);
+            if (tmpColl.Length == 2)
+            {
+                JC66OBj.Add(tmpColl[0], tmpColl[1]);
+            }
+        }
+        return JC66OBj;
+    }
+    /// <summary>
+    /// 轉換HASHTABLE to EntityAML_HeadOffice物件
+    /// </summary>
+    /// <param name="inObj"></param>
+    /// <returns></returns>
+    private EntityAML_HeadOffice HTconvertToObj(Hashtable inObj)
+    {
+        EntityAML_HeadOffice rtnObj = new EntityAML_HeadOffice();
+
+        //先將主體值找出來，方法是用映射，取出對應欄位
+        Type v = rtnObj.GetType();  //取的型別實體
+        PropertyInfo[] props = v.GetProperties(); //取出所有公開屬性(可以被外部存取得 
+        //處理總公司資料
+        foreach (PropertyInfo prop in props)
+        {
+            object[] attrs = prop.GetCustomAttributes(true); //取得自訂屬性，第一個物件
+            AttributeRfPage authAttr;
+            for (int xi = 0; xi < attrs.Length; xi++)
+            {
+                if (attrs[xi] is AttributeRfPage)
+                {
+                    authAttr = attrs[xi] as AttributeRfPage;
+                    //暫時用不道
+                    //string propName = prop.Name;
+                    //string authID = authAttr.ControlID; 
+                    string Jc66FieldKey = authAttr.JC66NAME;
+                    //JC66有值，建立HASTABLE欄位，
+                    if (!string.IsNullOrEmpty(Jc66FieldKey))
+                    {
+                        if (inObj.ContainsKey(Jc66FieldKey))
+                        {
+                            prop.SetValue(rtnObj, inObj[Jc66FieldKey], null);
+                        }
+                    }
+                }
+            }
+        }
+        int resetLineID = 0;//20200409-高管畫面重新排序 by Peggy
+        //轉換子公司資料
+        for (int i = 1; i < 13; i++)
+        {
+            EntityAML_SeniorManager sMan = new EntityAML_SeniorManager();
+            sMan.LineID = i.ToString();
+            Type Stype = sMan.GetType();  //取的型別實體
+            PropertyInfo[] Sprops = Stype.GetProperties(); //取出所有公開屬性(可以被外部存取得 
+            if (!string.IsNullOrEmpty(inObj["BENE_NAME" + i.ToString()].ToString()))//20200427
+            {
+                resetLineID++;
+            }
+            else
+            {
+                continue;
+            }
+            //處理總公司資料
+            foreach (PropertyInfo prop in Sprops)
+            {
+                object[] attrs = prop.GetCustomAttributes(true); //取得自訂屬性，第一個物件
+                AttributeRfPage authAttr; 
+                for (int xi = 0; xi < attrs.Length; xi++)
+                {
+                    if (attrs[xi] is AttributeRfPage)
+                    {
+                        authAttr = attrs[xi] as AttributeRfPage;
+                        //暫時用不道
+                        string propName = prop.Name;
+                        if (propName == "Name")
+                        {
+                            propName = prop.Name;
+                        }
+                        //string authID = authAttr.ControlID; 
+                        if (string.IsNullOrEmpty(authAttr.JC66NAME)) { continue; }
+                        //20200427
+                        string Jc66FieldKey = authAttr.JC66NAME + i.ToString();
+                        //JC66有值，建立HASTABLE欄位，
+                        if (!string.IsNullOrEmpty(Jc66FieldKey))
+                        {
+                            if (inObj.ContainsKey(Jc66FieldKey))
+                            {
+                                prop.SetValue(sMan, inObj[Jc66FieldKey], null);
+
+                            }
+                        }
+                        continue;
+                    }
+                }
+            }
+            sMan.LineID = resetLineID.ToString();//20200427
+            //會有12筆
+            rtnObj.AML_SeniorManagerColl.Add(sMan);
+
+        }
+
+        return rtnObj;
+    }
+    /// <summary>
+    /// 將資料顯示於畫面
+    /// </summary>
+    /// <param name="DataObj"></param>
+    /// <param name="isHTG"></param>
+    private void ShowPageData(EntityAML_HeadOffice DataObj)
+    {
+        if (DataObj.PrincipalBirth == "00000000")
+        {
+            DataObj.PrincipalBirth = "";
+        }
+
+        this.SetVal(DataObj, false); //將本機資料寫入畫面
+
+        txtBasicTaxID.Enabled = false;//鎖住統編，不允許修改
+
+        //20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+        //處理特殊欄位
+        //負責人
+        //當中文長姓名不為空時，中文長姓名flag要打勾
+        if (!txtPrincipalNameCH_L.Text.Trim().Equals(""))
+            chkisLongName.Checked = true;
+        if (txtPrincipalNameCH_Pinyin.Text.Trim().Equals(""))
+            txtPrincipalNameCH_Pinyin.Text = "Ｘ";
+        CheckBox_CheckedChanged(chkisLongName, null);
+
+        //聯絡人
+        //當中文長姓名不為空時，中文長姓名flag要打勾
+        if (!txtBasicContactMan_L.Text.Trim().Equals(""))
+            chkisLongName_c.Checked = true;
+        if (txtBasicContactMan_Pinyin.Text.Trim().Equals(""))
+            txtBasicContactMan_Pinyin.Text = "Ｘ";
+        CheckBox_CheckedChanged(chkisLongName_c, null);
+        //20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+
+        //20190731 修改：使下單選拉也focus在資料值的index by Peggy ↓
+        //總公司基本資料-註冊國籍
+        this.dropBasicCountryCode.SelectByValue(DataObj.BasicCountryCode);
+        //負責人國籍
+        this.dropPrincipalCountryCode.SelectByValue(DataObj.PrincipalCountryCode);
+        //SCDD表-註冊國籍
+        this.dropSCCDCountryCode.SelectByValue(DataObj.SCCDCountryCode);
+        //僑外資 / 外商母公司國別
+        this.dropSCCDForeignCountryStateCode.SelectByValue(DataObj.SCCDForeignCountryStateCode);
+        //主要之營業處所國別
+        this.dropSCCDOtherCountryCode.SelectByValue(DataObj.SCCDOtherCountryCode);
+
+        //業處所是否在高風險或制裁國家
+        this.dropSCCDIsSanctionCountryCode1.SelectByValue(DataObj.SCCDIsSanctionCountryCode1);
+        this.dropSCCDIsSanctionCountryCode2.SelectByValue(DataObj.SCCDIsSanctionCountryCode2);
+        this.dropSCCDIsSanctionCountryCode3.SelectByValue(DataObj.SCCDIsSanctionCountryCode3);
+        this.dropSCCDIsSanctionCountryCode4.SelectByValue(DataObj.SCCDIsSanctionCountryCode4);
+        this.dropSCCDIsSanctionCountryCode5.SelectByValue(DataObj.SCCDIsSanctionCountryCode5);
+
+        //20190731 修改：使下單選拉也focus在資料值的index by Peggy ↑
+
+        List<EntityAML_SeniorManager> ManaObjColl = DataObj.AML_SeniorManagerColl;
+
+        int resetLineID = 1;//20190919-高管畫面重新排序 by Peggy
+        foreach (EntityAML_SeniorManager oitem in ManaObjColl)
+        {
+            oitem.LineID = resetLineID.ToString().Trim();//20190919-高管畫面重新排序 by Peggy
+            this.SetVal<EntityAML_SeniorManager>(oitem, false);
+            //BEEN_JOB_TYPE轉換 
+            string lid = oitem.LineID;
+
+            setInentity(lid, oitem);            
+
+            //高管人員長姓名控制
+            GVLongNameDisplay(lid);//20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+            resetLineID++;//20190919-高管畫面重新排序 by Peggy
+        }
+
+        //處理特殊欄位 .如EMAIL等非常規欄位填值
+        SetEmailVal(DataObj);
+
+        // 20210527 EOS_AML(NOVA) by Ares Dennis start
+        txtREG_ZIP_CODE.Enabled = false;
+        txtREG_ZIP_CODE.BackColor = Color.LightGray;
+        // 20210527 EOS_AML(NOVA) by Ares Dennis end
+
+        #region 郵遞區號
+        string strZipData = this.txtBasicBookAddr1.Text.Trim();
+
+        EntitySet<EntitySZIP> SZIPSet = null;
+        try
+        {
+            SZIPSet = BRSZIP.SelectEntitySet(strZipData);
+        }
+        catch
+        {
+            base.strClientMsg += MessageHelper.GetMessage("00_00000000_000");
+            return;
+        }
+
+        if (SZIPSet != null && SZIPSet.Count > 0)
+        {
+            this.txtREG_ZIP_CODE.Text = SZIPSet.GetEntity(0).zip_code;
+        }
+        else
+        {
+            this.txtREG_ZIP_CODE.Text = "";
+            base.strClientMsg += "地址查無郵遞區號，請輸入正確地址或請聯繫MFA更新";
+            base.sbRegScript.Append("alert('地址查無郵遞區號，請輸入正確地址或請聯繫MFA更新');");
+        }
+        #endregion
+    }
+    /// <summary>
+    /// BEEN_JOB_TYPE轉換 
+    /// </summary>
+    /// <param name="lid"></param>
+    private void setInentity(string lid, EntityAML_SeniorManager oitem)
+    {
+        string CtrlName = "txtSeniorManagerIdentity_" + lid;
+        CustTextBox controllS = this.FindControl(CtrlName) as CustTextBox;
+        //找不到不處理;
+        if (controllS == null) { return; }
+        controllS.Text = "";
+        controllS.BackColor = Color.Empty;
+        if (oitem.Identity1 == "Y")
+        {
+            controllS.Text += "1/";
+
+        }
+        if (oitem.Identity2 == "Y")
+        {
+            controllS.Text += "2/";
+
+        }
+        if (oitem.Identity3 == "Y")
+        {
+            controllS.Text += "3/";
+
+        }
+        if (oitem.Identity4 == "Y")
+        {
+            controllS.Text += "4/";
+
+        }
+        if (oitem.Identity5 == "Y")
+        {
+            controllS.Text += "5/";
+
+        }
+        if (oitem.Identity6 == "Y")
+        {
+            controllS.Text += "6/";
+        }
+        //若有值，移除最後一個
+        if (controllS.Text.Length > 1)
+        {
+            controllS.Text = controllS.Text.Remove(controllS.Text.Length - 1, 1);
+        }
+
+        string CtrlNamePinyin = "txtName_Pinyin_" + lid;
+        CustTextBox ctbNamePinyin = this.FindControl(CtrlNamePinyin) as CustTextBox;
+        if (ctbNamePinyin.Text.Trim().Equals(""))
+            ctbNamePinyin.Text = "Ｘ";
+
+    }
+    /// <summary>
+    /// BEEN_JOB_TYPE轉換  讀取
+    /// </summary>
+    /// <param name="lid"></param>
+    private bool LoadInentity(string lid, EntityAML_SeniorManager oitem)
+    {
+        bool result = false;
+        string CtrlName = "txtSeniorManagerIdentity_" + lid;
+        CustTextBox controllS = this.FindControl(CtrlName) as CustTextBox;
+        Dictionary<string, string> vKey = new Dictionary<string, string>();
+        vKey.Add("1", "");
+        vKey.Add("2", "");
+        vKey.Add("3", "");
+        vKey.Add("4", "");
+        vKey.Add("5", "");
+        vKey.Add("6", "");
+
+        //找不到不處理;
+        if (controllS == null) { return true; }
+        //無輸入值不處理
+        //if (string.IsNullOrEmpty(controllS.Text)) { return true; }
+
+        CustTextBox CName = FindControl("txtSeniorManagerName_" + lid) as CustTextBox; //姓名
+        CustTextBox CNation = FindControl("txtSeniorManagerCountryCode_" + lid) as CustTextBox; //國籍;
+
+        if (string.IsNullOrEmpty(CName.Text) && string.IsNullOrEmpty(CNation.Text) && string.IsNullOrEmpty(controllS.Text))
+        {
+            return true;
+        }
+
+        if (string.IsNullOrEmpty(controllS.Text) && !(string.IsNullOrEmpty(CName.Text) && string.IsNullOrEmpty(CNation.Text)))
+        {
+            oitem.Identity1 = "N";
+            oitem.Identity2 = "N";
+            oitem.Identity3 = "N";
+            oitem.Identity4 = "N";
+            oitem.Identity5 = "N";
+            oitem.Identity6 = "N";
+            return true;
+        }
+
+        oitem.Identity1 = "N";
+        oitem.Identity2 = "N";
+        oitem.Identity3 = "N";
+        oitem.Identity4 = "N";
+        oitem.Identity5 = "N";
+        oitem.Identity6 = "N";
+        string[] inputValid = controllS.Text.Split('/');
+        controllS.BackColor = Color.Empty;
+
+        foreach (string ootem in inputValid)
+        {
+            if (!vKey.ContainsKey(ootem))
+            {
+                controllS.BackColor = Color.Red;
+                return result;
+            }
+        }
+
+        if (controllS.Text.IndexOf("1") > -1)
+        {
+            oitem.Identity1 = "Y";
+        }
+        if (controllS.Text.IndexOf("2") > -1)
+        {
+            oitem.Identity2 = "Y";
+        }
+        if (controllS.Text.IndexOf("3") > -1)
+        {
+            oitem.Identity3 = "Y";
+        }
+        if (controllS.Text.IndexOf("4") > -1)
+        {
+            oitem.Identity4 = "Y";
+        }
+        if (controllS.Text.IndexOf("5") > -1)
+        {
+            oitem.Identity5 = "Y";
+        }
+        if (controllS.Text.IndexOf("6") > -1)
+        {
+            oitem.Identity6 = "Y";
+        }
+        result = true;
+        return result;
+    }
+
+    /// <summary>
+    /// 高階管理人之統一證號、虛擬ID驗證
+    /// </summary>
+    /// <param name="lid"></param>
+    private bool LoadCheckFK(string lid, EntityAML_SeniorManager oitem)
+    {
+        bool result = true;
+        //姓名
+        CustTextBox txtName = FindControl("txtSeniorManagerName_" + lid) as CustTextBox;
+        //身分證件號碼
+        CustTextBox txtSMID = FindControl("txtSeniorManagerIDNo_" + lid) as CustTextBox;
+        //身分證件類型
+        CustTextBox txtIDType = FindControl("txtSeniorManagerIDNoType_" + lid) as CustTextBox;
+
+        //沒有姓名就不處理
+        if (txtName == null) { return true; }
+
+        //20211029_Ares_Jack_虛擬ID延後上線, 先還原Z999999999
+        ////身分證類型不是其他(7)開頭不能是CA
+        //if (txtIDType.Text.Trim() != "7" && txtSMID.Text.Trim().Substring(0, 2) == "CA") { return false; }
+
+        if (!string.IsNullOrEmpty(txtName.Text) && !string.IsNullOrEmpty(txtIDType.Text) && !string.IsNullOrEmpty(txtSMID.Text) && txtIDType.Text.Trim().Equals("4"))
+        {
+            if (!CheckResidentID(txtSMID.Text.Trim()))
+                result = false;
+        }
+
+        //20211029_Ares_Jack_虛擬ID延後上線, 先還原Z999999999
+        //if (!string.IsNullOrEmpty(txtName.Text) && !string.IsNullOrEmpty(txtIDType.Text) && !string.IsNullOrEmpty(txtSMID.Text) && txtIDType.Text.Trim().Equals("7"))
+        //{
+        //    //20210629_Ares_Stanley-新增其他身分證虛擬ID驗證
+        //    if (!CheckResidentID_SeniorManager(txtSMID.Text.Trim(), txtIDType.Text.Trim()))
+        //        result = false;
+        //}
+        return result;
+    }
+
+    /// <summary>
+    /// 檢核 國籍TW 身分證為Z999999999, 身分證指定為1
+    /// </summary>
+    /// <param name="lid">高管畫面LINEID</param>
+    /// <returns></returns>
+    private bool checkIdNoType(string lid)
+    {
+        //國籍
+        CustTextBox txtCountryCode = FindControl("txtSeniorManagerCountryCode_" + lid) as CustTextBox;
+        //身分證件號碼
+        CustTextBox txtSMID = FindControl("txtSeniorManagerIDNo_" + lid) as CustTextBox;
+        //身分證件類型
+        CustTextBox txtIDType = FindControl("txtSeniorManagerIDNoType_" + lid) as CustTextBox;
+
+        if(txtCountryCode.Text.Trim().ToUpper() == "TW" && txtSMID.Text.Trim() == "Z999999999")
+        {
+            if(txtIDType.Text != "1")
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    ///作者:Ares_Jack
+    ///創建日期:20220106
+    ///修改日期:20220106
+    /// <summary>
+    /// 檢核 高階管理人國籍
+    /// </summary>
+    /// <param name="lid">高管畫面LINEID</param>
+    /// <returns></returns>
+    private bool checkCountry(string lid)
+    {
+        //國籍
+        CustTextBox txtCountryCode = FindControl("txtSeniorManagerCountryCode_" + lid) as CustTextBox;
+        if (txtCountryCode.Text.Trim() == "無")
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// 特殊欄位處理 EMAIL設定給畫面
+    /// </summary>
+    /// <param name="DataObj"></param>
+    private void SetEmailVal(EntityAML_HeadOffice DataObj)
+    {
+        /*20210511-RQ-2021-004136-003 修正MAIL顯示錯誤問題
+        if (DataObj.BasicEmail.IndexOf(radBasicGmail.Text) > -1)
+        {
+            txtBasicOfficeEmail.Text = DataObj.BasicEmail.Replace("@" + radBasicGmail.Text, "");
+            this.radBasicGmail.Checked = true;
+        }
+        if (DataObj.BasicEmail.IndexOf(radBasicYahoo.Text) > -1)
+        {
+            txtBasicOfficeEmail.Text = DataObj.BasicEmail.Replace("@" + radBasicYahoo.Text, "");
+            this.radBasicYahoo.Checked = true;
+        }
+        if (DataObj.BasicEmail.IndexOf(radBasicHotmail.Text) > -1)
+        {
+            txtBasicOfficeEmail.Text = DataObj.BasicEmail.Replace("@" + radBasicHotmail.Text, "");
+            this.radBasicHotmail.Checked = true;
+        }
+        if (DataObj.BasicEmail.IndexOf(radBasicGmail.Text) == -1 && DataObj.BasicEmail.IndexOf(radBasicYahoo.Text) == -1 && DataObj.BasicEmail.IndexOf(radBasicHotmail.Text) == -1 && !string.IsNullOrEmpty(DataObj.BasicEmail))
+        {
+            //txtBasicOfficeEmailOther.Text = DataObj.BasicEmail;
+            //this.radBasicOther.Checked = true;
+            //txtBasicOfficeEmail.Text = "";
+            //20190614 Talas 調整 
+            if (!string.IsNullOrEmpty(DataObj.BasicEmail) && DataObj.BasicEmail.IndexOf("@") > -1)
+            {
+                txtBasicOfficeEmail.Text = DataObj.BasicEmail.Split('@')[0];
+                txtBasicOfficeEmailOther.Text = DataObj.BasicEmail.Split('@')[1];
+            }
+
+            this.radBasicOther.Checked = true;
+        }
+        */
+
+        //20210517_Ares_Stanley-修正特殊Email資料造成的異常; 20210520_Ares_Stanley-合併中信新版
+        #region Email
+        if (!string.IsNullOrEmpty(DataObj.BasicEmail))
+        {
+            txtBasicOfficeEmail.Text = DataObj.BasicEmail.Split('@')[0].Trim();
+            string _mailDomain = DataObj.BasicEmail.Split('@')[1].ToLower();
+            switch (_mailDomain.Trim())
+            {
+                case "gmail.com":
+                    radBasicGmail.Checked = true;
+                    break;
+                case "yahoo.com.tw":
+                    radBasicYahoo.Checked = true;
+                    break;
+                case "hotmail.com":
+                    radBasicHotmail.Checked = true;
+                    break;
+                default:
+                    this.radBasicOther.Checked = true;
+                    txtBasicOfficeEmailOther.Text = _mailDomain.Trim();
+                    break;
+            }
+        }
+        #endregion Email
+        
+        //處理行業別
+        if (DataObj.BasicAMLCC != "")
+        {
+            setCCName(DataObj.BasicAMLCC);
+        }
+
+
+        //電話號碼處理 特殊，非寫錯
+        if (txtBasicOfficePhone2.Text.IndexOf("-") > -1)
+        {
+            string[] phColl = txtBasicOfficePhone2.Text.Split('-');
+            if (phColl.Length == 2)
+            {
+                //txtBasicOfficePhone1.Text = phColl[0].PadLeft(3);
+                //txtBasicOfficePhone2.Text = phColl[1].PadLeft(8);
+                txtBasicOfficePhone1.Text = phColl[0].Trim();
+                txtBasicOfficePhone2.Text = phColl[1].Trim();
+            }
+            if (phColl.Length == 3)
+            {
+                //txtBasicOfficePhone1.Text = phColl[0].PadLeft(3);
+                //txtBasicOfficePhone2.Text = phColl[1].PadLeft(8);
+                //txtBasicOfficePhone3.Text = phColl[2].PadLeft(5);
+
+                txtBasicOfficePhone1.Text = phColl[0].Trim();
+                txtBasicOfficePhone2.Text = phColl[1].Trim();
+                txtBasicOfficePhone3.Text = phColl[2].Trim();
+
+            }
+        }
+
+
+        //處理SCDD旗標
+        if (DataObj.isSCDD == "A")
+        {
+            chkSCCD.Checked = true;
+        }
+        else
+        {
+            chkSCCD.Checked = false;
+        }
+        //如果主機登記地址第一段不是空白，表示修改不為新增，且地址第三段空值，那第三段就填Ｘ
+        if (!string.IsNullOrEmpty(DataObj.BasicBookAddr1.Trim()) && string.IsNullOrEmpty(DataObj.BasicBookAddr3.Trim()))
+        {
+            txtBasicBookAddr3.Text = "Ｘ";
+        }
+
+        //if (!string.IsNullOrEmpty(DataObj.PrincipalHasPic) )
+        //{
+        //    txtPrincipalHasPic.Text = (DataObj.PrincipalHasPic == "N") ? "0" : "1";
+        //}
+
+
+        //如果主機通訊地址第一段不是空白，那第三段就填Ｘ
+        if (!string.IsNullOrEmpty(DataObj.BasicContactAddr1.Trim()) && string.IsNullOrEmpty(DataObj.BasicContactAddr3.Trim()))
+        {
+            txtBasicContactAddr3.Text = "Ｘ";
+        }
+
+        //如果主機負責人戶籍地址第一段不是空白，那第三段就填Ｘ
+        if (!string.IsNullOrEmpty(DataObj.PrincipalBookAddr1.Trim()) && string.IsNullOrEmpty(DataObj.PrincipalBookAddr3.Trim()))
+        {
+            txtPrincipalBookAddr3.Text = "Ｘ";
+        }
+        //注意，若txtBasicEstablish長度為8碼，須轉民國年
+        if (txtBasicEstablish.Text.Length == 8)
+        {
+            txtBasicEstablish.Text = ConvertToROCYear(txtBasicEstablish.Text);
+        }
+        //注意，若txtBasicEstablish長度為8碼，須轉民國年
+        if (txtPrincipalIssueDate.Text.Length == 8)
+        {
+            txtPrincipalIssueDate.Text = ConvertToROCYear(txtPrincipalIssueDate.Text);
+        }
+        //注意，若txtBasicEstablish長度為8碼，須轉民國年
+        if (txtPrincipalBirth.Text.Length == 8)
+        {
+            txtPrincipalBirth.Text = ConvertToROCYear(txtPrincipalBirth.Text);
+        }
+    }
+
+    /// <summary>
+    /// 特殊處理，畫面上的EMAIL取值
+    /// </summary>
+    /// <param name="DataObj"></param>
+    private void CollectEmail(ref EntityAML_HeadOffice DataObj)
+    {
+        if (radBasicGmail.Checked == true && !string.IsNullOrEmpty(txtBasicOfficeEmail.Text.Trim()))
+        {
+            DataObj.BasicEmail = txtBasicOfficeEmail.Text + "@" + radBasicGmail.Text;
+        }
+        if (radBasicYahoo.Checked == true && !string.IsNullOrEmpty(txtBasicOfficeEmail.Text.Trim()))
+        {
+            DataObj.BasicEmail = txtBasicOfficeEmail.Text + "@" + radBasicYahoo.Text;
+        }
+        if (radBasicHotmail.Checked == true && !string.IsNullOrEmpty(txtBasicOfficeEmail.Text.Trim()))
+        {
+            DataObj.BasicEmail = txtBasicOfficeEmail.Text + "@" + radBasicHotmail.Text;
+        }
+        if (radBasicOther.Checked == true && !string.IsNullOrEmpty(txtBasicOfficeEmailOther.Text.Trim()))
+        {
+
+            // DataObj.BasicEmail = txtBasicOfficeEmailOther.Text;
+            DataObj.BasicEmail = txtBasicOfficeEmail.Text + "@" + txtBasicOfficeEmailOther.Text;
+        }
+
+        ////有無照片處理
+        //if (!string.IsNullOrEmpty(txtPrincipalHasPic.Text))
+        //{
+        //    DataObj.PrincipalHasPic = txtPrincipalHasPic.Text == "1" ? "Y" : "N";
+        //}
+
+        ////處理SCDD旗標
+        //if (chkSCCD.Checked == true)
+        //{
+        //    DataObj.isSCDD = "Y";
+        //}
+        //else
+        //{
+        //    DataObj.isSCDD = "N";
+        //}
+
+        //處理SCDD旗標
+        if (chkSCCD.Checked == true)
+        {
+            DataObj.isSCDD = "A";
+        }
+        else
+        {
+            //20210324-RQ-2021-004136-003 應姵晴要求(20210323MAIL所述，當是否已完成SCDD未勾選時，保持空白不帶N，請於下個變更異動
+            //DataObj.isSCDD = "N";
+            DataObj.isSCDD = "";
+        }
+
+    }
+    /// <summary>
+    /// 載入下拉選單內容
+    /// </summary>
+    private void LoadDropDownList()
+    {
+        DataTable result = new DataTable();
+        //ListItem listItem = null;
+        string aMLCC = string.Empty;
+        string countryCode = string.Empty;
+        string stateCode = string.Empty;
+        string organization = string.Empty;
+        string yNEmpty = string.Empty;
+        string number = string.Empty;
+
+        // 設定 行業編號
+        SetDropAMLCCList(this.hidAMLCC, "3");
+
+        // 設定 國籍
+        SetDropCountryCodeList(this.hidCountryCode, "1");
+
+        // 設定 州別
+        SetDropStateCode(this.hidStateCode);
+
+        // 設定 法律形式
+        SetDropOrganization(this.hidOrganization, "2");
+
+        // 設定 是、否、空白
+        SetDropYNEmpty(this.hidYNEmpty);
+
+        // 設定 數值
+        SetDropNumber(this.hidNumber);
+
+        ///高風險國家
+        SetDropCountryHiRiskCodeList(null, "12");
+    }
+
+    // 設定 行業編號
+    private void SetDropAMLCCList(CustHiddenField hiddenField, string type)
+    {
+        DataTable result = BRPostOffice_CodeType.GetCodeType(type);
+        string listString = string.Empty;
+
+        if (result != null && result.Rows.Count > 0)
+        {
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                listString += result.Rows[i][0].ToString() + ":";
+            }
+
+            hiddenField.Value = listString;
+        }
+    }
+
+    // 設定 國籍
+    private void SetDropCountryCodeList(CustHiddenField hiddenField, string type)
+    {
+        DataTable result = BRPostOffice_CodeType.GetCodeType(type);
+
+        //20190731 修改：將result Table排序 by Peggy
+        DataView dv = result.DefaultView;
+        dv.Sort = "CODE_ID asc";
+        result = dv.ToTable();
+
+        ListItem listItem = new ListItem();
+        string listString = string.Empty;
+
+        if (result != null && result.Rows.Count > 0)
+        {
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                listItem = new ListItem();
+
+                listItem.Value = result.Rows[i][0].ToString();
+                listItem.Text = result.Rows[i][0].ToString();
+
+                listString += result.Rows[i][0].ToString() + ":";
+
+                this.dropBasicCountryCode.Items.Add(listItem);
+                this.dropPrincipalCountryCode.Items.Add(listItem);
+                this.dropSCCDCountryCode.Items.Add(listItem);
+                this.dropSCCDForeignCountryStateCode.Items.Add(listItem);
+                this.dropSCCDOtherCountryCode.Items.Add(listItem);
+
+            }
+
+            hiddenField.Value = listString;
+        }
+    }
+    // 設定 高風險國籍
+    private void SetDropCountryHiRiskCodeList(CustHiddenField hiddenField, string type)
+    {
+        DataTable result = BRPostOffice_CodeType.GetCodeType(type);
+
+        //20190731 修改：將result Table排序 by Peggy
+        DataView dv = result.DefaultView;
+        dv.Sort = "CODE_ID asc";
+        result = dv.ToTable();
+
+        ListItem listItem = new ListItem();
+        string listString = string.Empty;
+
+        if (result != null && result.Rows.Count > 0)
+        {
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                listItem = new ListItem();
+
+                listItem.Value = result.Rows[i][0].ToString();
+                listItem.Text = result.Rows[i][0].ToString();
+
+
+                this.dropSCCDIsSanctionCountryCode1.Items.Add(listItem);
+                this.dropSCCDIsSanctionCountryCode2.Items.Add(listItem);
+                this.dropSCCDIsSanctionCountryCode3.Items.Add(listItem);
+                this.dropSCCDIsSanctionCountryCode4.Items.Add(listItem);
+                this.dropSCCDIsSanctionCountryCode5.Items.Add(listItem);
+            }
+
+
+        }
+    }
+    // 設定 州別
+    private void SetDropStateCode(CustHiddenField hiddenField)
+    {
+        ListItem listItem = new ListItem();
+        string listString = string.Empty;
+
+        string[] arr = { "德克薩斯州;TX", "新墨西哥州;NM", "亞利桑那州;AZ", "加利福尼亞州;CA", "達拉瓦州;DE", "內華達州;NV", "非前述州別;NA" };
+        string[] arrs = null;
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arrs = arr[i].Split(';');
+
+            listItem = new ListItem();
+
+            listItem.Value = arrs[0].ToString();
+            listItem.Text = arrs[1].ToString();
+
+            listString += arrs[1].ToString() + ":";
+
+            this.dropBasicCountryStateCode.Items.Add(listItem);
+            this.dropSCCDCountryStateCode.Items.Add(listItem);
+        }
+
+        hiddenField.Value = listString;
+    }
+
+    // 設定 法律形式
+    private void SetDropOrganization(CustHiddenField hiddenField, string type)
+    {
+        DataTable result = BRPostOffice_CodeType.GetCodeType(type);
+        ListItem listItem = new ListItem();
+        string listString = string.Empty;
+
+        if (result != null && result.Rows.Count > 0)
+        {
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                listItem = new ListItem();
+
+                listItem.Value = result.Rows[i][0].ToString();
+                listItem.Text = result.Rows[i][0].ToString();
+
+                listString += result.Rows[i][0].ToString() + ":";
+
+                this.dropSCCDOrganization.Items.Add(listItem);
+            }
+
+            hiddenField.Value = listString;
+        }
+    }
+
+    // 設定 是、否、空白
+    private void SetDropYNEmpty(CustHiddenField hiddenField)
+    {
+        ListItem listItem = new ListItem();
+        string listString = string.Empty;
+
+        string[] arr = { ";", "是;Y", "否;N" };
+        string[] arrs = null;
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arrs = arr[i].Split(';');
+
+            listItem = new ListItem();
+
+            listItem.Value = arrs[0].ToString();
+            listItem.Text = arrs[1].ToString();
+
+            listString += arrs[1].ToString() + ":";
+
+            this.dropSCCDForeign.Items.Add(listItem);
+            this.dropSCCDIsSanction.Items.Add(listItem);
+            this.dropSCCDCanBearerStock.Items.Add(listItem);
+            this.dropSCCDAlreadyBearerStock.Items.Add(listItem);
+            //複雜股權結構
+            this.dropSCCDEquity.Items.Add(listItem);
+        }
+
+        hiddenField.Value = listString;
+    }
+
+    // 設定 數值
+    private void SetDropNumber(CustHiddenField hiddenField)
+    {
+        ListItem listItem = new ListItem();
+        string listString = string.Empty;
+
+        string[] arr = { "本國公司;1", " ;2", " ;3", "外國公司;4" };
+        string[] arrs = null;
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arrs = arr[i].Split(';');
+
+            listItem = new ListItem();
+
+            listItem.Value = arrs[0].ToString();
+            listItem.Text = arrs[1].ToString();
+
+
+        }
+
+        hiddenField.Value = listString;
+    }
+
+    /// <summary>
+    /// 透過SetVal方法，指定清除屬性對應之控制項VALUE
+    /// </summary>
+    void clearDataObjVal()
+    {
+        //本業會用到的物件，宣告後呼叫SETVAL即可，注意:若為多行對應，仍需以迴圈逐筆呼叫
+        EntityAML_HeadOffice DataObj = new EntityAML_HeadOffice();
+        this.SetVal(DataObj, true);
+        //讀取子項目
+
+        for (int i = 0; i < 12; i++)
+        {
+            EntityAML_SeniorManager dObj = new EntityAML_SeniorManager();
+            dObj.LineID = (i + 1).ToString();
+            this.SetVal(dObj, true);
+        }
+
+        radBasicGmail.Checked = false;
+        radBasicYahoo.Checked = false;
+        radBasicHotmail.Checked = false;
+        radBasicOther.Checked = false;
+        // 20210527 EOS_AML(NOVA) by Ares Jack 郵遞區號反灰不能修改
+        txtREG_ZIP_CODE.Enabled = false;
+        txtREG_ZIP_CODE.BackColor = Color.LightGray;
+    }
+    #endregion
+
+    /// <summary>
+    /// Serializes an object.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="serializableObject"></param>
+    /// <param name="fileName"></param>
+    public void SerializeObject<T>(T serializableObject, string fileName)
+    {
+        if (serializableObject == null) { return; }
+
+        try
+        {
+            XmlDocument xmlDocument = new XmlDocument();
+            XmlSerializer serializer = new XmlSerializer(serializableObject.GetType());
+            using (MemoryStream stream = new MemoryStream())
+            {
+                serializer.Serialize(stream, serializableObject);
+                stream.Position = 0;
+                xmlDocument.Load(stream);
+                xmlDocument.Save(fileName);
+            }
+        }
+        catch (Exception ex)
+        {
+
+            string exM = ex.Message;
+        }
+    }
+
+
+    /// <summary>
+    /// Deserializes an xml file into an object list
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="fileName"></param>
+    /// <returns></returns>
+    public T DeSerializeObject<T>(string fileName)
+    {
+        if (string.IsNullOrEmpty(fileName)) { return default(T); }
+
+        T objectOut = default(T);
+
+        try
+        {
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(fileName);
+            string xmlString = xmlDocument.OuterXml;
+
+            using (StringReader read = new StringReader(xmlString))
+            {
+                Type outType = typeof(T);
+
+                XmlSerializer serializer = new XmlSerializer(outType);
+                using (XmlReader reader = new XmlTextReader(read))
+                {
+                    objectOut = (T)serializer.Deserialize(reader);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            string exM = ex.Message;
+        }
+
+        return objectOut;
+    }
+    /// <summary>
+    /// 以傳入值設定選取
+    /// </summary>
+    /// <param name="DP"></param>
+    /// <param name="val"></param>
+    private void setDropSelected(CustDropDownList DP, string val)
+    {
+        foreach (ListItem item in DP.Items)
+        {
+            if (item.Value == val)
+            {
+                item.Selected = true;
+                break;
+            }
+        }
+    }
+
+    /// <summary>
+    /// 依傳入行業別顯示於畫面
+    /// </summary>
+    /// <param name="text"></param>
+    private void setCCName(string text)
+    {
+        DataTable result = BRPostOffice_CodeType.GetCodeTypeByCodeID("3", text);
+        if (result.Rows.Count > 0 && CheckCodeType(result))
+        {
+            HQlblHCOP_CC_Cname.Text = result.Rows[0]["CODE_NAME"].ToString();
+            hidCC.Value = "";
+            txtBasicAMLCC.BackColor = System.Drawing.Color.Empty;
+        }
+        else
+        {
+            txtBasicAMLCC.BackColor = Color.Red;
+            HQlblHCOP_CC_Cname.Text = "";
+            hidCC.Value = "error";
+        }
+    }
+    /// <summary>
+    /// 處理高階經理人國籍與姓名
+    /// </summary>
+    /// <param name="dObj"></param>
+    /// <param name="errMsg"></param>
+    /// <param name="lineID"></param>
+    private void checkNation(EntityAML_SeniorManager dObj, ref List<string> errMsg, string lineID)
+    {
+        CustTextBox CName = FindControl("txtSeniorManagerName_" + lineID) as CustTextBox; //姓名
+        CustTextBox CBirth = FindControl("txtSeniorManagerBirth_" + lineID) as CustTextBox; //生日
+        CustTextBox CID = FindControl("txtSeniorManagerIDNo_" + lineID) as CustTextBox; //身分證字號
+        CustTextBox CNation = FindControl("txtSeniorManagerCountryCode_" + lineID) as CustTextBox; //國籍;
+        CustTextBox CIDType = FindControl("txtSeniorManagerIDNoType_" + lineID) as CustTextBox; //身分證件類型;
+        CustTextBox CExpDt = FindControl("txtSeniorManagerExpdt_" + lineID) as CustTextBox; //期限(西元);
+        CustTextBox CIdentity = FindControl("txtSeniorManagerIdentity_" + lineID) as CustTextBox; //身分類型;
+        CustLabel lblEnNotice = FindControl("lblEnNotice_" + lineID) as CustLabel; //姓名提示文字
+
+        //20190806-RQ-2019-008595-002-長姓名需求:檢核若長姓名flag為勾選時，中文長姓名為必輸 by Peggy
+        CustCheckBox cLongNameFlag = FindControl("chkisLongName_gdv_" + lineID) as CustCheckBox;//長姓名flag
+        CustTextBox CNameL = FindControl("txtName_L_" + lineID) as CustTextBox; //中文長姓名
+        CustTextBox CNamePinyin = FindControl("txtName_Pinyin_" + lineID) as CustTextBox; //羅馬拼音
+
+        //直接不顯示，未來如果要檢核，也加在這
+        lblEnNotice.Visible = false;
+
+        //復歸底色
+        CName.BackColor = Color.Empty;
+        CID.BackColor = Color.Empty;
+        //CNation.BackColor = Color.Empty;//20190911 TEST BY PEGGY
+        CIDType.BackColor = Color.Empty;
+        CExpDt.BackColor = Color.Empty;
+        //CIdentity.BackColor = Color.Empty;
+
+        if (CBirth.Text.Trim() != "")
+        {
+            if (CBirth.Text.Length != 8)
+            {
+                errMsg.Add("出生日期請輸入8碼數字\\n");
+                CBirth.BackColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                string date2 = CBirth.Text.Trim().Substring(0, 4) + "/" + CBirth.Text.Trim().Substring(4, 2) + "/" + CBirth.Text.Trim().Substring(6, 2);
+                DateTime realDate2;
+                if (!DateTime.TryParse(date2, out realDate2))
+                {
+                    errMsg.Add("出生日期格式錯誤\\n");
+                    CBirth.BackColor = Color.Red;
+                }
+            }
+        }
+
+        //任一欄有值，身分類型不能為空白
+        if (!(string.IsNullOrEmpty(CName.Text) && string.IsNullOrEmpty(CBirth.Text) && string.IsNullOrEmpty(CNation.Text) && string.IsNullOrEmpty(CID.Text) && string.IsNullOrEmpty(CIDType.Text) && string.IsNullOrEmpty(CExpDt.Text)) && string.IsNullOrEmpty(CIdentity.Text))
+        {
+            errMsg.Add("身分類型不可為空白\\n");
+            CIdentity.BackColor = Color.Red;
+        }
+
+        //先檢核 有國籍，姓名不能空
+        if (string.IsNullOrEmpty(CName.Text) && !string.IsNullOrEmpty(CNation.Text))
+        {
+            errMsg.Add("輸入國籍，姓名不可為空白\\n");
+            CName.BackColor = Color.Red;
+        }
+        //先檢核 有姓名，國籍不能空
+        if (!string.IsNullOrEmpty(CName.Text) && string.IsNullOrEmpty(CNation.Text))
+        {
+            errMsg.Add("輸入姓名，國籍不可為空白\\n");
+            CNation.BackColor = Color.Red;
+        }
+        //國籍姓名都有
+        if (!string.IsNullOrEmpty(CName.Text) && !string.IsNullOrEmpty(CNation.Text))
+        {
+            //先依國籍判斷全半形
+            if (CNation.Text.ToUpper() == "TW")
+            {
+                //追加檢查身分證格式
+                //20190909 修改：10月RC要求-高管身分證號檢核需排除id為Z999999999這帳號  by Peggy
+                //20210629_Ares_Stanley-關聯人無ID時不能報Z999999999，改用虛擬ID規範【CA+YYYYMMDD+國籍(兩碼英文)+序號(兩碼01-99,AA-ZZ)
+                //20211029_Ares_Jack_虛擬ID延後上線, 先還原Z999999999
+                //if (!checkVirutalID(CID.Text.Trim()) && !isIdentificationId(CID.Text))
+                if (!CID.Text.Trim().Equals("Z999999999") && !isIdentificationId(CID.Text))
+                {
+                    errMsg.Add("身分證號碼無效\\n");
+                    CID.BackColor = Color.Red;
+                }
+                //全型
+                CName.Text = ToWide(CName.Text);
+                if (CName.Text.Length > 19)
+                {
+                    errMsg.Add("姓名欄位太長\\n");
+                    CName.BackColor = Color.Red;
+                }
+                else
+                {
+                    CName.Text = CName.Text.PadRight(19, '　');
+                    dObj.Name = CName.Text;//20200713
+                }
+
+
+                if (!string.IsNullOrEmpty(CIDType.Text) && !(CIDType.Text == "1" || CIDType.Text == "7"))
+                {
+                    errMsg.Add("國籍為TW，身分證件類型須為1或7\\n");
+                    CIDType.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                //半形
+                CName.Text = ToNarrow(CName.Text);
+                if (CName.Text.Length > 40)
+                {
+                    errMsg.Add("姓名欄位太長\\n");
+                    CName.BackColor = Color.Red;
+                }
+                else
+                {
+                    CName.Text = CName.Text.PadRight(40, ' ');
+                    dObj.Name = CName.Text;//20200713
+                }
+            }
+            //20211221 AML NOVA 功能需求程式碼,註解保留 start by Ares Dennis
+            ////20211022_Ares_Jack_檢核出生日期跟虛擬ID相符
+            //if (CIDType.Text == "7" && CID.Text.Trim().Substring(0, 2) == "CA" && CID.Text.Trim().Length == 14)
+            //{
+            //    if (CID.Text.Trim().Substring(2, 8) != CBirth.Text.Trim())
+            //    {
+            //        errMsg.Add("生日與虛擬ID不符\\n");
+            //        CID.BackColor = Color.Red;
+            //        CBirth.BackColor = Color.Red;
+            //    }
+            //}
+            //20211221 AML NOVA 功能需求程式碼,註解保留 end by Ares Dennis
+        }
+        //同時有值，證件為必填
+        if (!string.IsNullOrEmpty(CName.Text) && !string.IsNullOrEmpty(CNation.Text) && string.IsNullOrEmpty(CID.Text))
+        {
+            errMsg.Add("身分證件號碼不可為空白\\n");
+            CID.BackColor = Color.Red;
+        }
+
+        //檢核證件有填，身分別必填
+        if (!string.IsNullOrEmpty(CID.Text) && string.IsNullOrEmpty(CIDType.Text))
+        {
+            errMsg.Add("身分證件類型不可為空白\\n");
+            CIDType.BackColor = Color.Red;
+        }
+
+
+        //檢核身分別有填，身分證件號碼必填
+        if (!string.IsNullOrEmpty(CIDType.Text) && string.IsNullOrEmpty(CID.Text))
+        {
+            errMsg.Add("身分證件號碼不可為空白\\n");
+            CIDType.BackColor = Color.Red;
+        }
+
+
+        //檢核證件有填，身分證件類型有填
+        if (!string.IsNullOrEmpty(CIDType.Text) && !string.IsNullOrEmpty(CID.Text))
+        {
+            //20190909 修改：10月RC要求-護照效期/居留期限非必輸 by Peggy
+            /*
+            //身分證件類型3 or 4，護照效期/居留期限(西元)必填
+            if ((CIDType.Text == "3" || CIDType.Text == "4") && string.IsNullOrEmpty(CExpDt.Text))
+            {
+                errMsg.Add("護照效期/居留期限(西元)不可為空白\\n");
+                CExpDt.BackColor = Color.Red;
+            */
+
+            //身分證件類型3 or 4，護照效期/居留期限(西元)必填
+            if ((CIDType.Text == "3" || CIDType.Text == "4") && !string.IsNullOrEmpty(CExpDt.Text))
+            {
+                if (CExpDt.Text.Trim().Length != 8)
+                {
+                    errMsg.Add("護照效期/統一證號期限(西元)格式錯誤\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                    CExpDt.BackColor = Color.Red;
+                }
+                else
+                {
+                    string date2 = CExpDt.Text.Trim().Substring(0, 4) + "/" + CExpDt.Text.Trim().Substring(4, 2) + "/" + CExpDt.Text.Trim().Substring(6, 2);
+                    DateTime realDate2;
+                    if (!DateTime.TryParse(date2, out realDate2))
+                    {
+                        errMsg.Add("護照效期/統一證號期限(西元)格式錯誤\\n");//20200410-RQ-2019-030155-005-居留證號更名為統一證號
+                        CExpDt.BackColor = Color.Red;
+                    }
+                }
+            }
+
+            //如果是身分證件類型1 or 4，則身分證件號碼一定要是10碼
+            if ((CIDType.Text == "1" || CIDType.Text == "4") && CID.Text.Length != 10)
+            {
+                errMsg.Add("身分證件類型1或4時，身分證件號碼須為10碼\\n");
+                CID.BackColor = Color.Red;
+            }
+        }
+
+        //20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+        //若長姓名為勾選狀態，則中文長姓名必需有值
+        if (cLongNameFlag.Checked)
+        {
+            if (CNameL.Text.Trim().Equals(""))
+            {
+                errMsg.Add("當長姓名打勾時，中文長姓名為必要輸入\\n");
+                CNameL.Focus();
+                CNameL.BackColor = Color.Red;
+            }
+
+            if (CNamePinyin.Text.Trim().Equals(""))
+            {
+                errMsg.Add("當長姓名打勾時，羅馬拼音為必要輸入\\n");
+                CNamePinyin.Focus();
+                CNamePinyin.BackColor = Color.Red;
+            }
+
+            if ((ToWide(CNameL.Text.Trim()).Length + LongNameRomaClean(CNamePinyin.Text).Trim().Length) < 5)
+            {
+                errMsg.Add("當長姓名打勾時，中文長姓名+羅馬拼音 需超過4個字以上\\n");
+                CNameL.Focus();
+                CNameL.BackColor = Color.Red;
+                return;
+            }
+        }
+    }
+    #region checkID
+    public static bool isIdentificationId(string arg_Identify)
+    {
+        bool result = false;
+        if (arg_Identify.Length == 10)
+        {
+            arg_Identify = arg_Identify.ToUpper();
+            if (arg_Identify[0] >= 0x41 && arg_Identify[0] <= 0x5A)
+            {
+                int[] a = new int[] { 10, 11, 12, 13, 14, 15, 16, 17, 34, 18, 19, 20, 21, 22, 35, 23, 24, 25, 26, 27, 28, 29, 32, 30, 31, 33 };
+                int[] b = new int[11];
+                b[1] = a[(arg_Identify[0]) - 65] % 10;
+                int c = b[0] = a[(arg_Identify[0]) - 65] / 10;
+                for (int i = 1; i <= 9; i++)
+                {
+                    b[i + 1] = arg_Identify[i] - 48;
+                    c += b[i] * (10 - i);
+                }
+                if (((c % 10) + b[10]) % 10 == 0)
+                {
+                    result = true;
+                }
+            }
+        }
+        return result;
+    }
+    #endregion
+
+
+    /// <summary>
+    /// 取出指定字典的值
+    /// </summary>
+    /// <param name="inObj"></param>
+    /// <param name="inKey"></param>
+    /// <returns></returns>
+    private string GetDcValue(string inKey)
+    {
+        if (DCCommonColl == null)
+        {
+            buiInfoDict();
+        }
+        string rtnVal = "";
+        if (DCCommonColl.ContainsKey(inKey))
+        {
+            rtnVal = DCCommonColl[inKey];
+        }
+        return rtnVal;
+    }
+    /// <summary>
+    /// 實作字典
+    /// </summary>
+    private void buiInfoDict()
+    {
+        DCCommonColl = new Dictionary<string, string>();
+        // 通用項目
+        DCCommonColl.Add("YN_1", "是");
+        DCCommonColl.Add("YN_0", "否");
+        DCCommonColl.Add("YN_Y", "是");
+        DCCommonColl.Add("YN_N", "否");
+        DCCommonColl.Add("HS_1", "有");
+        DCCommonColl.Add("HS_0", "無");
+        DCCommonColl.Add("HS_Y", "有");
+        DCCommonColl.Add("HS_N", "無");
+
+        DCCommonColl.Add("YN1_是", "1");
+        DCCommonColl.Add("YN1_否", "0");
+        DCCommonColl.Add("YNY_是", "Y");
+        DCCommonColl.Add("YNY_否", "N");
+        DCCommonColl.Add("HS1_有", "1");
+        DCCommonColl.Add("HS1_無", "0");
+        DCCommonColl.Add("HSY_有", "Y");
+        DCCommonColl.Add("HSY_無", "N");
+        //開關 OC_ 
+        DCCommonColl.Add("OC_O", "OPEN");
+        DCCommonColl.Add("OC_C", "Close");
+        DCCommonColl.Add("OC_OPEN", "O");
+        DCCommonColl.Add("OC_Close", "C");
+        setFromCodeType("1"); //國家 
+    }
+    /// <summary>
+    /// 將指定CODETYPE鍵入字典中
+    /// </summary>
+    /// <param name="codeType"></param>
+    private void setFromCodeType(string codeType)
+    {
+        DataTable result = BRPostOffice_CodeType.GetCodeType(codeType);
+        if (result != null && result.Rows.Count > 0)
+        {
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                string sKey = "CT_" + codeType + "_" + result.Rows[i][0].ToString();
+                if (!DCCommonColl.ContainsKey(sKey))
+                {
+                    DCCommonColl.Add("CT_" + codeType + "_" + result.Rows[i][0].ToString(), result.Rows[i][1].ToString());
+                }
+            }
+        }
+    }
+
+
+    #region 20190806-RQ-2019-008595-002-長姓名需求 by Peggy
+    /// <summary>
+    /// 長姓名flag勾選時，checkbox控制事件
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void CheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        string lid = string.Empty;
+        CustCheckBox chk = (CustCheckBox)sender;
+        string CtrlName1 = string.Empty;//(原)人員名稱
+        string CtrlName2 = string.Empty;//中文長姓名
+        string CtrlName3 = string.Empty;//羅馬拼音
+        string DisName2 = string.Empty;//中文長姓名label
+        string DisName3 = string.Empty;//羅馬拼音label
+
+        switch (chk.ID.Trim())
+        {
+            case "chkisLongName"://負責人
+                CtrlName1 = "txtPrincipalNameCH";//人員名稱
+                CtrlName2 = "txtPrincipalNameCH_L";//中文長姓名
+                CtrlName3 = "txtPrincipalNameCH_Pinyin";//馬拼音
+                break;
+            case "chkisLongName_c"://聯絡人
+                CtrlName1 = "txtBasicContactMan";//人員名稱
+                CtrlName2 = "txtBasicContactMan_L";//中文長姓名
+                CtrlName3 = "txtBasicContactMan_Pinyin";//羅馬拼音
+                break;
+            default:
+                lid = chk.ID.Replace("chkisLongName_gdv_", "").Trim();
+
+                CtrlName1 = "txtSeniorManagerName_" + lid;//高管人員名稱
+                CtrlName2 = "txtName_L_" + lid;//高管中文長姓名
+                CtrlName3 = "txtName_Pinyin_" + lid;//高管羅馬拼音
+                DisName2 = "lblName_L_" + lid;//高管羅馬拼音
+                DisName3 = "lblName_Pinyin_" + lid;//高管羅馬拼音
+                break;
+        }
+
+        CustTextBox contNAME = this.FindControl(CtrlName1) as CustTextBox;
+        CustTextBox contNameL = this.FindControl(CtrlName2) as CustTextBox;
+        CustTextBox contNamePinyin = this.FindControl(CtrlName3) as CustTextBox;
+
+        contNAME.Enabled = !chk.Checked;
+        contNAME.BackColor = chk.Checked ? Color.LightGray : Color.Empty;
+        contNameL.Enabled = chk.Checked;
+        contNameL.BackColor = chk.Checked ? Color.Empty : Color.LightGray;
+        contNamePinyin.Enabled = chk.Checked;
+        contNamePinyin.BackColor = chk.Checked ? Color.Empty : Color.LightGray;
+
+        if (!chk.Checked)
+        {
+            contNAME.Focus();
+            contNameL.Text = "";
+            contNamePinyin.Text = "";
+            if (!chk.ID.Trim().Equals("chkisLongName") && !chk.ID.Trim().Equals("chkisLongName_c"))
+            {
+                CustLabel labNameL = this.FindControl(DisName2) as CustLabel;
+                CustLabel labNamePinyin = this.FindControl(DisName3) as CustLabel;
+                labNameL.Visible = false;
+                labNamePinyin.Visible = false;
+            }
+        }
+        else
+        {
+            contNameL.Focus();
+            contNameL.Visible = true;
+            contNamePinyin.Visible = true;
+
+            if (!chk.ID.Trim().Equals("chkisLongName") && !chk.ID.Trim().Equals("chkisLongName_c"))
+            {
+                CustLabel labNameL = this.FindControl(DisName2) as CustLabel;
+                CustLabel labNamePinyin = this.FindControl(DisName3) as CustLabel;
+                labNameL.Visible = true;
+                labNamePinyin.Visible = true;
+            }
+        }
+    }
+
+
+    /// <summary>
+    /// 當長姓名flag勾選時，高管人名由中文長姓名取前4碼填入
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void TextBox_TextChanged(object sender, EventArgs e)
+    {
+        string lid = string.Empty;
+        CustTextBox txt = (CustTextBox)sender;
+
+        string CtrlName = string.Empty;//長姓名flag
+        string CtrlName1 = string.Empty;//原人員姓名
+
+        switch (txt.ID.Trim())
+        {
+            case "txtPrincipalNameCH_L"://負責人
+                CtrlName = "chkisLongName";//人員名稱
+                CtrlName1 = "txtPrincipalNameCH";//中文長姓名
+                break;
+            case "txtBasicContactMan_L"://聯絡人
+                CtrlName = "chkisLongName_c";//人員名稱
+                CtrlName1 = "txtBasicContactMan";//中文長姓名
+                break;
+            default://高管人員設定(12組)
+                lid = txt.ID.Replace("txtName_L_", "").Trim();
+
+                CtrlName = "chkisLongName_gdv_" + lid;//長姓名flag
+                CtrlName1 = "txtSeniorManagerName_" + lid;//高管人員名稱
+                break;
+        }
+
+        CustCheckBox chk = this.FindControl(CtrlName) as CustCheckBox;
+        CustTextBox contNAME = this.FindControl(CtrlName1) as CustTextBox;
+
+        if (chk.Checked)
+        {
+            if (txt.Text.Trim().Length > 4)
+            {
+                contNAME.Text = txt.Text.Trim().Substring(0, 4);
+            }
+            else
+            {
+                contNAME.Text = txt.Text.Trim();
+            }
+        }
+    }
+
+    /// <summary>
+    /// 顯示資料時 高管長姓名相關欄位控制
+    /// </summary>
+    /// <param name="lid"></param>
+    private bool GVLongNameDisplay(string lid)
+    {
+        bool result = false;
+        string CtrlName = "chkisLongName_gdv_" + lid;//長姓名flag
+        string CtrlName1 = "txtSeniorManagerName_" + lid;//高管人員名稱
+        string CtrlName2 = "txtName_L_" + lid;//高管中文長姓名
+        string CtrlName3 = "txtName_Pinyin_" + lid;//高管羅馬拼音
+        string DisName2 = "lblName_L_" + lid;//中文長姓名label
+        string DisName3 = "lblName_Pinyin_" + lid;//羅馬拼音label
+
+        CustCheckBox contisLongName = this.FindControl(CtrlName) as CustCheckBox;
+        CustTextBox contNAME = this.FindControl(CtrlName1) as CustTextBox;
+        CustTextBox contNameL = this.FindControl(CtrlName2) as CustTextBox;
+        CustTextBox contNamePinyin = this.FindControl(CtrlName3) as CustTextBox;
+        CustLabel labNameL = this.FindControl(DisName2) as CustLabel;
+        CustLabel labNamePinyin = this.FindControl(DisName3) as CustLabel;
+
+        //找不到不處理;
+        if (contisLongName == null) { return true; }
+
+        //當中文長姓名不為空時，中文長姓名flag要打勾
+        if (!contNameL.Text.Trim().Equals(""))
+        {
+            contisLongName.Checked = true;
+
+            labNameL.Visible = true;
+            contNameL.Visible = true;
+            labNamePinyin.Visible = true;
+            contNamePinyin.Visible = true;
+        }
+
+        CheckBox_CheckedChanged(contisLongName, null);
+
+        result = true;
+        return result;
+    }
+
+    /// <summary>
+    /// initial高管人員長姓名的欄位狀態
+    /// </summary>
+    private void GVTextBoxDefault()
+    {
+        for (int x = 1; x < 13; x++)
+        {
+            string txt1 = "txtName_L_" + x;//中文長姓名
+            string txt2 = "txtName_Pinyin_" + x;//羅馬拼音
+            string chk = "chkisLongName_gdv_" + x;
+            string DisName2 = "lblName_L_" + x;//中文長姓名label
+            string DisName3 = "lblName_Pinyin_" + x;//羅馬拼音label
+
+            CustCheckBox chkLongName = this.FindControl(chk) as CustCheckBox;
+            CustTextBox contNameL = this.FindControl(txt1) as CustTextBox;
+            CustTextBox contNamePinyin = this.FindControl(txt2) as CustTextBox;
+            CustLabel labNameL = this.FindControl(DisName2) as CustLabel;
+            CustLabel labNamePinyin = this.FindControl(DisName3) as CustLabel;
+
+            chkLongName.Checked = false;
+            contNameL.Visible = contNamePinyin.Visible = labNameL.Visible = labNamePinyin.Visible = false;//20190822初始時，不顯示長姓名欄關欄位
+        }
+    }
+
+    private void init()
+    {
+        chkisLongName.Checked = false;
+        chkisLongName_c.Checked = false;
+
+        GVTextBoxDefault();
+    }
+    #endregion
+
+    private bool CheckCodeType(DataTable dt)
+    {
+        bool result = true;
+        bool? isValid = dt.Rows[0]["IsValid"] as bool?;
+        if (isValid == null)
+        {
+            result = false;
+        }
+        else
+        {
+            if (isValid == false)
+                result = false;
+        }
+        return result;
+    }
+
+    protected void txtCodeType_TextChanged(object sender, EventArgs e)
+    {
+        CustTextBox txt = (CustTextBox)sender;
+        string _codeType = string.Empty;
+        string _codeName = string.Empty;
+        
+        switch (txt.ID.Trim())
+        {
+            case "txtBasicCountryCode"://總公司註冊國籍
+            case "txtPrincipalCountryCode"://負責人國籍
+            case "txtSCCDCountryCode"://SDCC註冊國籍
+            case "txtSCCDForeignCountryStateCode"://僑外資/外商母公司國別
+            case "txtSCCDOtherCountryCode"://主要之營業處所國別            
+                _codeType = "1";
+                break;
+            case "txtSCCDOrganization"://法律形式
+                _codeType = "2";
+                break;
+            default://高風險國家(5組)//dropSCCDIsSanctionCountryCode1
+                _codeType = "12";
+                break;
+        }
+
+        checkCodeType(_codeType, txt.ID, false, _codeName);
+    }
+}

@@ -1,0 +1,99 @@
+2021-11-02 10:09:21,505 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:09:22,274 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:09:22,275 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:09:22,276 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:09:22,277 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:09:22,301 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:09:22,601 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:09:22,701 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:09:22,702 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:09:22,702 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:09:22,703 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:09:22,724 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:09:35,860 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:09:35,861 ERROR SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4D_JCF6:主機連線失敗:752 可取得LU62 SESSION, 但線路狀況異常
+2021-11-02 10:09:35,942 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:09:35,942 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:09:35,943 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-02 10:09:35,943 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-02 10:09:35,960 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:09:36,090 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:13:24,473 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:13:24,473 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:13:24,473 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：13
+2021-11-02 10:13:24,473 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：14
+2021-11-02 10:13:24,489 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:13:24,820 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:20:22,201 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:20:22,202 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:20:22,203 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:20:22,204 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:20:22,226 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:20:22,619 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:20:22,699 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:20:22,700 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:20:22,700 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:20:22,701 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:20:22,721 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:20:35,798 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:20:35,799 ERROR SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4D_JCF6:主機連線失敗:752 可取得LU62 SESSION, 但線路狀況異常
+2021-11-02 10:20:35,878 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:20:35,879 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:20:35,879 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-02 10:20:35,880 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-02 10:20:35,900 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:20:36,052 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:21:00,805 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:21:00,806 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:21:00,807 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-02 10:21:00,808 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-02 10:21:00,834 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:21:01,937 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:26:57,084 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:26:57,085 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:26:57,085 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:26:57,086 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:26:57,109 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:26:57,284 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:26:57,365 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:26:57,365 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:26:57,366 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:26:57,366 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:26:57,385 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:27:10,479 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:27:10,481 ERROR SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4D_JCF6:主機連線失敗:752 可取得LU62 SESSION, 但線路狀況異常
+2021-11-02 10:27:10,579 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:27:10,579 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:27:10,580 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-02 10:27:10,580 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-02 10:27:10,600 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:27:10,750 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:28:11,176 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-02 10:28:11,862 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-02 10:28:12,049 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-02 10:28:12,316 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；CardFlow_Default_CallEMFS SUCCESS
+2021-11-02 10:28:12,404 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:28:12,406 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:28:12,407 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-02 10:28:12,407 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-02 10:28:12,434 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:28:12,590 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:46:12,031 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:46:12,032 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:46:12,033 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:46:12,034 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:46:12,057 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:46:12,279 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:46:12,363 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:46:12,364 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:46:12,364 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-02 10:46:12,365 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-02 10:46:12,386 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:46:25,484 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-02 10:46:25,484 ERROR SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4D_JCF6:主機連線失敗:752 可取得LU62 SESSION, 但線路狀況異常
+2021-11-02 10:46:25,567 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-02 10:46:25,568 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-02 10:46:25,569 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-02 10:46:25,570 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-02 10:46:25,591 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-02 10:46:25,712 INFO SessionID：fb2x50jpszxr5l31brhoigpf UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd

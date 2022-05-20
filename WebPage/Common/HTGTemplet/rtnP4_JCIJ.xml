@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+	<header>
+		<action type="transaction" />
+		<data id="sessionId" value="" />
+		<data id="applicationId" value="CSIP" />
+		<data id="luType" value="LU62" />
+		<data id="transactionId" value="P4_JCIJ" />
+	</header>
+	<line no="1">
+		<msgBody>
+			<data id="TRAN_ID" value="" />
+			<data id="PROGRAM_ID" value="" />
+			<data id="USER_ID" value="" />
+			<data id="MESSAGE_TYPE" value="0001" />
+			<data id="FUNCTION_CODE" value="" />
+			<data id="LINE_CNT" value="" />
+      <data id="MER_NO" value=""/>
+      <data id="MER_NEME" value=""/>
+      <data id="CORP_NO" value=""/>
+      <data id="OWNER_NAME" value=""/>
+      <data id="BANK_NAME" value=""/>
+      <data id="ACCT_NEME" value=""/>
+      <data id="ACCT_NO" value=""/>
+      <data id="CONTACT_TEL" value=""/>
+      <data id="CONTACT_FAX" value=""/>
+      <data id="ADDRESS1" value=""/>
+      <data id="ADDRESS2" value=""/>
+      <data id="ADDRESS3" value=""/>
+      <data id="DESCRIPTION" value=""/>
+      <data id="CREATE_DATE" value=""/>
+      <data id="CREATE_USERID" value=""/>      
+		</msgBody>
+	</line>
+</hostgateway>

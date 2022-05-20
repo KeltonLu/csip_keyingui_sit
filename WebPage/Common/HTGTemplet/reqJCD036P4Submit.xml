@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="defaultm0tsbPWr1kRP9Wn69G7q5PvZ60005"/>
+    <data id="applicationId" value="default"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="JCD036P4Submit"/>
+  </header>
+  <body>
+    <data id="MobilePhone" value="123456789"/>
+    <data id="Email" value="test@test.com"/>
+    <data id="RegTel1" value=""/>
+    <data id="RegTel2" value=""/>
+  </body>
+</hostgateway>

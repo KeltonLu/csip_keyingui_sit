@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value=""/>
+    <data id="applicationId" value="CSIP"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="P4_JC99"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="FUNCTION_CODE" value=""/>      
+      <data id="IDNO_NO" value=""/>
+      <data id="MESSAGE_TYPE" value=""/>
+      <data id="PROGRAM_ID" value="JCGU399"/>
+      <data id="USER_ID" value=""/>
+      <data id="TRAN_ID" value="JC99"/>
+      <data id="IN_CFLAG" value=""/>   
+      <data id="IN_CHANNEL" value="CSIP000"/>      
+      <data id="IN_PFLAG" value=""/>
+      <data id="OUT_FILLER" value=""/>
+      <data id="NAME" value=""/>
+      <data id="ROMA" value=""/>
+      <data id="PARENT_NAME" value=""/>
+      <data id="PARENT_ROMA" value=""/>         
+    </msgBody>
+  </line>
+</hostgateway>

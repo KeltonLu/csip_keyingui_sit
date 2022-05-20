@@ -1,0 +1,723 @@
+2021-09-09 13:17:18,315 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:17:19,149 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:17:19,150 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:17:19,150 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:17:19,151 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G119
+2021-09-09 13:17:19,170 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:17:19,388 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:17:19,504 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:17:19,504 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:17:19,505 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:17:19,505 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G119
+2021-09-09 13:17:19,524 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:17:19,734 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:17:19,854 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:17:19,855 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:17:19,855 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:17:19,856 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G32
+2021-09-09 13:17:19,875 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:17:19,980 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:23:00,748 INFO  Message¡GApplication and Jobs End
+2021-09-09 13:24:20,296 INFO  Message¡GApplication and Jobs End
+2021-09-09 13:25:20,452 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:25:20,876 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:25:20,877 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:25:20,877 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:25:20,877 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G119
+2021-09-09 13:25:20,912 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:25:21,058 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:25:21,221 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:25:21,221 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:25:21,222 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:25:21,222 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G119
+2021-09-09 13:25:21,257 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:25:21,404 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:25:21,541 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:25:21,542 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:25:21,542 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:25:21,543 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G32
+2021-09-09 13:25:21,574 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:25:21,659 INFO SessionID¡G4mvxokxmd4tzwmxaanwdclsx UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:52:46,059 INFO  Message¡GApplication and Jobs End
+2021-09-09 13:52:56,438 INFO  Message¡GApplication and Jobs End
+2021-09-09 13:54:12,602 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:13,030 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:13,031 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:13,031 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:54:13,032 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G119
+2021-09-09 13:54:13,064 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:13,180 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:13,316 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:13,317 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:13,317 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:54:13,317 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G119
+2021-09-09 13:54:13,352 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:13,470 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:13,628 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:13,630 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:13,630 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G9
+2021-09-09 13:54:13,631 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡G32
+2021-09-09 13:54:13,659 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:13,750 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010100 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:26,773 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:26,773 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:26,773 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:54:26,773 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:26,805 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:26,930 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:27,058 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:27,059 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:27,059 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:27,060 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:27,078 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:27,209 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:27,379 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:27,380 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:27,381 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:27,381 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:27,408 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:27,532 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:27,667 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:27,667 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:27,668 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:27,668 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:27,706 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:27,831 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:27,942 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:27,942 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:27,943 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:27,943 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:27,970 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:28,083 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:28,206 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:28,207 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:28,208 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:28,208 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:28,244 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:28,355 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:28,489 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:28,490 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:28,490 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:28,491 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:28,520 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:28,647 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:28,769 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:28,769 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:28,770 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:28,770 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:28,803 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:28,909 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:29,025 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:29,026 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:29,026 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:29,026 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:29,059 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:29,171 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:29,315 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:29,315 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:29,316 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:29,316 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:29,345 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:29,467 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:29,585 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:29,585 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:29,586 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:29,586 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:29,618 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:29,721 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:29,849 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:29,849 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:29,850 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:29,850 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:29,886 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:29,995 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:30,128 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:30,128 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:30,129 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:30,129 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:30,160 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:30,268 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:30,391 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:30,391 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:30,391 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:30,392 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:30,422 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:30,546 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:30,662 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:30,663 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:30,663 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:30,664 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:30,700 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:30,810 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:30,937 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:30,938 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:30,938 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:30,939 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:30,970 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:31,088 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:31,214 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:31,215 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:31,215 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:54:31,216 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:31,246 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:31,369 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:54:31,499 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:54:31,500 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:54:31,500 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:54:31,501 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G119
+2021-09-09 13:54:31,538 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:54:31,686 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:02,418 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:02,418 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:02,418 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:02,418 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:02,434 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:02,590 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:02,684 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:02,684 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:02,684 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:02,684 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:02,699 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:02,809 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:02,871 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:02,871 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:02,871 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:02,871 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:02,887 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:03,001 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:03,079 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:03,079 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:03,079 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:03,079 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:03,095 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:03,192 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:03,270 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:03,270 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:03,270 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:03,270 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:03,302 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:03,401 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:03,488 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:03,488 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:03,489 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:03,489 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:03,508 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:03,610 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:03,676 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:03,677 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:03,677 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:03,680 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:03,698 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:03,782 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:03,782 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:03,849 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:03,850 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:03,851 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:03,851 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:03,878 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:03,982 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:04,052 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:04,052 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:04,053 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:04,053 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:04,071 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:04,160 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:04,234 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:04,235 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:04,235 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:04,236 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:04,254 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:04,341 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:04,415 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:04,416 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:04,416 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:04,417 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:04,436 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:04,524 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:04,611 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:04,612 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:04,613 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:04,614 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:04,631 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:04,798 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:04,872 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:04,872 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:04,873 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:04,873 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:04,891 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:04,976 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:04,976 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:05,047 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:05,047 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:05,048 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:05,048 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:05,065 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:05,154 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:05,221 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:05,222 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:05,223 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:05,223 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:05,241 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:05,338 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:05,415 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:05,416 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:05,417 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:05,417 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:05,437 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:05,533 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:05,534 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:05,605 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:05,606 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:05,606 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:05,607 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:05,631 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:05,732 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:05,733 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:05,819 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:05,819 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:05,820 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:05,820 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:05,837 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:05,931 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:05,999 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:05,999 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:06,000 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:06,000 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:06,016 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:06,106 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:06,173 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:06,173 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:06,174 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:06,175 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:06,192 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:06,284 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:06,285 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:06,353 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:06,353 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:06,354 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:06,355 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:06,372 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:06,458 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:06,458 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:06,532 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:06,533 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:06,533 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:06,534 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:06,551 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:06,649 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:06,725 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:06,726 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:06,726 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:06,727 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:06,743 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:06,835 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:06,908 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:06,909 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:06,909 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:06,910 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:06,928 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:07,017 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:07,091 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:07,092 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:07,092 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:07,093 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:07,111 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:07,197 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:07,272 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:07,273 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:07,275 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:07,276 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:07,295 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:07,395 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:07,466 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:07,467 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:07,468 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:07,468 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:07,487 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:07,576 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:07,651 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:07,651 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:07,652 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:07,652 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:07,670 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:08,207 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:08,286 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:08,286 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:08,287 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:08,287 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:08,308 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:08,398 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:08,471 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:08,472 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:08,473 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:08,473 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:08,492 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:08,583 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:08,584 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:08,654 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:08,655 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:08,655 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:08,656 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:08,674 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:08,763 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:08,765 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:08,834 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:08,834 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:08,835 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:08,835 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:08,853 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:08,943 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:09,015 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:09,016 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:09,017 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:09,017 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:09,035 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:09,124 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:09,190 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:09,190 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:09,191 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:09,191 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:09,208 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:09,300 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:09,370 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:09,370 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:09,371 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:09,371 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:09,388 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:09,483 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:09,563 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:09,564 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:09,565 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:09,565 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:09,582 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:09,698 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:09,772 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:09,772 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:09,773 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:09,773 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:09,791 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:09,880 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:09,880 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:09,950 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:09,950 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:09,951 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:09,951 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:09,969 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:10,051 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:10,052 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:10,120 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:10,120 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:10,121 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:10,121 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:10,139 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:10,254 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:10,318 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:10,318 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:10,319 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:10,319 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:10,337 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:10,460 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:10,520 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:10,520 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:10,521 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:10,521 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:10,538 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:10,664 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:10,732 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:10,732 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:10,733 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:10,733 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:10,752 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:10,851 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:10,919 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:10,920 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:10,920 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:10,921 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:10,938 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:11,032 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:11,096 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:11,098 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:11,098 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:11,099 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:11,116 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:11,203 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:11,276 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:11,277 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:11,277 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:11,278 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:11,305 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:11,407 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:11,471 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:11,471 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:11,472 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:11,472 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:11,488 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:11,577 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:11,577 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_PCTI:
+2021-09-09 13:55:11,650 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:11,651 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:11,651 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:11,651 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:11,671 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:11,757 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:11,828 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:11,831 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:11,831 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:11,831 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:11,849 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:11,947 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:12,019 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:12,020 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:12,020 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:12,021 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:12,049 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:12,157 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:12,224 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:12,225 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:12,226 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:12,227 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:12,249 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:12,336 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:12,399 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:12,399 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:12,400 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:12,400 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:12,418 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:12,511 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:12,583 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:12,584 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:12,584 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:12,585 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:12,604 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:12,696 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:12,767 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:12,767 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:12,768 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:12,768 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:12,786 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:12,873 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:12,940 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:12,941 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:12,941 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:12,942 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:12,958 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:13,062 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:13,125 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:13,126 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:13,126 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:13,127 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:13,143 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:13,234 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:13,302 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:13,303 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:13,304 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:13,304 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:13,321 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:13,458 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:13,537 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:13,538 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:13,539 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:13,539 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:13,557 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:13,647 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:13,722 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:13,722 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:13,723 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:13,723 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:13,742 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:13,831 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:13,910 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:13,911 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:13,911 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G9
+2021-09-09 13:55:13,912 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:13,932 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:14,029 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:14,138 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:14,139 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:14,139 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G8
+2021-09-09 13:55:14,140 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G5
+2021-09-09 13:55:14,155 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:14,381 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:14,382 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4_JCHO:
+2021-09-09 13:55:14,475 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:14,475 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:14,476 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:14,476 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:14,494 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:14,762 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:14,887 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:14,888 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:14,888 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:14,889 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:14,908 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:15,016 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:15,100 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:15,101 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:15,102 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:15,102 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:15,121 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:15,216 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:15,291 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:15,292 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:15,292 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:15,293 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:15,314 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:15,400 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:15,469 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:15,470 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:15,470 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:15,471 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:15,489 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:15,580 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:15,642 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:15,643 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:15,643 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:15,644 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:15,660 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:15,751 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:15,751 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:15,823 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:15,823 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:15,824 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:15,824 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:15,842 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:15,923 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:15,923 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:15,992 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:15,993 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:15,993 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:15,994 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:16,013 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:16,094 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:16,094 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:16,168 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:16,169 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:16,169 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:16,170 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:16,188 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:16,270 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:16,271 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:16,347 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:16,348 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:16,349 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:16,349 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:16,369 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:16,448 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:16,448 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:16,511 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:16,512 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:16,513 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:16,514 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:16,532 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:16,616 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:16,616 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:16,685 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:16,685 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:16,686 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:16,687 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:16,704 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:17,004 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:17,004 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:17,097 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:17,098 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:17,099 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:17,100 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:17,120 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:17,215 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:17,284 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:17,285 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:17,285 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:17,286 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:17,305 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:17,398 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:17,464 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:17,465 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:17,465 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:17,466 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:17,483 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:17,571 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:17,669 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:17,670 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:17,670 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:17,671 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:17,690 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:17,788 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:17,854 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:17,855 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:17,855 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:17,856 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:17,874 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:17,972 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:18,038 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:18,039 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:18,039 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:18,040 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:18,056 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:18,154 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:18,227 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:18,227 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:18,228 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:18,228 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:18,245 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:18,342 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:18,407 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:18,407 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:18,408 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:18,408 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:18,424 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:18,516 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:18,588 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:18,589 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:18,589 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:18,589 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:18,607 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:18,694 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:18,769 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:18,770 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:18,770 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:18,771 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:18,791 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:18,882 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:18,882 ERROR SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GP4D_PCTI:
+2021-09-09 13:55:18,949 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:18,949 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:18,950 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:18,950 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:18,968 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:19,082 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:19,154 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:19,154 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:19,155 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:19,155 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:19,174 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:19,269 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:19,343 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:19,343 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:19,344 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:19,345 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:19,365 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:19,462 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:19,529 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:19,530 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:19,531 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:19,531 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:19,552 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:19,648 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:19,722 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:19,723 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:19,723 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:19,724 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:19,742 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:19,831 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:19,898 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:19,898 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:19,899 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:19,899 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:19,916 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:20,005 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd
+2021-09-09 13:55:20,070 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostBegin
+2021-09-09 13:55:20,070 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GTRUE
+2021-09-09 13:55:20,071 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G10
+2021-09-09 13:55:20,071 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡G11
+2021-09-09 13:55:20,088 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GHTGCommunicator this.HtgTimeout:130000
+2021-09-09 13:55:20,175 INFO SessionID¡G2ebxn4gdw50iurenmhsr5rgt UserID¡GZ00040883 FunctionID¡G01010400 Layer¡GHTG Message¡GgetRtnHostEnd

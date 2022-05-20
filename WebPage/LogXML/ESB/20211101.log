@@ -1,0 +1,147 @@
+2021-11-01 16:13:26,643 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Message：
+[2021/11/01 04:13:26:643] ---------------- REQ --------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ServiceEnvelope xmlns:ns0="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceEnvelope">
+<ns1:ServiceHeader xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceHeader">
+<ns1:StandardType>BSMF</ns1:StandardType>
+<ns1:StandardVersion>01</ns1:StandardVersion>
+<ns1:ServiceName>ebPhneEMailWhoRegnInq</ns1:ServiceName>
+<ns1:ServiceVersion>01</ns1:ServiceVersion>
+<ns1:SourceID>CSIP</ns1:SourceID>
+<ns1:TransactionID>CSIP2021110116124983</ns1:TransactionID>
+<ns1:RqTimestamp>2021-11-01T16:13:26.64+08:00</ns1:RqTimestamp>
+</ns1:ServiceHeader>
+<ns1:ServiceBody xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceBody">
+<ns2:ebPhneEMailWhoRegnInqRq xmlns:ns2="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/BSMF/ebPhneEMailWhoRegnInqRq/01" > 
+<ns2:REQHDR>
+<ns2:TrnNum>CSIP2021110116124983</ns2:TrnNum>
+<ns2:SourceID>CSIP</ns2:SourceID>
+<ns2:UserId>Z00040883</ns2:UserId>
+<ns2:RowCount>1</ns2:RowCount>
+<ns2:RowSize>1</ns2:RowSize>
+</ns2:REQHDR>
+<ns2:REQBDY>
+<ns2:MobileNo>
+</ns2:MobileNo>
+<ns2:Email>joyce1@ctbcbank.com</ns2:Email>
+<ns2:OtpNo>
+</ns2:OtpNo>
+<ns2:CustId>A100000047</ns2:CustId>
+<ns2:EmailAllStatus>Y</ns2:EmailAllStatus>
+</ns2:REQBDY>
+</ns2:ebPhneEMailWhoRegnInqRq>
+</ns1:ServiceBody>
+</ns0:ServiceEnvelope>
+
+2021-11-01 16:13:27,192 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Message：
+[2021/11/01 04:13:27:192] ---------------- RTN --------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ServiceEnvelope xmlns:ns0="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceEnvelope">
+    <ns1:ServiceHeader xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceHeader">
+        <ns1:StandardType>BSMF</ns1:StandardType>
+        <ns1:StandardVersion>01</ns1:StandardVersion>
+        <ns1:TrackingID>ZKFonwqUqcxokUfG280YG3bEAos</ns1:TrackingID>
+        <ns1:ServiceName>ebPhneEMailWhoRegnInq</ns1:ServiceName>
+        <ns1:ServiceVersion>01</ns1:ServiceVersion>
+        <ns1:SourceID>CSIP</ns1:SourceID>
+        <ns1:TransactionID>CSIP2021110116124983</ns1:TransactionID>
+        <ns1:RsTimestamp>2021-11-01T16:13:27.159+08:00</ns1:RsTimestamp>
+        <ns1:StatusCode>0</ns1:StatusCode>
+    </ns1:ServiceHeader>
+    <ns1:ServiceBody xmlns:ns0="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceEnvelope" xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceBody">
+        <ns2:ebPhneEMailWhoRegnInqRs xmlns:ns2="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/BSMF/ebPhneEMailWhoRegnInqRs/01">
+            <ns2:RESHDR>
+                <ns2:TrnNum>CSIP2021110116124983</ns2:TrnNum>
+                <ns2:RspCode>C001</ns2:RspCode>
+                <ns2:RspMsg>查無相同資料，查詢結束</ns2:RspMsg>
+                <ns2:RowCount>1</ns2:RowCount>
+                <ns2:RowSize>1</ns2:RowSize>
+                <ns2:TotalRow>0</ns2:TotalRow>
+                <ns2:TotalRowExId>0</ns2:TotalRowExId>
+            </ns2:RESHDR>
+            <ns2:RESBDY/>
+        </ns2:ebPhneEMailWhoRegnInqRs>
+    </ns1:ServiceBody>
+</ns0:ServiceEnvelope>
+2021-11-01 16:15:48,157 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Message：
+[2021/11/01 04:15:48:156] ---------------- REQ --------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ServiceEnvelope xmlns:ns0="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceEnvelope">
+<ns1:ServiceHeader xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceHeader">
+<ns1:StandardType>BSMF</ns1:StandardType>
+<ns1:StandardVersion>01</ns1:StandardVersion>
+<ns1:ServiceName>cpCstmrEmailUpdRcrdMemoAdd</ns1:ServiceName>
+<ns1:ServiceVersion>01</ns1:ServiceVersion>
+<ns1:SourceID>CSIP</ns1:SourceID>
+<ns1:TransactionID>CSIP2021110116124983</ns1:TransactionID>
+<ns1:RqTimestamp>2021-11-01T16:15:48.15+08:00</ns1:RqTimestamp>
+</ns1:ServiceHeader>
+<ns1:ServiceBody xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceBody">
+<ns2:cpCstmrEmailUpdRcrdMemoAddRq xmlns:ns2="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/BSMF/cpCstmrEmailUpdRcrdMemoAddRq/01" > 
+<ns2:REQHDR>
+<ns2:TrnNum>CSIP2021110116124983</ns2:TrnNum>
+<ns2:TrnCode>
+</ns2:TrnCode>
+<ns2:SourceID>CSIP</ns2:SourceID>
+<ns2:UserID>Z00040883</ns2:UserID>
+<ns2:ReturnType>01</ns2:ReturnType>
+<ns2:ReqPageNum>1</ns2:ReqPageNum>
+<ns2:ReqPageRowSize>1</ns2:ReqPageRowSize>
+<ns2:ReqFileNotifyType>01</ns2:ReqFileNotifyType>
+</ns2:REQHDR>
+<ns2:REQBDY>
+<ns2:TxnSeqNo>CSIP2021110116154814</ns2:TxnSeqNo>
+<ns2:ApplyCustId>A100000047</ns2:ApplyCustId>
+<ns2:Email>joyce1@ctbcbank.com</ns2:Email>
+<ns2:OtpNo>
+</ns2:OtpNo>
+<ns2:MobileNo>
+</ns2:MobileNo>
+<ns2:CheckType>email</ns2:CheckType>
+<ns2:ReplyCheckReason>N</ns2:ReplyCheckReason>
+<ns2:EmpId>Z00040883</ns2:EmpId>
+<ns2:BranchNo>
+</ns2:BranchNo>
+<ns2:ReplyCustCheckInfoList>
+<ns2:ProcessType>r</ns2:ProcessType>
+<ns2:CheckTime>2021-11-01 16:13:26</ns2:CheckTime>
+<ns2:ProcessTime>2021-11-01 16:15:48</ns2:ProcessTime>
+<ns2:ProcessStatus>
+</ns2:ProcessStatus>
+<ns2:ProcessChannel>CSIP</ns2:ProcessChannel>
+</ns2:ReplyCustCheckInfoList>
+</ns2:REQBDY>
+</ns2:cpCstmrEmailUpdRcrdMemoAddRq>
+</ns1:ServiceBody>
+</ns0:ServiceEnvelope>
+
+2021-11-01 16:15:48,615 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Message：
+[2021/11/01 04:15:48:615] ---------------- RTN --------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ServiceEnvelope xmlns:ns0="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceEnvelope">
+    <ns1:ServiceHeader xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceHeader">
+        <ns1:StandardType>BSMF</ns1:StandardType>
+        <ns1:StandardVersion>01</ns1:StandardVersion>
+        <ns1:TrackingID>eqHykbWgqd4Qu-42Xb0YG3m-Aos</ns1:TrackingID>
+        <ns1:ServiceName>cpCstmrEmailUpdRcrdMemoAdd</ns1:ServiceName>
+        <ns1:ServiceVersion>01</ns1:ServiceVersion>
+        <ns1:SourceID>CSIP</ns1:SourceID>
+        <ns1:TransactionID>CSIP2021110116124983</ns1:TransactionID>
+        <ns1:RsTimestamp>2021-11-01T16:15:48.597+08:00</ns1:RsTimestamp>
+        <ns1:StatusCode>0</ns1:StatusCode>
+    </ns1:ServiceHeader>
+    <ns1:ServiceBody xmlns:ns0="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceEnvelope" xmlns:ns1="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/EMF/ServiceBody">
+        <ns2:cpCstmrEmailUpdRcrdMemoAddRs xmlns:ns2="http://ns.chinatrust.com.tw/XSD/CTCB/ESB/Message/BSMF/cpCstmrEmailUpdRcrdMemoAddRs/01">
+            <ns2:RESHDR>
+                <ns2:TrnNum>CSIP2021110116124983</ns2:TrnNum>
+                <ns2:RspCode>0000</ns2:RspCode>
+                <ns2:RspMsg>交易成功</ns2:RspMsg>
+            </ns2:RESHDR>
+            <ns2:RESBDY>
+                <ns2:BDYREC>
+                    <ns2:TxnSeqNo>CSIP2021110116154814</ns2:TxnSeqNo>
+                </ns2:BDYREC>
+            </ns2:RESBDY>
+        </ns2:cpCstmrEmailUpdRcrdMemoAddRs>
+    </ns1:ServiceBody>
+</ns0:ServiceEnvelope>

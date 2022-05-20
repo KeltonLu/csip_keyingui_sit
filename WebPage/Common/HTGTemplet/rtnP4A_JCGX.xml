@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+	<header>
+		<action type="transaction" />
+		<data id="sessionId" value="" />
+		<data id="applicationId" value="CSIP" />
+		<data id="luType" value="LU62" />
+		<data id="transactionId" value="P4A_JCGX" />
+	</header>
+	<line no="1">
+		<msgBody>
+			<data id="TRAN_ID" value="" />
+			<data id="PROGRAM_ID" value="" />
+			<data id="USER_ID" value="" />
+			<data id="MESSAGE_TYPE" value="0000" />
+			<data id="FUNCTION_CODE" value="" />
+			<data id="LINE_CNT" value="25"/>
+      <data id="MERCH_ACCT" value=""/>
+      <data id="CARD_TYPE" value=""/>
+      <data id="AGENT_BANK_NMBR" value=""/>
+      <data id="DISCOUNT_RATE" value=""/>
+      <data id="AGENT_DESC" value=""/>
+      <data id="MESSAGE_CHI" value=""/>
+		  <data id="AGENT_BANK_NMBR1" value="11111"/>
+		  <data id="DISCOUNT_RATE1" value="111"/>
+		  <data id="CARD_TYPE1" value="N"/>
+		  <data id="CHANGE_ID1" value=""/>
+		  <data id="CHANGE_DATE1" value=""/>
+		  <data id="CHANGE_ID_B1" value=""/>
+		  <data id="CHANGE_DATE_B1" value=""/>
+		  <data id="AGENT_DESC1" value="a1"/>
+		  <data id="AGENT_BANK_NMBR2" value="21111"/>
+		  <data id="DISCOUNT_RATE2" value="22222"/>
+		  <data id="CARD_TYPE2" value="M"/>
+		  <data id="CHANGE_ID2" value=""/>
+		  <data id="CHANGE_DATE2" value=""/>
+		  <data id="CHANGE_ID_B2" value=""/>
+		  <data id="CHANGE_DATE_B2" value=""/>
+		  <data id="AGENT_DESC2" value="b1"/>		  
+		  <data id="AGENT_BANK_NMBR3" value="31111"/>
+		  <data id="DISCOUNT_RATE3" value="33333"/>
+		  <data id="CARD_TYPE3" value="J"/>
+		  <data id="CHANGE_ID3" value=""/>
+		  <data id="CHANGE_DATE3" value=""/>
+		  <data id="CHANGE_ID_B3" value=""/>
+		  <data id="CHANGE_DATE_B3" value=""/>
+		  <data id="AGENT_DESC3" value="c1"/>		  
+		  <data id="AGENT_BANK_NMBR4" value="41111"/>
+		  <data id="DISCOUNT_RATE4" value="44444"/>
+		  <data id="CARD_TYPE4" value="J"/>
+		  <data id="CHANGE_ID4" value=""/>
+		  <data id="CHANGE_DATE4" value=""/>
+		  <data id="CHANGE_ID_B4" value=""/>
+		  <data id="CHANGE_DATE_B4" value=""/>
+		  <data id="AGENT_DESC4" value="d1"/>		  
+		  <data id="AGENT_BANK_NMBR5" value="51111"/>
+		  <data id="DISCOUNT_RATE5" value="55555"/>
+		  <data id="CARD_TYPE5" value="M"/>
+		  <data id="CHANGE_ID5" value=""/>
+		  <data id="CHANGE_DATE5" value=""/>
+		  <data id="CHANGE_ID_B5" value=""/>
+		  <data id="CHANGE_DATE_B5" value=""/>
+		  <data id="AGENT_DESC5" value="e1"/>		  
+		</msgBody>
+	</line>
+</hostgateway>

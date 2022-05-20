@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="default"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4D_JCF6"/>
+    </header>
+    <line no="1">
+       <msgBody>
+            <data id="TRAN_ID" value=""/>
+            <data id="PROGRAM_ID" value=""/>
+            <data id="PROGRAM_VERSION" value=""/>
+            <data id="USER_ID" value=""/>
+            <data id="MESSAGE_TYPE" value="0001"/>
+            <data id="FUNCTION_CODE" value=""/>
+            <data id="LINE_CNT" value="0050"/>
+            <data id="ACCT_NBR" value=""/>
+            <data id="NAME_1" value="地址資料"/>                 
+            <data id="CITY" value="台北市南港區"/>                   
+            <data id="ADDR_1" value="台北市南港區"/>                 
+            <data id="ADDR_2" value="16號"/>                 
+            <data id="EMPLOYER" value="測試公司"/>               
+            <data id="HOME_PHONE" value="001-123456789"/>             
+            <data id="OFFICE_PHONE" value="002-123456788"/>           
+            <data id="MANAGE_ZIP_CODE" value="133"/>        
+            <data id="ZIP" value="122"/>                    
+            <data id="MEMO_1" value="note1"/>                 
+            <data id="MEMO_2" value="note2"/>                 
+            <data id="CO_OWNER" value=""/>               
+            <data id="CO_TAX_ID_TYPE" value=""/>         
+            <data id="DD_ID" value=""/>                  
+            <data id="BILLING_CYCLE" value=""/>          
+            <data id="BIRTH_DATE" value="19880912"/>             
+            <data id="NAME_1_2" value="eqweqweqweqweqw"/>               
+            <data id="EU_NBR_OF_DEPS" value=""/>         
+            <data id="MEMBER_SINCE" value=""/>           
+            <data id="OFF_PHONE_FLAG" value="2"/>         
+            <data id="EU_DIRECT_MAIL" value=""/>         
+            <data id="WAIVE_FLAG" value=""/>             
+            <data id="EU_CUSTOMER_CLASS" value=""/>      
+            <data id="GRADUATE_YYMM" value=""/> 
+            <data id="SHORT_NAME1" value="90000"/>
+            <data id="SHORT_NAME2" value="92222"/>
+            <data id="SHORT_NAME3" value="93333"/>
+            <data id="SHORT_NAME4" value="94444"/>
+            <data id="SHORT_NAME5" value="95555"/>
+            <data id="SHORT_NAME6" value="96666"/>
+            <data id="SHORT_NAME7" value="97777"/>
+            <data id="SHORT_NAME8" value="98888"/>
+            <data id="SHORT_NAME9" value="99999"/>
+            <data id="SHORT_NAME10" value="90000"/>
+            <data id="SHORT_NAME11" value="92121"/>
+            <data id="SHORT_NAME12" value="93311"/>
+            <data id="SHORT_NAME13" value="913131"/>
+            <data id="SHORT_NAME14" value="913131"/>
+            <data id="SHORT_NAME15" value="93131"/>
+            <data id="SHORT_NAME16" value="9313"/>
+            <data id="SHORT_NAME17" value="93423"/>
+            <data id="SHORT_NAME18" value="94534"/>
+            <data id="EMBOSSER_NAME_11" value="9ssdsd"/>
+            <data id="EMBOSSER_NAME_12" value="9sdasd"/>
+            <data id="EMBOSSER_NAME_13" value="9fdf"/>
+            <data id="EMBOSSER_NAME_14" value="9gfdg"/>
+            <data id="EMBOSSER_NAME_15" value="9fdfgf"/>
+            <data id="EMBOSSER_NAME_16" value="9jhjkhjk"/>
+            <data id="EMBOSSER_NAME_17" value="9jkhj"/>
+            <data id="EMBOSSER_NAME_18" value="9hkhjk"/>
+            <data id="EMBOSSER_NAME_19" value="9hjkhj"/>
+            <data id="EMBOSSER_NAME_110" value="9jkhjk"/>
+            <data id="EMBOSSER_NAME_111" value="9hjk"/>
+            <data id="EMBOSSER_NAME_112" value="9jkh"/>
+            <data id="EMBOSSER_NAME_113" value="9jkhjk"/>
+            <data id="EMBOSSER_NAME_114" value="9vnvn"/>
+            <data id="EMBOSSER_NAME_115" value="9bnvfgh"/>
+            <data id="EMBOSSER_NAME_116" value="9ghgfh"/>
+            <data id="EMBOSSER_NAME_117" value="9hf"/>
+            <data id="EMBOSSER_NAME_118" value="9hgfh"/> 
+            <data id="CARD_NMBR1" value="9123456789"/> 
+            <data id="CARD_NMBR2" value="91111111111"/> 
+            <data id="CARD_NMBR3" value="9123456789"/> 
+            <data id="CARD_NMBR4" value="92222222222"/> 
+            <data id="CARD_NMBR5" value="93333333333"/> 
+            <data id="CARD_NMBR6" value="94444444444"/> 
+            <data id="CARD_NMBR7" value="9123456789"/> 
+            <data id="CARD_NMBR8" value="95555555555"/> 
+            <data id="CARD_NMBR9" value="9123456789"/> 
+            <data id="CARD_NMBR10" value="9666666666"/>
+            <data id="CARD_NMBR11" value="9123456789"/>
+            <data id="CARD_NMBR12" value="9777777777"/>
+            <data id="CARD_NMBR13" value="988888888"/>
+            <data id="CARD_NMBR14" value="999999999999"/>
+            <data id="CARD_NMBR15" value="900000000000"/>
+            <data id="CARD_NMBR16" value="9123456789"/>
+            <data id="CARD_NMBR17" value="934234234234"/>
+            <data id="CARD_NMBR18" value="96456456456"/>
+            <data id="CARD_ID1" value="A123456789"/> 
+            <data id="CARD_ID2" value="9111111111"/> 
+            <data id="CARD_ID3" value="9222222222"/> 
+            <data id="CARD_ID4" value="9333333333"/> 
+            <data id="CARD_ID5" value="9444444444"/> 
+            <data id="CARD_ID6" value="A123456789"/> 
+            <data id="CARD_ID7" value="9555555555"/> 
+            <data id="CARD_ID8" value="A123456789"/> 
+            <data id="CARD_ID9" value="96666666666"/> 
+            <data id="CARD_ID10" value="9777777777"/>
+            <data id="CARD_ID11" value="A123456789"/>
+            <data id="CARD_ID12" value="9888888888"/>
+            <data id="CARD_ID13" value="A123456789"/>
+            <data id="CARD_ID14" value="999999999999"/>
+            <data id="CARD_ID15" value="A123456789"/>
+            <data id="CARD_ID16" value="A123456789"/>
+            <data id="CARD_ID17" value="A123456789"/>
+            <data id="CARD_ID18" value="A123456789"/>
+            <data id="TYPE1" value="923"/> 
+            <data id="TYPE2" value="956"/> 
+            <data id="TYPE3" value="977"/> 
+            <data id="TYPE4" value="988"/> 
+            <data id="TYPE5" value="999"/> 
+            <data id="TYPE6" value="900"/> 
+            <data id="TYPE7" value="999"/> 
+            <data id="TYPE8" value="999"/> 
+            <data id="TYPE9" value="921"/> 
+            <data id="TYPE10" value="921"/>
+            <data id="TYPE11" value="924"/>
+            <data id="TYPE12" value="954"/>
+            <data id="TYPE13" value="987"/>
+            <data id="TYPE14" value="998"/>
+            <data id="TYPE15" value="997"/>
+            <data id="TYPE16" value="979"/>
+            <data id="TYPE17" value="900"/>
+            <data id="TYPE18" value="911"/>
+        </msgBody>
+    </line>
+</hostgateway>
+
+
+
+

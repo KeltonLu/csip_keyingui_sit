@@ -1,0 +1,429 @@
+2022-04-14 09:51:12,499 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:51:25,541 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 09:51:25,541 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 09:51:25,542 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 09:51:25,542 ERROR  Message：資料檢核開始
+2022-04-14 09:51:31,146 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 09:51:31,147 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 09:51:53,407 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料失敗！
+2022-04-14 09:52:09,376 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-14 09:55:04,619 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:55:04,809 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 09:55:04,809 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 09:55:04,810 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 09:55:04,810 ERROR  Message：資料檢核開始
+2022-04-14 09:55:13,296 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 09:55:13,297 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 09:55:15,504 ERROR  Message：資料檢核結束
+2022-04-14 09:55:17,972 INFO  Message：資料匯入開始
+2022-04-14 09:55:21,464 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 09:55:31,513 INFO  Message：Delete AML_HQ_MFAN 失敗！
+2022-04-14 09:55:59,771 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-14 09:56:38,908 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:56:39,058 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 09:56:39,059 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 09:56:39,059 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 09:56:39,059 ERROR  Message：資料檢核開始
+2022-04-14 09:56:39,059 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 09:56:39,060 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 09:56:39,060 ERROR  Message：資料檢核結束
+2022-04-14 09:56:39,060 INFO  Message：資料匯入開始
+2022-04-14 09:56:42,706 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 09:56:43,208 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 09:56:44,041 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 09:56:47,709 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 09:56:55,883 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 09:56:56,291 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 09:57:05,474 INFO  Message：Recovery - Delete AML_HQ_MFAN 失敗！
+2022-04-14 09:57:07,610 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.0 Must issue a STARTTLS command first. e13-20020aa798cd000000b005060757f625sm362632pfm.96 - gsmtp,
+
+2022-04-14 09:57:46,135 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:57:46,297 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 09:57:46,298 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 09:57:46,298 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 09:57:46,298 ERROR  Message：資料檢核開始
+2022-04-14 09:57:46,298 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 09:57:46,299 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 09:57:46,299 ERROR  Message：資料檢核結束
+2022-04-14 09:57:46,299 INFO  Message：資料匯入開始
+2022-04-14 09:57:51,361 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 09:57:51,413 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 09:57:51,413 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 09:57:51,414 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 09:57:52,226 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 09:57:52,226 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 09:57:52,263 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 09:57:52,265 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 09:57:52,265 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 09:58:07,903 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:07,990 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:58:12,360 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:12,450 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:58:15,302 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:15,400 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:58:18,578 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:18,665 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:58:30,578 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:30,669 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:58:39,273 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:39,359 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:58:43,617 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:43,707 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:58:53,224 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:58:53,310 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 09:59:58,450 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 09:59:58,554 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:01:05,951 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:01:06,066 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:01:19,574 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:01:19,666 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:01:34,770 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:01:34,865 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:01:37,574 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:01:37,675 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:01:51,376 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:01:51,465 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:02:22,315 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:02:22,407 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:02:24,959 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:02:25,051 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:03:40,853 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:03:45,746 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:03:59,625 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:04:11,276 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:04:16,972 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:07:33,349 INFO  Layer：BusinessRule Message：JOB 工作狀態為：正在執行！,
+
+2022-04-14 10:07:38,530 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:07:46,935 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:07:48,464 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:07:50,251 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:07:50,252 ERROR  Message：資料檢核開始
+2022-04-14 10:07:52,614 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:07:52,615 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:07:53,704 ERROR  Message：資料檢核結束
+2022-04-14 10:07:55,171 INFO  Message：資料匯入開始
+2022-04-14 10:07:58,435 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:07:58,472 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:07:58,472 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:07:58,472 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:08:01,312 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:08:01,537 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:08:07,752 INFO  Message：Recovery - Delete AML_HQ_MFAN 失敗！
+2022-04-14 10:08:28,336 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-14 10:09:31,399 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:09:31,583 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:09:31,583 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:09:31,584 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:09:31,584 ERROR  Message：資料檢核開始
+2022-04-14 10:09:35,405 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:09:35,405 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:09:35,406 ERROR  Message：資料檢核結束
+2022-04-14 10:09:35,406 INFO  Message：資料匯入開始
+2022-04-14 10:09:38,074 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:09:38,546 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:09:38,700 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:09:40,331 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:09:45,689 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:09:46,373 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:09:47,578 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 10:09:47,973 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:09:48,322 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 10:18:07,872 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:18:08,060 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:18:08,061 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:18:08,061 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:18:08,061 ERROR  Message：資料檢核開始
+2022-04-14 10:18:08,062 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:18:08,063 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:18:08,063 ERROR  Message：資料檢核結束
+2022-04-14 10:18:08,063 INFO  Message：資料匯入開始
+2022-04-14 10:18:12,855 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:18:12,898 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:18:12,899 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:18:12,899 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:18:15,213 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:18:16,496 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:18:17,459 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 10:18:17,679 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:18:18,086 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 10:18:21,665 INFO  Message：資料匯入結束
+2022-04-14 10:18:23,920 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 10:19:02,361 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:19:02,537 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:19:02,537 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:19:02,537 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:19:02,538 ERROR  Message：資料檢核開始
+2022-04-14 10:19:02,538 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:19:02,538 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:19:02,538 ERROR  Message：資料檢核結束
+2022-04-14 10:19:02,539 INFO  Message：資料匯入開始
+2022-04-14 10:19:02,589 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:19:02,629 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:19:02,629 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:19:02,629 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:19:02,630 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:19:02,630 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:19:02,670 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 10:19:02,670 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:19:02,670 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 10:19:02,670 INFO  Message：資料匯入結束
+2022-04-14 10:19:02,788 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 10:19:07,777 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:19:07,946 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:19:07,947 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:19:07,947 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:19:07,947 ERROR  Message：資料檢核開始
+2022-04-14 10:19:07,947 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:19:07,948 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:19:07,948 ERROR  Message：資料檢核結束
+2022-04-14 10:19:07,955 INFO  Message：資料匯入開始
+2022-04-14 10:19:07,998 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:19:08,036 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:19:08,036 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:19:08,037 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:19:08,037 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:19:08,037 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:19:08,074 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 10:19:08,074 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:19:08,075 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 10:19:08,075 INFO  Message：資料匯入結束
+2022-04-14 10:19:08,190 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 10:19:18,351 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:19:18,520 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:19:18,520 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:19:18,520 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:19:18,520 ERROR  Message：資料檢核開始
+2022-04-14 10:19:18,520 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:19:18,521 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:19:18,522 ERROR  Message：資料檢核結束
+2022-04-14 10:19:18,522 INFO  Message：資料匯入開始
+2022-04-14 10:19:18,563 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:19:18,604 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:19:18,604 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:19:18,604 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:19:18,604 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:19:18,604 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:19:18,644 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 10:19:18,645 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:19:18,645 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 10:19:18,645 INFO  Message：資料匯入結束
+2022-04-14 10:19:18,761 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 10:20:45,359 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:20:45,534 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:20:45,534 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:20:45,534 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:20:45,534 ERROR  Message：資料檢核開始
+2022-04-14 10:20:45,535 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:20:45,535 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:20:45,536 ERROR  Message：資料檢核結束
+2022-04-14 10:20:45,536 INFO  Message：資料匯入開始
+2022-04-14 10:20:45,579 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:20:45,621 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:20:45,621 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:20:45,621 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:20:45,621 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:20:45,621 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:20:45,660 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 10:20:45,660 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:20:45,660 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 10:20:45,660 INFO  Message：資料匯入結束
+2022-04-14 10:20:45,780 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 10:44:03,923 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 10:44:04,117 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 10:44:29,813 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 10:44:29,813 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 10:44:32,624 ERROR  Message：資料檢核開始
+2022-04-14 10:44:33,346 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 10:44:33,347 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 10:44:34,508 ERROR  Message：資料檢核結束
+2022-04-14 10:44:36,512 INFO  Message：資料匯入開始
+2022-04-14 10:44:36,559 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 10:44:36,599 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 10:44:36,599 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 10:44:52,920 INFO  Message：Insert AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:45:08,001 INFO  Layer：BusinessRule Message：成功發送mail,
+
+2022-04-14 10:45:11,106 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 10:45:12,858 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 10:45:13,047 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 10:45:14,151 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 10:45:14,619 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 10:45:15,119 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 17:15:42,829 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 17:15:43,192 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 17:15:43,193 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 17:15:43,193 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 17:15:43,193 ERROR  Message：資料檢核開始
+2022-04-14 17:15:43,193 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 17:15:43,194 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 17:15:43,194 ERROR  Message：資料檢核結束
+2022-04-14 17:15:43,202 INFO  Message：資料匯入開始
+2022-04-14 17:15:46,371 INFO  Message：無資料需匯入
+2022-04-14 17:15:56,206 INFO  Message：資料匯入結束
+2022-04-14 17:15:58,771 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 17:16:10,847 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 17:16:11,039 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 17:16:11,039 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 17:16:11,039 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 17:16:11,039 ERROR  Message：資料檢核開始
+2022-04-14 17:16:11,040 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 17:16:11,041 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 17:16:11,041 ERROR  Message：資料檢核結束
+2022-04-14 17:16:11,041 INFO  Message：資料匯入開始
+2022-04-14 17:16:14,837 INFO  Message：無資料需匯入
+2022-04-14 17:16:14,837 INFO  Message：資料匯入結束
+2022-04-14 17:16:15,007 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 17:19:57,117 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 17:19:57,306 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 17:19:57,306 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 17:19:57,307 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 17:19:57,307 ERROR  Message：資料檢核開始
+2022-04-14 17:19:57,308 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 17:19:57,309 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 17:19:57,309 ERROR  Message：資料檢核結束
+2022-04-14 17:19:57,315 INFO  Message：資料匯入開始
+2022-04-14 17:20:07,525 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 17:20:11,086 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 17:20:11,086 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 17:20:11,086 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 17:20:11,087 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 17:20:11,087 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 17:20:11,127 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 17:20:11,127 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 17:20:11,128 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 17:20:31,126 INFO  Message：資料匯入結束
+2022-04-14 17:20:31,250 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+
+2022-04-14 17:26:59,557 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB啟動,
+
+2022-04-14 17:26:59,764 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：開始！,
+
+2022-04-14 17:26:59,765 INFO  Layer：BusinessRule Message：手動輸入參數啟動排程：否！,
+
+2022-04-14 17:26:59,765 INFO  Layer：BusinessRule Message：判斷是否手動輸入參數 啟動排程：結束！,
+
+2022-04-14 17:26:59,766 ERROR  Message：資料檢核開始
+2022-04-14 17:26:59,766 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，開始！
+2022-04-14 17:26:59,767 INFO  Message：讀取要匯入的AML_HQ_MFAN的檔案資料，結束！
+2022-04-14 17:26:59,767 ERROR  Message：資料檢核結束
+2022-04-14 17:26:59,767 INFO  Message：資料匯入開始
+2022-04-14 17:26:59,813 INFO  Message：Delete AML_HQ_MFAN 開始！
+2022-04-14 17:26:59,854 INFO  Message：Delete AML_HQ_MFAN 結束！
+2022-04-14 17:26:59,854 INFO  Message：Insert AML_HQ_MFAN 開始！
+2022-04-14 17:26:59,854 INFO  Message：Insert AML_HQ_MFAN 結束！
+2022-04-14 17:26:59,855 INFO  Message：Recovery AML_HQ_MFAN 開始！
+2022-04-14 17:26:59,855 INFO  Message：Recovery - Delete AML_HQ_MFAN 開始！
+2022-04-14 17:26:59,895 INFO  Message：Recovery - Delete AML_HQ_MFAN 結束！
+2022-04-14 17:26:59,896 INFO  Message：Recovery AML_HQ_MFAN ，成功 0 筆，失敗 0 筆，共 0 筆！
+2022-04-14 17:26:59,896 INFO  Message：Recovery AML_HQ_MFAN 結束！
+2022-04-14 17:27:26,602 INFO  Message：資料匯入結束
+2022-04-14 17:27:26,982 INFO  Layer：BusinessRule Message：BatchJob_MFANJOB結束,
+

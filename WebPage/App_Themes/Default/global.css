@@ -1,0 +1,235 @@
+﻿/*--------------- Begin Table  style ---------------*/	
+.trOdd {
+    FONT-SIZE: 9pt;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    FONT-FAMILY: "Verdana";
+    background-color: #FFFFFF;
+}
+
+.trEven {
+    FONT-SIZE: 9pt;
+	
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    FONT-FAMILY: "Verdana";
+    background-color: #CEF9F9;
+}
+
+td { height: 25px; }
+
+.itemTitle {
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    font-weight: normal;
+    COLOR: #FFFFFF;
+    background-color: #006666;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.itemTitle1 {
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    font-weight: normal;
+    COLOR: #FFFFFF;
+    background-color: #438BE3;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/*--------------- End Table style  ---------------*/
+
+/*--------------- Begin Button  style ---------------*/
+
+/* 修改紀錄:2021/03/04_Ares_Stanley-新增smallButton:disabled */
+
+.smallButton {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: #006666;
+    FONT-STYLE: normal;
+    FONT-FAMILY: "verdana";
+    background-color: #CEF9F9;
+    border: 1px solid #c8d5b3;
+}
+
+.smallButton:disabled {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: #ACA899;
+    FONT-STYLE: normal;
+    FONT-FAMILY: "verdana";
+    background-color: #F5F5F5;
+    border: 1px solid #999999;
+}
+
+.ChoiceButton {
+    BORDER-TOP-WIDTH: 0px;
+    BORDER-LEFT-WIDTH: 0px;
+    BORDER-BOTTOM-WIDTH: 0px;
+    BACKGROUND-COLOR: transparent;
+    BORDER-RIGHT-WIDTH: 0px
+}
+
+/*--------------- End Button style  ---------------*/
+
+
+
+/* 修改紀錄：2021/01/20_Ares_Stanley-新增whiteSpaceNormal樣式; 2021/01/21_Ares_Stanley-新增longTableGridView樣式 */
+
+/*--------------- Begin Gridview Gridpager style ---------------*/
+
+.buttongo {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: #006666;
+    FONT-STYLE: normal;
+    FONT-FAMILY: "verdana";
+    background-color: #CEF9F9;
+    border: 1px solid #c8d5b3;
+    cursor: pointer;
+    height: 22px;
+    border: #c8d5b3 1px solid;
+}
+
+.buttonpage {
+	
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: #006666;
+    FONT-STYLE: normal;
+    FONT-FAMILY: "verdana";
+    background-color: #CEF9F9;
+    border: 1px solid #c8d5b3;
+    cursor: pointer;
+    height: 22px;
+    border: #c8d5b3 1px solid;
+}
+
+.Grid_Header {
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    font-weight: bold;
+    COLOR: #007E7A;
+    HEIGHT: 25px;
+    background-color: #A0CCCC;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+.Grid_Item {
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    FONT-FAMILY: "Verdana";
+    FONT-SIZE: 9pt;
+    background-color: WHITE;
+    height: 25px;
+}
+
+.Grid_Choice {
+    text-align: center;
+    padding-left: 0px;
+}
+
+.Grid_AlternatingItem {
+    text-align: left;
+    padding-left: 5px;
+    height: 25px;
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    FONT-FAMILY: "Verdana";
+    FONT-SIZE: 9pt;
+    background-color: #D3F3F3;
+}
+
+/*20210507_Ares_Stanley-根據卡流樣式新增相同樣式*/
+.Grid_SelectedItem {
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    FONT-FAMILY: "Verdana";
+    FONT-SIZE: 9pt;
+    background-color: #FCF6DE;
+}
+
+.divPager {
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.CurrentPageIndex {
+    border: #aa0000 0px solid;
+    color: #CEF9F9;
+    font-size: 9pt;
+    width: 70px;
+}
+
+.buttonProfile {
+    color: #CEF9F9;
+    font-size: 9pt;
+    text-align: center;
+    background: #F9FAED;
+    border: #c8d5b3 1px solid;
+}
+
+.whiteSpaceNormal {
+    white-space: normal;
+    word-break: break-all;
+}
+
+.Grid_Header_whiteSpaceNormal {
+    white-space: normal;
+    word-break: break-all;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+}
+
+.longTableGridView { table-layout: fixed; }
+
+/*--------------- End Gridview style for main usercontorl ---------------*/
+
+
+.loginText {
+    text-align: right;
+    color: White;
+}
+	
+	
+.workingArea {
+    background-color: #008888;
+    width: 95%
+}
+
+input { padding: 2px; }
+
+/* 2021/03/04_Ares_Stanley-新增input:disabled; 2021/04/09_Ares_Stanley-調整input的label字型顏色 */
+
+input:disabled+label { color: #ACA899 !important; }
+
+
+
+/* 2021/03/30_Ares_Luke-新增 難字造字功能(EUDC) */
+@font-face {
+    font-family: EUDC;
+}
+
+* {
+    font-family: "Microsoft JhengHei", "新細明體", "細明體", Arial, "EUDC";
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+		<data id="sessionId" value=""/>
+		<data id="applicationId" value="CSIP"/>
+    <data id="luType" value="LU0"/>
+    <data id="transactionId" value="000401"/>
+  </header>
+  <line no="1">
+    <msgHeader>
+      <data id="JNLNO" value="686721"/>
+      <data id="racfId" value="09757"/>
+      <data id="branchNo" value="0888"/>
+      <data id="transactionId" value="033401"/>
+      <data id="workstationNo" value="42"/>
+    </msgHeader>
+    <msgBody>
+      <data id="INVEST_TYPE" value=""/>
+      <data id="OVER_AMT" value=""/>
+      <data id="NB_CUSM" value="123"/>
+      <data id="SLY_WAIVE_TRF_CNT" value="02"/>
+      <data id="ATM_HOLD_AMT" value="              0.000"/>
+      <data id="VIP_DEGREE" value="1"/>
+      <data id="STOCK_MICR_AMT" value="              0.000"/>
+      <data id="FAX_NO" value=""/>
+      <data id="LST_TAX" value="         0.00"/>
+      <data id="NEXT_AMT" value="              0.000"/>
+      <data id="STOCK_HOLD_AMT" value="              0.000"/>
+      <data id="PROCESS_STS_TEXT" value=""/>
+      <data id="RATE_TYPE" value="0"/>
+      <data id="BIRTHDAY" value="09/06/1976"/>
+      <data id="TD_AMT" value="                 0"/>
+      <data id="PD_TYPE_DESC" value="首富家"/>
+      <data id="TRUE_AMT" value="         201863.00"/>
+      <data id="PROTYPE" value="00501001"/>
+      <data id="MIN_REPAY_AMT" value="              0.000"/>
+      <data id="CUSTOMER_NAME" value="撥薪測試"/>
+      <data id="LAST_DATE" value="25/07/2006"/>
+      <data id="CH_PB_CARD_NO" value="0000000"/>
+      <data id="LON_LIMIT" value="                 0"/>
+      <data id="YEAR_TAX" value="         0.00"/>
+      <data id="MATURITY_DATE" value="99/99/9999"/>
+      <data id="SLY_STF_EXCHG_RATE" value="N"/>
+      <data id="UNCL_CHQ_USED" value="              0.000"/>
+      <data id="TEL_NIG" value=""/>
+      <data id="INT_ACCT" value="000000000000"/>
+      <data id="CUST_ID_NO" value="P259080013"/>
+      <data id="INT_DATE" value=""/>
+      <data id="CLOSE_DATE" value="00/00/0000"/>
+      <data id="INTER_BRANCH" value="N"/>
+      <data id="H_TEL_EXT" value=""/>
+      <data id="PB_BAL" value="              0.00+"/>
+      <data id="ATM_WAIVE_EXP_DT" value="99/99/9999"/>
+      <data id="ACCT_NO" value="0000107540306594"/>
+      <data id="NEXTDAY_CHECK" value="              0.000"/>
+      <data id="CUSM_OR_A_AC_DEGREE" value="A"/>
+      <data id="OPEN_DATE" value="25/07/2006"/>
+      <data id="SLY_WAIVE_WD_CNT" value="05"/>
+      <data id="INVEST_HOLD_VAL" value="              0.000"/>
+      <data id="VIP_CODE" value="03"/>
+      <data id="A_RELATION_TYPE" value=""/>
+      <data id="YEAR_AMT" value="         0.00"/>
+      <data id="OVER_TAX" value=""/>
+      <data id="YEAR_TAX_FCY" value="         0.00"/>
+      <data id="FB_TELLER" value="00000"/>
+      <data id="TERM_BASIS" value=""/>
+      <data id="INVEST_DESC" value=""/>
+      <data id="CURRENCY" value="TWD"/>
+      <data id="OTHER_HOLD_AMT" value="              0.000"/>
+      <data id="outputCode" value="03"/>
+      <data id="ACCT_STATUS_2" value=""/>
+      <data id="ACCT_STATUS_1" value="正常"/>
+      <data id="FB_BRANCH" value="00000"/>
+      <data id="BRANCH_NO" value="0107"/>
+      <data id="MIN_REPAY_DATE" value="00000000"/>
+      <data id="EX_OD_INT" value="     0.000"/>
+      <data id="HOLD_AMT" value="              0.000"/>
+      <data id="INT_AMT" value="              2.764"/>
+      <data id="CUR_BAL" value="         201863.00+"/>
+      <data id="FILLER5" value=""/>
+      <data id="ROLL_CNT" value="  0"/>
+      <data id="TERM_DAY" value="0000000000"/>
+      <data id="A_ACT_DEGREE" value="00"/>
+      <data id="TODAY_CHECK" value="              0.000"/>
+      <data id="TEL_DAY" value=""/>
+      <data id="RATE" value=" 0.2500"/>
+    </msgBody>
+  </line>
+</hostgateway>

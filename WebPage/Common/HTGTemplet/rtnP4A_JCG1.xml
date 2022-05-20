@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+	<header>
+		<action type="transaction" />
+		<data id="sessionId" value="" />
+		<data id="applicationId" value="CSIP" />
+		<data id="luType" value="LU62" />
+		<data id="transactionId" value="P4A_JCG1" />
+	</header>
+	<line no="1">
+		<msgBody>
+		   <data id="TRAN_ID" value="" />
+           <data id="PROGRAM_ID" value="" />
+		   <data id="USER_ID" value="" />
+		   <data id="MESSAGE_TYPE" value="" />
+		   <data id="FUNCTION_CODE" value="" />
+		   <data id="MERCH_ACCT" value=""/>
+		   <data id="MERCH_NAME" value=""/>
+		   <data id="BUSINESS_NAME" value=""/>
+		   <data id="MESSAGE_CHI" value=""/>
+		   <data id="CARD_STATUS1" value=""/>
+		   <data id="CARD_DESCR1" value=""/>
+		   <data id="CARD_DESCR_SHORT1" value=""/>
+		   <data id="DISC_RATE1" value=""/>
+		   <data id="CARD_UPDATE_DATE1" value=""/>
+		   <data id="CARD_STATUS2" value=""/>
+		   <data id="CARD_DESCR2" value=""/>
+		   <data id="CARD_DESCR_SHORT2" value=""/>
+		   <data id="DISC_RATE2" value=""/>
+		   <data id="CARD_UPDATE_DATE2" value=""/>
+		   <data id="CARD_STATUS3" value=""/>
+		   <data id="CARD_DESCR3" value=""/>
+		   <data id="CARD_DESCR_SHORT3" value=""/>
+		   <data id="DISC_RATE3" value=""/>
+		   <data id="CARD_UPDATE_DATE3" value=""/>
+		   <data id="CARD_STATUS4" value=""/>
+		   <data id="CARD_DESCR4" value=""/>
+		   <data id="CARD_DESCR_SHORT4" value=""/>
+		   <data id="DISC_RATE4" value=""/>
+		   <data id="CARD_UPDATE_DATE4" value=""/>
+		   <data id="CARD_STATUS5" value=""/>
+		   <data id="CARD_DESCR5" value=""/>
+		   <data id="CARD_DESCR_SHORT5" value=""/>
+		   <data id="DISC_RATE5" value=""/>
+		   <data id="CARD_UPDATE_DATE5" value=""/>
+		   <data id="CARD_STATUS6" value=""/>
+		   <data id="CARD_DESCR6" value=""/>
+		   <data id="CARD_DESCR_SHORT6" value=""/>
+		   <data id="DISC_RATE6" value=""/>
+		   <data id="CARD_UPDATE_DATE6" value=""/>
+		   <data id="CARD_STATUS7" value=""/>
+		   <data id="CARD_DESCR7" value=""/>
+		   <data id="CARD_DESCR_SHORT7" value=""/>
+		   <data id="DISC_RATE7" value=""/>
+		   <data id="CARD_UPDATE_DATE7" value=""/>
+		   <data id="CARD_STATUS8" value=""/>
+		   <data id="CARD_DESCR8" value=""/>
+		   <data id="CARD_DESCR_SHORT8" value=""/>
+		   <data id="DISC_RATE8" value=""/>
+		   <data id="CARD_UPDATE_DATE8" value=""/>
+		   <data id="CARD_STATUS9" value=""/>
+		   <data id="CARD_DESCR9" value=""/>
+		   <data id="CARD_DESCR_SHORT9" value=""/>
+		   <data id="DISC_RATE9" value=""/>
+		   <data id="CARD_UPDATE_DATE9" value=""/>
+		   <data id="CARD_STATUS10" value=""/>
+		   <data id="CARD_DESCR10" value=""/>
+		   <data id="CARD_DESCR_SHORT10" value=""/>
+		   <data id="DISC_RATE10" value=""/>
+		   <data id="CARD_UPDATE_DATE10" value=""/>
+		   <data id="CREATE_USER" value=""/>
+		   <data id="CREATE_DATE" value=""/>
+		   <data id="CREATE_TIME" value=""/>
+		   <data id="MAINTAIN_USER" value=""/>
+		   <data id="MAINTAIN_DATE" value=""/>
+		   <data id="MAINTAIN_TIME" value=""/>
+		</msgBody>
+	</line>
+</hostgateway>

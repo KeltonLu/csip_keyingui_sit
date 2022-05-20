@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="EMFS-YGFzY9tE5e8MSPHJzsm-5qZ04858"/>
+    <data id="applicationId" value="EMFS"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="PCMH_P4"/>
+  </header>
+  <body>
+    <data id="CardNo" value=""/>
+  </body>
+</hostgateway>

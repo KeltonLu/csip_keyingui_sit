@@ -1,0 +1,4337 @@
+2021-10-07 17:00:11,922 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：REQ HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="establishSession" />
+  </header>
+  <body>
+      <data id="applicationId" value="CSIP" />
+      <data id="branchNo" value="0993" />
+      <data id="passWord" value="********" />
+      <data id="racfId" value="Z45120" />
+      <data id="racfPassWord" value="********" />
+      <data id="signOnLU0" value="no" />
+      <data id="userId" value="Z00040883" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:13,654 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：RTN HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <rc value="700"/>
+
+ </header>
+
+ <body>
+
+  <msg value="700 SESSION 建立成功"/>
+
+  <data id="sessionId" value="CSIP214eRIlhhkHXNuW76afU4DQxrZEZ45120"/>
+
+  <data id="loginServer" value="HTG214"/>
+
+ </body>
+
+</hostgateway>
+
+
+2021-10-07 17:00:13,728 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：REQ HTGName：P4_JCEM Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214eRIlhhkHXNuW76afU4DQxrZEZ45120" />
+      <data id="transactionId" value="P4_JCEM" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="4003611000471410" />
+      <data id="ADDR_1" value="" />
+      <data id="ADDR_2" value="" />
+      <data id="BLOCK_CODE" value="" />
+      <data id="CARD_TAKE" value="" />
+      <data id="CARDHOLDER_ID" value="" />
+      <data id="CARDHOLDER_NAME" value="" />
+      <data id="CITY" value="" />
+      <data id="CUSTOMER_NAME" value="" />
+      <data id="DTE_LST_REQ" value="" />
+      <data id="EMBOSS_DATE" value="" />
+      <data id="EMBOSS_NAME" value="" />
+      <data id="EMBOSS_TIME" value="" />
+      <data id="EMBOSS_TYPE" value="" />
+      <data id="EXPIRE_DATE" value="" />
+      <data id="FUNCTION_CODE" value="I" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MEM_NO" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="PREV_ACTION" value="" />
+      <data id="STATUS" value="" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="XFR_CARD_NO" value="" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:14,600 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：RTN HTGName：P4_JCEM Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214eRIlhhkHXNuW76afU4DQxrZEZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCEM"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="ADDR_2" value=""/>
+
+   <data id="ADDR_1" value=""/>
+
+   <data id="CITY" value=""/>
+
+   <data id="EMBOSS_TYPE" value="20"/>
+
+   <data id="CARDHOLDER_ID" value=""/>
+
+   <data id="STATUS" value="1"/>
+
+   <data id="TRAN_ID" value="JCEM"/>
+
+   <data id="XFR_CARD_NO" value=""/>
+
+   <data id="DTE_LST_REQ" value="09172021"/>
+
+   <data id="EMBOSS_TIME" value=""/>
+
+   <data id="FUNCTION_CODE" value="I"/>
+
+   <data id="PROGRAM_ID" value="JCGU070"/>
+
+   <data id="CUSTOMER_NAME" value=""/>
+
+   <data id="ACCT_NBR" value="4003611000471410"/>
+
+   <data id="PROGRAM_VERSION" value=""/>
+
+   <data id="MESSAGE_TYPE" value="6019"/>
+
+   <data id="CARD_TAKE" value=""/>
+
+   <data id="BLOCK_CODE" value=""/>
+
+   <data id="LINE_CNT" value="0"/>
+
+   <data id="MEM_NO" value=""/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="CARDHOLDER_NAME" value=""/>
+
+   <data id="EMBOSS_DATE" value=""/>
+
+   <data id="EXPIRE_DATE" value="0427"/>
+
+   <data id="PREV_ACTION" value="1"/>
+
+   <data id="EMBOSS_NAME" value="COTOWO-TOCC-MOTO"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:00:14,806 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：REQ HTGName：P4_JCAA Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214eRIlhhkHXNuW76afU4DQxrZEZ45120" />
+      <data id="transactionId" value="P4_JCAA" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="4003611000471410" />
+      <data id="FUNCTION_CODE" value="2" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="USER_ID" value="Z45120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:15,959 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：RTN HTGName：P4_JCAA Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214eRIlhhkHXNuW76afU4DQxrZEZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCAA"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="STUS_FAX" value="00"/>
+
+   <data id="EMAIL" value=""/>
+
+   <data id="TITLE" value=""/>
+
+   <data id="CUSTID19" value=""/>
+
+   <data id="CUSTID18" value=""/>
+
+   <data id="E_SERVICE_CODE" value=""/>
+
+   <data id="CUSTID17" value=""/>
+
+   <data id="CUSTID16" value=""/>
+
+   <data id="CUSTID15" value=""/>
+
+   <data id="CUSTID14" value=""/>
+
+   <data id="ZIP" value="100"/>
+
+   <data id="CUSTID13" value=""/>
+
+   <data id="CUSTID12" value=""/>
+
+   <data id="CRG" value="0"/>
+
+   <data id="CUSTID11" value=""/>
+
+   <data id="GRADE_SCHOOL" value=""/>
+
+   <data id="CUSTID10" value=""/>
+
+   <data id="ARG" value="00"/>
+
+   <data id="NAME120" value=""/>
+
+   <data id="USER_CODE_320" value=""/>
+
+   <data id="SINCE" value="2109"/>
+
+   <data id="MOBILE_PHONE" value=""/>
+
+   <data id="ADDR_DATE" value=""/>
+
+   <data id="TYPE9" value=""/>
+
+   <data id="TYPE8" value=""/>
+
+   <data id="MLFG" value=""/>
+
+   <data id="TYPE7" value=""/>
+
+   <data id="TYPE6" value=""/>
+
+   <data id="TYPE5" value=""/>
+
+   <data id="TYPE4" value=""/>
+
+   <data id="TYPE3" value=""/>
+
+   <data id="NAME119" value=""/>
+
+   <data id="TYPE2" value=""/>
+
+   <data id="USER_CODE_319" value=""/>
+
+   <data id="NAME118" value=""/>
+
+   <data id="TYPE1" value="460"/>
+
+   <data id="USER_CODE_318" value=""/>
+
+   <data id="NAME117" value=""/>
+
+   <data id="USER_CODE_317" value=""/>
+
+   <data id="NAME116" value=""/>
+
+   <data id="USER_CODE_316" value=""/>
+
+   <data id="NAME115" value=""/>
+
+   <data id="USER_CODE_315" value=""/>
+
+   <data id="NAME114" value=""/>
+
+   <data id="USER_CODE_314" value=""/>
+
+   <data id="NAME113" value=""/>
+
+   <data id="USER_CODE_313" value=""/>
+
+   <data id="NAME112" value=""/>
+
+   <data id="USER_CODE_312" value=""/>
+
+   <data id="NAME111" value=""/>
+
+   <data id="NAME110" value=""/>
+
+   <data id="USER_CODE_311" value=""/>
+
+   <data id="USER_CODE_310" value=""/>
+
+   <data id="WEIGHTY_FLAG" value=""/>
+
+   <data id="FUNCTION_CODE" value="2"/>
+
+   <data id="NAME19" value=""/>
+
+   <data id="NAME18" value=""/>
+
+   <data id="NAME17" value=""/>
+
+   <data id="NAME16" value=""/>
+
+   <data id="NAME15" value=""/>
+
+   <data id="NAME14" value=""/>
+
+   <data id="NAME13" value=""/>
+
+   <data id="NAME12" value=""/>
+
+   <data id="NAME11" value="測試惠皓"/>
+
+   <data id="DELQ" value="0"/>
+
+   <data id="BLOCK_CODE9" value=""/>
+
+   <data id="BLOCK_CODE8" value=""/>
+
+   <data id="BLOCK_CODE7" value=""/>
+
+   <data id="BLOCK_CODE6" value=""/>
+
+   <data id="BLOCK_CODE5" value=""/>
+
+   <data id="EMPLOYER" value="測試名五"/>
+
+   <data id="BLOCK_CODE4" value=""/>
+
+   <data id="USER_CODE_39" value=""/>
+
+   <data id="UPDATE_PSWD_FLAG" value="N"/>
+
+   <data id="BLOCK_CODE3" value=""/>
+
+   <data id="USER_CODE_38" value=""/>
+
+   <data id="BLOCK_CODE2" value=""/>
+
+   <data id="TCRG" value="00"/>
+
+   <data id="USER_CODE_37" value=""/>
+
+   <data id="BLOCK_CODE1" value=""/>
+
+   <data id="USER_CODE_36" value=""/>
+
+   <data id="USER_CODE_35" value=""/>
+
+   <data id="CR_EU_BANK_ACCT_IND" value=""/>
+
+   <data id="USER_CODE_34" value=""/>
+
+   <data id="USER_CODE_33" value=""/>
+
+   <data id="USER_CODE_32" value=""/>
+
+   <data id="HOME_PHONE" value=""/>
+
+   <data id="USER_CODE_31" value="10"/>
+
+   <data id="TARG" value="18"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="CITY" value="測試梅市"/>
+
+   <data id="SHE_FLAG" value=""/>
+
+   <data id="STUS_ID" value="00"/>
+
+   <data id="NGF" value=""/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="RATE_OPEN_DATE" value="202109"/>
+
+   <data id="TOP_FLAG" value="T"/>
+
+   <data id="DUEDT" value="20211015"/>
+
+   <data id="OFFICE_PHON" value=""/>
+
+   <data id="TRAN_ID" value="JCAA"/>
+
+   <data id="CUSTID9" value=""/>
+
+   <data id="CUSTID8" value=""/>
+
+   <data id="CUSTID7" value=""/>
+
+   <data id="CUSTID6" value=""/>
+
+   <data id="CUSTID5" value=""/>
+
+   <data id="CUSTID4" value=""/>
+
+   <data id="CUSTID3" value=""/>
+
+   <data id="CUSTID2" value=""/>
+
+   <data id="CUSTID1" value="F290568039"/>
+
+   <data id="SERV_CH" value=""/>
+
+   <data id="CARD_NMBR20" value=""/>
+
+   <data id="PASSWORD" value="N"/>
+
+   <data id="STUS_MOBIL" value="00"/>
+
+   <data id="CARD_NMBR19" value=""/>
+
+   <data id="CARD_NMBR18" value=""/>
+
+   <data id="CARD_NMBR17" value=""/>
+
+   <data id="SERV_GRAD" value=""/>
+
+   <data id="CARD_NMBR16" value=""/>
+
+   <data id="CARD_NMBR15" value=""/>
+
+   <data id="CARD_NMBR14" value=""/>
+
+   <data id="CARD_NMBR13" value=""/>
+
+   <data id="CARD_NMBR12" value=""/>
+
+   <data id="CARD_NMBR11" value=""/>
+
+   <data id="CARD_NMBR10" value=""/>
+
+   <data id="PSWD_TRY_ERR_CNT" value="0"/>
+
+   <data id="TYPE20" value=""/>
+
+   <data id="CRT_LIABLE_FLAG" value="N"/>
+
+   <data id="TYPE19" value=""/>
+
+   <data id="TYPE18" value=""/>
+
+   <data id="BLOCK_CODE20" value=""/>
+
+   <data id="TYPE17" value=""/>
+
+   <data id="TYPE16" value=""/>
+
+   <data id="TYPE15" value=""/>
+
+   <data id="TYPE14" value=""/>
+
+   <data id="TYPE13" value=""/>
+
+   <data id="TYPE12" value=""/>
+
+   <data id="TYPE11" value=""/>
+
+   <data id="TYPE10" value=""/>
+
+   <data id="BPS_EXPIRE_YM" value="000000"/>
+
+   <data id="BLOCK_CODE19" value=""/>
+
+   <data id="BLOCK_CODE18" value=""/>
+
+   <data id="BLOCK_CODE17" value=""/>
+
+   <data id="BLOCK_CODE16" value=""/>
+
+   <data id="BLOCK_CODE15" value=""/>
+
+   <data id="BLOCK_CODE14" value=""/>
+
+   <data id="RATE" value="1500"/>
+
+   <data id="BLOCK_CODE13" value=""/>
+
+   <data id="BLOCK_CODE12" value=""/>
+
+   <data id="RATE_EXPIRE_DATE" value="202111"/>
+
+   <data id="BLOCK_CODE11" value=""/>
+
+   <data id="BLOCK_CODE10" value=""/>
+
+   <data id="AVAIL_CASH" value=" 000100000"/>
+
+   <data id="CARD_NMBR9" value=""/>
+
+   <data id="CARD_NMBR8" value=""/>
+
+   <data id="CARD_NMBR7" value=""/>
+
+   <data id="STUS_TELP" value="00"/>
+
+   <data id="CARD_NMBR6" value=""/>
+
+   <data id="STUS_TELO" value="00"/>
+
+   <data id="CARD_NMBR5" value=""/>
+
+   <data id="CARD_NMBR4" value=""/>
+
+   <data id="CARD_NMBR3" value=""/>
+
+   <data id="CARD_NMBR2" value=""/>
+
+   <data id="CARD_NMBR1" value="4003611000471410"/>
+
+   <data id="STUS_TELH" value="00"/>
+
+   <data id="PRFB_BLOCK_CODE" value=""/>
+
+   <data id="STUS_ADDP" value="00"/>
+
+   <data id="NGMT_PYMT_PLAN" value="XX"/>
+
+   <data id="OVERSEA_PHONE" value=""/>
+
+   <data id="ADDR_2" value=""/>
+
+   <data id="ADDR_1" value="測試省八員市八員區八員里"/>
+
+   <data id="CR_SUBBPS" value=""/>
+
+   <data id="STUS_ADDB" value="00"/>
+
+   <data id="STUS_EMAIL" value="00"/>
+
+   <data id="PROGRAM_ID" value="JCGU601"/>
+
+   <data id="DTE_BIRTH" value="19911014"/>
+
+   <data id="LINE_CNT" value="0001"/>
+
+   <data id="CR_DTE_LST_MAINT" value="20210917"/>
+
+   <data id="SEGMENT_CODE" value=""/>
+
+   <data id="CUST_GRADE" value="T"/>
+
+   <data id="SMSA" value="0000"/>
+
+   <data id="CO_OWNER" value=""/>
+
+   <data id="SHORT_NAME" value="測試惠皓"/>
+
+   <data id="EU_TITLE_1" value=""/>
+
+   <data id="GRADE_SCHOOL_LOCATE" value=""/>
+
+   <data id="ACCT_NBR" value="F290568039"/>
+
+   <data id="FAX_NO" value=""/>
+
+   <data id="CYCLE" value="27"/>
+
+   <data id="CUSTID20" value=""/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:00:16,124 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：REQ HTGName：P4_JCAT Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214eRIlhhkHXNuW76afU4DQxrZEZ45120" />
+      <data id="transactionId" value="P4_JCAT" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="F290568039" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="USER_ID" value="Z45120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:16,820 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00040883 FunctionID：01020600 HTGType：RTN HTGName：P4_JCAT Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214eRIlhhkHXNuW76afU4DQxrZEZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCAT"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="CUST_ID9" value=""/>
+
+   <data id="CUST_ID8" value=""/>
+
+   <data id="CUST_ID7" value=""/>
+
+   <data id="CUST_ID6" value=""/>
+
+   <data id="CUST_ID5" value=""/>
+
+   <data id="CUST_ID4" value=""/>
+
+   <data id="CUST_ID3" value=""/>
+
+   <data id="CUST_ID2" value=""/>
+
+   <data id="CUST_ID1" value="F290568039"/>
+
+   <data id="USER_CODE_320" value=""/>
+
+   <data id="USER_CODE_319" value=""/>
+
+   <data id="USER_CODE_318" value=""/>
+
+   <data id="USER_CODE_317" value=""/>
+
+   <data id="USER_CODE_316" value=""/>
+
+   <data id="USER_CODE_315" value=""/>
+
+   <data id="USER_CODE_314" value=""/>
+
+   <data id="USER_CODE_313" value=""/>
+
+   <data id="USER_CODE_312" value=""/>
+
+   <data id="USER_CODE_311" value=""/>
+
+   <data id="USER_CODE_310" value=""/>
+
+   <data id="MTC2_AGREE_MARK9" value=""/>
+
+   <data id="MTC2_AGREE_MARK8" value=""/>
+
+   <data id="MTC2_AGREE_MARK7" value=""/>
+
+   <data id="MTC2_AGREE_MARK6" value=""/>
+
+   <data id="MTC2_AGREE_MARK5" value=""/>
+
+   <data id="MTC2_AGREE_MARK4" value=""/>
+
+   <data id="MTC2_AGREE_MARK3" value=""/>
+
+   <data id="MTC2_AGREE_MARK2" value=""/>
+
+   <data id="MTC2_AGREE_MARK1" value="N"/>
+
+   <data id="CM_CARD_TYPE20" value=""/>
+
+   <data id="CM_CARD_TYPE19" value=""/>
+
+   <data id="CM_CARD_TYPE18" value=""/>
+
+   <data id="CM_CARD_TYPE17" value=""/>
+
+   <data id="CM_CARD_TYPE16" value=""/>
+
+   <data id="CM_CARD_TYPE15" value=""/>
+
+   <data id="CM_CARD_TYPE14" value=""/>
+
+   <data id="CM_CARD_TYPE13" value=""/>
+
+   <data id="CM_CARD_TYPE12" value=""/>
+
+   <data id="CM_CARD_TYPE11" value=""/>
+
+   <data id="CM_CARD_TYPE10" value=""/>
+
+   <data id="ACCT_NBR" value="F290568039"/>
+
+   <data id="AGENT_BANK20" value=""/>
+
+   <data id="TRAN_ID" value="JCAT"/>
+
+   <data id="AGENT_BANK19" value=""/>
+
+   <data id="AGENT_BANK18" value=""/>
+
+   <data id="AGENT_BANK17" value=""/>
+
+   <data id="AGENT_BANK16" value=""/>
+
+   <data id="AGENT_BANK15" value=""/>
+
+   <data id="AGENT_BANK14" value=""/>
+
+   <data id="AGENT_BANK13" value=""/>
+
+   <data id="AGENT_BANK12" value=""/>
+
+   <data id="AGENT_BANK11" value=""/>
+
+   <data id="AGENT_BANK10" value=""/>
+
+   <data id="OCCO_NAME9" value=""/>
+
+   <data id="OCCO_NAME8" value=""/>
+
+   <data id="OCCO_NAME7" value=""/>
+
+   <data id="OCCO_NAME6" value=""/>
+
+   <data id="OCCO_NAME5" value=""/>
+
+   <data id="CARD_TYPE9" value=""/>
+
+   <data id="OCCO_NAME4" value=""/>
+
+   <data id="CARD_TYPE8" value=""/>
+
+   <data id="OCCO_NAME3" value=""/>
+
+   <data id="CARD_TYPE7" value=""/>
+
+   <data id="OCCO_NAME2" value=""/>
+
+   <data id="CARD_TYPE6" value=""/>
+
+   <data id="OCCO_NAME1" value=""/>
+
+   <data id="CARD_TYPE5" value=""/>
+
+   <data id="CARD_TYPE4" value=""/>
+
+   <data id="DAM_CNT20" value=""/>
+
+   <data id="CARD_TYPE3" value=""/>
+
+   <data id="CARD_TYPE2" value=""/>
+
+   <data id="CARD_TYPE1" value="460"/>
+
+   <data id="OCCO_EXT9" value=""/>
+
+   <data id="OCCO_EXT8" value=""/>
+
+   <data id="OCCO_EXT7" value=""/>
+
+   <data id="OCCO_EXT6" value=""/>
+
+   <data id="OCCO_EXT5" value=""/>
+
+   <data id="OCCO_EXT4" value=""/>
+
+   <data id="OCCO_EXT3" value=""/>
+
+   <data id="OCCO_EXT2" value=""/>
+
+   <data id="MEMBER_NO20" value=""/>
+
+   <data id="OCCO_EXT1" value=""/>
+
+   <data id="ML_PROD20" value=""/>
+
+   <data id="DAM_CNT19" value=""/>
+
+   <data id="DAM_CNT18" value=""/>
+
+   <data id="OASAM9" value=""/>
+
+   <data id="DAM_CNT17" value=""/>
+
+   <data id="OASAM8" value=""/>
+
+   <data id="DAM_CNT16" value=""/>
+
+   <data id="OASAM7" value=""/>
+
+   <data id="DAM_CNT15" value=""/>
+
+   <data id="OASAM6" value=""/>
+
+   <data id="DAM_CNT14" value=""/>
+
+   <data id="OASAM5" value=""/>
+
+   <data id="DAM_CNT13" value=""/>
+
+   <data id="OASAM4" value=""/>
+
+   <data id="DAM_CNT12" value=""/>
+
+   <data id="OASAM3" value=""/>
+
+   <data id="DAM_CNT11" value=""/>
+
+   <data id="OASAM2" value=""/>
+
+   <data id="DAM_CNT10" value=""/>
+
+   <data id="OASAM1" value=""/>
+
+   <data id="MEMBER_NO19" value=""/>
+
+   <data id="ML_PROD19" value=""/>
+
+   <data id="MEMBER_NO18" value=""/>
+
+   <data id="ML_PROD18" value=""/>
+
+   <data id="MEMBER_NO17" value=""/>
+
+   <data id="ML_PROD17" value=""/>
+
+   <data id="MEMBER_NO16" value=""/>
+
+   <data id="ML_PROD16" value=""/>
+
+   <data id="MEMBER_NO15" value=""/>
+
+   <data id="ML_PROD15" value=""/>
+
+   <data id="MEMBER_NO14" value=""/>
+
+   <data id="ML_PROD14" value=""/>
+
+   <data id="MEMBER_NO13" value=""/>
+
+   <data id="ML_PROD13" value=""/>
+
+   <data id="MEMBER_NO12" value=""/>
+
+   <data id="ML_PROD12" value=""/>
+
+   <data id="MEMBER_NO11" value=""/>
+
+   <data id="ML_PROD11" value=""/>
+
+   <data id="MEMBER_NO10" value=""/>
+
+   <data id="BLOCK_CODE20" value=""/>
+
+   <data id="ML_PROD10" value=""/>
+
+   <data id="COLLATERAL_CODE20" value=""/>
+
+   <data id="COLLATERAL_CODE9" value=""/>
+
+   <data id="CUST_ID20" value=""/>
+
+   <data id="COLLATERAL_CODE8" value=""/>
+
+   <data id="COLLATERAL_CODE7" value=""/>
+
+   <data id="COLLATERAL_CODE6" value=""/>
+
+   <data id="COLLATERAL_CODE5" value=""/>
+
+   <data id="BLOCK_CODE19" value=""/>
+
+   <data id="COLLATERAL_CODE4" value=""/>
+
+   <data id="BLOCK_CODE18" value=""/>
+
+   <data id="COLLATERAL_CODE3" value=""/>
+
+   <data id="BLOCK_CODE17" value=""/>
+
+   <data id="COLLATERAL_CODE2" value=""/>
+
+   <data id="COLLATERAL_CODE1" value="T"/>
+
+   <data id="BLOCK_CODE16" value=""/>
+
+   <data id="BLOCK_CODE15" value=""/>
+
+   <data id="BLOCK_CODE14" value=""/>
+
+   <data id="BLOCK_CODE13" value=""/>
+
+   <data id="BLOCK_CODE12" value=""/>
+
+   <data id="BLOCK_CODE11" value=""/>
+
+   <data id="BLOCK_CODE10" value=""/>
+
+   <data id="COLLATERAL_CODE19" value=""/>
+
+   <data id="COLLATERAL_CODE18" value=""/>
+
+   <data id="CUST_ID19" value=""/>
+
+   <data id="COLLATERAL_CODE17" value=""/>
+
+   <data id="CUST_ID18" value=""/>
+
+   <data id="COLLATERAL_CODE16" value=""/>
+
+   <data id="CUST_ID17" value=""/>
+
+   <data id="COLLATERAL_CODE15" value=""/>
+
+   <data id="COLLATERAL_CODE14" value=""/>
+
+   <data id="CUST_ID16" value=""/>
+
+   <data id="COLLATERAL_CODE13" value=""/>
+
+   <data id="CUST_ID15" value=""/>
+
+   <data id="COLLATERAL_CODE12" value=""/>
+
+   <data id="CUST_ID14" value=""/>
+
+   <data id="COLLATERAL_CODE11" value=""/>
+
+   <data id="CUST_ID13" value=""/>
+
+   <data id="COLLATERAL_CODE10" value=""/>
+
+   <data id="CUST_ID12" value=""/>
+
+   <data id="CUST_ID11" value=""/>
+
+   <data id="CUST_ID10" value=""/>
+
+   <data id="CRLIMIT9" value=""/>
+
+   <data id="CRLIMIT8" value=""/>
+
+   <data id="CRLIMIT7" value=""/>
+
+   <data id="CRLIMIT6" value=""/>
+
+   <data id="CRLIMIT5" value=""/>
+
+   <data id="CRLIMIT4" value=""/>
+
+   <data id="CRLIMIT3" value=""/>
+
+   <data id="BLOCK_CODE9" value=""/>
+
+   <data id="CRLIMIT2" value=""/>
+
+   <data id="BLOCK_CODE8" value=""/>
+
+   <data id="CRLIMIT1" value=" 0001000000"/>
+
+   <data id="BLOCK_CODE7" value=""/>
+
+   <data id="BLOCK_CODE6" value=""/>
+
+   <data id="BLOCK_CODE5" value=""/>
+
+   <data id="BLOCK_CODE4" value=""/>
+
+   <data id="BLOCK_CODE3" value=""/>
+
+   <data id="BLOCK_CODE2" value=""/>
+
+   <data id="BLOCK_CODE1" value=""/>
+
+   <data id="EXP_FLAG20" value=""/>
+
+   <data id="EXP_FLAG19" value=""/>
+
+   <data id="EXP_FLAG18" value=""/>
+
+   <data id="EXP_FLAG17" value=""/>
+
+   <data id="EXP_FLAG16" value=""/>
+
+   <data id="EXP_FLAG15" value=""/>
+
+   <data id="EXP_FLAG14" value=""/>
+
+   <data id="EXP_FLAG13" value=""/>
+
+   <data id="EXP_FLAG12" value=""/>
+
+   <data id="EXP_FLAG11" value=""/>
+
+   <data id="AGENT_BANK9" value=""/>
+
+   <data id="EXP_FLAG10" value=""/>
+
+   <data id="AGENT_BANK8" value=""/>
+
+   <data id="AGENT_BANK7" value=""/>
+
+   <data id="AGENT_BANK6" value=""/>
+
+   <data id="AGENT_BANK5" value=""/>
+
+   <data id="AGENT_BANK4" value=""/>
+
+   <data id="AGENT_BANK3" value=""/>
+
+   <data id="AGENT_BANK2" value=""/>
+
+   <data id="AGENT_BANK1" value="00000"/>
+
+   <data id="SIGNED_FLAG9" value=""/>
+
+   <data id="SIGNED_FLAG8" value=""/>
+
+   <data id="SIGNED_FLAG7" value=""/>
+
+   <data id="SIGNED_FLAG6" value=""/>
+
+   <data id="SIGNED_FLAG5" value=""/>
+
+   <data id="SIGNED_FLAG4" value=""/>
+
+   <data id="SIGNED_FLAG3" value=""/>
+
+   <data id="SIGNED_FLAG2" value=""/>
+
+   <data id="SIGNED_FLAG1" value="N"/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="OASAM20" value=""/>
+
+   <data id="ML_PROD9" value=""/>
+
+   <data id="ML_PROD8" value=""/>
+
+   <data id="ML_PROD7" value=""/>
+
+   <data id="ML_PROD6" value=""/>
+
+   <data id="ML_PROD5" value=""/>
+
+   <data id="ML_PROD4" value=""/>
+
+   <data id="ML_PROD3" value=""/>
+
+   <data id="ML_PROD2" value=""/>
+
+   <data id="ML_PROD1" value=""/>
+
+   <data id="OASAM19" value=""/>
+
+   <data id="OASAM18" value=""/>
+
+   <data id="OASAM17" value=""/>
+
+   <data id="OASAM16" value=""/>
+
+   <data id="OASAM15" value=""/>
+
+   <data id="OASAM14" value=""/>
+
+   <data id="OASAM13" value=""/>
+
+   <data id="OASAM12" value=""/>
+
+   <data id="OASAM11" value=""/>
+
+   <data id="OASAM10" value=""/>
+
+   <data id="OPCD_STATUS9" value=""/>
+
+   <data id="OPCD_STATUS8" value=""/>
+
+   <data id="OPCD_STATUS7" value=""/>
+
+   <data id="OPCD_STATUS6" value=""/>
+
+   <data id="OPCD_STATUS5" value=""/>
+
+   <data id="CM_MEMO9" value=""/>
+
+   <data id="OPCD_STATUS4" value=""/>
+
+   <data id="CM_MEMO8" value=""/>
+
+   <data id="OPCD_STATUS3" value=""/>
+
+   <data id="CM_MEMO7" value=""/>
+
+   <data id="OPCD_STATUS2" value=""/>
+
+   <data id="CM_MEMO6" value=""/>
+
+   <data id="OPCD_STATUS1" value="N"/>
+
+   <data id="CM_MEMO5" value=""/>
+
+   <data id="CM_MEMO4" value=""/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="CM_MEMO3" value=""/>
+
+   <data id="CM_MEMO2" value=""/>
+
+   <data id="CM_MEMO1" value=""/>
+
+   <data id="CARD_DESC20" value=""/>
+
+   <data id="CARD_DESC19" value=""/>
+
+   <data id="OASS_USER_ID9" value=""/>
+
+   <data id="CARD_DESC18" value=""/>
+
+   <data id="OASS_USER_ID8" value=""/>
+
+   <data id="CARD_DESC17" value=""/>
+
+   <data id="OASS_USER_ID7" value=""/>
+
+   <data id="OASS_USER_ID6" value=""/>
+
+   <data id="CARD_DESC16" value=""/>
+
+   <data id="OASS_USER_ID5" value=""/>
+
+   <data id="CARD_DESC15" value=""/>
+
+   <data id="OASS_USER_ID4" value=""/>
+
+   <data id="CARD_DESC14" value=""/>
+
+   <data id="OASS_USER_ID3" value=""/>
+
+   <data id="CARD_DESC13" value=""/>
+
+   <data id="OASS_USER_ID2" value=""/>
+
+   <data id="CARD_DESC12" value=""/>
+
+   <data id="OASS_USER_ID1" value=""/>
+
+   <data id="CARD_DESC11" value=""/>
+
+   <data id="CARD_DESC10" value=""/>
+
+   <data id="CARD_STYLE20" value=""/>
+
+   <data id="MTC2_AGREE_MARK20" value=""/>
+
+   <data id="CARD_STYLE19" value=""/>
+
+   <data id="CARD_STYLE18" value=""/>
+
+   <data id="CARD_STYLE17" value=""/>
+
+   <data id="CARD_STYLE16" value=""/>
+
+   <data id="CARD_STYLE15" value=""/>
+
+   <data id="CARD_STYLE14" value=""/>
+
+   <data id="CARD_STYLE13" value=""/>
+
+   <data id="CARD_STYLE12" value=""/>
+
+   <data id="CARD_STYLE11" value=""/>
+
+   <data id="CARD_STYLE10" value=""/>
+
+   <data id="MTC2_AGREE_MARK19" value=""/>
+
+   <data id="MTC2_AGREE_MARK18" value=""/>
+
+   <data id="MTC2_AGREE_MARK17" value=""/>
+
+   <data id="MTC2_AGREE_MARK16" value=""/>
+
+   <data id="MTC2_AGREE_MARK15" value=""/>
+
+   <data id="MTC2_AGREE_MARK14" value=""/>
+
+   <data id="MTC2_AGREE_MARK13" value=""/>
+
+   <data id="MTC2_AGREE_MARK12" value=""/>
+
+   <data id="CARD_NMBR9" value=""/>
+
+   <data id="MTC2_AGREE_MARK11" value=""/>
+
+   <data id="CARD_NMBR8" value=""/>
+
+   <data id="MTC2_AGREE_MARK10" value=""/>
+
+   <data id="CARD_NMBR7" value=""/>
+
+   <data id="CARD_NMBR6" value=""/>
+
+   <data id="CARD_NMBR5" value=""/>
+
+   <data id="CARD_NMBR4" value=""/>
+
+   <data id="CARD_NMBR3" value=""/>
+
+   <data id="CARD_NMBR2" value=""/>
+
+   <data id="CARD_NMBR1" value="4003611000471410"/>
+
+   <data id="DTE_OPENED9" value=""/>
+
+   <data id="DTE_OPENED8" value=""/>
+
+   <data id="DTE_OPENED7" value=""/>
+
+   <data id="DTE_OPENED6" value=""/>
+
+   <data id="DTE_OPENED5" value=""/>
+
+   <data id="DTE_OPENED4" value=""/>
+
+   <data id="DTE_OPENED3" value=""/>
+
+   <data id="DTE_OPENED2" value=""/>
+
+   <data id="COLLECTOR9" value=""/>
+
+   <data id="DTE_OPENED1" value="20210917"/>
+
+   <data id="COLLECTOR8" value=""/>
+
+   <data id="COLLECTOR7" value=""/>
+
+   <data id="COLLECTOR6" value=""/>
+
+   <data id="COLLECTOR5" value=""/>
+
+   <data id="COLLECTOR4" value=""/>
+
+   <data id="COLLECTOR3" value=""/>
+
+   <data id="COLLECTOR2" value=""/>
+
+   <data id="COLLECTOR1" value=""/>
+
+   <data id="OCCO_NAME20" value=""/>
+
+   <data id="CM_CARD_TYPE9" value=""/>
+
+   <data id="CM_CARD_TYPE8" value=""/>
+
+   <data id="CM_CARD_TYPE7" value=""/>
+
+   <data id="CM_CARD_TYPE6" value=""/>
+
+   <data id="CM_CARD_TYPE5" value=""/>
+
+   <data id="OCCO_NAME19" value=""/>
+
+   <data id="CM_CARD_TYPE4" value=""/>
+
+   <data id="OCCO_NAME18" value=""/>
+
+   <data id="CM_CARD_TYPE3" value=""/>
+
+   <data id="OCCO_NAME17" value=""/>
+
+   <data id="CM_CARD_TYPE2" value=""/>
+
+   <data id="CM_CARD_TYPE1" value="20"/>
+
+   <data id="OCCO_NAME16" value=""/>
+
+   <data id="OCCO_NAME15" value=""/>
+
+   <data id="OCCO_NAME14" value=""/>
+
+   <data id="OCCO_NAME13" value=""/>
+
+   <data id="OCCO_NAME12" value=""/>
+
+   <data id="OCCO_NAME11" value=""/>
+
+   <data id="OCCO_NAME10" value=""/>
+
+   <data id="OASS_USER_ID20" value=""/>
+
+   <data id="DRMT_FLAG20" value=""/>
+
+   <data id="OASS_USER_ID19" value=""/>
+
+   <data id="OASS_USER_ID18" value=""/>
+
+   <data id="OASS_USER_ID17" value=""/>
+
+   <data id="DRMT_FLAG19" value=""/>
+
+   <data id="OASS_USER_ID16" value=""/>
+
+   <data id="DRMT_FLAG18" value=""/>
+
+   <data id="OASS_USER_ID15" value=""/>
+
+   <data id="DRMT_FLAG17" value=""/>
+
+   <data id="OASS_USER_ID14" value=""/>
+
+   <data id="DRMT_FLAG16" value=""/>
+
+   <data id="OASS_USER_ID13" value=""/>
+
+   <data id="DRMT_FLAG15" value=""/>
+
+   <data id="OASS_USER_ID12" value=""/>
+
+   <data id="DRMT_FLAG14" value=""/>
+
+   <data id="OASS_USER_ID11" value=""/>
+
+   <data id="DRMT_FLAG13" value=""/>
+
+   <data id="OASS_USER_ID10" value=""/>
+
+   <data id="DRMT_FLAG12" value=""/>
+
+   <data id="DRMT_FLAG11" value=""/>
+
+   <data id="DRMT_FLAG10" value=""/>
+
+   <data id="S_CODE_FLAG9" value=""/>
+
+   <data id="S_CODE_FLAG8" value=""/>
+
+   <data id="S_CODE_FLAG7" value=""/>
+
+   <data id="S_CODE_FLAG6" value=""/>
+
+   <data id="S_CODE_FLAG5" value=""/>
+
+   <data id="S_CODE_FLAG4" value=""/>
+
+   <data id="S_CODE_FLAG3" value=""/>
+
+   <data id="S_CODE_FLAG2" value=""/>
+
+   <data id="S_CODE_FLAG1" value=""/>
+
+   <data id="ALT_BLOCK_CODE20" value=""/>
+
+   <data id="S_CODE_FLAG20" value=""/>
+
+   <data id="DTE_OPENED20" value=""/>
+
+   <data id="CM_MEMO20" value=""/>
+
+   <data id="ALT_BLOCK_CODE19" value=""/>
+
+   <data id="ALT_BLOCK_CODE18" value=""/>
+
+   <data id="ALT_BLOCK_CODE17" value=""/>
+
+   <data id="ALT_BLOCK_CODE16" value=""/>
+
+   <data id="ALT_BLOCK_CODE15" value=""/>
+
+   <data id="CARD_STYLE9" value=""/>
+
+   <data id="ALT_BLOCK_CODE14" value=""/>
+
+   <data id="CARD_STYLE8" value=""/>
+
+   <data id="ALT_BLOCK_CODE13" value=""/>
+
+   <data id="CARD_STYLE7" value=""/>
+
+   <data id="ALT_BLOCK_CODE12" value=""/>
+
+   <data id="CARD_STYLE6" value=""/>
+
+   <data id="ALT_BLOCK_CODE11" value=""/>
+
+   <data id="CARD_STYLE5" value=""/>
+
+   <data id="ALT_BLOCK_CODE10" value=""/>
+
+   <data id="CARD_STYLE4" value=""/>
+
+   <data id="CARD_STYLE3" value=""/>
+
+   <data id="OCCO_EXT20" value=""/>
+
+   <data id="S_CODE_FLAG19" value=""/>
+
+   <data id="CARD_STYLE2" value=""/>
+
+   <data id="S_CODE_FLAG18" value=""/>
+
+   <data id="CARD_STYLE1" value="00"/>
+
+   <data id="S_CODE_FLAG17" value=""/>
+
+   <data id="S_CODE_FLAG16" value=""/>
+
+   <data id="S_CODE_FLAG15" value=""/>
+
+   <data id="S_CODE_FLAG14" value=""/>
+
+   <data id="S_CODE_FLAG13" value=""/>
+
+   <data id="S_CODE_FLAG12" value=""/>
+
+   <data id="S_CODE_FLAG11" value=""/>
+
+   <data id="DTE_OPENED19" value=""/>
+
+   <data id="S_CODE_FLAG10" value=""/>
+
+   <data id="DTE_OPENED18" value=""/>
+
+   <data id="CM_MEMO19" value=""/>
+
+   <data id="DTE_OPENED17" value=""/>
+
+   <data id="CM_MEMO18" value=""/>
+
+   <data id="DTE_OPENED16" value=""/>
+
+   <data id="CM_MEMO17" value=""/>
+
+   <data id="DTE_OPENED15" value=""/>
+
+   <data id="CM_MEMO16" value=""/>
+
+   <data id="DTE_OPENED14" value=""/>
+
+   <data id="CM_MEMO15" value=""/>
+
+   <data id="DTE_OPENED13" value=""/>
+
+   <data id="CM_MEMO14" value=""/>
+
+   <data id="DTE_OPENED12" value=""/>
+
+   <data id="DTE_OPENED11" value=""/>
+
+   <data id="CM_MEMO13" value=""/>
+
+   <data id="DTE_OPENED10" value=""/>
+
+   <data id="CM_MEMO12" value=""/>
+
+   <data id="CM_MEMO11" value=""/>
+
+   <data id="CM_MEMO10" value=""/>
+
+   <data id="OCCO_EXT19" value=""/>
+
+   <data id="OCCO_EXT18" value=""/>
+
+   <data id="OCCO_EXT17" value=""/>
+
+   <data id="OCCO_EXT16" value=""/>
+
+   <data id="OCCO_EXT15" value=""/>
+
+   <data id="OCCO_EXT14" value=""/>
+
+   <data id="OCCO_EXT13" value=""/>
+
+   <data id="OCCO_EXT12" value=""/>
+
+   <data id="OCCO_EXT11" value=""/>
+
+   <data id="OCCO_EXT10" value=""/>
+
+   <data id="OPEN_CARD_USER9" value=""/>
+
+   <data id="OPEN_CARD_USER8" value=""/>
+
+   <data id="OPEN_CARD_USER7" value=""/>
+
+   <data id="EXPIR_DATE9" value=""/>
+
+   <data id="OPEN_CARD_USER6" value=""/>
+
+   <data id="EXPIR_DATE8" value=""/>
+
+   <data id="OPEN_CARD_USER5" value=""/>
+
+   <data id="EXPIR_DATE7" value=""/>
+
+   <data id="OPEN_CARD_USER4" value=""/>
+
+   <data id="EXPIR_DATE6" value=""/>
+
+   <data id="OPEN_CARD_USER3" value=""/>
+
+   <data id="EXPIR_DATE5" value=""/>
+
+   <data id="OPEN_CARD_USER2" value=""/>
+
+   <data id="EXPIR_DATE4" value=""/>
+
+   <data id="OPEN_CARD_USER1" value=""/>
+
+   <data id="EXPIR_DATE3" value=""/>
+
+   <data id="EXPIR_DATE2" value=""/>
+
+   <data id="EXPIR_DATE1" value="0427"/>
+
+   <data id="DTE_BLOCK_CODE9" value=""/>
+
+   <data id="DTE_BLOCK_CODE8" value=""/>
+
+   <data id="DTE_BLOCK_CODE7" value=""/>
+
+   <data id="DTE_BLOCK_CODE6" value=""/>
+
+   <data id="DTE_BLOCK_CODE5" value=""/>
+
+   <data id="EMBOSSER_NAME20" value=""/>
+
+   <data id="DTE_BLOCK_CODE4" value=""/>
+
+   <data id="DTE_BLOCK_CODE3" value=""/>
+
+   <data id="DTE_BLOCK_CODE2" value=""/>
+
+   <data id="DTE_BLOCK_CODE1" value="00000000"/>
+
+   <data id="CARD_NMBR20" value=""/>
+
+   <data id="EMBOSSER_NAME19" value=""/>
+
+   <data id="EMBOSSER_NAME18" value=""/>
+
+   <data id="ALT_BLOCK_CODE9" value=""/>
+
+   <data id="EMBOSSER_NAME17" value=""/>
+
+   <data id="ALT_BLOCK_CODE8" value=""/>
+
+   <data id="ALT_BLOCK_CODE7" value=""/>
+
+   <data id="EMBOSSER_NAME16" value=""/>
+
+   <data id="ALT_BLOCK_CODE6" value=""/>
+
+   <data id="EMBOSSER_NAME15" value=""/>
+
+   <data id="ALT_BLOCK_CODE5" value=""/>
+
+   <data id="EMBOSSER_NAME14" value=""/>
+
+   <data id="ALT_BLOCK_CODE4" value=""/>
+
+   <data id="EMBOSSER_NAME13" value=""/>
+
+   <data id="ALT_BLOCK_CODE3" value=""/>
+
+   <data id="EMBOSSER_NAME12" value=""/>
+
+   <data id="ALT_BLOCK_CODE2" value=""/>
+
+   <data id="EMBOSSER_NAME11" value=""/>
+
+   <data id="ALT_BLOCK_CODE1" value=""/>
+
+   <data id="EMBOSSER_NAME10" value=""/>
+
+   <data id="CARD_NMBR19" value=""/>
+
+   <data id="CARD_NMBR18" value=""/>
+
+   <data id="CARD_NMBR17" value=""/>
+
+   <data id="CARD_NMBR16" value=""/>
+
+   <data id="CARD_NMBR15" value=""/>
+
+   <data id="LINE_CNT" value="0001"/>
+
+   <data id="CARD_NMBR14" value=""/>
+
+   <data id="CARD_NMBR13" value=""/>
+
+   <data id="CARD_NMBR12" value=""/>
+
+   <data id="CARD_NMBR11" value=""/>
+
+   <data id="CARD_NMBR10" value=""/>
+
+   <data id="SIGNED_FLAG20" value=""/>
+
+   <data id="OPEN_CARD_USER20" value=""/>
+
+   <data id="SIGNED_FLAG19" value=""/>
+
+   <data id="SIGNED_FLAG18" value=""/>
+
+   <data id="SIGNED_FLAG17" value=""/>
+
+   <data id="SIGNED_FLAG16" value=""/>
+
+   <data id="SIGNED_FLAG15" value=""/>
+
+   <data id="SIGNED_FLAG14" value=""/>
+
+   <data id="CARD_NAME9" value=""/>
+
+   <data id="SIGNED_FLAG13" value=""/>
+
+   <data id="CARD_NAME8" value=""/>
+
+   <data id="CARD_NAME7" value=""/>
+
+   <data id="SIGNED_FLAG12" value=""/>
+
+   <data id="CARD_NAME6" value=""/>
+
+   <data id="SIGNED_FLAG11" value=""/>
+
+   <data id="CARD_NAME5" value=""/>
+
+   <data id="SIGNED_FLAG10" value=""/>
+
+   <data id="OPCD_ERRCNT20" value=""/>
+
+   <data id="CARD_NAME4" value=""/>
+
+   <data id="CARD_NAME3" value=""/>
+
+   <data id="CARD_NAME2" value=""/>
+
+   <data id="OPCD_STATUS20" value=""/>
+
+   <data id="CARD_NAME1" value="測試瑄榮"/>
+
+   <data id="OPEN_CARD_USER19" value=""/>
+
+   <data id="OPEN_CARD_USER18" value=""/>
+
+   <data id="OPEN_CARD_USER17" value=""/>
+
+   <data id="OPEN_CARD_USER16" value=""/>
+
+   <data id="OPEN_CARD_USER15" value=""/>
+
+   <data id="OPEN_CARD_USER14" value=""/>
+
+   <data id="OPEN_CARD_USER13" value=""/>
+
+   <data id="OPEN_CARD_USER12" value=""/>
+
+   <data id="OPEN_CARD_USER11" value=""/>
+
+   <data id="OPEN_CARD_USER10" value=""/>
+
+   <data id="OPCD_ERRCNT19" value=""/>
+
+   <data id="OPCD_ERRCNT18" value=""/>
+
+   <data id="OPCD_ERRCNT17" value=""/>
+
+   <data id="OPCD_STATUS19" value=""/>
+
+   <data id="OPCD_ERRCNT16" value=""/>
+
+   <data id="OPCD_STATUS18" value=""/>
+
+   <data id="OPCD_ERRCNT15" value=""/>
+
+   <data id="OPCD_STATUS17" value=""/>
+
+   <data id="OPCD_ERRCNT14" value=""/>
+
+   <data id="OPCD_ERRCNT13" value=""/>
+
+   <data id="OPCD_STATUS16" value=""/>
+
+   <data id="OPCD_ERRCNT12" value=""/>
+
+   <data id="OPCD_STATUS15" value=""/>
+
+   <data id="OPCD_ERRCNT11" value=""/>
+
+   <data id="OPCD_STATUS14" value=""/>
+
+   <data id="OPCD_ERRCNT10" value=""/>
+
+   <data id="OPCD_STATUS13" value=""/>
+
+   <data id="OPCD_STATUS12" value=""/>
+
+   <data id="OPCD_STATUS11" value=""/>
+
+   <data id="OPCD_STATUS10" value=""/>
+
+   <data id="DTE_BLOCK_CODE20" value=""/>
+
+   <data id="DTE_BLOCK_CODE19" value=""/>
+
+   <data id="DTE_BLOCK_CODE18" value=""/>
+
+   <data id="DTE_BLOCK_CODE17" value=""/>
+
+   <data id="DTE_BLOCK_CODE16" value=""/>
+
+   <data id="DTE_BLOCK_CODE15" value=""/>
+
+   <data id="DTE_BLOCK_CODE14" value=""/>
+
+   <data id="DTE_BLOCK_CODE13" value=""/>
+
+   <data id="DTE_BLOCK_CODE12" value=""/>
+
+   <data id="DTE_BLOCK_CODE11" value=""/>
+
+   <data id="EXP_FLAG9" value=""/>
+
+   <data id="DTE_BLOCK_CODE10" value=""/>
+
+   <data id="EXP_FLAG8" value=""/>
+
+   <data id="EXP_FLAG7" value=""/>
+
+   <data id="EXP_FLAG6" value=""/>
+
+   <data id="EXP_FLAG5" value=""/>
+
+   <data id="EXP_FLAG4" value=""/>
+
+   <data id="EXP_FLAG3" value=""/>
+
+   <data id="EXP_FLAG2" value=""/>
+
+   <data id="EXP_FLAG1" value="N"/>
+
+   <data id="CARD_DESC9" value=""/>
+
+   <data id="CARD_DESC8" value=""/>
+
+   <data id="CARD_DESC7" value=""/>
+
+   <data id="COLLECTOR20" value=""/>
+
+   <data id="CARD_DESC6" value=""/>
+
+   <data id="CARD_DESC5" value=""/>
+
+   <data id="CARD_DESC4" value=""/>
+
+   <data id="CARD_DESC3" value=""/>
+
+   <data id="CARD_DESC2" value=""/>
+
+   <data id="CARD_DESC1" value="VT000020000"/>
+
+   <data id="USER_CODE_39" value=""/>
+
+   <data id="USER_CODE_38" value=""/>
+
+   <data id="USER_CODE_37" value=""/>
+
+   <data id="USER_CODE_36" value=""/>
+
+   <data id="USER_CODE_35" value=""/>
+
+   <data id="USER_CODE_34" value=""/>
+
+   <data id="USER_CODE_33" value=""/>
+
+   <data id="DRMT_FLAG9" value=""/>
+
+   <data id="USER_CODE_32" value=""/>
+
+   <data id="DRMT_FLAG8" value=""/>
+
+   <data id="USER_CODE_31" value="10"/>
+
+   <data id="DRMT_FLAG7" value=""/>
+
+   <data id="DRMT_FLAG6" value=""/>
+
+   <data id="DRMT_FLAG5" value=""/>
+
+   <data id="DRMT_FLAG4" value=""/>
+
+   <data id="COLLECTOR19" value=""/>
+
+   <data id="DRMT_FLAG3" value=""/>
+
+   <data id="COLLECTOR18" value=""/>
+
+   <data id="DRMT_FLAG2" value=""/>
+
+   <data id="COLLECTOR17" value=""/>
+
+   <data id="DRMT_FLAG1" value=""/>
+
+   <data id="COLLECTOR16" value=""/>
+
+   <data id="COLLECTOR15" value=""/>
+
+   <data id="COLLECTOR14" value=""/>
+
+   <data id="COLLECTOR13" value=""/>
+
+   <data id="COLLECTOR12" value=""/>
+
+   <data id="COLLECTOR11" value=""/>
+
+   <data id="COLLECTOR10" value=""/>
+
+   <data id="EXPIR_DATE20" value=""/>
+
+   <data id="MEMBER_NO9" value=""/>
+
+   <data id="EXPIR_DATE19" value=""/>
+
+   <data id="MEMBER_NO8" value=""/>
+
+   <data id="EXPIR_DATE18" value=""/>
+
+   <data id="MEMBER_NO7" value=""/>
+
+   <data id="EXPIR_DATE17" value=""/>
+
+   <data id="MEMBER_NO6" value=""/>
+
+   <data id="EXPIR_DATE16" value=""/>
+
+   <data id="MEMBER_NO5" value=""/>
+
+   <data id="EXPIR_DATE15" value=""/>
+
+   <data id="MEMBER_NO4" value=""/>
+
+   <data id="EXPIR_DATE14" value=""/>
+
+   <data id="MEMBER_NO3" value=""/>
+
+   <data id="EXPIR_DATE13" value=""/>
+
+   <data id="MEMBER_NO2" value=""/>
+
+   <data id="EXPIR_DATE12" value=""/>
+
+   <data id="MEMBER_NO1" value=""/>
+
+   <data id="EXPIR_DATE11" value=""/>
+
+   <data id="EXPIR_DATE10" value=""/>
+
+   <data id="CARD_TYPE20" value=""/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="CARD_TYPE19" value=""/>
+
+   <data id="CARD_TYPE18" value=""/>
+
+   <data id="CARD_TYPE17" value=""/>
+
+   <data id="CARD_TYPE16" value=""/>
+
+   <data id="CARD_TYPE15" value=""/>
+
+   <data id="CARD_TYPE14" value=""/>
+
+   <data id="CARD_TYPE13" value=""/>
+
+   <data id="CARD_TYPE12" value=""/>
+
+   <data id="CARD_TYPE11" value=""/>
+
+   <data id="CARD_TYPE10" value=""/>
+
+   <data id="DAM_CNT9" value=""/>
+
+   <data id="DAM_CNT8" value=""/>
+
+   <data id="DAM_CNT7" value=""/>
+
+   <data id="DAM_CNT6" value=""/>
+
+   <data id="DAM_CNT5" value=""/>
+
+   <data id="DAM_CNT4" value=""/>
+
+   <data id="DAM_CNT3" value=""/>
+
+   <data id="DAM_CNT2" value=""/>
+
+   <data id="DAM_CNT1" value="00000"/>
+
+   <data id="OPCD_ERRCNT9" value=""/>
+
+   <data id="OPCD_ERRCNT8" value=""/>
+
+   <data id="OPCD_ERRCNT7" value=""/>
+
+   <data id="OPCD_ERRCNT6" value=""/>
+
+   <data id="OPCD_ERRCNT5" value=""/>
+
+   <data id="OPCD_ERRCNT4" value=""/>
+
+   <data id="OPCD_ERRCNT3" value=""/>
+
+   <data id="OPCD_ERRCNT2" value=""/>
+
+   <data id="OPCD_ERRCNT1" value="0"/>
+
+   <data id="CRLIMIT20" value=""/>
+
+   <data id="CRLIMIT19" value=""/>
+
+   <data id="CRLIMIT18" value=""/>
+
+   <data id="CRLIMIT17" value=""/>
+
+   <data id="CRLIMIT16" value=""/>
+
+   <data id="CRLIMIT15" value=""/>
+
+   <data id="CRLIMIT14" value=""/>
+
+   <data id="CRLIMIT13" value=""/>
+
+   <data id="CRLIMIT12" value=""/>
+
+   <data id="CRLIMIT11" value=""/>
+
+   <data id="CRLIMIT10" value=""/>
+
+   <data id="PROGRAM_ID" value="JCGU620"/>
+
+   <data id="CARD_NAME20" value=""/>
+
+   <data id="CARD_NAME19" value=""/>
+
+   <data id="CARD_NAME18" value=""/>
+
+   <data id="CARD_NAME17" value=""/>
+
+   <data id="CARD_NAME16" value=""/>
+
+   <data id="CARD_NAME15" value=""/>
+
+   <data id="CARD_NAME14" value=""/>
+
+   <data id="CARD_NAME13" value=""/>
+
+   <data id="CARD_NAME12" value=""/>
+
+   <data id="CARD_NAME11" value=""/>
+
+   <data id="EMBOSSER_NAME9" value=""/>
+
+   <data id="CARD_NAME10" value=""/>
+
+   <data id="EMBOSSER_NAME8" value=""/>
+
+   <data id="EMBOSSER_NAME7" value=""/>
+
+   <data id="EMBOSSER_NAME6" value=""/>
+
+   <data id="EMBOSSER_NAME5" value=""/>
+
+   <data id="EMBOSSER_NAME4" value=""/>
+
+   <data id="EMBOSSER_NAME3" value=""/>
+
+   <data id="EMBOSSER_NAME2" value=""/>
+
+   <data id="EMBOSSER_NAME1" value="COTOWO-TOCC-MOTO"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:00:50,269 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：REQ HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="establishSession" />
+  </header>
+  <body>
+      <data id="applicationId" value="CSIP" />
+      <data id="branchNo" value="0993" />
+      <data id="passWord" value="********" />
+      <data id="racfId" value="Z45120" />
+      <data id="racfPassWord" value="********" />
+      <data id="signOnLU0" value="no" />
+      <data id="userId" value="Z00045120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:50,917 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：RTN HTGName：establishSession Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <rc value="700"/>
+
+ </header>
+
+ <body>
+
+  <msg value="700 SESSION 建立成功"/>
+
+  <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120"/>
+
+  <data id="loginServer" value="HTG214"/>
+
+ </body>
+
+</hostgateway>
+
+
+2021-10-07 17:00:50,944 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：REQ HTGName：P4_JCEM Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120" />
+      <data id="transactionId" value="P4_JCEM" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="4003611000471410" />
+      <data id="ADDR_1" value="" />
+      <data id="ADDR_2" value="" />
+      <data id="BLOCK_CODE" value="" />
+      <data id="CARD_TAKE" value="" />
+      <data id="CARDHOLDER_ID" value="" />
+      <data id="CARDHOLDER_NAME" value="" />
+      <data id="CITY" value="" />
+      <data id="CUSTOMER_NAME" value="" />
+      <data id="DTE_LST_REQ" value="" />
+      <data id="EMBOSS_DATE" value="" />
+      <data id="EMBOSS_NAME" value="" />
+      <data id="EMBOSS_TIME" value="" />
+      <data id="EMBOSS_TYPE" value="" />
+      <data id="EXPIRE_DATE" value="" />
+      <data id="FUNCTION_CODE" value="I" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MEM_NO" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="PREV_ACTION" value="" />
+      <data id="STATUS" value="" />
+      <data id="USER_ID" value="Z45120" />
+      <data id="XFR_CARD_NO" value="" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:51,555 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：RTN HTGName：P4_JCEM Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCEM"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="ADDR_2" value=""/>
+
+   <data id="ADDR_1" value=""/>
+
+   <data id="CITY" value=""/>
+
+   <data id="EMBOSS_TYPE" value="20"/>
+
+   <data id="CARDHOLDER_ID" value=""/>
+
+   <data id="STATUS" value="1"/>
+
+   <data id="TRAN_ID" value="JCEM"/>
+
+   <data id="XFR_CARD_NO" value=""/>
+
+   <data id="DTE_LST_REQ" value="09172021"/>
+
+   <data id="EMBOSS_TIME" value=""/>
+
+   <data id="FUNCTION_CODE" value="I"/>
+
+   <data id="PROGRAM_ID" value="JCGU070"/>
+
+   <data id="CUSTOMER_NAME" value=""/>
+
+   <data id="ACCT_NBR" value="4003611000471410"/>
+
+   <data id="PROGRAM_VERSION" value=""/>
+
+   <data id="MESSAGE_TYPE" value="6019"/>
+
+   <data id="CARD_TAKE" value=""/>
+
+   <data id="BLOCK_CODE" value=""/>
+
+   <data id="LINE_CNT" value="0"/>
+
+   <data id="MEM_NO" value=""/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="CARDHOLDER_NAME" value=""/>
+
+   <data id="EMBOSS_DATE" value=""/>
+
+   <data id="EXPIRE_DATE" value="0427"/>
+
+   <data id="PREV_ACTION" value="1"/>
+
+   <data id="EMBOSS_NAME" value="COTOWO-TOCC-MOTO"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:00:51,657 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：REQ HTGName：P4_JCAA Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120" />
+      <data id="transactionId" value="P4_JCAA" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="4003611000471410" />
+      <data id="FUNCTION_CODE" value="2" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="USER_ID" value="Z45120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:52,010 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：RTN HTGName：P4_JCAA Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCAA"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="STUS_FAX" value="00"/>
+
+   <data id="EMAIL" value=""/>
+
+   <data id="TITLE" value=""/>
+
+   <data id="CUSTID19" value=""/>
+
+   <data id="CUSTID18" value=""/>
+
+   <data id="E_SERVICE_CODE" value=""/>
+
+   <data id="CUSTID17" value=""/>
+
+   <data id="CUSTID16" value=""/>
+
+   <data id="CUSTID15" value=""/>
+
+   <data id="CUSTID14" value=""/>
+
+   <data id="ZIP" value="100"/>
+
+   <data id="CUSTID13" value=""/>
+
+   <data id="CUSTID12" value=""/>
+
+   <data id="CRG" value="0"/>
+
+   <data id="CUSTID11" value=""/>
+
+   <data id="GRADE_SCHOOL" value=""/>
+
+   <data id="CUSTID10" value=""/>
+
+   <data id="ARG" value="00"/>
+
+   <data id="NAME120" value=""/>
+
+   <data id="USER_CODE_320" value=""/>
+
+   <data id="SINCE" value="2109"/>
+
+   <data id="MOBILE_PHONE" value=""/>
+
+   <data id="ADDR_DATE" value=""/>
+
+   <data id="TYPE9" value=""/>
+
+   <data id="TYPE8" value=""/>
+
+   <data id="MLFG" value=""/>
+
+   <data id="TYPE7" value=""/>
+
+   <data id="TYPE6" value=""/>
+
+   <data id="TYPE5" value=""/>
+
+   <data id="TYPE4" value=""/>
+
+   <data id="TYPE3" value=""/>
+
+   <data id="NAME119" value=""/>
+
+   <data id="TYPE2" value=""/>
+
+   <data id="USER_CODE_319" value=""/>
+
+   <data id="NAME118" value=""/>
+
+   <data id="TYPE1" value="460"/>
+
+   <data id="USER_CODE_318" value=""/>
+
+   <data id="NAME117" value=""/>
+
+   <data id="USER_CODE_317" value=""/>
+
+   <data id="NAME116" value=""/>
+
+   <data id="USER_CODE_316" value=""/>
+
+   <data id="NAME115" value=""/>
+
+   <data id="USER_CODE_315" value=""/>
+
+   <data id="NAME114" value=""/>
+
+   <data id="USER_CODE_314" value=""/>
+
+   <data id="NAME113" value=""/>
+
+   <data id="USER_CODE_313" value=""/>
+
+   <data id="NAME112" value=""/>
+
+   <data id="USER_CODE_312" value=""/>
+
+   <data id="NAME111" value=""/>
+
+   <data id="NAME110" value=""/>
+
+   <data id="USER_CODE_311" value=""/>
+
+   <data id="USER_CODE_310" value=""/>
+
+   <data id="WEIGHTY_FLAG" value=""/>
+
+   <data id="FUNCTION_CODE" value="2"/>
+
+   <data id="NAME19" value=""/>
+
+   <data id="NAME18" value=""/>
+
+   <data id="NAME17" value=""/>
+
+   <data id="NAME16" value=""/>
+
+   <data id="NAME15" value=""/>
+
+   <data id="NAME14" value=""/>
+
+   <data id="NAME13" value=""/>
+
+   <data id="NAME12" value=""/>
+
+   <data id="NAME11" value="測試惠皓"/>
+
+   <data id="DELQ" value="0"/>
+
+   <data id="BLOCK_CODE9" value=""/>
+
+   <data id="BLOCK_CODE8" value=""/>
+
+   <data id="BLOCK_CODE7" value=""/>
+
+   <data id="BLOCK_CODE6" value=""/>
+
+   <data id="BLOCK_CODE5" value=""/>
+
+   <data id="EMPLOYER" value="測試名五"/>
+
+   <data id="BLOCK_CODE4" value=""/>
+
+   <data id="USER_CODE_39" value=""/>
+
+   <data id="UPDATE_PSWD_FLAG" value="N"/>
+
+   <data id="BLOCK_CODE3" value=""/>
+
+   <data id="USER_CODE_38" value=""/>
+
+   <data id="BLOCK_CODE2" value=""/>
+
+   <data id="TCRG" value="00"/>
+
+   <data id="USER_CODE_37" value=""/>
+
+   <data id="BLOCK_CODE1" value=""/>
+
+   <data id="USER_CODE_36" value=""/>
+
+   <data id="USER_CODE_35" value=""/>
+
+   <data id="CR_EU_BANK_ACCT_IND" value=""/>
+
+   <data id="USER_CODE_34" value=""/>
+
+   <data id="USER_CODE_33" value=""/>
+
+   <data id="USER_CODE_32" value=""/>
+
+   <data id="HOME_PHONE" value=""/>
+
+   <data id="USER_CODE_31" value="10"/>
+
+   <data id="TARG" value="18"/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="CITY" value="測試梅市"/>
+
+   <data id="SHE_FLAG" value=""/>
+
+   <data id="STUS_ID" value="00"/>
+
+   <data id="NGF" value=""/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="RATE_OPEN_DATE" value="202109"/>
+
+   <data id="TOP_FLAG" value="T"/>
+
+   <data id="DUEDT" value="20211015"/>
+
+   <data id="OFFICE_PHON" value=""/>
+
+   <data id="TRAN_ID" value="JCAA"/>
+
+   <data id="CUSTID9" value=""/>
+
+   <data id="CUSTID8" value=""/>
+
+   <data id="CUSTID7" value=""/>
+
+   <data id="CUSTID6" value=""/>
+
+   <data id="CUSTID5" value=""/>
+
+   <data id="CUSTID4" value=""/>
+
+   <data id="CUSTID3" value=""/>
+
+   <data id="CUSTID2" value=""/>
+
+   <data id="CUSTID1" value="F290568039"/>
+
+   <data id="SERV_CH" value=""/>
+
+   <data id="CARD_NMBR20" value=""/>
+
+   <data id="PASSWORD" value="N"/>
+
+   <data id="STUS_MOBIL" value="00"/>
+
+   <data id="CARD_NMBR19" value=""/>
+
+   <data id="CARD_NMBR18" value=""/>
+
+   <data id="CARD_NMBR17" value=""/>
+
+   <data id="SERV_GRAD" value=""/>
+
+   <data id="CARD_NMBR16" value=""/>
+
+   <data id="CARD_NMBR15" value=""/>
+
+   <data id="CARD_NMBR14" value=""/>
+
+   <data id="CARD_NMBR13" value=""/>
+
+   <data id="CARD_NMBR12" value=""/>
+
+   <data id="CARD_NMBR11" value=""/>
+
+   <data id="CARD_NMBR10" value=""/>
+
+   <data id="PSWD_TRY_ERR_CNT" value="0"/>
+
+   <data id="TYPE20" value=""/>
+
+   <data id="CRT_LIABLE_FLAG" value="N"/>
+
+   <data id="TYPE19" value=""/>
+
+   <data id="TYPE18" value=""/>
+
+   <data id="BLOCK_CODE20" value=""/>
+
+   <data id="TYPE17" value=""/>
+
+   <data id="TYPE16" value=""/>
+
+   <data id="TYPE15" value=""/>
+
+   <data id="TYPE14" value=""/>
+
+   <data id="TYPE13" value=""/>
+
+   <data id="TYPE12" value=""/>
+
+   <data id="TYPE11" value=""/>
+
+   <data id="TYPE10" value=""/>
+
+   <data id="BPS_EXPIRE_YM" value="000000"/>
+
+   <data id="BLOCK_CODE19" value=""/>
+
+   <data id="BLOCK_CODE18" value=""/>
+
+   <data id="BLOCK_CODE17" value=""/>
+
+   <data id="BLOCK_CODE16" value=""/>
+
+   <data id="BLOCK_CODE15" value=""/>
+
+   <data id="BLOCK_CODE14" value=""/>
+
+   <data id="RATE" value="1500"/>
+
+   <data id="BLOCK_CODE13" value=""/>
+
+   <data id="BLOCK_CODE12" value=""/>
+
+   <data id="RATE_EXPIRE_DATE" value="202111"/>
+
+   <data id="BLOCK_CODE11" value=""/>
+
+   <data id="BLOCK_CODE10" value=""/>
+
+   <data id="AVAIL_CASH" value=" 000100000"/>
+
+   <data id="CARD_NMBR9" value=""/>
+
+   <data id="CARD_NMBR8" value=""/>
+
+   <data id="CARD_NMBR7" value=""/>
+
+   <data id="STUS_TELP" value="00"/>
+
+   <data id="CARD_NMBR6" value=""/>
+
+   <data id="STUS_TELO" value="00"/>
+
+   <data id="CARD_NMBR5" value=""/>
+
+   <data id="CARD_NMBR4" value=""/>
+
+   <data id="CARD_NMBR3" value=""/>
+
+   <data id="CARD_NMBR2" value=""/>
+
+   <data id="CARD_NMBR1" value="4003611000471410"/>
+
+   <data id="STUS_TELH" value="00"/>
+
+   <data id="PRFB_BLOCK_CODE" value=""/>
+
+   <data id="STUS_ADDP" value="00"/>
+
+   <data id="NGMT_PYMT_PLAN" value="XX"/>
+
+   <data id="OVERSEA_PHONE" value=""/>
+
+   <data id="ADDR_2" value=""/>
+
+   <data id="ADDR_1" value="測試省八員市八員區八員里"/>
+
+   <data id="CR_SUBBPS" value=""/>
+
+   <data id="STUS_ADDB" value="00"/>
+
+   <data id="STUS_EMAIL" value="00"/>
+
+   <data id="PROGRAM_ID" value="JCGU601"/>
+
+   <data id="DTE_BIRTH" value="19911014"/>
+
+   <data id="LINE_CNT" value="0001"/>
+
+   <data id="CR_DTE_LST_MAINT" value="20210917"/>
+
+   <data id="SEGMENT_CODE" value=""/>
+
+   <data id="CUST_GRADE" value="T"/>
+
+   <data id="SMSA" value="0000"/>
+
+   <data id="CO_OWNER" value=""/>
+
+   <data id="SHORT_NAME" value="測試惠皓"/>
+
+   <data id="EU_TITLE_1" value=""/>
+
+   <data id="GRADE_SCHOOL_LOCATE" value=""/>
+
+   <data id="ACCT_NBR" value="F290568039"/>
+
+   <data id="FAX_NO" value=""/>
+
+   <data id="CYCLE" value="27"/>
+
+   <data id="CUSTID20" value=""/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:00:52,115 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：REQ HTGName：P4_JCAT Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="lowValue" value="true" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120" />
+      <data id="transactionId" value="P4_JCAT" />
+  </header>
+  <body>
+      <data id="ACCT_NBR" value="F290568039" />
+      <data id="FUNCTION_CODE" value="1" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="USER_ID" value="Z45120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:52,367 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：RTN HTGName：P4_JCAT Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCAT"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="CUST_ID9" value=""/>
+
+   <data id="CUST_ID8" value=""/>
+
+   <data id="CUST_ID7" value=""/>
+
+   <data id="CUST_ID6" value=""/>
+
+   <data id="CUST_ID5" value=""/>
+
+   <data id="CUST_ID4" value=""/>
+
+   <data id="CUST_ID3" value=""/>
+
+   <data id="CUST_ID2" value=""/>
+
+   <data id="CUST_ID1" value="F290568039"/>
+
+   <data id="USER_CODE_320" value=""/>
+
+   <data id="USER_CODE_319" value=""/>
+
+   <data id="USER_CODE_318" value=""/>
+
+   <data id="USER_CODE_317" value=""/>
+
+   <data id="USER_CODE_316" value=""/>
+
+   <data id="USER_CODE_315" value=""/>
+
+   <data id="USER_CODE_314" value=""/>
+
+   <data id="USER_CODE_313" value=""/>
+
+   <data id="USER_CODE_312" value=""/>
+
+   <data id="USER_CODE_311" value=""/>
+
+   <data id="USER_CODE_310" value=""/>
+
+   <data id="MTC2_AGREE_MARK9" value=""/>
+
+   <data id="MTC2_AGREE_MARK8" value=""/>
+
+   <data id="MTC2_AGREE_MARK7" value=""/>
+
+   <data id="MTC2_AGREE_MARK6" value=""/>
+
+   <data id="MTC2_AGREE_MARK5" value=""/>
+
+   <data id="MTC2_AGREE_MARK4" value=""/>
+
+   <data id="MTC2_AGREE_MARK3" value=""/>
+
+   <data id="MTC2_AGREE_MARK2" value=""/>
+
+   <data id="MTC2_AGREE_MARK1" value="N"/>
+
+   <data id="CM_CARD_TYPE20" value=""/>
+
+   <data id="CM_CARD_TYPE19" value=""/>
+
+   <data id="CM_CARD_TYPE18" value=""/>
+
+   <data id="CM_CARD_TYPE17" value=""/>
+
+   <data id="CM_CARD_TYPE16" value=""/>
+
+   <data id="CM_CARD_TYPE15" value=""/>
+
+   <data id="CM_CARD_TYPE14" value=""/>
+
+   <data id="CM_CARD_TYPE13" value=""/>
+
+   <data id="CM_CARD_TYPE12" value=""/>
+
+   <data id="CM_CARD_TYPE11" value=""/>
+
+   <data id="CM_CARD_TYPE10" value=""/>
+
+   <data id="ACCT_NBR" value="F290568039"/>
+
+   <data id="AGENT_BANK20" value=""/>
+
+   <data id="TRAN_ID" value="JCAT"/>
+
+   <data id="AGENT_BANK19" value=""/>
+
+   <data id="AGENT_BANK18" value=""/>
+
+   <data id="AGENT_BANK17" value=""/>
+
+   <data id="AGENT_BANK16" value=""/>
+
+   <data id="AGENT_BANK15" value=""/>
+
+   <data id="AGENT_BANK14" value=""/>
+
+   <data id="AGENT_BANK13" value=""/>
+
+   <data id="AGENT_BANK12" value=""/>
+
+   <data id="AGENT_BANK11" value=""/>
+
+   <data id="AGENT_BANK10" value=""/>
+
+   <data id="OCCO_NAME9" value=""/>
+
+   <data id="OCCO_NAME8" value=""/>
+
+   <data id="OCCO_NAME7" value=""/>
+
+   <data id="OCCO_NAME6" value=""/>
+
+   <data id="OCCO_NAME5" value=""/>
+
+   <data id="CARD_TYPE9" value=""/>
+
+   <data id="OCCO_NAME4" value=""/>
+
+   <data id="CARD_TYPE8" value=""/>
+
+   <data id="OCCO_NAME3" value=""/>
+
+   <data id="CARD_TYPE7" value=""/>
+
+   <data id="OCCO_NAME2" value=""/>
+
+   <data id="CARD_TYPE6" value=""/>
+
+   <data id="OCCO_NAME1" value=""/>
+
+   <data id="CARD_TYPE5" value=""/>
+
+   <data id="CARD_TYPE4" value=""/>
+
+   <data id="DAM_CNT20" value=""/>
+
+   <data id="CARD_TYPE3" value=""/>
+
+   <data id="CARD_TYPE2" value=""/>
+
+   <data id="CARD_TYPE1" value="460"/>
+
+   <data id="OCCO_EXT9" value=""/>
+
+   <data id="OCCO_EXT8" value=""/>
+
+   <data id="OCCO_EXT7" value=""/>
+
+   <data id="OCCO_EXT6" value=""/>
+
+   <data id="OCCO_EXT5" value=""/>
+
+   <data id="OCCO_EXT4" value=""/>
+
+   <data id="OCCO_EXT3" value=""/>
+
+   <data id="OCCO_EXT2" value=""/>
+
+   <data id="MEMBER_NO20" value=""/>
+
+   <data id="OCCO_EXT1" value=""/>
+
+   <data id="ML_PROD20" value=""/>
+
+   <data id="DAM_CNT19" value=""/>
+
+   <data id="DAM_CNT18" value=""/>
+
+   <data id="OASAM9" value=""/>
+
+   <data id="DAM_CNT17" value=""/>
+
+   <data id="OASAM8" value=""/>
+
+   <data id="DAM_CNT16" value=""/>
+
+   <data id="OASAM7" value=""/>
+
+   <data id="DAM_CNT15" value=""/>
+
+   <data id="OASAM6" value=""/>
+
+   <data id="DAM_CNT14" value=""/>
+
+   <data id="OASAM5" value=""/>
+
+   <data id="DAM_CNT13" value=""/>
+
+   <data id="OASAM4" value=""/>
+
+   <data id="DAM_CNT12" value=""/>
+
+   <data id="OASAM3" value=""/>
+
+   <data id="DAM_CNT11" value=""/>
+
+   <data id="OASAM2" value=""/>
+
+   <data id="DAM_CNT10" value=""/>
+
+   <data id="OASAM1" value=""/>
+
+   <data id="MEMBER_NO19" value=""/>
+
+   <data id="ML_PROD19" value=""/>
+
+   <data id="MEMBER_NO18" value=""/>
+
+   <data id="ML_PROD18" value=""/>
+
+   <data id="MEMBER_NO17" value=""/>
+
+   <data id="ML_PROD17" value=""/>
+
+   <data id="MEMBER_NO16" value=""/>
+
+   <data id="ML_PROD16" value=""/>
+
+   <data id="MEMBER_NO15" value=""/>
+
+   <data id="ML_PROD15" value=""/>
+
+   <data id="MEMBER_NO14" value=""/>
+
+   <data id="ML_PROD14" value=""/>
+
+   <data id="MEMBER_NO13" value=""/>
+
+   <data id="ML_PROD13" value=""/>
+
+   <data id="MEMBER_NO12" value=""/>
+
+   <data id="ML_PROD12" value=""/>
+
+   <data id="MEMBER_NO11" value=""/>
+
+   <data id="ML_PROD11" value=""/>
+
+   <data id="MEMBER_NO10" value=""/>
+
+   <data id="BLOCK_CODE20" value=""/>
+
+   <data id="ML_PROD10" value=""/>
+
+   <data id="COLLATERAL_CODE20" value=""/>
+
+   <data id="COLLATERAL_CODE9" value=""/>
+
+   <data id="CUST_ID20" value=""/>
+
+   <data id="COLLATERAL_CODE8" value=""/>
+
+   <data id="COLLATERAL_CODE7" value=""/>
+
+   <data id="COLLATERAL_CODE6" value=""/>
+
+   <data id="COLLATERAL_CODE5" value=""/>
+
+   <data id="BLOCK_CODE19" value=""/>
+
+   <data id="COLLATERAL_CODE4" value=""/>
+
+   <data id="BLOCK_CODE18" value=""/>
+
+   <data id="COLLATERAL_CODE3" value=""/>
+
+   <data id="BLOCK_CODE17" value=""/>
+
+   <data id="COLLATERAL_CODE2" value=""/>
+
+   <data id="COLLATERAL_CODE1" value="T"/>
+
+   <data id="BLOCK_CODE16" value=""/>
+
+   <data id="BLOCK_CODE15" value=""/>
+
+   <data id="BLOCK_CODE14" value=""/>
+
+   <data id="BLOCK_CODE13" value=""/>
+
+   <data id="BLOCK_CODE12" value=""/>
+
+   <data id="BLOCK_CODE11" value=""/>
+
+   <data id="BLOCK_CODE10" value=""/>
+
+   <data id="COLLATERAL_CODE19" value=""/>
+
+   <data id="COLLATERAL_CODE18" value=""/>
+
+   <data id="CUST_ID19" value=""/>
+
+   <data id="COLLATERAL_CODE17" value=""/>
+
+   <data id="CUST_ID18" value=""/>
+
+   <data id="COLLATERAL_CODE16" value=""/>
+
+   <data id="CUST_ID17" value=""/>
+
+   <data id="COLLATERAL_CODE15" value=""/>
+
+   <data id="COLLATERAL_CODE14" value=""/>
+
+   <data id="CUST_ID16" value=""/>
+
+   <data id="COLLATERAL_CODE13" value=""/>
+
+   <data id="CUST_ID15" value=""/>
+
+   <data id="COLLATERAL_CODE12" value=""/>
+
+   <data id="CUST_ID14" value=""/>
+
+   <data id="COLLATERAL_CODE11" value=""/>
+
+   <data id="CUST_ID13" value=""/>
+
+   <data id="COLLATERAL_CODE10" value=""/>
+
+   <data id="CUST_ID12" value=""/>
+
+   <data id="CUST_ID11" value=""/>
+
+   <data id="CUST_ID10" value=""/>
+
+   <data id="CRLIMIT9" value=""/>
+
+   <data id="CRLIMIT8" value=""/>
+
+   <data id="CRLIMIT7" value=""/>
+
+   <data id="CRLIMIT6" value=""/>
+
+   <data id="CRLIMIT5" value=""/>
+
+   <data id="CRLIMIT4" value=""/>
+
+   <data id="CRLIMIT3" value=""/>
+
+   <data id="BLOCK_CODE9" value=""/>
+
+   <data id="CRLIMIT2" value=""/>
+
+   <data id="BLOCK_CODE8" value=""/>
+
+   <data id="CRLIMIT1" value=" 0001000000"/>
+
+   <data id="BLOCK_CODE7" value=""/>
+
+   <data id="BLOCK_CODE6" value=""/>
+
+   <data id="BLOCK_CODE5" value=""/>
+
+   <data id="BLOCK_CODE4" value=""/>
+
+   <data id="BLOCK_CODE3" value=""/>
+
+   <data id="BLOCK_CODE2" value=""/>
+
+   <data id="BLOCK_CODE1" value=""/>
+
+   <data id="EXP_FLAG20" value=""/>
+
+   <data id="EXP_FLAG19" value=""/>
+
+   <data id="EXP_FLAG18" value=""/>
+
+   <data id="EXP_FLAG17" value=""/>
+
+   <data id="EXP_FLAG16" value=""/>
+
+   <data id="EXP_FLAG15" value=""/>
+
+   <data id="EXP_FLAG14" value=""/>
+
+   <data id="EXP_FLAG13" value=""/>
+
+   <data id="EXP_FLAG12" value=""/>
+
+   <data id="EXP_FLAG11" value=""/>
+
+   <data id="AGENT_BANK9" value=""/>
+
+   <data id="EXP_FLAG10" value=""/>
+
+   <data id="AGENT_BANK8" value=""/>
+
+   <data id="AGENT_BANK7" value=""/>
+
+   <data id="AGENT_BANK6" value=""/>
+
+   <data id="AGENT_BANK5" value=""/>
+
+   <data id="AGENT_BANK4" value=""/>
+
+   <data id="AGENT_BANK3" value=""/>
+
+   <data id="AGENT_BANK2" value=""/>
+
+   <data id="AGENT_BANK1" value="00000"/>
+
+   <data id="SIGNED_FLAG9" value=""/>
+
+   <data id="SIGNED_FLAG8" value=""/>
+
+   <data id="SIGNED_FLAG7" value=""/>
+
+   <data id="SIGNED_FLAG6" value=""/>
+
+   <data id="SIGNED_FLAG5" value=""/>
+
+   <data id="SIGNED_FLAG4" value=""/>
+
+   <data id="SIGNED_FLAG3" value=""/>
+
+   <data id="SIGNED_FLAG2" value=""/>
+
+   <data id="SIGNED_FLAG1" value="N"/>
+
+   <data id="FUNCTION_CODE" value="1"/>
+
+   <data id="OASAM20" value=""/>
+
+   <data id="ML_PROD9" value=""/>
+
+   <data id="ML_PROD8" value=""/>
+
+   <data id="ML_PROD7" value=""/>
+
+   <data id="ML_PROD6" value=""/>
+
+   <data id="ML_PROD5" value=""/>
+
+   <data id="ML_PROD4" value=""/>
+
+   <data id="ML_PROD3" value=""/>
+
+   <data id="ML_PROD2" value=""/>
+
+   <data id="ML_PROD1" value=""/>
+
+   <data id="OASAM19" value=""/>
+
+   <data id="OASAM18" value=""/>
+
+   <data id="OASAM17" value=""/>
+
+   <data id="OASAM16" value=""/>
+
+   <data id="OASAM15" value=""/>
+
+   <data id="OASAM14" value=""/>
+
+   <data id="OASAM13" value=""/>
+
+   <data id="OASAM12" value=""/>
+
+   <data id="OASAM11" value=""/>
+
+   <data id="OASAM10" value=""/>
+
+   <data id="OPCD_STATUS9" value=""/>
+
+   <data id="OPCD_STATUS8" value=""/>
+
+   <data id="OPCD_STATUS7" value=""/>
+
+   <data id="OPCD_STATUS6" value=""/>
+
+   <data id="OPCD_STATUS5" value=""/>
+
+   <data id="CM_MEMO9" value=""/>
+
+   <data id="OPCD_STATUS4" value=""/>
+
+   <data id="CM_MEMO8" value=""/>
+
+   <data id="OPCD_STATUS3" value=""/>
+
+   <data id="CM_MEMO7" value=""/>
+
+   <data id="OPCD_STATUS2" value=""/>
+
+   <data id="CM_MEMO6" value=""/>
+
+   <data id="OPCD_STATUS1" value="N"/>
+
+   <data id="CM_MEMO5" value=""/>
+
+   <data id="CM_MEMO4" value=""/>
+
+   <data id="MESSAGE_TYPE" value="0001"/>
+
+   <data id="CM_MEMO3" value=""/>
+
+   <data id="CM_MEMO2" value=""/>
+
+   <data id="CM_MEMO1" value=""/>
+
+   <data id="CARD_DESC20" value=""/>
+
+   <data id="CARD_DESC19" value=""/>
+
+   <data id="OASS_USER_ID9" value=""/>
+
+   <data id="CARD_DESC18" value=""/>
+
+   <data id="OASS_USER_ID8" value=""/>
+
+   <data id="CARD_DESC17" value=""/>
+
+   <data id="OASS_USER_ID7" value=""/>
+
+   <data id="OASS_USER_ID6" value=""/>
+
+   <data id="CARD_DESC16" value=""/>
+
+   <data id="OASS_USER_ID5" value=""/>
+
+   <data id="CARD_DESC15" value=""/>
+
+   <data id="OASS_USER_ID4" value=""/>
+
+   <data id="CARD_DESC14" value=""/>
+
+   <data id="OASS_USER_ID3" value=""/>
+
+   <data id="CARD_DESC13" value=""/>
+
+   <data id="OASS_USER_ID2" value=""/>
+
+   <data id="CARD_DESC12" value=""/>
+
+   <data id="OASS_USER_ID1" value=""/>
+
+   <data id="CARD_DESC11" value=""/>
+
+   <data id="CARD_DESC10" value=""/>
+
+   <data id="CARD_STYLE20" value=""/>
+
+   <data id="MTC2_AGREE_MARK20" value=""/>
+
+   <data id="CARD_STYLE19" value=""/>
+
+   <data id="CARD_STYLE18" value=""/>
+
+   <data id="CARD_STYLE17" value=""/>
+
+   <data id="CARD_STYLE16" value=""/>
+
+   <data id="CARD_STYLE15" value=""/>
+
+   <data id="CARD_STYLE14" value=""/>
+
+   <data id="CARD_STYLE13" value=""/>
+
+   <data id="CARD_STYLE12" value=""/>
+
+   <data id="CARD_STYLE11" value=""/>
+
+   <data id="CARD_STYLE10" value=""/>
+
+   <data id="MTC2_AGREE_MARK19" value=""/>
+
+   <data id="MTC2_AGREE_MARK18" value=""/>
+
+   <data id="MTC2_AGREE_MARK17" value=""/>
+
+   <data id="MTC2_AGREE_MARK16" value=""/>
+
+   <data id="MTC2_AGREE_MARK15" value=""/>
+
+   <data id="MTC2_AGREE_MARK14" value=""/>
+
+   <data id="MTC2_AGREE_MARK13" value=""/>
+
+   <data id="MTC2_AGREE_MARK12" value=""/>
+
+   <data id="CARD_NMBR9" value=""/>
+
+   <data id="MTC2_AGREE_MARK11" value=""/>
+
+   <data id="CARD_NMBR8" value=""/>
+
+   <data id="MTC2_AGREE_MARK10" value=""/>
+
+   <data id="CARD_NMBR7" value=""/>
+
+   <data id="CARD_NMBR6" value=""/>
+
+   <data id="CARD_NMBR5" value=""/>
+
+   <data id="CARD_NMBR4" value=""/>
+
+   <data id="CARD_NMBR3" value=""/>
+
+   <data id="CARD_NMBR2" value=""/>
+
+   <data id="CARD_NMBR1" value="4003611000471410"/>
+
+   <data id="DTE_OPENED9" value=""/>
+
+   <data id="DTE_OPENED8" value=""/>
+
+   <data id="DTE_OPENED7" value=""/>
+
+   <data id="DTE_OPENED6" value=""/>
+
+   <data id="DTE_OPENED5" value=""/>
+
+   <data id="DTE_OPENED4" value=""/>
+
+   <data id="DTE_OPENED3" value=""/>
+
+   <data id="DTE_OPENED2" value=""/>
+
+   <data id="COLLECTOR9" value=""/>
+
+   <data id="DTE_OPENED1" value="20210917"/>
+
+   <data id="COLLECTOR8" value=""/>
+
+   <data id="COLLECTOR7" value=""/>
+
+   <data id="COLLECTOR6" value=""/>
+
+   <data id="COLLECTOR5" value=""/>
+
+   <data id="COLLECTOR4" value=""/>
+
+   <data id="COLLECTOR3" value=""/>
+
+   <data id="COLLECTOR2" value=""/>
+
+   <data id="COLLECTOR1" value=""/>
+
+   <data id="OCCO_NAME20" value=""/>
+
+   <data id="CM_CARD_TYPE9" value=""/>
+
+   <data id="CM_CARD_TYPE8" value=""/>
+
+   <data id="CM_CARD_TYPE7" value=""/>
+
+   <data id="CM_CARD_TYPE6" value=""/>
+
+   <data id="CM_CARD_TYPE5" value=""/>
+
+   <data id="OCCO_NAME19" value=""/>
+
+   <data id="CM_CARD_TYPE4" value=""/>
+
+   <data id="OCCO_NAME18" value=""/>
+
+   <data id="CM_CARD_TYPE3" value=""/>
+
+   <data id="OCCO_NAME17" value=""/>
+
+   <data id="CM_CARD_TYPE2" value=""/>
+
+   <data id="CM_CARD_TYPE1" value="20"/>
+
+   <data id="OCCO_NAME16" value=""/>
+
+   <data id="OCCO_NAME15" value=""/>
+
+   <data id="OCCO_NAME14" value=""/>
+
+   <data id="OCCO_NAME13" value=""/>
+
+   <data id="OCCO_NAME12" value=""/>
+
+   <data id="OCCO_NAME11" value=""/>
+
+   <data id="OCCO_NAME10" value=""/>
+
+   <data id="OASS_USER_ID20" value=""/>
+
+   <data id="DRMT_FLAG20" value=""/>
+
+   <data id="OASS_USER_ID19" value=""/>
+
+   <data id="OASS_USER_ID18" value=""/>
+
+   <data id="OASS_USER_ID17" value=""/>
+
+   <data id="DRMT_FLAG19" value=""/>
+
+   <data id="OASS_USER_ID16" value=""/>
+
+   <data id="DRMT_FLAG18" value=""/>
+
+   <data id="OASS_USER_ID15" value=""/>
+
+   <data id="DRMT_FLAG17" value=""/>
+
+   <data id="OASS_USER_ID14" value=""/>
+
+   <data id="DRMT_FLAG16" value=""/>
+
+   <data id="OASS_USER_ID13" value=""/>
+
+   <data id="DRMT_FLAG15" value=""/>
+
+   <data id="OASS_USER_ID12" value=""/>
+
+   <data id="DRMT_FLAG14" value=""/>
+
+   <data id="OASS_USER_ID11" value=""/>
+
+   <data id="DRMT_FLAG13" value=""/>
+
+   <data id="OASS_USER_ID10" value=""/>
+
+   <data id="DRMT_FLAG12" value=""/>
+
+   <data id="DRMT_FLAG11" value=""/>
+
+   <data id="DRMT_FLAG10" value=""/>
+
+   <data id="S_CODE_FLAG9" value=""/>
+
+   <data id="S_CODE_FLAG8" value=""/>
+
+   <data id="S_CODE_FLAG7" value=""/>
+
+   <data id="S_CODE_FLAG6" value=""/>
+
+   <data id="S_CODE_FLAG5" value=""/>
+
+   <data id="S_CODE_FLAG4" value=""/>
+
+   <data id="S_CODE_FLAG3" value=""/>
+
+   <data id="S_CODE_FLAG2" value=""/>
+
+   <data id="S_CODE_FLAG1" value=""/>
+
+   <data id="ALT_BLOCK_CODE20" value=""/>
+
+   <data id="S_CODE_FLAG20" value=""/>
+
+   <data id="DTE_OPENED20" value=""/>
+
+   <data id="CM_MEMO20" value=""/>
+
+   <data id="ALT_BLOCK_CODE19" value=""/>
+
+   <data id="ALT_BLOCK_CODE18" value=""/>
+
+   <data id="ALT_BLOCK_CODE17" value=""/>
+
+   <data id="ALT_BLOCK_CODE16" value=""/>
+
+   <data id="ALT_BLOCK_CODE15" value=""/>
+
+   <data id="CARD_STYLE9" value=""/>
+
+   <data id="ALT_BLOCK_CODE14" value=""/>
+
+   <data id="CARD_STYLE8" value=""/>
+
+   <data id="ALT_BLOCK_CODE13" value=""/>
+
+   <data id="CARD_STYLE7" value=""/>
+
+   <data id="ALT_BLOCK_CODE12" value=""/>
+
+   <data id="CARD_STYLE6" value=""/>
+
+   <data id="ALT_BLOCK_CODE11" value=""/>
+
+   <data id="CARD_STYLE5" value=""/>
+
+   <data id="ALT_BLOCK_CODE10" value=""/>
+
+   <data id="CARD_STYLE4" value=""/>
+
+   <data id="CARD_STYLE3" value=""/>
+
+   <data id="OCCO_EXT20" value=""/>
+
+   <data id="S_CODE_FLAG19" value=""/>
+
+   <data id="CARD_STYLE2" value=""/>
+
+   <data id="S_CODE_FLAG18" value=""/>
+
+   <data id="CARD_STYLE1" value="00"/>
+
+   <data id="S_CODE_FLAG17" value=""/>
+
+   <data id="S_CODE_FLAG16" value=""/>
+
+   <data id="S_CODE_FLAG15" value=""/>
+
+   <data id="S_CODE_FLAG14" value=""/>
+
+   <data id="S_CODE_FLAG13" value=""/>
+
+   <data id="S_CODE_FLAG12" value=""/>
+
+   <data id="S_CODE_FLAG11" value=""/>
+
+   <data id="DTE_OPENED19" value=""/>
+
+   <data id="S_CODE_FLAG10" value=""/>
+
+   <data id="DTE_OPENED18" value=""/>
+
+   <data id="CM_MEMO19" value=""/>
+
+   <data id="DTE_OPENED17" value=""/>
+
+   <data id="CM_MEMO18" value=""/>
+
+   <data id="DTE_OPENED16" value=""/>
+
+   <data id="CM_MEMO17" value=""/>
+
+   <data id="DTE_OPENED15" value=""/>
+
+   <data id="CM_MEMO16" value=""/>
+
+   <data id="DTE_OPENED14" value=""/>
+
+   <data id="CM_MEMO15" value=""/>
+
+   <data id="DTE_OPENED13" value=""/>
+
+   <data id="CM_MEMO14" value=""/>
+
+   <data id="DTE_OPENED12" value=""/>
+
+   <data id="DTE_OPENED11" value=""/>
+
+   <data id="CM_MEMO13" value=""/>
+
+   <data id="DTE_OPENED10" value=""/>
+
+   <data id="CM_MEMO12" value=""/>
+
+   <data id="CM_MEMO11" value=""/>
+
+   <data id="CM_MEMO10" value=""/>
+
+   <data id="OCCO_EXT19" value=""/>
+
+   <data id="OCCO_EXT18" value=""/>
+
+   <data id="OCCO_EXT17" value=""/>
+
+   <data id="OCCO_EXT16" value=""/>
+
+   <data id="OCCO_EXT15" value=""/>
+
+   <data id="OCCO_EXT14" value=""/>
+
+   <data id="OCCO_EXT13" value=""/>
+
+   <data id="OCCO_EXT12" value=""/>
+
+   <data id="OCCO_EXT11" value=""/>
+
+   <data id="OCCO_EXT10" value=""/>
+
+   <data id="OPEN_CARD_USER9" value=""/>
+
+   <data id="OPEN_CARD_USER8" value=""/>
+
+   <data id="OPEN_CARD_USER7" value=""/>
+
+   <data id="EXPIR_DATE9" value=""/>
+
+   <data id="OPEN_CARD_USER6" value=""/>
+
+   <data id="EXPIR_DATE8" value=""/>
+
+   <data id="OPEN_CARD_USER5" value=""/>
+
+   <data id="EXPIR_DATE7" value=""/>
+
+   <data id="OPEN_CARD_USER4" value=""/>
+
+   <data id="EXPIR_DATE6" value=""/>
+
+   <data id="OPEN_CARD_USER3" value=""/>
+
+   <data id="EXPIR_DATE5" value=""/>
+
+   <data id="OPEN_CARD_USER2" value=""/>
+
+   <data id="EXPIR_DATE4" value=""/>
+
+   <data id="OPEN_CARD_USER1" value=""/>
+
+   <data id="EXPIR_DATE3" value=""/>
+
+   <data id="EXPIR_DATE2" value=""/>
+
+   <data id="EXPIR_DATE1" value="0427"/>
+
+   <data id="DTE_BLOCK_CODE9" value=""/>
+
+   <data id="DTE_BLOCK_CODE8" value=""/>
+
+   <data id="DTE_BLOCK_CODE7" value=""/>
+
+   <data id="DTE_BLOCK_CODE6" value=""/>
+
+   <data id="DTE_BLOCK_CODE5" value=""/>
+
+   <data id="EMBOSSER_NAME20" value=""/>
+
+   <data id="DTE_BLOCK_CODE4" value=""/>
+
+   <data id="DTE_BLOCK_CODE3" value=""/>
+
+   <data id="DTE_BLOCK_CODE2" value=""/>
+
+   <data id="DTE_BLOCK_CODE1" value="00000000"/>
+
+   <data id="CARD_NMBR20" value=""/>
+
+   <data id="EMBOSSER_NAME19" value=""/>
+
+   <data id="EMBOSSER_NAME18" value=""/>
+
+   <data id="ALT_BLOCK_CODE9" value=""/>
+
+   <data id="EMBOSSER_NAME17" value=""/>
+
+   <data id="ALT_BLOCK_CODE8" value=""/>
+
+   <data id="ALT_BLOCK_CODE7" value=""/>
+
+   <data id="EMBOSSER_NAME16" value=""/>
+
+   <data id="ALT_BLOCK_CODE6" value=""/>
+
+   <data id="EMBOSSER_NAME15" value=""/>
+
+   <data id="ALT_BLOCK_CODE5" value=""/>
+
+   <data id="EMBOSSER_NAME14" value=""/>
+
+   <data id="ALT_BLOCK_CODE4" value=""/>
+
+   <data id="EMBOSSER_NAME13" value=""/>
+
+   <data id="ALT_BLOCK_CODE3" value=""/>
+
+   <data id="EMBOSSER_NAME12" value=""/>
+
+   <data id="ALT_BLOCK_CODE2" value=""/>
+
+   <data id="EMBOSSER_NAME11" value=""/>
+
+   <data id="ALT_BLOCK_CODE1" value=""/>
+
+   <data id="EMBOSSER_NAME10" value=""/>
+
+   <data id="CARD_NMBR19" value=""/>
+
+   <data id="CARD_NMBR18" value=""/>
+
+   <data id="CARD_NMBR17" value=""/>
+
+   <data id="CARD_NMBR16" value=""/>
+
+   <data id="CARD_NMBR15" value=""/>
+
+   <data id="LINE_CNT" value="0001"/>
+
+   <data id="CARD_NMBR14" value=""/>
+
+   <data id="CARD_NMBR13" value=""/>
+
+   <data id="CARD_NMBR12" value=""/>
+
+   <data id="CARD_NMBR11" value=""/>
+
+   <data id="CARD_NMBR10" value=""/>
+
+   <data id="SIGNED_FLAG20" value=""/>
+
+   <data id="OPEN_CARD_USER20" value=""/>
+
+   <data id="SIGNED_FLAG19" value=""/>
+
+   <data id="SIGNED_FLAG18" value=""/>
+
+   <data id="SIGNED_FLAG17" value=""/>
+
+   <data id="SIGNED_FLAG16" value=""/>
+
+   <data id="SIGNED_FLAG15" value=""/>
+
+   <data id="SIGNED_FLAG14" value=""/>
+
+   <data id="CARD_NAME9" value=""/>
+
+   <data id="SIGNED_FLAG13" value=""/>
+
+   <data id="CARD_NAME8" value=""/>
+
+   <data id="CARD_NAME7" value=""/>
+
+   <data id="SIGNED_FLAG12" value=""/>
+
+   <data id="CARD_NAME6" value=""/>
+
+   <data id="SIGNED_FLAG11" value=""/>
+
+   <data id="CARD_NAME5" value=""/>
+
+   <data id="SIGNED_FLAG10" value=""/>
+
+   <data id="OPCD_ERRCNT20" value=""/>
+
+   <data id="CARD_NAME4" value=""/>
+
+   <data id="CARD_NAME3" value=""/>
+
+   <data id="CARD_NAME2" value=""/>
+
+   <data id="OPCD_STATUS20" value=""/>
+
+   <data id="CARD_NAME1" value="測試瑄榮"/>
+
+   <data id="OPEN_CARD_USER19" value=""/>
+
+   <data id="OPEN_CARD_USER18" value=""/>
+
+   <data id="OPEN_CARD_USER17" value=""/>
+
+   <data id="OPEN_CARD_USER16" value=""/>
+
+   <data id="OPEN_CARD_USER15" value=""/>
+
+   <data id="OPEN_CARD_USER14" value=""/>
+
+   <data id="OPEN_CARD_USER13" value=""/>
+
+   <data id="OPEN_CARD_USER12" value=""/>
+
+   <data id="OPEN_CARD_USER11" value=""/>
+
+   <data id="OPEN_CARD_USER10" value=""/>
+
+   <data id="OPCD_ERRCNT19" value=""/>
+
+   <data id="OPCD_ERRCNT18" value=""/>
+
+   <data id="OPCD_ERRCNT17" value=""/>
+
+   <data id="OPCD_STATUS19" value=""/>
+
+   <data id="OPCD_ERRCNT16" value=""/>
+
+   <data id="OPCD_STATUS18" value=""/>
+
+   <data id="OPCD_ERRCNT15" value=""/>
+
+   <data id="OPCD_STATUS17" value=""/>
+
+   <data id="OPCD_ERRCNT14" value=""/>
+
+   <data id="OPCD_ERRCNT13" value=""/>
+
+   <data id="OPCD_STATUS16" value=""/>
+
+   <data id="OPCD_ERRCNT12" value=""/>
+
+   <data id="OPCD_STATUS15" value=""/>
+
+   <data id="OPCD_ERRCNT11" value=""/>
+
+   <data id="OPCD_STATUS14" value=""/>
+
+   <data id="OPCD_ERRCNT10" value=""/>
+
+   <data id="OPCD_STATUS13" value=""/>
+
+   <data id="OPCD_STATUS12" value=""/>
+
+   <data id="OPCD_STATUS11" value=""/>
+
+   <data id="OPCD_STATUS10" value=""/>
+
+   <data id="DTE_BLOCK_CODE20" value=""/>
+
+   <data id="DTE_BLOCK_CODE19" value=""/>
+
+   <data id="DTE_BLOCK_CODE18" value=""/>
+
+   <data id="DTE_BLOCK_CODE17" value=""/>
+
+   <data id="DTE_BLOCK_CODE16" value=""/>
+
+   <data id="DTE_BLOCK_CODE15" value=""/>
+
+   <data id="DTE_BLOCK_CODE14" value=""/>
+
+   <data id="DTE_BLOCK_CODE13" value=""/>
+
+   <data id="DTE_BLOCK_CODE12" value=""/>
+
+   <data id="DTE_BLOCK_CODE11" value=""/>
+
+   <data id="EXP_FLAG9" value=""/>
+
+   <data id="DTE_BLOCK_CODE10" value=""/>
+
+   <data id="EXP_FLAG8" value=""/>
+
+   <data id="EXP_FLAG7" value=""/>
+
+   <data id="EXP_FLAG6" value=""/>
+
+   <data id="EXP_FLAG5" value=""/>
+
+   <data id="EXP_FLAG4" value=""/>
+
+   <data id="EXP_FLAG3" value=""/>
+
+   <data id="EXP_FLAG2" value=""/>
+
+   <data id="EXP_FLAG1" value="N"/>
+
+   <data id="CARD_DESC9" value=""/>
+
+   <data id="CARD_DESC8" value=""/>
+
+   <data id="CARD_DESC7" value=""/>
+
+   <data id="COLLECTOR20" value=""/>
+
+   <data id="CARD_DESC6" value=""/>
+
+   <data id="CARD_DESC5" value=""/>
+
+   <data id="CARD_DESC4" value=""/>
+
+   <data id="CARD_DESC3" value=""/>
+
+   <data id="CARD_DESC2" value=""/>
+
+   <data id="CARD_DESC1" value="VT000020000"/>
+
+   <data id="USER_CODE_39" value=""/>
+
+   <data id="USER_CODE_38" value=""/>
+
+   <data id="USER_CODE_37" value=""/>
+
+   <data id="USER_CODE_36" value=""/>
+
+   <data id="USER_CODE_35" value=""/>
+
+   <data id="USER_CODE_34" value=""/>
+
+   <data id="USER_CODE_33" value=""/>
+
+   <data id="DRMT_FLAG9" value=""/>
+
+   <data id="USER_CODE_32" value=""/>
+
+   <data id="DRMT_FLAG8" value=""/>
+
+   <data id="USER_CODE_31" value="10"/>
+
+   <data id="DRMT_FLAG7" value=""/>
+
+   <data id="DRMT_FLAG6" value=""/>
+
+   <data id="DRMT_FLAG5" value=""/>
+
+   <data id="DRMT_FLAG4" value=""/>
+
+   <data id="COLLECTOR19" value=""/>
+
+   <data id="DRMT_FLAG3" value=""/>
+
+   <data id="COLLECTOR18" value=""/>
+
+   <data id="DRMT_FLAG2" value=""/>
+
+   <data id="COLLECTOR17" value=""/>
+
+   <data id="DRMT_FLAG1" value=""/>
+
+   <data id="COLLECTOR16" value=""/>
+
+   <data id="COLLECTOR15" value=""/>
+
+   <data id="COLLECTOR14" value=""/>
+
+   <data id="COLLECTOR13" value=""/>
+
+   <data id="COLLECTOR12" value=""/>
+
+   <data id="COLLECTOR11" value=""/>
+
+   <data id="COLLECTOR10" value=""/>
+
+   <data id="EXPIR_DATE20" value=""/>
+
+   <data id="MEMBER_NO9" value=""/>
+
+   <data id="EXPIR_DATE19" value=""/>
+
+   <data id="MEMBER_NO8" value=""/>
+
+   <data id="EXPIR_DATE18" value=""/>
+
+   <data id="MEMBER_NO7" value=""/>
+
+   <data id="EXPIR_DATE17" value=""/>
+
+   <data id="MEMBER_NO6" value=""/>
+
+   <data id="EXPIR_DATE16" value=""/>
+
+   <data id="MEMBER_NO5" value=""/>
+
+   <data id="EXPIR_DATE15" value=""/>
+
+   <data id="MEMBER_NO4" value=""/>
+
+   <data id="EXPIR_DATE14" value=""/>
+
+   <data id="MEMBER_NO3" value=""/>
+
+   <data id="EXPIR_DATE13" value=""/>
+
+   <data id="MEMBER_NO2" value=""/>
+
+   <data id="EXPIR_DATE12" value=""/>
+
+   <data id="MEMBER_NO1" value=""/>
+
+   <data id="EXPIR_DATE11" value=""/>
+
+   <data id="EXPIR_DATE10" value=""/>
+
+   <data id="CARD_TYPE20" value=""/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="CARD_TYPE19" value=""/>
+
+   <data id="CARD_TYPE18" value=""/>
+
+   <data id="CARD_TYPE17" value=""/>
+
+   <data id="CARD_TYPE16" value=""/>
+
+   <data id="CARD_TYPE15" value=""/>
+
+   <data id="CARD_TYPE14" value=""/>
+
+   <data id="CARD_TYPE13" value=""/>
+
+   <data id="CARD_TYPE12" value=""/>
+
+   <data id="CARD_TYPE11" value=""/>
+
+   <data id="CARD_TYPE10" value=""/>
+
+   <data id="DAM_CNT9" value=""/>
+
+   <data id="DAM_CNT8" value=""/>
+
+   <data id="DAM_CNT7" value=""/>
+
+   <data id="DAM_CNT6" value=""/>
+
+   <data id="DAM_CNT5" value=""/>
+
+   <data id="DAM_CNT4" value=""/>
+
+   <data id="DAM_CNT3" value=""/>
+
+   <data id="DAM_CNT2" value=""/>
+
+   <data id="DAM_CNT1" value="00000"/>
+
+   <data id="OPCD_ERRCNT9" value=""/>
+
+   <data id="OPCD_ERRCNT8" value=""/>
+
+   <data id="OPCD_ERRCNT7" value=""/>
+
+   <data id="OPCD_ERRCNT6" value=""/>
+
+   <data id="OPCD_ERRCNT5" value=""/>
+
+   <data id="OPCD_ERRCNT4" value=""/>
+
+   <data id="OPCD_ERRCNT3" value=""/>
+
+   <data id="OPCD_ERRCNT2" value=""/>
+
+   <data id="OPCD_ERRCNT1" value="0"/>
+
+   <data id="CRLIMIT20" value=""/>
+
+   <data id="CRLIMIT19" value=""/>
+
+   <data id="CRLIMIT18" value=""/>
+
+   <data id="CRLIMIT17" value=""/>
+
+   <data id="CRLIMIT16" value=""/>
+
+   <data id="CRLIMIT15" value=""/>
+
+   <data id="CRLIMIT14" value=""/>
+
+   <data id="CRLIMIT13" value=""/>
+
+   <data id="CRLIMIT12" value=""/>
+
+   <data id="CRLIMIT11" value=""/>
+
+   <data id="CRLIMIT10" value=""/>
+
+   <data id="PROGRAM_ID" value="JCGU620"/>
+
+   <data id="CARD_NAME20" value=""/>
+
+   <data id="CARD_NAME19" value=""/>
+
+   <data id="CARD_NAME18" value=""/>
+
+   <data id="CARD_NAME17" value=""/>
+
+   <data id="CARD_NAME16" value=""/>
+
+   <data id="CARD_NAME15" value=""/>
+
+   <data id="CARD_NAME14" value=""/>
+
+   <data id="CARD_NAME13" value=""/>
+
+   <data id="CARD_NAME12" value=""/>
+
+   <data id="CARD_NAME11" value=""/>
+
+   <data id="EMBOSSER_NAME9" value=""/>
+
+   <data id="CARD_NAME10" value=""/>
+
+   <data id="EMBOSSER_NAME8" value=""/>
+
+   <data id="EMBOSSER_NAME7" value=""/>
+
+   <data id="EMBOSSER_NAME6" value=""/>
+
+   <data id="EMBOSSER_NAME5" value=""/>
+
+   <data id="EMBOSSER_NAME4" value=""/>
+
+   <data id="EMBOSSER_NAME3" value=""/>
+
+   <data id="EMBOSSER_NAME2" value=""/>
+
+   <data id="EMBOSSER_NAME1" value="COTOWO-TOCC-MOTO"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:00:55,942 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：REQ HTGName：P4_JCAW Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120" />
+      <data id="transactionId" value="P4_JCAW" />
+  </header>
+  <body>
+      <data id="CARD_NO" value="4003611000471410" />
+      <data id="CARD_NO_NEW" value="" />
+      <data id="DAM_CNT" value="" />
+      <data id="DAM_FLAG" value="" />
+      <data id="EMBNAME" value="COTOWO-TOCC-MOTO" />
+      <data id="EMBTYPE" value="20" />
+      <data id="EXPDATE_MM" value="04" />
+      <data id="EXPDATE_YY" value="27" />
+      <data id="FUN9_CONV" value="" />
+      <data id="FUNCTION_CODE" value="2" />
+      <data id="HEAD_FILLER" value="" />
+      <data id="MEMNO" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="SELF_TAKE" value="" />
+      <data id="TSCC_AUTOLOAD_FLAG" value="" />
+      <data id="TSCC_SALES_FLAG" value="" />
+      <data id="USER_ID" value="Z45120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:00:56,261 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：RTN HTGName：P4_JCAW Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCAW"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="HEAD_FILLER" value=""/>
+
+   <data id="EMBTYPE" value="20"/>
+
+   <data id="FILLER" value=""/>
+
+   <data id="CARD_NO" value="4003611000471410"/>
+
+   <data id="EXPDATE_MM" value="04"/>
+
+   <data id="TSCC_AUTOLOAD_FLAG" value=""/>
+
+   <data id="TRAN_ID" value="JCAW"/>
+
+   <data id="CARD_NO_NEW" value=""/>
+
+   <data id="MEMNO" value=""/>
+
+   <data id="CARD_ASSIGN_NUM" value=""/>
+
+   <data id="FUN9_CONV" value=""/>
+
+   <data id="FUNCTION_CODE" value="2"/>
+
+   <data id="PROGRAM_ID" value="JCGU623"/>
+
+   <data id="TSCC_SALES_FLAG" value=""/>
+
+   <data id="SELF_TAKE" value=""/>
+
+   <data id="MESSAGE_TYPE" value="4023"/>
+
+   <data id="CARD_STYLE" value=""/>
+
+   <data id="DAM_FLAG" value=""/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="TWMP_MNC" value=""/>
+
+   <data id="EMBNAME" value="COTOWO-TOCC-MOTO"/>
+
+   <data id="TRACK_TO_WAVE" value=""/>
+
+   <data id="EXPDATE_YY" value="27"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:06:39,454 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：REQ HTGName：P4_JCAW Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120" />
+      <data id="transactionId" value="P4_JCAW" />
+  </header>
+  <body>
+      <data id="CARD_NO" value="4003611000471410" />
+      <data id="CARD_NO_NEW" value="" />
+      <data id="DAM_CNT" value="" />
+      <data id="DAM_FLAG" value="" />
+      <data id="EMBNAME" value="COTOWO-TOCC-MOTO" />
+      <data id="EMBTYPE" value="20" />
+      <data id="EXPDATE_MM" value="04" />
+      <data id="EXPDATE_YY" value="27" />
+      <data id="FUN9_CONV" value="" />
+      <data id="FUNCTION_CODE" value="2" />
+      <data id="HEAD_FILLER" value="" />
+      <data id="MEMNO" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="SELF_TAKE" value="" />
+      <data id="TSCC_AUTOLOAD_FLAG" value="" />
+      <data id="TSCC_SALES_FLAG" value="" />
+      <data id="USER_ID" value="Z45120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:06:40,452 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：RTN HTGName：P4_JCAW Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCAW"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="HEAD_FILLER" value=""/>
+
+   <data id="EMBTYPE" value="20"/>
+
+   <data id="FILLER" value=""/>
+
+   <data id="CARD_NO" value="4003611000471410"/>
+
+   <data id="EXPDATE_MM" value="04"/>
+
+   <data id="TSCC_AUTOLOAD_FLAG" value=""/>
+
+   <data id="TRAN_ID" value="JCAW"/>
+
+   <data id="CARD_NO_NEW" value=""/>
+
+   <data id="MEMNO" value=""/>
+
+   <data id="CARD_ASSIGN_NUM" value=""/>
+
+   <data id="FUN9_CONV" value=""/>
+
+   <data id="FUNCTION_CODE" value="2"/>
+
+   <data id="PROGRAM_ID" value="JCGU623"/>
+
+   <data id="TSCC_SALES_FLAG" value=""/>
+
+   <data id="SELF_TAKE" value=""/>
+
+   <data id="MESSAGE_TYPE" value="4024"/>
+
+   <data id="CARD_STYLE" value=""/>
+
+   <data id="DAM_FLAG" value=""/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="TWMP_MNC" value=""/>
+
+   <data id="EMBNAME" value="COTOWO-TOCC-MOTO"/>
+
+   <data id="TRACK_TO_WAVE" value=""/>
+
+   <data id="EXPDATE_YY" value="27"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+
+2021-10-07 17:19:01,614 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：REQ HTGName：P4_JCAW Message：<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120" />
+      <data id="transactionId" value="P4_JCAW" />
+  </header>
+  <body>
+      <data id="CARD_NO" value="4003611000471410" />
+      <data id="CARD_NO_NEW" value="" />
+      <data id="DAM_CNT" value="" />
+      <data id="DAM_FLAG" value="" />
+      <data id="EMBNAME" value="COTOWO-TOCC-MOTO" />
+      <data id="EMBTYPE" value="20" />
+      <data id="EXPDATE_MM" value="04" />
+      <data id="EXPDATE_YY" value="27" />
+      <data id="FUN9_CONV" value="" />
+      <data id="FUNCTION_CODE" value="2" />
+      <data id="HEAD_FILLER" value="" />
+      <data id="MEMNO" value="" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="SELF_TAKE" value="" />
+      <data id="TSCC_AUTOLOAD_FLAG" value="" />
+      <data id="TSCC_SALES_FLAG" value="" />
+      <data id="USER_ID" value="Z45120" />
+  </body>
+</hostgateway>
+
+2021-10-07 17:19:02,014 INFO SessionID：ooimq5fmgnuyrddhjhzwzpbr UserID：Z00045120 FunctionID：01020700 HTGType：RTN HTGName：P4_JCAW Message：<?xml version="1.0" encoding="UTF-8"?>
+
+<hostgateway>
+
+ <header>
+
+  <action type="transaction"/>
+
+  <data id="sessionId" value="CSIP214mUUOuUF5-P8OsWbo2apdJD0lZ45120"/>
+
+  <data id="applicationId" value="CSIP"/>
+
+  <data id="luType" value="LU62"/>
+
+  <data id="transactionId" value="P4_JCAW"/>
+
+ </header>
+
+ <line no="1">
+
+  <msgHeader/>
+
+  <msgBody>
+
+   <data id="HEAD_FILLER" value=""/>
+
+   <data id="EMBTYPE" value="20"/>
+
+   <data id="FILLER" value=""/>
+
+   <data id="CARD_NO" value="4003611000471410"/>
+
+   <data id="EXPDATE_MM" value="04"/>
+
+   <data id="TSCC_AUTOLOAD_FLAG" value=""/>
+
+   <data id="TRAN_ID" value="JCAW"/>
+
+   <data id="CARD_NO_NEW" value=""/>
+
+   <data id="MEMNO" value=""/>
+
+   <data id="CARD_ASSIGN_NUM" value=""/>
+
+   <data id="FUN9_CONV" value=""/>
+
+   <data id="FUNCTION_CODE" value="2"/>
+
+   <data id="PROGRAM_ID" value="JCGU623"/>
+
+   <data id="TSCC_SALES_FLAG" value=""/>
+
+   <data id="SELF_TAKE" value=""/>
+
+   <data id="MESSAGE_TYPE" value="4024"/>
+
+   <data id="CARD_STYLE" value=""/>
+
+   <data id="DAM_FLAG" value=""/>
+
+   <data id="USER_ID" value="Z45120"/>
+
+   <data id="TWMP_MNC" value=""/>
+
+   <data id="EMBNAME" value="COTOWO-TOCC-MOTO"/>
+
+   <data id="TRACK_TO_WAVE" value=""/>
+
+   <data id="EXPDATE_YY" value="27"/>
+
+  </msgBody>
+
+ </line>
+
+</hostgateway>
+
+

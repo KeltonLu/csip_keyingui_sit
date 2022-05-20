@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4D_PCTI" />
+    <data id="uploadType" value="1" />
+  </header>
+  <body>
+    <data id="TRAN_ID" value="PCTI" />
+    <data id="USER_ID" value="" />
+    <data id="ID_NO" value="000" />
+    <data id="ID_CODE" value="0" />
+    <data id="ERR_MSG_NO" value="299" />
+    <data id="ERR_MSG_CODE" value="0" />
+    <data id="ERR_MSG_DATA" value="                                                              " />
+  </body>
+</hostgateway>

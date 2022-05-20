@@ -1,0 +1,488 @@
+2021-03-11 16:30:08,700 INFO  Layer：BusinessRule Message：ACHR02_HJOB啟動,
+
+2021-03-11 16:30:08,822 INFO  Layer：BusinessRule Message：刪除舊檔：開始,
+
+2021-03-11 16:30:08,823 INFO  Layer：BusinessRule Message：刪除舊檔：結束,
+
+2021-03-11 16:30:08,824 INFO  Layer：BusinessRule Message：FTP下載檔案：開始,
+
+2021-03-11 16:30:08,829 INFO  Layer：BusinessRule Message：FTP下載檔案：來源FTP目錄：pilot/from,
+
+2021-03-11 16:30:08,830 INFO  Layer：BusinessRule Message：FTP下載檔案：來源FTP檔名：ACHR02_01100226_03077208.txt,
+
+2021-03-11 16:30:08,831 INFO  Layer：BusinessRule Message：FTP下載檔案：目標目錄：D:\CSIP2.0\csip_keyingui_sit\WebPage\FileDownload\ACHR02_H\,
+
+2021-03-11 16:30:08,831 INFO  Layer：BusinessRule Message：FTP下載檔案：目標檔名：ACHR02_01100226_03077208.txt,
+
+2021-03-11 16:30:08,984 INFO  Layer：BusinessRule Message：FTP下載檔案：下載成功！,
+
+2021-03-11 16:30:08,985 INFO  Layer：BusinessRule Message：FTP上傳檔案：開始,
+
+2021-03-11 16:30:08,985 INFO  Layer：BusinessRule Message：FTP上傳檔案：來源目錄：D:\CSIP2.0\csip_keyingui_sit\WebPage\FileDownload\ACHR02_H\,
+
+2021-03-11 16:30:08,986 INFO  Layer：BusinessRule Message：FTP上傳檔案：來源檔名：ACHR02_01100226_03077208.txt,
+
+2021-03-11 16:30:08,987 INFO  Layer：BusinessRule Message：FTP上傳檔案：目標FTP目錄：pilot/from,
+
+2021-03-11 16:30:08,987 INFO  Layer：BusinessRule Message：FTP上傳檔案：目標FTP檔名：ACHR02_01100226_03077208.txt,
+
+2021-03-11 16:30:09,058 INFO  Layer：BusinessRule Message：FTP上傳檔案：上傳成功！,
+
+2021-03-11 16:30:09,059 INFO  Layer：BusinessRule Message：清空暫存(ACHR02_Tmp)：開始,
+
+2021-03-11 16:30:09,157 INFO  Layer：BusinessRule Message：清空暫存(ACHR02_Tmp)：成功！,
+
+2021-03-11 16:30:09,158 INFO  Layer：BusinessRule Message：檔案匯入至ACHR02_TMP開始,
+
+2021-03-11 16:30:09,821 INFO  Layer：BusinessRule Message：匯入檔案：成功！全部匯入成功，檔案預計匯入總筆數:106筆。(成功:106筆，失敗:0筆),
+
+2021-03-11 16:30:09,822 INFO  Layer：BusinessRule Message：取得DB ACHR02_Tmp資料總數開始,
+
+2021-03-11 16:30:09,828 INFO  Layer：BusinessRule Message：取得DB ACHR02_Tmp資料總數:成功！(總共106筆),
+
+2021-03-11 16:30:09,830 INFO  Layer：BusinessRule Message：取得DB ACHR02_Tmp資料條件總數開始,
+
+2021-03-11 16:30:09,838 INFO  Layer：BusinessRule Message：取得DB ACHR02_Tmp資料條件總數:成功！(總共0筆),
+
+2021-03-11 16:30:09,839 INFO  Layer：BusinessRule Message：查詢ACHR02_Tmp資料開始,
+
+2021-03-11 16:30:10,191 INFO  Layer：BusinessRule Message：查詢ACHR02_Tmp資料:成功！(總共104筆),
+
+2021-03-11 16:30:10,193 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,203 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,204 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,210 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,211 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,217 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,218 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,223 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,224 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,230 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,231 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,236 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,237 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,243 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,244 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,249 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,249 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,264 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,264 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,270 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,271 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,278 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,279 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,285 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,286 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,597 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,598 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,603 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,604 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,610 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,610 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,616 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,617 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,625 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,627 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,634 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,636 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,641 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,643 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,650 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,651 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,656 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,657 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,665 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,666 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,671 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,672 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,677 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,678 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,683 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,684 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,689 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,689 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,695 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,696 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,707 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,709 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,723 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,723 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,733 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,734 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,744 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,746 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,755 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,756 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,767 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,768 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,778 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,779 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,788 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,789 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,798 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,799 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,813 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,814 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,825 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,826 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,838 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,838 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,847 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,848 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,858 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,859 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,869 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,869 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,875 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,877 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,883 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,884 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,890 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,890 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,897 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,898 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,903 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,903 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,909 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,910 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,916 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,916 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,922 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,922 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,929 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,929 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,935 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,935 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,941 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,943 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,949 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,949 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,955 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,956 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,962 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,963 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,973 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,975 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,988 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:10,989 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:10,997 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,002 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,013 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,014 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,023 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,025 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,036 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,037 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,046 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,047 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,057 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,058 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,070 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,071 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,082 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,084 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,097 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,098 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,109 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,111 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,122 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,128 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,138 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,140 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,152 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,153 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,160 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,163 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,181 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,182 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,187 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,188 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,193 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,195 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,201 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,201 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,207 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,209 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,216 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,218 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,224 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,226 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,236 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,238 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,249 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,250 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,262 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,264 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,274 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,276 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,288 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,290 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,304 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,305 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,320 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,321 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,335 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,336 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,349 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,350 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,363 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,365 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,381 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,385 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,401 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,402 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,410 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,412 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,421 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,423 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,431 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,433 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,442 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,445 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,453 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,455 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,464 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,466 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,474 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,476 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,484 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,486 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,493 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,495 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,510 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,512 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,524 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,526 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,538 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,540 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp開始,
+
+2021-03-11 16:30:11,553 INFO  Layer：BusinessRule Message：更新Other_Bank_Temp:成功！(總共1筆),
+
+2021-03-11 16:30:11,556 INFO  Layer：BusinessRule Message：開始寄信！,
+
+2021-03-11 16:30:11,654 ERROR  Layer：BusinessRule Message：發送mail中發生以下異常:無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available,
+
+2021-03-11 16:30:11,655 ERROR  Layer：BusinessRule Message：寄信失敗！,
+
+2021-03-11 16:30:11,668 INFO  Layer：BusinessRule Message：開始更新Batch資料,
+
+2021-03-11 16:30:11,678 INFO  Layer：BusinessRule Message：更新Batch資料:成功！(總共1筆),
+
+2021-03-11 16:30:11,680 INFO  Layer：BusinessRule Message：ACHR02_H執行於:2021/3/11 下午 04:30:08,
+
+2021-03-11 16:30:11,706 INFO  Layer：BusinessRule Message：ACHR02_HJOB結束,
+
+2021-03-11 18:54:53,316 INFO  Layer：BusinessRule Message：ACHR02_HJOB啟動,
+
+2021-03-11 18:54:53,639 INFO  Layer：BusinessRule Message：查無資料。,
+
+2021-03-11 18:54:53,640 INFO  Layer：BusinessRule Message：ACHR02_H執行於:2021/3/11 下午 06:54:53,
+
+2021-03-11 18:54:53,662 INFO  Layer：BusinessRule Message：ACHR02_HJOB結束,
+

@@ -1,0 +1,152 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BF43644-C4E2-468F-B530-76F693882499}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSIPKeyInGUI.BusinessRules</RootNamespace>
+    <AssemblyName>CSIPKeyInGUI.BusinessRules</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CSIPKeyInGUI.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Entity\bin\Debug\CSIPKeyInGUI.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=1.0.1.1, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebPage\Bin\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BRACCUMGroupTable_Award.cs" />
+    <Compile Include="BRACCUMGroupTable_Redeem.cs" />
+    <Compile Include="BRACCUMTYPEList_Award.cs" />
+    <Compile Include="BRACCUMTYPEList_Redeem.cs" />
+    <Compile Include="BRACH598DATA.cs" />
+    <Compile Include="BRACH_RTN_INFO.cs" />
+    <Compile Include="BRArtificial_Signing_Batch_Data.cs" />
+    <Compile Include="BRArtificial_Signing_Detail.cs" />
+    <Compile Include="BRArtificial_Signing_Primary.cs" />
+    <Compile Include="BRASErrKeyin.cs" />
+    <Compile Include="BRASExport.cs" />
+    <Compile Include="BRASRpt.cs" />
+    <Compile Include="BRAuto_Balance_Trans.cs" />
+    <Compile Include="BRAUTO_PAY.cs" />
+    <Compile Include="BRAuto_Pay_Popul.cs" />
+    <Compile Include="BRAuto_pay_status.cs" />
+    <Compile Include="BRAwardSet.cs" />
+    <Compile Include="BRAwardSet3270.cs" />
+    <Compile Include="BRAwardSet_ATypeSet.cs" />
+    <Compile Include="BRBalance_Trans.cs" />
+    <Compile Include="BRBATCH.cs" />
+    <Compile Include="BRBoard.cs" />
+    <Compile Include="BRCardTypeList_Award.cs" />
+    <Compile Include="BRCardTypeList_Redeem.cs" />
+    <Compile Include="BRCHANGE_BLK.cs" />
+    <Compile Include="BRCompareRpt.cs" />
+    <Compile Include="BRCustomer_Log.cs" />
+    <Compile Include="BRcustomer_log_OtherBankTemp.cs" />
+    <Compile Include="BRExcel_File.cs" />
+    <Compile Include="BRiPASS.cs" />
+    <Compile Include="BRJOB_STATUS.cs" />
+    <Compile Include="BRM_FileInfo.cs" />
+    <Compile Include="BROTHER_BANK_TEMP.cs" />
+    <Compile Include="BRProgramList.cs" />
+    <Compile Include="BRRedeem3270.cs" />
+    <Compile Include="BRRedeemSet.cs" />
+    <Compile Include="BRRedeemSet_ATypeSet.cs" />
+    <Compile Include="BRRedeemUpload.cs" />
+    <Compile Include="BRREISSUE_CARD.cs" />
+    <Compile Include="BRReqApproStatisticsRpt.cs" />
+    <Compile Include="BRSHOP.cs" />
+    <Compile Include="BRShopUserRpt.cs" />
+    <Compile Include="BRSHOP_1KEYLOG.cs" />
+    <Compile Include="BRSHOP_6063.cs" />
+    <Compile Include="BRSHOP_BASIC.cs" />
+    <Compile Include="BRSHOP_PCAM.cs" />
+    <Compile Include="BRSHOP_ReqAppro.cs" />
+    <Compile Include="BRSHOP_RPT.cs" />
+    <Compile Include="BRSHOP_UPLOAD.cs" />
+    <Compile Include="BRStatisticsRpt.cs" />
+    <Compile Include="BRSZIP.cs" />
+    <Compile Include="BRTRANS_NUM.cs" />
+    <Compile Include="BRUserStatisticsRpt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonModel\BaseItem\BaseItem.csproj">
+      <Project>{EE192BCC-4665-406D-BA88-76863B4B6853}</Project>
+      <Name>BaseItem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonModel\BusinessRules\BusinessRules.csproj">
+      <Project>{1A02033E-F12E-46BB-8AE2-25FE5781260E}</Project>
+      <Name>BusinessRules %28CommonModel\BusinessRules%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonModel\Entity\Entity.csproj">
+      <Project>{E2D629A1-9848-43D9-BF7E-3A18A31CC7A4}</Project>
+      <Name>Entity %28CommonModel\Entity%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Framework.Common\Framework.Common.csproj">
+      <Project>{E4A10F71-A7D2-4F4C-ACF8-53E53D8169D5}</Project>
+      <Name>Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Framework.Data\OM\Framework.Data.OM.csproj">
+      <Project>{EFBB5F60-82AE-4C7F-A773-4E719EFDF037}</Project>
+      <Name>Framework.Data.OM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="CSIP"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4_JCDK"/>
+        <data id="lowValue" value="true" />
+    </header>
+    <body>
+        <data id="PROGRAM_VERSION" value="LU62"/>
+        <data id="USER_ID" value=""/>
+        <data id="MESSAGE_TYPE" value=""/>
+        <data id="FUNCTION_CODE" value=""/>
+        <data id="LINE_CNT" value=""/>
+        <data id="ACCT_NBR" value=""/>
+				<data id="MOBILE_PHONE" value=""/>
+				<data id="8DCALL" value=""/>
+				<data id="PAGER" value=""/>
+				<data id="EMAIL" value=""/>
+				<data id="TITLE" value=""/>
+				<data id="TEL_PERM" value=""/>
+				<data id="E_SERVICE_CODE" value=""/>
+				<data id="CUS2_PERM_ZIP" value=""/>
+				<data id="CUS2_PERM_CITY" value=""/>
+				<data id="CUS2_PERM_ADDR_1" value=""/>
+				<data id="CUS2_PERM_ADDR_2" value=""/>
+				<data id="CUS2_INFORMANT_NAME_1" value=""/>
+				<data id="CUS2_INFORMANT_ZONE_1" value=""/>
+				<data id="CUS2_INFORMANT_NO_1" value=""/>
+				<data id="CUS2_RELATIVE_1" value=""/>
+				<data id="CUS2_INFORMANT_NAME_2" value=""/>
+				<data id="CUS2_INFORMANT_ZONE_2" value=""/>
+				<data id="CUS2_INFORMANT_NO_2" value=""/>
+				<data id="CUS2_RELATIVE_2" value=""/>
+				<data id="CUS2_PARENT_NAME" value=""/>
+				<data id="CUS2_PARENT_ZIP" value=""/>
+				<data id="CUS2_PARENT_CITY" value=""/>
+				<data id="CUS2_PARENT_ADDR_1" value=""/>
+				<data id="CUS2_PARENT_ADDR_2" value=""/>
+				<data id="CUS2_PARENT_ZONE" value=""/>
+				<data id="CUS2_PARENT_NO" value=""/>
+    </body>
+</hostgateway>

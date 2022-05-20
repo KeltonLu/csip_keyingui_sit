@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value="defaultm0tsbPWr1kRP9Wn69G7q5PvZ60005"/>
+    <data id="applicationId" value="default"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="PCIM_P4A"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="MESSAGE_TYPE" value="0000"/>
+      <data id="Address1" value="ＥＷＷＥＱＥ" />
+      <data id="Address2" value="ＥＥＥＥＥＥＥＥＥＥＥＥＥ" />
+      <data id="Address3" value="ＱＥＱＥＱＥＱＥＱＥＱＥＱ" />
+      <data id="AgentBank" value="5542S" />
+      <data id="Ave" value="EWEEEEE" />
+      <data id="Branch" value="22222" />
+      <data id="CH" value="2" />
+      <data id="City" value="1111111EQWE" />
+      <data id="Corp" value="333333333344" />
+      <data id="DdaNo1" value="123" />
+      <data id="DdaNo2" value="4434343434444444433" />
+      <data id="DISC/DEE DD" value="0" />
+      <data id="DISCOUNT" value="0" />
+      <data id="DisRate1" value="01000" />
+      <data id="DisRate2" value="01000" />
+      <data id="DisRate3" value="01000" />
+      <data id="DisRate4" value="01000" />
+      <data id="DisRate5" value="01000" />
+      <data id="DisRate6" value="01000" />
+      <data id="DisRate7" value="01000" />
+      <data id="DisRate8" value="01000" />
+      <data id="Edc1" value="442" />
+      <data id="Edc2" value="121" />
+      <data id="EngName" value="55555555555555552ADDDDDDD" />
+      <data id="FEES" value="0" />
+      <data id="FileNo" value="1EWEW2EEE" />
+      <data id="HOLDSTMT" value="1" />
+      <data id="Imp1" value="122" />
+      <data id="Imp2" value="444" />
+      <data id="INT" value="3" />
+      <data id="Level" value="1" />
+      <data id="Mail" value="3" />
+      <data id="MC" value="3" />
+      <data id="MCC_VISA" value="DSWE" />
+      <data id="Merch" value="ERRR" />
+      <data id="MerchantName" value="２３１３３３３３３３３３３３" />
+      <data id="Month" value="EEEEE1111" />
+      <data id="ORGANIZATION" value="822" />
+      <data id="Owner" value="212121sdd" />
+      <data id="Phone" value="123-444444444" />
+      <data id="Pos1" value="333" />
+      <data id="Pos2" value="242" />
+      <data id="PosCa" value="5" />
+      <data id="PosMo" value="12" />
+      <data id="REPORTING" value="0" />
+      <data id="SalesName" value="４４４４４４" />
+      <data id="SETTLEMENT" value="0" />
+      <data id="ShopId" value="" />
+      <data id="Source" value="222" />
+      <data id="STATEMENT" value="0" />
+      <data id="Status1" value="1" />
+      <data id="Status2" value="2" />
+      <data id="Status3" value="3" />
+      <data id="Status4" value="4" />
+      <data id="Status5" value="5" />
+      <data id="Status6" value="6" />
+      <data id="Status7" value="7" />
+      <data id="Status8" value="8" />
+      <data id="Store" value="FSERR3233" />
+      <data id="Type" value="RW" />
+      <data id="Zip" value="122" />
+    </msgBody>
+  </line>
+</hostgateway>

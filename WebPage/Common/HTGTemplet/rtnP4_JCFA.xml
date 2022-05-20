@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4_JCFA" />
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="CARD_STATUS9" value=""/>
+      <data id="CARD_STATUS8" value=""/>
+      <data id="CARD_STATUS7" value="正常使用"/>
+      <data id="CARD_STATUS6" value="結清　　"/>
+      <data id="CARD_STATUS5" value="結清　　"/>
+      <data id="CARD_STATUS4" value="結清　　"/>
+      <data id="CARD_STATUS3" value="結清　　"/>
+      <data id="CARD_STATUS2" value="結清　　"/>
+      <data id="CARD_STATUS1" value="結清　　"/>
+      <data id="CARD_STATUS_CODE20" value=""/>
+      <data id="CARD_STATUS_CODE19" value=""/>
+      <data id="FUNCTION_CODE" value="2"/>
+      <data id="CARD_STATUS_CODE18" value=""/>
+      <data id="CARD_STATUS_CODE17" value=""/>
+      <data id="CARD_STATUS_CODE16" value=""/>
+      <data id="CARD_STATUS_CODE15" value=""/>
+      <data id="PURSE_STATUS20" value=""/>
+      <data id="CARD_STATUS_CODE14" value=""/>
+      <data id="CARD_STATUS_CODE13" value=""/>
+      <data id="CARD_STATUS_CODE12" value=""/>
+      <data id="CARD_STATUS_CODE11" value=""/>
+      <data id="CARD_STATUS_CODE10" value=""/>
+      <data id="PURSE_STATUS9" value=""/>
+      <data id="PURSE_STATUS8" value=""/>
+      <data id="PURSE_STATUS7" value="正常使用"/>
+      <data id="PURSE_STATUS6" value="結清　　"/>
+      <data id="PURSE_STATUS5" value="結清　　"/>
+      <data id="PURSE_STATUS4" value="結清　　"/>
+      <data id="PURSE_STATUS3" value="結清　　"/>
+      <data id="ISSUE_CNT9" value="00000"/>
+      <data id="PURSE_STATUS2" value="結清　　"/>
+      <data id="ISSUE_CNT8" value="00000"/>
+      <data id="PURSE_STATUS1" value="結清　　"/>
+      <data id="ISSUE_CNT7" value="00007"/>
+      <data id="ISSUE_CNT6" value="00006"/>
+      <data id="BLOCK_CODE9" value=""/>
+      <data id="ISSUE_CNT5" value="00005"/>
+      <data id="BLOCK_CODE8" value=""/>
+      <data id="ISSUE_CNT4" value="00004"/>
+      <data id="BLOCK_CODE7" value=""/>
+      <data id="ISSUE_CNT3" value="00003"/>
+      <data id="PURSE_STATUS19" value=""/>
+      <data id="BLOCK_CODE6" value="W"/>
+      <data id="ISSUE_CNT2" value="00002"/>
+      <data id="PURSE_STATUS18" value=""/>
+      <data id="BLOCK_CODE5" value="D"/>
+      <data id="ISSUE_CNT1" value="00001"/>
+      <data id="PURSE_STATUS17" value=""/>
+      <data id="BLOCK_CODE4" value="D"/>
+      <data id="PURSE_STATUS16" value=""/>
+      <data id="BLOCK_CODE3" value="D"/>
+      <data id="PURSE_STATUS15" value=""/>
+      <data id="BLOCK_CODE2" value="W"/>
+      <data id="ISSUE_CNT" value="00007"/>
+      <data id="PURSE_STATUS14" value=""/>
+      <data id="BLOCK_CODE1" value="W"/>
+      <data id="PURSE_STATUS13" value=""/>
+      <data id="PURSE_STATUS12" value=""/>
+      <data id="PURSE_STATUS11" value=""/>
+      <data id="PURSE_STATUS10" value=""/>
+      <data id="SVCP_ID" value=""/>
+      <data id="BLOCK_DATE20" value="00000000"/>
+      <data id="USER_ID" value="Z04975"/>
+      <data id="KEY_NMBER9" value="0000000000000000"/>
+      <data id="KEY_NMBER8" value="0000000000000000"/>
+      <data id="BLOCK_DATE19" value="00000000"/>
+      <data id="PURSE_ID" value="8182XXXXXXXX9048"/>
+      <data id="KEY_NMBER7" value="8182XXXXXXXX9048"/>
+      <data id="BLOCK_DATE18" value="00000000"/>
+      <data id="KEY_NMBER6" value="8182XXXXXXXX2136"/>
+      <data id="BLOCK_DATE17" value="00000000"/>
+      <data id="KEY_NMBER5" value="8182XXXXXXXX3258"/>
+      <data id="BLOCK_DATE16" value="00000000"/>
+      <data id="KEY_NMBER4" value="8182XXXXXXXX8183"/>
+      <data id="BLOCK_DATE15" value="00000000"/>
+      <data id="KEY_NMBER3" value="8182XXXXXXXX6272"/>
+      <data id="BLOCK_DATE14" value="00000000"/>
+      <data id="KEY_NMBER2" value="8182XXXXXXXX7512"/>
+      <data id="MESSAGE_TYPE" value="0001"/>
+      <data id="KEY_NMBER1" value="8182XXXXXXXX0921"/>
+      <data id="BLOCK_DATE13" value="00000000"/>
+      <data id="BLOCK_DATE12" value="00000000"/>
+      <data id="BLOCK_DATE11" value="00000000"/>
+      <data id="BLOCK_DATE10" value="00000000"/>
+      <data id="TRAN_ID" value="JCFA"/>
+      <data id="CARD_NMBR" value="4311XXXXXXXX5139"/>
+      <data id="CARD_STATUS20" value=""/>
+      <data id="CARD_STATUS_CODE9" value=""/>
+      <data id="CARD_STATUS_CODE8" value=""/>
+      <data id="CARD_STATUS_CODE7" value="N"/>
+      <data id="CARD_STATUS_CODE6" value="C"/>
+      <data id="CARD_STATUS_CODE5" value="C"/>
+      <data id="CARD_STATUS_CODE4" value="C"/>
+      <data id="CARD_STATUS_CODE3" value="C"/>
+      <data id="CARD_STATUS_CODE2" value="C"/>
+      <data id="CARD_STATUS_CODE1" value="C"/>
+      <data id="ID_IND20" value=""/>
+      <data id="CARD_STATUS19" value=""/>
+      <data id="CARD_STATUS18" value=""/>
+      <data id="CARD_STATUS17" value=""/>
+      <data id="CARD_STATUS16" value=""/>
+      <data id="CARD_STATUS15" value=""/>
+      <data id="CARD_STATUS14" value=""/>
+      <data id="ISSUE_CNT20" value="00000"/>
+      <data id="CARD_STATUS13" value=""/>
+      <data id="CARD_STATUS12" value=""/>
+      <data id="CARD_STATUS11" value=""/>
+      <data id="CARD_STATUS10" value=""/>
+      <data id="ID_IND19" value=""/>
+      <data id="ID_IND18" value=""/>
+      <data id="ID_IND17" value=""/>
+      <data id="ID_IND16" value=""/>
+      <data id="ID_IND15" value=""/>
+      <data id="ID_IND14" value=""/>
+      <data id="ID_IND9" value=""/>
+      <data id="ID_IND13" value=""/>
+      <data id="ID_IND8" value=""/>
+      <data id="ID_IND12" value=""/>
+      <data id="ID_IND7" value="1"/>
+      <data id="ID_IND11" value=""/>
+      <data id="ISSUE_CNT19" value="00000"/>
+      <data id="ID_IND6" value="1"/>
+      <data id="ID_IND10" value=""/>
+      <data id="ISSUE_CNT18" value="00000"/>
+      <data id="ID_IND5" value="1"/>
+      <data id="ISSUE_CNT17" value="00000"/>
+      <data id="ID_IND4" value="1"/>
+      <data id="ISSUE_CNT16" value="00000"/>
+      <data id="ID_IND3" value="1"/>
+      <data id="ISSUE_CNT15" value="00000"/>
+      <data id="ID_IND2" value="1"/>
+      <data id="ISSUE_CNT14" value="00000"/>
+      <data id="ID_IND1" value="1"/>
+      <data id="ISSUE_CNT13" value="00000"/>
+      <data id="ISSUE_CNT12" value="00000"/>
+      <data id="ISSUE_CNT11" value="00000"/>
+      <data id="ISSUE_CNT10" value="00000"/>
+      <data id="BLOCK_CODE20" value=""/>
+      <data id="BLOCK_CODE19" value=""/>
+      <data id="BLOCK_CODE18" value=""/>
+      <data id="BLOCK_CODE17" value=""/>
+      <data id="BLOCK_CODE16" value=""/>
+      <data id="BLOCK_CODE15" value=""/>
+      <data id="BLOCK_CODE14" value=""/>
+      <data id="BLOCK_CODE13" value=""/>
+      <data id="BLOCK_CODE12" value=""/>
+      <data id="BLOCK_CODE11" value=""/>
+      <data id="BLOCK_CODE10" value=""/>
+      <data id="KEY_NMBER20" value="0000000000000000"/>
+      <data id="EXPIRE_DATE20" value="000000"/>
+      <data id="KEY_NMBER19" value="0000000000000000"/>
+      <data id="BLOCK_DATE9" value="00000000"/>
+      <data id="KEY_NMBER18" value="0000000000000000"/>
+      <data id="BLOCK_DATE8" value="00000000"/>
+      <data id="KEY_NMBER17" value="0000000000000000"/>
+      <data id="BLOCK_DATE7" value="20111114"/>
+      <data id="KEY_NMBER16" value="0000000000000000"/>
+      <data id="BLOCK_DATE6" value="20090910"/>
+      <data id="KEY_NMBER15" value="0000000000000000"/>
+      <data id="BLOCK_DATE5" value="20090408"/>
+      <data id="BLOCK_DATE4" value="20080218"/>
+      <data id="KEY_NMBER14" value="0000000000000000"/>
+      <data id="BLOCK_DATE3" value="20080218"/>
+      <data id="KEY_NMBER13" value="0000000000000000"/>
+      <data id="BLOCK_DATE2" value="20090910"/>
+      <data id="KEY_NMBER12" value="0000000000000000"/>
+      <data id="BLOCK_DATE1" value="20090910"/>
+      <data id="KEY_NMBER11" value="0000000000000000"/>
+      <data id="KEY_NMBER10" value="0000000000000000"/>
+      <data id="EXPIRE_DATE19" value="000000"/>
+      <data id="EXPIRE_DATE18" value="000000"/>
+      <data id="PROGRAM_ID" value="JCGU670"/>
+      <data id="EXPIRE_DATE17" value="000000"/>
+      <data id="EXPIRE_DATE16" value="000000"/>
+      <data id="EXPIRE_DATE15" value="000000"/>
+      <data id="LINE_CNT" value="0007"/>
+      <data id="EXPIRE_DATE14" value="000000"/>
+      <data id="EXPIRE_DATE13" value="000000"/>
+      <data id="EXPIRE_DATE12" value="000000"/>
+      <data id="EXPIRE_DATE11" value="000000"/>
+      <data id="EXPIRE_DATE10" value="000000"/>
+      <data id="EXPIRE_DATE9" value="000000"/>
+      <data id="EXPIRE_DATE8" value="000000"/>
+      <data id="EXPIRE_DATE7" value="201902"/>
+      <data id="EXPIRE_DATE6" value="201902"/>
+      <data id="EXPIRE_DATE5" value="201902"/>
+      <data id="EXPIRE_DATE4" value="201902"/>
+      <data id="EXPIRE_DATE3" value="201902"/>
+      <data id="EXPIRE_DATE2" value="201902"/>
+      <data id="EXPIRE_DATE1" value="201902"/>
+      <!--<data id="GUFA-TRAN-ID-OK" value="JCFA" />
+      <data id="GUFA-PROGRAM-ID-OK" value="JCGU670" />
+      <data id="GUFA-USER-ID" value="" />
+      <data id="GUFA-MESSAGE-TYPE" value="0001" />
+      <data id="GUFA-FUNCTION-QUERY-ID" value="" />
+      <data id="GUFA-FUNCTION-QUERY-ACCT" value="2" />
+      <data id="GUFA-LINE-CNT" value="" />
+      <data id="GUFA-SVCP-ID" value="1234567890123456" />
+      <data id="GUFA-CARD-NMBR" value="1111222233334444" />
+      <data id="GUFA-ISSUE-CNT" value="" />
+      <data id="GUFA-PURSE-ID" value="" />
+      <data id="GUFA-KEY-NMBR" value="" />
+      <data id="GUFA-ID-IDN" value="1" />
+      <data id="GUFA-EXPIR-YY1" value="14" />
+      <data id="GUFA-EXPIR-YY2" value="18" />
+      <data id="GUFA-EXPIR-MM" value="10" />
+      <data id="GUFA-CARD-STATUS" value="" />
+      <data id="GUFA-CARD-STATUS-CODE" value="" />
+      <data id="GUFA-PURSE-STATUS" value="" />
+      <data id="GUFA-BLOCK-CODE" value="X" />
+      <data id="GUFA-BLOCK-DATE" value="" />
+      <data id="GUFA-DETAIL-ISSUE-CNT" value="" />-->
+    </msgBody>
+  </line>
+</hostgateway>

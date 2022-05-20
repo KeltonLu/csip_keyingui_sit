@@ -1,0 +1,16 @@
+2022-04-20 17:34:05,589 INFO SessionID¡G5jla0at4ptiii1sm3wbh30xe UserID¡G1 FunctionID¡G01080101 HTGType¡GREQ HTGName¡GestablishSession Message¡G<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="establishSession" />
+  </header>
+  <body>
+      <data id="applicationId" value="CSIP" />
+      <data id="branchNo" value="0993" />
+      <data id="passWord" value="********" />
+      <data id="racfId" value="" />
+      <data id="racfPassWord" value="********" />
+      <data id="signOnLU0" value="no" />
+      <data id="userId" value="1" />
+  </body>
+</hostgateway>
+

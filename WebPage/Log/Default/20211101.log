@@ -1,0 +1,52 @@
+2021-11-01 16:09:20,021 INFO  Message：Application and Jobs End
+2021-11-01 16:10:13,174 INFO  Message：Application and Jobs End
+2021-11-01 16:10:26,143 INFO  Message：Application and Jobs End
+2021-11-01 16:11:41,674 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:11:42,117 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-01 16:11:42,118 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-01 16:11:42,119 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-01 16:11:42,119 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-01 16:11:42,153 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:11:43,520 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-01 16:11:43,693 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-01 16:11:43,695 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-01 16:11:43,695 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-01 16:11:43,696 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-01 16:11:43,735 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:11:53,812 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-01 16:11:53,812 ERROR SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4D_JCF6:主機連線失敗:510 建立LU62連線時異常
+2021-11-01 16:11:53,951 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-01 16:11:53,952 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-01 16:11:53,952 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-01 16:11:53,953 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-01 16:11:53,982 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:11:55,694 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-01 16:13:26,918 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-01 16:13:27,223 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-01 16:15:48,438 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-01 16:15:48,633 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；CardFlow_Default_CallEMFS SUCCESS
+2021-11-01 16:15:48,798 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-01 16:15:48,799 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-01 16:15:48,800 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-01 16:15:48,800 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-01 16:15:48,839 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:15:50,266 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-01 16:16:05,537 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-01 16:16:05,538 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-01 16:16:05,539 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-01 16:16:05,540 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-01 16:16:05,579 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:16:05,732 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-01 16:16:05,883 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-01 16:16:05,884 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-01 16:16:05,885 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-01 16:16:05,885 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-01 16:16:05,922 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:16:16,001 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-01 16:16:16,002 ERROR SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：P4D_JCF6:主機連線失敗:510 建立LU62連線時異常
+2021-11-01 16:16:16,122 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-01 16:16:16,123 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-01 16:16:16,123 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-01 16:16:16,124 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-01 16:16:16,167 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-01 16:16:16,274 INFO SessionID：0xgtcreheio1gedyxgjs4kc2 UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd

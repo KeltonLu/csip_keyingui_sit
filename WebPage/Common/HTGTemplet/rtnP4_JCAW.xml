@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+	<header>
+		<action type="transaction" />
+		<data id="sessionId" value="" />
+		<data id="applicationId" value="CSIP" />
+		<data id="luType" value="LU62" />
+		<data id="transactionId" value="P4_JCAW" />
+	</header>
+	<line no="1">
+		<msgBody>
+			<data id="TRAN_ID" value="" />
+			<data id="PROGRAM_ID" value="" />
+			<data id="USER_ID" value="" />
+			<data id="MESSAGE_TYPE" value="0001" />
+			<data id="FUNCTION_CODE" value="" />
+      <!-- edit by mel 20141203 CSIP keyingui 一卡通需求 LINE_CNT分成FUN9_CONV,TSCC_SALES_FLAG,HEAD_FILLER三個欄位
+			<data id="LINE_CNT" value="" />
+      -->
+      <data id="FUN9_CONV" value="" />
+      <data id="TSCC_SALES_FLAG" value="" />
+      <data id="HEAD_FILLER" value="" />
+      
+			<data id="CARD_NO" value="" />
+			<data id="SELF_TAKE" value="1" />
+			<data id="EMBNAME" value="testuser" />
+			<data id="EMBTYPE" value="00" />
+			<data id="EXPDATE_MM" value="01" />
+			<data id="EXPDATE_YY" value="10" />
+			<data id="MEMNO" value="1234567895" />
+			<data id="CARD_NO_NEW" value="3345345345" />
+		</msgBody>
+	</line>
+</hostgateway>

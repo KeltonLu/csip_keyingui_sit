@@ -1,0 +1,411 @@
+2021-11-11 09:49:24,053 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:49:25,260 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 09:49:25,261 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 09:49:25,262 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 09:49:25,263 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 09:49:25,266 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:49:25,848 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 09:49:25,864 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 09:49:25,865 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 09:49:25,866 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 09:49:25,866 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 09:49:25,868 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:49:26,807 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 09:49:35,895 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 09:49:35,895 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 09:49:35,896 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 09:49:35,896 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 09:49:35,898 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:49:36,308 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 09:49:36,311 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 09:49:36,312 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 09:49:36,312 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 09:49:36,313 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 09:49:36,315 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:49:36,564 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 09:50:36,118 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 09:50:36,353 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-11 09:50:36,367 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 09:50:36,743 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 09:50:36,767 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 09:50:36,768 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 09:50:36,769 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：10
+2021-11-11 09:50:36,770 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：11
+2021-11-11 09:50:36,772 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:50:39,343 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 09:51:06,863 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:51:07,888 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 09:51:07,890 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 09:51:07,891 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 09:51:07,893 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 09:51:07,897 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:51:08,262 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 09:51:08,270 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 09:51:08,272 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 09:51:08,273 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 09:51:08,274 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 09:51:08,278 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 09:51:08,492 INFO SessionID：5acveuifg4tyo0s15v0w2kvp UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:13:40,005 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:13:40,447 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:13:40,448 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:13:40,448 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:13:40,449 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:13:40,489 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:13:40,693 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:13:40,897 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:13:40,897 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:13:40,898 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:13:40,898 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:13:40,924 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:13:41,069 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:13:48,563 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:13:48,563 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:13:48,564 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:13:48,565 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:13:48,597 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:13:48,802 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:13:48,945 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:13:48,946 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:13:48,947 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:13:48,947 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:13:48,978 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:13:49,110 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:33:26,545 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 15:33:26,885 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-11 15:33:27,043 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 15:33:27,698 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 15:33:27,820 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:33:27,821 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:33:27,821 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 15:33:27,822 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:33:27,844 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:33:28,280 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:40:29,307 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:40:29,308 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:40:29,309 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:40:29,309 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:40:29,334 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:40:29,835 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:40:29,915 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:40:29,917 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:40:29,918 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:40:29,918 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:40:29,938 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:40:30,441 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:44:10,332 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:44:10,333 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:44:10,334 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:44:10,335 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:44:10,355 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:44:11,188 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:44:11,274 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:44:11,274 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:44:11,275 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:44:11,275 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:44:11,294 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:44:11,837 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:44:17,899 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:44:17,900 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:44:17,901 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:44:17,902 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:44:17,921 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:44:18,248 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:44:18,329 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:44:18,330 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:44:18,331 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:44:18,332 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:44:18,354 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:44:19,607 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:52:03,757 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:52:03,758 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:52:03,759 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:52:03,760 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:52:03,789 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:52:04,292 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:52:04,371 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:52:04,371 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:52:04,372 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:52:04,373 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:52:04,395 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:52:05,183 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:52:25,039 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 15:52:25,195 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-11 15:52:25,383 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 15:52:25,626 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 15:52:25,707 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:52:25,708 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:52:25,709 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 15:52:25,709 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:52:25,733 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:52:25,939 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:54:31,626 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:54:31,627 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:54:31,627 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:54:31,628 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:54:31,646 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:54:32,044 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:54:32,126 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:54:32,127 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:54:32,127 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:54:32,128 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:54:32,147 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:54:32,465 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:55:43,497 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 15:55:43,818 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-11 15:55:43,981 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 15:55:44,255 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 15:55:44,341 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:55:44,342 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:55:44,343 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 15:55:44,343 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:55:44,365 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:55:44,734 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:59:32,191 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:59:32,192 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:59:32,192 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:59:32,193 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:59:32,216 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:59:32,661 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:59:32,741 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:59:32,742 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:59:32,743 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:59:32,743 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:59:32,762 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:59:33,215 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:59:44,318 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:59:44,318 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:59:44,319 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:59:44,320 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 15:59:44,340 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:59:44,558 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 15:59:44,628 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 15:59:44,628 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 15:59:44,629 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 15:59:44,629 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 15:59:44,647 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 15:59:45,005 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:00:28,623 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:00:28,624 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:00:28,624 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:00:28,625 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：10
+2021-11-11 16:00:28,648 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:00:30,405 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:03:10,707 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:03:10,708 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:03:10,709 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:03:10,709 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:03:10,739 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:03:11,135 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:03:11,221 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:03:11,222 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:03:11,223 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:03:11,223 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:03:11,244 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:03:11,375 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:03:21,447 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:03:21,448 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:03:21,451 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:03:21,452 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：10
+2021-11-11 16:03:21,473 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:03:22,006 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:03:22,100 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:03:22,101 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:03:22,101 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 16:03:22,102 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:03:22,120 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:03:23,737 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:06:32,951 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:06:32,952 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:06:32,952 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:06:32,953 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:06:32,972 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:06:34,009 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:06:34,091 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:06:34,092 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:06:34,093 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:06:34,093 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:06:34,117 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:06:37,301 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:07:05,720 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:07:05,825 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-11 16:07:06,043 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:07:06,284 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 16:07:06,362 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:07:06,363 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:07:06,363 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：10
+2021-11-11 16:07:06,364 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：11
+2021-11-11 16:07:06,385 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:07:46,679 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:07:46,781 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:07:46,782 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:07:46,783 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 16:07:46,783 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:07:46,807 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:07:47,065 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:17:29,924 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:17:29,925 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:17:29,925 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:17:29,926 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:17:29,946 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:17:30,689 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:17:30,764 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:17:30,765 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:17:30,765 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:17:30,766 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:17:30,783 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:18:07,879 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:18:51,188 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:18:51,317 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 16:18:51,495 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:18:51,729 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 16:18:51,807 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:18:51,808 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:18:51,808 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 16:18:51,809 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:18:51,841 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:18:52,093 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:21:28,689 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:21:28,690 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:21:28,690 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:21:28,691 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:21:28,710 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:21:29,052 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:21:29,136 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:21:29,136 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:21:29,137 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:21:29,137 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:21:29,159 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:21:29,456 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:22:18,116 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:22:18,574 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 16:22:18,750 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:22:18,973 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 16:22:19,057 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:22:19,058 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:22:19,059 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：10
+2021-11-11 16:22:19,059 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：11
+2021-11-11 16:22:19,080 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:22:19,453 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:22:19,562 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:22:19,563 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:22:19,563 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 16:22:19,564 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:22:19,587 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:22:20,952 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:23:42,781 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:23:42,782 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:23:42,783 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:23:42,783 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:23:42,804 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:23:43,993 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:23:44,070 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:23:44,071 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:23:44,072 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:23:44,072 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:23:44,092 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:23:44,979 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:24:03,366 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:24:03,367 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:24:03,368 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:24:03,368 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:24:03,388 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:24:03,760 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:24:03,840 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:24:03,841 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:24:03,842 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:24:03,843 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:24:03,864 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:24:04,891 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:24:19,299 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:24:19,300 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:24:19,300 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:24:19,301 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:24:19,322 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:24:19,655 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:24:19,739 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:24:19,741 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:24:19,741 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:24:19,742 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:24:19,765 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:24:20,653 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:27:13,025 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:27:13,026 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:27:13,027 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:27:13,028 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:27:13,050 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:27:13,505 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:27:13,578 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:27:13,579 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:27:13,579 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:27:13,580 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:27:13,601 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:27:22,608 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:27:58,291 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:27:58,414 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-11 16:27:58,571 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:27:58,797 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 16:27:58,879 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:27:58,880 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:27:58,881 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 16:27:58,882 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:27:58,902 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:28:02,887 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:36:14,185 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:36:14,186 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:36:14,187 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:36:14,187 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:36:14,208 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:36:15,283 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:36:15,370 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:36:15,370 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:36:15,371 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:36:15,371 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:36:15,394 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:36:16,338 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:36:37,379 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:36:37,501 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：C001；ErrorCode：；Message：
+2021-11-11 16:36:37,659 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Message：發查ESB電文，連線編號：1，連線IP：172.24.17.42，連線埠號：17222，使用者名稱：csipsit01
+2021-11-11 16:36:39,406 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：UI Message：StatusCode：0；RspCode：0000；CallESB SUCCESS；KeyInGUI ESB  Success
+2021-11-11 16:36:39,489 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:36:39,490 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:36:39,491 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：44
+2021-11-11 16:36:39,491 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:36:39,512 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:36:41,611 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:39:38,110 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:39:38,111 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:39:38,112 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:39:38,112 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:39:38,132 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:39:38,317 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:39:38,392 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:39:38,393 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:39:38,393 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:39:38,394 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:39:38,417 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:39:40,502 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:39:49,427 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:39:49,428 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:39:49,429 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:39:49,429 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:39:49,449 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:39:50,449 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:39:50,525 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:39:50,525 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:39:50,526 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:39:50,526 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:39:50,544 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:39:50,684 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:39:58,258 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:39:58,259 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:39:58,259 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:39:58,260 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：119
+2021-11-11 16:39:58,280 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:39:59,173 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd
+2021-11-11 16:39:59,261 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostBegin
+2021-11-11 16:39:59,262 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：TRUE
+2021-11-11 16:39:59,263 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：9
+2021-11-11 16:39:59,263 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：42
+2021-11-11 16:39:59,284 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2021-11-11 16:39:59,821 INFO SessionID：eeyfftxsj00yppsxhitgqbpi UserID：Z00040883 FunctionID：01010100 Layer：HTG Message：getRtnHostEnd

@@ -1,0 +1,79 @@
+2021-02-20 00:20:00,903 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-02-20 00:20:00,912 INFO  Layer：Util Message：remotePath:/aptoap/MAINFRAMETOCSIP_AML/
+2021-02-20 00:20:00,914 INFO  Layer：Util Message：remFileName:HCOP_20210220.TXT
+2021-02-20 00:20:00,916 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-02-20 00:20:01,025 ERROR  Layer：Util Message：下載檔案 HCOP_20210220.TXT 失敗(0)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 325
+2021-02-20 00:20:11,421 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-02-20 00:20:11,424 INFO  Layer：Util Message：remotePath:/aptoap/MAINFRAMETOCSIP_AML/
+2021-02-20 00:20:11,426 INFO  Layer：Util Message：remFileName:HCOP_20210220.TXT
+2021-02-20 00:20:11,428 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-02-20 00:20:11,439 ERROR  Layer：Util Message：下載檔案 HCOP_20210220.TXT 失敗(1)：System.IO.IOException: 由於另一個處理序正在使用檔案 'D:\CSIP2.0\csip_keyingui_sit\WebPage\FileDownload\GetHcopStatus\GetHcopStatus20210220002000\HCOP_20210220.TXT'，所以無法存取該檔案。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   於 System.IO.FileStream..ctor(String path, FileMode mode)
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 318
+2021-02-20 00:20:21,549 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-02-20 00:20:21,552 INFO  Layer：Util Message：remotePath:/aptoap/MAINFRAMETOCSIP_AML/
+2021-02-20 00:20:21,554 INFO  Layer：Util Message：remFileName:HCOP_20210220.TXT
+2021-02-20 00:20:21,556 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-02-20 00:20:21,564 ERROR  Layer：Util Message：下載檔案 HCOP_20210220.TXT 失敗(2)：System.IO.IOException: 由於另一個處理序正在使用檔案 'D:\CSIP2.0\csip_keyingui_sit\WebPage\FileDownload\GetHcopStatus\GetHcopStatus20210220002000\HCOP_20210220.TXT'，所以無法存取該檔案。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   於 System.IO.FileStream..ctor(String path, FileMode mode)
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 318
+2021-02-20 00:20:31,612 ERROR  Message：System.Net.Mail.SmtpException: 無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available
+   於 Framework.Common.Message.MailService.MailSenderBasic(String[] _To, String _From, String _Subject, String _Body, String AttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 265
+   於 Framework.Common.Message.MailService.MailSender(String[] _arrMailAdds, Int32 _mailTemplateId, NameValueCollection _coTags, String sAttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 95
+   於 MainFrameHCOPStatusService.SendMail(String mailTitle, String mailBody, String status, DateTime startTime) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\MainFrameHCOPStatusService.cs: 行 47
+2021-02-20 00:30:00,332 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-02-20 00:30:00,335 INFO  Layer：Util Message：remotePath:/aptoap/MAINFRAMETOCSIP_AML/
+2021-02-20 00:30:00,338 INFO  Layer：Util Message：remFileName:MFAF_20210220.TXT
+2021-02-20 00:30:00,341 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-02-20 00:30:00,547 ERROR  Layer：Util Message：下載檔案 MFAF_20210220.TXT 失敗(0)：System.Net.WebException: 遠端伺服器傳回一個錯誤: (550) 無法使用檔案 (例如，找不到檔案、沒有存取權限)。
+   於 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   於 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   於 System.Net.CommandStream.Dispose(Boolean disposing)
+   於 System.IO.Stream.Close()
+   於 System.IO.Stream.Dispose()
+   於 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   於 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   於 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   於 System.Net.FtpWebRequest.GetResponse()
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 325
+2021-02-20 00:30:10,800 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-02-20 00:30:10,802 INFO  Layer：Util Message：remotePath:/aptoap/MAINFRAMETOCSIP_AML/
+2021-02-20 00:30:10,804 INFO  Layer：Util Message：remFileName:MFAF_20210220.TXT
+2021-02-20 00:30:10,806 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-02-20 00:30:10,815 ERROR  Layer：Util Message：下載檔案 MFAF_20210220.TXT 失敗(1)：System.IO.IOException: 由於另一個處理序正在使用檔案 'D:\CSIP2.0\csip_keyingui_sit\WebPage\FileDownload\GetMainFrameMFAF\GetMainFrameMFAF20210220003000\MFAF_20210220.TXT'，所以無法存取該檔案。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   於 System.IO.FileStream..ctor(String path, FileMode mode)
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 318
+2021-02-20 00:30:21,169 INFO  Layer：Util Message：FTP_IP:172.24.15.19
+2021-02-20 00:30:21,172 INFO  Layer：Util Message：remotePath:/aptoap/MAINFRAMETOCSIP_AML/
+2021-02-20 00:30:21,175 INFO  Layer：Util Message：remFileName:MFAF_20210220.TXT
+2021-02-20 00:30:21,177 INFO  Layer：Util Message：Encoding is UTF8:False
+2021-02-20 00:30:21,184 ERROR  Layer：Util Message：下載檔案 MFAF_20210220.TXT 失敗(2)：System.IO.IOException: 由於另一個處理序正在使用檔案 'D:\CSIP2.0\csip_keyingui_sit\WebPage\FileDownload\GetMainFrameMFAF\GetMainFrameMFAF20210220003000\MFAF_20210220.TXT'，所以無法存取該檔案。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   於 System.IO.FileStream..ctor(String path, FileMode mode)
+   於 FTPFactory.Download(String remotePath, String remFileName, String locPath, String locFileName, Boolean isUtf8) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\IO\FTPFactory.cs: 行 318
+2021-02-20 00:30:31,243 ERROR  Message：System.Net.Mail.SmtpException: 無法使用服務，正在關閉傳送通道。 伺服器回應為: 4.3.2 Service not available
+   於 Framework.Common.Message.MailService.MailSenderBasic(String[] _To, String _From, String _Subject, String _Body, String AttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 265
+   於 Framework.Common.Message.MailService.MailSender(String[] _arrMailAdds, Int32 _mailTemplateId, NameValueCollection _coTags, String sAttachParam) 於 D:\CSIP2.0\csip_commonmodel_sit\Framework.Common\Message\MailService.cs: 行 95
+   於 MainFrameMFAFService.SendMail(String mailTitle, String mailBody, String status, DateTime startTime) 於 d:\CSIP2.0\csip_keyingui_sit\WebPage\App_Code\MainFrameMFAFService.cs: 行 48
+2021-02-20 02:00:00,038 INFO  Layer：BusinessRule Message：

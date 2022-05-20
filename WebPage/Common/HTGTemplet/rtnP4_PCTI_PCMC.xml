@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--FUNCTION_ID="PCMC1"，卡人檔異動的return-->
+<hostgateway>
+  <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4_PCTI" />
+  </header>
+  <line no="1">
+    <msgBody>
+      <data id="TRAN_ID" value="PCTI" />
+      <data id="USER_ID" value="" />
+      <data id="FUNCTION_ID" value="PCMC1" />
+      <data id="ID_NO" value="" />
+      <data id="ID_CODE" value="" />
+      <data id="ID_DATA" value="" />
+      <!--有資料異動才出現此tag-->
+      <data id="OWNER" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="MAIL_IND" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="ZIP" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="ADDR_LINE_1" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="ADDR_LINE_2" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="CITY" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="WORK_PHONE" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="TELEPHONE" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="DIRECT_MAIL" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="TITLE" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="BILLING_CYCLE" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="LAST_CR_LINE_IND" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="WAVE" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="MAIL" value="下傳異動資料" />
+      <!--有資料異動才出現此tag-->
+      <data id="BK_ID_AC" value="下傳異動資料" />
+      <!--以下為一定會出現的tag-->
+      <data id="ERR_MSG_NO" value="" />
+      <data id="ERR_MSG_CODE" value="999" />
+      <data id="ERR_MSG_DATA" value="00999" />
+    </msgBody>
+  </line>
+</hostgateway>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="CSIP"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4_JCLE"/>
+        <data id="lowValue" value="true" />
+    </header>
+    <body>
+        <data id="TRAN_ID" value=""/>
+        <data id="PROGRAM_ID" value=""/>
+        <data id="USER_ID" value=""/>
+        <data id="MESSAGE_TYPE" value=""/>
+        <data id="FUNCTION_CODE" value=""/>
+        <data id="LINE_CNT" value=""/>
+        <data id="ACCTID" value=""/>
+        <!--<data id="LPR_NO" value=""/>-->
+        <data id="UPDATE_DATE_S" value=""/>
+        <data id="UPDATE_DATE_E" value=""/>
+        <data id="KEYIN_DATE_S" value=""/>
+        <data id="KEYIN_DATE_E" value=""/>
+        <!--<data id="APPLY_NO" value=""/>-->
+        <data id="FILLER_00" value=""/>
+        <data id="ACTION" value=""/>
+        <data id="TYPE" value=""/>
+        <data id="ACCT_ID" value=""/>
+        <data id="LPR_NO" value=""/>
+        <data id="CUSTID" value=""/>
+        <data id="STATUS" value=""/>
+        <data id="NO" value=""/>
+        <data id="SERVICE_A_DATE" value=""/>
+        <data id="SERVICE_D_DATE" value=""/>
+        <data id="RESULT_A_CODE" value=""/>
+        <data id="RESULT_D_CODE" value=""/>
+        <data id="APPLY_NO" value=""/>
+        <data id="KEYIN_DATE" value=""/>
+        <data id="UPDATE_USER" value=""/>
+        <data id="UPDATE_DATE" value=""/>
+        <data id="UPDATE_TIME" value=""/>
+        <data id="SEND_DATE" value=""/>
+        <data id="SPC" value=""/>
+        <data id="SPC_ID" value=""/>
+        <data id="INTRODUCER_CARD_ID" value=""/>
+        <data id="EFF_DATE" value=""/>
+        <data id="SOURCE" value=""/>
+        <data id="CHANNEL" value=""/>
+        <data id="VENDOR_NAME" value=""/>
+    </body>
+</hostgateway>

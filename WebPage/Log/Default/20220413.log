@@ -1,0 +1,109 @@
+2022-04-13 15:42:52,407 INFO  MessageApplication and Jobs End
+2022-04-13 15:43:03,962 INFO  MessageApplication and Jobs End
+2022-04-13 15:43:15,547 INFO  MessageApplication and Jobs End
+2022-04-13 15:43:37,196 INFO  MessageApplication and Jobs End
+2022-04-13 15:44:17,783 INFO  MessageApplication and Jobs End
+2022-04-13 16:27:19,403 INFO  MessageApplication and Jobs End
+2022-04-13 16:27:50,095 INFO  MessageApplication and Jobs End
+2022-04-13 16:28:07,541 INFO  MessageApplication and Jobs End
+2022-04-13 16:28:17,661 INFO  MessageApplication and Jobs End
+2022-04-13 16:28:25,092 INFO  MessageApplication and Jobs End
+2022-04-13 16:31:27,694 ERROR SessionIDdvdoopostvgd013t4psq2ywl UserID1 FunctionID01080101 MessageSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DataTableConvertor.convSingRow[T](T& obj, DataRow dataRow) in d:\い獺盡郎\csip_keyingui_sit\WebPage\App_Code\DataTableConvertor.cs:line 53
+   at BRAML_Cdata_Work.getCData_WOrk(AML_SessionState parmObj) in d:\い獺盡郎\csip_keyingui_sit\WebPage\App_Code\BRAML_Cdata_Work.cs:line 115
+   at Page_P010801010001.showBaseData() in d:\い獺盡郎\csip_keyingui_sit\WebPage\Page\P010801010001.aspx.cs:line 474
+2022-04-13 16:31:30,949 INFO  MessageApplication and Jobs End
+2022-04-13 16:31:41,511 INFO  MessageApplication and Jobs End
+2022-04-13 16:32:03,321 INFO  MessageApplication and Jobs End
+2022-04-13 16:32:09,069 INFO  MessageApplication and Jobs End
+2022-04-13 16:34:13,245 ERROR SessionIDeknfdtptyacd4t3uu3q3nspa UserID1 FunctionID01080106 LayerBusinessRule MessageCASE_NO:20200122800001
+2022-04-13 16:37:07,762 ERROR SessionIDachvovyygfq2okxd5cqybx2e UserID1 FunctionID01080106 LayerBusinessRule Message把计て琩高 '(@CASE_NO nvarchar(4000),@Datadate nvarchar(4000),@CustomerID nv' ゲ斗Τ把计 '@CASE_NO'ゼ矗ㄑ,
+Type:CSIPNewInvoice.EntityLayer_new.EntityAML_Cdata_Work_S, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73
+2022-04-13 16:37:25,060 ERROR SessionIDachvovyygfq2okxd5cqybx2e UserID1 FunctionID01080106 LayerBusinessRule Message把计て琩高 '(@CASE_NO nvarchar(4000),@Datadate nvarchar(4000),@CustomerID nv' ゲ斗Τ把计 '@CASE_NO'ゼ矗ㄑ,
+Type:CSIPNewInvoice.EntityLayer_new.EntityAML_Cdata_Work_S, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73
+2022-04-13 16:40:17,200 ERROR SessionIDachvovyygfq2okxd5cqybx2e UserID1 FunctionID01080106 LayerBusinessRule Message把计て琩高 '(@CASE_NO nvarchar(4000),@Datadate nvarchar(4000),@CustomerID nv' ゲ斗Τ把计 '@CASE_NO'ゼ矗ㄑ,
+Type:CSIPNewInvoice.EntityLayer_new.EntityAML_Cdata_Work_S, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73
+2022-04-13 16:42:17,569 ERROR SessionIDachvovyygfq2okxd5cqybx2e UserID1 FunctionID01080106 LayerBusinessRule Message把计て琩高 '(@CASE_NO nvarchar(4000),@Datadate nvarchar(4000),@CustomerID nv' ゲ斗Τ把计 '@CASE_NO'ゼ矗ㄑ,
+Type:CSIPNewInvoice.EntityLayer_new.EntityAML_Cdata_Work_S, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73
+2022-04-13 16:44:30,015 ERROR SessionIDk0d3fpyixxecwuqvwj0sp0as UserID1 FunctionID01080106 LayerBusinessRule Message把计て琩高 '(@CASE_NO nvarchar(4000),@Datadate nvarchar(4000),@CustomerID nv' ゲ斗Τ把计 '@CASE_NO'ゼ矗ㄑ,
+Type:CSIPNewInvoice.EntityLayer_new.EntityAML_Cdata_Work_S, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73
+2022-04-13 16:47:30,228 ERROR SessionID3ddiij4owy512255t50jakyo UserID1 FunctionID01080106 LayerBusinessRule Message把计て琩高 '(@CASE_NO nvarchar(4000),@Datadate nvarchar(4000),@CustomerID nv' ゲ斗Τ把计 '@CASE_NO'ゼ矗ㄑ,
+Type:CSIPNewInvoice.EntityLayer_new.EntityAML_Cdata_Work_S, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\い獺盡郎\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73

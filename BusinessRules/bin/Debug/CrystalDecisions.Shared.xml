@@ -1,0 +1,3148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly>
+<name>CrystalDecisions.Shared</name>
+</assembly>
+<members>
+<member name="T:CrystalDecisions.CrystalReports.ViewerObjectModel.ReportPartBookmark">
+<summary>
+<para>提供 <see cref="T:CrystalDecisions.Web.ReportPartBookmarkNavigationEventArgs">ReportPartBookmarkNavigationEventArgs</see> 類別之 ReportPartBookMark 屬性的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.ViewerObjectModel.ReportPartBookmark.DataContext">
+<summary>
+<para>取得報表的資料子樹狀結構。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.ViewerObjectModel.ReportPartBookmark.ObjectName">
+<summary>
+<para>取得使用者已擷取其細目的物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.ViewerObjectModel.ReportPartBookmark.ReportUri">
+<summary>
+<para>取得或設定 Uniform Resource Identifier 以識別要求的報表。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.Alignment">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.ObjectFormat">ObjectFormat</see> 類別的 HorizontalAlignment 屬性中指定文字的水平對齊。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.Alignment.Decimal">
+<summary>
+<para>對齊數值中的小數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.Alignment.DefaultAlign">
+<summary>
+<para>對齊預設的對齊方式設定。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.Alignment.HorizontalCenterAlign">
+<summary>
+<para>水平對齊可用空間的中央。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.Alignment.Justified">
+<summary>
+<para>對齊左和右邊緣。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.Alignment.LeftAlign">
+<summary>
+<para>對齊左邊緣。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.Alignment.RightAlign">
+<summary>
+<para>對齊右邊緣。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.AMPMFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat">TimeFieldFormat</see> 類別的 <c>AMPMFormat</c> 屬性中指定 AM PM 格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AMPMFormat.AMPMAfter">
+<summary>
+<para>時間欄位中 AM 或 PM 符號顯示在時間之後。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AMPMFormat.AMPMBefore">
+<summary>
+<para>時間欄位中 AM 或 PM 符號顯示在時間之前。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.AreaSectionKind">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.Area">Area</see> 類別和 <see cref="T:CrystalDecisions.CrystalReports.Engine.Section">Section</see> 類別的 Kind 屬性以及 <see cref="T:CrystalDecisions.Shared.ExcelFormatOptions">ExcelFormatOptions</see> 類別的 <c>ExcelAreaType</c> 屬性中指定區域或區段的種類。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AreaSectionKind.Detail">
+<summary>
+<para>區域為細目區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AreaSectionKind.GroupFooter">
+<summary>
+<para>區域為群組尾。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AreaSectionKind.GroupHeader">
+<summary>
+<para>區域為群組首。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AreaSectionKind.PageFooter">
+<summary>
+<para>區域為頁尾。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AreaSectionKind.PageHeader">
+<summary>
+<para>區域為頁首。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AreaSectionKind.ReportFooter">
+<summary>
+<para>區域為報表尾。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.AreaSectionKind.ReportHeader">
+<summary>
+<para>區域為報表首。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.BooleanOutputType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.BooleanFieldFormat">BooleanFieldFormat</see> 類別的 <c>OutputType</c> 屬性中指定布林輸出類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.BooleanOutputType.OneOrZero">
+<summary>
+<para>布林值將顯示為 1 或 0。1 = <b>True</b>，0 = <b>False</b>。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.BooleanOutputType.TOrF">
+<summary>
+<para>布林值將顯示為 T 或 F。T = <b>True</b>，F = <b>False</b>。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.BooleanOutputType.TrueOrFalse">
+<summary>
+<para>布林值將顯示為 <b>True</b> 或 <b>False</b>。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.BooleanOutputType.YesOrNo">
+<summary>
+<para>布林值將顯示為 Yes 或 No。Yes = <b>True</b>，No = <b>False</b>。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.BooleanOutputType.YOrN">
+<summary>
+<para>布林值將顯示為 Y 或 N。Y = <b>True</b>，N = <b>False</b>。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ConnectionInfo">
+<summary>
+<para>提供連接到資料庫伺服器或 ODBC 資料來源的擷取和設定選項屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ConnectionInfo.DatabaseName">
+<summary>
+<para>取得或設定資料庫名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ConnectionInfo.IntegratedSecurity">
+<summary>
+<para>決定資料庫連線是否使用整合安全性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ConnectionInfo.Password">
+<summary>
+<para>取得或設定登入資料來源的密碼。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ConnectionInfo.ServerName">
+<summary>
+<para>取得或設定伺服器名稱或資料庫所在的 ODBC 資料來源。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ConnectionInfo.UserID">
+<summary>
+<para>取得或設定登入資料來源的使用者名稱。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.CurrencySymbolFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat">NumericFieldFormat</see> 類別的 <c>CurrencySymbolFormat</c> 屬性中指定貨幣符號。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.CurrencySymbolFormat.FixedSymbol">
+<summary>
+<para>貨幣符號置於欄位的最左邊。如果欄位是靠右對齊的，在符號和貨幣值之間會保留額外的空間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.CurrencySymbolFormat.FloatingSymbol">
+<summary>
+<para>貨幣符號位置盡量靠近貨幣數量。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.CurrencySymbolFormat.NoSymbol">
+<summary>
+<para>不顯示貨幣符號。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.DataSourceConnections">
+<summary>
+<para>包含報表中每一個連接的 <c>ConnectionInfo</c> 執行個體。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.DataSourceConnections.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.Shared.IConnectionInfo">IConnectionInfo</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="P:CrystalDecisions.Shared.DataSourceConnections.Item(System.String,System.String)">
+<summary>
+<para>取得具有指定伺服器和資料庫名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.Shared.IConnectionInfo">IConnectionInfo</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+<param name="index"></param>
+</member>
+<member name="P:CrystalDecisions.Shared.DataSourceConnections.Item(System.String,System.String,System.Boolean)">
+<summary>
+<para>取得具有指定伺服器和資料庫名稱的物件。此方法可用來選擇性地忽略資料庫名稱中的大小寫。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.Shared.IConnectionInfo">IConnectionInfo</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+<param name="index"></param>
+<param name="boolean"></param>
+</member>
+<member name="T:CrystalDecisions.Shared.DateTimeCondition">
+<summary>
+<para>在 DateTimeGroupOptions 類別的 DateTimeGroupConditionn 屬性中指定群組的日期時間條件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.Annually">
+<summary>
+<para>資料以每年為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.Biweekly">
+<summary>
+<para>資料以兩星期為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.ByAMPM">
+<summary>
+<para>資料以半天為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.ByHour">
+<summary>
+<para>資料以小時為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.ByMinute">
+<summary>
+<para>資料以 60 秒為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.BySecond">
+<summary>
+<para>資料依秒數組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.Daily">
+<summary>
+<para>資料以每天為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.Monthly">
+<summary>
+<para>資料以每月為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.Quarterly">
+<summary>
+<para>資料以 3 個月為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.SemiAnnually">
+<summary>
+<para>資料以 6 個月為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.Semimonthly">
+<summary>
+<para>資料以半個月為間隔組成群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DateTimeCondition.Weekly">
+<summary>
+<para>資料以每週為間隔組成群組。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.DayFormat">
+<summary>
+<para>在 DateFieldFormat 類別的 DayFormat 屬性中指定日格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DayFormat.LeadingZeroNumericDay">
+<summary>
+<para>個位數的日將會以零開頭列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DayFormat.NoDay">
+<summary>
+<para>不會列印日。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DayFormat.NumericDay">
+<summary>
+<para>日是以數值格式列印，而不會以零開頭。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.DefaultValueSortMethod">
+<summary>
+<para>為 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別和 <see cref="T:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition">ParameterFieldDefinition</see> 類別的 <c>DefaultValueSortMethod</c> 屬性指定預設值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortMethod.BasedOnDescription">
+<summary>
+<para>根據說明來排序參數值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortMethod.BasedOnValue">
+<summary>
+<para>根據值來排序參數值。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.DefaultValueSortOrder">
+<summary>
+<para>為 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別和 <see cref="T:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition">ParameterFieldDefinition</see> 類別的 <c>DefaultValueSortOrder</c> 屬性指定預設值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortOrder.AlphabeticalAscending">
+<summary>
+<para>依字母順序遞增排序參數值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortOrder.AlphabeticalDescending">
+<summary>
+<para>依字母順序遞減排序參數值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortOrder.DateTimeAscending">
+<summary>
+<para>依時間順序遞增排序參數值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortOrder.DateTimeDescending">
+<summary>
+<para>依時間順序遞減排序參數值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortOrder.NoSort">
+<summary>
+<para>不排序參數值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortOrder.NumericAscending">
+<summary>
+<para>依數字順序遞增排序參數值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DefaultValueSortOrder.NumericDescending">
+<summary>
+<para>依數字順序遞減排序參數值。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.DiscreteOrRangeKind">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別的 <c>PromptingType</c> 屬性和 <see cref="T:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition">ParameterFieldDefinition</see> 類別的 <c>DiscreteOrRangeKind</c> 屬性中指定參數值為離散、範圍或兩者皆是。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DiscreteOrRangeKind.DiscreteAndRangeValue">
+<summary>
+<para>參數包含離散和範圍值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DiscreteOrRangeKind.DiscreteValue">
+<summary>
+<para>參數只包含離散值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.DiscreteOrRangeKind.RangeValue">
+<summary>
+<para>參數只包含範圍值。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.DiskFileDestinationOptions">
+<summary>
+<para>提供匯出至磁碟時的擷取和設定檔名屬性。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.DiskFileDestinationOptions.DiskFileName">
+<summary>
+<para>取得或設定檔案名稱的位置。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.EnterpriseReport">
+<summary>
+<para>
+<c>EnterpriseReport</c> 類別是 Managed 元件；將限制的物件模型提供給開發人員時，此類別可做為 <c>EnterpriseReportService</c> 類別的 Proxy。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.ApsServer">
+<summary>
+<para>取得或設定 APS 伺服器的電腦名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.AuthenticationType">
+<summary>
+<para>取得或設定驗證類型。有效值為 secEnterprise 和 secWindowsNT。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.CmsServer">
+<summary>
+<para>取得或設定 CMS 伺服器的電腦名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.LogonToken">
+<summary>
+<para>取得或設定報表使用的登入 Token。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.ObjectID">
+<summary>
+<para>取得或設定識別報表的唯一物件 ID。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.ObjectName">
+<summary>
+<para>取得企業報表或企業資料夾的名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.ObjectType">
+<summary>
+<para>取得企業報表的類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.Password">
+<summary>
+<para>取得或設定登入密碼。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.Username">
+<summary>
+<para>取得或設定使用者名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.WebConnector">
+<summary>
+<para>取得或設定 Web 連接器伺服器的電腦名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.EnterpriseReport.WebServiceUrl">
+<summary>
+<para>取得或設定 EnterpriseReportService Web 服務的 URL。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.EnumEnterpriseObjectType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.EnterpriseReport">EnterpriseReport</see> 類別的 <c>ObjectType</c> 屬性中指定物件類型。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumEnterpriseObjectType.FOLDER">
+<summary>
+<para>表示此物件為企業資料夾。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumEnterpriseObjectType.INVALID">
+<summary>
+<para>表示此物件無效。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumEnterpriseObjectType.REPORT">
+<summary>
+<para>表示此物件為企業報表。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumEnterpriseObjectType.UNKNOWN">
+<summary>
+<para>表示此物件為無法辨識的企業物件型別，但不是容器。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumEnterpriseObjectType.UNKNOWN_CONTAINER">
+<summary>
+<para>表示此物件為無法辨識的企業物件型別，而且是容器。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.EnumServerFileType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ServerFileReport">ServerFileReport</see> 類別的 <c>ObjectType</c> 屬性中指定物件類型。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumServerFileType.FOLDER">
+<summary>
+<para>表示此物件為伺服器檔案資料夾。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumServerFileType.INVALID">
+<summary>
+<para>表示此物件無效。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EnumServerFileType.REPORT">
+<summary>
+<para>表示此物件為伺服器檔案報表。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.EventLogLevel">
+<summary>
+<para>指定錯誤類型，以登入 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">ReportDocument</see> 類別的 <c>EnableEventLog</c> 方法。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EventLogLevel.LogCRPEAPIErrors">
+<summary>
+<para>表示事件記錄會記錄 Crystal Report Print Engine API 的錯誤。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EventLogLevel.LogEngineErrors">
+<summary>
+<para>表示事件記錄會記錄 Crystal Report Print Engine 的錯誤。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.EventLogLevel.NoLogging">
+<summary>
+<para>表示不會有任何事件記錄。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ExcelFormatOptions">
+<summary>
+<para>提供匯出至 Excel 時的擷取和設定選項屬性。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.ExcelAreaGroupNumber">
+<summary>
+<para>如果區域類型為群組區域，則取得或設定基底區域群組編號。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.ExcelAreaType">
+<summary>
+<para>如果沒有使用固定資料行寬度，則取得或設定區域類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.ExcelConstantColumnWidth">
+<summary>
+<para>取得或設定資料行寬度。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.ExcelTabHasColumnHeadings">
+<summary>
+<para>取得或設定匯出至 Excel 以取得資料行標題的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.ExcelUseConstantColumnWidth">
+<summary>
+<para>取得或設定匯出至 Excel 以使用固定資料行寬度。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.FirstPageNumber">
+<summary>
+<para>取得或設定第一頁的頁碼。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.LastPageNumber">
+<summary>
+<para>取得或設定最後一頁的頁碼。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExcelFormatOptions.UsePageRange">
+<summary>
+<para>取得或設定是否應使用頁面範圍。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ExceptionEventArgs">
+<summary>
+<para>為 Exception 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExceptionEventArgs.Handled">
+<summary>
+<para>取得或設定事件是否已處理。如果您不希望發生預設的動作，請設定為 true。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ExchangeDestinationType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ExchangeFolderDestinationOptions">ExchangeFolderDestinationOptions</see> 類別的 <c>DestinationType</c> 屬性中指定交換目的類型。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExchangeDestinationType.ExchangePostDocMessage">
+<summary>
+<para>目的端是 Exchange 資料夾中的通知郵件。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ExchangeFolderDestinationOptions">
+<summary>
+<para>提供匯出至 Microsoft Exchange 資料夾時的擷取和設定選項屬性。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExchangeFolderDestinationOptions.DestinationType">
+<summary>
+<para>取得或設定匯出目的類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExchangeFolderDestinationOptions.FolderPath">
+<summary>
+<para>取得或設定匯出至 Exchange 的報表之 Exchange 資料夾路徑。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExchangeFolderDestinationOptions.Password">
+<summary>
+<para>取得或設定 Exchange 密碼。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExchangeFolderDestinationOptions.Profile">
+<summary>
+<para>取得或設定使用者設定檔以存取匯出至 Exchange 的報表之 Exchange 資料夾。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ExportDestinationType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ExportOptions">ExportOptions</see> 類別的 <c>ExportDestinationType</c> 屬性中指定匯出目的類型。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportDestinationType.DiskFile">
+<summary>
+<para>匯出目的端為磁碟檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportDestinationType.ExchangeFolder">
+<summary>
+<para>匯出目的端為 Exchange 資料夾。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportDestinationType.MicrosoftMail">
+<summary>
+<para>匯出目的端為 Microsoft Mail (MAPI)。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportDestinationType.NoDestination">
+<summary>
+<para>未設定匯出目的端類型。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ExportFormatType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ExportOptions">ExportOptions</see> 類別的 <c>ExportFormatType</c> 屬性中指定匯出格式類型。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.CrystalReport">
+<summary>
+<para>報表的匯出格式為 Crystal Report 檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.Excel">
+<summary>
+<para>報表的匯出格式為 Microsoft Excel 檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.ExcelRecord">
+<summary>
+<para>報表的匯出格式為 Excel Record 檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.HTML32">
+<summary>
+<para>報表的匯出格式為 HTML 3.2 檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.HTML40">
+<summary>
+<para>報表的匯出格式為 HTML 4.0 檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.NoFormat">
+<summary>
+<para>未指定匯出格式。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.PortableDocFormat">
+<summary>
+<para>報表的匯出格式為 PDF 檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.RichText">
+<summary>
+<para>報表的匯出格式為 Rich Text 檔案。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ExportFormatType.WordForWindows">
+<summary>
+<para>報表的匯出格式為 Microsoft Word 檔案。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ExportOptions">
+<summary>
+<para>提供匯出至您的報表時的擷取和設定選項屬性。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.Shared.ExportOptions.CreateDiskFileDestinationOptions">
+<summary>
+<para>建立報表匯出的磁碟檔案目的地選項。
+      </para>
+</summary>
+<returns>
+</returns>
+</member>
+<member name="M:CrystalDecisions.Shared.ExportOptions.CreateExcelFormatOptions">
+<summary>
+<para>建立報表匯出的 Microsoft Excel 格式選項。
+      </para>
+</summary>
+<returns>
+</returns>
+</member>
+<member name="M:CrystalDecisions.Shared.ExportOptions.CreateExchangeFolderDestinationOptions">
+<summary>
+<para>建立報表匯出的 Exchange 資料夾目的地選項。
+      </para>
+</summary>
+<returns>
+</returns>
+</member>
+<member name="M:CrystalDecisions.Shared.ExportOptions.CreateHTMLFormatOptions">
+<summary>
+<para>建立報表匯出的 HTML 格式選項。
+      </para>
+</summary>
+<returns>
+</returns>
+</member>
+<member name="M:CrystalDecisions.Shared.ExportOptions.CreateMicrosoftMailDestinationOptions">
+<summary>
+<para>建立報表匯出的 Microsoft 郵件目的地選項。
+      </para>
+</summary>
+<returns>
+</returns>
+</member>
+<member name="M:CrystalDecisions.Shared.ExportOptions.CreatePdfRtfWordFormatOptions">
+<summary>
+<para>建立報表匯出的 PDF、RTF 或 Word 格式選項。
+      </para>
+</summary>
+<returns>
+</returns>
+</member>
+<member name="P:CrystalDecisions.Shared.ExportOptions.DestinationOptions">
+<summary>
+<para>取得或設定 DestinationOptions。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExportOptions.ExportDestinationOptions">
+<summary>
+<para>取得或設定報表匯出之目的地選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExportOptions.ExportDestinationType">
+<summary>
+<para>取得或設定匯出目的類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExportOptions.ExportFormatOptions">
+<summary>
+<para>取得或設定 <c>FormatOptions</c>。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExportOptions.ExportFormatType">
+<summary>
+<para>取得或設定匯出格式類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ExportOptions.FormatOptions">
+<summary>
+<para>取得或設定 FormatOptions。 
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.FieldKind">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.FieldDefinition">FieldDefinition</see> 類別和衍生自 <c>FieldDefinition</c> 之所有類別的 Kind 屬性中指定欄位類型。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.DatabaseField">
+<summary>
+<para>欄位為資料庫欄位。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.FormulaField">
+<summary>
+<para>欄位為公式。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.GroupNameField">
+<summary>
+<para>欄位為群組名稱欄位。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.ParameterField">
+<summary>
+<para>欄位為參數。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.RunningTotalField">
+<summary>
+<para>欄位為累加值。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.SpecialVarField">
+<summary>
+<para>欄位為特殊變數。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.SQLExpressionField">
+<summary>
+<para>	欄位為 SQL 運算式。
+      </para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldKind.SummaryField">
+<summary>
+<para>欄位為摘要。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.FieldValueType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.FieldDefinition">FieldDefinition</see> 類別和衍生自 <c>FieldDefinition</c> 之所有類別的 ValueType 屬性中指定欄位值類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.BitmapField">
+<summary>
+<para>欄位包含 Windows 點陣圖資料。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.BlobField">
+<summary>
+<para>欄位包含 Blob (二進位大型物件) 資料。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.BooleanField">
+<summary>
+<para>欄位包含 true 或 false 值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.ChartField">
+<summary>
+<para>欄位包含圖表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.CurrencyField">
+<summary>
+<para>欄位包含貨幣值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.DateField">
+<summary>
+<para>欄位包含日期值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.DateTimeField">
+<summary>
+<para>欄位包含日期時間值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.IconField">
+<summary>
+<para>欄位包含圖示。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.Int16sField">
+<summary>
+<para>欄位包含一個 16 位元的整數，其值介於 -32768 和 32767 之間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.Int16uField">
+<summary>
+<para>欄位包含不帶正負號的 16 位元整數，其值介於 0 和 65535 之間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.Int32sField">
+<summary>
+<para>欄位包含一個 32 位元的整數，其值介於 -2147483648 和 2147483647 之間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.Int32uField">
+<summary>
+<para>欄位包含一個 32 位元的整數，其值介於 0 和 4294967295 之間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.Int8sField">
+<summary>
+<para>欄位包含一個 8 位元的整數，其值介於 -128 和 127 之間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.Int8uField">
+<summary>
+<para>欄位包含一個 8 位元的整數，其值介於 0 和 255 之間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.NumberField">
+<summary>
+<para>欄位包含具有小數位數的數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.OleField">
+<summary>
+<para>欄位包含 OLE 物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.PersistentMemoField">
+<summary>
+<para>欄位包含備忘欄位 (大於 255 個字元的字串)。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.PictureField">
+<summary>
+<para>欄位包含一張圖片。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.StringField">
+<summary>
+<para>欄位包含字串資料。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.TimeField">
+<summary>
+<para>欄位包含時間資料。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.TransientMemoField">
+<summary>
+<para>欄位包含暫時性備忘欄位 (大於 255 個字元的字串)。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.FieldValueType.UnknownField">
+<summary>
+<para>欄位類型未知。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.GroupTreeStyle">
+<summary>
+<para>提供屬性，用來擷取和設定群組樹狀結構檢視的顯示選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.GroupTreeStyle.CssClass">
+<summary>
+<para>取得或設定為群組樹狀結構檢視指定顯示樣式的階層式樣式表 (CSS) 檔案。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.GroupTreeStyle.Height">
+<summary>
+<para>取得或設定群組樹狀結構檢視的高度。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.GroupTreeStyle.ShowLines">
+<summary>
+<para>取得或設定是否要在群組樹狀結構檢視中顯示線條。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.GroupTreeStyle.Width">
+<summary>
+<para>取得或設定群組樹狀結構檢視的寬度。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.HourFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat">TimeFieldFormat</see> 類別的 <c>HourFormat</c> 屬性中指定小時格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.HourFormat.NoHour">
+<summary>
+<para>不顯示小時。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.HourFormat.NumericHour">
+<summary>
+<para>小時以數值格式顯示，而不以零開頭。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.HourFormat.NumericHourNoLeadingZero">
+<summary>
+<para>個位數小時以零開頭顯示。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.HTMLFormatOptions">
+<summary>
+<para>提供匯出至 HTML 時的擷取和設定選項屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.HTMLFormatOptions.FirstPageNumber">
+<summary>
+<para>取得或設定要匯出報表的第一頁。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.HTMLFormatOptions.HTMLBaseFolderName">
+<summary>
+<para>取得或設定要匯出的目的 HTML 資料夾名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.HTMLFormatOptions.HTMLEnableSeparatedPages">
+<summary>
+<para>取得或設定匯出至 HTML 格式時建立個別頁面的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.HTMLFormatOptions.HTMLFileName">
+<summary>
+<para>取得或設定要匯出的目的 HTML 檔名。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.HTMLFormatOptions.HTMLHasPageNavigator">
+<summary>
+<para>取得或設定在匯出至 HTML 格式之報表的每一頁上顯示網頁導覽器之選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.HTMLFormatOptions.LastPageNumber">
+<summary>
+<para>取得或設定要匯出報表的最後一頁。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.HTMLFormatOptions.UsePageRange">
+<summary>
+<para>取得或設定是否使用 FirstPageNumber 和 LastPageNumber。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.IConnectionInfo">
+<summary>
+<para>提供用於連接到資料庫伺服器或 ODBC 資料來源的擷取選項屬性和設定選項方法。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.Shared.IConnectionInfo.SetConnection(System.String,System.String,System.String,System.String)">
+<summary>
+<para>設定連接資訊。</para>
+</summary>
+<param name="server">伺服器名稱。</param>
+<param name="database">資料庫名稱。</param>
+<param name="user">使用者名稱。</param>
+<param name="password">密碼</param>
+</member>
+<member name="M:CrystalDecisions.Shared.IConnectionInfo.SetConnection(System.String,System.String,System.Boolean)">
+<summary>
+<para>為使用整合安全的連接設定連接資訊。</para>
+</summary>
+<param name="server">伺服器名稱。</param>
+<param name="database">資料庫名稱。</param>
+<param name="useIntegratedSecurity">如果要使用整合安全，請設定為 <b>True</b>。</param>
+</member>
+<member name="M:CrystalDecisions.Shared.IConnectionInfo.SetLogon(System.String,System.String)">
+<summary>
+<para>設定連接資訊中的登入資訊。</para>
+</summary>
+<param name="user">使用者名稱。</param>
+<param name="password">密碼。</param>
+</member>
+<member name="P:CrystalDecisions.Shared.IConnectionInfo.DatabaseName">
+<summary>
+<para>取得資料庫的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.IConnectionInfo.IntegratedSecurity">
+<summary>
+<para>決定資料庫連線是否使用整合安全性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.IConnectionInfo.Password">
+<summary>
+<para>取得登入資料來源的密碼。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.IConnectionInfo.ServerName">
+<summary>
+<para>取得伺服器名稱或資料庫所在的 ODBC 資料來源。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.IConnectionInfo.UserID">
+<summary>
+<para>取得登入資料來源的使用者名稱。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.LineStyle">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.Border">Border</see> 類別和 <see cref="T:CrystalDecisions.CrystalReports.Engine.DrawingObject">DrawingObject</see> 類別 (包括衍生自 <see cref="T:CrystalDecisions.CrystalReports.Engine.DrawingObject">DrawingObject</see> 的所有類別) 的 <c>BottomLineStyle</c>、<c>LeftLineStyle</c>、<c>RightLineStyle</c> 和 <c>TopLineStyle</c> 屬性中指定底部、左邊、右邊和頂端線條的線條樣式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LineStyle.BlankLine">
+<summary>
+<para>不顯示線條。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LineStyle.DashLine">
+<summary>
+<para>線條為虛線。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LineStyle.DotLine">
+<summary>
+<para>線條為點線。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LineStyle.DoubleLine">
+<summary>
+<para>線條為雙線。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LineStyle.NoLine">
+<summary>
+<para>未指定線條類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LineStyle.SingleLine">
+<summary>
+<para>線條為單線。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.LinkJoinType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.TableLinks">TableLinks</see> 類別的 <c>JoinType</c> 屬性中指定連結聯結類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.Equal">
+<summary>
+<para>包含兩個資料表中連結的欄位值完全相符的所有資料錄。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.GreaterOrEqual">
+<summary>
+<para>包含主要資料表中連結的欄位值大於或等於查閱資料表中連結的欄位值之所有資料錄。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.GreaterThan">
+<summary>
+<para>包含主要資料表中連結的欄位值大於查閱資料表中連結的欄位值之所有資料錄。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.LeftOuter">
+<summary>
+<para>包含兩個資料表中連結的欄位值完全相符的所有資料錄，以及主要資料表中沒有相符項目的每個資料錄。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.LessOrEqual">
+<summary>
+<para>包含主要資料表中連結的欄位值小於或等於查閱資料表中連結的欄位值之所有資料錄。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.LessThan">
+<summary>
+<para>包含主要資料表中連結的欄位值小於查閱資料表中連結的欄位值之所有資料錄。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.NotEqual">
+<summary>
+<para>包含主要資料表中連結的欄位值不等於查閱資料表中連結的欄位值之所有資料錄。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.LinkJoinType.RightOuter">
+<summary>
+<para>包含兩個資料表中連結的欄位值完全相符的所有資料錄，以及查閱資料表中沒有相符項目的每個資料錄。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.MicrosoftMailDestinationOptions">
+<summary>
+<para>提供匯出至 Microsoft Mail 時的擷取和設定選項屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.MicrosoftMailDestinationOptions.MailCCList">
+<summary>
+<para>取得或設定以電子郵件傳送之報表副本 (CC) 清單。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.MicrosoftMailDestinationOptions.MailMessage">
+<summary>
+<para>取得或設定包含以電子郵件傳送的報表之電子郵件訊息。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.MicrosoftMailDestinationOptions.MailSubject">
+<summary>
+<para>取得或設定以電子郵件傳送的報表之電子郵件主旨標題。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.MicrosoftMailDestinationOptions.MailToList">
+<summary>
+<para>取得或設定以電子郵件傳送的報表清單。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.MicrosoftMailDestinationOptions.Password">
+<summary>
+<para>取得或設定登入電子郵件帳戶時所使用的密碼。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.MicrosoftMailDestinationOptions.UserName">
+<summary>
+<para>取得或設定登入電子郵件帳戶時所使用的使用者名稱。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.MinuteFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.DateFieldFormat">DateFieldFormat</see> 類別的 MinuteFormat 屬性中指定分格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MinuteFormat.NoMinute">
+<summary>
+<para>不顯示分鐘。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MinuteFormat.NumericMinute">
+<summary>
+<para>個位數分鐘以零開頭顯示。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MinuteFormat.NumericMinuteNoLeadingZero">
+<summary>
+<para>分鐘以數值格式顯示，而不以零開頭。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.MonthFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.DateFieldFormat">DateFieldFormat</see> 類別的 MonthFormat 屬性中指定月格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MonthFormat.LeadingZeroNumericMonth">
+<summary>
+<para>個位數月份以零開頭數字列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MonthFormat.LongMonth">
+<summary>
+<para>月份以文字列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MonthFormat.NoMonth">
+<summary>
+<para>不列印月份。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MonthFormat.NumericMonth">
+<summary>
+<para>月份以不以零開頭的數字列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.MonthFormat.ShortMonth">
+<summary>
+<para>月份以縮寫格式的文字列印。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.NegativeFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat">NumericFieldFormat</see> 類別的 NegativeFormat 屬性中指定負數格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.NegativeFormat.Bracketed">
+<summary>
+<para>負值置於括號中。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.NegativeFormat.LeadingMinus">
+<summary>
+<para>負號出現在值的左邊。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.NegativeFormat.NotNegative">
+<summary>
+<para>負數以正值列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.NegativeFormat.TrailingMinus">
+<summary>
+<para>負號出現在值的右邊。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ObjectScope">
+<summary>
+<para>指定 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">ReportDocument</see> SetCSSClass 方法的物件範圍。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjects">
+<summary>
+<para>報表中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjectsInDetailSections">
+<summary>
+<para>報表的每個細目區段中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjectsInGroupFooterSections">
+<summary>
+<para>報表的每個群組尾區段中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjectsInGroupHeaderSections">
+<summary>
+<para>報表的每個群組首區段中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjectsInPageFooterSections">
+<summary>
+<para>報表的每個頁尾區段中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjectsInPageHeaderSections">
+<summary>
+<para>報表的每個頁首區段中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjectsInReportFooterSections">
+<summary>
+<para>報表的每個報表尾區段中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllReportObjectsInReportHeaderSections">
+<summary>
+<para>報表的每個報表首區段中的所有報表物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllSections">
+<summary>
+<para>報表的所有區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.AllSummaryObjects">
+<summary>
+<para>報表中的所有摘要物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.DetailSections">
+<summary>
+<para>報表的所有細目區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.GroupFooterSections">
+<summary>
+<para>報表的所有群組尾區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.GroupHeaderSections">
+<summary>
+<para>報表的所有群組首區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.PageFooterSections">
+<summary>
+<para>報表的所有頁尾區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.PageHeaderSections">
+<summary>
+<para>報表的所有頁首區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.ReportFooterSections">
+<summary>
+<para>報表的所有報表尾區段。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ObjectScope.ReportHeaderSections">
+<summary>
+<para>報表的所有報表首區段。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.OpenReportMethod">
+<summary>
+<para>指定 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">ReportDocument</see> Load 方法的開啟報表方法。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.OpenReportMethod.OpenReportByDefault">
+<summary>
+<para>指定報表以獨占式開啟。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.OpenReportMethod.OpenReportByTempCopy">
+<summary>
+<para>指定要開啟的報表暫存副本。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.PageMargins">
+<summary>
+<para>儲存報表的頁面邊界設定。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PageMargins.bottomMargin">
+<summary>
+<para>下邊界大小。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PageMargins.leftMargin">
+<summary>
+<para>左邊界大小。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PageMargins.rightMargin">
+<summary>
+<para>右邊界大小。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PageMargins.topMargin">
+<summary>
+<para>上邊界大小。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.PaperOrientation">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.PrintOptions">PrintOptions</see> 類別的 <c>PaperOrientation</c> 屬性中指定紙張列印方向。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperOrientation.DefaultPaperOrientation">
+<summary>
+<para>報表方向取自印表機預設設定。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperOrientation.Landscape">
+<summary>
+<para>報表方向為橫向。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperOrientation.Portrait">
+<summary>
+<para>報表方向為縱向。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.PaperSize">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.PrintOptions">PrintOptions</see> 類別的 PaperSize 屬性中指定紙張大小。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.DefaultPaperSize">
+<summary>
+<para>印表機驅動程式中的預設大小設定。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.Paper10x14">
+<summary>
+<para>10 乘以 14 英吋的紙張。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.Paper11x17">
+<summary>
+<para>11 乘以 17 英吋的紙張。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperA3">
+<summary>
+<para>A3 紙張，297 乘以 420 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperA4">
+<summary>
+<para>A4 紙張，210 乘以 297 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperA4Small">
+<summary>
+<para>A4 小型紙張，210 乘以 297 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperA5">
+<summary>
+<para>A5 紙張，148 乘以 210 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperB4">
+<summary>
+<para>B4 紙張，250 乘以 354 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperB5">
+<summary>
+<para>B5 紙張，182 乘以 257 公釐的紙張。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperCsheet">
+<summary>
+<para>C Sheet，17 乘以 22 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperDsheet">
+<summary>
+<para>D Sheet，22 乘以 34 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelope10">
+<summary>
+<para>#10 Envelope，4 1/2 乘以 9 1/2 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelope11">
+<summary>
+<para>#11 Envelope，4 1/2 乘以 2 3/10 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelope12">
+<summary>
+<para>#12 Envelop，4 3/4 乘以 11 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelope14">
+<summary>
+<para>#14 Envelop，5 乘以 11 1/2 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelope9">
+<summary>
+<para>#9 Envelope，3 7/8 乘以 8 7/8 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeB4">
+<summary>
+<para>B4 Envelope，250 乘以 353 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeB5">
+<summary>
+<para>B5 Envelope，176 乘以 250 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeB6">
+<summary>
+<para>B6 Envelope，176 乘以 125 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeC3">
+<summary>
+<para>C3 Envelope，324 乘以 458 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeC4">
+<summary>
+<para>C4 Envelope，229 乘以 324 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeC5">
+<summary>
+<para>C5 Envelope，162 乘以 229 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeC6">
+<summary>
+<para>C6 Envelope，114 乘以 162 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeC65">
+<summary>
+<para>C65 Envelope，114 乘以 229 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeDL">
+<summary>
+<para>DL Envelope，110 乘以 220 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeItaly">
+<summary>
+<para>Italy Envelope，110 乘以 230 公釐。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopeMonarch">
+<summary>
+<para>Monarch Envelope，3 7/8 乘以 7 1/2 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEnvelopePersonal">
+<summary>
+<para>6 3/4 Envelope，3 5/8 乘以 6 1/2 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperEsheet">
+<summary>
+<para>E Sheet，34 乘以 44 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperExecutive">
+<summary>
+<para>Executive，7 1/4 乘以 10 1/2 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperFanfoldLegalGerman">
+<summary>
+<para>German Legal Fanfold，8 1/2 乘以 13 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperFanfoldStdGerman">
+<summary>
+<para>German Std Fanfold，8 1/2 乘以 12 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperFanfoldUS">
+<summary>
+<para>US Std Fanfold，14 7/8 乘以 11 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperFolio">
+<summary>
+<para>Folio，8 1/2 乘以 13 英吋的紙張。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperLedger">
+<summary>
+<para>Ledger，17 乘以 11 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperLegal">
+<summary>
+<para>Legal，8 1/2 乘以 14 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperLetter">
+<summary>
+<para>Letter，8 1/2 乘以 11 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperLetterSmall">
+<summary>
+<para>Letter Small，8 1/2 乘以 11 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperNote">
+<summary>
+<para>Note，8 1/2 乘以 11 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperQuarto">
+<summary>
+<para>Quarto，215 乘以 275 公釐的紙張。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperStatement">
+<summary>
+<para>Statement，5 1/2 乘以 8 1/2 英吋。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSize.PaperTabloid">
+<summary>
+<para>Tabloid，11 乘以 17 英吋。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.PaperSource">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.PrintOptions">PrintOptions</see> 類別的 PaperSource 屬性中指定紙張來源。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Auto">
+<summary>
+<para>從印表機自動選取的紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Cassette">
+<summary>
+<para>從紙匣紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Envelope">
+<summary>
+<para>從信封紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.EnvManual">
+<summary>
+<para>從信封手動送紙列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.FormSource">
+<summary>
+<para>從表單來源紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.LargeCapacity">
+<summary>
+<para>從大容量紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.LargeFmt">
+<summary>
+<para>從大格式紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Lower">
+<summary>
+<para>從下層紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Manual">
+<summary>
+<para>從手動送紙列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Middle">
+<summary>
+<para>從中間紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.SmallFmt">
+<summary>
+<para>從小型格式紙匣列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Tractor">
+<summary>
+<para>從傳紙器進紙列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PaperSource.Upper">
+<summary>
+<para>從上層紙匣列印。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterDiscreteValue">
+<summary>
+<para>提供擷取和設定離散值參數的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterDiscreteValue.Description">
+<summary>
+<para>取得或設定離散參數值的描述。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterDiscreteValue.IsRange">
+<summary>
+<para>取得或設定是否為參數欄位範圍值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterDiscreteValue.Kind">
+<summary>
+<para>取得參數值為離散、範圍或兩者皆是。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterDiscreteValue.Value">
+<summary>
+<para>取得或設定參數值。它可以是字串、數字、貨幣、布林或日期。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterField">
+<summary>
+<para>提供擷取和設定選項以及參數欄位值的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.AllowCustomValues">
+<summary>
+<para>取得或設定可否編輯預設值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.CurrentValues">
+<summary>
+<para>透過 ParameterValues 集合取得或設定目前值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.DefaultValueDisplayType">
+<summary>
+<para>取得或設定 <c>ParameterField</c> 的預設值顯示類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.DefaultValues">
+<summary>
+<para>透過 ParameterValues 集合取得或設定預設值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.DefaultValueSortMethod">
+<summary>
+<para>取得預設值排序的方法。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.DefaultValueSortOrder">
+<summary>
+<para>取得預設值排序的順序。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.DiscreteOrRangeKind">
+<summary>
+<para>取得或設定參數欄位是否要包含離散值、範圍值或兩者。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.EditMask">
+<summary>
+<para>取得或設定限制可輸入之字串參數的編輯遮罩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.EnableAllowEditingDefaultValue">
+<summary>
+<para>取得或設定容許編輯預設值的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.EnableAllowMultipleValue">
+<summary>
+<para>取得或設定參數中容許多個值的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.EnableNullValue">
+<summary>
+<para>取得或設定允許儲存程序參數為 Null 值選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.HasCurrentValue">
+<summary>
+<para>取得或設定參數是否有目前值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.MaximumValue">
+<summary>
+<para>取得或設定最大值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.MinimumValue">
+<summary>
+<para>取得或設定最小值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.Name">
+<summary>
+<para>取得或設定參數欄位的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.ParameterFieldName">
+<summary>
+<para>取得或設定參數欄位的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.ParameterType">
+<summary>
+<para>取得或設定參數值的類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.ParameterValueKind">
+<summary>
+<para>取得參數值的類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.ParameterValueType">
+<summary>
+<para>取得或設定參數類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.PromptingType">
+<summary>
+<para>取得或設定參數欄位是否要包含離散值、範圍值或兩者。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.PromptText">
+<summary>
+<para>取得或設定參數欄位的提示字串。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.ReportName">
+<summary>
+<para>取得或設定參數欄位所在的報表名稱。如果它是主報表，報表名稱會是空白的。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterField.ReportParameterType">
+<summary>
+<para>取得或設定參數類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterFields">
+<summary>
+<para>包含報表中每一個參數欄位的 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 物件。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.Shared.ParameterFields.Add(CrystalDecisions.Shared.ParameterField)">
+<summary>
+<para>加入 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 物件至集合。</para>
+</summary>
+<param name="parameterField"><para>加入 <see cref="T:CrystalDecisions.Shared.ParameterFields">ParameterFields</see> 集合的 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 物件。</para></param>
+<returns>
+<para>指出 ParameterField 在集合中的位置。</para>
+</returns>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterFields.Count">
+<summary>
+<para>取得集合中 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterFields.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterFields.Item(System.String)">
+<summary>
+<para>取得具有指定參數名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterFields.Item(System.String,System.String)">
+<summary>
+<para>取得具有指定參數名稱和報表名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterFieldUsage">
+<summary>
+<para>指定如何在報表中使用參數欄位。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterFieldUsage.CurrentValuesProvidedByServer">
+<summary>
+<para>此參數欄位的值是由伺服器提供的。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterFieldUsage.InUse">
+<summary>
+<para>報表中使用了這個參數欄位。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterFieldUsage.NotInUse">
+<summary>
+<para>報表中並未使用這個參數欄位。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterFieldUsage.Unknown">
+<summary>
+<para>此參數欄位在報表中的使用情況不明。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterRangeValue">
+<summary>
+<para>提供擷取和設定範圍值參數的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterRangeValue.Description">
+<summary>
+<para>取得或設定參數範圍值的描述。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterRangeValue.EndValue">
+<summary>
+<para>取得或設定範圍值結尾。它可以是字串、數字、貨幣、布林或日期。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterRangeValue.IsRange">
+<summary>
+<para>取得或設定值是否為一個範圍。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterRangeValue.Kind">
+<summary>
+<para>取得或設定參數欄位是否要包含離散值、範圍值或兩者。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterRangeValue.LowerBoundType">
+<summary>
+<para>取得或設定下限類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterRangeValue.StartValue">
+<summary>
+<para>取得或設定範圍值的開始。它可以是字串、數字、貨幣、布林或日期。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterRangeValue.UpperBoundType">
+<summary>
+<para>取得或設定上限類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別的 <c>ReportParameterType</c> 屬性和 <see cref="T:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition">ParameterFieldDefinition</see> 類別的 <c>ParameterType</c> 屬性中指定參數類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterType.QueryParameter">
+<summary>
+<para>參數來自查詢。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterType.ReportParameter">
+<summary>
+<para>參數為 Crystal Report 參數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterType.StoreProcedureParameter">
+<summary>
+<para>參數來自預存程序。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterValue">
+<summary>
+<para>提供擷取和設定參數類型的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterValue.Description">
+<summary>
+<para>取得或設定參數值的描述</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterValue.IsRange">
+<summary>
+<para>取得或設定值是否為一個範圍。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterValue.Kind">
+<summary>
+<para>取得參數值為離散、範圍或兩者皆是。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterValueKind">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ParameterField">ParameterField</see> 類別和 <see cref="T:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition">ParameterFieldDefinition</see> 類別的 <c>ParameterValueType</c> 屬性中指定參數值類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterValueKind.BooleanParameter">
+<summary>
+<para>參數採用 True 或 False 值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterValueKind.CurrencyParameter">
+<summary>
+<para>參數採用貨幣值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterValueKind.DateParameter">
+<summary>
+<para>參數採用日期值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterValueKind.DateTimeParameter">
+<summary>
+<para>參數採用日期時間值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterValueKind.NumberParameter">
+<summary>
+<para>參數採用數值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterValueKind.StringParameter">
+<summary>
+<para>參數採用字串值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ParameterValueKind.TimeParameter">
+<summary>
+<para>參數採用時間值。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ParameterValues">
+<summary>
+<para>包含報表中每一個參數欄位的 <see cref="T:CrystalDecisions.Shared.ParameterValue">ParameterValue</see> 物件。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.Shared.ParameterValues.Add(CrystalDecisions.Shared.ParameterValue)">
+<summary>
+<para>加入 <see cref="T:CrystalDecisions.Shared.ParameterValue">ParameterValue</see> 物件至集合。</para>
+</summary>
+<param name="parameterValue"><para>這可以是下列其中一個類型：<see cref="T:CrystalDecisions.Shared.ParameterValue">ParameterValue</see>、<see cref="T:CrystalDecisions.Shared.ParameterRangeValue">ParameterRangeValue</see> 或 <see cref="T:CrystalDecisions.Shared.ParameterDiscreteValue">ParameterDiscreteValue</see>。</para></param>
+<returns>
+<para>指出 ParameterValue 在集合中的位置。</para>
+</returns>
+</member>
+<member name="M:CrystalDecisions.Shared.ParameterValues.AddRange(System.Collections.ICollection)">
+<summary>
+<para>在集合中加入參數值的範圍。</para>
+</summary>
+<param name="c"><para>要加入集合中的參數值。</para></param>
+</member>
+<member name="M:CrystalDecisions.Shared.ParameterValues.Insert(System.Int32,System.Object)">
+<summary>
+<para>將值加入集合中的指定索引上。</para>
+</summary>
+<param name="index"><para>要加入參數值的索引。</para></param>
+<param name="value"><para>要加入集合中的參數值。</para></param>
+</member>
+<member name="M:CrystalDecisions.Shared.ParameterValues.InsertRange(System.Int32,System.Collections.ICollection)">
+<summary>
+<para>將值範圍加入集合中的指定索引上。</para>
+</summary>
+<param name="index"><para>要加入參數值的索引。</para></param>
+<param name="c"><para>要加入集合中的參數值。</para></param>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterValues.Count">
+<summary>
+<para>取得集合中 <c>ParameterValue</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ParameterValues.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 ParameterValue 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.Shared.PdfRtfWordFormatOptions">
+<summary>
+<para>提供匯出至 PDF、RTF 或 Word 時的擷取和設定選項屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.PdfRtfWordFormatOptions.FirstPageNumber">
+<summary>
+<para>取得或設定要匯出報表的第一頁。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.PdfRtfWordFormatOptions.LastPageNumber">
+<summary>
+<para>取得或設定要匯出報表的最後一頁。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.PdfRtfWordFormatOptions.UsePageRange">
+<summary>
+<para>取得或設定是否使用 FirstPageNumber 和 LastPageNumber。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.PrinterDuplex">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.PrintOptions">PrintOptions</see> 類別的 <c>PrinterDuplex</c> 屬性中指定印表機的雙面列印設定。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PrinterDuplex.Default">
+<summary>
+<para>印表機的預設雙面列印設定。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PrinterDuplex.Horizontal">
+<summary>
+<para>雙面、水平列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PrinterDuplex.Simplex">
+<summary>
+<para>單面列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.PrinterDuplex.Vertical">
+<summary>
+<para>雙面、垂直列印。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.RangeBoundType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Shared.ParameterRangeValue">ParameterRangeValue</see> 類別的 <c>LowerBoundType</c> 和 <c>UpperBoundType</c> 屬性中指定範圍參數的界限類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RangeBoundType.BoundExclusive">
+<summary>
+<para>上下範圍值不包括在範圍中。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RangeBoundType.BoundInclusive">
+<summary>
+<para>上下範圍值包括在範圍中。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RangeBoundType.NoBound">
+<summary>
+<para>未選取範圍界限。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.RemoteReportProxy">
+<summary>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ReportFileFormat">
+<summary>
+<para>指定 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">ReportDocument</see><c>SaveAs</c> 方法的報表檔案格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportFileFormat.VSNetFileFormat">
+<summary>
+<para>Visual Studio .NET 報表檔案格式。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ReportObjectKind">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObject">ReportObject</see> 類別和衍生自 ReportObject 之所有類別的 Kind 屬性中指定報表物件的類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.BlobFieldObject">
+<summary>
+<para>物件為 Blob 欄位。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.BoxObject">
+<summary>
+<para>物件為方塊。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.ChartObject">
+<summary>
+<para>物件為圖表。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.CrossTabObject">
+<summary>
+<para>物件為交叉表。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.FieldHeadingObject">
+<summary>
+<para>物件為欄位標題物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.FieldObject">
+<summary>
+<para>物件為欄位物件。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.LineObject">
+<summary>
+<para>物件為線條。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.MapObject">
+<summary>
+<para>物件為地圖。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.OlapGridObject">
+<summary>
+<para>物件為 OLAP 格線。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.PictureObject">
+<summary>
+<para>物件為圖片。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.SubreportObject">
+<summary>
+<para>物件為子報表。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.ReportObjectKind.TextObject">
+<summary>
+<para>物件為文字物件。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ReportPartNavigationResult">
+<summary>
+<para>提供用來收集瀏覽目標資訊的屬性給 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.ReportPartBookmarkNavigation">ReportPartBookmarkNavigation</see> 事件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ReportPartNavigationResult.DrillDownContext">
+<summary>
+<para>取得瀏覽目標的群組節點細節。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ReportPartNavigationResult.PageNumber">
+<summary>
+<para>取得瀏覽目標的頁碼。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ReportPartNavigationResult.SectionNumber">
+<summary>
+<para>取得瀏覽目標的區段編號。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.RoundingFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat">NumericFieldFormat</see> 類別的 <c>RoundingFormat</c> 屬性中指定數字的進位格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToBillionth">
+<summary>
+<para>數字四捨五入至 9 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToHundred">
+<summary>
+<para>數字四捨五入至百位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToHundredMillionth">
+<summary>
+<para>數字四捨五入至 8 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToHundredth">
+<summary>
+<para>數字四捨五入至 2 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToHundredThousand">
+<summary>
+<para>數字四捨五入至十萬位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToHundredThousandth">
+<summary>
+<para>數字四捨五入至 5 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToMillion">
+<summary>
+<para>數字四捨五入至百萬位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToMillionth">
+<summary>
+<para>數字四捨五入至 6 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToTen">
+<summary>
+<para>數字四捨五入至 6 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToTenBillionth">
+<summary>
+<para>數字四捨五入至 10 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToTenMillionth">
+<summary>
+<para>數字四捨五入至 7 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToTenth">
+<summary>
+<para>數字四捨五入至 1 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToTenThousand">
+<summary>
+<para>數字四捨五入至萬位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToTenThousandth">
+<summary>
+<para>數字四捨五入至 4 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToThousand">
+<summary>
+<para>數字四捨五入至千位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToThousandth">
+<summary>
+<para>數字四捨五入至 3 位小數位數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.RoundingFormat.RoundToUnit">
+<summary>
+<para>數字四捨五入至個位數。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.SearchDirection">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.Web.SearchEventArgs">CrystalDecisions.Web.SearchEventArgs</see> 類別和 <see cref="T:CrystalDecisions.Windows.Forms.SearchEventArgs">CrystalDecisions.Windows.Forms.SearchEventArgs</see> 類別的 Direction 屬性中指定搜尋方向。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SearchDirection.Backward">
+<summary>
+<para>搜尋將向後進行。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SearchDirection.Forward">
+<summary>
+<para>搜尋將向後進行。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.SecondFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat">TimeFieldFormat</see> 類別的 SecondFormat 屬性中指定秒格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SecondFormat.NumericNoSecond">
+<summary>
+<para>將不顯示秒數值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SecondFormat.NumericSecond">
+<summary>
+<para>將列印秒數值，其個位數值以零開頭。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SecondFormat.NumericSecondNoLeadingZero">
+<summary>
+<para>將列印秒數值，而不以零開頭。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ServerFileReport">
+<summary>
+<para>
+<c>ServerFileReport</c> 類別是 Managed 元件；將限制的物件模型提供給開發人員時，此類別可做為 <c>ServerFileReportService</c> 類別的 Proxy。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ServerFileReport.ObjectType">
+<summary>
+<para>取得伺服器檔案報表的類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ServerFileReport.ReportPath">
+<summary>
+<para>取得或設定報表檔案的路徑和名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ServerFileReport.WebServiceUrl">
+<summary>
+<para>取得或設定 <c>ServerFileReportService</c> Web 服務的 URL。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.SortDirection">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.SortField">SortField</see> 類別的 <c>SortDirection</c> 屬性中指定排序方向。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SortDirection.AscendingOrder">
+<summary>
+<para>以遞增順序排序。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SortDirection.BottomNOrder">
+<summary>
+<para>只排序後 N 個群組。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SortDirection.DescendingOrder">
+<summary>
+<para>以遞減順序排序。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SortDirection.TopNOrder">
+<summary>
+<para>只排序前 N 個群組。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.SortFieldType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.SortField">SortField</see> 類別的 <c>SortType</c> 屬性中指定排序欄位類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SortFieldType.GroupSortField">
+<summary>
+<para>根據群組欄位排序。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SortFieldType.RecordSortField">
+<summary>
+<para>根據細目欄位排序。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.SpecialVarType">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition">SpecialVarFieldDefinition</see> 類別的 <c>SpecialVarType</c> 屬性中指定特殊欄位類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.DataDate">
+<summary>
+<para>欄位傳回最近一次重新整理報表的日期。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.DataTime">
+<summary>
+<para>欄位傳回最近一次重新整理報表的時間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.FileAuthor">
+<summary>
+<para>欄位傳回包含在報表中的檔案作者名稱。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.FileCreationDate">
+<summary>
+<para>欄位傳回報表建立的日期。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.Filename">
+<summary>
+<para>欄位傳回報表檔案的名稱。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.GroupNumber">
+<summary>
+<para>欄位傳回目前的群組編號。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.GroupSelection">
+<summary>
+<para>欄位傳回群組選擇公式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.ModificationDate">
+<summary>
+<para>欄位傳回最近一次修改報表的日期。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.ModificationTime">
+<summary>
+<para>欄位傳回最近一次修改報表的時間。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.PageNofM">
+<summary>
+<para>欄位傳回 "Page [目前頁碼] of [總頁數]" 公式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.PageNumber">
+<summary>
+<para>欄位傳回目前的頁碼。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.PrintDate">
+<summary>
+<para>欄位傳回報表列印的日期。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.PrintTime">
+<summary>
+<para>欄位傳回報表列印的日期。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.RecordNumber">
+<summary>
+<para>欄位傳回目前的資料錄編號。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.RecordSelection">
+<summary>
+<para>欄位傳回資料錄選擇公式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.ReportComments">
+<summary>
+<para>欄位傳回包含在報表中的報表註解。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.ReportTitle">
+<summary>
+<para>欄位傳回包含在報表中的報表標題。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SpecialVarType.TotalPageCount">
+<summary>
+<para>欄位傳回報表中的總頁數。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.SummaryOperation">
+<summary>
+<para>	|b <see cref="T:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition">RunningTotalFieldDefinition</see> 類別和 <see cref="T:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition">SummaryFieldDefinition</see> 類別的 <c>Operation</c> 屬性中指定摘要作業類型。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Average">
+<summary>
+<para>摘要傳回欄位的平均值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Correlation">
+<summary>
+<para>摘要傳回兩個欄位的相關性。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Count">
+<summary>
+<para>摘要從欄位計算值的數目。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Covariance">
+<summary>
+<para>摘要傳回成對變數間線性關係的度量。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.DistinctCount">
+<summary>
+<para>摘要從欄位傳回非重複值的數目。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Maximum">
+<summary>
+<para>摘要從欄位傳回最大值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Median">
+<summary>
+<para>摘要傳回數值序列中的中間值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Minimum">
+<summary>
+<para>摘要從欄位傳回最小值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Mode">
+<summary>
+<para>摘要從欄位傳回最常傳回的值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.NthLargest">
+<summary>
+<para>摘要從欄位傳回第 N 個最大的值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.NthMostFrequent">
+<summary>
+<para>摘要從欄位傳回第 N 個最常出現的值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.NthSmallest">
+<summary>
+<para>摘要從欄位傳回第 N 個最小的值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Percentage">
+<summary>
+<para>摘要傳回為總計摘要的百分比。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Percentile">
+<summary>
+<para>摘要傳回數字或貨幣欄位中指定百分位的數值。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.PopStandardDeviation">
+<summary>
+<para>摘要傳回欄位中每個值偏離該欄位之中間或平均值的數量。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.PopVariance">
+<summary>
+<para>摘要傳回標準差的平方。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.SampleStandardDeviation">
+<summary>
+<para>摘要傳回欄位的樣本標準差。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.SampleVariance">
+<summary>
+<para>摘要傳回欄位的樣本變異數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.Sum">
+<summary>
+<para>摘要傳回欄位之所有值的總數。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.SummaryOperation.WeightedAvg">
+<summary>
+<para>摘要傳回欄位的加權平均數。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.TableLogOnInfo">
+<summary>
+<para>提供擷取和設定資料表連接選項的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TableLogOnInfo.ConnectionInfo">
+<summary>
+<para>取得或設定 ConnectionInfo 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TableLogOnInfo.ReportName">
+<summary>
+<para>取得或設定報表名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TableLogOnInfo.TableName">
+<summary>
+<para>取得或設定資料表名稱。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.TableLogOnInfos">
+<summary>
+<para>包含報表中每一個資料表的 <see cref="T:CrystalDecisions.Shared.TableLogOnInfo">TableLogOnInfo</see> 物件。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.Shared.TableLogOnInfos.Add(System.Object)">
+<summary>
+<para>加入 TableLogOnInfo 物件至集合。</para>
+</summary>
+<param name="logOnInfo"><para>加入 TableLogOnInfos 集合的 <see cref="T:CrystalDecisions.Shared.TableLogOnInfo">TableLogOnInfo</see> 物件。</para></param>
+<returns>
+<para>指出 TableLogOnInfo 在集合中的位置。</para>
+</returns>
+</member>
+<member name="P:CrystalDecisions.Shared.TableLogOnInfos.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 TableLogonInfo 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="P:CrystalDecisions.Shared.TableLogOnInfos.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 TableLogonInfo 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.Shared.TableLogOnInfos.Item(System.String,System.String)">
+<summary>
+<para>取得具有指定資料表名稱和報表名稱的物件。在 C# 中，此屬性為 TableLogonInfo 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.Shared.TimeBase">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat">TimeFieldFormat</see> 類別的 <c>TimeBase</c> 屬性中指定 12 小時或 24 小時時間基底。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.TimeBase.On12Hour">
+<summary>
+<para>時間以 12 小時制格式顯示，並使用 AM 和 PM 符號。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.TimeBase.On24Hour">
+<summary>
+<para>時間是以 24 小時制格式顯示，而不使用 AM 和 PM 符號。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.ToolbarStyle">
+<summary>
+<para>提供用來為 CrystalReportViewer 工具列擷取和設定樣式屬性的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ToolbarStyle.CssClass">
+<summary>
+<para>取得或設定 Web 伺服器控制項在用戶端上建構的階層式樣式表 (CSS) 類別。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ToolbarStyle.Font">
+<summary>
+<para>字型。取得或設定工具列所使用的字型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ToolbarStyle.ForeColor">
+<summary>
+<para>取得或設定工具列的前景色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ToolbarStyle.Height">
+<summary>
+<para>取得或設定工具列的高度。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.ToolbarStyle.Width">
+<summary>
+<para>取得或設定工具列的寬度。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.TotallerNodeID">
+<summary>
+<para>提供瀏覽目標的群組節點資訊給 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.ReportPartBookmarkNavigation">ReportPartBookmarkNavigation</see> 事件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TotallerNodeID.GroupLevel">
+<summary>
+<para>取得瀏覽目標的群組層級。頂層群組為 0。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TotallerNodeID.GroupName">
+<summary>
+<para>取得瀏覽目標的群組名稱。例如：USA。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TotallerNodeID.GroupNamePath">
+<summary>
+<para>取得至瀏覽目標的命名群組路徑。例如："/Country[USA]/Region[CA]"</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TotallerNodeID.GroupPath">
+<summary>
+<para>取得具有索引、從零開始，且代表瀏覽目標群組路徑的陣列。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Shared.TotallerNodeIDs">
+<summary>
+<para>包含報表中每一個 <c>TotallerNodeID</c> 物件的 <see cref="T:CrystalDecisions.Shared.TotallerNodeID">TotallerNodeID</see> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Shared.TotallerNodeIDs.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。	在 C# 中，此屬性為 TotallerNodeID 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.Shared.YearFormat">
+<summary>
+<para>在 <see cref="T:CrystalDecisions.CrystalReports.Engine.DateFieldFormat">DateFieldFormat</see> 類別的 <c>YearFormat</c> 屬性中指定年格式。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.YearFormat.LongYear">
+<summary>
+<para>年份是以四位數的完整格式列印。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.YearFormat.NoYear">
+<summary>
+<para>不顯示年份。</para>
+</summary>
+</member>
+<member name="F:CrystalDecisions.Shared.YearFormat.ShortYear">
+<summary>
+<para>年份是以二位數的簡短格式列印。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.AfterRenderContentEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.AfterRenderContent">AfterRenderContent</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.AfterRenderContentEvent.AddAfterContent">
+<summary>
+<para>取得或設定會附加到報表內容 HTML 尾端的字串。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.AfterRenderContentEventHandler">
+<summary>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.AfterRenderEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.AfterRender">AfterRender</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.AfterRenderEvent.AddAtEnd">
+<summary>
+<para>取得或設定會附加到 HTML 尾端的字串。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.AfterRenderEventHandler">
+<summary>
+<para>代表將會處理 <c>AfterRender</c> 事件的方法。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.AfterRenderObjectEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.AfterRenderObject">AfterRenderObject</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.AfterRenderObjectEvent.Object">
+<summary>
+<para>取得或設定快取報表物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.AfterRenderObjectEvent.ObjectRender">
+<summary>
+<para>取得或設定 HTML 建構程式物件，以產生 HTML。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.AfterRenderObjectEventHandler">
+<summary>
+<para>代表將會處理 <c>AfterRenderObject</c> 事件的方法。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.BeforeRenderContentEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.BeforeRenderContent">BeforeRenderContent</see> 類別事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderContentEvent.AddBeforeContent">
+<summary>
+<para>取得或設定將會緊接在 <c>&amp;lt;BODY&amp;gt;</c> 標記後寫入的字串。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderContentEvent.NeedRenderBodyTag">
+<summary>
+<para>取得或設定是否建構 <c>&amp;lt;BODY&amp;gt;</c> 標記。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.BeforeRenderContentEventHandler">
+<summary>
+<para>代表將會處理 <c>BeforeRenderContent</c> 事件的方法。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.BeforeRenderEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.BeforeRender">BeforeRender</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderEvent.AddAtBeginning">
+<summary>
+<para>取得或設定將會緊接在 <c>&amp;lt;HTML&amp;gt;</c> 標記後、並緊接在 <c>&amp;lt;BODY&amp;gt;</c> 標記前寫入的字串。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderEvent.NeedRenderHTMLTag">
+<summary>
+<para>取得或設定是否建構 <c>&amp;lt;HTML&amp;gt;</c> 標記。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.BeforeRenderEventHandler">
+<summary>
+<para>代表將會處理 <c>BeforeRender</c> 事件的方法。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.BeforeRenderObject">BeforeRenderObject</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.Object">
+<summary>
+<para>取得或設定快取報表物件。此物件可以是 <c>FieldObject</c>、<c>TextObject</c>、<c>GraphObject</c> 等。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnBlurHandler">
+<summary>
+<para>取得或設定物件內容以模糊方式出現時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnClickHandler">
+<summary>
+<para>取得或設定物件被按下時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnContextMenuHandler">
+<summary>
+<para>取得或設定顯示內容功能表時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDBClickHandler">
+<summary>
+<para>取得或設定按兩下物件時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDragEndHandler">
+<summary>
+<para>取得或設定拖曳動作結束後執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDragEnterHandler">
+<summary>
+<para>取得或設定物件被拖曳至控制項範圍內時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDragHandler">
+<summary>
+<para>取得或設定拖曳時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDragLeaveHandler">
+<summary>
+<para>取得或設定物件被拖曳出控制項範圍時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDragOverHandler">
+<summary>
+<para>取得或設定控制項被拖曳到目標物件上方時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDragStartHandler">
+<summary>
+<para>取得或設定拖曳動作開始時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnDropHandler">
+<summary>
+<para>取得或設定完成拖放動作時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnFocusHandler">
+<summary>
+<para>取得或設定物件成為焦點時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnFocusInHandler">
+<summary>
+<para>取得或設定物件成為焦點以前執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnFocusOutHandler">
+<summary>
+<para>取得或設定物件遺失焦點後立即執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnKeyDownHandler">
+<summary>
+<para>取得或設定按下英數字元按鍵時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnKeyPressHandler">
+<summary>
+<para>取得或設定按下按鍵時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnKeyUpHandler">
+<summary>
+<para>取得或設定放開按鍵時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnMouseDownHandler">
+<summary>
+<para>取得或設定以滑鼠任一按鈕按下物件時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnMouseEnterHandler">
+<summary>
+<para>取得或設定將滑鼠指標移入物件邊界範圍內時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnMouseLeaveHandler">
+<summary>
+<para>取得或設定將滑鼠指標移出物件邊界範圍時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnMouseMoveHandler">
+<summary>
+<para>取得或設定將滑鼠指標移至物件上方時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnMouseOutHandler">
+<summary>
+<para>取得或設定將滑鼠指標移出物件邊界範圍時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnMouseOverHandler">
+<summary>
+<para>取得或設定將滑鼠指標移入物件時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnMouseUpHandler">
+<summary>
+<para>取得或設定在物件上方釋放任一滑鼠按鈕時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnSelectHandler">
+<summary>
+<para>取得或設定目前選取項目變更時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnSelectionChangeHandler">
+<summary>
+<para>取得或設定文件選取狀態變更時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnSelectStartHandler">
+<summary>
+<para>取得或設定物件被選取時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEvent.OnStopHandler">
+<summary>
+<para>取得或設定使用者按下停止按鈕或離開網頁時執行的 JavaScript 程式碼。程式碼會在 HTML 頁面的用戶端進行快取處理。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.BeforeRenderObjectEventHandler">
+<summary>
+<para>代表將會處理 <c>BeforeRenderObject</c> 事件的方法。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.OnRenderScriptEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.OnRenderScript">OnRenderScript</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.OnRenderScriptEvent.Handled">
+<summary>
+<para>取得或設定事件是否已處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.OnRenderScriptEvent.Script">
+<summary>
+<para>取得或設定琵式碼區塊。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.OnRenderScriptEventHandler">
+<summary>
+<para>代表將會處理 <c>OnRenderScript</c> 事件的方法。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.OnRenderStyleEvent">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.OnRenderStyle">OnRenderStyle</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.OnRenderStyleEvent.Handled">
+<summary>
+<para>取得或設定事件是否已處理。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.Web.HtmlReportRender.OnRenderStyleEvent.Style">
+<summary>
+<para>為 <see cref="E:CrystalDecisions.Web.CrystalReportViewerBase.OnRenderStyle">OnRenderStyle</see> 事件提供資料。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.Web.HtmlReportRender.OnRenderStyleEventHandler">
+<summary>
+<para>代表將會處理 <c>OnRenderStyle</c> 事件的方法。</para>
+</summary>
+</member>
+</members>
+</doc>

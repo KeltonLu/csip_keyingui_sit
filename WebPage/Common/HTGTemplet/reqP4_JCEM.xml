@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+    <header>
+        <action type="transaction"/>
+        <data id="sessionId" value=""/>
+        <data id="applicationId" value="CSIP"/>
+        <data id="luType" value="LU62"/>
+        <data id="transactionId" value="P4_JCEM"/>
+        <data id="lowValue" value="true" />
+    </header>
+    <body>       
+        <data id="USER_ID" value=""/>
+        <data id="MESSAGE_TYPE" value=""/>
+        <data id="FUNCTION_CODE" value=""/>
+        <data id="LINE_CNT" value=""/>
+        <data id="ACCT_NBR" value=""/>
+				<data id="CARD_TAKE" value=""/>      
+				<data id="EMBOSS_NAME" value=""/>    
+				<data id="EMBOSS_TYPE" value=""/>    
+				<data id="EXPIRE_DATE" value=""/>    
+				<data id="XFR_CARD_NO" value=""/>    
+				<data id="BLOCK_CODE" value=""/>     
+				<data id="STATUS" value=""/>         
+				<data id="PREV_ACTION" value=""/>    
+				<data id="DTE_LST_REQ" value=""/>    
+				<data id="MEM_NO" value=""/>         
+				<data id="CARDHOLDER_ID" value=""/>  
+				<data id="CARDHOLDER_NAME" value=""/>
+				<data id="CUSTOMER_NAME" value=""/>  
+				<data id="CITY" value=""/>           
+				<data id="ADDR_1" value=""/>         
+				<data id="ADDR_2" value=""/>         
+				<data id="EMBOSS_DATE" value=""/>    
+				<data id="EMBOSS_TIME" value=""/>    
+    </body>
+</hostgateway>
+
+
+
+
+
+
+
+
+
+
+
+
+

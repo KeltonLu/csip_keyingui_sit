@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+      <data id="applicationId" value="CSIP" />
+      <data id="luType" value="LU62" />
+      <data id="sessionId" value="FzhG2nOAXPuyEimiodAYUgI" />
+      <data id="transactionId" value="P4_JCIJ" />
+  </header>
+  <body>
+      <data id="ACCT_NEME" value="功學社樂器股份有限公司　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　" />
+      <data id="ACCT_NO" value="635530014054" />
+      <data id="ADDRESS1" value="台北市大同區　　　　　　　　　　　　　　　　　　　　　　　　" />
+      <data id="ADDRESS2" value="延平北路二段６３號２樓　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　" />
+      <data id="ADDRESS3" value="" />
+      <data id="BANK_NAME" value="中國信託復興分行　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　" />
+      <data id="CONTACT_FAX" value="02 -25581016" />
+      <data id="CONTACT_TEL" value="02 -25555941" />
+      <data id="CORP_NO" value="16627818" />
+      <data id="CREATE_DATE" value="20090730" />
+      <data id="CREATE_USERID" value="Z54061" />
+      <data id="DESCRIPTION" value="功學社　　　　　　　" />
+      <data id="FUNCTION_CODE" value="3" />
+      <data id="LINE_CNT" value="0000" />
+      <data id="MER_NEME" value="功學社台北延平分公司　　　　　　　　　　　　　　　　　　　　" />
+      <data id="MER_NO" value="010010001" />
+      <data id="MESSAGE_TYPE" value="" />
+      <data id="OWNER_NAME" value="ｔｅｓｔ　　　　　　　　　　　　　　　　　　　　　　　　　　" />
+      <data id="USER_ID" value="Z04975" />
+  </body>
+</hostgateway>

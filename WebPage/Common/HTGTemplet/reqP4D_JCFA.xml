@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hostgateway>
+  <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4D_JCFA" />
+  </header>
+  <body>
+    <data id="PROGRAM_ID" value="JCGU670"/>
+    <data id="USER_ID" value="ZXXXXX"/>
+    <data id="MESSAGE_TYPE" value=""/>
+    <data id="FUNCTION_CODE" value="2"/>
+    <data id="LINE_CNT" value="0000"/>
+    <data id="SVCP_ID" value=""/>
+    <data id="CARD_NMBR" value="4311XXXXXXXX5139"/>
+    <data id="ISSUE_CNT" value=""/>
+    <data id="PURSE_ID" value=""/>
+  </body>
+</hostgateway>

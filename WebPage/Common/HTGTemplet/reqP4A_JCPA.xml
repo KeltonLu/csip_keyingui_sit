@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hostgateway>
+   <header>
+    <action type="transaction" />
+    <data id="sessionId" value="" />
+    <data id="applicationId" value="CSIP" />
+    <data id="luType" value="LU62" />
+    <data id="transactionId" value="P4A_JCPA" />
+  </header>
+  <body>
+    <data id="TRAN_ID" value="" />
+    <data id="FILLER1" vable="" />
+    <data id="MERCHANT_NO" value="" />
+    <data id="FILLER2" value="" />
+    <data id="FUNCTION_CODE" value="" />
+    <data id="FILLER3" value="" />
+    <data id="BATCH_FLAG" value="" />
+    <data id="FILLER4" value="" />
+    <data id="PPMERFG_FLAG" value="" />
+    <data id="FILLER5" value="" />
+    <data id="PPMERRT_RATE" value="" />
+    <data id="FILLER6" value="" />
+    <data id="MESSAGE_TYPE" value="" />
+    <data id="FILLER7" value="" />
+    <data id="MESSAGE" value="" />
+    <data id="FILLER8" value="" />
+  </body>
+</hostgateway>

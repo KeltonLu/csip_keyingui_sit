@@ -1,0 +1,3016 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly>
+<name>CrystalDecisions.CrystalReports.Engine</name>
+</assembly>
+<members>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Area">
+<summary>
+<para>代表報表中的區域。區域是指報表中具備相同特性的相似區段所組成的群組。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Area.AreaFormat">
+<summary>
+<para>取得 AreaFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Area.Kind">
+<summary>
+<para>取得區域或區段的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Area.Name">
+<summary>
+<para>取得區域名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Area.Sections">
+<summary>
+<para>取得區域中所有區段的集合。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.AreaFormat">
+<summary>
+<para>可讓您為報表中的指定區域擷取資訊與設定選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.AreaFormat.EnableHideForDrillDown">
+<summary>
+<para>取得或設定擷取細目選項為隱藏。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.AreaFormat.EnableKeepTogether">
+<summary>
+<para>取得或設定區域保持在一起選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.AreaFormat.EnableNewPageAfter">
+<summary>
+<para>取得或設定在之後新增分頁的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.AreaFormat.EnableNewPageBefore">
+<summary>
+<para>取得或設定在之前新增分頁的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.AreaFormat.EnablePrintAtBottomOfPage">
+<summary>
+<para>取得或設定列印在頁面底部的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.AreaFormat.EnableResetPageNumberAfter">
+<summary>
+<para>取得或設定在之後重設頁碼的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.AreaFormat.EnableSuppress">
+<summary>
+<para>取得或設定區域可見度。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Areas">
+<summary>
+<para>包含報表中所有區域的 <see cref="T:CrystalDecisions.CrystalReports.Engine.Area">Area</see> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Areas.Count">
+<summary>
+<para>取得集合中 <c>Area</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Areas.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 Areas 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Areas.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 Areas 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.BlobFieldObject">
+<summary>
+<para>代表報表上的 Blob (二進位大型物件) 欄位物件。這個類別可讓您擷取代表特定種類欄位物件的物件，還可以讓您設定繼承自 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObject">ReportObject</see> 類別的泛用格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.DataSource">
+<summary>
+<para>取得 FieldDefinition 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BlobFieldObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.BooleanFieldFormat">
+<summary>
+<para>可讓您取得並設定布林欄位的布林輸出型別。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BooleanFieldFormat.OutputType">
+<summary>
+<para>取得或設定布林輸出型別。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Border">
+<summary>
+<para>可讓您取得並設定報表中報表物件的框線選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Border.BackgroundColor">
+<summary>
+<para>取得或設定物件的背景色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Border.BorderColor">
+<summary>
+<para>取得或設定物件的框線色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Border.BottomLineStyle">
+<summary>
+<para>取得或設定物件底部線條的線條樣式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Border.HasDropShadow">
+<summary>
+<para>取得或設定框線下落式陰影選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Border.LeftLineStyle">
+<summary>
+<para>取得或設定物件左邊線條的線條樣式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Border.RightLineStyle">
+<summary>
+<para>取得或設定物件右邊線條的線條樣式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Border.TopLineStyle">
+<summary>
+<para>取得或設定物件頂端線條的線條樣式。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.BoxObject">
+<summary>
+<para>代表報表中所繪製的方塊。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.Bottom">
+<summary>
+<para>取得或設定物件底部座標 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.EnableExtendToBottomOfSection">
+<summary>
+<para>取得或設定延伸至區段的底部選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.EndSectionName">
+<summary>
+<para>取得物件底部區段的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.FillColor">
+<summary>
+<para>取得或設定物件的填入色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.LineColor">
+<summary>
+<para>取得或設定物件的線條色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.LineStyle">
+<summary>
+<para>取得或設定物件的線條樣式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.LineThickness">
+<summary>
+<para>取得或設定線條的粗細 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.ObjectFormat">
+<summary>
+<para>取得 <c>ObjectFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.Right">
+<summary>
+<para>取得或設定物件右邊座標 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.BoxObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ChartObject">
+<summary>
+<para>代表報表中的圖表物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ChartObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.CommonFieldFormat">
+<summary>
+<para>可讓您設定報表中所有欄位的一般格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CommonFieldFormat.EnableSuppressIfDuplicated">
+<summary>
+<para>取得或設定若重複則抑制顯示選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CommonFieldFormat.EnableUseSystemDefaults">
+<summary>
+<para>取得或設定使用系統預設的格式化選項。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.CrossTabObject">
+<summary>
+<para>代表報表中的交叉表物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.CrossTabObject.Width">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Database">
+<summary>
+<para>提供屬性以取得報表所存取資料庫的相關資訊。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Database.Links">
+<summary>
+<para>取得 <c>TableLinks</c> 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Database.Tables">
+<summary>
+<para>取得 <c>Tables</c> 集合。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition">
+<summary>
+<para>代表報表中所使用的資料庫欄位，並提供屬性以取得報表中資料庫欄位的資訊。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Reports 公式語法中的欄位定義唯一的公式名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition.Name">
+<summary>
+<para>指定資料庫中的欄位名稱 (例如，產品 ID)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition.TableName">
+<summary>
+<para>取得父資料表的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinitions">
+<summary>
+<para>包含報表中每一個資料庫欄位的 <see cref="T:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinition">DatabaseFieldDefinition</see> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinitions.Count">
+<summary>
+<para>取得集合中 <c>DatabaseFieldDefinition</c>物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinitions.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 DatabaseFieldDefinitions 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DatabaseFieldDefinitions.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 DatabaseFieldDefinitions 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.DataDefinition">
+<summary>
+<para>包含所有關於根據報表中資料來源的資料管理資訊。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.FormulaFields">
+<summary>
+<para>取得 <c>FormulaFieldDefinitions</c> 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.GroupNameFields">
+<summary>
+<para>取得 GroupNameFieldDefinitions 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.Groups">
+<summary>
+<para>取得 Groups 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.GroupSelectionFormula">
+<summary>
+<para>取得或設定群組選擇公式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.ParameterFields">
+<summary>
+<para>取得 <c>ParameterFieldDefinitions</c> 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.RecordSelectionFormula">
+<summary>
+<para>取得或設定資料錄選擇公式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.RunningTotalFields">
+<summary>
+<para>取得 <c>RunningTotalFieldDefinitions</c> 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.SortFields">
+<summary>
+<para>取得 <c>SortFields</c> 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.SQLExpressionFields">
+<summary>
+<para>取得 <c>SQLExpressionFieldDefinitions</c> 集合。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DataDefinition.SummaryFields">
+<summary>
+<para>取得 <c>SummaryFieldDefinitions</c> 集合。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.DateFieldFormat">
+<summary>
+<para>可讓您取得並設定報表中日期欄位的日期格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateFieldFormat.DayFormat">
+<summary>
+<para>取得或設定日格式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateFieldFormat.MonthFormat">
+<summary>
+<para>取得或設定月份格式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateFieldFormat.YearFormat">
+<summary>
+<para>取得或設定年份格式。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.DateTimeFieldFormat">
+<summary>
+<para>可讓您取得並設定報表中時間日期欄位的日期與時間格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateTimeFieldFormat.DateFormat">
+<summary>
+<para>取得 DateFieldFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateTimeFieldFormat.DateTimeSeparator">
+<summary>
+<para>取得或設定日期時間分隔符號。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateTimeFieldFormat.TimeFormat">
+<summary>
+<para>取得 TimeFieldFormat 物件。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.DateTimeGroupOptions">
+<summary>
+<para>可讓您取得並設定報表中日期時間群組的日期與時間選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateTimeGroupOptions.Condition">
+<summary>
+<para>取得或設定日期時間條件的數值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DateTimeGroupOptions.DateTimeCondition">
+<summary>
+<para>取得或設定日期時間條件的列舉值。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.DrawingObject">
+<summary>
+<para>提供各種類繪圖物件泛用屬性的基底類別。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.Bottom">
+<summary>
+<para>取得或設定物件底部座標 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.EnableExtendToBottomOfSection">
+<summary>
+<para>取得或設定延伸至區段的底部選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.EndSectionName">
+<summary>
+<para>取得物件底部區段的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.LineColor">
+<summary>
+<para>取得或設定物件的線條色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.LineStyle">
+<summary>
+<para>取得或設定物件的線條樣式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.LineThickness">
+<summary>
+<para>取得或設定線條的粗細 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.Right">
+<summary>
+<para>取得或設定物件右邊座標 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.DrawingObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.FieldDefinition">
+<summary>
+<para>提供各種類欄位定義物件泛用屬性的基底類別。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldDefinition.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.FieldFormat">
+<summary>
+<para>可讓您取得各種類型的欄位格式物件，以取得並設定該欄位的格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldFormat.BooleanFormat">
+<summary>
+<para>取得 <c>BooleanFieldFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldFormat.CommonFormat">
+<summary>
+<para>取得 <c>CommonFieldFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldFormat.DateFormat">
+<summary>
+<para>取得 <c>DateFieldFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldFormat.DateTimeFormat">
+<summary>
+<para>取得 <c>DateTimeFieldFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldFormat.NumericFormat">
+<summary>
+<para>取得 <c>NumericFieldFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldFormat.TimeFormat">
+<summary>
+<para>取得 <c>TimeFieldFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject">
+<summary>
+<para>代表報表中出現的欄位標題物件。這個物件提供屬性與方法，以擷取資訊並設定報表中欄位標題物件的選項。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.ApplyFont(System.Drawing.Font)">
+<summary>
+<para>套用對 System.Drawing.Font 物件所做的變更。</para>
+</summary>
+<param name="font">含有 FieldHeadingObject 的字型設定。</param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Color">
+<summary>
+<para>取得或設定物件的色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.FieldObjectName">
+<summary>
+<para>取得此標題所代表的欄位物件之名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Font">
+<summary>
+<para>取得 Font 物件。使用 <see cref="M:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.ApplyFont">ApplyFont</see> 方法套用變更。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Text">
+<summary>
+<para>取得或設定文字物件內的文字。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldHeadingObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.FieldObject">
+<summary>
+<para>代表報表中的 Field 物件。這個類別可以讓您擷取代表特定種類及類型之欄位物件的物件，並可以讓您設定繼承自 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObject">ReportObject</see> 類別的泛用格式選項。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.FieldObject.ApplyFont(System.Drawing.Font)">
+<summary>
+<para>套用對 System.Drawing.Font 物件所做的變更。</para>
+</summary>
+<param name="value">含有 <see cref="T:CrystalDecisions.CrystalReports.Engine.FieldObject">FieldObject</see> 的字型設定。</param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Color">
+<summary>
+<para>取得或設定物件的色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.DataSource">
+<summary>
+<para>取得 <c>FieldDefinition</c> 物件。使用 FieldDefinition 物件以取得並設定特定欄位種類的格式資訊。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.FieldFormat">
+<summary>
+<para>取得 <c>FieldFormat</c> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Font">
+<summary>
+<para>取得 Font 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FieldObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition">
+<summary>
+<para>提供屬性與方法，以擷取資訊與設定報表中任何命名的公式欄位之選項。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.Check(System.String@)">
+<summary>
+<para>檢查公式。如果有語法錯誤，會傳回錯誤字串與 false。</para>
+</summary>
+<param name="errString"><para>如有語法錯誤，<c>errString</c> 會包含該錯誤，否則 <c>errString</c> 將是空白的。</para></param>
+<returns>
+<para>傳回一布林值，指出公式語法是否正確。</para>
+</returns>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.Name">
+<summary>
+<para>取得顯示於欄位總管的公式欄位名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.Text">
+<summary>
+<para>取得或設定公式的文字。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinitions">
+<summary>
+<para>包含報表中每一個公式欄位的 <see cref="T:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinition">FormulaFieldDefinition</see> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinitions.Count">
+<summary>
+<para>取得集合中 <c>FormulaFieldDefinition</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinitions.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 FormulaFieldDefinition 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.FormulaFieldDefinitions.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 FormulaFieldDefinition 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.GraphicObject">
+<summary>
+<para>提供各類型圖形物件泛用屬性的基底類別。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GraphicObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Group">
+<summary>
+<para>提供屬性以擷取群組所根據以及 <see cref="T:CrystalDecisions.CrystalReports.Engine.GroupOptions">GroupOptions</see> 物件用來設定群組條件的特定欄位定義物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Group.ConditionField">
+<summary>
+<para>取得 FieldDefinition 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Group.GroupOptions">
+<summary>
+<para>取得 GroupOptions 物件。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition">
+<summary>
+<para>提供屬性，以擷取報表中出現的群組名稱欄位資訊。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.Group">
+<summary>
+<para>取得 Group 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.GroupNameFieldName">
+<summary>
+<para>取得群組名稱欄位名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.Name">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinitions">
+<summary>
+<para>包含報表中每一個群組名稱欄位的 GroupNameFieldDefinition 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinitions.Count">
+<summary>
+<para>取得集合中 <c>GroupNameFieldDefinition</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinitions.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition">GroupNameFieldDefinition</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinitions.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.GroupNameFieldDefinition">GroupNameFieldDefinition</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.GroupOptions">
+<summary>
+<para>提供各類型群組選項物件泛用屬性的基底類別。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.GroupOptions.Condition">
+<summary>
+<para>取得或設定群組條件的數值。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Groups">
+<summary>
+<para>包含報表中每一個群組的 <see cref="T:CrystalDecisions.CrystalReports.Engine.Group">Group</see> 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Groups.Count">
+<summary>
+<para>取得集合中 <see extref="crystalDecisions.CrystalReports.Engine.Group">Group</see> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Groups.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.Group">Group</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.LineObject">
+<summary>
+<para>代表報表中繪製的線條物件。這個類別可以讓您擷取資訊，並設定繼承自 <see cref="T:CrystalDecisions.CrystalReports.Engine.DrawingObject">DrawingObject</see> 類別的泛用格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.Bottom">
+<summary>
+<para>取得或設定物件底部座標 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.EnableExtendToBottomOfSection">
+<summary>
+<para>取得或設定延伸至區段的底部選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.EndSectionName">
+<summary>
+<para>取得物件底部區段的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.LineColor">
+<summary>
+<para>取得或設定物件的線條色彩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.LineStyle">
+<summary>
+<para>取得或設定物件的線條樣式。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.LineThickness">
+<summary>
+<para>取得或設定線條的粗細 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.Right">
+<summary>
+<para>取得或設定物件右邊座標 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.LineObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.MapObject">
+<summary>
+<para>代表報表中的地圖物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.MapObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat">
+<summary>
+<para>可讓您取得並設定報表中任何數字欄位的數字格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat.CurrencySymbolFormat">
+<summary>
+<para>取得或設定貨幣符號類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat.DecimalPlaces">
+<summary>
+<para>取得或設定小數位數。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat.EnableUseLeadingZero">
+<summary>
+<para>取得或設定選項，以零當作小數值的起始字元。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat.NegativeFormat">
+<summary>
+<para>取得或設定負數格式類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.NumericFieldFormat.RoundingFormat">
+<summary>
+<para>取得或設定進位格式類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ObjectFormat">
+<summary>
+<para>可讓您取得或設定影響報表中物件實際行為的格式化選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ObjectFormat.CssClass">
+<summary>
+<para>取得或設定物件的階層式樣式表 (CSS) 名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ObjectFormat.EnableCanGrow">
+<summary>
+<para>取得或設定選項以使得物件增大以容納欄位輸入。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ObjectFormat.EnableCloseAtPageBreak">
+<summary>
+<para>取得或設定關閉分頁符號上的框線選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ObjectFormat.EnableKeepTogether">
+<summary>
+<para>取得或設定聚集物件的選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ObjectFormat.EnableSuppress">
+<summary>
+<para>取得或設定物件可視性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ObjectFormat.HorizontalAlignment">
+<summary>
+<para>取得或設定對齊類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.OlapGridObject">
+<summary>
+<para>代表報表中的 OLAP 格線物件。這個類別可以讓您擷取資訊，並設定繼承自 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObject">ReportObject</see> 類別的泛用格式選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.OlapGridObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition">
+<summary>
+<para>代表報表中的參數欄位。這個物件提供屬性與方法，以擷取資訊並設定報表中參數欄位的選項。</para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ApplyCurrentValues(CrystalDecisions.Shared.ParameterValues)">
+<summary>
+<para>將目前的值套用至報表的指定參數欄位。</para>
+</summary>
+<param name="currentValue">包含目前的參數設定值。</param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ApplyDefaultValues(CrystalDecisions.Shared.ParameterValues)">
+<summary>
+<para>將值套用至報表中指定參數的預設值群組。</para>
+</summary>
+<param name="defaultValue"><para>包含目前參數的預設值。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ApplyMinMaxValues(System.Object,System.Object)">
+<summary>
+<para>將最大值和最小值套用至報表中的指定參數。</para>
+</summary>
+<param name="minValue"><para>指出容許的參數最小值。</para></param>
+<param name="maxValue"><para>指出容許的參數最大值。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.IsLinked">
+<summary>
+<para>測試參數是否已連結。連結參數是在將主報表連結至子報表時建立的。</para>
+</summary>
+<returns>
+</returns>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.CurrentValues">
+<summary>
+<para>透過 <c>ParameterValues</c> 物件取得目前值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.DefaultValues">
+<summary>
+<para>透過 <c>ParameterValues</c> 物件取得預設值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.DefaultValueSortMethod">
+<summary>
+<para>取得或設定預設值排序的方法。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.DefaultValueSortOrder">
+<summary>
+<para>取得或設定預設值排序的順序。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.DiscreteOrRangeKind">
+<summary>
+<para>取得或設定參數欄位是否要包含離散值、範圍值或兩者。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.EditMask">
+<summary>
+<para>取得或設定可以限制字串參數輸入內容的編輯遮罩。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.EnableAllowEditingDefaultValue">
+<summary>
+<para>取得或設定可否編輯預設值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.EnableAllowMultipleValue">
+<summary>
+<para>取得或設定允許多重數值選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.EnableNullValue">
+<summary>
+<para>取得儲存程序參數的允許 Null 值選項。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.HasCurrentValue">
+<summary>
+<para>取得參數是否有目前值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.MaximumValue">
+<summary>
+<para>取得最大值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.MinimumValue">
+<summary>
+<para>取得最小值。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.Name">
+<summary>
+<para>取得顯示於欄位總管的參數欄位名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ParameterFieldName">
+<summary>
+<para>取得參數欄位的名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ParameterFieldUsage">
+<summary>
+<para>取得用來說明如何在報表中使用該參數的屬性。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ParameterType">
+<summary>
+<para>取得參數類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ParameterValueKind">
+<summary>
+<para>取得參數值的類型。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.PromptText">
+<summary>
+<para>取得或設定參數欄位的提示字串。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ReportName">
+<summary>
+<para>取得參數欄位所在的報表名稱。如果它是主報表，報表名稱會是空白的。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinitions">
+<summary>
+<para>包含報表中每一個參數欄位的 ParameterFieldDefinition 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinitions.Count">
+<summary>
+<para>取得集合中 <c>ParameterFieldDefinition</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinitions.Item(System.String,System.String)">
+<summary>
+<para>取得具有指定參數名稱和報表名稱的物件。	在 C# 中，此屬性為 ParameterFieldDefinition 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+<param name="index"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinitions.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。	在 C# 中，此屬性為 ParameterFieldDefinition 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ParameterFieldDefinitions.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。	在 C# 中，此屬性為 ParameterFieldDefinition 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.PictureObject">
+<summary>
+<para>代表報表中的圖片物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.Border">
+<summary>
+<para>取得 Border 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.Kind">
+<summary>
+<para>取得報表物件的種類。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.Name">
+<summary>
+<para>取得物件名稱。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PictureObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.PrintOptions">
+<summary>
+<para>提供屬性與方法，以設定列印報表的選項。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.PrintOptions.ApplyPageMargins(CrystalDecisions.Shared.PageMargins)">
+<summary>
+<para>將頁面邊界設定套用至報表。
+      </para>
+</summary>
+<param name="value"><para>將頁面邊界設定包含在報表中。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.PrintOptions.CopyFrom(System.Drawing.Printing.PrinterSettings,System.Drawing.Printing.PageSettings)">
+<summary>
+<para>將 <c>PrinterSettings</c> 和 <c>PageSettings</c> 的值複製至此 <c>PrintOptions</c> 中。</para>
+</summary>
+<param name="printer">	您要使用的 PrinterSettings。</param>
+<param name="page">您要使用的 PageSettings。</param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.PrintOptions.CopyTo(System.Drawing.Printing.PrinterSettings,System.Drawing.Printing.PageSettings)">
+<summary>
+<para>將此 PrintOptions 的值複製到 PrinterSettings 和 PageSettings 中。  </para>
+</summary>
+<param name="printer">	您要使用的 PrinterSettings。</param>
+<param name="page">您要使用的 PageSettings。</param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.CustomPaperSource">
+<summary>
+<para>取得或設定目前印表機紙張來源。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PageContentHeight">
+<summary>
+<para>取得頁面內容的高度。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PageContentWidth">
+<summary>
+<para>取得頁面內容的寬度。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PageMargins">
+<summary>
+<para>取得報表的頁面邊界。使用 ApplyPageMargins 方法套用變更。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PaperOrientation">
+<summary>
+<para>取得或設定目前印表機紙張的列印方向。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PaperSize">
+<summary>
+<para>取得或設定目前印表機紙張的大小。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PaperSource">
+<summary>
+<para>取得或設定目前印表機紙張來源。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PrinterDuplex">
+<summary>
+<para>取得或設定目前印表機雙工選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.PrintOptions.PrinterName">
+<summary>
+<para>取得或設定報表所使用的印表機名稱。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ReportDefinition">
+<summary>
+<para>可讓您擷取報表中所有的 <see cref="T:CrystalDecisions.CrystalReports.Engine.Areas">Areas</see>、<see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObjects">ReportObjects</see> 與 <see cref="T:CrystalDecisions.CrystalReports.Engine.Sections">Sections</see>。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDefinition.Areas">
+<summary>
+<para>取得 Areas 集合。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDefinition.ReportObjects">
+<summary>
+<para>取得 ReportObjects 集合。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDefinition.Sections">
+<summary>
+<para>取得 Sections 集合。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">
+<summary>
+<para>代表報表並包含定義、格式化、載入、匯出及列印報表的屬性與方法。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.Close">
+<summary>
+<para>關閉報表。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.EnableEventLog(CrystalDecisions.Shared.EventLogLevel)">
+<summary>
+<para>啟用列印引擎的事件記錄檔。根據預設值，不會啟用該記錄檔。
+      </para>
+</summary>
+<param name="elLevel">指出是否啟用事件記錄檔。</param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.Export(CrystalDecisions.Shared.ExportOptions)">
+<summary>
+<para>將報表匯出至 <see cref="T:CrystalDecisions.Shared.ExportOptions">ExportOptions</see> 物件中指定的格式與目的地。
+            </para>
+</summary>
+<param name="options"><para>匯出報表的格式與目的地。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.ExportToDisk(CrystalDecisions.Shared.ExportFormatType,System.String)">
+<summary>
+<para>以指定的格式將報表匯出至檔案。
+      </para>
+</summary>
+<param name="formatType">要用來匯出報表的格式類型。</param>
+<param name="fileName">要用來匯出報表的檔案名稱。</param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.ExportToHttpResponse(CrystalDecisions.Shared.ExportFormatType,System.Web.HttpResponse,System.Boolean,System.String)">
+<summary>
+<para>以指定的格式將報表匯出至回應物件。
+      </para>
+</summary>
+<param name="formatType"><para>要用來匯出報表的格式類型。</para></param>
+<param name="response"><para>頁面中的回應物件。</para></param>
+<param name="asAttachment"><para>指出報表是否要以附件型式隨回應一同匯出。</para></param>
+<param name="attachmentName"><para>要用來匯出報表的檔案名稱。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.ExportToHttpResponse(CrystalDecisions.Shared.ExportOptions,System.Web.HttpResponse,System.Boolean,System.String)">
+<summary>
+<para>以指定的格式將報表匯出至回應物件。
+      </para>
+</summary>
+<param name="options"><para>匯出報表時的選項。</para></param>
+<param name="response"><para>頁面中的回應物件。</para></param>
+<param name="asAttachment"><para>指出報表是否要以附件型式隨回應一同匯出。</para></param>
+<param name="attachmentName"><para>要用來匯出報表的檔案名稱。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.ExportToStream(CrystalDecisions.Shared.ExportFormatType)">
+<summary>
+<para>以指定的格式將報表匯出至資料流。
+      </para>
+</summary>
+<param name="formatType"><para>要用來匯出報表的格式類型。</para></param>
+<returns>
+<para>是一種內含匯出報表資料流，可做為位元組的順序。</para>
+</returns>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.GetConcurrentUsage">
+<summary>
+<para>傳回開啟的同時進行工作數量，可讓開發人員建置監視其應用程式的使用權。
+      </para>
+</summary>
+<returns>
+<para>開啟的同時進行工作數量。</para>
+</returns>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.Load(System.String)">
+<summary>
+<para>載入新報表。報表載入後會關閉，並開啟新報表。
+      </para>
+</summary>
+<param name="reportName"><para>指出報表的路徑和檔名。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.Load(System.String,CrystalDecisions.Shared.OpenReportMethod)">
+<summary>
+<para>載入新報表並設定 <see cref="T:CrystalDecisions.Shared.OpenReportMethod">OpenReportMethod</see> 列舉。報表載入後會關閉，並開啟新報表。
+      </para>
+</summary>
+<param name="reportName">指出報表的路徑和檔名。</param>
+<param name="openMethod">指出是否將報表開啟為暫存副本或者設定為預設值。</param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.OpenSubreport(System.String)">
+<summary>
+<para>開啟報表中所含的子報表，並且傳回對應到命名子報表的 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">ReportDocument</see> 物件。
+      </para>
+</summary>
+<param name="subreportName"><para>指出要開啟的子報表名稱。</para></param>
+<returns>
+<para>傳回代表子報表的個別 ReportDocument。</para>
+</returns>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.PrintToPrinter(System.Int32,System.Boolean,System.Int32,System.Int32)">
+<summary>
+<para>將報表中指定的頁面列印到使用 PrintOptions.PrinterName 屬性所選取的印表機。如果沒有選擇印表機，將會使用報表中指定的預設印表機。
+      </para>
+</summary>
+<param name="nCopies"><para>指出列印份數。</para></param>
+<param name="collated"><para>指出是否自動分頁。</para></param>
+<param name="startPageN"><para>指出要列印的第一頁。</para></param>
+<param name="endPageN"><para>指出要列印的最後一頁。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.Refresh">
+<summary>
+<para>移除已儲存的資料。如此在後續檢視此報表時，將會載入最新的資料。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SaveAs(System.String)">
+<summary>
+<para>將報表儲存至指定的檔案中。
+      </para>
+</summary>
+<param name="filename"><para>指出報表的路徑和檔名。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SaveAs(System.String,System.Boolean)">
+<summary>
+<para>將報表與其資料儲存到指定的檔案中。
+      </para>
+</summary>
+<param name="filename"><para>指出報表的路徑和檔名。</para></param>
+<param name="saveDataWithReport"><para>指出是否會儲存報表資料。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetCssClass(CrystalDecisions.Shared.ObjectScope,System.String)">
+<summary>
+<para>設定不同的區段與報表物件的階層式樣式表 (CSS)。
+      </para>
+</summary>
+<param name="objectScope"><para>指出將套用樣式類別的報表 (一個或多個) 區段。例如，設定整個報表的樣式，或僅設定報表首區段的樣式。</para></param>
+<param name="cssClass"><para>樣式表中定義的樣式類別名稱。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDatabaseLogon(System.String,System.String)">
+<summary>
+<para>以使用者名稱和密碼來設定資料庫登入資訊。
+      </para>
+</summary>
+<param name="user"><para>使用者名稱。</para></param>
+<param name="password"><para>密碼。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDatabaseLogon(System.String,System.String,System.String,System.String)">
+<summary>
+<para>設定資料庫登入資訊。此方法會設定使用者名稱、密碼、伺服器名稱和資料庫名稱。
+      </para>
+</summary>
+<param name="user"><para>使用者名稱。</para></param>
+<param name="password"><para>密碼。</para></param>
+<param name="server"><para>伺服器名稱。</para></param>
+<param name="database"><para>資料庫名稱。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(System.Object)">
+<summary>
+<para>傳遞物件至報表引擎。</para>
+</summary>
+<param name="value"><para>代表有效的資料集物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(System.Data.DataSet)">
+<summary>
+<para>傳遞資料錄集或資料集至報表引擎。
+      </para>
+</summary>
+<param name="dataSet"><para>代表有效的資料集物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(System.Data.IDataReader)">
+<summary>
+<para>傳遞 IDataReader 至報表引擎。</para>
+</summary>
+<param name="dataReader"><para>代表有效的 <c>IDataReader</c> 物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetDataSource(System.Data.DataTable)">
+<summary>
+<para>傳遞 IDataReader 至報表引擎。</para>
+</summary>
+<param name="dataTable"><para>代表有效的 <c>DataTable</c> 物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetParameterValue(System.String,System.Object)">
+<summary>
+<para>設定參數欄位的現值。這個值可以是原始值、ParameterValue、任一型別的陣列或是 ParameterValues 集合。
+      </para>
+</summary>
+<param name="name"><para>參數欄位的名稱。</para></param>
+<param name="value"><para>代表有效的參數值。這個值可以是原始值、ParameterValue、任一型別的陣列或是 ParameterValues 集合。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetParameterValue(System.String,System.Object,System.String)">
+<summary>
+<para>設定子報表中某個參數欄位的現值。這個值可以是原始值、ParameterValue、任一型別的陣列或是 ParameterValues 集合。
+      </para>
+</summary>
+<param name="name"><para>參數欄位的名稱。</para></param>
+<param name="value"><para>代表有效的參數值。這個值可以是原始值、ParameterValue、任一型別的陣列或是 ParameterValues 集合。</para></param>
+<param name="subreport"><para>參數欄位所屬之子報表的名稱。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.SetParameterValue(System.Int32,System.Object)">
+<summary>
+<para>為指定索引上的參數欄位設定現值。這個值可以是原始值、ParameterValue、任一型別的陣列或是 ParameterValues 集合。
+      </para>
+</summary>
+<param name="index"><para>參數欄位的索引。</para></param>
+<param name="value">代表有效的參數值。這個值可以是原始值、ParameterValue、任一型別的陣列或是 ParameterValues 集合。</param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.VerifyDatabase">
+<summary>
+<para>檢查 <c>ReportDocument</c> 物件所載入的報表是否與資料庫保持連線作用中。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.Database">
+<summary>
+<para>取得 Database 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.DataDefinition">
+<summary>
+<para>取得 DataDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.DataSourceConnections">
+<summary>
+<para>IconnectionInfo 物件的集合，包含報表中所有表格的連接資訊。其中不包含子報表。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.EnterpriseSession">
+<summary>
+<para>當 RAS 伺服器是由 BusinessObjects Enterprise 進行管理時，取得或設定指向 <c>EnterpriseSession</c> 物件的參照。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.ExportOptions">
+<summary>
+<para>取得 <see cref="T:CrystalDecisions.Shared.ExportOptions">ExportOptions</see> 類別執行個體。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.FileName">
+<summary>
+<para>指定報表檔案的名稱。如果有指定通訊協定或磁碟機代號，則會使用「ras://」為預設值。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.FilePath">
+<summary>
+<para>指定報表檔案的名稱，其中不含通訊協定前置字元。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.HasSavedData">
+<summary>
+<para>可讓您得知報表是否有資料儲存在記憶體中。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.IsLoaded">
+<summary>
+<para>可讓您得知是否已使用 <see cref="M:CrystalDecisions.CrystalReports.Engine.ReportDocument.Load">Load</see> 方法載入報表。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.IsSubreport">
+<summary>
+<para>可讓您得知報表是否為子報表。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.Name">
+<summary>
+<para>取得報表名稱。如果是主報表，報表名稱會是空白的。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.ParameterFields">
+<summary>
+<para>取得參數欄位。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.PrintOptions">
+<summary>
+<para>取得 PrintOptions 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.RecordSelectionFormula">
+<summary>
+<para>取得或設定資料錄選擇公式。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.ReportAppServer">
+<summary>
+<para>取得或設定報表應用程式伺服器 (又稱 RAS 伺服器) 的名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.ReportClientDocument">
+<summary>
+<para>ReportClientDocument 類別是要進入基礎 Report Application Server API 時的進入點。如果 ReportDocument.ReportAppServer 沒有指向至 Report Application Server，則此屬性將會造成例外狀況。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.ReportDefinition">
+<summary>
+<para>取得 ReportDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.ReportOptions">
+<summary>
+<para>取得 ReportOptions 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.Subreports">
+<summary>
+<para>子報表。取得 Subreports 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportDocument.SummaryInfo">
+<summary>
+<para>取得 SummaryInfo 物件。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ReportObject">
+<summary>
+<para>提供各類型報表物件泛用屬性的基底類別。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.Border">
+<summary>
+<para>取得 Border 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.Kind">
+<summary>
+<para>從 ReportObjectKind 列舉型別取得報表物件的種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.Name">
+<summary>
+<para>取得物件名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ReportObjects">
+<summary>
+<para>包含報表中每一個報表物件的 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObject">ReportObject</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObjects.Count">
+<summary>
+<para>取得集合中 <c>ReportObject</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObjects.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObject">ReportObject</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportObjects.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportObject">ReportObject</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.ReportOptions">
+<summary>
+<para>可讓您取得並設定報表中的資料相關報表選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportOptions.EnableSaveDataWithReport">
+<summary>
+<para>取得或設定以報表自動儲存資料庫資料的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportOptions.EnableSavePreviewPicture">
+<summary>
+<para>取得或設定儲存報表縮圖的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportOptions.EnableSaveSummariesWithReport">
+<summary>
+<para>取得或設定選項以儲存您以報表所建立的資料摘要。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportOptions.EnableUseDummyData">
+<summary>
+<para>取得或設定選項在設計階段檢視報表時，使用虛設資料。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportOptions.InitialDataContext">
+<summary>
+<para>取得或設定指定的一筆或多筆記錄；這些記錄將會成為顯示於 <see cref="T:CrystalDecisions.Web.CrystalReportPartsViewer">CrystalReportPartsViewer</see> 中的初始資料。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.ReportOptions.InitialReportPartName">
+<summary>
+<para>取得或設定報表組件的名稱；此報表組件將會預設顯示於 <see cref="T:CrystalDecisions.Web.CrystalReportPartsViewer">CrystalReportPartsViewer</see> 中。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition">
+<summary>
+<para>代表報表中所使用的累加值欄位。這個類別提供屬性，以取得報表中累加值欄位的資訊。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.EvaluationCondition">
+<summary>
+<para>取得此 RunningTotalFieldDefinition 的驗算條件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.Group">
+<summary>
+<para>取得 Group 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.Name">
+<summary>
+<para>取得累加值欄位名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.Operation">
+<summary>
+<para>取得摘要作業類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.OperationParameter">
+<summary>
+<para>取得以 <see cref="T:CrystalDecisions.Shared.SummaryOperation">SummaryOperation</see> 類型為依據的作業參數。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.ResetCondition">
+<summary>
+<para>取得此 <c>RunningTotalFieldDefinition</c> 的重設條件物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.SecondarySummarizedField">
+<summary>
+<para>取得次要摘要欄位的 FieldDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.SummarizedField">
+<summary>
+<para>取得主要摘要欄位的 FieldDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinitions">
+<summary>
+<para>包含報表中每一個累加值欄位的 <see cref="T:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition">RunningTotalFieldDefinition</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinitions.Count">
+<summary>
+<para>取得集合中 <c>RunningTotalFieldDefinition</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinitions.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition">RunningTotalFieldDefinition</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinitions.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition">RunningTotalFieldDefinition</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SCRCollection">
+<summary>
+<para>僅供內部使用。</para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Section">
+<summary>
+<para>報表區域包含至少一個區段。這個類別包括存取關於報表中區段資訊的屬性。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Section.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Section.Kind">
+<summary>
+<para>取得區域或區段的種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Section.Name">
+<summary>
+<para>取得區段名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Section.ReportObjects">
+<summary>
+<para>取得 ReportObjects 集合。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Section.SectionFormat">
+<summary>
+<para>取得 SectionFormat 物件。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SectionFormat">
+<summary>
+<para>可讓您取得並設定區段的格式選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.BackgroundColor">
+<summary>
+<para>取得或設定物件的背景色彩。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.CssClass">
+<summary>
+<para>取得或設定物件的階層式樣式表 (CSS) 名稱。 
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnableKeepTogether">
+<summary>
+<para>取得或設定指示當區段分為兩頁時，是否要將整個區段保留在同一頁的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnableNewPageAfter">
+<summary>
+<para>取得或設定在之後新增分頁的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnableNewPageBefore">
+<summary>
+<para>取得或設定在之前新增分頁的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnablePrintAtBottomOfPage">
+<summary>
+<para>取得或設定列印在頁面底部的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnableResetPageNumberAfter">
+<summary>
+<para>取得或設定在之後重設頁碼的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnableSuppress">
+<summary>
+<para>取得或設定區域可見度。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnableSuppressIfBlank">
+<summary>
+<para>取得或設定指示當目前區段為空白時，是否要抑制顯示目前區段的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SectionFormat.EnableUnderlaySection">
+<summary>
+<para>取得或設定放置在隨後區段的選項。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Sections">
+<summary>
+<para>包含報表中每一個區段的 <see cref="T:CrystalDecisions.CrystalReports.Engine.Section">Section</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Sections.Count">
+<summary>
+<para>取得集合中 <c>Section</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Sections.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.Section">Section</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Sections.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.Section">Section</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SortField">
+<summary>
+<para>代表資料錄或群組排序欄位。這個類別提供屬性，以取得和設定報表中的排序欄位資訊。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SortField.Field">
+<summary>
+<para>取得或設定排序欄位的 FieldDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SortField.SortDirection">
+<summary>
+<para>取得或設定排序方向。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SortField.SortType">
+<summary>
+<para>取得排序欄位類型。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SortFields">
+<summary>
+<para>包含報表中每一個排序欄位的 <see cref="T:CrystalDecisions.CrystalReports.Engine.SortField">SortField</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SortFields.Count">
+<summary>
+<para>取得集合中 <c>SortField</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SortFields.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.SortField">SortField</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition">
+<summary>
+<para>提供屬性以擷取報表中出淚的特殊欄位之資訊。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition.Name">
+<summary>
+<para>取得特殊欄位名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition.SpecialVarType">
+<summary>
+<para>取得特殊欄位的類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SpecialVarFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition">
+<summary>
+<para>提供屬性以擷取報表中出現的 SQL 運算式欄位之資訊。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition.Name">
+<summary>
+<para>取得 SQL 運算式欄位的名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition.Text">
+<summary>
+<para>取得 SQL 運算式文字。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinitions">
+<summary>
+<para>包含報表中每一個 SQL 運算式欄位的 <see cref="T:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition">SQLExpressionFieldDefinition</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinitions.Count">
+<summary>
+<para>取得集合中 <c>SQLExpressionFieldDefinition</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinitions.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition">SQLExpressionFieldDefinition</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinitions.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.SQLExpressionFieldDefinition">SQLExpressionFieldDefinition</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SubreportObject">
+<summary>
+<para>代表置於報表中的子報表。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.SubreportObject.OpenSubreport(System.String)">
+<summary>
+<para>OpenSubreport 方法會開啟報表中所含的子報表，並且傳回對應到命名子報表的 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">ReportDocument</see> 物件。
+      </para>
+</summary>
+<param name="subReportName">指出要開啟的子報表名稱。</param>
+<returns>
+<para>傳回代表子報表的個別 ReportDocument。</para>
+</returns>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.Border">
+<summary>
+<para>取得 Border 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.EnableOnDemand">
+<summary>
+<para>取得或設定即時子報表的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.Kind">
+<summary>
+<para>取得報表物件的種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.Name">
+<summary>
+<para>取得物件名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.SubreportName">
+<summary>
+<para>取得子報表的名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SubreportObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Subreports">
+<summary>
+<para>包含報表中每一個子報表的 <see cref="T:CrystalDecisions.CrystalReports.Engine.ReportDocument">ReportDocument</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Subreports.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.SubreportObject">SubreportObject</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Subreports.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.SubreportObject">SubreportObject</see> 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition">
+<summary>
+<para>代表報表中所使用的摘要欄位。這個類別提供屬性以取得報表中摘要欄位的資訊。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.FormulaName">
+<summary>
+<para>取得 Crystal Report 公式語法中的欄位定義唯一的公式名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.Group">
+<summary>
+<para>取得 Group 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.Kind">
+<summary>
+<para>取得欄位種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.Name">
+<summary>
+<para>取得群組或報表摘要欄位的摘要欄位之欄位定義唯一的公式名稱。 
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.NumberOfBytes">
+<summary>
+<para>取得在記憶體中儲存欄位資料所需要的位元組數量。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.Operation">
+<summary>
+<para>取得摘要作業類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.OperationParameter">
+<summary>
+<para>取得以 <see cref="T:CrystalDecisions.Shared.SummaryOperation">SummaryOperation</see> 類型為依據的作業參數。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.SecondarySummarizedField">
+<summary>
+<para>取得主要摘要欄位的 FieldDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.SummarizedField">
+<summary>
+<para>取得次要摘要欄位的 FieldDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.UseCount">
+<summary>
+<para>已過時。取得報表中欄位使用的次數。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition.ValueType">
+<summary>
+<para>取得欄位值的類型。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinitions">
+<summary>
+<para>包含報表中每一個摘要的 <see cref="T:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition">SummaryFieldDefinition</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinitions.Count">
+<summary>
+<para>取得集合中 <c>SummaryFieldDefinition</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinitions.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 <see cref="T:CrystalDecisions.CrystalReports.Engine.SummaryFieldDefinition">SummaryFieldDefinition</see> 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.SummaryInfo">
+<summary>
+<para>可讓您取得並設定摘要報表的資訊。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryInfo.KeywordsInReport">
+<summary>
+<para>取得或設定報表中的關鍵字。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryInfo.ReportAuthor">
+<summary>
+<para>取得或設定報表的作者。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryInfo.ReportComments">
+<summary>
+<para>取得或設定報表的註解。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryInfo.ReportSubject">
+<summary>
+<para>取得或設定報表的主旨。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.SummaryInfo.ReportTitle">
+<summary>
+<para>取得或設定報表的標題。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Table">
+<summary>
+<para>代表報表可存取的資料庫資料表。這個類別提供屬性與方法，以取得資料表的資訊以及設定資料表的登入資訊。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.Table.ApplyLogOnInfo(CrystalDecisions.Shared.TableLogOnInfo)">
+<summary>
+<para>更新透過 <see cref="T:CrystalDecisions.Shared.TableLogOnInfo">TableLogOnInfo</see> 屬性傳回的 <see cref="T:CrystalDecisions.Shared.TableLogOnInfo">TableLogOnInfo</see> 物件的變更。
+      </para>
+</summary>
+<param name="value">含有登入資訊。</param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(System.Data.IDataReader)">
+<summary>
+<para>傳遞 <c>IDataReader</c> 至報表引擎。</para>
+</summary>
+<param name="dataReader"><para>代表有效的 IDataReader 物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(System.Data.DataTable)">
+<summary>
+<para>傳遞 <c>DataTable</c> 至報表引擎。</para>
+</summary>
+<param name="dataTable"><para>代表有效的 <c>DataTable</c> 物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(System.Data.DataSet)">
+<summary>
+<para>傳遞 <c>Recordset</c> 或 <c>Dataset</c> 至報表引擎。</para>
+</summary>
+<param name="dataSet"><para>代表有效的資料集物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.Table.SetDataSource(System.Object)">
+<summary>
+<para>傳遞 <c>Recordset</c> 或 <c>Dataset</c> 至報表引擎。
+      </para>
+</summary>
+<param name="value"><para>代表有效的資料集物件。</para></param>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.Table.TestConnectivity">
+<summary>
+<para>測試是否可以目前的資訊建立連往資料庫的連線，以及報表是否可以存取資料庫資料表。
+      </para>
+</summary>
+<returns>
+<para>如果資料庫工作階段、登入和位置資訊正確，則傳回 <b>True</b>。如果連接失敗或發生錯誤，則傳回 <b>False</b>。</para>
+</returns>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Table.Fields">
+<summary>
+<para>取得 DatabaseFieldDefinitions 集合。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Table.Location">
+<summary>
+<para>取得或設定資料庫資料表的位置。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Table.LogOnInfo">
+<summary>
+<para>取得 TableLogOnInfo 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Table.Name">
+<summary>
+<para>取得報表中所使用的資料庫資料表的別名。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.TableLink">
+<summary>
+<para>可讓您擷取資料庫資料表連結的資訊。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TableLink.DestinationFields">
+<summary>
+<para>取得資料表連結目的 <c>DatabaseFieldDefinitions</c> 集合的參考。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TableLink.DestinationTable">
+<summary>
+<para>取得資料表連結目的 Table 物件的參考。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TableLink.JoinType">
+<summary>
+<para>取得資料表所使用的連結摘要。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TableLink.SourceFields">
+<summary>
+<para>取得資料表連結來源 DatabaseFieldDefinitions 集合的參考。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TableLink.SourceTable">
+<summary>
+<para>取得資料表連結來源 Table 物件的參考。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.TableLinks">
+<summary>
+<para>包含報表中每一個資料表連結的 <see cref="T:CrystalDecisions.CrystalReports.Engine.TableLink">TableLink</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TableLinks.Count">
+<summary>
+<para>取得集合中 <c>TableLink</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TableLinks.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 TableLink 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.Tables">
+<summary>
+<para>包含報表中每一個資料表的 <see cref="T:CrystalDecisions.CrystalReports.Engine.Table">Table</see> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Tables.Count">
+<summary>
+<para>取得集合中 <c>Table</c> 物件的數目。</para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Tables.Item(System.String)">
+<summary>
+<para>取得具有指定名稱的物件。在 C# 中，此屬性為 Table 類別的索引子。</para>
+</summary>
+<param name="fieldName"></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.Tables.Item(System.Int32)">
+<summary>
+<para>在指定的索引取得物件。在 C# 中，此屬性為 Table 類別的索引子。</para>
+</summary>
+<param name="index"></param>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.TextObject">
+<summary>
+<para>代表報表中出淚的文字物件。這個物件提供屬性與方法，以擷取資訊並設定報表中文字物件的選項。
+      </para>
+</summary>
+</member>
+<member name="M:CrystalDecisions.CrystalReports.Engine.TextObject.ApplyFont(System.Drawing.Font)">
+<summary>
+<para>套用對 System.Drawing.Font 物件所做的變更。
+      </para>
+</summary>
+<param name="value"><para>含有 TextObject 的字型設定。</para></param>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Border">
+<summary>
+<para>取得 <c>Border</c> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Color">
+<summary>
+<para>取得或設定物件的色彩。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Font">
+<summary>
+<para>取得 <c>Font</c> 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Height">
+<summary>
+<para>取得或設定物件高度 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Kind">
+<summary>
+<para>取得報表物件的種類。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Left">
+<summary>
+<para>取得或設定物件左上角位置 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Name">
+<summary>
+<para>取得物件名稱。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.ObjectFormat">
+<summary>
+<para>取得 ObjectFormat 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Text">
+<summary>
+<para>取得或設定文字物件內的文字。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Top">
+<summary>
+<para>取得或設定上方頂端位置的物件 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TextObject.Width">
+<summary>
+<para>取得或設定物件寬度 (以 Twip 為單位)。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat">
+<summary>
+<para>可讓您取得並設定報表中任何時間欄位的時間格式選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.AMPMFormat">
+<summary>
+<para>取得或設定 AM/PM 類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.AMString">
+<summary>
+<para>取得或設定 AM 字串。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.HourFormat">
+<summary>
+<para>取得或設定小時類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.HourMinuteSeparator">
+<summary>
+<para>取得或設定時分分隔符號。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.MinuteFormat">
+<summary>
+<para>取得或設定分鐘類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.MinuteSecondSeparator">
+<summary>
+<para>取得或設定分秒分隔符號。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.PMString">
+<summary>
+<para>取得或設定 PM 字串。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.SecondFormat">
+<summary>
+<para>取得或設定秒類型。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TimeFieldFormat.TimeBase">
+<summary>
+<para>取得或設定時間基底。
+      </para>
+</summary>
+</member>
+<member name="T:CrystalDecisions.CrystalReports.Engine.TopBottomNSortField">
+<summary>
+<para>可讓您取得並設定前 N 項與後 N 項排序欄位的選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TopBottomNSortField.EnableDiscardOtherGroups">
+<summary>
+<para>取得或設定丟棄其他群組選項。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TopBottomNSortField.Field">
+<summary>
+<para>取得或設定排序欄位的 FieldDefinition 物件。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TopBottomNSortField.NotInTopBottomNName">
+<summary>
+<para>為不在報表所指定的 <c>TopBottomNSortFields</c> 中的群組取得或設定群組標題。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TopBottomNSortField.NumberOfTopOrBottomNGroups">
+<summary>
+<para>取得或設定由上往下或由下往上排序顯示的群組數目。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TopBottomNSortField.SortDirection">
+<summary>
+<para>取得或設定排序方向。
+      </para>
+</summary>
+</member>
+<member name="P:CrystalDecisions.CrystalReports.Engine.TopBottomNSortField.SortType">
+<summary>
+<para>取得排序欄位類型。
+      </para>
+</summary>
+</member>
+</members>
+</doc>

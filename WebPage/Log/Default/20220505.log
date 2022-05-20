@@ -1,0 +1,32 @@
+2022-05-05 11:08:37,698 ERROR SessionID：n3idadr2s5cfbxfmvmbljlyj UserID：1 FunctionID：01060300 Layer：BusinessRule Message：違反 PRIMARY KEY 條件約束 'PK_Artificial_Signing_Detail'。無法在物件 'dbo.Artificial_Signing_Detail' 中插入重複的索引鍵。重複的索引鍵值是 (20191120, 0102439597, 1, 2, 1, 1, 1, 2)。
+陳述式已經結束。,
+Type:CSIPKeyInGUI.EntityLayer.EntityArtificial_Signing_Primary, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73
+2022-05-05 12:58:29,348 ERROR SessionID：p2saydgxzsvp1emxtxwescqn UserID：1 FunctionID：01060300 Layer：BusinessRule Message：違反 PRIMARY KEY 條件約束 'PK_Artificial_Signing_Detail'。無法在物件 'dbo.Artificial_Signing_Detail' 中插入重複的索引鍵。重複的索引鍵值是 (20191120, 0102439597, 1, 2, 1, 1, 1, 2)。
+陳述式已經結束。,
+Type:CSIPKeyInGUI.EntityLayer.EntityArtificial_Signing_Primary, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteNonQuery(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 402
+   at CSIPCommonModel.BusinessRules.BRBase`1.Add(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 73

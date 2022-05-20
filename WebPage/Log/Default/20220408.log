@@ -1,0 +1,563 @@
+2022-04-08 09:40:43,583 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID： Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:40:43,616 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID： Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:40:43,754 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID： Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:40:43,755 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID： Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:41:12,293 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:41:12,297 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:41:12,437 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:41:12,543 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:41:26,227 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:41:26,228 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:41:26,366 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:41:26,367 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:46:07,199 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:46:07,200 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:46:07,335 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:46:07,336 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:51:46,983 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:51:46,984 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:51:47,117 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:51:47,118 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:57:21,854 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:57:21,855 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:57:21,987 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:57:21,988 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:58:03,794 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:58:03,795 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:58:04,091 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:58:04,094 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:58:13,927 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:58:13,929 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:58:14,220 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 09:58:14,221 ERROR SessionID：lpesgzcm4m4uudv0kpavwztg UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 09:59:49,009 INFO  Message：Application and Jobs End
+2022-04-08 10:01:21,430 INFO SessionID：3ytf2ife4tfdnbehugtdllpa UserID：1 FunctionID：01040100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-08 10:01:42,572 ERROR SessionID：3ytf2ife4tfdnbehugtdllpa UserID：1 FunctionID：01040100 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-08 10:02:07,243 INFO SessionID：3ytf2ife4tfdnbehugtdllpa UserID：1 FunctionID：01040100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-08 10:02:28,329 ERROR SessionID：3ytf2ife4tfdnbehugtdllpa UserID：1 FunctionID：01040100 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-08 10:03:22,931 INFO SessionID：3ytf2ife4tfdnbehugtdllpa UserID：1 FunctionID：01040100 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-08 10:03:43,997 ERROR SessionID：3ytf2ife4tfdnbehugtdllpa UserID：1 FunctionID：01040100 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-08 10:07:22,341 INFO  Message：Application and Jobs End
+2022-04-08 10:08:24,556 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 10:08:24,569 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 10:08:24,704 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 10:08:24,712 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 10:08:30,033 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 10:08:30,034 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 10:08:30,170 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：無效的物件名稱 'dbo.PostOffice_CodeType'。,
+Type:CSIPCommonModel.EntityLayer_new.EntityPostOffice_Temp, 
+Source:.Net SqlClient Data Provider,
+StackTrace:   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at Framework.Data.DataHelper.ExecuteDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\Framework.Data\OM\DataHelper.cs:line 320
+   at CSIPCommonModel.BusinessRules.BRBase`1.SearchOnDataSet(DbCommand command) in D:\中信專案檔\csip_commonmodel_sit\BusinessRules\BRBase.cs:line 851
+2022-04-08 10:08:30,171 ERROR SessionID：4go1moyevoev1qibc4lvd10b UserID：1 FunctionID：01040100 Layer：BusinessRule Message：查詢已傳送郵局資料失敗：System.NullReferenceException: Object reference not set to an instance of an object.
+   at CSIPKeyInGUI.BusinessRules_new.BRPostOffice_CodeType.GetCodeType(String type) in d:\中信專案檔\csip_keyingui_sit\WebPage\App_Code\BRPostOffice_CodeType.cs:line 84
+2022-04-08 10:08:54,873 INFO  Message：Application and Jobs End
+2022-04-08 10:12:11,393 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 10:12:11,393 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 10:12:11,393 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 10:12:11,394 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 10:12:11,444 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 10:12:11,447 ERROR SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 10:12:11,447 ERROR SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 10:12:25,790 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 10:12:25,791 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 10:12:25,791 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 10:12:25,791 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 10:12:25,819 INFO SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 10:12:25,819 ERROR SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 10:12:25,820 ERROR SessionID：4udgph5shfujvf4xg3oazlqm UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 10:45:28,540 INFO SessionID：a4jywudi3nkvrlpytjbrlzup UserID：1 FunctionID：01010400 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-08 10:45:49,813 ERROR SessionID：a4jywudi3nkvrlpytjbrlzup UserID：1 FunctionID：01010400 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-08 10:45:50,291 INFO SessionID：a4jywudi3nkvrlpytjbrlzup UserID：1 FunctionID：01010400 Layer：HTG Message：HTGCommunicator this.HtgTimeout:130000
+2022-04-08 10:46:11,418 ERROR SessionID：a4jywudi3nkvrlpytjbrlzup UserID：1 FunctionID：01010400 Layer：HTG Message：建立連線失敗:WebException.ConnectFailure
+2022-04-08 10:54:01,895 INFO  Message：Application and Jobs End
+2022-04-08 10:54:07,378 INFO  Message：Application and Jobs End
+2022-04-08 13:12:52,365 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 13:12:52,365 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 13:12:52,365 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 13:12:52,366 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 13:12:52,394 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 13:12:52,400 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 13:12:52,401 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 13:12:56,776 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 13:12:56,776 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 13:12:56,777 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 13:12:56,777 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 13:12:56,802 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 13:12:56,802 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 13:12:56,803 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 13:13:44,465 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 13:13:44,466 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 13:13:44,466 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 13:13:44,466 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 13:13:44,493 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 13:13:44,494 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 13:13:44,494 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 13:14:13,337 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 13:14:13,337 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 13:14:13,338 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 13:14:13,338 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 13:14:13,383 INFO SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 13:14:13,384 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 13:14:13,384 ERROR SessionID：22tpt35n2g3r2kicuj5qgsnr UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 13:15:30,393 INFO SessionID：vrrmaltbfmvwxgl1apg115xj UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 13:15:30,394 INFO SessionID：vrrmaltbfmvwxgl1apg115xj UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 13:15:30,394 INFO SessionID：vrrmaltbfmvwxgl1apg115xj UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 13:15:30,394 INFO SessionID：vrrmaltbfmvwxgl1apg115xj UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 13:15:30,421 INFO SessionID：vrrmaltbfmvwxgl1apg115xj UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 13:15:30,422 ERROR SessionID：vrrmaltbfmvwxgl1apg115xj UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 13:15:30,422 ERROR SessionID：vrrmaltbfmvwxgl1apg115xj UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 13:24:14,028 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 13:24:14,028 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 13:24:14,028 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 13:24:14,029 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 13:24:14,061 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 13:24:14,064 ERROR SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 13:24:14,064 ERROR SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 13:24:16,325 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostBegin
+2022-04-08 13:24:16,325 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：FALSE
+2022-04-08 13:24:16,326 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：10
+2022-04-08 13:24:16,326 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：115
+2022-04-08 13:24:16,352 INFO SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：getRtnHostEnd
+2022-04-08 13:24:16,353 ERROR SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：主機電文錯誤:Item has already been added. Key in dictionary: 'CREATE_DATE'  Key being added: 'CREATE_DATE'
+2022-04-08 13:24:16,353 ERROR SessionID：xwxc4dlwnfrpyrj3ivndyzl0 UserID：1 FunctionID：01040100 Layer：HTG Message：P4A_JCGQ:主機電文錯誤:傳輸失敗
+2022-04-08 14:21:26,485 INFO  Message：Application and Jobs End
+2022-04-08 14:21:51,620 INFO  Message：Application and Jobs End
+2022-04-08 14:23:53,526 INFO  Message：Application and Jobs End
+2022-04-08 16:46:18,577 INFO  Message：Application and Jobs End
+2022-04-08 16:46:43,675 INFO  Message：Application and Jobs End

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hostgateway>
+  <header>
+    <action type="transaction"/>
+    <data id="sessionId" value=""/>
+    <data id="applicationId" value="CSIP"/>
+    <data id="luType" value="LU62"/>
+    <data id="transactionId" value="P4_JCBG"/>
+  </header>
+  <line no="1">
+    <msgHeader/>
+    <msgBody>
+      <data id="TRAN_ID" value="JCBG"/>
+      <data id="PROGRAM_ID" value="JCGU638"/>
+      <data id="USER_ID" value=""/>
+      <data id="MESSAGE_TYPE" value=""/>
+      <data id="FUNCTION_CODE" value="C"/>
+      <data id="LINE_CNT" value=""/>
+      <data id="ACCT_NBR" value=""/>
+      <data id="CON_RPT" value=""/>
+      <data id="MOBILE_PHONE" value=""/>
+      <data id="EMAIL" value=""/>
+      <data id="TITLE" value=""/>
+      <data id="E_SERVICE_CODE" value=""/>
+      <data id="FAX_NO" value=""/>
+      <data id="PERM_ZIP" value=""/>
+      <data id="PERM_CITY" value=""/>
+      <data id="PERM_ADDR_1" value=""/>
+      <data id="PERM_ADDR_2" value=""/>
+      <data id="INFORMANT_NAME_1" value=""/>
+      <data id="INFORMANT_TEL_NO_1" value=""/>
+      <data id="INFORMANT_NAME_2" value=""/>
+      <data id="INFORMANT_TEL_NO_2" value=""/>
+      <data id="TEL_PERM" value=""/>
+      <data id="STUS_ID" value=""/>
+      <data id="STUS_TELO" value=""/>
+      <data id="STUS_TELH" value=""/>
+      <data id="STUS_TELP" value=""/>
+      <data id="STUS_FAX" value=""/>
+      <data id="STUS_MOBIL" value=""/>
+      <data id="STUS_ADDB" value=""/>
+      <data id="STUS_ADDP" value=""/>
+      <data id="STUS_EMAIL" value=""/>
+      <data id="GRADE_SCHOOL" value=""/>
+      <data id="GRADE_SCHOOL_LOCATE" value=""/>
+      <!--<data id="OVERSEA_COUNTRY_CODE" value=""/>-->
+      <data id="OVERSEA_PHONE" value=""/>
+      <data id="SMS_NP_FLAG" value=""/>
+      <data id="VALID_SEL" value=""/>
+      <data id="TEMP_E_MAIL" value=""/>
+      <data id="TEMP_E_MAIL_STATUS" value=""/>
+      <data id="TMAL_CREATE_DATE" value=""/>
+      <data id="SAME_FLAG" value=""/>
+      <data id="EBILL_FLAG" value=""/>
+      <data id="VERIFY_SEQ_NO" value=""/>
+    </msgBody>
+  </line>
+</hostgateway>
