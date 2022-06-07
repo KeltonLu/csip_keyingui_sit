@@ -24,13 +24,17 @@
             var value;
             var value1;
             
-            //*檢核輸入欄位【收件編號】是否為空             if(document.getElementById('txtReceiveNumber').value.Trim() == "")
+            //*檢核輸入欄位【收件編號】是否為空 
+            if(document.getElementById('txtReceiveNumber').value.Trim() == "")
             {
                 document.getElementById('txtReceiveNumber').focus();
                 alert('請輸入收件編號');
 
                 return false;
-            }                        //*檢核輸入欄位【收件編號】前兩碼需為 RK            if (document.getElementById("txtReceiveNumber").value.Trim().substring(0,2).toUpperCase() != "AK")
+            }
+            
+            //*檢核輸入欄位【收件編號】前兩碼需為 RK
+            if (document.getElementById("txtReceiveNumber").value.Trim().substring(0,2).toUpperCase() != "AK")
             {
                 alert("收件編號格式不對！");
                 document.getElementById('txtReceiveNumber').focus();
