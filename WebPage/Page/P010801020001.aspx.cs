@@ -532,12 +532,49 @@ public partial class Page_P010801020001 : PageBase
         //}
         //else
         //{
-            //if (sessionOBJ.CaseProcess_User == "C1" && userRolls.Contains("CSIP0121") && (lblSR_RiskLevel.Text == "高風險" || (sessionOBJ.CaseProcess_Status.Trim().Equals("3") && sessionOBJ.OriginalRiskRanking.Trim().Equals("H"))))
-            if (sessionOBJ.CaseProcess_User == "C1" && userRolls.Contains("CSIP0121") && lblSR_RiskLevel.Text == "高風險")
+        //if (sessionOBJ.CaseProcess_User == "C1" && userRolls.Contains("CSIP0121") && (lblSR_RiskLevel.Text == "高風險" || (sessionOBJ.CaseProcess_Status.Trim().Equals("3") && sessionOBJ.OriginalRiskRanking.Trim().Equals("H"))))
+
+        // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0121 需往上呈報 By Kelton Start
+        //if (sessionOBJ.CaseProcess_User == "C1" && userRolls.Contains("CSIP0121") && lblSR_RiskLevel.Text == "高風險")
+        //{
+        //    btnApply.Visible = true;
+        //    btnFinish.Visible = false;
+        //}
+
+        if (sessionOBJ.CaseProcess_Status.Trim().Equals("3") || sessionOBJ.CaseProcess_Status.Trim().Equals("4") || sessionOBJ.CaseProcess_Status.Trim().Equals("5"))
+        {
+            if (sessionOBJ.CaseProcess_User == "C1" && (lblSR_RiskLevel.Text == "高風險" || sessionOBJ.NewRiskRanking == "H"))
             {
-                btnApply.Visible = true;
-                btnFinish.Visible = false;
+                // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0121 需向上呈報 By Kelton
+                if (userRolls.Contains("CSIP0121"))
+                {
+                    btnApply.Visible = true;
+                    btnFinish.Visible = false;
+                }
+                // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
+                if (userRolls.Contains("CSIP0122"))
+                {
+                    btnFinish.Enabled = false;
+                }
             }
+        }
+        else
+        {
+            if (sessionOBJ.CaseProcess_User == "C1" && lblSR_RiskLevel.Text == "高風險")
+            {
+                if (userRolls.Contains("CSIP0121"))
+                {
+                    btnApply.Visible = true;
+                    btnFinish.Visible = false;
+                }
+                // 20220607 調整一階主管放行判斷條件，SCDD試算風險等為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
+                if (userRolls.Contains("CSIP0122"))
+                {
+                    btnFinish.Enabled = false;
+                }
+            }
+        }
+        // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0121 需往上呈報 By Kelton End
         //}
         //20220324_Ares_Jack_異常結案不分結案類別, 高風險審核層級應至二階主管審核放行_End
 
