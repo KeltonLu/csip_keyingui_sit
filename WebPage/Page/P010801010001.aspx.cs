@@ -642,6 +642,11 @@ public partial class Page_P010801010001 : PageBase
             cmpRname1.Style["display"] = "";
             cmpLname1.Style["display"] = "";
         }
+
+        // 20220613 調整若 CaseProcess_User 已為 C1 或 C2 時，不顯示 申請送審 按鈕 By Kelton
+        string caseProcessUsers = "C1,C2";
+        if (caseProcessUsers.Contains(hqObj.CaseProcess_User))
+            btnApply.Visible = false;
     }
 
     int grvCardDataSubRowCount = 0;

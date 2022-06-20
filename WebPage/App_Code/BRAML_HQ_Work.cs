@@ -373,6 +373,22 @@ Create_Date,Create_Time,Create_User,HCOP_BENE_LNAME,HCOP_BENE_ROMA
         //left join AML_Cdata_Work C on C.CustomerID = b.CustomerID
         //where B.[HomeBranch] ='0049'  ";
         //20211221 AML NOVA 功能需求程式碼,註解保留 end by Ares Dennis
+
+        // 20220613 新增呈核狀態查詢條件，並顯示在列表資料中 By Kelton start
+        //string sSQL = @"    select 
+        //A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,A.HCOP_REG_NAME,b.OriginalRiskRanking
+        //,b.DataDate, 
+        // case when A.CaseExpiryDate <> '' then A.CaseExpiryDate else
+        // dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
+        //,A.ReviewCompletedDate,A.SendLetter_NotCooperating
+        //,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+        //(Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
+        //,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo,C.Incorporated
+        //from AML_HQ_Work A join AML_Edata_Work B
+        //on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
+        //left join AML_Cdata_Work C on C.CustomerID = b.CustomerID
+        //where B.[HomeBranch] ='0049'  ";
+
         string sSQL = @"    select 
         A.CASE_NO,A.HCOP_HEADQUATERS_CORP_NO,A.HCOP_REG_NAME,b.OriginalRiskRanking
         ,b.DataDate, 
@@ -380,12 +396,16 @@ Create_Date,Create_Time,Create_User,HCOP_BENE_LNAME,HCOP_BENE_ROMA
          dateadd(D, -1, (DATEADD(M, 5, convert(datetime, substring(B.DataDate, 1, 6) + '01')))) end as CaseExpiryDate
         ,A.ReviewCompletedDate,A.SendLetter_NotCooperating
         ,A.CaseOwner_User,A.CaseProcess_Status,A.CaseProcess_User,
+        (case when A.CaseProcess_User = 'C1' THEN '一階主管'
+            when A.CaseProcess_User = 'C2' THEN '二階主管'
+            else ' ' end) as 'Status',
         (Case When ISNULL(C.Incorporated,'')='Y ' THEN C.IncorporatedDate ELSE '' END ) as 'IncorporatedDate',A.AddressLabelFlagTime,A.AddressLabelTwoMonthFlagTime
         ,b.RMMBatchNo + ';' + b.AMLInternalID + ';' + A.CaseProcess_User + ';' + A.CASE_NO + ';' + A.HCOP_HEADQUATERS_CORP_NO as ArgNo,C.Incorporated
         from AML_HQ_Work A join AML_Edata_Work B
         on b.RMMBatchNo = a.HCOP_BATCH_NO and b.AMLInternalID = A.HCOP_INTER_ID and A.CASE_NO = b.CASE_NO
         left join AML_Cdata_Work C on C.CustomerID = b.CustomerID
         where B.[HomeBranch] ='0049'  ";
+        // 20220613 新增呈核狀態查詢條件，並顯示在列表資料中 By Kelton end
 
         SqlCommand sqlcmd = new SqlCommand();
         sqlcmd.CommandType = CommandType.Text;
@@ -486,6 +506,13 @@ Create_Date,Create_Time,Create_User,HCOP_BENE_LNAME,HCOP_BENE_ROMA
                 sqlcmd.Parameters.Add(new SqlParameter("@CaseProcess_User2", tmp[1]));
                 sqlcmd.Parameters.Add(new SqlParameter("@CaseProcess_User3", tmp[2]));
             }
+        }
+
+        // 20220613 勾選全部時，要判斷是否有選擇呈核狀態 By Kelton
+        if (parmObj.CaseType == "ALL" && !string.IsNullOrEmpty(parmObj.Status))
+        {
+            sSQL += " and  A.CaseProcess_User = @CaseProcess_User ";
+            sqlcmd.Parameters.Add(new SqlParameter("@CaseProcess_User", parmObj.Status));
         }
 
         //20191101 修改：增加不合作註記查詢條件 add by Peggy

@@ -221,6 +221,24 @@
 
                                         </div>
                                     </td>
+                                    <td width="4%"><%--排序欄位--%>
+                                        <cc1:CustLabel ID="CustLabel8" runat="server" CurAlign="left" CurSymbol="£" FractionalDigit="2"
+                                            IsColon="True" IsCurrency="False" NeedDateFormat="False" NumBreak="0" NumOmit="0"
+                                            SetBreak="False" SetOmit="False" ShowID="01_01080100_011" StickHeight="False"></cc1:CustLabel>
+                                    </td>
+                                    <td width="4%">
+                                        <div style="position: relative">
+                                            <cc1:CustTextBox ID="txtStatus" runat="server" MaxLength="3" Width="90px" onfocus="allselect(this);"
+                                                 BoxName="呈核狀態"
+                                                Style="left: 0px; top: 0px; position: relative; width: 90px; height: 11px; line-height:11px;"></cc1:CustTextBox>
+                                            <cc1:CustDropDownList ID="dropStatus" kind="select" runat="server" onclick="simOptionClick4IE('txtStatus');"
+                                                Style="left: 0px; top: 0px; clip: rect(0px auto auto 80px); position: absolute; width: 100px;">
+                                                <asp:ListItem Value="">請選擇</asp:ListItem>
+                                                 <asp:ListItem Value="C1">一階主管</asp:ListItem>
+                                                 <asp:ListItem Value="C2">二階主管</asp:ListItem>
+                                            </cc1:CustDropDownList>
+                                        </div>
+                                    </td>
                                     <%--20191025-RQ-2018-015749-002 modify by Peggy--%>
                                     <%--<td colspan="6">--%>
                                     <td colspan="4">
@@ -269,6 +287,7 @@
                                         <asp:BoundField DataField="" HeaderText="派案日期" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
                                         <asp:BoundField DataField="CaseExpiryDate" HeaderText="到期日" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
                                         <asp:BoundField DataField="ReviewCompletedDate" HeaderText="審查完成日" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
+                                        <asp:BoundField DataField="Status" HeaderText="呈核狀態" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
                                         <asp:BoundField DataField="AddressLabelTwoMonthFlagTime" HeaderText="寄送不合作信函日期" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
                                         <%--<asp:BoundField DataField="IncorporatedDate" HeaderText="下不合作日期" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />--%>
                                         <asp:BoundField DataField="IncorporatedDate" HeaderText="不合作/拒絕提供資訊日期" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />

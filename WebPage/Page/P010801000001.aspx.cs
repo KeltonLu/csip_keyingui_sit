@@ -191,8 +191,23 @@ public partial class Page_P010801000001 : PageBase
             }
         }
         #endregion
-        //取得當前的角色
-        QueryObj.UserRoll = GetqueryRole();  
+
+        // 20220613 新增呈核狀態查詢條件 By Kelton
+        #region 呈核狀態
+        if (dropStatus.SelectedIndex != -1)
+        {
+            QueryObj.Status = dropStatus.SelectedValue;
+        }
+        #endregion
+
+        // 20220613 調整勾選全部時，抓取的資料條件不擋使用者權限 by Kelton start
+        ////取得當前的角色
+        //QueryObj.UserRoll = GetqueryRole();
+
+        if (radBasicALL.Checked != true)
+            //取得當前的角色
+            QueryObj.UserRoll = GetqueryRole();
+        // 20220613 調整勾選全部時，抓取的資料條件不擋使用者權限 by Kelton end
     }
 
     protected void btnAdd_Click(object sender, EventArgs e)
@@ -243,6 +258,8 @@ public partial class Page_P010801000001 : PageBase
         txtAsc.Text = "請選擇";
         //20191025-RQ-2018-015749-002 by Peggy
         txtIncorporated.Text = "請選擇";
+        // 20220613 新增呈核狀態查詢條件 by Kelton
+        txtStatus.Text = "請選擇";
 
         #region "案件類型"
         switch (QueryObj.CaseType)
@@ -358,9 +375,25 @@ public partial class Page_P010801000001 : PageBase
                 }
             } 
         }
-     
+
         #endregion
-        
+
+        // 20220613 新增呈核狀態查詢條件 By Kelton
+        #region 呈核狀態
+        if (!string.IsNullOrEmpty(QueryObj.Status))
+        {
+            foreach (ListItem litem in dropStatus.Items)
+            {
+                if (litem.Value == QueryObj.Status)
+                {
+                    litem.Selected = true;
+                    txtStatus.Text = litem.Text;
+                    break;
+                }
+            }
+        }
+        #endregion
+
     }
     /// <summary>
     /// 腳色權限驗證
@@ -459,9 +492,14 @@ public partial class Page_P010801000001 : PageBase
             cntReject.InnerText = "(" + r4.ToString() + ")";
             vcnt += r4;
         }
-       
-            cntALL.InnerText = "(" + vcnt.ToString() + ")";
-       
+
+        // 20220613 調整全部案件數量條件，不擋使用者權限 By Kelton start
+            //cntALL.InnerText = "(" + vcnt.ToString() + ")";
+
+        int r5 = BRAML_HQ_Work.getProjectCount("ALL", "M1,C1,C2", "");
+        cntALL.InnerText = "(" + r5.ToString() + ")";
+        // 20220613 調整全部案件數量條件，不擋使用者權限 By Kelton end
+
         return isMaster;
     }
     private string GetqueryRole()
@@ -577,6 +615,10 @@ public partial class Page_P010801000001 : PageBase
         //20191025-RQ-2018-015749-002 modify by Peggy
         //不合作註記
         txtIncorporated.Text = "請選擇";
+
+        // 20220613 新增呈核狀態查詢條件 by Kelton
+        // 呈核狀態
+        txtStatus.Text = "請選擇";
     }
     /// <summary>
     /// 設定經辦
@@ -732,7 +774,9 @@ public partial class Page_P010801000001 : PageBase
             e.Row.Cells[7].Text = Convert.ToDateTime(e.Row.Cells[7].Text).ToString("yyyyMMdd");
             if (!string.IsNullOrEmpty(AddressLabelTwoMonthFlagTime) && AddressLabelTwoMonthFlagTime.Length > 8 )
             {
-                e.Row.Cells[9].Text = Convert.ToDateTime(AddressLabelTwoMonthFlagTime).ToString("yyyyMMdd");
+                // 20220613 新增顯示呈核狀態欄，調整其他影響的欄位 By Kelton
+                //e.Row.Cells[9].Text = Convert.ToDateTime(AddressLabelTwoMonthFlagTime).ToString("yyyyMMdd");
+                e.Row.Cells[10].Text = Convert.ToDateTime(AddressLabelTwoMonthFlagTime).ToString("yyyyMMdd");
             }
             //END依建案日期計算到期日
             e.Row.Cells[4].Text = GetDcValue(DCRiskRank, rowView["OriginalRiskRanking"].ToString());
@@ -745,7 +789,9 @@ public partial class Page_P010801000001 : PageBase
                 //if (litem.Value == eName)
                 if (litem.Value.Trim().ToUpper() ==eName.Trim().ToUpper())
                 {
-                    e.Row.Cells[11].Text = litem.Text;
+                    // 20220613 新增顯示呈核狀態欄，調整其他影響的欄位 By Kelton
+                    //e.Row.Cells[11].Text = litem.Text;
+                    e.Row.Cells[12].Text = litem.Text;
                     break;
                 }
             }

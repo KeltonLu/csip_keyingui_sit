@@ -494,36 +494,93 @@ public partial class Page_P010801160001 : PageBase
 
         if (sessionOBJ.CaseProcess_Status.Trim().Equals("3") || sessionOBJ.CaseProcess_Status.Trim().Equals("4") || sessionOBJ.CaseProcess_Status.Trim().Equals("5"))
         {
-            if (sessionOBJ.CaseProcess_User == "C1" && (lblSR_RiskLevel.Text == "高風險" || sessionOBJ.NewRiskRanking == "H"))
+            // 20220613 調整若案件狀態已為二階主管放行時，一階主管看此案件時顯示放行按鈕但不可點擊 by Kelton start
+            //if (sessionOBJ.CaseProcess_User == "C1" && (lblSR_RiskLevel.Text == "高風險" || sessionOBJ.NewRiskRanking == "H"))
+            //{
+            //    // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0121 需向上呈報 By Kelton
+            //    if (userRolls.Contains("CSIP0121"))
+            //    {
+            //        btnApply.Visible = true;
+            //        btnFinish.Visible = false;
+            //    }
+            //    // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
+            //    if (userRolls.Contains("CSIP0122"))
+            //    {
+            //        btnFinish.Enabled = false;
+            //    }
+            //}
+
+            if (lblSR_RiskLevel.Text == "高風險" || sessionOBJ.NewRiskRanking == "H")
             {
-                // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0121 需向上呈報 By Kelton
-                if (userRolls.Contains("CSIP0121"))
+                if (sessionOBJ.CaseProcess_User == "C1")
                 {
-                    btnApply.Visible = true;
-                    btnFinish.Visible = false;
+                    // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0121 需向上呈報 By Kelton
+                    if (userRolls.Contains("CSIP0121"))
+                    {
+                        btnApply.Visible = true;
+                        btnFinish.Visible = false;
+                    }
+                    // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
+                    if (userRolls.Contains("CSIP0122"))
+                    {
+                        btnFinish.Enabled = false;
+                    }
                 }
-                // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
-                if (userRolls.Contains("CSIP0122"))
+
+                if (sessionOBJ.CaseProcess_User == "C2")
                 {
-                    btnFinish.Enabled = false;
+                    if (userRolls.Contains("CSIP0121"))
+                    {
+                        btnApply.Visible = false;
+                        btnFinish.Enabled = false;
+                    }
                 }
+                // 20220613 調整若案件狀態已為二階主管放行時，一階主管看此案件時顯示放行按鈕但不可點擊 by Kelton end
             }
         }
         else
         {
-            if (sessionOBJ.CaseProcess_User == "C1" && lblSR_RiskLevel.Text == "高風險")
+            // 20220613 調整若案件狀態已為二階主管放行時，一階主管看此案件時顯示放行按鈕但不可點擊 by Kelton start
+            //if (sessionOBJ.CaseProcess_User == "C1" && lblSR_RiskLevel.Text == "高風險")
+            //{
+            //    if (userRolls.Contains("CSIP0121"))
+            //    {
+            //        btnApply.Visible = true;
+            //        btnFinish.Visible = false;
+            //    }
+            //    // 20220607 調整一階主管放行判斷條件，SCDD試算風險等為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
+            //    if (userRolls.Contains("CSIP0122"))
+            //    {
+            //        btnFinish.Enabled = false;
+            //    }
+            //}
+
+            if (lblSR_RiskLevel.Text == "高風險")
             {
-                if (userRolls.Contains("CSIP0121"))
+                if (sessionOBJ.CaseProcess_User == "C1")
                 {
-                    btnApply.Visible = true;
-                    btnFinish.Visible = false;
+                    if (userRolls.Contains("CSIP0121"))
+                    {
+                        btnApply.Visible = true;
+                        btnFinish.Visible = false;
+                    }
+                    // 20220607 調整一階主管放行判斷條件，SCDD試算風險等為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
+                    if (userRolls.Contains("CSIP0122"))
+                    {
+                        btnFinish.Enabled = false;
+                    }
                 }
-                // 20220607 調整一階主管放行判斷條件，SCDD試算風險等為 高風險 時，若角色為 CSIP0122 時不可放行  By Kelton
-                if (userRolls.Contains("CSIP0122"))
+
+                if (sessionOBJ.CaseProcess_User == "C2")
                 {
-                    btnFinish.Enabled = false;
+                    if (userRolls.Contains("CSIP0121"))
+                    {
+                        btnApply.Visible = false;
+                        btnFinish.Enabled = false;
+                    }
                 }
             }
+            // 20220613 調整若案件狀態已為二階主管放行時，一階主管看此案件時顯示放行按鈕但不可點擊 by Kelton end
         }
         // 20220607 調整一階異常結案判斷條件，SCDD 或 最新試算風險等級其中一個為 高風險 時，若角色為 CSIP0121 需往上呈報 By Kelton End
         //}

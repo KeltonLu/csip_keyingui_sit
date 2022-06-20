@@ -155,6 +155,17 @@ public class AML_HQQuery
         get { return _CloseDateE; }
         set { _CloseDateE = value; }
     }
+
+    // 20220613 新增呈核狀態查詢絛件 By Kelton
+    /// <summary>
+    /// 呈核狀態
+    /// </summary>
+    private string _Status;
+    public string Status
+    {
+        get { return _Status; }
+        set { _Status = value; }
+    }
 }
 #endregion
 
