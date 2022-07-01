@@ -119,7 +119,18 @@ public partial class P010801100001 : PageBase
                 //objEntity_NoteLog.NL_User = "Test";
                 objEntity_NoteLog.NL_User = eAgentInfo.agent_id;
                 objEntity_NoteLog.NL_Type = "Note";
-                objEntity_NoteLog.NL_Value = txtNoteLog_NL_Value.Text;
+                // 20220620 調整將文字內容的 \r\n 換行符號替換成頁面顯示換行用的 <br /> By Kelton
+                //objEntity_NoteLog.NL_Value = txtNoteLog_NL_Value.Text;
+                string noteLog = txtNoteLog_NL_Value.Text;
+                if (noteLog.Contains("\r\n"))
+                {
+                    noteLog = noteLog.Replace("\r\n", "<br />").Trim();
+                }
+                if (noteLog.Contains("\n"))
+                {
+                    noteLog = noteLog.Replace("\n", "<br />").Trim();
+                }
+                objEntity_NoteLog.NL_Value = noteLog;
                 objEntity_NoteLog.NL_ShowFlag = "1";
                 blSubmitStatus = NoteLog.AddNewEntity(objEntity_NoteLog);
             }

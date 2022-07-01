@@ -275,7 +275,18 @@ public partial class Page_P010801010002 : PageBase
             notrLog.NL_DateTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
             notrLog.NL_User = eAgentInfo.agent_id;
             notrLog.NL_Type = _NLType.Trim();
-            notrLog.NL_Value = txtNoteLog_NL_Value.Text.Trim();
+            // 20220620 調整將文字內容的 \r\n 換行符號替換成頁面顯示換行用的 <br /> By Kelton
+            //notrLog.NL_Value = txtNoteLog_NL_Value.Text.Trim();
+            string noteLog = txtNoteLog_NL_Value.Text;
+            if (noteLog.Contains("\r\n"))
+            {
+                noteLog = noteLog.Replace("\r\n", "<br />").Trim();
+            }
+            if (noteLog.Contains("\n"))
+            {
+                noteLog = noteLog.Replace("\n", "<br />").Trim();
+            }
+            notrLog.NL_Value = noteLog;
             result = BRNoteLog.Insert(notrLog);
             //調整為提示訊息
             if (!result)

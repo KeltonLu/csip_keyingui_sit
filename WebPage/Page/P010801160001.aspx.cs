@@ -220,7 +220,18 @@ public partial class Page_P010801160001 : PageBase
             //20191111-RQ-2018-015749-002 modify by Peggy
             //notrLog.NL_Type = "ReturnCase";
             notrLog.NL_Type = _NL_Type.Trim();
-            notrLog.NL_Value = txtNotelogValue.Text;
+            // 20220620 調整將文字內容的 \r\n 換行符號替換成頁面顯示換行用的 <br /> By Kelton
+            //notrLog.NL_Value = txtNotelogValue.Text;
+            string noteLog = txtNotelogValue.Text;
+            if (noteLog.Contains("\r\n"))
+            {
+                noteLog = noteLog.Replace("\r\n", "<br />").Trim();
+            }
+            if (noteLog.Contains("\n"))
+            {
+                noteLog = noteLog.Replace("\n", "<br />").Trim();
+            }
+            notrLog.NL_Value = noteLog;
             result = BRNoteLog.Insert(notrLog);
             //調整為提示訊息
             if (!result)
@@ -315,7 +326,18 @@ public partial class Page_P010801160001 : PageBase
             //20191112-RQ-2018-015749-002 modify by Peggy
             //notrLog.NL_Type = "CaseOK";
             notrLog.NL_Type = _NL_Type.Trim();
-            notrLog.NL_Value = txtNotelogValue.Text;
+            // 20220620 調整將文字內容的 \r\n 換行符號替換成頁面顯示換行用的 <br /> By Kelton
+            //notrLog.NL_Value = txtNotelogValue.Text;
+            string noteLog = txtNotelogValue.Text;
+            if (noteLog.Contains("\r\n"))
+            {
+                noteLog = noteLog.Replace("\r\n", "<br />").Trim();
+            }
+            if (noteLog.Contains("\n"))
+            {
+                noteLog = noteLog.Replace("\n", "<br />").Trim();
+            }
+            notrLog.NL_Value = noteLog;
             result = BRNoteLog.Insert(notrLog);
             //調整為提示訊息
             if (!result)
@@ -420,7 +442,18 @@ public partial class Page_P010801160001 : PageBase
         notrLog.NL_DateTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         notrLog.NL_User = eAgentInfo.agent_id;
         notrLog.NL_Type = "Verify";
-        notrLog.NL_Value = txtNotelogValue.Text;
+        // 20220620 調整將文字內容的 \r\n 換行符號替換成頁面顯示換行用的 <br /> By Kelton
+        //notrLog.NL_Value = txtNotelogValue.Text;
+        string noteLog = txtNotelogValue.Text;
+        if (noteLog.Contains("\r\n"))
+        {
+            noteLog = noteLog.Replace("\r\n", "<br />").Trim();
+        }
+        if (noteLog.Contains("\n"))
+        {
+            noteLog = noteLog.Replace("\n", "<br />").Trim();
+        }
+        notrLog.NL_Value = noteLog;
         result = BRNoteLog.Insert(notrLog);
         //調整為提示訊息
         if (!result)

@@ -993,7 +993,11 @@
                                         <asp:BoundField DataField="" HeaderText="時間" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
                                         <asp:BoundField DataField="NL_User" HeaderText="維護經辦" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
                                         <asp:BoundField DataField="NL_Type" HeaderText="作業類別" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField DataField="NL_Value" HeaderText="內容" HeaderStyle-HorizontalAlign="Center">
+                                        <%-- 20220620 調整歷程註記可以顯示換行 By Kelton --%>
+<%--                                        <asp:BoundField DataField="NL_Value" HeaderText="內容" HeaderStyle-HorizontalAlign="Center">
+                                            <ItemStyle Width="320px" />
+                                        </asp:BoundField>--%>
+                                        <asp:BoundField DataField="NL_Value" HeaderText="內容" HeaderStyle-HorizontalAlign="Center" HtmlEncode="false">
                                             <ItemStyle Width="320px" />
                                         </asp:BoundField>
                                     </Columns>

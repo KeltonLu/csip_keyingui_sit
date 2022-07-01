@@ -1052,7 +1052,12 @@
                                                   <HeaderStyle HorizontalAlign="Center" />
                                                   <ItemStyle HorizontalAlign="Center" />
                                                   </asp:BoundField>
-                                                <asp:BoundField DataField="NL_Value" HeaderText="內容" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" >
+                                                <%-- 20220620 調整歷程註記可以顯示換行 By Kelton --%>
+<%--                                                <asp:BoundField DataField="NL_Value" HeaderText="內容" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" >
+                                                  <HeaderStyle HorizontalAlign="Center" />
+                                                  <ItemStyle HorizontalAlign="Center" />
+                                                  </asp:BoundField>--%>
+                                                <asp:BoundField DataField="NL_Value" HeaderText="內容" HeaderStyle-HorizontalAlign="Center" HtmlEncode="false">
                                                   <HeaderStyle HorizontalAlign="Center" />
                                                   <ItemStyle HorizontalAlign="Center" />
                                                   </asp:BoundField>

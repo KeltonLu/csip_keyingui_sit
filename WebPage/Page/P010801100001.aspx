@@ -89,7 +89,9 @@
                                 <cc1:CustLabel ID="clbNoteLog_NL_Value" runat="server" CurAlign="right" ShowID="01_08011000_006" ></cc1:CustLabel>
                         </td>
                         <td align="left" style="width: 80%">
-                            <asp:TextBox ID="txtNoteLog_NL_Value" runat="server" MaxLength="500" Height="180px" Width="660px"></asp:TextBox>
+                            <%-- 20220620 調整聯絡內容可以換行 By Kelton --%>
+                            <%--<asp:TextBox ID="txtNoteLog_NL_Value" runat="server" MaxLength="500" Height="180px" Width="660px"></asp:TextBox>--%>
+                            <asp:TextBox ID="txtNoteLog_NL_Value" runat="server" MaxLength="500" Height="180px" Width="660px" TextMode="MultiLine"></asp:TextBox>
                         </td>
                     </tr>
                 </table>
