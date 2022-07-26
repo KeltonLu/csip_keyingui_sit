@@ -72,26 +72,37 @@ public class Com_AutoJob
 
         try
         {
-            string sql = "SELECT PROPERTY_NAME FROM dbo.M_PROPERTY_CODE WITH(NOLOCK) WHERE FUNCTION_KEY = @functionKey AND PROPERTY_KEY = @propertyKey";
+            // 20220726 調整執行批次後發送 Mail 的資料來源，改為抓取 M_AUTOJOB 資料表 By Kelton
+            //string sql = "SELECT PROPERTY_NAME FROM dbo.M_PROPERTY_CODE WITH(NOLOCK) WHERE FUNCTION_KEY = @functionKey AND PROPERTY_KEY = @propertyKey";
 
-            SqlCommand sqlcmd = new SqlCommand();
-            sqlcmd.CommandType = CommandType.Text;
-            sqlcmd.CommandText = sql;
-            sqlcmd.Parameters.Add(new SqlParameter("@functionKey", functionKey));
-            sqlcmd.Parameters.Add(new SqlParameter("@propertyKey", propertyKey));
+            //SqlCommand sqlcmd = new SqlCommand();
+            //sqlcmd.CommandType = CommandType.Text;
+            //sqlcmd.CommandText = sql;
+            //sqlcmd.Parameters.Add(new SqlParameter("@functionKey", functionKey));
+            //sqlcmd.Parameters.Add(new SqlParameter("@propertyKey", propertyKey));
 
-            DataSet ds = BRFORM_COLUMN.SearchOnDataSet(sqlcmd, "Connection_CSIP");
-            if (ds != null)
+            //DataSet ds = BRFORM_COLUMN.SearchOnDataSet(sqlcmd, "Connection_CSIP");
+            //if (ds != null)
+            //{
+            //    string tmpMail = "";
+            //    DataTable dtAutoJob = ds.Tables[0];
+            //    if (dtAutoJob != null && dtAutoJob.Rows.Count > 0)
+            //    {
+            //        for (int i = 0; i < dtAutoJob.Rows.Count; i++)
+            //        {
+            //            tmpMail = dtAutoJob.Rows[i]["PROPERTY_NAME"].ToString().Split(':')[1];
+            //            emailMember += tmpMail + ";";
+            //        }
+            //    }
+            //}
+            string strMsgID = "";
+            DataTable dtblAutoJob = BRM_AUTOJOB.GetJobData(functionKey, ref strMsgID);
+            if (dtblAutoJob != null && dtblAutoJob.Rows.Count > 0)
             {
-                string tmpMail = "";
-                DataTable dtAutoJob = ds.Tables[0];
-                if (dtAutoJob != null && dtAutoJob.Rows.Count > 0)
+                DataRow[] info = dtblAutoJob.Select("JOB_ID='" + propertyKey + "'");
+                if (info.Length == 1)
                 {
-                    for (int i = 0; i < dtAutoJob.Rows.Count; i++)
-                    {
-                        tmpMail = dtAutoJob.Rows[i]["PROPERTY_NAME"].ToString().Split(':')[1];
-                        emailMember += tmpMail + ";";
-                    }
+                   emailMember += info[0]["MAIL_TO"].ToString() + ";";
                 }
             }
         }

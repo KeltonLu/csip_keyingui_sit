@@ -520,10 +520,21 @@ SELECT
 
         try
         {
-            DataSet resultSet = BRAML_File_Import.SearchOnDataSet(sqlcmd);
-            if (resultSet != null)
+            // 20220711 調整將執行的 SQL 包在 Transaction 裡 By Kelton
+            //DataSet resultSet = BRAML_File_Import.SearchOnDataSet(sqlcmd);
+            //if (resultSet != null)
+            //{
+            //    result = true;
+            //}
+            using (OMTransactionScope ts = new OMTransactionScope())
             {
-                result = true;
+                DataSet resultSet = BRAML_File_Import.SearchOnDataSet(sqlcmd);
+                if (resultSet != null)
+                {
+                    result = true;
+                }
+
+                ts.Complete();
             }
         }
         catch (Exception ex)

@@ -161,6 +161,13 @@ public partial class Page_P010801160001 : PageBase
             sbRegScript.Append("alert('" + strAlertMsg + "');window.location.href = 'P010801000001.aspx';");
             return;
         }
+        // 20220711 增加檢核聯絡內容長度 By Kelton
+        if (txtNotelogValue.Text.Length > 500)
+        {
+            sbRegScript.Append("alert('聯絡內容長度過長');");
+            return;
+        }
+
         //sessionOBJ.CaseOwner_User = eAgentInfo.agent_id;  
         sessionOBJ.CaseProcess_User = "M1"; //經辦
         //20191111-RQ-2018-015749-002 modify by Peggy
@@ -264,6 +271,12 @@ public partial class Page_P010801160001 : PageBase
         {
             string strAlertMsg = MessageHelper.GetMessages("01_01080101_002");
             sbRegScript.Append("alert('" + strAlertMsg + "');window.location.href = 'P010801000001.aspx';");
+            return;
+        }
+        // 20220711 增加檢核聯絡內容長度 By Kelton
+        if (txtNotelogValue.Text.Length > 500)
+        {
+            sbRegScript.Append("alert('聯絡內容長度過長');");
             return;
         }
 
@@ -401,6 +414,13 @@ public partial class Page_P010801160001 : PageBase
             sbRegScript.Append("alert('" + strAlertMsg + "');window.location.href = 'P010801000001.aspx';");
             return;
         }
+        // 20220711 增加檢核聯絡內容長度 By Kelton
+        if (txtNotelogValue.Text.Length > 500)
+        {
+            sbRegScript.Append("alert('聯絡內容長度過長');");
+            return;
+        }
+
         //呈上階主管時，調整為僅改CaseProcess_User與CaseProcess_Status，不異動CaseOwner_User
         sessionOBJ.CaseOwner_User = eAgentInfo.agent_id;
         sessionOBJ.CaseProcess_User = "C2"; //二級主管

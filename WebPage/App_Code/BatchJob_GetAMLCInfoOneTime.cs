@@ -274,12 +274,14 @@ public class BatchJob_GetAMLCInfoOneTime : Quartz.IJob
             
             if (isInsertOK)
             {
-                using (OMTransactionScope ts = new OMTransactionScope())
-                {
-                    //刪除重複資料
-                    isInsertOK = BRAML_File_Import.Recoverycdataimport() && isInsertOK;
-                    ts.Complete();
-                }                    
+                // 20220711 調整將執行的 SQL 包在 Transaction 裡 By Kelton
+                //using (OMTransactionScope ts = new OMTransactionScope())
+                //{
+                //    //刪除重複資料
+                //    isInsertOK = BRAML_File_Import.Recoverycdataimport() && isInsertOK;
+                //    ts.Complete();
+                //}                   
+                isInsertOK = BRAML_File_Import.Recoverycdataimport() && isInsertOK;
             }
             
             // 還原資料

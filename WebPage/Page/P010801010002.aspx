@@ -23,6 +23,10 @@
                 alert('聯絡內容不可空白');
                 return false;
             }
+            else if ((document.getElementById('txtNoteLog_NL_Value').value.length > 500)) {
+                alert('內容長度過長');
+                return false;
+            }
             else {
                 return true;
             }
