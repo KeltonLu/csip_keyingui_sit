@@ -6,6 +6,8 @@
 //*<author>            <time>            <TaskID>                <desc>
 //*******************************************************************
 //20160526 (U) by Tank, 卡號key滿自動跳下一欄，原被註解，解開使用
+//20220505 (U) 調整輸入信用卡號欄位，由4欄合併為1欄 By Kelton
+
 using System;
 using System.Data;
 using System.Configuration;
@@ -235,7 +237,7 @@ public partial class Page_P010106020001 : PageBase
                 //this.txtCard_No2.Attributes.Add("onkeyup", "CardNo(2)");
                 //this.txtCard_No3.Attributes.Add("onkeyup", "CardNo(3)");
                 //this.txtCard_No4.Attributes.Add("onkeyup", "CardNo(4)");
-                this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(4)");
+                this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(1)");
                 this.txtAuth_Code.Attributes.Add("onkeyup", "CardNo(5)");
                 this.txtAMT.Attributes.Add("onkeyup", "CardNo(6)");
                 //20160526 (U) by Tank, add txtP1 event
@@ -247,7 +249,7 @@ public partial class Page_P010106020001 : PageBase
                 //this.txtCard_No2.Attributes.Add("onkeydown", "CardNo_Press(2)");
                 //this.txtCard_No3.Attributes.Add("onkeydown", "CardNo_Press(3)");
                 //this.txtCard_No4.Attributes.Add("onkeydown", "CardNo_Press(4)");
-                this.txtCard_No1.Attributes.Add("onkeydown", "CardNo_Press(4)");
+                this.txtCard_No1.Attributes.Add("onkeydown", "CardNo_Press(1)");
                 this.txt_dpTran_Date.Attributes.Add("onkeydown", "CardNo_Press(8)");
                 this.txtAuth_Code.Attributes.Add("onkeydown", "CardNo_Press(5)");
                 this.txtP1.Attributes.Add("onkeydown", "CardNo_Press(7)");
@@ -281,7 +283,7 @@ public partial class Page_P010106020001 : PageBase
             //this.txtCard_No2.Attributes.Add("onkeyup", "CardNo(2)");
             //this.txtCard_No3.Attributes.Add("onkeyup", "CardNo(3)");
             //this.txtCard_No4.Attributes.Add("onkeyup", "CardNo(4)");
-            this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(4)");
+            this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(1)");
             this.txtAuth_Code.Attributes.Add("onkeyup", "CardNo(5)");
             this.txtAMT.Attributes.Add("onkeyup", "CardNo(6)");
             //20160526 (U) by Tank, add txtP1 event
@@ -293,7 +295,7 @@ public partial class Page_P010106020001 : PageBase
             //this.txtCard_No2.Attributes.Add("onkeydown", "CardNo_Press(2)");
             //this.txtCard_No3.Attributes.Add("onkeydown", "CardNo_Press(3)");
             //this.txtCard_No4.Attributes.Add("onkeydown", "CardNo_Press(4)");
-            this.txtCard_No1.Attributes.Add("onkeydown", "CardNo_Press(4)");
+            this.txtCard_No1.Attributes.Add("onkeydown", "CardNo_Press(1)");
             this.txt_dpTran_Date.Attributes.Add("onkeydown", "CardNo_Press(8)");
             this.txtAuth_Code.Attributes.Add("onkeydown", "CardNo_Press(5)");
             this.txtP1.Attributes.Add("onkeydown", "CardNo_Press(7)");

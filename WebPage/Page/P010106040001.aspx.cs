@@ -7,6 +7,7 @@
 //*******************************************************************
 //20160526 (U) by Tank, 卡號key滿自動跳下一欄，原被註解，解開使用
 //20160720 (U) by Tank, 智仁:取消交易檢核日 B32代碼
+//20220505 (U) 調整輸入信用卡號欄位，由4欄合併為1欄 By Kelton
 
 using System;
 using System.Data;
@@ -232,7 +233,7 @@ public partial class Page_P010106040001 : PageBase
                 //this.txtCard_No2.Attributes.Add("onkeyup", "CardNo(2)");
                 //this.txtCard_No3.Attributes.Add("onkeyup", "CardNo(3)");
                 //this.txtCard_No4.Attributes.Add("onkeyup", "CardNo(4)");
-                this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(4)");
+                this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(1)");
                 this.txtProduct_Type.Attributes.Add("onkeyup", "CardNo(5)");
             	this.txtInstallment_Periods.Attributes.Add("onkeyup", "CardNo(7)");
             	this.txt_dpTran_Date.Attributes.Add("onkeyup", "CardNo(8)");
@@ -260,7 +261,7 @@ public partial class Page_P010106040001 : PageBase
             //this.txtCard_No2.Attributes.Add("onkeyup", "CardNo(2)");
             //this.txtCard_No3.Attributes.Add("onkeyup", "CardNo(3)");
             //this.txtCard_No4.Attributes.Add("onkeyup", "CardNo(4)");
-            this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(4)");
+            this.txtCard_No1.Attributes.Add("onkeyup", "CardNo(1)");
             this.txtProduct_Type.Attributes.Add("onkeyup", "CardNo(5)");
             this.txtAMT.Attributes.Add("onkeyup", "CardNo(6)");
             this.txtInstallment_Periods.Attributes.Add("onkeyup", "CardNo(7)");

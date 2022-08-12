@@ -81,7 +81,8 @@
             //        document.getElementById('txtCard_No4').focus();
             //    }
             //    break;
-            case 4:
+            //case 4:
+            case 1:
                 //if ($("#txtCard_No4").val().length == 4){
                 // 20220505 調整輸入信用卡號欄位，由4欄合併為1欄 By Kelton
                 //if(document.getElementById('txtCard_No4').value.length == 4){
