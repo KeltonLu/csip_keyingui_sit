@@ -13,6 +13,8 @@ using Quartz;
 using Framework.Common.Logging;
 using CSIPCommonModel.BusinessRules;
 using CSIPKeyInGUI.BusinessRules;
+using Framework.Common.Utility;
+using Framework.Common.Message;
 
 /// <summary>
 /// jobAutoBalance_Trans 的摘要描述
@@ -45,6 +47,9 @@ public class jobTransUp : IJob
         strRacfPwd = context.JobDetail.JobDataMap.GetString("racfPassWord").Trim();
         strMailList = context.JobDetail.JobDataMap.GetString("mail").Trim();
         string strMsgID = "";
+        // 20220815 調整若無資料則產生空檔並上傳至 FTP by Kelton
+        // 發件人
+        string sAddresser = UtilHelper.GetAppSettings("MailSender");
 
         JobHelper.strJobID = strJobID;
         JobHelper.SaveLog(strJobID + "JOB啟動", LogState.Info);
@@ -198,8 +203,23 @@ public class jobTransUp : IJob
             }
             else
             {
-                JobHelper.SaveLog("查無資料！", LogState.Info);
+                // 20220815 調整若無資料則產生空檔並上傳至 FTP by Kelton
+                //JobHelper.SaveLog("查無資料！", LogState.Info);
                 status = "1";
+                JobHelper.SaveLog("匯出空的O317.txt檔案,開始！", LogState.Info);
+                BRAuto_Balance_Trans.BatchOutputEmpty();
+                JobHelper.SaveLog("匯出空的O317.txt檔案,成功！", LogState.Info);
+
+                JobHelper.SaveLog("上傳空的O317.txt檔案,開始！", LogState.Info);
+                if (bbt.UploadToFTP(strJobID))
+                {
+                    JobHelper.SaveLog("上傳空的O317.txt檔案,成功！", LogState.Info);
+                }
+                else
+                {
+                    JobHelper.SaveLog("上傳空的O317.txt檔案,失敗！", LogState.Error);
+                    status = "3";
+                }
             }
 
             if (!string.IsNullOrEmpty(parameter))
@@ -232,9 +252,11 @@ public class jobTransUp : IJob
                             DateTime.Parse(ds.Tables[0].Rows[0]["Trans_Date"].ToString()).ToString("yyyyMMdd")
                             , ds.Tables[0].Rows.Count));
                     break;
-                case "1":
+                case "1":  
                     JobHelper.SaveLog("無符合資料須上傳", LogState.Info);
                     BRL_BATCH_LOG.Insert(strFuncKey, strJobID, dtStart, "S", "無符合資料須上傳");
+                    // 20220815 調整若無資料則產生空檔並上傳至 FTP by Kelton
+                    JobHelper.SendMail(strMailList, strJobID + " 批次執行", MessageHelper.GetMessage("00_00000s000_043"), "成功", dtStart);
                     break;
                 case "2":
                     JobHelper.SaveLog("產生txt檔案失敗", LogState.Error);

@@ -224,6 +224,38 @@ namespace CSIPKeyInGUI.BusinessRules
             return check;
         }
 
+        /// <summary>
+        /// 作    者：Kelton
+        /// 功能說明：產出空檔
+        /// 創建日期：2022/08/15
+        /// 修改紀錄：
+        /// </summary>
+        /// <returns>DateTime</returns>
+        public static void BatchOutputEmpty()
+        {
+            string code = "0824406C";
+            string strTXT = "";
+
+            //表頭”H”+餘額轉置日期(YYYYMMDD)+” 0824406C”( 成本中心代號設為參數)
+            strTXT += string.Format("H{0}{1}{2}", DateTime.Parse(DateTime.Now.ToString()).ToString("yyyyMMdd"), code,
+                    Environment.NewLine);
+            strTXT += "EOF";
+            //strTXT += "\r\n";
+
+            string strPah = AppDomain.CurrentDomain.BaseDirectory + "\\Page\\" +
+                            UtilHelper.GetAppSettings("ExportExcelFilePath");  // +"O317.txt";
+            BRExcel_File.CheckDirectory(ref strPah);
+            strPah += @"\O317.txt";
+
+            using (FileStream fs = File.Create(strPah, 1024))
+            {
+                StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.Default);
+                sw.WriteLine(strTXT);
+                sw.Flush();
+                sw.Close();
+            }
+        }
+
         public static void BatchReturnOutput(System.Data.DataTable dt)
         {
             string strTxt = "";
