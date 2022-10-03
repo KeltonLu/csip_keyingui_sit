@@ -132,7 +132,10 @@ public partial class Page_P000001100001 : System.Web.UI.Page
         EnableControls(EAction.Edit);
         this.hidID.Value = this.gvpbCodeInfo.Rows[intRowIndex].Cells[1].Text;
         this.txtCodeID.Text = this.gvpbCodeInfo.Rows[intRowIndex].Cells[2].Text;
-        this.txtCodeName.Text = this.gvpbCodeInfo.Rows[intRowIndex].Cells[3].Text;
+        //20220601_Ares_Jack_ &nbsp; 改為空值
+        string chName = this.gvpbCodeInfo.Rows[intRowIndex].Cells[3].Text;
+        this.txtCodeName.Text = chName.Equals("&nbsp;") ? "" : chName;
+
         string enName = this.gvpbCodeInfo.Rows[intRowIndex].Cells[4].Text;
         this.txtCodeEnName.Text = enName.Equals("&nbsp;") ? "" : enName;
         this.txtOrderBy.Text = this.gvpbCodeInfo.Rows[intRowIndex].Cells[5].Text;
@@ -297,13 +300,16 @@ public partial class Page_P000001100001 : System.Web.UI.Page
             txtCodeID.Focus();
             result = false;
         }
-
-        if (string.IsNullOrEmpty(txtCodeName.Text.Trim()))
+        if (codeType.Trim() != "21")//20220527_Ares_Jack_高風險行職業組合 不檢核中文名稱
         {
-            jsBuilder.RegScript(this.UpdatePanel1, jsBuilder.GetAlert("請輸入中文名稱"));
-            txtCodeName.Focus();
-            result = false;
+            if (string.IsNullOrEmpty(txtCodeName.Text.Trim()))
+            {
+                jsBuilder.RegScript(this.UpdatePanel1, jsBuilder.GetAlert("請輸入中文名稱"));
+                txtCodeName.Focus();
+                result = false;
+            }
         }
+        
         if (!int.TryParse(txtOrderBy.Text, out orderBy))
         {
             jsBuilder.RegScript(this.UpdatePanel1, jsBuilder.GetAlert("順序請輸入數字"));
