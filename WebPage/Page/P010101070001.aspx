@@ -419,14 +419,15 @@
                                     SetBreak="False" SetOmit="False" ShowID="01_01010700_010" StickHeight="False"></cc1:CustLabel></td>
                             <td style="width: 85%; float:left; ">
                                 <cc1:CustTextBox ID="txtBcycleCodeText" runat="server" Width="120px" style="height:11px; margin-top:2px; position:absolute;" checktype="num"
-                                    MaxLength="2" onkeypress="keypress('btnSubmit',false);" onkeydown="setfocuschoicedrop('txtBcycleCode');" Enabled="false" BoxName="帳單週期"></cc1:CustTextBox>
+                                    MaxLength="2" onkeypress="keypress('btnSubmit',false);" onkeydown="setfocuschoicedrop('txtBcycleCode');" 
+                                                 Enabled="false" BoxName="帳單週期"></cc1:CustTextBox>
                                 <div style="position: absolute; margin-left:130px;">
                                     <cc1:CustDropDownList ID="dropBcycleCode" kind="select" runat="server" Style="left: 0px; top: 2px; clip: rect(0px auto auto 130px); position: absolute; width: 150px;"
-                                        onclick="simOptionClick4IE('txtBcycleCode');">
+                                        onclick="simOptionClick4IE('txtBcycleCode');" Enabled="false">
                                     </cc1:CustDropDownList>
                                     <cc1:CustTextBox ID="txtBcycleCode" runat="server" MaxLength="2" checktype="num"
                                         onkeydown="entersubmit('btnSubmit');" Style="left: 0px; top: 2px; position: absolute; width: 125px; height: 11px;"
-                                        BoxName="帳單週期" onfocus="allselect(this);"></cc1:CustTextBox>
+                                        BoxName="帳單週期" onfocus="allselect(this);" Enabled="false"></cc1:CustTextBox>
                                 </div>
                             </td>
                         </tr>

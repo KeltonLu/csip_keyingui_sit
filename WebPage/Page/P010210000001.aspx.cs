@@ -137,7 +137,7 @@ public partial class P010210000001 : PageBase
             string strIsUpdateByTXT = this.radIsUpdateByTXT.Checked ? "Y" : (this.radIsUpdateAll.Checked ? "A" : "N");
             string strcust_id = this.txtCust_id.Text;
 
-            DataSet ds = CSIPKeyInGUI.BusinessRules_new.BRAuto_pay_status.GetDataFromtblAuto_Pay_StatusForReportWithoutPaging(strDateStart, strDateEnd, strIsCTCB, strIsUpdateByTXT, strcust_id);
+            DataSet ds = CSIPKeyInGUI.BusinessRules.BRAuto_pay_status.GetDataFromtblAuto_Pay_StatusForReportWithoutPaging(strDateStart, strDateEnd, strIsCTCB, strIsUpdateByTXT, strcust_id);
             if (!(ds != null && ds.Tables[0].Rows.Count > 0)) return;
 
             if (!BRAuto_pay_status.CreateExcelFile(ds,
@@ -196,7 +196,7 @@ public partial class P010210000001 : PageBase
             string custID = this.txtCust_id.Text;
             Logging.Log(custID, LogLayer.UI);
 
-            DataSet ds = CSIPKeyInGUI.BusinessRules_new.BRAuto_pay_status.GetDataFromtblAuto_Pay_StatusForReport(dateStart, dateEnd, isCTCB, isUpdateByTXT, custID, this.gpList.CurrentPageIndex, this.gpList.PageSize, ref intTotolCount);
+            DataSet ds = CSIPKeyInGUI.BusinessRules.BRAuto_pay_status.GetDataFromtblAuto_Pay_StatusForReport(dateStart, dateEnd, isCTCB, isUpdateByTXT, custID, this.gpList.CurrentPageIndex, this.gpList.PageSize, ref intTotolCount);
 
             if (ds == null)
             {

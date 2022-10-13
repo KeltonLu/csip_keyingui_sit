@@ -7,6 +7,7 @@
 //*<author>            <time>               <TaskID>                <desc>
 //* Ares_Luke          2020/12/04           20200031-CSIP EOS       新增Log機制與調整FunctionKey用法。
 //* Ares_Stanley       2021/11/01           20200031-CSIP EOS       理專十誡，移除異動Email、電子賬單相關。
+//* Ares_jhun          2022/09/19           RQ-2022-019375-000      EDDA需求調整：停發PCTI電文統一週期件處理(withholding.txt)
 //*******************************************************************
 using System;
 using System.Text;
@@ -31,28 +32,28 @@ class BatchJob : Quartz.IJob
     private string strSessionId;
     private string strMail;
     private string strTitle;
-    private int intOne;
-    private string strNoteNumber;
     private string strJobID;
     DateTime dateStart;
+    
     /// 作者 趙呂梁
     /// 創建日期：2009/10/16
-    /// 修改日期：2009/10/16 
+    /// 修改日期：2022/09/19
     public void Execute(Quartz.JobExecutionContext context)
     {
-        int intTotal = 0;//*記錄批次總筆數
-        int intSuccess = 0;//*記錄批次成功筆數 
-        int intNonce = 0;//*當前執行的筆數
+        int intTotal = 0;       // 記錄批次總筆數
+        int intCount1 = 0;      // 電話無異動，「不用」發JCDK電文
+        int intCount2 = 0;      // 電文查詢第二卡人檔失敗
+        int intCount3 = 0;      // 電話有異動，發JCDK電文「成功」
+        int intCount4 = 0;      // 電話有異動，發JCDK電文「失敗」
+        int intError = 0;       // 其他異常資料
+        
         string strMsgID = "";
         string strBankAccNo = "";
         string strApplyType = "";
         string strKeyInFlag = "";
         string strBankCusNoID = "";
-        string strPayWay = "";
-        string strBcycleCode = "";
-        string strMobilePhone = "";
-        //string strEmail = "";
-        //string strEbill = "";
+        string strPayWay = "";  // 扣繳方式
+        string strMobilePhone = ""; // 行動電話
         string strDeal_S_No = "";
 
         dateStart = DateTime.Now;//*批次開始執行時間
@@ -63,7 +64,6 @@ class BatchJob : Quartz.IJob
             strMail=jobDataMap.GetString("mail").Trim();
             strTitle = jobDataMap.GetString("title").Trim();
             strJobID = jobDataMap.GetString("jobid").Trim();
-            //strJobID = jobDataMap.GetString("JOBID").Trim();
 
             JobHelper.strJobID = strJobID;
             JobHelper.SaveLog(strJobID + "JOB啟動", LogState.Info);
@@ -81,378 +81,239 @@ class BatchJob : Quartz.IJob
                 return;
             }
 
-            DataSet dstInfo = null;
-
-
             //*開始批次作業
             if (!InsertNewBatch())
             {
                 return;
             }
 
-            ArrayList arrayListAch = new ArrayList();
-            arrayListAch.Clear();
-
             //*取得需要異動主機欄位的資料總筆數 
             intTotal = BROTHER_BANK_TEMP.SelectProcessTotalCount();
+            if (intTotal == 0)
+            {
+                //*批次完成記錄LOG信息
+                InsertBatchLog(0, 0, 0, 0, 0, 0, "", dateStart, strDeal_S_No);
+                JobHelper.SaveLog("總筆數:0筆。", LogState.Info);
+                return;
+            }
 
             //*得到需要異動主機欄位的資料
             DataSet dstAch = BROTHER_BANK_TEMP.SelectReceiveList();
 
-            if (intTotal > 0)
+            ArrayList arrayListAch = new ArrayList();
+            for (int i = 0; i < intTotal; i++)
             {
-                for (int i = 0; i < intTotal; i++)
-                {
-                    arrayListAch.Add(dstAch.Tables[0].Rows[i][0].ToString().Trim());
-                }
+                arrayListAch.Add(dstAch.Tables[0].Rows[i][0].ToString().Trim());
+            }
 
-                strSessionId = "";
-                foreach (string strReceiveNumber in arrayListAch)
+            strSessionId = "";
+            foreach (string strReceiveNumber in arrayListAch)
+            {
+                System.Threading.Thread.Sleep(100);
+                BROTHER_BANK_TEMP.UpdatePcmcUploadFlag(strReceiveNumber, "1");
+                
+                DataSet dstBatchInfo = BROTHER_BANK_TEMP.SelectBatchInfo(strReceiveNumber);
+                for(int j = 0; dstBatchInfo != null && j < dstBatchInfo.Tables[0].Rows.Count; j++)
                 {
-                    intOne = 0;
-                    System.Threading.Thread.Sleep(100);
-                    intNonce++;
-                    BROTHER_BANK_TEMP.UpdatePcmcUploadFlag(strReceiveNumber, "1");
-                    strNoteNumber = strReceiveNumber;
-                    DataSet dstBatchInfo = BROTHER_BANK_TEMP.SelectBatchInfo(strReceiveNumber);
+                    DataRow dataRow = dstBatchInfo.Tables[0].Rows[j];
+                    //*資料庫中的扣繳帳號
+                    strBankAccNo = dataRow[EntityOTHER_BANK_TEMP.M_Other_Bank_Code_S].ToString().Trim() + "-" + dataRow[EntityOTHER_BANK_TEMP.M_Other_Bank_Acc_No].ToString().Trim();
+                    //*資料庫中的申請類別
+                    strApplyType = dataRow[EntityOTHER_BANK_TEMP.M_Apply_Type].ToString().Trim();
+                    //*資料庫中的鍵檔來源
+                    strKeyInFlag = dataRow[EntityOTHER_BANK_TEMP.M_KeyIn_Flag].ToString().Trim();
+                    //*資料庫中的帳戶ID
+                    strBankCusNoID = dataRow[EntityOTHER_BANK_TEMP.M_Other_Bank_Cus_ID].ToString().Trim();
+                    //*資料檔中的繳款狀況
+                    strPayWay = dataRow[EntityOTHER_BANK_TEMP.M_Other_Bank_Pay_Way].ToString().Trim();
+                    //*資料檔中的行動電話
+                    strMobilePhone = dataRow[EntityOTHER_BANK_TEMP.M_Mobile_Phone].ToString().Trim();
+                    //*資料檔中的Deal_S_No (for P02D unique 識別使用)
+                    strDeal_S_No = dataRow[EntityOTHER_BANK_TEMP.M_Deal_S_No].ToString().Trim();
 
-                    for(int j=0;j<dstBatchInfo.Tables[0].Rows.Count;j++)
-                    //if (dstBatchInfo != null && dstBatchInfo.Tables[0].Rows.Count > 0)
+                    //*申請類別若是O類執行批次作業時要作踢退
+                    if (strApplyType == "O")
                     {
-                        //*資料庫中的扣繳帳號
-                        strBankAccNo = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Other_Bank_Code_S].ToString().Trim() + "-" + dstBatchInfo.Tables[0].Rows[0][EntityOTHER_BANK_TEMP.M_Other_Bank_Acc_No].ToString().Trim();
-                        //*資料庫中的申請類別
-                        strApplyType = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Apply_Type].ToString().Trim();
-                        //*資料庫中的鍵檔來源
-                        strKeyInFlag = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_KeyIn_Flag].ToString().Trim();
-                        //*資料庫中的帳戶ID
-                        strBankCusNoID = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Other_Bank_Cus_ID].ToString().Trim();
-                        //*資料檔中的繳款狀況
-                        strPayWay = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Other_Bank_Pay_Way].ToString().Trim();
-                        //*資料檔中的帳單週期
-                        strBcycleCode = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_bcycle_code].ToString().Trim();
-                        //*資料檔中的行動電話
-                        strMobilePhone = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Mobile_Phone].ToString().Trim();
-                        //*資料檔中的E-MAIL
-                        //strEmail = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_E_Mail].ToString().Trim();
-                        //*資料檔中的電子賬單
-                        //strEbill = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_E_Bill].ToString().Trim();
-                        //*資料檔中的Deal_S_No (for P02D unique 識別使用)
-                        strDeal_S_No = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Deal_S_No].ToString().Trim();
+                        BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:O", strReceiveNumber, "", strDeal_S_No);
+                        intError++; // 其他異常資料筆數
+                        continue;
+                    }
 
-                        //*當自扣申請類別為D且來源為P02D，需將GUI PCMC的扣繳帳號(行庫代號+帳號)、帳戶ID欄位值清空回貼主機
-                        if (strApplyType == "D" && strKeyInFlag == "0")
-                        {
-                            strBankAccNo = "";
-                            strBankCusNoID = "";
-                        }
+                    //*若自扣申請類別為D且來源為GUI使用者鍵檔(不為P02D) 視為回貼主機失敗，不回貼主機
+                    if (strApplyType == "D" && strKeyInFlag != "0")
+                    {
+                        BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:10", strReceiveNumber, "", strDeal_S_No);
+                        intError++; // 其他異常資料筆數
+                        continue;
+                    }
+                    
+                    // 申請類別不是「刪除」且 不是自扣案件終止
+                    if (strApplyType != "D" && strKeyInFlag != "0")
+                    {
+                        //*檢核銀行代碼是否輸入正確
+                        string strOtherBankCodeS = dataRow[EntityOTHER_BANK_TEMP.M_Other_Bank_Code_S].ToString().Trim();
+                        DataSet dsInfo = BaseHelper.CheckCommonPropertySet(strFunctionKey, "18", strOtherBankCodeS);
 
-                        //*申請類別若是O類執行批次作業時要作踢退
-                        if (strApplyType == "O")
+                        if (dsInfo == null)
                         {
-                            BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:O", strReceiveNumber, "", strDeal_S_No);
+                            //*查詢資料庫時發生錯誤
+                            BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:8", strReceiveNumber, "", strDeal_S_No);
+                            intError++; // 其他異常資料筆數
                             continue;
                         }
 
-                        //*若自扣申請類別為D且來源為GUI使用者鍵檔(不為P02D) 視為回貼主機失敗，不回貼主機
-                        if (strApplyType == "D" && strKeyInFlag != "0")
+                        if (dsInfo.Tables[0].Rows.Count == 0 || strOtherBankCodeS == "042" || strOtherBankCodeS == "701")
                         {
-                            BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:10", strReceiveNumber, "", strDeal_S_No);
+                            BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:8", strReceiveNumber, "", strDeal_S_No);
+                            intError++; // 其他異常資料筆數
                             continue;
                         }
+                    }
 
-                        if (!(strApplyType == "D" && strKeyInFlag == "0"))
+                    //*身分證號碼
+                    string strCusId = dataRow[EntityOTHER_BANK_TEMP.M_Cus_ID].ToString().Trim();
+                    
+                    //*USER_ID
+                    string strUserId = GetAgentInfo(context).agent_id.Trim();
+
+                    //*得到第二卡人檔資料
+                    Hashtable htTwoCardResult = new Hashtable();
+                    // 第二卡人檔「查詢」狀態
+                    bool jcdkQuery = GetTwoCardData(strCusId, strReceiveNumber, strDeal_S_No, ref htTwoCardResult, context, ref strSessionId);
+                    // 第二卡人檔「更新」狀態
+                    bool jcdkUpdate = true;
+
+                    #region 第二卡人檔資料，比對行動電話若有異動則發電文JCDK更新
+
+                    string c1342ReturnCode = string.Empty;
+                    
+                    bool mobilePhoneIsDiff = false; // 行動電話是否有異動
+                    if (jcdkQuery) // 若查詢第二卡人檔沒有發生錯誤
+                    {
+                        //*使用"JCDK"異動主機欄位<行動電話>
+                        DataTable dtUpdateTwoCard = CommonFunction.GetDataTable();
+
+                        //*比對<行動電話>
+                        CommonFunction.ContrastData(htTwoCardResult, dtUpdateTwoCard, strMobilePhone, "MOBILE_PHONE", "行動電話");
+
+                        GetNewHashTable(htTwoCardResult, "sessionId", strSessionId);
+
+                        if (dtUpdateTwoCard.Rows.Count > 0) // 行動電話比對後有異動
                         {
-                            //*檢核銀行代碼是否輸入正確
-                            string strOtherBankCodeS = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Other_Bank_Code_S].ToString().Trim();
-                            dstInfo = BaseHelper.CheckCommonPropertySet(strFunctionKey, "18", strOtherBankCodeS);
-
-                            if (dstInfo == null)
-                            {
-                                //*查詢資料庫時發生錯誤
-                                BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:8", strReceiveNumber, "", strDeal_S_No);
-                                continue;
-
-                            }
-                            else
-                            {
-                                if (dstInfo.Tables[0].Rows.Count == 0 || strOtherBankCodeS == "042" || strOtherBankCodeS == "701")
-                                {
-                                    BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:8", strReceiveNumber, "", strDeal_S_No);
-                                    continue;
-                                }
-                            }
-                        }
-
-                        //*身分證號碼
-                        string strCusId = dstBatchInfo.Tables[0].Rows[j][EntityOTHER_BANK_TEMP.M_Cus_ID].ToString().Trim();
-
-                        // strSessionId = "";
-                        //*得到第一卡人檔資料
-                        Hashtable htOneCardResult = new Hashtable();
-                        if (!GetOneCardData(strCusId, strReceiveNumber, strDeal_S_No, ref htOneCardResult, context, ref strSessionId))
-                        {
+                            mobilePhoneIsDiff = true;
                             
-                            if (htOneCardResult["HtgMsgFlag"].ToString() == "0")
-                            {
-                                continue;
-                            }
-                            else
-                            {
-                                InsertBatchLog(intTotal, intSuccess, intNonce, htOneCardResult["HtgMsg"].ToString(), dateStart, strDeal_S_No);
-                                return;
-                            }
-                        }
-
-                        //*獲得主機sessionId
-                        //strSessionId = htOneCardResult["sessionId"].ToString();
-
-                        string strUserId = GetAgentInfo(context).agent_id.Trim();//*USER_ID
-
-                        Hashtable htTwoCardResult = new Hashtable();
-                        string strPEbill = "";//*主機<電子帳單>
-                        if (strKeyInFlag == "2")
-                        {
-                            //*得到第二卡人檔資料
-                            if (!GetTwoCardData(strCusId, strReceiveNumber, strDeal_S_No, ref htTwoCardResult, context, ref strSessionId))
-                            {
-                                if (htTwoCardResult["HtgMsgFlag"].ToString() == "0")
-                                {
-                                    continue;
-                                }
-                                else
-                                {
-                                    InsertBatchLog(intTotal, intSuccess, intNonce, htTwoCardResult["HtgMsg"].ToString(), dateStart, strDeal_S_No);
-                                    return;
-                                }
-                            }
-
-                            if (htOneCardResult["OFF_PHONE_FLAG"] != null)
-                            {
-                                strPEbill = htOneCardResult["OFF_PHONE_FLAG"].ToString();
-                            }
-                            else
-                            {
-                                BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:7", strReceiveNumber, "", strDeal_S_No);
-                                continue;
-                            }
-                        }
-
-                        if (strKeyInFlag == "2")
-                        {
-                            //*使用"JCDK"異動主機欄位<行動電話>、< E-MAIL>
-                            DataTable dtblUpdateTwoCard = CommonFunction.GetDataTable();
-
-                            //*比對<行動電話>
-                            CommonFunction.ContrastData(htTwoCardResult, dtblUpdateTwoCard, strMobilePhone, "MOBILE_PHONE", "行動電話");
-                            //*比對< E-MAIL> //20211021 不異動Email By Ares Stanley
-                            //CommonFunction.ContrastData(htTwoCardResult, dtblUpdateTwoCard, strEmail, "EMAIL", "E-MAIL");
-
-                            // htTwoCardResult.Add("sessionId", strSessionId);
-                            GetNewHashTable(htTwoCardResult, "sessionId", strSessionId);
-
-                            if (dtblUpdateTwoCard.Rows.Count > 0)
-                            {
-                                htTwoCardResult["FUNCTION_CODE"] = 2;
-                                //*異動主機欄位
-                                Hashtable htResultJCDK = MainFrameInfo.GetMainFrameInfo(HtgType.P4_JCDK, htTwoCardResult, false, "200", GetAgentInfo(context), strJobID);
-
-                                if (!htResultJCDK.Contains("HtgMsg"))
-                                {
-                                    //*更新資料庫欄位
-                                    BROTHER_BANK_TEMP.UpdateC1342ReturnCode(strReceiveNumber, "0001");
-                                    //*獲得主機sessionId
-                                    strSessionId = htResultJCDK["sessionId"].ToString();
-                                    //*將異動的欄位寫入 customer_log
-                                    if (!InsertCustomerLog(dtblUpdateTwoCard, strCusId, "P4", strUserId, "01010600", strReceiveNumber))
-                                    {
-                                        Logging.Log(strCusId + ":" + MessageHelper.GetMessage("00_00000000_017"), strJobID, LogState.Error);
-                                    }
-                                }
-                                else
-                                {
-                                    if (htResultJCDK["HtgMsgFlag"].ToString() == "0")
-                                    {
-                                        //*更新資料庫欄位
-                                        if (htResultJCDK["MESSAGE_TYPE"].ToString().Trim() == "9999" || htResultJCDK["MESSAGE_TYPE"].ToString().Trim() == "8888" || htResultJCDK["MESSAGE_TYPE"].ToString().Trim() == "8001")
-                                        {
-                                            BROTHER_BANK_TEMP.UpdateC1342ReturnCode(strReceiveNumber, htResultJCDK["MESSAGE_TYPE"].ToString().Trim());
-                                        }
-                                        else
-                                        {
-                                            BROTHER_BANK_TEMP.UpdateC1342ReturnCode(strReceiveNumber, "ERROR:1:" + htResultJCDK["MESSAGE_TYPE"].ToString().Trim());
-                                        }
-                                        continue;
-                                    }
-                                    else
-                                    {
-                                        intSuccess--;//*主機返回異常，故沒有成功減1；
-                                        InsertBatchLog(intTotal, intSuccess, intNonce, htResultJCDK["HtgMsg"].ToString(), dateStart, strDeal_S_No);
-                                        return;
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                BROTHER_BANK_TEMP.UpdateC1342ReturnCode(strReceiveNumber, "");
-                                //continue;
-                            }
-                        }                        
-
-                        //*使用PCMC_SessionA_Submit異動主機欄位<扣繳帳號>、<繳款狀況>、<帳戶ID>、<帳單週期>
-                        DataTable dtblUpdateOneCard = CommonFunction.GetDataTable();
-
-                        ArrayList arrayName = new ArrayList(new object[] { "ACCT_NBR", "CO_TAX_ID_TYPE", "DD_ID", "BILLING_CYCLE", "CO_OWNER", "OFF_PHONE_FLAG" });
-                        Hashtable htOutput = new Hashtable();
-                        MainFrameInfo.ChangeJCF6toPCTI(htOneCardResult, htOutput, arrayName);
-
-                        //*比對<扣繳帳號>
-                        CommonFunction.ContrastDataEdit(htOutput, dtblUpdateOneCard, strBankAccNo, "BK_ID_AC", "扣繳帳號");
-                        //*比對<繳款狀況>
-                        CommonFunction.ContrastDataEdit(htOutput, dtblUpdateOneCard, strPayWay, "LAST_CR_LINE_IND", "繳款狀況");
-                        //*比對<帳戶ID>
-                        CommonFunction.ContrastDataEdit(htOutput, dtblUpdateOneCard, strBankCusNoID, "DD_ID", "帳戶ID");
-
-                        if ((strApplyType == "D" && strKeyInFlag == "0"))
-                        {
-                            //*去掉<帳單週期>
-                            htOutput.Remove("BILLING_CYCLE");
-                           
-                            //*去掉<電子帳單>
-                            htOutput.Remove("MAIL");
-                         
-                        }
-                        else
-                        {
-                            //*比對<帳單週期>
-                            CommonFunction.ContrastDataEdit(htOutput, dtblUpdateOneCard, strBcycleCode, "BILLING_CYCLE", "帳單週期");
-                            //*比對<電子帳單> //20211021 不比對電子帳單 By Ares Stanley
-                            //CommonFunction.ContrastDataEdit(htOutput, dtblUpdateOneCard, strEbill, "MAIL", "電子帳單");
-
-                        }
-
-                        //*若選Other_Bank_Temp的欄位KeyIn_Flag！= "0" 
-                        if (strKeyInFlag != "0")
-                        {
-                            //*主機中的<扣繳帳號>欄位不為空
-                            string strHtgBankAccNo = htOneCardResult["CO_OWNER"].ToString().Trim();
-                            if (CommonFunction.GetSubString(strHtgBankAccNo, 4, strHtgBankAccNo.Length - 4).Length != 0)
-                            {
-                                BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:9", strReceiveNumber, "", strDeal_S_No);
-                                //* 更新Other_Bank_Temp上傳處理狀態
-                                BROTHER_BANK_TEMP.UpdateACHhold("1", strReceiveNumber, strDeal_S_No);
-                                if (dtblUpdateOneCard.Rows.Count > 0)
-                                {
-                                    //*針對<電子帳單>及<帳單週期>做特別處理
-									DataTable dtblUpdateMAIL = CommonFunction.GetDataTable();
-									Hashtable htOutputMAIL = new Hashtable();
-									MainFrameInfo.ChangeJCF6toPCTI(htOneCardResult, htOutputMAIL, arrayName);
-									if ((strApplyType == "D" && strKeyInFlag == "0"))
-									{
-                                        //*去掉<帳單週期>
-                                        htOutput.Remove("BILLING_CYCLE");
-										//*去掉<電子帳單>
-										htOutput.Remove("MAIL");
-									}
-									else
-									{
-                                        //*比對<帳單週期>
-                                        CommonFunction.ContrastDataEdit(htOutputMAIL, dtblUpdateMAIL, strBcycleCode, "BILLING_CYCLE", "帳單週期");
-                                        //*比對<電子帳單> //20211021 不比對電子帳單 By Ares Stanley
-                                        //CommonFunction.ContrastDataEdit(htOutputMAIL, dtblUpdateMAIL, strEbill, "MAIL", "電子帳單");
-                                    }
-                                    //*更新主機
-                                    if (dtblUpdateMAIL.Rows.Count > 0)
-									{
-										GetNewHashTable(htOutputMAIL, "sessionId", strSessionId);
-										htOutputMAIL.Add("FUNCTION_ID", "PCMC1");
-										//*異動主機欄位
-										MainFrameInfo.GetMainFrameInfo(HtgType.P4_PCTI, htOutputMAIL, false, "200", GetAgentInfo(context), strJobID);
-									}
-									
-									
-                                    //*將異動的欄位寫入 customer_log
-                                    if (!InsertCustomerLog(dtblUpdateOneCard, strCusId, "P4", strUserId, "01010600", strReceiveNumber))
-                                    {
-                                        Logging.Log(strCusId + ":" + MessageHelper.GetMessage("00_00000000_017"), strJobID, LogState.Error);
-                                    }
-                                }
-                                continue;
-                            }
-                        }
-
-                        if (dtblUpdateOneCard.Rows.Count > 0)
-                        {
-                            //htOutput.Add("sessionId", strSessionId);
-                            GetNewHashTable(htOutput, "sessionId", strSessionId);
-                            htOutput.Add("FUNCTION_ID", "PCMC1");
+                            htTwoCardResult["FUNCTION_CODE"] = 2;
                             //*異動主機欄位
-                            Hashtable htResultPcmc = MainFrameInfo.GetMainFrameInfo(HtgType.P4_PCTI, htOutput, false, "200", GetAgentInfo(context), strJobID);
+                            Hashtable htResultJCDK = MainFrameInfo.GetMainFrameInfo(HtgType.P4_JCDK, htTwoCardResult, false, "200", GetAgentInfo(context), strJobID);
 
-                            if (!htResultPcmc.Contains("HtgMsg"))
+                            if (!htResultJCDK.Contains("HtgMsg"))
                             {
-
-                                //*獲得主機sessionId
-                                strSessionId = htResultPcmc["sessionId"].ToString();
-
                                 //*更新資料庫欄位
-                                BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("PAGE 02 OF 03", strReceiveNumber, "", strDeal_S_No);
-                                if (htOutput.Contains("MAIL"))
-                                {
-                                    BROTHER_BANK_TEMP.UpdatePayWay(strReceiveNumber, "Y");
-                                }
+                                c1342ReturnCode = "0001";
+                                BROTHER_BANK_TEMP.UpdateC1342ReturnCode(strReceiveNumber, c1342ReturnCode);
+                                //*獲得主機sessionId
+                                strSessionId = htResultJCDK["sessionId"].ToString();
                                 //*將異動的欄位寫入 customer_log
-                                if (!InsertCustomerLog(dtblUpdateOneCard, strCusId, "P4", strUserId, "01010600",strReceiveNumber))
+                                if (!InsertCustomerLog(dtUpdateTwoCard, strCusId, "P4", strUserId, "01010600", strReceiveNumber))
                                 {
                                     Logging.Log(strCusId + ":" + MessageHelper.GetMessage("00_00000000_017"), strJobID, LogState.Error);
                                 }
-                                intSuccess++;
-                                intOne = 1;
                             }
-                            else
+                            else if (htResultJCDK["HtgMsgFlag"].ToString() == "0")
                             {
-                                if (htResultPcmc["HtgMsgFlag"].ToString() == "0")
+                                jcdkUpdate = false; // 電文JCDK更新「行動電話」失敗
+                                
+                                //*更新資料庫欄位
+                                if (htResultJCDK["MESSAGE_TYPE"].ToString().Trim() == "9999" || htResultJCDK["MESSAGE_TYPE"].ToString().Trim() == "8888" || htResultJCDK["MESSAGE_TYPE"].ToString().Trim() == "8001")
                                 {
-                                    //*更新資料庫欄位
-                                    BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("ERROR:13:" + htResultPcmc["HtgMsg"].ToString(), strReceiveNumber, "", strDeal_S_No);
-                                    continue;
+                                    c1342ReturnCode = htResultJCDK["MESSAGE_TYPE"].ToString().Trim();
+                                    BROTHER_BANK_TEMP.UpdateC1342ReturnCode(strReceiveNumber, c1342ReturnCode);
                                 }
                                 else
                                 {
-                                    InsertBatchLog(intTotal, intSuccess, intNonce, htResultPcmc["HtgMsg"].ToString(), dateStart, strDeal_S_No);
-                                    return;
+                                    c1342ReturnCode = "ERROR:1:" + htResultJCDK["MESSAGE_TYPE"].ToString().Trim();
+                                    BROTHER_BANK_TEMP.UpdateC1342ReturnCode(strReceiveNumber, c1342ReturnCode);
                                 }
+                                
+                                // 即使電文發生錯誤，後續流程仍需進行
                             }
+                            else
+                            {
+                                jcdkUpdate = false; // 電文JCDK更新「行動電話」失敗
+                                
+                                // 即使電文發生錯誤，後續流程仍需進行
+                            }
+                        }
+                    }
+                    
+                    #endregion
+
+                    // 判斷電話異動與JCDK電文狀態
+                    string pcmcReturnCode;
+                    if (!jcdkQuery)
+                    {
+                        pcmcReturnCode = "9002";
+                        intCount2++; // 電文查詢第二卡人檔失敗
+                    }
+                    else if (mobilePhoneIsDiff)
+                    {
+                        if (jcdkUpdate)
+                        {
+                            pcmcReturnCode = "9000";
+                            intCount3++; // 電話有異動，發JCDK電文更新「成功」
                         }
                         else
                         {
-                            BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("", strReceiveNumber, "", strDeal_S_No);
-                            continue;
+                            pcmcReturnCode = "9001";
+                            intCount4++; // 電話有異動，發JCDK電文更新「失敗」
                         }
-
-                        
+                    }
+                    else
+                    {
+                        pcmcReturnCode = "9000";
+                        intCount1++; // 電話無異動，「不用」發JCDK電文
+                    }
+                    
+                    // 更新Pcmc_Return_Code
+                    // 9000	週期件
+                    // 9001	週期件(電話更新失敗)
+                    // 9002	週期件(電文查詢第二卡人檔失敗)
+                    BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode(pcmcReturnCode, strReceiveNumber, c1342ReturnCode, strDeal_S_No);
+                    
+                    // 更新Other_Bank_Temp上傳處理狀態
+                    BROTHER_BANK_TEMP.UpdateACHhold("1", strReceiveNumber, strDeal_S_No);
+                    
+                    // 將「扣繳帳號、DD_ID、扣繳方式」寫入 customer_log
+                    DataTable logData = CommonFunction.GetDataTable();
+                    CommonFunction.UpdateLog("", strBankAccNo, "扣繳帳號", logData);
+                    CommonFunction.UpdateLog("", strPayWay, "繳款狀況", logData);
+                    CommonFunction.UpdateLog("", strBankCusNoID, "帳戶ID", logData);
+                    if (!InsertCustomerLog(logData, strCusId, "P4", strUserId, "01010600",strReceiveNumber))
+                    {
+                        Logging.Log(strCusId + ":" + MessageHelper.GetMessage("00_00000000_017"), strJobID, LogState.Error);
                     }
                 }
             }
+
             //*批次完成記錄LOG信息
-            InsertBatchLog(intTotal, intSuccess, 0, "", dateStart, strDeal_S_No);
-
-
+            InsertBatchLog(intTotal, intCount1, intCount2, intCount3, intCount4, intError, "", dateStart, strDeal_S_No);
             JobHelper.SaveLog("總筆數:" + intTotal + "筆。", LogState.Info);
-            JobHelper.SaveLog("成功筆數:" + intSuccess + "筆。", LogState.Info);
+            JobHelper.SaveLog("電話無異動筆數:" + intCount1 + "筆。", LogState.Info);
+            JobHelper.SaveLog("電文查詢第二卡人檔失敗筆數(不影響後續流程):" + intCount2 + "筆。", LogState.Info);
+            JobHelper.SaveLog("電話有異動更新成功筆數:" + intCount3 + "筆。", LogState.Info);
+            JobHelper.SaveLog("電話有異動更新失敗筆數(不影響後續流程):" + intCount4 + "筆。", LogState.Info);
+            JobHelper.SaveLog("其他異常資料筆數(人工判斷):" + intError + "筆。", LogState.Info);
         }
         catch (Exception ex)
         {
             //*批次完成記錄LOG信息
-            InsertBatchLog(intTotal, intSuccess, intNonce, ex.ToString(), dateStart, strDeal_S_No);
+            InsertBatchLog(intTotal, intCount1, intCount2, intCount3, intCount4, intError, ex.ToString(), dateStart, strDeal_S_No);
             Logging.Log(ex, strJobID);
         }
         finally
         {
-            UpdateBatch();
             JobHelper.SaveLog("清空主機Session。", LogState.Info);
             MainFrameInfo.ClearHtgSessionJob(ref strSessionId, strJobID);
-            
             JobHelper.SaveLog("JOB結束！", LogState.Info);
         }
     }
@@ -471,18 +332,6 @@ class BatchJob : Quartz.IJob
         return BRL_BATCH_LOG.InsertRunning(strFunctionKey, strJobID, dateStart, "R", "");
 
     }
-
-    /// 作者 趙呂梁
-    /// 創建日期：2009/10/17
-    /// 修改日期：2009/10/17 
-    /// <summary>
-    /// 異動Job_Status中批次狀態
-    /// </summary>
-    private void UpdateBatch()
-    {
-
-    }
-
 
     /// 作者 趙呂梁
     /// 創建日期：2009/10/17
@@ -594,77 +443,40 @@ class BatchJob : Quartz.IJob
 
     /// 作者 趙呂梁
     /// 創建日期：2009/10/17
-    /// 修改日期：2009/10/17 
+    /// 修改日期：2022/09/19 
     /// <summary>
     /// JOB執行狀態
     /// </summary>
     /// <param name="intTotal">總筆數</param>
-    /// <param name="intSuccess">成功筆數</param>
-    /// <returns>JOB執行狀態</returns>
-    private string GetStatus(int intTotal, int intSuccess)
-    {
-        if (intSuccess > 0)
-        {
-            if ((intTotal - intSuccess) > 0)
-            {
-                return "P";
-            }
-            else
-            {
-                return "S";
-            }
-        }
-        else
-        {
-            return "F";
-        }
-    }
-
-    /// 作者 趙呂梁
-    /// 創建日期：2009/10/17
-    /// 修改日期：2009/10/17 
-    /// <summary>
-    /// JOB執行狀態
-    /// </summary>
-    /// <param name="intTotal">總筆數</param>
-    /// <param name="intSuccess">成功筆數</param>
-    /// <param name="intFail">失敗筆數</param>
-    /// <param name="intNo">未完成筆數</param>
-    /// <returns>JOB執行狀態</returns>
-    private string GetStatus(int intTotal, int intSuccess, int intFail,int intNo)
+    /// <param name="intSuccess">intCount1 + intCount3(電話無異動筆數 + 電話有異動更新成功筆數)</param>
+    /// <param name="intError">其他異常資料筆數</param>
+    /// <returns>JOB執行狀態 S：執行成功、F：批次失敗、P：批次部分成功、N：無資料</returns>
+    private string GetStatus(int intTotal, int intSuccess, int intError)
     {
         if (intTotal == 0)
         {
             return "N";
         }
-        else if (intTotal ==( intSuccess + intFail))
+
+        if (intTotal == intSuccess)
         {
             return "S";
         }
-        else if (intTotal == intNo)
-        {
-            return "F";
-        }
-        else
-        {
-            return "P";
-        }
 
-
+        return intTotal == intError ? "F" : "P";
     }
 
     /// 作者 趙呂梁
     /// 創建日期：2009/10/17
-    /// 修改日期：2009/10/17 
+    /// 修改日期：2022/09/19 
     /// <summary>
     /// JOB執行狀態
     /// </summary>
-    /// <param name="strStauts">狀態英文名稱</param>
-
+    /// <param name="strStatus">狀態英文名稱</param>
     /// <returns>JOB執行狀態</returns>
-    private string GetStatusName(string strStauts)
+    private string GetStatusName(string strStatus)
     {
-        switch (strStauts)
+        switch (strStatus)
         {
             case "P":
                 return "批次部分成功";
@@ -672,6 +484,8 @@ class BatchJob : Quartz.IJob
                 return "批次失敗";
             case "S":
                 return "批次成功";
+            case "N":
+                return "批次成功(沒有資料)";
             default:
                 return "";
         }
@@ -698,45 +512,36 @@ class BatchJob : Quartz.IJob
 
     /// 作者 趙呂梁
     /// 創建日期：2009/10/17
-    /// 修改日期：2009/10/17 
+    /// 修改日期：2022/09/19 
     /// <summary>
     /// 插入L_BATCH_LOG資料庫
     /// </summary>
     /// <param name="intTotal">總筆數</param>
-    /// <param name="intSuccess">成功筆數</param>
-    /// <param name="intNonce">當前執行的筆數</param>
+    /// <param name="intCount1">電話無異動筆數</param>
+    /// <param name="intCount2">電文查詢第二卡人檔失敗筆數</param>
+    /// <param name="intCount3">電話有異動更新成功筆數</param>
+    /// <param name="intCount4">電話有異動更新失敗筆數</param>
+    /// <param name="intError">其他異常資料筆數</param>
     /// <param name="strError">JOB失敗信息</param>
     /// <param name="dateStart">JOB開始時間</param>
-    private void InsertBatchLog(int intTotal, int intSuccess, int intNonce, string strError, DateTime dateStart, string strDeal_S_No)
-    { 
-       // string strStatus = GetStatus(intTotal, intSuccess);
-        int intNo = 0;//*未完成筆數
-
-        if (intNonce > 0)//*當intNonce > 0表示主機返回異常，intNonce為記錄當前異常的筆數
-        {
-            if (intOne == 0)
-            {
-                intNo = intTotal - (intNonce - 1);
-                BROTHER_BANK_TEMP.UpdatePcmcUploadFlag(strNoteNumber , "");
-                BROTHER_BANK_TEMP.UpdatePcmcReturnCodeAndC1342ReturnCode("", strNoteNumber, "", strDeal_S_No);
-            }
-            else
-            {
-                intNo = intTotal - (intNonce);
-            }
-        }
-
-        int intFail = intTotal - intSuccess - intNo;//*失敗筆數
-
-
-
-        string strStatus = GetStatus(intTotal, intSuccess, intFail, intNo);
-
+    /// <param name="strDeal_S_No">交易序號</param>
+    private void InsertBatchLog(int intTotal, int intCount1, int intCount2, int intCount3, int intCount4, int intError, string strError, DateTime dateStart, string strDeal_S_No)
+    {
+        // 取得JOB執行狀態
+        string strStatus = GetStatus(intTotal, intCount1 + intCount3, intError);
+        
+        // 未完成筆數
+        int intNo = intTotal - intCount1 - intCount2 - intCount3 - intCount4 - intError;
+        
+        // 組成信件主要內容
         StringBuilder sbMessage = new StringBuilder();
-        sbMessage.Append("總筆數：" + intTotal.ToString() + "。");//*總筆數
-        sbMessage.Append("成功筆數：" + intSuccess.ToString() + "。");//*成功筆數
-        sbMessage.Append("失敗筆數：" + intFail.ToString() + "。");//*失敗筆數
-        sbMessage.Append("未完成筆數：" + intNo.ToString() + "。");//*未完成筆數
+        sbMessage.Append("總筆數：" + intTotal + "。");
+        sbMessage.Append("電話無異動筆數：" + intCount1 + "。");
+        sbMessage.Append("電文查詢第二卡人檔失敗筆數(不影響後續流程)：" + intCount2 + "。");
+        sbMessage.Append("電話有異動更新成功筆數：" + intCount3 + "。");
+        sbMessage.Append("電話有異動更新失敗筆數(不影響後續流程)：" + intCount4 + "。");
+        sbMessage.Append("其他異常資料筆數(人工判斷)：" + intError + "。");
+        sbMessage.Append("未完成筆數：" + intNo + "。");
         if (strError.Trim() != "")
         {
             sbMessage.Append("失敗訊息：" + strError);//*失敗訊息
@@ -750,12 +555,9 @@ class BatchJob : Quartz.IJob
         {
             string[] str = strMail.Split(';');
 
-
-
             System.Collections.Specialized.NameValueCollection nvc = new System.Collections.Specialized.NameValueCollection();
 
             nvc["Name"] = strMail.Replace(';', ',');
-
 
             nvc["Title"] = strTitle;
 
@@ -776,8 +578,6 @@ class BatchJob : Quartz.IJob
                 Logging.Log(ex, strJobID);
             }
         }
-
-
     }
 
     //BatchJOB

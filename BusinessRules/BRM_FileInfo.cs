@@ -14,6 +14,7 @@ using Framework.Data.OM.Transaction;
 using CSIPKeyInGUI.EntityLayer;
 using System.Data.SqlClient;
 using System.Data;
+using Framework.Common.Logging;
 
 namespace CSIPKeyInGUI.BusinessRules
 {
@@ -373,6 +374,37 @@ namespace CSIPKeyInGUI.BusinessRules
             }
 
             return Update(sqlComm);
+        }
+        
+        /// <summary>
+        /// 透過jobId取得ftp連線資訊
+        /// </summary>
+        /// <param name="jobId">排程ID</param>
+        /// <returns>DataSet</returns>
+        public static DataTable GetFtpInfoByJobId(string jobId)
+        {
+            string strSql = @"SELECT * FROM [dbo].[tbl_FileInfo] WITH(NOLOCK) WHERE Job_ID = @Job_ID";
+
+            SqlCommand sqlComm = new SqlCommand();
+            sqlComm.CommandText = strSql;
+            sqlComm.CommandType = CommandType.Text;
+
+            SqlParameter paramJobId = new SqlParameter("@Job_ID", jobId);
+            sqlComm.Parameters.Add(paramJobId);
+
+            try
+            {
+                DataSet ds = SearchOnDataSet(sqlComm);
+                if (ds != null && ds.Tables.Count > 0)
+                {
+                    return ds.Tables[0];
+                }
+            }
+            catch (Exception e)
+            {
+                Logging.Log(e, LogLayer.BusinessRule);
+            }
+            return new DataTable();
         }
     }
 }

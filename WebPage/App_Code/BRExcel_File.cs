@@ -5,35 +5,20 @@
 //*  修改紀錄：2021/04/01_Ares_Stanley-移除MicrosoftExcel
 //*  <author>            <time>            <TaskID>                <desc>
 //*  Ares Luke          2020/11/19         20200031-CSIP EOS       調整取web.config加解密參數
+//*  Ares jhun          2020/10/03         20220815-CSIP EOS       EDDA需求調整
 //*******************************************************************
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Web.UI;
-using System.Text.RegularExpressions;
-using System.Web;
-using System.Configuration;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using Framework.Data.OM.Collections;
-using Framework.Data.OM.Transaction;
 using Framework.Common.Logging;
-using Framework.Data.OM;
-using CSIPCommonModel.BaseItem;
 using Framework.Common.Utility;
 using DataTable = System.Data.DataTable;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
-using NPOI.SS.Util;
-using NPOI.XSSF.UserModel;
-using NPOI.SS.Formula.Functions;
-using NPOI.HSSF.EventUserModel.DummyRecord;
-using NPOI.XSSF.UserModel.Charts;
-
+using CSIPCommonModel.BusinessRules;
+using CSIPNewInvoice.EntityLayer_new;
+using System.Collections;
 
 namespace CSIPKeyInGUI.BusinessRules_new
 {
@@ -44,7 +29,7 @@ namespace CSIPKeyInGUI.BusinessRules_new
     public class BRExcel_File
     {
         const string postOfficeTemp_Count = @"
-SELECT UploadDate, SUM(AllCount) AllCount, SUM(SCount) SCount, SUM(FCount) FCount, SUM(NCount) NCount
+SELECT UploadDate, SUM(AllCount) AS AllCount, SUM(SCount) AS SCount, SUM(FCount) AS FCount, SUM(NCount) AS NCount
 FROM (
 	SELECT UploadDate,
 			COUNT(UploadDate) AllCount,
@@ -61,7 +46,7 @@ FROM (
 			0 FCount,
 			0 NCount
 	FROM [dbo].[PostOffice_Temp] a WITH(NOLOCK)
-	WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND a.SendHostResultCode = '0000'
+	WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND a.SendHostResultCode IN ('0000', '9000')
 	GROUP BY UploadDate
 	UNION ALL
 	SELECT UploadDate,
@@ -70,7 +55,7 @@ FROM (
 			COUNT(UploadDate) FCount,
 			0 NCount
 	FROM [dbo].[PostOffice_Temp] a WITH(NOLOCK)
-	WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND (a.SendHostResultCode != '' AND a.SendHostResultCode != '0000')
+	WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND (a.SendHostResultCode != '' AND a.SendHostResultCode NOT IN ('0000', '9000'))
 	GROUP BY UploadDate
 	UNION ALL
 	SELECT UploadDate,
@@ -83,27 +68,55 @@ FROM (
 	GROUP BY UploadDate
 ) A
 GROUP BY A.UploadDate";
+        
         //2021/03/17_Ares_Stanley-DB名稱改為變數
         const string postOfficeTemp_Success = @"
-SELECT A.UploadDate, a.ReceiveNumber, a.CusID, a.SendHostResultCode, a.AccNoBank, 
-		a.AccNo, ISNULL(b.Pay_Way, '') PayWay, a.AccID, 
-	ISNULL(b.bcycle_code, '') bcycle_code, ISNULL(b.Mobile_Phone, '') Mobile_Phone, 
-	ISNULL(b.E_Mail, '') E_Mail, ISNULL(b.E_Bill, '') E_Bill, ISNULL(c.[user_name], 'CSIP_SYSTEM') [UserName] 
-FROM [dbo].[PostOffice_Temp] a WITH(NOLOCK)
-LEFT JOIN [dbo].[Auto_Pay] b WITH(NOLOCK) ON a.ReceiveNumber = b. Receive_Number AND b.KeyIn_Flag = '2'
-LEFT JOIN (SELECT DISTINCT user_id, User_name FROM {0}.dbo.M_USER WITH(NOLOCK)) c ON a.[AgentID] = c.[user_id] 
-WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND a.SendHostResultCode = '0000'";
+SELECT A.UploadDate,
+       a.ReceiveNumber,
+       a.CusID,
+       a.SendHostResultCode,
+       a.AccNoBank,
+       a.AccNo,
+       ISNULL(b.Pay_Way, '')                AS PayWay,
+       a.AccID,
+       ISNULL(b.bcycle_code, '')            AS bcycle_code,
+       ISNULL(b.Mobile_Phone, '')           AS Mobile_Phone,
+       ISNULL(b.E_Mail, '')                 AS E_Mail,
+       ISNULL(b.E_Bill, '')                 AS E_Bill,
+       ISNULL(c.[user_name], 'CSIP_SYSTEM') AS UserName
+FROM [dbo].[PostOffice_Temp] a WITH (NOLOCK)
+         LEFT JOIN [dbo].[Auto_Pay] b WITH (NOLOCK) ON a.ReceiveNumber = b.Receive_Number AND b.KeyIn_Flag = '2'
+         LEFT JOIN (SELECT DISTINCT user_id, User_name FROM {0}.dbo.M_USER WITH (NOLOCK)) c ON a.[AgentID] = c.[user_id]
+WHERE a.UploadDate = @UploadDate
+  AND a.IsSendToPost = '1'
+  AND a.SendHostResultCode IN ('0000', '9000')";
+        
         //2021/03/17_Ares_Stanley-DB名稱改為變數
         const string postOfficeTemp_Fail = @"
-SELECT A.UploadDate, a.ReceiveNumber, a.CusID, 
-	CASE a.SendHostResultCode WHEN '0009' THEN '週期件' WHEN '8001' THEN 'PCMC失敗-8001' ELSE 'PCMC失敗' END SendHostResultCode,  a.AccNoBank,
-	a.AccNo, ISNULL(b.Pay_Way, '') PayWay, a.AccID, 
-	ISNULL(b.bcycle_code, '') bcycle_code, ISNULL(b.Mobile_Phone, '') Mobile_Phone, 
-	ISNULL(b.E_Mail, '') E_Mail, ISNULL(b.E_Bill, '') E_Bill, ISNULL(c.[user_name], 'CSIP_SYSTEM') [UserName] 
-FROM [dbo].[PostOffice_Temp] a WITH(NOLOCK)
-LEFT JOIN [dbo].[Auto_Pay] b WITH(NOLOCK) ON a.ReceiveNumber = b. Receive_Number AND b.KeyIn_Flag = '2'
-LEFT JOIN (SELECT DISTINCT user_id, User_name FROM {0}.dbo.M_USER WITH(NOLOCK)) c ON a.[AgentID] = c.[user_id] 
-WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND (a.SendHostResultCode != '' AND a.SendHostResultCode != '0000')";
+SELECT A.UploadDate,
+       a.ReceiveNumber,
+       a.CusID,
+       CASE a.SendHostResultCode
+           WHEN '9001' THEN N'週期件(電話更新失敗)'
+           WHEN '9002' THEN N'週期件(電文查詢第二卡人檔失敗)'
+           WHEN '0009' THEN N'週期件'
+           WHEN '8001' THEN N'PCMC失敗-8001'
+           ELSE N'PCMC失敗' END                AS SendHostResultCode,
+       a.AccNoBank,
+       a.AccNo,
+       ISNULL(b.Pay_Way, '')                AS PayWay,
+       a.AccID,
+       ISNULL(b.bcycle_code, '')            AS bcycle_code,
+       ISNULL(b.Mobile_Phone, '')           AS Mobile_Phone,
+       ISNULL(b.E_Mail, '')                 AS E_Mail,
+       ISNULL(b.E_Bill, '')                 AS E_Bill,
+       ISNULL(c.[user_name], 'CSIP_SYSTEM') AS UserName
+FROM [dbo].[PostOffice_Temp] a WITH (NOLOCK)
+         LEFT JOIN [dbo].[Auto_Pay] b WITH (NOLOCK) ON a.ReceiveNumber = b.Receive_Number AND b.KeyIn_Flag = '2'
+         LEFT JOIN (SELECT DISTINCT user_id, User_name FROM {0}.dbo.M_USER WITH (NOLOCK)) c ON a.[AgentID] = c.[user_id]
+WHERE a.UploadDate = @UploadDate
+  AND a.IsSendToPost = '1'
+  AND (a.SendHostResultCode != '' AND a.SendHostResultCode NOT IN ('0000', '9000'))";
 
         /// <summary>
         /// 檢查路徑是否存在，存在刪除該路徑下所有的文檔資料
@@ -244,6 +257,108 @@ WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND (a.SendHostResultC
             catch (Exception ex)
             {
                 Logging.Log(ex, LogLayer.BusinessRule);
+                throw ex;
+            }
+            finally
+            {
+            }
+        }
+
+        /// <summary>
+        /// 作 者：Ares_Jack
+        /// 功能說明：EDDA 授權扣款資料清單
+        /// 創建日期：2022/10/05
+        /// 修改紀錄：
+        /// </summary>
+        /// <param name="BatchDateStart">批次起日</param>
+        /// <param name="BatchDateEnd">批次迄日</param>
+        /// <param name="agentName"></param>
+        /// <param name="pathFile"></param>
+        /// <param name="msgID"></param>
+        /// <returns></returns>
+        public static bool CreateExcelFile_EDDA(string BatchDateStart, string BatchDateEnd, string agentName, ref string pathFile, ref string msgID)
+        {
+
+            try
+            {
+                // 檢查目錄，并刪除以前的文檔資料
+                CheckDirectory(ref pathFile);
+
+                // 取要下載的資料
+                DataTable dtblData_EDDA = BRExcel_File.getData_EDDA(BatchDateStart, BatchDateEnd);
+                if (null == dtblData_EDDA)
+                    return false;
+                if (dtblData_EDDA.Rows.Count == 0)
+                {
+                    msgID = "01_03120100_001";
+                    return false;
+                }
+
+                #region 匯入Excel文檔
+
+                string excelPathFile = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("ReportTemplate") + "EDDA.xls";
+                FileStream fs = new FileStream(excelPathFile, FileMode.Open);
+                HSSFWorkbook wb = new HSSFWorkbook(fs);
+                ExportExcelForNPOI(dtblData_EDDA, ref wb, 8, "EDDA授權扣款資料清單"); // Start index = 10
+                ISheet sheet = wb.GetSheet("EDDA授權扣款資料清單");
+                #region 合計筆數格式
+                // 合計文字
+                HSSFCellStyle total = (HSSFCellStyle)wb.CreateCellStyle();
+                //文字置中
+                total.VerticalAlignment = VerticalAlignment.Center;
+                HSSFFont total_font = (HSSFFont)wb.CreateFont();
+                // cell format
+                total.DataFormat = HSSFDataFormat.GetBuiltinFormat("@");
+                //字體尺寸
+                total_font.FontHeightInPoints = 12;
+                total_font.FontName = "新細明體";
+                total_font.Boldweight = (short)NPOI.SS.UserModel.FontBoldWeight.Bold;
+                total.SetFont(total_font);
+
+                // 合計數字
+                HSSFCellStyle total_num = (HSSFCellStyle)wb.CreateCellStyle();
+                //文字置中
+                total_num.VerticalAlignment = VerticalAlignment.Center;
+                total_num.Alignment = HorizontalAlignment.Center;
+                HSSFFont total_num_font = (HSSFFont)wb.CreateFont();
+                // cell format
+                total_num.DataFormat = HSSFDataFormat.GetBuiltinFormat("@");
+                //字體尺寸
+                total_num_font.FontHeightInPoints = 12;
+                total_num_font.FontName = "新細明體";
+                total_num.SetFont(total_num_font);
+                #endregion
+
+                // 合計筆數
+                sheet.CreateRow(sheet.LastRowNum + 1).CreateCell(0).SetCellValue("合計筆數：");
+                sheet.GetRow(sheet.LastRowNum).CreateCell(1).SetCellValue(dtblData_EDDA.Rows.Count.ToString("N0"));
+                sheet.GetRow(sheet.LastRowNum).GetCell(0).CellStyle = total;
+                sheet.GetRow(sheet.LastRowNum).GetCell(1).CellStyle = total_num;
+
+                #region 表頭
+                for (int row = 3; row < 5; row++)
+                {
+                    sheet.GetRow(row).CreateCell(1).CellStyle.Alignment = HorizontalAlignment.Center;
+                }
+                // 批次起迄日
+                sheet.GetRow(3).GetCell(1).SetCellValue(BatchDateStart + " ~ " + BatchDateEnd);
+                // 列印經辦
+                sheet.GetRow(4).GetCell(1).SetCellValue(agentName);
+                // 列印日期
+                sheet.GetRow(5).GetCell(1).SetCellValue(DateTime.Now.ToString("yyyyMMdd"));
+                #endregion
+                // 保存文件到程序运行目录下
+                pathFile = pathFile + @"\ExcelFile_EDDA_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
+                FileStream fs1 = new FileStream(pathFile, FileMode.Create);
+                wb.Write(fs1);
+                fs1.Close();
+                fs.Close();
+                return true;
+                # endregion 匯入文檔結束
+            }
+            catch (Exception ex)
+            {
+                Logging.Log(ex.ToString(), LogState.Error, LogLayer.BusinessRule);
                 throw ex;
             }
             finally
@@ -395,6 +510,333 @@ WHERE a.UploadDate = @UploadDate AND a.IsSendToPost = '1' AND (a.SendHostResultC
         }
 
         /// <summary>
+        /// 作 者：Ares_Jack
+        /// 功能說明：EDDA R12授權成功/失敗報表
+        /// 創建日期：2022/10/05
+        /// 修改紀錄：
+        /// </summary>
+        /// <param name="BatchDateStart">批次起日</param>
+        /// <param name="BatchDateEnd">批次迄日</param>
+        /// <param name="reportType"></param>
+        /// <param name="postRtnMsg"></param>
+        /// <param name="agentName"></param>
+        /// <param name="pathFile"></param>
+        /// <param name="msgID"></param>
+        /// <param name="blSuccess"></param>
+        /// <param name="blFail"></param>
+        /// <returns></returns>
+        public static bool CreateExcelFile_EDDAR12(string BatchDateStart, string BatchDateEnd, string reportType, string postRtnMsg, string agentName, ref string pathFile, ref string msgID, bool blSuccess, bool blFail)
+        {
+
+            try
+            {
+                // 檢查目錄，并刪除以前的文檔資料
+                CheckDirectory(ref pathFile);
+
+                // 取要下載的資料
+                DataTable dtblData_EDDAR12 = BRExcel_File.getData_EDDAR12(BatchDateStart, BatchDateEnd, reportType, postRtnMsg);
+                if (null == dtblData_EDDAR12)
+                    return false;
+                if (dtblData_EDDAR12.Rows.Count == 0)
+                {
+                    msgID = "01_03110200_001";
+                    return false;
+                }
+
+                #region 匯入Excel文檔
+
+                string excelPathFile = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("ReportTemplate") + "EDDAR12.xls";
+                FileStream fs = new FileStream(excelPathFile, FileMode.Open);
+                HSSFWorkbook wb = new HSSFWorkbook(fs);
+                ExportExcelForNPOI(dtblData_EDDAR12, ref wb, 7, "EDDAR12授權成功失敗報表"); // Content start index = 8;
+                ISheet sheet = wb.GetSheet("EDDAR12授權成功失敗報表");
+                Int32 intNumS = 0;
+                Int32 intNumF = 0;
+                #region 表頭
+                // title
+                if (blSuccess && blFail || !blSuccess && !blFail)
+                {
+                    sheet.GetRow(0).GetCell(0).SetCellValue("EDDAR12『授權成功/失敗』報表");
+                    wb.SetSheetName(0, "EDDAR12授權成功失敗報表");
+                }
+                else if (blSuccess)
+                {
+                    sheet.GetRow(0).GetCell(0).SetCellValue("EDDAR12『授權成功』報表");
+                    wb.SetSheetName(0, "EDDAR12授權成功報表");
+                }
+                else if (blFail)
+                {
+                    sheet.GetRow(0).GetCell(0).SetCellValue("EDDAR12『授權失敗』報表");
+                    wb.SetSheetName(0, "EDDAR12授權失敗報表");
+                }
+
+                for (int row = 2; row < 5; row++)
+                {
+                    sheet.GetRow(row).CreateCell(1).CellStyle.Alignment = HorizontalAlignment.Center;
+                }
+                // 拋檔日
+                sheet.GetRow(2).GetCell(1).SetCellValue(BatchDateStart + " ~ " + BatchDateEnd);
+                // 列印經辦
+                sheet.GetRow(3).GetCell(1).SetCellValue(agentName);
+                // 列印日期
+                sheet.GetRow(4).GetCell(1).SetCellValue(DateTime.Now.ToString("yyyyMMdd"));
+                #endregion
+
+                #region 表尾
+                #region 筆數文字格式
+                // 合計文字
+                HSSFCellStyle total = (HSSFCellStyle)wb.CreateCellStyle();
+                //文字置中
+                total.VerticalAlignment = VerticalAlignment.Center;
+                HSSFFont total_font = (HSSFFont)wb.CreateFont();
+                // cell format
+                total.DataFormat = HSSFDataFormat.GetBuiltinFormat("@");
+                //字體尺寸
+                total_font.FontHeightInPoints = 12;
+                total_font.FontName = "新細明體";
+                total_font.Boldweight = (short)NPOI.SS.UserModel.FontBoldWeight.Bold;
+                total.SetFont(total_font);
+                #endregion 
+                // 成功, 失敗計數
+                for (int row = 7; row < sheet.LastRowNum + 1; row++)
+                {
+                    if (sheet.GetRow(row).GetCell(8).StringCellValue.ToString() == "成功")
+                    {
+                        intNumS++;
+                    }
+                    else if (sheet.GetRow(row).GetCell(8).StringCellValue.ToString() == "失敗")
+                    {
+                        intNumF++;
+                    }
+                }
+
+                sheet.CreateRow(sheet.LastRowNum + 2); // 表尾空行
+                for (int row = 0; row < 3; row++)
+                {
+                    switch (row)
+                    {
+                        case 0:
+                            sheet.CreateRow(sheet.LastRowNum + 1).CreateCell(0).CellStyle = total;
+                            sheet.GetRow(sheet.LastRowNum).CreateCell(1).CellStyle.Alignment = HorizontalAlignment.Center;
+                            sheet.GetRow(sheet.LastRowNum).GetCell(0).SetCellValue("成功筆數：");
+                            sheet.GetRow(sheet.LastRowNum).GetCell(1).SetCellValue(intNumS.ToString("N0"));
+                            break;
+
+                        case 1:
+                            sheet.CreateRow(sheet.LastRowNum + 1).CreateCell(0).CellStyle = total;
+                            sheet.GetRow(sheet.LastRowNum).CreateCell(1).CellStyle.Alignment = HorizontalAlignment.Center;
+                            sheet.GetRow(sheet.LastRowNum).GetCell(0).SetCellValue("失敗筆數：");
+                            sheet.GetRow(sheet.LastRowNum).GetCell(1).SetCellValue(intNumF.ToString("N0"));
+                            break;
+
+                        case 2:
+                            sheet.CreateRow(sheet.LastRowNum + 1).CreateCell(0).CellStyle = total;
+                            sheet.GetRow(sheet.LastRowNum).CreateCell(1).CellStyle.Alignment = HorizontalAlignment.Center;
+                            sheet.GetRow(sheet.LastRowNum).GetCell(0).SetCellValue("總筆數：");
+                            sheet.GetRow(sheet.LastRowNum).GetCell(1).SetCellValue(Convert.ToInt32(intNumS + intNumF).ToString("N0"));
+                            break;
+
+                    }
+                }
+                #endregion
+
+                // 保存文件到程序运行目录下
+                pathFile = pathFile + @"\ExcelFile_EDDAR12_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
+                FileStream fs1 = new FileStream(pathFile, FileMode.Create);
+                wb.Write(fs1);
+                fs1.Close();
+                fs.Close();
+                return true;
+                # endregion 匯入文檔結束
+            }
+            catch (Exception ex)
+            {
+                Logging.Log(ex.ToString(), LogState.Error, LogLayer.BusinessRule);
+                throw ex;
+            }
+            finally
+            {
+            }
+        }
+
+        /// <summary>
+        /// 作 者：Ares_Jack
+        /// 功能說明：EDDA批次作業量統計報表
+        /// 創建日期：2022/10/06
+        /// 修改紀錄：
+        /// </summary>
+        /// <param name="Cus_ID"></param>
+        /// <param name="ComparisonStatus"></param>
+        /// <param name="StartDate"></param>
+        /// <param name="EndDate"></param>
+        /// <param name="agentName"></param>
+        /// <param name="pathFile"></param>
+        /// <param name="msgID"></param>
+        /// <returns></returns>
+        public static bool CreateExcelFile_EDDACase(string Cus_ID, string ComparisonStatus, string StartDate, string EndDate, string agentName, ref string pathFile, ref string msgID)
+        {
+
+            try
+            {
+                //中文欄位名稱
+                ArrayList arrayList = new ArrayList();
+                EDDACaseField(ref arrayList);
+
+                // 檢查目錄，并刪除以前的文檔資料
+                CheckDirectory(ref pathFile);
+
+                // 取要下載的資料
+                DataTable dtblData_EDDACase = BRExcel_File.getData_EDDACase(Cus_ID, ComparisonStatus, StartDate, EndDate);
+                if (null == dtblData_EDDACase)
+                    return false;
+                if (dtblData_EDDACase.Rows.Count == 0)
+                {
+                    msgID = "01_03110200_001";
+                    return false;
+                }
+
+                #region 匯入Excel文檔
+
+                string excelPathFile = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("ReportTemplate") + "EDDACase.xls";
+                FileStream fs = new FileStream(excelPathFile, FileMode.Open);
+                HSSFWorkbook wb = new HSSFWorkbook(fs);
+                ExportExcelForNPOI(dtblData_EDDACase, ref wb, 9, "EDDA案件資料查詢報表"); // Content start index = 8;
+                ISheet sheet = wb.GetSheet("EDDA案件資料查詢報表");
+                #region 表頭
+                // title
+                sheet.GetRow(0).GetCell(0).SetCellValue("EDDA案件資料查詢報表");
+                wb.SetSheetName(0, "EDDA案件資料查詢報表");
+
+                for (int row = 2; row < 7; row++)
+                {
+                    sheet.GetRow(row).CreateCell(1).CellStyle.Alignment = HorizontalAlignment.Center;
+                }
+                // 客戶ID
+                sheet.GetRow(2).GetCell(1).SetCellValue(Cus_ID);
+                // 批次起迄日
+                sheet.GetRow(3).GetCell(1).SetCellValue(StartDate + " ~ " + EndDate);
+                // 資料比對狀態
+                switch(ComparisonStatus)
+                {
+                    case "0":
+                        ComparisonStatus = "待比對";
+                        break;
+                    case "1":
+                        ComparisonStatus = "正常";
+                        break;
+                    case "2":
+                        ComparisonStatus = "缺少網銀資料";
+                        break;
+                    case "3":
+                        ComparisonStatus = "網銀異常資料";
+                        break;
+                    default:
+                        ComparisonStatus = "全部";
+                        break;
+                }
+                sheet.GetRow(4).GetCell(1).SetCellValue(ComparisonStatus);
+                // 列印經辦
+                sheet.GetRow(5).GetCell(1).SetCellValue(agentName);
+                // 列印日期
+                sheet.GetRow(6).GetCell(1).SetCellValue(DateTime.Now.ToString("yyyyMMdd"));
+                #endregion
+
+                #region 中文欄位
+                HSSFCellStyle cs = (HSSFCellStyle)wb.CreateCellStyle();
+                cs.BorderBottom = BorderStyle.Thin;
+                cs.BorderLeft = BorderStyle.Thin;
+                cs.BorderTop = BorderStyle.Thin;
+                cs.BorderRight = BorderStyle.Thin;
+                //啟動多行文字
+                cs.WrapText = true;
+                //文字置中
+                cs.VerticalAlignment = VerticalAlignment.Center;
+                cs.Alignment = HorizontalAlignment.Center;
+                //背景顏色
+                cs.FillPattern = FillPattern.SolidForeground;
+                cs.FillForegroundColor = IndexedColors.LightGreen.Index;
+
+                HSSFFont font1 = (HSSFFont)wb.CreateFont();
+                //字體尺寸
+                font1.FontHeightInPoints = 12;
+                font1.FontName = "新細明體";
+
+                cs.SetFont(font1);
+
+                string[,] AryCol = new string[1, arrayList.Count];
+                for (int k = 0; k < arrayList.Count; k++)
+                {
+                    AryCol[0, k] = arrayList[k].ToString();
+                }
+                for (int row = 0; row < AryCol.GetLength(0); row++)
+                {
+                    for (int col = 0; col < AryCol.GetLength(1); col++)
+                    {
+                        sheet.GetRow(8).CreateCell(col).CellStyle = cs;
+                        sheet.GetRow(8).GetCell(col).SetCellValue(AryCol[row, col]);
+                        sheet.AutoSizeColumn(col);
+                    }
+                }
+                #endregion
+
+                // 保存文件到程序运行目录下
+                pathFile = pathFile + @"\ExcelFile_EDDACase_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
+                FileStream fs1 = new FileStream(pathFile, FileMode.Create);
+                wb.Write(fs1);
+                fs1.Close();
+                fs.Close();
+                return true;
+                # endregion 匯入文檔結束
+            }
+            catch (Exception ex)
+            {
+                Logging.Log(ex.ToString(), LogState.Error, LogLayer.BusinessRule);
+                throw ex;
+            }
+            finally
+            {
+            }
+        }
+        public static void EDDACaseField(ref ArrayList arrayList)
+        {
+            arrayList.Add("批次日期");
+            arrayList.Add("ACHR12首錄的交易日期");
+            arrayList.Add("交易序號(ACH系統自行編列)");
+            arrayList.Add("交易代號(eDDA交易代號)");
+            arrayList.Add("發動者統一編號");
+            arrayList.Add("提回行代號");
+            arrayList.Add("委繳戶帳號");
+            arrayList.Add("委繳戶統一編號");
+            arrayList.Add("用戶號碼");
+            arrayList.Add("新增或取消");
+            arrayList.Add("日期(eDDA申請之交易日期)");
+            arrayList.Add("授權編號");
+            arrayList.Add("發動者專用區");
+            arrayList.Add("交易型態");
+            arrayList.Add("回覆訊息(eDDA回覆訊息代碼)");
+            arrayList.Add("備用");
+            arrayList.Add("申請人ID");
+            arrayList.Add("他行行庫代碼");
+            arrayList.Add("他行銀行帳號");
+            arrayList.Add("授權序號");
+            arrayList.Add("繳款方式");
+            arrayList.Add("網銀申請類別(A/C)");
+            arrayList.Add("申請日期");
+            arrayList.Add("申請時間");
+            arrayList.Add("用戶號碼");
+            arrayList.Add("自扣者ID");
+            arrayList.Add("推廣通路代碼");
+            arrayList.Add("推廣單位代碼");
+            arrayList.Add("推廣員員編");
+            arrayList.Add("維護人員");
+            arrayList.Add("資料狀態");
+            arrayList.Add("上傳主機註記");
+            arrayList.Add("上傳主機時間");
+            arrayList.Add("建立時間");
+            arrayList.Add("修改時間");
+        }
+
+        /// <summary>
         /// 批次作業量統計報表
         /// </summary>
         /// <param name="type"></param>
@@ -496,6 +938,50 @@ WHERE UploadDate = @UploadDate";
         }
 
         /// <summary>
+        /// 作 者：Ares_Jack
+        /// 功能說明：匯出EDDA授權扣款資料清單資料時，查詢數據
+        /// 創建日期：2022/10/05
+        /// 修改紀錄：
+        /// </summary>
+        /// <param name="BatchDateStart">批次起日</param>
+        /// <param name="BatchDateEnd">批次迄日</param>
+        /// <returns></returns>
+        public static DataTable getData_EDDA(string BatchDateStart, string BatchDateEnd)
+        {
+            try
+            {
+                string sql = @"SELECT AuthCode, Other_Bank_Code_L, Cus_ID, Other_Bank_Acc_No, Apply_Type, 
+                                    CASE
+	                                    WHEN UploadFlag IN('0') THEN '待上傳' 
+	                                    WHEN UploadFlag IN('1') THEN '已上傳' 
+	                                    WHEN UploadFlag IN('2') THEN '其他核印失敗集作人工處理' 
+	                                    ELSE '' 
+	                                END AS UploadFlag, 
+                                        Reply_Info, 
+                                    CASE
+	                                    WHEN PayWay IN('0') THEN '繳全額' 
+	                                    WHEN PayWay IN('1') THEN '繳最低額' 
+	                                    ELSE '' 
+	                                END AS PayWay, 
+                                        SalesChannel, ApplyDate, BatchDate 
+                               FROM EDDA_Auto_Pay WHERE BatchDate BETWEEN @BatchDateStart AND @BatchDateEnd ";
+
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.Text;
+                sqlcmd.CommandText = sql;
+                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateStart", BatchDateStart));
+                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateEnd", BatchDateEnd));
+
+                return BRBase<Entity_SP>.SearchOnDataSet(sqlcmd, "Connection_System").Tables[0];
+            }
+            catch(Exception ex)
+            {
+                Logging.Log(ex.ToString(), LogState.Error, LogLayer.BusinessRule);
+                return null;
+            }
+        }
+
+        /// <summary>
         /// 匯出R02授權成功/失敗報表資料時，查詢數據
         /// </summary>
         /// <param name="uploadDate"></param>
@@ -566,6 +1052,141 @@ INNER JOIN [dbo].[PostOffice_Detail] e WITH(NOLOCK) ON a.ReceiveNumber = e.Recei
             }
 
             return BRPostOffice_Temp.SearchOnDataSet(sqlcmd).Tables[0];
+        }
+
+        /// <summary>
+        /// 作 者：Ares_Jack
+        /// 功能說明：EDDA R12授權成功/失敗報表時，查詢數據
+        /// 創建日期：2022/10/05
+        /// 修改紀錄：
+        /// </summary>
+        /// <param name="BatchDateStart">批次起日</param>
+        /// <param name="BatchDateEnd">批次迄日</param>
+        /// <param name="reportType"></param>
+        /// <param name="postRtnMsg"></param>
+        /// <returns></returns>
+        public static DataTable getData_EDDAR12(string BatchDateStart, string BatchDateEnd, string reportType, string postRtnMsg)
+        {
+            try
+            {
+                string sql = string.Format(@"SELECT 
+                                            eap.BatchDate, 
+                                            eap.AuthCode, 
+                                            eap.Other_Bank_Code_L, 
+                                            mpc.BankName, 
+                                            eap.Other_Bank_Cus_ID, 
+                                            eap.Other_Bank_Acc_No,
+                                            eap.Cus_ID, 
+                                            eap.Apply_Type,
+                                            CASE WHEN eap.Reply_Info IN ('A0', 'A4') THEN N'成功' ElSE N'失敗' END AS Status,
+                                            mpc2.PROPERTY_NAME AS ReplyInfoName
+                                            FROM EDDA_Auto_Pay eap
+                                            LEFT JOIN 
+                                            (
+		                                        SELECT
+			                                        bankl.property_code AS BankCodeS,
+			                                        bankl.property_name AS BankCodeL,
+			                                        bankn.property_name AS BankName 
+		                                        FROM
+			                                        ( SELECT property_code, property_name FROM {0}.dbo.m_property_code WHERE function_key = '01' AND property_key = '16' ) AS bankl,
+			                                        ( SELECT property_code, property_name FROM {0}.dbo.m_property_code WHERE function_key = '01' AND property_key = '17' ) AS bankn 
+		                                        WHERE
+			                                        bankl.property_code= bankn.property_code 
+	                                        ) AS mpc ON eap.Other_Bank_Code_L= mpc.BankCodeL
+	
+                                            LEFT JOIN {0}.dbo.M_PROPERTY_CODE mpc2 ON mpc2.PROPERTY_CODE = eap.Reply_Info AND mpc2.FUNCTION_KEY = '01' AND mpc2.PROPERTY_KEY = 'EddaReplyInfo'
+                                            WHERE BatchDate BETWEEN @BatchDateStart AND @BatchDateEnd ", UtilHelper.GetAppSettings("DB_CSIP"));
+
+                string sqlWhere = "";
+
+
+                if (postRtnMsg.Length == 2)
+                {
+                    sqlWhere = " AND mpc2.PROPERTY_CODE = @postRtnMsg ";
+                }
+
+                // 成功/失敗條件
+                string condition = (reportType == "S") ? "AND eap.Reply_Info IN ('A0', 'A4') " : ((reportType == "F") ? "AND eap.Reply_Info NOT IN ('A0', 'A4') " : "");
+
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.CommandType = CommandType.Text;
+                sqlcmd.CommandText = sql + sqlWhere + condition;
+                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateStart", BatchDateStart)); //批次起日
+                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateEnd", BatchDateEnd)); //批次迄日
+
+                if (postRtnMsg.Length > 0)
+                {
+                    sqlcmd.Parameters.Add(new SqlParameter("@postRtnMsg", postRtnMsg));
+                }
+
+                return BRPostOffice_Temp.SearchOnDataSet(sqlcmd).Tables[0];
+            }
+            catch(Exception ex)
+            {
+                Logging.Log(ex.ToString(), LogState.Error, LogLayer.BusinessRule);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 作 者：Ares_Jack
+        /// 功能說明：EDDA批次作業量統計報表，查詢數據
+        /// 創建日期：2022/10/06
+        /// 修改紀錄：
+        /// </summary>
+        /// <param name="Cus_ID"></param>
+        /// <param name="ComparisonStatus"></param>
+        /// <param name="StartDate"></param>
+        /// <param name="EndDate"></param>
+        /// <returns></returns>
+        public static DataTable getData_EDDACase(string Cus_ID, string ComparisonStatus, string StartDate, string EndDate)
+        {
+            try
+            {
+                string sqlText = @"SELECT BatchDate, TDATE, Deal_S_No, Deal_No, Sponsor_ID, Other_Bank_Code_L, Other_Bank_Acc_No, Other_Bank_Cus_ID, Cus_ID, Apply_Type, S_DATE, AuthCode, S_Remark, Deal_Type, Reply_Info,                       Remark, ApplyID, AccNoBank, AccNo, EBAuthCode, 
+                                    CASE
+	                                    WHEN PayWay IN('0') THEN '繳全額' 
+	                                    WHEN PayWay IN('1') THEN '繳最低額' 
+	                                    ELSE '' 
+	                                END AS PayWay, 
+                                        EBApplyType, ApplyDate, ApplyTime, UserNo, AccID, SalesChannel, SalesUnit, SalesEmpoNo, MatainUser,
+                                    CASE
+	                                    WHEN ComparisonStatus IN ( '0' ) THEN '待比對' 
+	                                    WHEN ComparisonStatus IN ( '1' ) THEN '正常' 
+	                                    WHEN ComparisonStatus IN ( '2' ) THEN '缺少網銀資料' 
+	                                    WHEN ComparisonStatus IN ( '3' ) THEN '網銀異常資料'
+	                                    ELSE '' 
+	                                    END AS ComparisonStatus,  
+                                    CASE
+	                                    WHEN UploadFlag IN('0') THEN '待上傳' 
+	                                    WHEN UploadFlag IN('1') THEN '已上傳' 
+	                                    WHEN UploadFlag IN('2') THEN '其他核印失敗集作人工處理' 
+	                                    ELSE '' 
+	                                END AS UploadFlag,
+                                        UploadTime, CreateDate, ModifierDate
+                                    FROM 
+                                        EDDA_Auto_Pay 
+                                    WHERE (BatchDate BETWEEN @StartDate AND @EndDate) ";
+                string sqlOrderBy = "ORDER BY BatchDate";
+                string sqlWhere = string.Empty;
+                if (!string.IsNullOrEmpty(ComparisonStatus))
+                    sqlWhere += @"AND ComparisonStatus = @ComparisonStatus ";
+                if (!string.IsNullOrEmpty(Cus_ID))
+                    sqlWhere += @"AND Cus_ID = @Cus_ID ";
+
+                SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlText + sqlWhere + sqlOrderBy };
+                sqlComm.Parameters.Add(new SqlParameter("@Cus_ID", Cus_ID)); //客戶ID
+                sqlComm.Parameters.Add(new SqlParameter("@ComparisonStatus", ComparisonStatus)); //資料比對狀態
+                sqlComm.Parameters.Add(new SqlParameter("@StartDate", StartDate)); //收檔日期
+                sqlComm.Parameters.Add(new SqlParameter("@EndDate", EndDate)); //收檔日期
+
+                return BRPostOffice_Temp.SearchOnDataSet(sqlComm, "Connection_System").Tables[0];
+            }
+            catch (Exception ex)
+            {
+                Logging.Log(ex.ToString(), LogState.Error, LogLayer.BusinessRule);
+                return null;
+            }
         }
 
         /// <summary>

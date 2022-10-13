@@ -348,11 +348,11 @@
                                 <div style="position: absolute; margin-left:130px;">
                                     <cc1:CustDropDownList ID="dropBcycleCode" kind="select" runat="server" Style="left: 0px;
                                         top: 2px; clip: rect(0px auto auto 130px); position: absolute; width: 150px;"
-                                        onclick="simOptionClick4IE('txtBcycleCode');">
+                                        onclick="simOptionClick4IE('txtBcycleCode');" Enabled="false">
                                     </cc1:CustDropDownList>
                                     <cc1:CustTextBox ID="txtBcycleCode" runat="server" MaxLength="2" checktype="num"
                                         onkeydown="entersubmit('btnSubmit');" Style="left: 0px; top: 2px; position: absolute;
-                                        width: 125px; height: 11px;" BoxName="帳單週期" onfocus="allselect(this);"></cc1:CustTextBox>
+                                        width: 125px; height: 11px;" BoxName="帳單週期" onfocus="allselect(this);" Enabled="false"></cc1:CustTextBox>
                                 </div>
                             </td>
                         </tr>

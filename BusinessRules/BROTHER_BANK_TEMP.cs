@@ -5,6 +5,7 @@
 
 //*  創建日期：2009/10/08
 //*  修改記錄：2021/03/17_Ares_Stanley-DB名稱改為變數
+//*  修改記錄：2022/09/90_Ares_jhun-EDDA需求調整：核印成功代碼調整為【0、4】
 
 
 //*<author>            <time>            <TaskID>                <desc>
@@ -14,11 +15,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using Framework.Data.OM;
 using CSIPKeyInGUI.EntityLayer;
 using Framework.Data.OM.Collections;
-using Framework.Data.OM.Transaction;
 using Framework.Common.Utility;
 
 namespace CSIPKeyInGUI.BusinessRules
@@ -32,12 +31,12 @@ namespace CSIPKeyInGUI.BusinessRules
 
         public const string SEL_OTHERBNKTEMP_BATCH = "select ba.P02_flag,obt.Pcmc_Upload_flag,obt.Ach_Return_Code,obt.Pcmc_Return_Code from Other_Bank_Temp as obt inner join batch as ba on obt.Batch_no=ba.Batch_no where obt.Receive_Number=@ReceiveNumber and obt.Cus_ID=@CusID and obt.Upload_flag=@UploadFlag and obt.KeyIn_Flag=@KeyInFlag";
 
-        public const string SEL_BATCH_INFO = "select Cus_ID,Other_Bank_Code_S,Other_Bank_Acc_No , Other_Bank_Pay_Way,Other_Bank_Cus_ID,bcycle_code , E_Bill,Mobile_Phone,E_Mail ,Receive_Number,Apply_Type,KeyIn_Flag,deal_s_no from Other_Bank_Temp where Receive_Number=@ReceiveNumber  and ACH_Return_Code = '0' and  ( KeyIn_Flag='2' or KeyIn_Flag='0' )";
+        public const string SEL_BATCH_INFO = "select Cus_ID,Other_Bank_Code_S,Other_Bank_Acc_No , Other_Bank_Pay_Way,Other_Bank_Cus_ID,bcycle_code , E_Bill,Mobile_Phone,E_Mail ,Receive_Number,Apply_Type,KeyIn_Flag,deal_s_no from Other_Bank_Temp where Receive_Number=@ReceiveNumber  and ACH_Return_Code in ('0', '4') and  ( KeyIn_Flag='2' or KeyIn_Flag='0' )";
 
         public const string DEL_OTHERBNKTEMP = "delete from other_bank_temp where Receive_Number=@ReceiveNumber and Cus_ID=@CusID and upload_flag =@UploadFlag and (keyin_flag = @KeyinFlagOne or keyin_flag = @KeyinFlagTwo)";
 
-        public const string SEL_OTHERBNKTEMP_COUNT = "select count(*) from other_bank_temp where Batch_no  in  (select batch_no from batch where convert(int,R02_flag) > 1 )  and  ACH_Return_Code = '0' and (Pcmc_Upload_flag <> '1' or Pcmc_Upload_flag is null) and  ( KeyIn_Flag='2' or KeyIn_Flag='0' )";
-        public const string SEL_OTHERBNKTEMP_RECEIVE_LIST = "select distinct Receive_Number from other_bank_temp where Batch_no  in  (select batch_no from batch where convert(int,R02_flag) > 1 )  and  ACH_Return_Code = '0' and (Pcmc_Upload_flag <> '1' or Pcmc_Upload_flag is null) and  ( KeyIn_Flag='2' or KeyIn_Flag='0' )";
+        public const string SEL_OTHERBNKTEMP_COUNT = "select count(*) from other_bank_temp where Batch_no  in  (select batch_no from batch where convert(int,R02_flag) > 1 )  and  ACH_Return_Code in ('0', '4') and (Pcmc_Upload_flag <> '1' or Pcmc_Upload_flag is null) and  ( KeyIn_Flag='2' or KeyIn_Flag='0' )";
+        public const string SEL_OTHERBNKTEMP_RECEIVE_LIST = "select distinct Receive_Number from other_bank_temp where Batch_no  in  (select batch_no from batch where convert(int,R02_flag) > 1 )  and  ACH_Return_Code in ('0', '4') and (Pcmc_Upload_flag <> '1' or Pcmc_Upload_flag is null) and  ( KeyIn_Flag='2' or KeyIn_Flag='0' )";
 
         public const string UPD_OTHERBNKTEMP_STATUS = "update Other_Bank_Temp set Batch_Time=getdate(), Pcmc_Upload_flag=@PcmcUploadFlag where Receive_Number=@ReceiveNumber  and ( KeyIn_Flag='2' or  KeyIn_Flag='0' )";
 
@@ -113,7 +112,7 @@ and len(RTRIM(batch_no))=0 ";
                             "order by a.Receive_Number ";
       public const string SEL_OTHER_BANK_TEMP_RECORD_R02 = @"select a.Receive_Number,a.Other_Bank_Code_L,c.BankName,a.Other_Bank_Cus_ID," +
                         "a.Other_Bank_Acc_No,a.Cus_ID,a.Apply_Type," +
-                        "CASE WHEN a.Ach_Return_Code = '0' THEN '成功' ELSE '失敗' END AS R02_flag,d.Ach_Rtn_Code,d.Ach_Rtn_Msg " +
+                        "CASE WHEN a.Ach_Return_Code in ('0', '4') THEN '成功' ELSE '失敗' END AS R02_flag,d.Ach_Rtn_Code,d.Ach_Rtn_Msg " +
                        "from Other_Bank_Temp a left join batch b on a.Batch_no = b.Batch_no " +
                         "left join "+
                         "(select bankl.property_code as BankCodeS,bankl.property_name as BankCodeL,bankn.property_name as BankName  " +
@@ -329,7 +328,7 @@ and len(RTRIM(batch_no))=0 ";
             {
                 if (blSuccess)
                 {
-                    sbWhere.Append(" b.R02_flag in ('2','3') and a.Ach_Return_Code = '0'");
+                    sbWhere.Append(" b.R02_flag in ('2','3') and a.Ach_Return_Code in ('0', '4')");
                 }
                 if (blFault)
                 {

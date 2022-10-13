@@ -3,32 +3,21 @@
 //*  功能說明：中信及郵局 自扣二KEY
 //*  創建日期：2009/09/23
 //*  修改記錄：
-//*<author>            <time>            <TaskID>                <desc>
+//* <author>           <time>            <TaskID>                <desc>
+//* Ares_jhun          2021/10/03        20220815-CSIP EOS       EDDA需求調整：停發PCTI電文、統一走週期件處理
 //*******************************************************************
 
 using System;
 using System.Data;
-using System.Configuration;
 using System.Collections;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using CSIPKeyInGUI.EntityLayer;
 using CSIPKeyInGUI.BusinessRules;
-using Framework.Common.Utility;
 using Framework.Common.Message;
-using Framework.Data.OM;
 using Framework.Data.OM.Collections;
-using Framework.Common.JavaScript;
 using Framework.Common.Logging;
-using Framework.Data;
 using Framework.WebControls;
 using System.Drawing;
-using System.Text.RegularExpressions;
-using System.Transactions;
 using CSIPCommonModel.EntityLayer;
 
 public partial class P010101080001 : PageBase
@@ -369,15 +358,10 @@ public partial class P010101080001 : PageBase
             Hashtable htOutputP4_JCF6; // 查詢第一卡人檔下行
             Hashtable htInputPCTIP4S;  // 更新第一卡人檔上行
             Hashtable htInputP4_JCDKS = new Hashtable();// 更新第二卡人檔上行
-            Hashtable htOutputPCTIP4S; // 更新第一卡人檔下行
             Hashtable htOutputP4_JCDKS;// 更新第二卡人檔下行
-
-            DataTable dtblUpdateData = CommonFunction.GetDataTable();// 異動customer_log記錄的Table
-
+            
             EntitySet<EntityAUTO_PAY> eAutoPaySetKey1;// Auto_Pay一Key資料
             EntitySet<EntityAUTO_PAY> eAutoPaySetKey2;// Auto_Pay二Key資料
-
-            int intSubmit = 0;// 記錄異動主機成功的次數
 
             string accNoBank = this.txtAccNoBank.Text.Trim();// 扣繳帳號(銀行代號)
 
@@ -492,96 +476,15 @@ public partial class P010101080001 : PageBase
 
             string strAcctNBR = htOutputP4_JCF6["ACCT_NBR"].ToString().Trim();
             string strAcctNO = htOutputP4_JCF6["CO_OWNER"].ToString().Trim();
-            string sAccNoBankt1 = this.Session["AccNoBankt"] == null ? " " : this.Session["AccNoBankt"].ToString();
-            string strAcctNOStatus = (sAccNoBankt1 == "042") ? this.checkAcc_No_Status() : " ";
-            if (strAcctNOStatus == null) return;
-
-            #region 異動主機資料
-
-            EntityAuto_Pay_Status eAuto_Pay_Status = new EntityAuto_Pay_Status();
-
-            #region 記錄銀行帳戶是否被異動以及會由哪種方式異動
-            if ((accNoBank == "042" && strAcctNO != "" && strAcctNOStatus == "正常") || (accNoBank == "701" && strAcctNO != ""))
-            {
-                if (accNoBank_No == htOutputP4_JCF6["CO_OWNER"].ToString().Trim())
-                {
-                    eAuto_Pay_Status.IsUpdateByTXT = "N";// 上送主機
-                }
-                else
-                {
-                    eAuto_Pay_Status.IsUpdateByTXT = "Y";// 主機Temp檔
-                    intSubmit++;
-                    this.InsertCustomerLog("扣繳帳號", htOutputP4_JCF6["CO_OWNER"].ToString().Trim(), accNoBank_No, eAgentInfo, upperUserID, "TEMP", sPageInfo, receiveNumber);
-                }
-            }
-            else
-            {
-                eAuto_Pay_Status.IsUpdateByTXT = "N";
-
-                // 異動扣繳帳號和銀行帳號
-                CommonFunction.ContrastDataEdit(htInputPCTIP4S, dtblUpdateData, accNoBank_No, "BK_ID_AC", BaseHelper.GetShowText("01_01010800_006"));
-            }
-            #endregion
-
-            #region 異動第一卡人檔
-
-            // 比較主機和畫面中的資料
-            CompareHostEdit(intSubmit, htInputPCTIP4S, dtblUpdateData, payWay, accID, bcycleCode, eBill);
-
-            if (dtblUpdateData.Rows.Count > 0)
-            {
-                // 郵局(701)自扣不上送主機
-                if (accNoBank == "042")
-                {
-                    // 提交修改主機資料
-                    htInputPCTIP4S.Add("FUNCTION_ID", "PCMC1");
-                    htOutputPCTIP4S = MainFrameInfo.GetMainFrameInfo(HtgType.P4_PCTI, htInputPCTIP4S, false, "2", eAgentInfo);
-
-                    if (!htOutputPCTIP4S.Contains("HtgMsg"))
-                    {
-                        // 記錄異動欄位
-                        RecordChangeColumns(dtblUpdateData, eAgentInfo, upperUserID, "P4", sPageInfo, receiveNumber);
-
-                        intSubmit++;
-                        base.strHostMsg += htOutputPCTIP4S["HtgSuccess"].ToString();// 主機返回成功訊息
-                    }
-                    else
-                    {
-                        // 異動主機資料失敗
-                        if (htOutputPCTIP4S["HtgMsgFlag"].ToString() == "0")// 若主機訊息標識為"0",顯示到主機訊息,否則主機訊息標識為"1",則顯示到端末訊息
-                        {
-                            base.strHostMsg += htOutputPCTIP4S["HtgMsg"].ToString();
-                            base.strClientMsg = MessageHelper.GetMessage("01_01010800_012");
-                        }
-                        else
-                        {
-                            base.strClientMsg += htOutputPCTIP4S["HtgMsg"].ToString();
-                        }
-
-                        base.sbRegScript.Append(BaseHelper.SetFocus("txtAccNoBank"));
-                        return;
-                    }
-                }
-                else
-                {
-                    // 記錄異動欄位
-                    RecordChangeColumns(dtblUpdateData, eAgentInfo, upperUserID, "P4", sPageInfo, receiveNumber);
-                }
-            }
-            else
-            {
-                // 無需異動資料
-                base.strClientMsg += MessageHelper.GetMessage("01_01010800_011");
-            }
-
-            #endregion
+            
+            DataTable dtblUpdateData = CommonFunction.GetDataTable(); // 異動customer_log記錄的Table
 
             #region 異動第二卡人檔
 
-            dtblUpdateData.Clear();
-
-            // 比較主機和畫面中的資料
-            CompareHost(htInputP4_JCDKS, dtblUpdateData, mobilePhone, eMail);
+            bool jcdkStatus = true; // 電文JCDK更新狀態(電話)
+            
+            // 比較行動電話
+            CommonFunction.ContrastData(htInputP4_JCDKS, dtblUpdateData, mobilePhone, "MOBILE_PHONE", BaseHelper.GetShowText("01_01010800_011"));
 
             // 上傳身分證號碼
             htInputP4_JCDKS["ACCT_NBR"] = CommonFunction.GetSubString(upperUserID, 0, 16);
@@ -599,11 +502,12 @@ public partial class P010101080001 : PageBase
                         // 記錄異動欄位
                         RecordChangeColumns(dtblUpdateData, eAgentInfo, upperUserID, "P4", sPageInfo, receiveNumber);
 
-                        intSubmit++;
                         base.strHostMsg += htOutputP4_JCDKS["HtgSuccess"].ToString();// 主機返回成功訊息
                     }
                     else
                     {
+                        jcdkStatus = false; // 電話更新失敗
+                        
                         // 異動主機資料失敗
                         if (htOutputP4_JCDKS["HtgMsgFlag"].ToString() == "0")// 若主機訊息標識為"0",顯示到主機訊息,否則主機訊息標識為"1",則顯示到端末訊息
                         {
@@ -614,7 +518,6 @@ public partial class P010101080001 : PageBase
                         {
                             base.strClientMsg += htOutputP4_JCDKS["HtgMsg"].ToString();
                         }
-                        intSubmit++;
                         base.sbRegScript.Append(BaseHelper.SetFocus("txtAccNoBank"));
                         //20130925 Casper 佑華與主機同意 當第二卡人檔異動失敗 也一樣要丟批次檔出來
                         //return;
@@ -633,23 +536,50 @@ public partial class P010101080001 : PageBase
             }
 
             #endregion
+            
+            #region 比對扣繳帳號、扣繳方式、帳戶ID(DD_ID)是否有異動
+            
+            dtblUpdateData.Clear();
 
-            #endregion 異動主機資料結束
+            // 比對扣繳帳號和銀行帳號
+            CommonFunction.ContrastDataEdit(htInputPCTIP4S, dtblUpdateData, accNoBank_No, "BK_ID_AC", BaseHelper.GetShowText("01_01010800_006"));
+            // 比對繳款狀況(扣繳方式)
+            CommonFunction.ContrastDataEdit(htInputPCTIP4S, dtblUpdateData, payWay, "LAST_CR_LINE_IND", BaseHelper.GetShowText("01_01010800_008"));
+            // 比對帳戶ID(DD_ID)
+            CommonFunction.ContrastDataEdit(htInputPCTIP4S, dtblUpdateData, accID, "DD_ID", BaseHelper.GetShowText("01_01010800_009"));
 
+            if (dtblUpdateData.Rows.Count > 0)
+            {
+                // 記錄異動欄位
+                RecordChangeColumns(dtblUpdateData, eAgentInfo, upperUserID, "P4", sPageInfo, receiveNumber);
+            }
+            else
+            {
+                // 無需異動資料
+                base.strClientMsg += MessageHelper.GetMessage("01_01010800_011");
+            }
+
+            #endregion
+            
             if (accNoBank == "042")
             {
-                // 異動主機資料後，更新資料庫異動狀態
-                if (intSubmit > 0)
+                // 扣繳帳號、扣繳方式、帳戶ID(DD_ID)若有異動，更新資料庫異動狀態
+                if (dtblUpdateData.Rows.Count > 0)
                 {
-                    eAuto_Pay_Status.Receive_Number = receiveNumber;
-                    eAuto_Pay_Status.Cus_ID = upperUserID;
-                    eAuto_Pay_Status.Cus_Name = cusName;
-                    eAuto_Pay_Status.AccNoBank = accNoBank;
-                    eAuto_Pay_Status.Acc_No = accNoBank_No;
-                    eAuto_Pay_Status.Pay_Way = payWay;
-                    eAuto_Pay_Status.IsCTCB = "Y";
-                    eAuto_Pay_Status.DateTime = DateTime.Now;
-                    eAuto_Pay_Status.Acc_No_O = strAcctNO;
+                    EntityAuto_Pay_Status eAuto_Pay_Status = new EntityAuto_Pay_Status
+                    {
+                        IsUpdateByTXT = "Y", // 週期件(CSIP)
+                        Receive_Number = receiveNumber,
+                        Cus_ID = upperUserID,
+                        Cus_Name = cusName,
+                        AccNoBank = accNoBank,
+                        Acc_No = accNoBank_No,
+                        Pay_Way = payWay,
+                        IsCTCB = "Y",
+                        DateTime = DateTime.Now,
+                        Acc_No_O = strAcctNO,
+                        StatusCode = jcdkStatus ? "9000" : "9001" // 9000：週期件、9001：週期件(電話更新失敗)
+                    };
 
                     // 更新資料庫異動狀態
                     UpdateAutoPayStatus(htOutputP4_JCF6, htInputP4_JCDKS, eAuto_Pay_Status, eAutoPay, receiveNumber, upperUserID,
@@ -668,10 +598,7 @@ public partial class P010101080001 : PageBase
         }
         catch (Exception ex)
         {
-            // Logging.SaveLog(ELogLayer.UI, ex.ToString(), ELogType.Error);
             Logging.Log(ex.ToString(), LogLayer.UI);
-
-            return;
         }
     }
 
@@ -786,17 +713,11 @@ public partial class P010101080001 : PageBase
         this.txtAccNoBank.Enabled = blnEnabled;
         this.txtPayWay.Enabled = blnEnabled;
         this.txtAccID.Enabled = blnEnabled;
-        this.txtBcycleCode.Enabled = blnEnabled;
-
-        this.dropBcycleCode.Enabled = blnEnabled;
         this.txtMobilePhone.Enabled = blnEnabled;
         this.txtEmail.Enabled = blnEnabled;
         this.txtEBill.Enabled = blnEnabled;
         this.btnSubmit.Enabled = blnEnabled;
-
         this.dropCaseClass.Enabled = blnEnabled;
-        //this.txtCaseClass.Enabled = blnEnabled;
-        //this.txtPopulEmpNO.Enabled = blnEnabled;
         this.txtPopulNo.Enabled = blnEnabled;
 
         this.txtReceiveNumber.BackColor = Color.White;
@@ -805,8 +726,8 @@ public partial class P010101080001 : PageBase
         this.txtAccNo.BackColor = Color.White;
         this.txtPayWay.BackColor = Color.White;
         this.txtAccID.BackColor = Color.White;
-        this.txtBcycleCodeText.BackColor = Color.White;
-        this.txtBcycleCode.BackColor = Color.White;
+        this.txtBcycleCodeText.BackColor = Color.LightGray;
+        this.txtBcycleCode.BackColor = Color.LightGray;
         this.txtMobilePhone.BackColor = Color.White;
         this.txtEmail.BackColor = Color.LightGray;
         this.txtEBill.BackColor = Color.LightGray;

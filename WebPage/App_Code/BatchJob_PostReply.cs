@@ -5,23 +5,15 @@
 //* 修改紀錄：
 //* <author>            <time>            <TaskID>                <desc>
 //* Ares Luke          2020/11/19         20200031-CSIP EOS       調整取web.config加解密參數
+//*  Ares_jhun         2021/09/28         RQ-2022-019375-000       EDDA需求調整：將郵局核印失敗資料匯入【Auto_Pay_Auth_Fail】
 //*******************************************************************
 
 using System;
 using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using Quartz;
 using CSIPCommonModel.BusinessRules;
-using Framework.Common.Message;
 using System.Text;
 using Framework.Common.Logging;
-using Framework.Common.IO;
 using CSIPCommonModel.EntityLayer;
 using Framework.Common.Utility;
 
@@ -71,7 +63,7 @@ public class BatchJob_PostReply : Quartz.IJob
                 dateTime = Convert.ToDateTime(replyDate.Substring(0, 4) + "-" + replyDate.Substring(4, 2) + "-" + replyDate.Substring(6, 2));
                 fileName = @"CTCBREAuth" + replyDate;
 
-                result = OperatorReplyData(jobID, masterID, fileName + ".ZIP", postOfficeService, eAgentInfo, out successCount, out failCount, out hasFile, out postActiveCount, out errorMsg, out sourceName);
+                result = OperatorReplyData(jobID, masterID, fileName + ".ZIP", postOfficeService, eAgentInfo, out successCount, out failCount, out hasFile, out postActiveCount, out errorMsg, out sourceName, replyDate);
 
                 if (errorMsg == "")
                 {
@@ -146,7 +138,7 @@ public class BatchJob_PostReply : Quartz.IJob
 
             fileName = @"CTCBREAuth" + replyDate;
 
-            hostResult = OperatorReplyData(jobID, masterID, fileName + ".ZIP", postOfficeService, eAgentInfo, out successCount, out failCount, out hasFile, out postActiveCount, out errorMsg, out sourceName);
+            hostResult = OperatorReplyData(jobID, masterID, fileName + ".ZIP", postOfficeService, eAgentInfo, out successCount, out failCount, out hasFile, out postActiveCount, out errorMsg, out sourceName, replyDate);
 
             if (errorMsg == "")
             {
@@ -276,7 +268,7 @@ public class BatchJob_PostReply : Quartz.IJob
         return fileName;
     }
 
-    private string OperatorReplyData(string jobID, string masterID, string fileName, PostOfficeService postOfficeService, EntityAGENT_INFO eAgentInfo, out int successCount, out int failCount, out bool hasFile, out int postActiveCount, out string errorMsg, out string sourceName)
+    private string OperatorReplyData(string jobID, string masterID, string fileName, PostOfficeService postOfficeService, EntityAGENT_INFO eAgentInfo, out int successCount, out int failCount, out bool hasFile, out int postActiveCount, out string errorMsg, out string sourceName, string replyDate)
     {
         bool isUnZip = false;
         errorMsg = "";
@@ -363,8 +355,8 @@ public class BatchJob_PostReply : Quartz.IJob
                 if (errorMsg == "")
                 {
                     // 回寫回覆檔相關
-                    sendHostData = postOfficeService.UpdateReplyRelatedTable(masterID, replyData, activeData, out successCount, out failCount, out postActiveCount);
-
+                    sendHostData = postOfficeService.UpdateReplyRelatedTable(masterID, replyData, activeData, out successCount, out failCount, out postActiveCount, replyDate);
+                    
                     if (successCount > 0)
                     {
                         JobHelper.Write(jobID, "回寫回覆檔相關 Table 完成", LogState.Info);

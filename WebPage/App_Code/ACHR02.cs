@@ -8,6 +8,7 @@
 //*Ares Luke          2021/03/18         20200031-CSIP EOS       調整LOG紀錄筆數合計結果
 //*Ares Luke          2021/04/12         20200031-CSIP EOS       修正邏輯與LOG訊息調整
 //*Ares Stanley      2021/06/01                                               修正工作狀態檢核
+//*Ares_jhun          2021/09/28         RQ-2022-019375-000      EDDA需求調整：將他行核印失敗資料匯入【Auto_Pay_Auth_Fail】
 //*******************************************************************
 
 using System;
@@ -635,6 +636,9 @@ public class ACHR02 : Quartz.IJob
         if (FileImportData(sFilePath, sAchr02File, ref impSuccess, ref impFail, ref strImpMsg))
         {
             JobHelper.SaveLog(strMsgId + "：成功！(匯入" + impSuccess + "筆。)", LogState.Info);
+            
+            // 匯入核印失敗資料
+            ImportAuthFailData(jobDate);
         }
         else
         {
@@ -912,5 +916,46 @@ public class ACHR02 : Quartz.IJob
         BRL_BATCH_LOG.Delete(strFunctionKey, jobID, "R");
         BRL_BATCH_LOG.Insert(strFunctionKey, jobID, dateStart, status, sbMessage.ToString());
 
+    }
+    
+    /// <summary>
+    /// 將核印失敗資料匯入「Auto_Pay_Auth_Fail」
+    /// </summary>
+    /// <param name="batchDate">批次日期(8碼民國年)</param>
+    /// <returns>true or false</returns>
+    private static bool ImportAuthFailData(string batchDate)
+    {
+        string sqlDelete = @"DELETE FROM Auto_Pay_Auth_Fail WHERE UploadFlag <> 'Y' AND BankType = '1' AND BatchDate = @BatchDate";
+        
+        string sqlText =
+            @"INSERT INTO Auto_Pay_Auth_Fail (BatchDate, SerialNumber, DataType, CustId, ErrorCode, IssueChannel, IssueDate, UploadFlag, CreateDate)
+                SELECT @BatchDate, LEFT(S_Remark, 13), '1', Cus_ID, Reply_Info, 'CSIP',
+                       CONVERT(varchar(4), SUBSTRING(S_DATE, 1, 4) + 1911) + SUBSTRING(S_DATE, 5, 4), 'N', GETDATE()
+                FROM ACHR02_TMP A
+                WHERE NOT EXISTS(SELECT * FROM Auto_Pay_Auth_Fail B WHERE B.ReceiveNumber = LEFT(A.S_Remark, 13))
+                 AND Reply_Info IN ('1', '2', '3', '5', '6', '7', '8', 'B', 'C', 'F', 'G', 'I', 'J')";
+
+        try
+        {
+            // 將8碼民國年轉換為西元年
+            batchDate = string.Format("{0}{1}{2}", int.Parse(batchDate.Substring(0, 4)) + 1911, batchDate.Substring(4, 2), batchDate.Substring(6, 2));
+            
+            // 刪除指定批次日期未上傳主機的資料
+            SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlDelete };
+            sqlComm.Parameters.Add(new SqlParameter("@BatchDate", batchDate));
+            BRBase<Entity_SP>.Add(sqlComm, "Connection_System");
+
+            // 從 ACHR02_TMP 匯入特定失敗代碼至「Auto_Pay_Auth_Fail」
+            sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlText };
+            sqlComm.Parameters.Add(new SqlParameter("@BatchDate", batchDate));
+            BRBase<Entity_SP>.Add(sqlComm, "Connection_System");
+
+            return true;
+        }
+        catch (Exception exp)
+        {
+            BRBase<Entity_SP>.SaveLog(exp.Message);
+            return false;
+        }
     }
 }

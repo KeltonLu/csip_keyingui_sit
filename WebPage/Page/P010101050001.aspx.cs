@@ -3,34 +3,21 @@
 //*  功能說明：他行自扣一Key
 //*  創建日期：2009/10/21
 //*  修改記錄：
-//*<author>            <time>            <TaskID>                <desc>
+//*<author>           <time>            <TaskID>                <desc>
+//*Ares_jhun          2022/09/28         RQ-2022-019375-000     EDDA需求調整：查詢時新增電文P4_JCAA確認是否有正卡
 //*******************************************************************
 //20160606 (U) by Tank, add 查詢近60天內"其他作業 記錄查詢"看有無資料
 
 using System;
 using System.Data;
-using System.Configuration;
 using System.Collections;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using CSIPKeyInGUI.EntityLayer;
 using CSIPKeyInGUI.BusinessRules;
-using Framework.Common.Utility;
 using Framework.Common.Message;
-using Framework.Data.OM;
 using Framework.Data.OM.Collections;
-using Framework.Common.JavaScript;
-using Framework.Data;
-using Framework.WebControls;
 using System.Drawing;
-using System.Text.RegularExpressions;
-using System.Transactions;
 using CSIPCommonModel.EntityLayer;
-using System.Text;
 //20160606 (U) by Tank
 using System.Data.SqlClient;
 using System.Web.Services;
@@ -412,6 +399,16 @@ public partial class P010101050001 : PageBase
 
         BRL_AP_LOG.Add(log);
         //------------------------------------------------------
+        
+        // 確認是否有正卡
+        if (!checkCredit())
+        {
+            string[] strArray = new string[] { "01_01010700_011" };
+            MessageHelper.ShowMessageWithParms(this, strArray[0], strArray);
+
+            return;
+        }
+        
         Hashtable htOutputP4_JCF6 = new Hashtable();//*查詢第一卡人檔下行
         Hashtable htOutputP4_JCDK = new Hashtable();//*查詢第二卡人檔下行
 
@@ -424,8 +421,7 @@ public partial class P010101050001 : PageBase
         if (!CheckInPutInfo())
         {
             //*失敗
-            //return;         
-
+            //return;
         }
 
         SetControlsEnabled(false);
@@ -976,9 +972,6 @@ public partial class P010101050001 : PageBase
         this.txtAccNo.Enabled = blnEnabled;
         this.txtPayWay.Enabled = blnEnabled;
         this.txtAccID.Enabled = blnEnabled;
-        //this.txtBcycleCodeText.Enabled = blnEnabled;
-        this.txtBcycleCode.Enabled = blnEnabled;
-        this.dropBcycleCode.Enabled = blnEnabled;
         this.txtMobilePhone.Enabled = blnEnabled;
         this.txtEmail.Enabled = blnEnabled;
         this.txtEBill.Enabled = blnEnabled;
@@ -989,8 +982,6 @@ public partial class P010101050001 : PageBase
         this.dropTranCode.Enabled = blnEnabled;
         this.btnBankCheck.Enabled = blnEnabled;
         this.btnCheck.Enabled = blnEnabled;
-        //this.dropCaseClass.Enabled = blnEnabled;
-        //this.txtCaseClass.Enabled = blnEnabled;
         this.txtPopulEmpNO.Enabled = blnEnabled;
         this.txtPopulNo.Enabled = blnEnabled;
     }
@@ -1432,6 +1423,43 @@ public partial class P010101050001 : PageBase
         {
             BRCompareRpt.SaveLog(exp);
             return null;
+        }
+    }
+    
+    /// <summary>
+    /// Call 卡主機 確認是否有正卡
+    /// </summary>
+    /// <returns>true or false</returns>
+    private bool checkCredit()
+    {
+        string strMsg = string.Empty;
+
+        Hashtable htInputP4_JCAA = new Hashtable();
+        string strAcct_NBR = CommonFunction.GetSubString(this.txtUserId.Text.Trim().ToUpper(), 0, 16);
+        htInputP4_JCAA.Add("USER_ID", eAgentInfo.agent_id);
+        htInputP4_JCAA.Add("ACCT_NBR", strAcct_NBR);
+        htInputP4_JCAA["LINE_CNT"] = "0000";
+        htInputP4_JCAA.Add("FUNCTION_CODE", "1");//1-透過身分證查詢 2-透過卡號查詢
+
+        //*得到主機傳回信息
+        Hashtable htResult = new Hashtable();
+
+        if (CommonFunction.GetJCAAMainframeData(0, htInputP4_JCAA, ref htResult, eAgentInfo, ref strMsg) && !htResult.Contains("HtgMsg"))
+        {
+            //Host Message
+            base.strHostMsg += htResult["HtgSuccess"] != null ? htResult["HtgSuccess"].ToString() : "P4_JCAA - 查詢成功";//*主機返回成功訊息 
+            return true;
+        }
+        else
+        {
+            if (!htResult.Contains("HtgMsg"))
+                base.strHostMsg += htResult["HtgSuccess"] != null ? htResult["HtgSuccess"].ToString() : "";//*主機返回查詢成功訊息
+            else
+                base.strHostMsg += htResult["HtgMsg"] != null ? htResult["HtgMsg"].ToString() : "";//*主機返回失敗訊息
+
+            ////Client Message
+            base.strClientMsg += strMsg;
+            return false;
         }
     }
 }

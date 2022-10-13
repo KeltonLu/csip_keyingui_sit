@@ -1,96 +1,106 @@
-﻿using System;
+﻿//******************************************************************
+//*  作    者：
+//*  功能說明：
+//*  創建日期：
+//*  修改紀錄：
+//*  <author>          <time>              <TaskID>                <desc>
+//* Ares_jhun          2022/09/28          RQ-2022-019375-000      EDDA需求調整：調整鍵檔日期、整合EDDA資料
+//*******************************************************************
+
+using System;
 using System.Data;
+using System.Data.SqlClient;
 using Quartz;
 using Framework.Common.Logging;
 using CSIPCommonModel.BusinessRules;
 using CSIPKeyInGUI.BusinessRules;
+using CSIPNewInvoice.EntityLayer_new;
 
 /// <summary>
-/// jobTest 的摘要描述
-
+/// 排程-信用卡自動扣款資料上傳給卡主機
 /// </summary>
 public class jobAutoPay : IJob
 {
-    public jobAutoPay()
-    {
-        //
-        // TODO: 在此加入建構函式的程式碼
-        //
-    }
-    
-    #region IJob 成員
     public void Execute(JobExecutionContext context)
     {
-        string strFuncKey = "01";
-        string strJobID = "jobAutoPay";
-        string strJobTitle;
-        string strLdapID;
-        string strLdapPWD;
-        string strRacfID;
-        string strRacfPwd;
-        string strMailList;
+        const string strFuncKey = "01";
+        string strJobId = "";
         DateTime dtStart = DateTime.Now;
 
         try
         {
-            strJobID = context.JobDetail.JobDataMap.GetString("jobid").Trim();
-            strJobTitle = context.JobDetail.JobDataMap.GetString("title").Trim();
-            strLdapID = context.JobDetail.JobDataMap.GetString("userId").Trim();
-            strLdapPWD = context.JobDetail.JobDataMap.GetString("passWord").Trim();
-            strRacfID = context.JobDetail.JobDataMap.GetString("racfId").Trim();
-            strRacfPwd = context.JobDetail.JobDataMap.GetString("racfPassWord").Trim();
-            strMailList = context.JobDetail.JobDataMap.GetString("mail").Trim();
-            string strMsgID = "";
-            //*查詢資料檔L_BATCH_LOG，查看是否上次作業還未停止
+            strJobId = context.JobDetail.JobDataMap.GetString("job" + "id").Trim();
+            string strMsgId = "";
 
-            DataTable dtInfo = BRL_BATCH_LOG.GetRunningDate(strFuncKey, strJobID, "R", ref strMsgID);
-            if (dtInfo == null)
-            {
-                return;
-            }
-            if (dtInfo.Rows.Count > 0)
+            // 查詢資料檔L_BATCH_LOG，查看是否上次作業還未停止
+            DataTable dtInfo = BRL_BATCH_LOG.GetRunningDate(strFuncKey, strJobId, "R", ref strMsgId);
+            if (dtInfo == null || dtInfo.Rows.Count > 0)
             {
                 return;
             }
 
-            //*判斷是否為假日
+            // 判斷是否為假日
             if (!BRWORK_DATE.IS_WORKDAY("01", DateTime.Now.ToString("yyyyMMdd")))
             {
                 return;
             }
 
-            //*開始批次作業
-            if (!BRL_BATCH_LOG.InsertRunning(strFuncKey, strJobID, dtStart, "R", ""))
+            // 開始批次作業
+            if (!BRL_BATCH_LOG.InsertRunning(strFuncKey, strJobId, dtStart, "R", ""))
             {
                 return;
             }
-
-            if (BRAuto_pay_status.CopyFailureRecsFromOther_Bank_TempToAuto_Pay_Status())
+            
+            // 將 【Other_Bank_Temp.Pcmc_Return_Code】 IN ('ERROR:9', '9000', '9001', '9002') 資料新增到 【Auto_Pay_Status】
+            // 上述條件中 ERROR:9 為EDDA改版前週期件
+            if (BRAuto_pay_status.CopyOtherBankTempToAutoPayStatus())
             {
-                DataSet ds=BRAuto_pay_status.GetDataFromtblAuto_Pay_Status();
-                //if (ds != null && ds.Tables[0].Rows.Count > 0)
-                //{
-                    BRAuto_pay_status.BatchOutput(ds.Tables[0]);
-                    BRAuto_pay_status.UploadToFTP();
-                //}
+                // 取得核印成功需上傳主機的資料
+                DataSet ds = BRAuto_pay_status.GetWithholdingData();
+                // 產生給卡主機的檔案 withholding.txt
+                BRAuto_pay_status.BatchOutput(ds.Tables[0]);
+                // 將檔案上傳至ftp
+                BRAuto_pay_status.UploadToFtp();
+                // 上傳成功後更新【EDDA_Auto_Pay】
+                UpdateEddaAutoPayUploadFlag();
             }
 
-            JobDataMap jobDataMap = context.JobDetail.JobDataMap;
-            string strMsg = strJobID + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8).ToString();
+            string strMsg = strJobId + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8).ToString();
             if (context.NextFireTimeUtc.HasValue)
+            {
                 strMsg += "  ;下次執行於:" + DateTime.Parse(context.NextFireTimeUtc.ToString()).AddHours(8).ToString();
-            Logging.Log(strMsg, strJobID, LogLayer.DB);
+            }
 
-            BRL_BATCH_LOG.Delete(strFuncKey, strJobID, "R");
-            BRL_BATCH_LOG.Insert(strFuncKey, strJobID, dtStart, "S", "");
+            Logging.Log(strMsg, strJobId, LogLayer.DB);
 
+            // 刪除排程執行中的記錄
+            BRL_BATCH_LOG.Delete(strFuncKey, strJobId, "R");
+            // 新增排程執行成功的記錄
+            BRL_BATCH_LOG.Insert(strFuncKey, strJobId, dtStart, "S", "");
         }
         catch (Exception ex)
         {
-            BRL_BATCH_LOG.Delete(strFuncKey, strJobID, "R");
-            BRL_BATCH_LOG.Insert(strFuncKey, strJobID, dtStart, "F", ex.Message);
-            Logging.Log(ex, strJobID, LogLayer.DB);
+            // 刪除排程執行中的記錄
+            BRL_BATCH_LOG.Delete(strFuncKey, strJobId, "R");
+            // 新增排程執行失敗的記錄
+            BRL_BATCH_LOG.Insert(strFuncKey, strJobId, dtStart, "F", ex.Message);
+            Logging.Log(ex, strJobId, LogLayer.DB);
         }
     }
-    #endregion
+
+    /// <summary>
+    /// 更新 EDDA_Auto_Pay 上傳狀態與上傳時間
+    /// </summary>
+    /// <returns></returns>
+    private void UpdateEddaAutoPayUploadFlag()
+    {
+        string strSql = @"UPDATE EDDA_Auto_Pay SET UploadFlag = '1', UploadTime = GETDATE()
+                          WHERE UploadFlag = '0' AND ComparisonStatus <> '0' AND Reply_Info IN ('A0', 'A4');";
+
+        SqlCommand sqlComm = new SqlCommand();
+        sqlComm.CommandType = CommandType.Text;
+        sqlComm.CommandText = strSql;
+
+        BRBase<Entity_SP>.Update(sqlComm, "Connection_System");
+    }
 }

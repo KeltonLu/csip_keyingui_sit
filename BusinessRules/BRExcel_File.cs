@@ -5,36 +5,20 @@
 //*  修改記錄：2020/12/07_Ares_Stanley-新增NPOI; 2021/03/17_Ares_Stanley-DB名稱改為變數; 2021/04/01_Ares_Stanley-移除MicrosoftExcel; 2021/04/12_Ares_Stanley-修改ACH批次結果報表(全部報表)
 //*  <author>            <time>            <TaskID>                <desc>
 //*  Ares Luke          2020/11/19         20200031-CSIP EOS       調整取web.config加解密參數
+//*  Ares jhun          2020/10/03         20220815-CSIP EOS       EDDA需求調整
 //*******************************************************************
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Web.UI;
-using System.Text.RegularExpressions;
 using System.Web;
-using System.Configuration;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using Framework.Data.OM.Collections;
-using Framework.Data.OM.Transaction;
 using Framework.Common.Logging;
-using Framework.Data.OM;
-using CSIPCommonModel.BaseItem;
 using Framework.Common.Utility;
 using DataTable = System.Data.DataTable;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
-using NPOI.SS.Util;
-using NPOI.XSSF.UserModel;
-using NPOI.SS.Formula.Functions;
-using NPOI.HSSF.EventUserModel.DummyRecord;
-using NPOI.XSSF.UserModel.Charts;
-
-
 
 
 namespace CSIPKeyInGUI.BusinessRules
@@ -65,36 +49,118 @@ namespace CSIPKeyInGUI.BusinessRules
                                                           "left join Ach_Rtn_Info d on a.ACH_Return_Code=d.Ach_Rtn_Code " +
                                                           "where {0} order by Receive_Number";
 
-        public const string SEL_BATCH = @"select batch_no,sum(sCount) as sCount,sum(fCount) as fCount,sum(nCount) as nCount,sum(AllCount) as AllCount " +
-                        "From " +
-                            "(select batch_no,count(batch_no) as AllCount,'' as sCount,'' as fCount,'' as nCount from Other_Bank_Temp " +
-                            "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end group by batch_no " +
-                        "Union All " +
-                        "select batch_no,'' as AllCount,count(batch_no) as SCount,'' as fCount,'' as nCount from Other_Bank_Temp " +
-                        "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end and " +
-                            "(Pcmc_Return_Code='PAGE 00 OF 03' or Pcmc_Return_Code='PAGE 02 OF 03') group by batch_no " +
-                        "Union All " +
-                        "select batch_no,'' as AllCount,'' as SCount,count(batch_no) as fCount,'' as nCount from Other_Bank_Temp " +
-                        "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end and " +
-                            "(Pcmc_Upload_flag ='1' and  not (Pcmc_Return_Code='PAGE 00 OF 03'  or Pcmc_Return_Code='PAGE 02 OF 03')) " +
-                            "group by batch_no " +
-                        "Union All " +
-                        "select batch_no,'' as AllCount,'' as SCount,'' as fCount,count(batch_no) as nCount from Other_Bank_Temp " +
-                        "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end and " +
-                            "ISNULL(Pcmc_Upload_flag, '')  <> '1' and ACH_Return_Code = '0' " +
-                        "group by batch_no) a group by batch_no ";
-        public const string SEL_BATCH_SUCCESS = @"select a.Batch_no,a.Receive_Number,a.Cus_ID,a.C1342_Return_Code," +
-                            "a.Other_Bank_Code_S,a.Other_Bank_Acc_No,a.Other_Bank_Pay_Way,a.Other_Bank_Cus_ID,a.bcycle_code," +
-                            "a.Mobile_Phone,a.E_Mail,E_Bill,isnull(b.[user_name],'') as [user_name], a.Pcmc_Return_Code " + 
-            " from Other_Bank_Temp a left join (select distinct user_id,User_name from {0}.dbo.M_USER) as  b on a.[user_id] = b.[user_id] " +
-                        "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end and (Pcmc_Return_Code='PAGE 00 OF 03' or Pcmc_Return_Code='PAGE 02 OF 03') " +
-                        "order by a.Batch_no ";
-        public const string SEL_BATCH_FAULT = @"select a.Batch_no,a.Receive_Number,a.Cus_ID," +
-                            "a.Pcmc_Return_Code,a.Other_Bank_Code_S,a.Other_Bank_Acc_No,a.Other_Bank_Pay_Way," +
-                            "a.Other_Bank_Cus_ID,a.bcycle_code,a.Mobile_Phone,a.E_Mail,E_Bill,isnull(b.[user_name],'') as [user_name],a.C1342_Return_Code " +
-                        "from Other_Bank_Temp a left join (select distinct user_id,User_name from {0}.dbo.M_USER) as  b on a.[user_id] = b.[user_id] " +
-                        "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end and (Pcmc_Upload_flag ='1' and not (Pcmc_Return_Code='PAGE 00 OF 03' or Pcmc_Return_Code='PAGE 02 OF 03')) " +
-                        "order by a.Batch_no ";
+        public const string SEL_BATCH = @"
+select batch_no, sum(sCount) as sCount, sum(fCount) as fCount, sum(nCount) as nCount, sum(AllCount) as AllCount
+From (select batch_no, count(batch_no) as AllCount, '' as sCount, '' as fCount, '' as nCount
+      from Other_Bank_Temp
+      where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+      group by batch_no
+      Union All
+      select batch_no, '' as AllCount, count(batch_no) as SCount, '' as fCount, '' as nCount
+      from Other_Bank_Temp
+      where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+        and Pcmc_Return_Code in ('PAGE 00 OF 03', 'PAGE 02 OF 03', '9000')
+      group by batch_no
+      Union All
+      select batch_no, '' as AllCount, '' as SCount, count(batch_no) as fCount, '' as nCount
+      from Other_Bank_Temp
+      where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+        and Pcmc_Upload_flag = '1' and Pcmc_Return_Code not in ('PAGE 00 OF 03', 'PAGE 02 OF 03', '9000')
+      group by batch_no
+      Union All
+      select batch_no, '' as AllCount, '' as SCount, '' as fCount, count(batch_no) as nCount
+      from Other_Bank_Temp
+      where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+        and ISNULL(Pcmc_Upload_flag, '') <> '1' and ACH_Return_Code = '0'
+      group by batch_no) a
+group by batch_no ";
+        
+        public const string SEL_BATCH_SUCCESS = @"
+SELECT * FROM (
+-- EDDA改版前
+select a.Batch_no,
+       a.Receive_Number,
+       a.Cus_ID,
+       a.C1342_Return_Code,
+       a.Other_Bank_Code_S,
+       a.Other_Bank_Acc_No,
+       a.Other_Bank_Pay_Way,
+       a.Other_Bank_Cus_ID,
+       a.bcycle_code,
+       a.Mobile_Phone,
+       a.E_Mail,
+       E_Bill,
+       isnull(b.[user_name], '') as [user_name],
+       a.Pcmc_Return_Code
+from Other_Bank_Temp a
+         left join (select distinct user_id, User_name from {0}.dbo.M_USER) as b on a.[user_id] = b.[user_id]
+where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+  and (Pcmc_Return_Code = 'PAGE 00 OF 03' or Pcmc_Return_Code = 'PAGE 02 OF 03')
+union
+-- EDDA改版後
+select a.Batch_no,
+       a.Receive_Number,
+       a.Cus_ID,
+       a.C1342_Return_Code,
+       a.Other_Bank_Code_S,
+       a.Other_Bank_Acc_No,
+       a.Other_Bank_Pay_Way,
+       a.Other_Bank_Cus_ID,
+       a.bcycle_code,
+       a.Mobile_Phone,
+       a.E_Mail,
+       E_Bill,
+       isnull(b.[user_name], '') as [user_name],
+       a.Pcmc_Return_Code
+from Other_Bank_Temp a
+         left join (select distinct user_id, User_name from {0}.dbo.M_USER) as b on a.[user_id] = b.[user_id]
+where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+and Pcmc_Return_Code = '9000') T
+ORDER BY T.Batch_no ";
+        
+        public const string SEL_BATCH_FAULT = @"
+SELECT * FROM (
+-- EDDA改版前
+select a.Batch_no,
+       a.Receive_Number,
+       a.Cus_ID,
+       a.Pcmc_Return_Code,
+       a.Other_Bank_Code_S,
+       a.Other_Bank_Acc_No,
+       a.Other_Bank_Pay_Way,
+       a.Other_Bank_Cus_ID,
+       a.bcycle_code,
+       a.Mobile_Phone,
+       a.E_Mail,
+       E_Bill,
+       isnull(b.[user_name], '') as [user_name],
+       a.C1342_Return_Code
+from Other_Bank_Temp a
+         left join (select distinct user_id, User_name from {0}.dbo.M_USER) as b on a.[user_id] = b.[user_id]
+where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+  and Pcmc_Upload_flag = '1' and Pcmc_Return_Code not in ('PAGE 00 OF 03', 'PAGE 02 OF 03', '9000', '9001', '9002')
+union
+-- EDDA改版後
+select a.Batch_no,
+       a.Receive_Number,
+       a.Cus_ID,
+       a.Pcmc_Return_Code,
+       a.Other_Bank_Code_S,
+       a.Other_Bank_Acc_No,
+       a.Other_Bank_Pay_Way,
+       a.Other_Bank_Cus_ID,
+       a.bcycle_code,
+       a.Mobile_Phone,
+       a.E_Mail,
+       E_Bill,
+       isnull(b.[user_name], '') as [user_name],
+       a.C1342_Return_Code
+from Other_Bank_Temp a
+         left join (select distinct user_id, User_name from {0}.dbo.M_USER) as b on a.[user_id] = b.[user_id]
+where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
+  and Pcmc_Upload_flag = '1' and Pcmc_Return_Code in ('9001', '9002')) T
+ORDER BY T.Batch_no ";
+        
         public const string SEL_BATCH_NO_COMPLETE = @"select a.Batch_no,a.Receive_Number,a.Cus_ID," +
                             "a.Pcmc_Return_Code,a.Other_Bank_Code_S,a.Other_Bank_Acc_No,a.Other_Bank_Pay_Way," +
                             "a.Other_Bank_Cus_ID,a.bcycle_code,a.Mobile_Phone,a.E_Mail,E_Bill,isnull(b.[user_name],'') as [user_name],a.C1342_Return_Code " +
@@ -728,28 +794,35 @@ namespace CSIPKeyInGUI.BusinessRules
             #region 失敗訊息
             for (int row = 7; row < sheet_fault.LastRowNum + 1; row++)
             {
-                if (!(sheet_fault.GetRow(row).GetCell(3).StringCellValue.ToString() == "PAGE 00 OF 03" || sheet_fault.GetRow(row).GetCell(3).StringCellValue.ToString() == "PAGE 02 OF 03"))
+                // 將失敗代碼轉換成中文
+                string pcmcReturnCode = sheet_fault.GetRow(row).GetCell(3).StringCellValue;
+                switch (pcmcReturnCode)
                 {
-                    if (sheet_fault.GetRow(row).GetCell(3).StringCellValue.ToString() == "ERROR:10")
-                    {
+                    case "PAGE 00 OF 03":
+                    case "PAGE 02 OF 03":
+                    case "9000": // 週期件(EDDA改版後)
+                        continue; // 成功代碼
+                    case "ERROR:10":
                         sheet_fault.GetRow(row).GetCell(3).SetCellValue("案件類別為D不為P02D");
-                    }
-                    else if (sheet_fault.GetRow(row).GetCell(3).StringCellValue.ToString() == "ERROR:9")
-                    {
+                        break;
+                    case "ERROR:9":
                         sheet_fault.GetRow(row).GetCell(3).SetCellValue("週期件");
-                    }
-                    else if (sheet_fault.GetRow(row).GetCell(3).StringCellValue.ToString() == "ERROR:0")
-                    {
+                        break;
+                    case "ERROR:0":
                         sheet_fault.GetRow(row).GetCell(3).SetCellValue("人工刪除");
-                    }
-                    else if (sheet_fault.GetRow(row).GetCell(3).StringCellValue.ToString() == "ERROR:O")
-                    {
+                        break;
+                    case "ERROR:O":
                         sheet_fault.GetRow(row).GetCell(3).SetCellValue("案件類別為 \"O\" 類");
-                    }
-                    else
-                    {
+                        break;
+                    case "9001": // EDDA改版後
+                        sheet_fault.GetRow(row).GetCell(3).SetCellValue("週期件(電話更新失敗)");
+                        break;
+                    case "9002": // EDDA改版後
+                        sheet_fault.GetRow(row).GetCell(3).SetCellValue("週期件(電文查詢第二卡人檔失敗)");
+                        break;
+                    default:
                         sheet_fault.GetRow(row).GetCell(3).SetCellValue("PCMC失敗");
-                    }
+                        break;
                 }
             }
             #endregion

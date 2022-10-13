@@ -4,10 +4,12 @@
 //*  創建日期：
 //*  修改紀錄：
 //*  <author>            <time>            <TaskID>                <desc>
-//*  Ares_Stanley       2021/11/01           20200031-CSIP EOS       理專十誡，移除異動Email、電子賬單相關。
+//*  Ares_Stanley       2021/11/01         20200031-CSIP EOS       理專十誡，移除異動Email、電子賬單相關。
+//*  Ares_jhun          2021/09/28         RQ-2022-019375-000      EDDA需求調整：將郵局核印失敗資料匯入【Auto_Pay_Auth_Fail】
 //*******************************************************************
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using CSIPCommonModel.BusinessRules;
 using System.Text;
 using System.IO;
@@ -16,6 +18,7 @@ using Framework.Common.Message;
 using Framework.Common.IO;
 using Framework.Data.OM.Transaction;
 using CSIPCommonModel.EntityLayer;
+using CSIPNewInvoice.EntityLayer_new;
 
 /// <summary>
 /// PostOfficeService 的摘要描述
@@ -561,7 +564,7 @@ public class PostOfficeService
     /// </summary>
     /// <param name="replyData"></param>
     /// <returns></returns>
-    public DataTable UpdateReplyRelatedTable(string masterID, DataTable replyData, DataTable activeData, out int successCount, out int failCount, out int postActiveCount)
+    public DataTable UpdateReplyRelatedTable(string masterID, DataTable replyData, DataTable activeData, out int successCount, out int failCount, out int postActiveCount, string replyDate)
     {
         DataTable sendHostData = SetHostDataColumn();
         DataTable postOfficeTemp = new DataTable();
@@ -570,7 +573,7 @@ public class PostOfficeService
         bool masterOK = false;
         bool detailOK = false;
         bool trailerOK = false;
-        bool postResultCode = false;
+        string postResultCode = string.Empty;
         int totalCount = 0;
         successCount = 0;
         failCount = 0;
@@ -600,12 +603,11 @@ public class PostOfficeService
                                     totalCount = totalCount + 1;
                                 }
 
-                                // 判斷郵局回傳資訊
+                                // 判斷郵局回傳資訊回傳錯誤代碼：若為空白即為正常
                                 postResultCode = CheckPostResultCode(row["StatusType"].ToString().Trim(), row["CheckFlag"].ToString().Trim());
 
-                                if (postResultCode)
+                                if (string.IsNullOrEmpty(postResultCode))
                                 {
-
                                     hostRow = sendHostData.NewRow();
                                     hostRow["CusID"] = postOfficeTemp.Rows[0]["CusID"].ToString().Trim();
                                     hostRow["ReceiveNumber"] = postOfficeTemp.Rows[0]["ReceiveNumber"].ToString().Trim();
@@ -638,6 +640,9 @@ public class PostOfficeService
                                 else
                                 {
                                     failCount = failCount + 1;
+
+                                    // 匯入核印失敗資料
+                                    ImportAuthFailData(replyDate, postResultCode, postOfficeTemp.Rows[0]);
                                 }
                             }
                             else
@@ -689,7 +694,7 @@ public class PostOfficeService
     /// <summary>
     /// 上送主機
     /// </summary>
-    /// <param name="replyData"></param>
+    /// <param name="replyData">郵局回覆資料</param>
     /// <param name="eAgentInfo"></param>
     public string SendToHost(DataTable replyData, EntityAGENT_INFO eAgentInfo)
     {
@@ -704,8 +709,8 @@ public class PostOfficeService
         string mobilePhone = "";
         string eMail = "";
         string eBill = "";
-        bool sendHost = true;
         string msg = "";
+
         foreach (DataRow row in replyData.Rows)
         {
             userID = row["CusID"].ToString();
@@ -723,11 +728,19 @@ public class PostOfficeService
                 //eMail = row["E_Mail"].ToString();
                 //eBill = row["E_Bill"].ToString();
 
-                sendHost = new PostToHostAdapter(userID, receiveNumber, cusName, accNoBank, accNo, payWay, accID, bcycleCode, mobilePhone, eMail, eBill, eAgentInfo).SendToHost();
-
-                if (!sendHost)
+                // 郵局核印資料處理
+                string processReturnCode = new PostToHostAdapter(userID, receiveNumber, cusName, accNoBank, accNo, payWay, accID, bcycleCode, mobilePhone, eMail, eBill, eAgentInfo).ProcessAuthData();
+                switch (processReturnCode) // 處理核印結果代碼
                 {
-                    msg += "收件編號：" + receiveNumber + " 打主機異常 \n";
+                    case "9001": // 週期件(電話更新失敗)
+                        msg += "收件編號：" + receiveNumber + " 週期件(電話更新失敗) \n";
+                        break;
+                    case "9002": // 週期件(電文查詢第二卡人檔失敗)
+                        msg += "收件編號：" + receiveNumber + " 週期件(電文查詢第二卡人檔失敗) \n";
+                        break;
+                    case "N": // 系統發生未預期錯誤
+                        msg += "收件編號：" + receiveNumber + " 系統發生未預期錯誤 \n";
+                        break;
                 }
             }
             else
@@ -1223,10 +1236,15 @@ public class PostOfficeService
     //}
 
     // 判斷郵局回傳資訊
-    private bool CheckPostResultCode(string statusType, string checkFlag)
+    
+    /// <summary>
+    /// 判斷郵局回傳資訊回傳錯誤代碼：若為空白即為正常
+    /// </summary>
+    /// <param name="statusType">回覆狀況代號</param>
+    /// <param name="checkFlag">核印註記</param>
+    /// <returns>失敗代碼</returns>
+    private string CheckPostResultCode(string statusType, string checkFlag)
     {
-        bool result = true;
-
         if (statusType == "03"      // 已終止代繳
             || statusType == "06"   // 凍結戶或警示戶
             || statusType == "07"   // 業務支票專戶
@@ -1236,7 +1254,6 @@ public class PostOfficeService
             || statusType == "11"   // 轉出戶
             || statusType == "12"   // 拒絕往來戶
             || statusType == "13"   // 無此用戶編號
-            || statusType == "14"   // 用戶編號已存在
             || statusType == "16"   // 管制帳戶
             || statusType == "17"   // 掛失戶
             || statusType == "18"   // 異常交易帳戶
@@ -1244,7 +1261,7 @@ public class PostOfficeService
             || statusType == "91"   // 規定期限內未有扣款
             || statusType == "98")  // 其他
         {
-            result = false;
+            return statusType;
         }
 
         if (checkFlag == "1"        // 局帳號不符
@@ -1253,10 +1270,10 @@ public class PostOfficeService
             || checkFlag == "4"     // 印鑑不符
             || checkFlag == "9")    // 其他
         {
-            result = false;
+            return checkFlag;
         }
 
-        return result;
+        return string.Empty;
     }
 
     // 檔案加密
@@ -1294,6 +1311,49 @@ public class PostOfficeService
         foreach (FileInfo file in di.GetFiles())
         {
             file.Delete();
+        }
+    }
+
+    /// <summary>
+    /// 將核印失敗資料匯入「Auto_Pay_Auth_Fail」
+    /// </summary>
+    /// <param name="replyDate">批次日期</param>
+    /// <param name="errorCode">錯誤代碼</param>
+    /// <param name="postOfficeData">郵局postOfficeTemp資料</param>
+    private void ImportAuthFailData(string replyDate, string errorCode, DataRow postOfficeData)
+    {
+        string batchDate = replyDate.Replace("-", "").Replace("/", "");
+        
+        string sqlDelete = @"DELETE FROM Auto_Pay_Auth_Fail WHERE UploadFlag <> 'Y' AND DataType = '2' AND BatchDate = @SerialNumber AND DataType = @SerialNumber";
+        
+        string sqlText =
+            @"INSERT INTO Auto_Pay_Auth_Fail (BatchDate, SerialNumber, DataType, CustId, ErrorCode, IssueChannel, IssueDate, UploadFlag, CreateDate)
+                VALUES (@BatchDate, @SerialNumber, '2', @CustId, @ErrorCode, 'CSIP', @IssueDate, 'N', GETDATE())";
+        
+        try
+        {
+            string custId = postOfficeData["CusID"].ToString().Trim();                  // 客戶ID
+            string receiveNumber = postOfficeData["ReceiveNumber"].ToString().Trim();   // 收件編號
+            string modDate = postOfficeData["ModDate"].ToString().Trim();               // 鍵檔日期
+
+            // 刪除該筆未上傳主機的資料
+            SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlDelete };
+            sqlComm.Parameters.Add(new SqlParameter("@BatchDate", batchDate));
+            sqlComm.Parameters.Add(new SqlParameter("@SerialNumber", receiveNumber));
+            BRBase<Entity_SP>.Add(sqlComm, "Connection_System");
+            
+            // 新增核印失敗資料至「Auto_Pay_Auth_Fail」
+            sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlText };
+            sqlComm.Parameters.Add(new SqlParameter("@BatchDate", batchDate));
+            sqlComm.Parameters.Add(new SqlParameter("@SerialNumber", receiveNumber));
+            sqlComm.Parameters.Add(new SqlParameter("@CustId", custId));
+            sqlComm.Parameters.Add(new SqlParameter("@ErrorCode", errorCode));
+            sqlComm.Parameters.Add(new SqlParameter("@IssueDate", modDate));
+            BRBase<Entity_SP>.Add(sqlComm, "Connection_System");
+        }
+        catch (Exception exp)
+        {
+            BRBase<Entity_SP>.SaveLog(exp.Message);
         }
     }
 }

@@ -618,18 +618,12 @@ public partial class P010101070001 : PageBase
         this.txtAccNoBank.Enabled = blnEnabled;
         this.txtPayWay.Enabled = blnEnabled;
         this.txtAccID.Enabled = blnEnabled;
-        this.txtBcycleCode.Enabled = blnEnabled;
-
-        this.dropBcycleCode.Enabled = blnEnabled;
         this.txtMobilePhone.Enabled = blnEnabled;
         this.txtEmail.Enabled = blnEnabled;
         this.txtEBill.Enabled = blnEnabled;
         this.btnSubmit.Enabled = blnEnabled;
-        //this.dropCaseClass.Enabled = blnEnabled;
-        //this.txtCaseClass.Enabled = blnEnabled;
         this.txtPopulEmpNO.Enabled = blnEnabled;
         this.txtPopulNo.Enabled = blnEnabled;
-
 
         this.txtUserId.BackColor = Color.White;
     }

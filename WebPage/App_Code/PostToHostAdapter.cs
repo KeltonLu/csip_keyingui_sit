@@ -1,19 +1,21 @@
-﻿using System;
+﻿//******************************************************************
+//*  作    者：
+//*  功能說明：
+//*  創建日期：
+//*  修改紀錄：
+//*  <author>          <time>              <TaskID>                <desc>
+//* Ares_jhun          2022/09/19          RQ-2022-019375-000      EDDA需求調整：停發PCTI電文統一週期件處理(withholding.txt)
+//*******************************************************************
+
+using System;
 using System.Data;
-using System.Configuration;
 using System.Collections;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
+using System.Collections.Generic;
 using CSIPCommonModel.EntityLayer;
 using CSIPCommonModel.BusinessRules;
 using CSIPKeyInGUI.EntityLayer;
 using CSIPKeyInGUI.BusinessRules;
 using Framework.Common.Logging;
-using System.Collections.Generic;
 
 /// <summary>
 /// PostToHostAdapter 的摘要描述
@@ -351,6 +353,110 @@ public class PostToHostAdapter
         return result;
 
     }
+    
+    /// EDDA需求新增：20220928 批次處理停發PCTI電文統一週期件處理(withholding.txt) By Ares jhun
+    /// <summary>
+    /// 郵局核印資料處理
+    /// </summary>
+    /// <returns>F：系統發生未預期錯誤、9000：週期件、9001：週期件(電話更新失敗)、9002：週期件(電文查詢第二卡人檔失敗)</returns>
+    public string ProcessAuthData()
+    {
+        string sUserID = CommonFunction.GetSubString(userID, 0, 16);
+        bool jcdkQuery = true;  // 第二卡人檔「查詢」狀態
+        bool jcdkUpdate = true; // 第二卡人檔「更新」狀態
+        
+        // 讀取第二卡人檔
+        Hashtable htOutputP4_JCDK = new Hashtable(); // 查詢第二卡人檔下行
+        htOutputP4_JCDK = GetP4JCDK(sUserID, htOutputP4_JCDK);
+        if (htOutputP4_JCDK == null)
+        {
+            jcdkQuery = false;
+        }
+
+        // 異動customer_log記錄的Table
+        DataTable dtUpdateData = CommonFunction.GetDataTable();
+        
+        Hashtable htInputP4_JCDKS = new Hashtable(); // 更新使用的第二卡人檔上行
+        CommonFunction.GetViewStateHt(htOutputP4_JCDK, ref htInputP4_JCDKS); // 複製第二卡人檔資料
+        
+        bool mobilePhoneIsDiff = false; // 行動電話是否有異動
+        
+        // 若查詢第二卡人檔成功，則異動第二卡人檔(行動電話)，若更新失敗不影響後續流程
+        if (jcdkQuery)
+        {
+            //*比對<行動電話>
+            CommonFunction.ContrastData(htInputP4_JCDKS, dtUpdateData, mobilePhone, "MOBILE_PHONE", BaseHelper.GetShowText("01_01010800_011"));
+
+            if (dtUpdateData.Rows.Count > 0) // 行動電話比對後有異動
+            {
+                mobilePhoneIsDiff = true;
+                jcdkUpdate = UpdateP4_JCDKS(dtUpdateData, htInputP4_JCDKS);
+            }
+        }
+        
+        string accNoBank_No = accNoBank + "-" + accNo; // 扣繳帳號(銀行代號)-銀行帳號
+        
+        EntityAuto_Pay_Status eAuto_Pay_Status = new EntityAuto_Pay_Status
+        {
+            IsUpdateByTXT = "Y", // withholding.txt Y=CSIP、N=PCTI
+            Receive_Number = receiveNumber,
+            Cus_ID = userID,
+            Cus_Name = cusName,
+            AccNoBank = accNoBank,
+            Acc_No = accNoBank_No,
+            Pay_Way = payWay,
+            IsCTCB = "Y",
+            DateTime = DateTime.Now
+        };
+
+        // 更新資料庫異動狀態:Table:Auto_Pay_Status,Auto_Pay
+        var result = UpdateAutoPayStatus(mobilePhoneIsDiff, eAuto_Pay_Status, receiveNumber, userID);
+        if (!result)
+        {
+            return "F";
+        }
+
+        string sendHostResultCode; // 9000(週期件) | 9001(週期件(電話更新失敗)) | 9002(週期件(電文查詢第二卡人檔失敗))
+        
+        // 判斷電話異動與JCDK電文狀態
+        if (!jcdkQuery)
+        {
+            sendHostResultCode = "9002"; // 週期件(電文查詢第二卡人檔失敗)：電文查詢第二卡人檔失敗
+        }
+        else if (mobilePhoneIsDiff)
+        {
+            if (jcdkUpdate)
+            {
+                sendHostResultCode = "9000"; // 週期件：電話有異動，發JCDK電文更新「成功」
+            }
+            else
+            {
+                sendHostResultCode = "9001"; // 週期件(電話更新失敗)：電話有異動，發JCDK電文更新「失敗」
+            }
+        }
+        else
+        {
+            sendHostResultCode = "9000"; // 週期件：電話無異動，「不用」發JCDK電文
+        }
+
+        result = BRFORM_COLUMN.UpdatePostOfficeTemp(receiveNumber, "S", sendHostResultCode);
+
+        if (result) // 若【PostOffice_Temp】資料更新
+        {
+            // 將「扣繳帳號、DD_ID、扣繳方式」寫入 customer_log
+            DataTable logData = CommonFunction.GetDataTable();
+            CommonFunction.UpdateLog("", accNoBank_No, "扣繳帳號", logData); // 扣繳帳號
+            CommonFunction.UpdateLog("", payWay, BaseHelper.GetShowText("01_01010800_008"), logData); // 扣繳方式
+            CommonFunction.UpdateLog("", accID, BaseHelper.GetShowText("01_01010800_009"), logData); // DD_ID
+            
+            // 記錄異動欄位
+            RecordChangeColumns(logData, eAgentInfo, userID, "P4", "01010800", receiveNumber);
+            
+            return sendHostResultCode;
+        }
+
+        return "F";
+    }
 
     #region 獲取主機資料
 
@@ -587,6 +693,57 @@ public class PostToHostAdapter
             return false;
         }
     }
+    
+    /// EDDA需求新增 By Ares jhun
+    /// <summary>
+    /// 異動第二卡人檔(行動電話)
+    /// </summary>
+    /// <param name="dtUpdateData"></param>
+    /// <param name="htInputP4_JCDKS"></param>
+    /// <returns></returns>
+    private bool UpdateP4_JCDKS(DataTable dtUpdateData, Hashtable htInputP4_JCDKS)
+    {
+        string JCDKResultCode = string.Empty;
+
+        try
+        {
+            // 提交修改主機資料
+            Hashtable htOutputP4_JCDKS = MainFrameInfo.GetMainFrameInfo(HtgType.P4_JCDK, htInputP4_JCDKS, false, "2", eAgentInfo);
+
+            if (!htOutputP4_JCDKS.Contains("HtgMsg"))
+            {
+                JCDKResultCode = "0000";
+                // 記錄異動欄位
+                RecordChangeColumns(dtUpdateData, eAgentInfo, userID, "P4", "01010800", receiveNumber);
+                hostMsg += htOutputP4_JCDKS["HtgSuccess"].ToString();// 主機返回成功訊息
+            }
+            else
+            {
+                // 異動主機資料失敗
+                if (htOutputP4_JCDKS["HtgMsgFlag"].ToString() == "0")// 若主機訊息標識為"0",顯示到主機訊息,否則主機訊息標識為"1",則顯示到端末訊息
+                {
+                    JCDKResultCode = htOutputP4_JCDKS["MESSAGE_TYPE"].ToString().Trim();
+                    hostMsg += htOutputP4_JCDKS["HtgMsg"].ToString();
+                    clientMsg = "第二卡人檔異動失敗";// 01_01010800_014
+                }
+                else
+                {
+                    clientMsg += htOutputP4_JCDKS["HtgMsg"].ToString();
+                }
+
+                // 2020.07.07 (A) Ray 避免JCDKResultCode 空值情況
+                if (string.IsNullOrEmpty(JCDKResultCode))
+                    JCDKResultCode = "_014";
+            }
+        }
+        catch (Exception ex)
+        {
+            Logging.Log("讀取第二卡人檔失敗，" + ex.Message, LogState.Error, LogLayer.None);
+            JCDKResultCode = "_014";
+        }
+
+        return JCDKResultCode == "0000";
+    }
 
     #endregion
 
@@ -626,7 +783,7 @@ public class PostToHostAdapter
     /// <param name="dtblUpdateData"></param>
     /// <param name="mobilePhone"></param>
     /// <param name="eMail"></param>
-    private void CompareHost(Hashtable htInputP4_JCDKS, DataTable dtblUpdateData, string mobilePhone, string eMail)
+    private void CompareHost(Hashtable htInputP4_JCDKS, DataTable dtblUpdateData, string mobilePhone, string eMail = "")
     {
         // 行動電話
         CommonFunction.ContrastData(htInputP4_JCDKS, dtblUpdateData, mobilePhone, "MOBILE_PHONE", BaseHelper.GetShowText("01_01010800_011"));
@@ -757,6 +914,50 @@ public class PostToHostAdapter
         }
 
         return true;
+    }
+    
+    /// EDDA需求新增 By Ares jhun
+    /// <summary>
+    /// 更新資料庫異動狀態
+    /// </summary>
+    /// <param name="mobilePhoneIsDiff">行動電話是否有異動</param>
+    /// <param name="eAuto_Pay_Status"></param>
+    /// <param name="receiveNumber">收件編號</param>
+    /// <param name="cusID">客戶ID</param>
+    private bool UpdateAutoPayStatus(bool mobilePhoneIsDiff, EntityAuto_Pay_Status eAuto_Pay_Status, string receiveNumber, string cusID)
+    {
+        // 新增資料【Auto_Pay_Status】
+        if (BRAuto_pay_status.AddNewEntity(eAuto_Pay_Status))
+        {
+            if (eAuto_Pay_Status.IsUpdateByTXT == "Y")
+            {
+                hostMsg += "該筆異動後銀行帳號已經存放置[自扣案件處理狀態]表中"; // 01_01010800_018
+            }
+        }
+
+        Logging.Log("主機資料修改完畢"); // 01_01010800_015
+
+        if (!BRTRANS_NUM.UpdateTransNum("A14"))
+        {
+            Logging.Log("TRANS_NUM資料庫業務類失敗", LogState.Error, LogLayer.None);
+        }
+
+        // 更新資料庫異動狀態
+        EntityAUTO_PAY eAutoPay = new EntityAUTO_PAY
+        {
+            Upload_Flag = "Y",
+            mod_date = DateTime.Now.ToString("yyyyMMdd"), // 手機(第二卡人檔有被異動時(行動電話，新增或異動後該欄位填入Y)
+            CellP_Email_Setting = mobilePhoneIsDiff ? "Y" : "N", // 週期件註記(二KEY完自扣資料被送至主機TEMP檔者)
+            OutputByTXT_Setting = eAuto_Pay_Status.IsUpdateByTXT
+        };
+
+        string[] updateColumns = { EntityAUTO_PAY.M_Upload_Flag, EntityAUTO_PAY.M_mod_date,
+                                   EntityAUTO_PAY.M_CellP_Email_Setting, EntityAUTO_PAY.M_OutputByTXT_Setting };
+
+        if (BRAUTO_PAY.UpdateSucc(eAutoPay, updateColumns, cusID, "0", "Y", receiveNumber)) return true;
+        
+        Logging.Log("Auto_Pay更新失敗", LogState.Error, LogLayer.None);
+        return false;
     }
 
     #region 2020.05.14 Ray 測試回傳訊息
