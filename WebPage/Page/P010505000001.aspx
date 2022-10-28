@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="P010504000001.aspx.cs" Inherits="P010504000001" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="P010505000001.aspx.cs" Inherits="P010505000001" %>
 
 <%@ Register Assembly="Framework.WebControls" Namespace="Framework.WebControls" TagPrefix="cc1" %>
 <%@ Register Src="../Common/Controls/CustUpdateProgress.ascx" TagName="CustUpdateProgress" TagPrefix="uc1" %>
@@ -30,11 +30,11 @@
 // 驗證輸入資訊
 function CheckInputValue()
 {
-    var txtPostRtnCode = $('#txtPostRtnCode').val().Trim();
-    var txtPostRtnMsg = $('#txtPostRtnMsg').val().Trim();
+    var txtEddaRtnCode = $('#txtEddaRtnCode').val().Trim();
+    var txtEddaRtnMsg = $('#txtEddaRtnMsg').val().Trim();
     
     // 控制項代碼
-    if(txtPostRtnCode === '' || txtPostRtnMsg === '')
+    if(txtEddaRtnCode === '' || txtEddaRtnMsg === '')
 	{
 		alert('代碼或訊息不能是空白!');
 		return false;
@@ -50,41 +50,32 @@ function CheckInputValue()
         <uc1:custupdateprogress id="CustUpdateProgress1" runat="server" />
         <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
             <ContentTemplate>
-                <cc1:custtextbox id="txtPostOfficeRtnInfoSeq" runat="server" Visible="False"></cc1:custtextbox>
+                <cc1:custtextbox id="txtEddaRtnInfoSeq" runat="server" Visible="False"></cc1:custtextbox>
                 <table cellpadding="0" cellspacing="1" width="100%">
                     <tr class="itemTitle">
-                        <td colspan="6">
+                        <td colspan="4">
                             <li>
-                                <cc1:custlabel id="lblTitle" runat="server" ShowID="01_05040000_000"></cc1:custlabel>
+                                <cc1:custlabel runat="server" ShowID="01_05050000_000"></cc1:custlabel>
                             </li>
                         </td>
                     </tr>
                     <tr class="trOdd">
-                        <td style="text-align: right; width: 10%">
-                            <cc1:custlabel runat="server" ShowID="01_05040000_008"></cc1:custlabel>：
+                        <td style="text-align: right; width: 15%">
+                            <cc1:custlabel runat="server" ShowID="01_05050000_008"></cc1:custlabel>：
                         </td>
-                        <td style="text-align: left; width: 10%">
-                            <cc1:CustDropDownList runat="server" ID="RtnTypeList" AutoPostBack="False" Width="100px" kind="select">
-                                <asp:ListItem Value="1">狀況代號</asp:ListItem>
-                                <asp:ListItem Value="2">核對註記</asp:ListItem>
-                            </cc1:CustDropDownList>
+                        <td style="text-align: left; width: 15%">
+                            <cc1:custtextbox id="txtEddaRtnCode" runat="server" MaxLength="2"></cc1:custtextbox>
                         </td>
-                        <td style="text-align: right; width: 10%">
-                            <cc1:custlabel runat="server" ShowID="01_05040000_009"></cc1:custlabel>：
+                        <td style="text-align: right; width: 15%">
+                            <cc1:custlabel runat="server" ShowID="01_05050000_009"></cc1:custlabel>：
                         </td>
-                        <td style="text-align: left; width: 10%">
-                            <cc1:custtextbox id="txtPostRtnCode" runat="server" MaxLength="2"></cc1:custtextbox>
-                        </td>
-                        <td style="text-align: right; width: 10%">
-                            <cc1:custlabel runat="server" ShowID="01_05040000_010"></cc1:custlabel>：
-                        </td>
-                        <td style="text-align: left; width: 50%">
-                            <cc1:custtextbox id="txtPostRtnMsg" runat="server" Width="400px" MaxLength="9"></cc1:custtextbox>
+                        <td style="text-align: left; width: 55%">
+                            <cc1:custtextbox id="txtEddaRtnMsg" runat="server" Width="400px" MaxLength="9"></cc1:custtextbox>
                         </td>
                     </tr>
                     <tr class="trEven">
                         <td style="text-align: right; width: 15%">
-                            <cc1:custlabel runat="server" ShowID="01_05040000_011"></cc1:custlabel>：
+                            <cc1:custlabel runat="server" ShowID="01_05050000_010"></cc1:custlabel>：
                         </td>
                         <td style="text-align: left; width: 15%">
                             <cc1:CustDropDownList runat="server" ID="NeedSendHostList" AutoPostBack="False" Width="100px" kind="select">
@@ -93,28 +84,28 @@ function CheckInputValue()
                             </cc1:CustDropDownList>
                         </td>
                         <td align="right" style="width: 15%">
-                            <cc1:custlabel runat="server" ShowID="01_05040000_012"></cc1:custlabel>：
+                            <cc1:custlabel runat="server" ShowID="01_05050000_011"></cc1:custlabel>：
                         </td>
-                        <td style="width: 55%" colspan="3">
+                        <td style="width: 55%">
                             <cc1:custtextbox runat="server" id="txtSendHostMsg" Width="400px" MaxLength="9"></cc1:custtextbox>
                         </td>
                     </tr>
                     <tr class="itemTitle">
-                        <td colspan="6" align="center">
+                        <td colspan="4" align="center">
                             <cc1:CustButton id="btnADD" runat="server" Cssclass="smallButton" OnClick="BtnAddClick"  
-                                OnClientClick="return CheckInputValue();" DisabledWhenSubmit="False" ShowID="01_05040000_001" />
+                                OnClientClick="return CheckInputValue();" DisabledWhenSubmit="False" ShowID="01_05050000_001" />
                             &nbsp;|&nbsp;
                             <cc1:CustButton id="btnOK" runat="server" Cssclass="smallButton" OnClick="BtnOkClick" 
-                                OnClientClick="return CheckInputValue();" DisabledWhenSubmit="False" ShowID="01_05040000_004" />
+                                OnClientClick="return CheckInputValue();" DisabledWhenSubmit="False" ShowID="01_05050000_004" />
                             &nbsp;|&nbsp;
                             <cc1:CustButton runat="server" Cssclass="smallButton" OnClick="BtnCancelClick" 
-                                            DisabledWhenSubmit="False" ShowID="01_05040000_005" />
+                                            DisabledWhenSubmit="False" ShowID="01_05050000_005" />
                         </td>
                     </tr>
                     <tr class="itemTitle">
-                        <td colspan="6">
+                        <td colspan="4">
                             <li>
-                                <cc1:custlabel runat="server" ShowID="01_05040000_006"></cc1:custlabel>
+                                <cc1:custlabel runat="server" ShowID="01_05050000_006"></cc1:custlabel>
                             </li>
                         </td>
                     </tr>
@@ -125,27 +116,20 @@ function CheckInputValue()
                                 onrowdatabound="GridViewRowDataBound" OnRowCommand="GridViewRowSelect"
                                               OnRowDeleting="GridViewRowDelete">
                                 <Columns>
-                                    <asp:BoundField DataField="PostOfficeRtnInfoSeq" ItemStyle-cssclass="hiddenCol" HeaderStyle-CssClass="hiddenCol">
+                                    <asp:BoundField DataField="EddaRtnInfoSeq" ItemStyle-cssclass="hiddenCol" HeaderStyle-CssClass="hiddenCol">
                                         <itemstyle width="0%" horizontalalign="Center"/>
-                                    </asp:BoundField>
-                                    <%--回覆類別--%>
-                                    <asp:BoundField DataField="RtnType" ItemStyle-cssclass="hiddenCol" HeaderStyle-CssClass="hiddenCol">
-                                        <itemstyle width="0%" horizontalalign="Center"/>
-                                    </asp:BoundField>
-                                    <asp:BoundField DataField="RtnTypeName">
-                                        <itemstyle width="10%" horizontalalign="Center"/>
                                     </asp:BoundField>
                                     <%--回覆代碼--%>
-                                    <asp:BoundField DataField="PostRtnCode">
-                                        <itemstyle width="10%" horizontalalign="Center"/>
+                                    <asp:BoundField DataField="EddaRtnCode">
+                                        <itemstyle width="15%" horizontalalign="Center"/>
                                     </asp:BoundField>
                                     <%--回覆訊息--%>
-                                    <asp:BoundField DataField="PostRtnMsg">
+                                    <asp:BoundField DataField="EddaRtnMsg">
                                         <itemstyle width="30%" horizontalalign="LEFT"/>
                                     </asp:BoundField>
                                     <%--核印失敗是否送主機--%>
                                     <asp:BoundField DataField="NeedSendHost">
-                                        <itemstyle width="10%" horizontalalign="Center"/>
+                                        <itemstyle width="15%" horizontalalign="Center"/>
                                     </asp:BoundField>
                                     <%--給主機的簡訊--%>
                                     <asp:BoundField DataField="SendHostMsg">

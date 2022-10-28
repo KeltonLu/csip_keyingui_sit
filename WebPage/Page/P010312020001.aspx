@@ -107,7 +107,7 @@
                                 NumBreak="0" NumOmit="0" SetBreak="False" SetOmit="False" ShowID="01_03120200_017"
                                 StickHeight="False"></cc1:CustLabel></td>
                         <td style="width: 80%">
-                            <cc1:CustDropDownList ID="dropPostRtnMsg" kind="select" runat="server" AutoPostBack="False" />
+                            <cc1:CustDropDownList ID="RtnCodeDropDownList" kind="select" runat="server" AutoPostBack="False" />
                         </td>
                     </tr>
                     <tr class="trOdd">
@@ -149,34 +149,37 @@
                                         <itemstyle width="5%" horizontalalign="Center" /><%--序號--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="BatchDate">
-                                        <itemstyle width="10%" horizontalalign="Center" /><%--批次日期--%>
+                                        <itemstyle width="6%" horizontalalign="Center" /><%--批次日期--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="AuthCode">
-                                        <itemstyle width="10%" horizontalalign="Center" /><%--收件編號--%>
+                                        <itemstyle width="6%" horizontalalign="Center" /><%--收件編號--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="Other_Bank_Code_L">
-                                        <itemstyle width="10%" horizontalalign="Center" /><%--收受行(核印行)--%>
+                                        <itemstyle width="6%" horizontalalign="Center" /><%--收受行(核印行)--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="BankName">
-                                        <itemstyle width="12%" horizontalalign="Center" /><%--收受行名稱(核印行)--%>
+                                        <itemstyle width="10%" horizontalalign="Center" /><%--收受行名稱(核印行)--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="Other_Bank_Cus_ID">
-                                        <itemstyle width="13%" horizontalalign="Center" /><%--委繳戶統編\身分證字號--%>
+                                        <itemstyle width="15%" horizontalalign="Center" /><%--委繳戶統編\身分證字號--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="Other_Bank_Acc_No">
-                                        <itemstyle width="6%" horizontalalign="Center" /><%--委繳戶帳號--%>
+                                        <itemstyle width="9%" horizontalalign="Center" /><%--委繳戶帳號--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="Cus_ID">
                                         <itemstyle width="8%" horizontalalign="Center" /><%--持卡人ID--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="Apply_Type">
-                                        <itemstyle width="8%" horizontalalign="Center" /><%--申請類別--%>
+                                        <itemstyle width="5%" horizontalalign="Center" /><%--申請類別--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="Status">
-                                        <itemstyle width="8%" horizontalalign="Center" /><%--成功/失敗--%>
+                                        <itemstyle width="5%" horizontalalign="Center" /><%--成功/失敗--%>
                                     </asp:BoundField>
                                     <asp:BoundField DataField="ReplyInfoName">
                                         <itemstyle width="15%" horizontalalign="left"/><%--回覆訊息--%>
+                                    </asp:BoundField>
+                                    <asp:BoundField DataField="NeedSendHost">
+                                        <itemstyle width="10%" horizontalalign="Center"/><%--核印失敗是否上送主機--%>
                                     </asp:BoundField>
                                 </Columns>
                             </cc1:CustGridView>

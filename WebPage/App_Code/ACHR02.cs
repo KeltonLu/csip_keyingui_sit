@@ -933,7 +933,7 @@ public class ACHR02 : Quartz.IJob
                        CONVERT(varchar(4), SUBSTRING(S_DATE, 1, 4) + 1911) + SUBSTRING(S_DATE, 5, 4), 'N', GETDATE()
                 FROM ACHR02_TMP A
                 WHERE NOT EXISTS(SELECT * FROM Auto_Pay_Auth_Fail B WHERE B.ReceiveNumber = LEFT(A.S_Remark, 13))
-                 AND Reply_Info IN ('1', '2', '3', '5', '6', '7', '8', 'B', 'C', 'F', 'G', 'I', 'J')";
+                 AND Reply_Info IN (SELECT Ach_Rtn_Code FROM Ach_Rtn_Info WHERE NeedSendHost = 'Y')";
 
         try
         {

@@ -20,12 +20,11 @@
 <link href="../App_Themes/Default/global.css" type="text/css" rel="stylesheet" />
     
 <style type="text/css">
-    .hiddenCol
-    {
+    .hiddenCol {
         display:none;
     }
 </style>
-
+    
 <script type="text/javascript" language="javascript">
 
 // 驗證輸入資訊
@@ -33,11 +32,9 @@ function CheckInputValue()
 {
     var txtAchRtnCode = $('#txtAchRtnCode').val().Trim();
     var txtAchRtnMsg = $('#txtAchRtnMsg').val().Trim();
-    var txtEddaRtnCode = $('#txtEddaRtnCode').val().Trim();
-    var txtEddaRtnMsg = $('#txtEddaRtnMsg').val().Trim();
     
     // 控制項代碼
-    if(txtAchRtnCode === '' || txtAchRtnMsg === '' || txtEddaRtnCode === '' || txtEddaRtnMsg === '')
+    if(txtAchRtnCode === '' || txtAchRtnMsg === '')
 	{
 		alert('代碼或訊息不能是空白!');
 		return false;
@@ -58,47 +55,50 @@ function CheckInputValue()
                     <tr class="itemTitle">
                         <td colspan="4">
                             <li>
-                                <cc1:custlabel id="lblTitle" runat="server" ShowID="01_05030000_000"></cc1:custlabel>
+                                <cc1:custlabel runat="server" ShowID="01_05030000_000"></cc1:custlabel>
                             </li>
                         </td>
                     </tr>
                     <tr class="trOdd">
                         <td style="text-align: right; width: 10%">
-                            <cc1:custlabel id="labelAchRtnCode" runat="server" ShowID="01_05030000_007"></cc1:custlabel>：
+                            <cc1:custlabel runat="server" ShowID="01_05030000_008"></cc1:custlabel>：
                         </td>
                         <td style="text-align: left; width: 40%">
-                            <cc1:custtextbox id="txtAchRtnCode" runat="server" Width="400px" MaxLength="2"></cc1:custtextbox>
+                            <cc1:custtextbox id="txtAchRtnCode" runat="server" Width="400px" MaxLength="1"></cc1:custtextbox>
                         </td>
                         <td style="text-align: right; width: 10%">
-                            <cc1:custlabel id="labelAchRtnMsg" runat="server" ShowID="01_05030000_008"></cc1:custlabel>：
+                            <cc1:custlabel runat="server" ShowID="01_05030000_009"></cc1:custlabel>：
                         </td>
                         <td style="text-align: left; width: 40%">
-                            <cc1:custtextbox id="txtAchRtnMsg" runat="server" Width="400px"></cc1:custtextbox>
+                            <cc1:custtextbox id="txtAchRtnMsg" runat="server" Width="400px" MaxLength="9"></cc1:custtextbox>
                         </td>
                     </tr>
                     <tr class="trEven">
-                        <td style="text-align: right; width: 10%">
-                            <cc1:custlabel id="labelEddaRtnCode" runat="server" ShowID="01_05030000_009"></cc1:custlabel>：
+                        <td style="text-align: right; width: 15%">
+                            <cc1:custlabel runat="server" ShowID="01_05040000_010"></cc1:custlabel>：
                         </td>
-                        <td style="text-align: left; width: 40%">
-                            <cc1:custtextbox id="txtEddaRtnCode" runat="server" Width="400px" MaxLength="2"></cc1:custtextbox>
+                        <td style="text-align: left; width: 15%">
+                            <cc1:CustDropDownList runat="server" ID="NeedSendHostList" AutoPostBack="False" Width="100px" kind="select">
+                                <asp:ListItem Value="Y">是</asp:ListItem>
+                                <asp:ListItem Value="N">否</asp:ListItem>
+                            </cc1:CustDropDownList>
                         </td>
-                        <td style="text-align: right; width: 10%">
-                            <cc1:custlabel id="labelEddaRtnMsg" runat="server" ShowID="01_05030000_010"></cc1:custlabel>：
+                        <td align="right" style="width: 15%">
+                            <cc1:custlabel runat="server" ShowID="01_05040000_011"></cc1:custlabel>：
                         </td>
-                        <td style="text-align: left; width: 40%">
-                            <cc1:custtextbox id="txtEddaRtnMsg" runat="server" Width="400px"></cc1:custtextbox>
+                        <td style="width: 55%">
+                            <cc1:custtextbox runat="server" id="txtSendHostMsg" Width="400px" MaxLength="9"></cc1:custtextbox>
                         </td>
                     </tr>
                     <tr class="itemTitle">
                         <td colspan="4" align="center">
-                            <cc1:CustButton id="btnADD" runat="server" Cssclass="smallButton" OnClick="btnADD_Click"  
+                            <cc1:CustButton id="btnADD" runat="server" Cssclass="smallButton" OnClick="BtnAddClick"  
                                 OnClientClick="return CheckInputValue();" DisabledWhenSubmit="False" ShowID="01_05030000_001" />
                             &nbsp;|&nbsp;
-                            <cc1:CustButton id="btnOK" runat="server" Cssclass="smallButton" OnClick="btnOK_Click" 
+                            <cc1:CustButton id="btnOK" runat="server" Cssclass="smallButton" OnClick="BtnOkClick" 
                                 OnClientClick="return CheckInputValue();" DisabledWhenSubmit="False" ShowID="01_05030000_004" />
                             &nbsp;|&nbsp;
-                            <cc1:CustButton id="btnCancel" runat="server" Cssclass="smallButton" OnClick="btnCancel_Click" 
+                            <cc1:CustButton runat="server" Cssclass="smallButton" OnClick="BtnCancelClick" 
                                             DisabledWhenSubmit="False" ShowID="01_05030000_005" />
                         </td>
                     </tr>
@@ -111,34 +111,39 @@ function CheckInputValue()
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <cc1:custgridview id="grvFUNCTION" runat="server" allowsorting="True" pagerid="gpList" PageSize="100"
+                            <cc1:custgridview id="gridView" runat="server" allowsorting="True" pagerid="gpList" PageSize="100"
                                 width="100%" borderwidth="0px" cellpadding="0" cellspacing="1" borderstyle="Solid"
-                                onrowdatabound="grvFUNCTION_RowDataBound" OnRowCommand="grvFUNCTION_RowSelecting">
+                                onrowdatabound="GridViewRowDataBound" OnRowCommand="GridViewRowSelect"
+                                              OnRowDeleting="GridViewRowDelete">
                                 <Columns>
                                     <asp:BoundField DataField="AchRtnInfoSeq" ItemStyle-cssclass="hiddenCol" HeaderStyle-CssClass="hiddenCol">
-                                        <itemstyle width="10%" horizontalalign="Center"/>
+                                        <itemstyle width="0%" horizontalalign="Center"/>
                                     </asp:BoundField>
-                                    <%--ACH回覆代碼--%>
+                                    <%--回覆代碼--%>
                                     <asp:BoundField DataField="Ach_Rtn_Code">
-                                        <itemstyle width="10%" horizontalalign="Center"/>
+                                        <itemstyle width="15%" horizontalalign="Center"/>
                                     </asp:BoundField>
-                                    <%--ACH回覆訊息--%>
+                                    <%--回覆訊息--%>
                                     <asp:BoundField DataField="Ach_Rtn_Msg">
-                                        <itemstyle width="35%" horizontalalign="LEFT"/>
+                                        <itemstyle width="30%" horizontalalign="LEFT"/>
                                     </asp:BoundField>
-                                    <%--EDDA回覆代碼--%>
-                                    <asp:BoundField DataField="EDDA_Rtn_Code">
-                                        <itemstyle width="10%" horizontalalign="Center"/>
+                                    <%--核印失敗是否送主機--%>
+                                    <asp:BoundField DataField="NeedSendHost">
+                                        <itemstyle width="15%" horizontalalign="Center"/>
                                     </asp:BoundField>
-                                    <%--EDDA回覆訊息--%>
-                                    <asp:BoundField DataField="EDDA_Rtn_Msg">
-                                        <itemstyle width="35%" horizontalalign="LEFT"/>
+                                    <%--給主機的簡訊--%>
+                                    <asp:BoundField DataField="SendHostMsg">
+                                        <itemstyle width="25%" horizontalalign="LEFT"/>
                                     </asp:BoundField>
+                                    <%--功能--%>
                                     <asp:TemplateField>
-                                        <itemstyle width="10%" horizontalalign="Center" />
+                                        <itemstyle width="15%" horizontalalign="Center" />
                                         <itemtemplate>
-                                            <cc1:CustLinkButton ID="btnModify" runat="server" Style="width: 50px;" CausesValidation="False" 
-                                                CommandName="Select"/>
+                                            <cc1:CustLinkButton ID="btnModify" runat="server" Style="width: 50px;" CausesValidation="False"
+                                                                CommandName="Modify"/>
+                                            &nbsp;&nbsp;
+                                            <cc1:CustLinkButton ID="btnDelete" runat="server" Style="width: 50px;" CausesValidation="False"
+                                                                CommandName="Delete"/>
                                         </itemtemplate>
                                     </asp:TemplateField>
                                 </Columns>
@@ -149,7 +154,7 @@ function CheckInputValue()
                                 <PagerSettings Visible="False" />
                                 <EmptyDataRowStyle HorizontalAlign="Center" />
                             </cc1:custgridview>
-                            <cc1:gridpager id="gpList" runat="server" PageSize="100" custominfotextalign="Right" prevpagetext="<前一頁" alwaysshow="True" onpagechanged="gpList_PageChanged">
+                            <cc1:gridpager id="gpList" runat="server" PageSize="100" custominfotextalign="Right" prevpagetext="<前一頁" alwaysshow="True" onpagechanged="GridViewPageChanged">
                             </cc1:gridpager>
                         </td>
                     </tr>

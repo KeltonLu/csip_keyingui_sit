@@ -515,17 +515,17 @@ WHERE a.UploadDate = @UploadDate
         /// 創建日期：2022/10/05
         /// 修改紀錄：
         /// </summary>
-        /// <param name="BatchDateStart">批次起日</param>
-        /// <param name="BatchDateEnd">批次迄日</param>
+        /// <param name="batchDateStart">批次起日</param>
+        /// <param name="batchDateEnd">批次迄日</param>
         /// <param name="reportType"></param>
-        /// <param name="postRtnMsg"></param>
+        /// <param name="rtnCode"></param>
         /// <param name="agentName"></param>
         /// <param name="pathFile"></param>
         /// <param name="msgID"></param>
         /// <param name="blSuccess"></param>
         /// <param name="blFail"></param>
         /// <returns></returns>
-        public static bool CreateExcelFile_EDDAR12(string BatchDateStart, string BatchDateEnd, string reportType, string postRtnMsg, string agentName, ref string pathFile, ref string msgID, bool blSuccess, bool blFail)
+        public static bool CreateExcelFile_EDDAR12(string batchDateStart, string batchDateEnd, string reportType, string rtnCode, string agentName, ref string pathFile, ref string msgID, bool blSuccess, bool blFail)
         {
 
             try
@@ -534,10 +534,11 @@ WHERE a.UploadDate = @UploadDate
                 CheckDirectory(ref pathFile);
 
                 // 取要下載的資料
-                DataTable dtblData_EDDAR12 = BRExcel_File.getData_EDDAR12(BatchDateStart, BatchDateEnd, reportType, postRtnMsg);
-                if (null == dtblData_EDDAR12)
+                int totalCount = 0;
+                DataTable dt = GetDataEddaAr12(batchDateStart, batchDateEnd, reportType, rtnCode, ref totalCount);
+                if (null == dt)
                     return false;
-                if (dtblData_EDDAR12.Rows.Count == 0)
+                if (dt.Rows.Count == 0)
                 {
                     msgID = "01_03110200_001";
                     return false;
@@ -548,7 +549,7 @@ WHERE a.UploadDate = @UploadDate
                 string excelPathFile = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("ReportTemplate") + "EDDAR12.xls";
                 FileStream fs = new FileStream(excelPathFile, FileMode.Open);
                 HSSFWorkbook wb = new HSSFWorkbook(fs);
-                ExportExcelForNPOI(dtblData_EDDAR12, ref wb, 7, "EDDAR12授權成功失敗報表"); // Content start index = 8;
+                ExportExcelForNPOI(dt, ref wb, 7, "EDDAR12授權成功失敗報表"); // Content start index = 8;
                 ISheet sheet = wb.GetSheet("EDDAR12授權成功失敗報表");
                 Int32 intNumS = 0;
                 Int32 intNumF = 0;
@@ -575,7 +576,7 @@ WHERE a.UploadDate = @UploadDate
                     sheet.GetRow(row).CreateCell(1).CellStyle.Alignment = HorizontalAlignment.Center;
                 }
                 // 拋檔日
-                sheet.GetRow(2).GetCell(1).SetCellValue(BatchDateStart + " ~ " + BatchDateEnd);
+                sheet.GetRow(2).GetCell(1).SetCellValue(batchDateStart + " ~ " + batchDateEnd);
                 // 列印經辦
                 sheet.GetRow(3).GetCell(1).SetCellValue(agentName);
                 // 列印日期
@@ -588,23 +589,23 @@ WHERE a.UploadDate = @UploadDate
                 HSSFCellStyle total = (HSSFCellStyle)wb.CreateCellStyle();
                 //文字置中
                 total.VerticalAlignment = VerticalAlignment.Center;
-                HSSFFont total_font = (HSSFFont)wb.CreateFont();
+                HSSFFont hssfFont = (HSSFFont)wb.CreateFont();
                 // cell format
                 total.DataFormat = HSSFDataFormat.GetBuiltinFormat("@");
                 //字體尺寸
-                total_font.FontHeightInPoints = 12;
-                total_font.FontName = "新細明體";
-                total_font.Boldweight = (short)NPOI.SS.UserModel.FontBoldWeight.Bold;
-                total.SetFont(total_font);
+                hssfFont.FontHeightInPoints = 12;
+                hssfFont.FontName = "新細明體";
+                hssfFont.Boldweight = (short)FontBoldWeight.Bold;
+                total.SetFont(hssfFont);
                 #endregion 
                 // 成功, 失敗計數
                 for (int row = 7; row < sheet.LastRowNum + 1; row++)
                 {
-                    if (sheet.GetRow(row).GetCell(8).StringCellValue.ToString() == "成功")
+                    if (sheet.GetRow(row).GetCell(8).StringCellValue == "成功")
                     {
                         intNumS++;
                     }
-                    else if (sheet.GetRow(row).GetCell(8).StringCellValue.ToString() == "失敗")
+                    else if (sheet.GetRow(row).GetCell(8).StringCellValue == "失敗")
                     {
                         intNumF++;
                     }
@@ -653,9 +654,6 @@ WHERE a.UploadDate = @UploadDate
             {
                 Logging.Log(ex.ToString(), LogState.Error, LogLayer.BusinessRule);
                 throw ex;
-            }
-            finally
-            {
             }
         }
 
@@ -1060,12 +1058,16 @@ INNER JOIN [dbo].[PostOffice_Detail] e WITH(NOLOCK) ON a.ReceiveNumber = e.Recei
         /// 創建日期：2022/10/05
         /// 修改紀錄：
         /// </summary>
-        /// <param name="BatchDateStart">批次起日</param>
-        /// <param name="BatchDateEnd">批次迄日</param>
+        /// <param name="batchDateStart">批次起日</param>
+        /// <param name="batchDateEnd">批次迄日</param>
         /// <param name="reportType"></param>
-        /// <param name="postRtnMsg"></param>
+        /// <param name="rtnCode"></param>
+        /// <param name="totalCount">總筆數</param>
+        /// <param name="currentPageIndex">分頁頁數</param>
+        /// <param name="pageSize">每頁筆數</param>
         /// <returns></returns>
-        public static DataTable getData_EDDAR12(string BatchDateStart, string BatchDateEnd, string reportType, string postRtnMsg)
+        public static DataTable GetDataEddaAr12(string batchDateStart, string batchDateEnd, string reportType, string rtnCode, 
+            ref int totalCount, int currentPageIndex = 0, int pageSize = 0)
         {
             try
             {
@@ -1079,7 +1081,11 @@ INNER JOIN [dbo].[PostOffice_Detail] e WITH(NOLOCK) ON a.ReceiveNumber = e.Recei
                                             eap.Cus_ID, 
                                             eap.Apply_Type,
                                             CASE WHEN eap.Reply_Info IN ('A0', 'A4') THEN N'成功' ElSE N'失敗' END AS Status,
-                                            mpc2.PROPERTY_NAME AS ReplyInfoName
+                                            CASE WHEN ERI.EddaRtnMsg IS NULL THEN N'系統無此代碼' ELSE ERI.EddaRtnMsg END AS ReplyInfoName,
+                                            CASE 
+                                                WHEN eap.Reply_Info NOT IN ('A0', 'A4') AND ERI.NeedSendHost = 'Y' THEN N'是'
+                                                WHEN eap.Reply_Info NOT IN ('A0', 'A4') AND ERI.NeedSendHost = 'N' THEN N'否'
+                                            ELSE '' END AS NeedSendHost
                                             FROM EDDA_Auto_Pay eap
                                             LEFT JOIN 
                                             (
@@ -1093,30 +1099,34 @@ INNER JOIN [dbo].[PostOffice_Detail] e WITH(NOLOCK) ON a.ReceiveNumber = e.Recei
 		                                        WHERE
 			                                        bankl.property_code= bankn.property_code 
 	                                        ) AS mpc ON eap.Other_Bank_Code_L= mpc.BankCodeL
-	
-                                            LEFT JOIN {0}.dbo.M_PROPERTY_CODE mpc2 ON mpc2.PROPERTY_CODE = eap.Reply_Info AND mpc2.FUNCTION_KEY = '01' AND mpc2.PROPERTY_KEY = 'EddaReplyInfo'
+                                            LEFT JOIN EDDA_Rtn_Info ERI ON ERI.EddaRtnCode = eap.Reply_Info
                                             WHERE BatchDate BETWEEN @BatchDateStart AND @BatchDateEnd ", UtilHelper.GetAppSettings("DB_CSIP"));
 
                 string sqlWhere = "";
 
 
-                if (postRtnMsg.Length == 2)
+                if (rtnCode.Length > 0)
                 {
-                    sqlWhere = " AND mpc2.PROPERTY_CODE = @postRtnMsg ";
+                    sqlWhere = " AND ERI.EddaRtnCode = @EddaRtnCode ";
                 }
 
                 // 成功/失敗條件
-                string condition = (reportType == "S") ? "AND eap.Reply_Info IN ('A0', 'A4') " : ((reportType == "F") ? "AND eap.Reply_Info NOT IN ('A0', 'A4') " : "");
+                string condition = reportType == "S" ? "AND eap.Reply_Info IN ('A0', 'A4') " : reportType == "F" ? "AND eap.Reply_Info NOT IN ('A0', 'A4') " : "";
 
                 SqlCommand sqlcmd = new SqlCommand();
                 sqlcmd.CommandType = CommandType.Text;
                 sqlcmd.CommandText = sql + sqlWhere + condition;
-                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateStart", BatchDateStart)); //批次起日
-                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateEnd", BatchDateEnd)); //批次迄日
+                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateStart", batchDateStart)); //批次起日
+                sqlcmd.Parameters.Add(new SqlParameter("@BatchDateEnd", batchDateEnd)); //批次迄日
 
-                if (postRtnMsg.Length > 0)
+                if (rtnCode.Length > 0)
                 {
-                    sqlcmd.Parameters.Add(new SqlParameter("@postRtnMsg", postRtnMsg));
+                    sqlcmd.Parameters.Add(new SqlParameter("@EddaRtnCode", rtnCode));
+                }
+
+                if (currentPageIndex > 0)
+                {
+                    return BRPostOffice_Temp.SearchOnDataSet(sqlcmd, currentPageIndex, pageSize, ref totalCount).Tables[0];
                 }
 
                 return BRPostOffice_Temp.SearchOnDataSet(sqlcmd).Tables[0];

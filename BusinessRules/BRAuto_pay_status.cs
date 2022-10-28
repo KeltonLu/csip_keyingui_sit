@@ -121,7 +121,7 @@ SELECT AUTHCODE,
        CASE PayWay WHEN '1' THEN '1' ELSE '0' END                            AS Pay_Way,
        'Y'                                                                   AS IsUpdateByTXT,
        '-'                                                                   AS IsCTCB,
-       S_DATE + '090000'                                                     AS MATAINDATE,
+       CONCAT(S_DATE + 19110000, '090000')                                   AS MATAINDATE,
        CUS_ID                                                                AS Acc_ID,
        'EDDA'                                                                AS user_id,
        CASE WHEN ComparisonStatus = '1' THEN EBApplyType ELSE Apply_Type END AS Function_Code,
@@ -1278,49 +1278,61 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
 
         // 修改紀錄：2022/09/28 整合EDDA核印成功的資料 By Ares jhun
         /// <summary>
-        /// 產生withholding.txt檔案
+        /// 產生withholding_yyyyMMdd.txt檔案
         /// </summary>
-        /// <param name="dt"></param>
-        public static void BatchOutput(DataTable dt)
+        /// <param name="dt">資料</param>
+        /// <param name="fileName">檔案名稱(含副檔名)</param>
+        public static void BatchOutput(DataTable dt, string fileName)
         {
             string strTXT = "";
             for (int i = 0; i < dt.Rows.Count; i++)
             {
+                DataRow row = dt.Rows[i];
                 // 1码 Char(16) ACC-ID       歸戶 ID(左靠右補空白)
-                strTXT += dt.Rows[i]["Cus_ID"].ToString().Trim().ToUpper().PadRight(16, ' ');
+                strTXT += row["Cus_ID"].ToString().Trim().ToUpper().PadRight(16, ' ');
 
                 //17码 Char(1) FUNCTION-CODE
-                strTXT += dt.Rows[i]["Function_Code"].ToString().PadRight(1, ' ');
+                strTXT += row["Function_Code"].ToString().PadRight(1, ' ');
 
                 //18码 Char(3)  BK-ID        自扣銀行(042:自行,701:郵局,其它:ACH)
-                strTXT += dt.Rows[i]["AccNoBank"].ToString().Trim().PadRight(3, ' ');
+                string accNoBank = row["AccNoBank"].ToString().Trim();
+                if (accNoBank.Length > 3)
+                {
+                    accNoBank = accNoBank.Substring(0, 3);
+                }
+                strTXT += accNoBank.PadRight(3, ' ');
 
                 //21码 Char(26) BK-AC        自扣帳號(左靠右補空白)
-                strTXT += dt.Rows[i]["Acc_No"].ToString().Trim().PadRight(26, ' ');
+                strTXT += row["Acc_No"].ToString().Trim().PadRight(26, ' ');
 
                 //47码 Char(1)  DD-TAPE-IND  自扣註記(0,1)
-                strTXT += dt.Rows[i]["Pay_Way"].ToString().Trim().PadRight(1, ' ');
+                strTXT += row["Pay_Way"].ToString().Trim().PadRight(1, ' ');
 
                 //48码 Char(11) DD-ID 自扣者 ID(左靠右補空白)
-                strTXT += dt.Rows[i]["Acc_ID"].ToString().Trim().ToUpper().PadRight(11, ' ');
+                strTXT += row["Acc_ID"].ToString().Trim().ToUpper().PadRight(11, ' ');
 
                 //59码 Char(14)  MATAIN-DATE(鍵檔日期)  格式:YYYYMMDD(為當日系統日) + MATAIN-TIME Char(6) 格式：HHMMSS(為當日系統時間)
-                strTXT += dt.Rows[i]["MATAINDATE"].ToString().Trim().PadRight(14, ' ');
+                strTXT += row["MATAINDATE"].ToString().Trim().PadRight(14, ' ');
 
                 //73码 Char(8)  DD-MEMO   自扣通路來源註記(CSIP)
-                strTXT += dt.Rows[i]["DDMEMO"].ToString().Trim().PadRight(8, ' ');
+                strTXT += row["DDMEMO"].ToString().Trim().PadRight(8, ' ');
 
                 //81码 Char(2) SALES-CHANNEL 推廣通路代碼 CSIP為'03'、EDDA為「'04' or '05'」
-                strTXT += dt.Rows[i]["SALES_CHANNEL"].ToString().Trim().PadRight(2, ' ');
+                string salesChannel = row["SALES_CHANNEL"].ToString().Trim();
+                if (salesChannel.Length > 2)
+                {
+                    salesChannel = salesChannel.Substring(0, 2);
+                }
+                strTXT += salesChannel.PadRight(2, ' ');
 
                 //83码 Char(5) SALES-UNIT  推廣單位代碼
-                strTXT += dt.Rows[i]["Popul_NO"].ToString().PadRight(5, ' ');
+                strTXT += row["Popul_NO"].ToString().PadRight(5, ' ');
 
                 //88码 Char(8) SALES-EMPO-NO  推廣員員編
-                strTXT += dt.Rows[i]["Popul_EmpNo"].ToString().PadRight(8, ' ');
+                strTXT += row["Popul_EmpNo"].ToString().PadRight(8, ' ');
 
                 //96碼 Char(8) DDST-MATAIN-USER 維護人員
-                var userId = dt.Rows[i]["user_id"].ToString();
+                var userId = row["user_id"].ToString();
                 if (userId.Length > 8)
                 {
                     strTXT += userId.Substring(userId.Length - 8).PadRight(8, ' ');
@@ -1339,7 +1351,7 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
             strTXT += "EOF";
             //strTXT += "\r\n";
 
-            string strPah = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("ReportTemplate") + "withholding.txt";
+            string strPah = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload") + "\\" + fileName;
             if (File.Exists(strPah))
             {
                 File.Delete(strPah);
@@ -1355,7 +1367,11 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
 
         }
 
-        public static void UploadToFtp()
+        /// <summary>
+        /// 上傳FTP
+        /// </summary>
+        /// <param name="fileName">檔案名稱(含副檔名)</param>
+        public static void UploadToFtp(string fileName)
         {
             string remoteHost; // FTP IP地址
             string remotePath; // FTP 檔案目錄
@@ -1380,7 +1396,7 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
             try
             {
                 // Get the object used to communicate with the server.
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://" + remoteHost + remotePath + "withholding.txt");
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://" + remoteHost + remotePath + fileName);
                 request.Method = WebRequestMethods.Ftp.UploadFile;
 
                 // This example assumes the FTP site uses anonymous logon.
@@ -1389,7 +1405,7 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
 
 
                 // Copy the contents of the file to the request stream.
-                string localFilePah = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload") + "withholding.txt";
+                string localFilePah = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload") + "\\" + fileName;
                 if (File.Exists(localFilePah))
                 {
                     StreamReader sourceStream = new StreamReader(localFilePah);

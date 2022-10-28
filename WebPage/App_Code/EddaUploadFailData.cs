@@ -21,201 +21,133 @@ using System.Text;
 
 public class EddaUploadFailData : IJob
 {
-    private static readonly JobHelper JobHelper = new JobHelper();
-    private string strFuncKey = UtilHelper.GetAppSettings("FunctionKey");
-    private string strJobID = "EddaUploadFailData";
-    private string strJobTitle = string.Empty;
-    private string strMailList = string.Empty;
-    private string jobDate = string.Empty;
+    private readonly JobHelper _jobHelper = new JobHelper();
+    private readonly string _functionKey = UtilHelper.GetAppSettings("FunctionKey");
+    private string _jobId = "EddaUploadFailData";
+    private string _strJobTitle = string.Empty;
+    private string _strMailList = string.Empty;
+    private readonly string _jobDate = DateTime.Now.ToString("yyyMMdd");
+    private readonly string _fileNameHeader = string.Format("ach-rej-h-{0:yyyyMMdd}.txt", DateTime.Now);
+    private readonly string _fileNameDetail = string.Format("ach-rej-{0:yyyyMMdd}.txt", DateTime.Now);
 
     public void Execute(JobExecutionContext context)
     {
         DateTime dtStart = DateTime.Now;
         string batchLogMsg = string.Empty;
-        string status = "F";
+        string status = "F"; // S:成功、F：失敗、R：上一個排程執行中(需略過)
+        int totalCount = 0;
         try
         {
-            strJobID = context.JobDetail.JobDataMap.GetString("jobid").Trim();
-            strJobTitle = context.JobDetail.JobDataMap.GetString("title").Trim();
-            strMailList = context.JobDetail.JobDataMap.GetString("mail").Trim();
-            jobDate = DateTime.Now.ToString("yyyMMdd");
+            // 取得排程參數
+            _jobId = context.JobDetail.JobDataMap.GetString("jobid").Trim();
+            _strJobTitle = context.JobDetail.JobDataMap.GetString("title").Trim();
+            _strMailList = context.JobDetail.JobDataMap.GetString("mail").Trim();
 
-            // 判斷Job工作狀態(0:停止 1:運行)
-            var isContinue = CheckJobIsContinue(strJobID, strFuncKey, dtStart, ref batchLogMsg);
+            // 判斷排程是否要繼續執行
+            var isContinue = CheckJobIsContinue(_jobId, _functionKey, dtStart, ref batchLogMsg, ref status);
             if (!isContinue) return;
 
-            #region 判斷是否手動設置參數啟動排程
-
-            Logging.Log("判斷是否手動輸入參數 啟動排程：開始！", strJobID, LogState.Info, LogLayer.BusinessRule);
-
-            if (context.JobDetail.JobDataMap["param"] != null)
+            DataTable dt = new DataTable();
+            DataSet ds = GetAuthFailData();
+            if (ds == null || ds.Tables[0].Rows.Count == 0)  // 查無核印失敗的資料
             {
-                Logging.Log("手動輸入參數啟動排程：是！", strJobID, LogState.Info, LogLayer.BusinessRule);
-                Logging.Log("檢核輸入參數：開始！", strJobID, LogState.Info, LogLayer.BusinessRule);
-
-                string strParam = context.JobDetail.JobDataMap["param"].ToString();
-
-                if (strParam.Length == 10)
-                {
-                    DateTime tempDt;
-                    if (DateTime.TryParse(strParam, out tempDt))
-                    {
-                        Logging.Log("檢核參數：成功！ 參數：" + strParam, strJobID, LogState.Info, LogLayer.BusinessRule);
-                        jobDate = string.Format("{0:0000}{1:00}{2:00}", (Int32.Parse(tempDt.Year.ToString())),
-                            tempDt.Month, tempDt.Day);
-                    }
-                    else
-                    {
-                        Logging.Log("檢核參數：異常！ 參數：" + strParam, strJobID, LogState.Error, LogLayer.BusinessRule);
-                        status = "F";
-                        batchLogMsg = "手動設置參數啟動排程 檢核參數：異常！ 參數：" + strParam;
-                        EddaUploadFailData_SendMail(strJobTitle, batchLogMsg);
-                        return;
-                    }
-                }
-                else
-                {
-                    Logging.Log("檢核參數：異常！ 參數：" + strParam, strJobID, LogState.Error, LogLayer.BusinessRule);
-                    status = "F";
-                    batchLogMsg = "手動設置參數啟動排程 檢核參數：異常！ 參數：" + strParam;
-                    EddaUploadFailData_SendMail(strJobTitle, batchLogMsg);
-                    return;
-                }
-
-                Logging.Log("檢核輸入參數：結束！", strJobID, LogState.Info, LogLayer.BusinessRule);
+                WriteLog("查無資料！");
             }
             else
             {
-                Logging.Log("手動輸入參數啟動排程：否！", strJobID, LogState.Info, LogLayer.BusinessRule);
+                dt = ds.Tables[0];
+                totalCount = dt.Rows.Count;
             }
-
-            Logging.Log("判斷是否手動輸入參數 啟動排程：結束！", strJobID, LogState.Info, LogLayer.BusinessRule);
-
-            #endregion
-
-            DataSet ds = GetDataFromEDDA_CSIP();
-            if (ds != null && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
+            
+            // 產生明細檔案
+            if (!CreateDetailFile(dt))
             {
-                Logging.Log(string.Format("匯出 ach-rej-{0}.txt 檔案,開始！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-                if (BatchOutput(ds.Tables[0]))
-                {
-                    Logging.Log(string.Format("匯出 ach-rej-{0}.txt 檔案,成功！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-
-                    Logging.Log(string.Format("上傳 ach-rej-{0}.txt 檔案,開始！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-                    if (UploadToFTP(strJobID, string.Format("ach-rej-{0}", jobDate)))
-                    {
-                        Logging.Log(string.Format("上傳 ach-rej-{0}.txt 檔案,成功！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-                    }
-                    else
-                    {
-                        Logging.Log(string.Format("上傳 ach-rej-{0}.txt 檔案,失敗！", jobDate), strJobID, LogState.Error, LogLayer.BusinessRule);
-                        status = "F";
-                        batchLogMsg = string.Format("上傳 ach-rej-{0}.txt 檔案,失敗！", jobDate);
-                        EddaUploadFailData_SendMail(strJobTitle, batchLogMsg);
-                        return;
-                    }
-                }
-                else
-                {
-                    Logging.Log(string.Format("匯出 ach-rej-{0}.txt 檔案,失敗！", jobDate), strJobID, LogState.Error, LogLayer.BusinessRule);
-                    status = "F";
-                    batchLogMsg = string.Format("匯出 ach-rej-{0}.txt 檔案,失敗！", jobDate);
-                    EddaUploadFailData_SendMail(strJobTitle, batchLogMsg);
-                    return;
-                }
-
-                Logging.Log(string.Format("匯出 ach-rej-h-{0}.txt 檔案,開始！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-                if (BatchOutput_hFile(ds.Tables[0]))
-                {
-                    Logging.Log(string.Format("匯出 ach-rej-h-{0}.txt 檔案,成功！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-
-                    Logging.Log(string.Format("上傳 ach-rej-h-{0}.txt 檔案,開始！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-                    if (UploadToFTP(strJobID, string.Format("ach-rej-h-{0}", jobDate)))
-                    {
-                        Logging.Log(string.Format("上傳 ach-rej-h-{0}.txt 檔案,成功！", jobDate), strJobID, LogState.Info, LogLayer.BusinessRule);
-
-                        Logging.Log("更新核印失敗資料的上傳註記與時間,開始！", strJobID, LogState.Info, LogLayer.BusinessRule);
-                        if (UpdateAuto_Pay_Auth_Fail())
-                        {
-                            Logging.Log("更新核印失敗資料的上傳註記與時間,成功！", strJobID, LogState.Info, LogLayer.BusinessRule);
-                        }
-                        else
-                        {
-                            Logging.Log("更新核印失敗資料的上傳註記與時間,失敗！", strJobID, LogState.Error, LogLayer.BusinessRule);
-                            status = "F";
-                            batchLogMsg = "更新核印失敗資料的上傳註記與時間,失敗！";
-                            EddaUploadFailData_SendMail(strJobTitle, batchLogMsg);
-                            return;
-                        }
-
-                        Logging.Log("更新EDDA其他核印失敗資料的上傳註記與時間,開始！", strJobID, LogState.Info, LogLayer.BusinessRule);
-                        if (UpdateEDDA_Auto_Pay())
-                        {
-                            Logging.Log("更新EDDA其他核印失敗資料的上傳註記與時間,成功！", strJobID, LogState.Info, LogLayer.BusinessRule);
-                            batchLogMsg = "上傳EDDA核印失敗資料給卡主機,成功！";
-                            status = "S";
-                        }
-                        else
-                        {
-                            Logging.Log("更新EDDA其他核印失敗資料的上傳註記與時間,失敗！", strJobID, LogState.Error, LogLayer.BusinessRule);
-                            status = "F";
-                            batchLogMsg = "更新EDDA其他核印失敗資料的上傳註記與時間,失敗！";
-                            EddaUploadFailData_SendMail(strJobTitle, "更新EDDA其他核印失敗資料的上傳註記與時間,失敗！");
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        Logging.Log(string.Format("上傳 ach-rej-h-{0}.txt 檔案,失敗！", jobDate), strJobID, LogState.Error, LogLayer.BusinessRule);
-                        status = "F";
-                        batchLogMsg = string.Format("上傳 ach-rej-h-{0}.txt 檔案,失敗！", jobDate);
-                        EddaUploadFailData_SendMail(strJobTitle, batchLogMsg);
-                        return;
-                    }
-                }
-                else
-                {
-                    Logging.Log(string.Format(string.Format("匯出 ach-rej-h-{0}.txt 檔案,失敗！", jobDate), strJobID, LogState.Error, LogLayer.BusinessRule));
-                    status = "F";
-                    batchLogMsg = string.Format("匯出 ach-rej-h-{0}.txt 檔案,失敗！", jobDate);
-                    EddaUploadFailData_SendMail(strJobTitle, batchLogMsg);
-                    return;
-                }
+                status = "F";
+                batchLogMsg = string.Format("產生 {0} 檔案,失敗！ 核印失敗資料筆數：{1}", _fileNameDetail, dt.Rows.Count);
+                SendEmail(_strJobTitle + batchLogMsg, batchLogMsg);
+                return;
             }
-            else
+                
+            // 產生header檔案
+            if (!CreateHeaderFile(dt))
             {
-                Logging.Log("查無資料！", strJobID, LogState.Info, LogLayer.BusinessRule);
-                batchLogMsg = "查無資料！";
-                status = "S";
+                status = "F";
+                batchLogMsg = string.Format("產生 {0} 檔案,失敗！", _fileNameHeader);
+                SendEmail(_strJobTitle + batchLogMsg, batchLogMsg);
+                return;
+            }
+                
+            // 上傳明細檔案
+            if (!UploadToFtp(_fileNameDetail))
+            {
+                status = "F";
+                batchLogMsg = string.Format("上傳 {0} 檔案,失敗！", _fileNameDetail);
+                SendEmail(_strJobTitle + batchLogMsg, batchLogMsg);
+                return;
+            }
+                
+            // 上傳header檔案
+            if (!UploadToFtp(_fileNameHeader))
+            {
+                status = "F";
+                batchLogMsg = string.Format("上傳 {0} 檔案,失敗！", _fileNameHeader);
+                SendEmail(_strJobTitle + batchLogMsg, batchLogMsg);
+                return;
+            }
+            
+            // 更新核印失敗資料的上傳註記與時間
+            string logMsg = "更新核印失敗資料的上傳註記與時間";
+            if (!UpdateAutoPayAuthFail(logMsg))
+            {
+                status = "F";
+                batchLogMsg = string.Format("{0},失敗！", logMsg);
+                SendEmail(_strJobTitle + batchLogMsg, batchLogMsg);
+                return;
+            }
+            
+            // 更新EDDA其他核印失敗資料的上傳註記與時間
+            logMsg = "更新EDDA其他核印失敗資料的上傳註記與時間";
+            if (!UpdateEddaAutoPay(logMsg))
+            {
+                status = "F";
+                batchLogMsg = string.Format("{0},失敗！", logMsg);
+                SendEmail(_strJobTitle + batchLogMsg, batchLogMsg);
+                return;
             }
 
-
-            string strMsg = strJobID + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8).ToString();
+            // header、明細 產檔、上傳、資料更新皆成功
+            status = "S";
+            batchLogMsg = "核印失敗資料筆數：" + totalCount;
+            
+            string strMsg = _jobId + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8);
             if (context.NextFireTimeUtc.HasValue)
             {
-                strMsg += "  ;下次執行於:" + DateTime.Parse(context.NextFireTimeUtc.ToString()).AddHours(8).ToString();
+                strMsg += "  ;下次執行於:" + DateTime.Parse(context.NextFireTimeUtc.ToString()).AddHours(8);
             }
-            Logging.Log(strMsg, strJobID, LogState.Info, LogLayer.DB);
+            Logging.Log(strMsg, _jobId, LogState.Info, LogLayer.DB);
         }
         catch (Exception ex)
         {
             status = "F";
             batchLogMsg += ex.ToString();
-            Logging.Log(ex.ToString(), strJobID, LogState.Error, LogLayer.DB);
+            Logging.Log(ex.ToString(), _jobId, LogState.Error, LogLayer.DB);
         }
         finally
         {
-            BRL_BATCH_LOG.Delete(strFuncKey, strJobID, "R");
-            BRL_BATCH_LOG.Insert(strFuncKey, strJobID, dtStart, status, batchLogMsg);
+            // 若上一個排程仍執行中且不超過一小時
+            if (!status.Equals("R"))
+            {
+                BRL_BATCH_LOG.Delete(_functionKey, _jobId, "R");
+                BRL_BATCH_LOG.Insert(_functionKey, _jobId, dtStart, status, batchLogMsg);
+            }
         }
     }
-
-
+    
     /// <summary>
     /// 查出EDDA、CSIP(他行、郵局)核印失敗未上傳的資料
     /// </summary>
     /// <returns></returns>
-    public static DataSet GetDataFromEDDA_CSIP()
+    private DataSet GetAuthFailData()
     {
         //* 新增 MATAINDATE
         string strSql = @"SELECT APAF.CustId,          -- 客戶ID
@@ -223,13 +155,13 @@ public class EddaUploadFailData : IJob
                                    APAF.IssueChannel,    -- 申請通路
                                    APAF.IssueDate,       -- 申請日期
                                    CASE APAF.DataType
-                                       WHEN '0' THEN ARI1.EDDA_Rtn_Msg
-                                       WHEN '1' THEN ARI2.Ach_Rtn_Msg
+                                       WHEN '0' THEN ERI.EddaRtnMsg
+                                       WHEN '1' THEN ARI.Ach_Rtn_Msg
                                        WHEN '2' THEN PRI.PostRtnMsg
                                        END AS FailReason -- 失敗原因
                             FROM Auto_Pay_Auth_Fail APAF
-                            LEFT JOIN Ach_Rtn_Info ARI1 ON ARI1.EDDA_Rtn_Code = APAF.ErrorCode
-                            LEFT JOIN Ach_Rtn_Info ARI2 ON ARI2.Ach_Rtn_Code = APAF.ErrorCode
+                            LEFT JOIN EDDA_Rtn_Info ERI ON ERI.EddaRtnCode = APAF.ErrorCode
+                            LEFT JOIN Ach_Rtn_Info ARI ON ARI.Ach_Rtn_Code = APAF.ErrorCode
                             LEFT JOIN PostOffice_Rtn_Info PRI ON PRI.PostRtnCode = APAF.ErrorCode
                             WHERE APAF.UploadFlag <> 'Y'; ";
 
@@ -243,23 +175,29 @@ public class EddaUploadFailData : IJob
     /// <summary>
     /// 組明細檔
     /// </summary>
-    /// <param name="dt"></param>
-    public bool BatchOutput(DataTable dt)
+    /// <param name="dt">核印失敗資料</param>
+    private bool CreateDetailFile(DataTable dt)
     {
+        WriteLog(string.Format("產生 {0} 檔案,開始！", _fileNameDetail));
+
         try
         {
-            string strTXT = "";
-            for (int i = 0; i < dt.Rows.Count; i++)
+            string content = "";
+            foreach (DataRow row in dt.Rows)
             {
-                strTXT += dt.Rows[i]["CustId"].ToString().Trim().ToUpper().PadRight(16, ' '); //客戶ID
-                strTXT += dt.Rows[i]["ErrorCode"].ToString().PadRight(2, ' '); //失敗代碼
-                strTXT += dt.Rows[i]["IssueChannel"].ToString().Trim().PadRight(4, ' '); //申請通路
-                strTXT += dt.Rows[i]["IssueDate"].ToString().Trim().PadRight(8, ' '); //申請日期
-                strTXT += dt.Rows[i]["FailReason"].ToString().Trim().PadRight(30, ' '); //失敗原因
-                strTXT += "\r\n";
+                content += row["CustId"].ToString().Trim().ToUpper().PadRight(16, ' '); //客戶ID
+                content += row["ErrorCode"].ToString().PadRight(2, ' '); //失敗代碼
+                content += row["IssueChannel"].ToString().Trim().PadRight(4, ' '); //申請通路
+                content += row["IssueDate"].ToString().Trim().PadRight(8, ' '); //申請日期
+                //失敗原因
+                var failReason = row["FailReason"].ToString().Trim().PadRight(20, ' ');
+                if (failReason.Length > 20)
+                {
+                    failReason = failReason.Substring(0, 20);
+                }
+                content += failReason;
+                content += "\r\n";
             }
-
-            strTXT += "EOF";
 
             string uploadFolder = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload");
             if (!Directory.Exists(uploadFolder))
@@ -267,7 +205,7 @@ public class EddaUploadFailData : IJob
                 Directory.CreateDirectory(uploadFolder);
             }
 
-            string strPah = uploadFolder + @"\" + string.Format("ach-rej-{0}.txt", jobDate);
+            string strPah = uploadFolder + @"\" + _fileNameDetail;
             if (File.Exists(strPah))
             {
                 File.Delete(strPah);
@@ -276,16 +214,18 @@ public class EddaUploadFailData : IJob
             using (FileStream fs = File.Create(strPah, 1024))
             {
                 StreamWriter sw = new StreamWriter(fs, Encoding.GetEncoding("BIG5"));
-                sw.Write(strTXT);
+                sw.Write(content);
                 sw.Flush();
                 sw.Close();
             }
 
+            WriteLog(string.Format("產生 {0} 檔案,成功！ 核印失敗資料筆數：{1}", _fileNameDetail, dt.Rows.Count));
             return true;
         }
         catch (Exception ex)
         {
-            Logging.Log(ex.ToString(), strJobID, LogState.Error, LogLayer.DB);
+            Logging.Log(ex.ToString(), _jobId, LogState.Error, LogLayer.DB);
+            WriteLog(string.Format("產生 {0} 檔案,失敗！ 核印失敗資料筆數：{1}", _fileNameDetail, dt.Rows.Count), LogState.Error);
             return false;
         }
     }
@@ -293,16 +233,22 @@ public class EddaUploadFailData : IJob
     /// <summary>
     /// 組Header檔
     /// </summary>
-    /// <param name="dt"></param>
-    public bool BatchOutput_hFile(System.Data.DataTable dt)
+    /// <param name="dt">核印失敗資料</param>
+    private bool CreateHeaderFile(DataTable dt)
     {
+        WriteLog(string.Format("產生 {0} 檔案,開始！", _fileNameHeader));
+        
         try
         {
-            string strTXT = "";
-            strTXT += jobDate; //執行日期
-            strTXT += dt.Rows.Count.ToString().PadLeft(5, '0'); //筆數
-            strTXT += "\r\n";
-            strTXT += "EOF";
+            string content = _jobDate; // 執行日期+資料筆數(向左補零至五位數)
+            if (dt.Rows.Count > 0)
+            {
+                content += dt.Rows.Count.ToString().PadLeft(5, '0'); //筆數
+            }
+            else
+            {
+                content += "00000"; //筆數
+            }
 
             string uploadFolder = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload");
             if (!Directory.Exists(uploadFolder))
@@ -310,7 +256,7 @@ public class EddaUploadFailData : IJob
                 Directory.CreateDirectory(uploadFolder);
             }
 
-            string strPah = uploadFolder + @"\" + string.Format("ach-rej-h-{0}.txt", jobDate);
+            string strPah = uploadFolder + @"\" + _fileNameHeader;
             if (File.Exists(strPah))
             {
                 File.Delete(strPah);
@@ -319,22 +265,30 @@ public class EddaUploadFailData : IJob
             using (FileStream fs = File.Create(strPah, 1024))
             {
                 StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.GetEncoding("BIG5"));
-                sw.Write(strTXT);
+                sw.Write(content);
                 sw.Flush();
                 sw.Close();
             }
 
+            WriteLog(string.Format("產生 {0} 檔案,成功！", _fileNameHeader));
             return true;
         }
         catch (Exception ex)
         {
-            Logging.Log(ex.ToString(), strJobID, LogState.Error, LogLayer.DB);
+            Logging.Log(ex.ToString(), _jobId, LogState.Error, LogLayer.DB);
+            WriteLog(string.Format("產生 {0} 檔案,失敗！", _fileNameHeader), LogState.Error);
             return false;
         }
     }
-
-    public static bool UpdateAuto_Pay_Auth_Fail()
+    
+    /// <summary>
+    /// 更新核印失敗資料的上傳註記與時間
+    /// </summary>
+    /// <param name="logMsg">log message</param>
+    /// <returns></returns>
+    private bool UpdateAutoPayAuthFail(string logMsg)
     {
+        WriteLog(string.Format("{0},開始！", logMsg));
         string strSql = @"
                         UPDATE Auto_Pay_Auth_Fail
                         SET UploadFlag = 'Y', UploadTime = GETDATE()
@@ -349,32 +303,49 @@ public class EddaUploadFailData : IJob
         SqlCommand sqlComm = new SqlCommand();
         sqlComm.CommandType = CommandType.Text;
         sqlComm.CommandText = strSql;
-
-        return BRBase<Entity_SP>.Update(sqlComm, "Connection_System");
+        bool result = BRBase<Entity_SP>.Update(sqlComm, "Connection_System");
+        WriteLog(result ? string.Format("{0},成功！", logMsg) : string.Format("{0},失敗！", logMsg), result ? LogState.Info : LogState.Error);
+        return result;
     }
 
-    public static bool UpdateEDDA_Auto_Pay()
+    /// <summary>
+    /// 更新EDDA其他核印失敗資料的上傳註記與時間
+    /// </summary>
+    /// <param name="logMsg">log message</param>
+    /// <returns></returns>
+    private bool UpdateEddaAutoPay(string logMsg)
     {
+        WriteLog(string.Format("{0},開始！", logMsg));
         string strSql = @"UPDATE EDDA_Auto_Pay
-                        SET UploadFlag = '2', UploadTime = GETDATE()
-                        WHERE Reply_Info NOT IN ('A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'AB', 'AC', 'AF', 'AG', 'AI', 'AJ') AND UploadFlag = '0'; ";
+                          SET UploadFlag = '2', UploadTime = GETDATE()
+                          WHERE UploadFlag = '0'
+                          AND Reply_Info NOT IN (SELECT EddaRtnCode FROM EDDA_Rtn_Info WHERE NeedSendHost = 'Y' OR EddaRtnCode IN ('A0', 'A4'));";
 
         SqlCommand sqlComm = new SqlCommand();
         sqlComm.CommandType = CommandType.Text;
         sqlComm.CommandText = strSql;
-
-        return BRBase<Entity_SP>.Update(sqlComm, "Connection_System");
+        bool result = BRBase<Entity_SP>.Update(sqlComm, "Connection_System");
+        WriteLog(result ? string.Format("{0},成功！", logMsg) : string.Format("{0},失敗！", logMsg), result ? LogState.Info : LogState.Error);
+        return result;
     }
 
-    // 判斷Job工作狀態(0:停止 1:運行)
-    public static bool CheckJobIsContinue(string JobID, string strFunctionKey, DateTime dateStart, ref string msgID)
+    /// <summary>
+    /// 判斷排程是否要繼續執行
+    /// </summary>
+    /// <param name="jobId">排程代號</param>
+    /// <param name="functionKey">功能代號</param>
+    /// <param name="dateStart">排程開姞時間</param>
+    /// <param name="msgId">訊息代碼(Common/XML/Message.xml)</param>
+    /// <param name="rtnStatus">若判斷上一個排程仍執行中回傳值為「R」</param>
+    /// <returns>true or false</returns>
+    private bool CheckJobIsContinue(string jobId, string functionKey, DateTime dateStart, ref string msgId, ref string rtnStatus)
     {
         bool result = true;
-        string jobStatus = JobHelper.SerchJobStatus(JobID);
+        string jobStatus = _jobHelper.SerchJobStatus(jobId);
         if (jobStatus.Equals("") || jobStatus.Equals("0"))
         {
             // Job停止
-            Logging.Log("【FAIL】 Job工作狀態為：停止！", JobID, LogState.Info, LogLayer.BusinessRule);
+            Logging.Log("【FAIL】 Job工作狀態為：停止！", jobId, LogState.Info, LogLayer.BusinessRule);
 
             result = false;
         }
@@ -382,23 +353,38 @@ public class EddaUploadFailData : IJob
         // 檢測Job是否在執行中
         try
         {
-            DataTable dtInfo = BRL_BATCH_LOG.GetRunningDate(strFunctionKey, JobID, "R", ref msgID);
-            if (dtInfo == null || dtInfo.Rows.Count > 0) //20210531_Ares_Stanley-修正Job執行檢核條件
+            DataTable dtInfo = BRL_BATCH_LOG.GetRunningDate(functionKey, jobId, "R", ref msgId);
+            if (dtInfo == null || dtInfo.Rows.Count > 0)
             {
-                Logging.Log("JOB 工作狀態為：正在執行！", JobID, LogState.Info, LogLayer.BusinessRule);
+                //判斷執行時間超過一小時
+                if (dtInfo != null)
+                {
+                    DateTime tempDt;
+                    DateTime.TryParse(dtInfo.Rows[0][2].ToString(), out tempDt);
+                    TimeSpan ts = DateTime.Now.Subtract(tempDt);
+                    int dayCount = ts.Hours; // 執行中紀錄的開始時間與當天執行時間相差小時
+                    if (dayCount > 1)
+                    {
+                        BRL_BATCH_LOG.Delete(functionKey, jobId, "R");
+                        BRL_BATCH_LOG.InsertRunning(functionKey, jobId, dateStart, "R", "");
+                        return true;
+                    }
+                }
+                Logging.Log("JOB 工作狀態為：正在執行！", jobId, LogState.Info, LogLayer.BusinessRule);
                 // 返回不執行
+                rtnStatus = "R";
                 result = false;
             }
             else
             {
                 // 記錄Job執行資訊
-                BRL_BATCH_LOG.InsertRunning(strFunctionKey, JobID, dateStart, "R", "");
+                BRL_BATCH_LOG.InsertRunning(functionKey, jobId, dateStart, "R", "");
             }
         }
         catch (Exception ex)
         {
             result = false;
-            Logging.Log("【FAIL】" + ex.ToString(), JobID, LogState.Error, LogLayer.BusinessRule);
+            Logging.Log("【FAIL】" + ex, jobId, LogState.Error, LogLayer.BusinessRule);
         }
 
         return result;
@@ -410,27 +396,27 @@ public class EddaUploadFailData : IJob
     /// <param name="strSubject">信件標題</param>
     /// <param name="strBody">信件內文</param>
     /// <returns></returns>
-    private bool EddaUploadFailData_SendMail(string strSubject, string strBody)
+    private bool SendEmail(string strSubject, string strBody)
     {
         try
         {
             string strFrom = UtilHelper.GetAppSettings("MailSender"); // 發件人
             string[] sAddressee = { "" };
-            if (!string.IsNullOrWhiteSpace(strMailList))
+            if (!string.IsNullOrWhiteSpace(_strMailList))
             {
-                sAddressee = strMailList.Split(';');
+                sAddressee = _strMailList.Split(';');
             }
-
-            Logging.Log("開始寄信！", strJobID, LogState.Info, LogLayer.BusinessRule);
-            if (JobHelper.SendMail(strFrom, sAddressee, strSubject, strBody))
+        
+            Logging.Log("開始寄信！", _jobId, LogState.Info, LogLayer.BusinessRule);
+            if (_jobHelper.SendMail(strFrom, sAddressee, strSubject, strBody))
             {
-                Logging.Log("寄信成功！", strJobID, LogState.Info, LogLayer.BusinessRule);
-
+                Logging.Log("寄信成功！", _jobId, LogState.Info, LogLayer.BusinessRule);
+        
                 return true;
             }
-
-            Logging.Log("寄信失敗！", strJobID, LogState.Error, LogLayer.BusinessRule);
-
+        
+            Logging.Log("寄信失敗！", _jobId, LogState.Error, LogLayer.BusinessRule);
+        
             return false;
         }
         catch (Exception exp)
@@ -440,17 +426,24 @@ public class EddaUploadFailData : IJob
         }
     }
 
-    private bool UploadToFTP(string jobId, string fileName)
+    /// <summary>
+    /// FTP上傳
+    /// </summary>
+    /// <param name="fileName">檔案名稱(含副檔名)</param>
+    /// <returns></returns>
+    private bool UploadToFtp(string fileName)
     {
+        WriteLog(string.Format("上傳 {0} 檔案,開始！", fileName));
+        
         bool isOk = false;
-        DataTable dt = BRM_FileInfo.GetFtpInfoByJobId(jobId);
+        DataTable dt = BRM_FileInfo.GetFtpInfoByJobId(_jobId);
         if (dt != null && dt.Rows.Count > 0)
         {
             string remoteHost = dt.Rows[0]["FtpIP"].ToString().Trim();
             string remotePath = dt.Rows[0]["FtpPath"].ToString().Trim();
             string remoteUser = dt.Rows[0]["FtpUserName"].ToString().Trim();
             string remotePass = RedirectHelper.GetDecryptString(dt.Rows[0]["FtpPwd"].ToString().Trim());
-            string remoteFile = fileName.Trim();
+            // string remoteFile = fileName.Trim();
 
             // Get the object used to communicate with the server.
             if (remotePath.Substring(remotePath.Length - 1) != "/")
@@ -460,8 +453,7 @@ public class EddaUploadFailData : IJob
 
             try
             {
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}{2}.txt",
-                    remoteHost, remotePath, remoteFile));
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}{2}", remoteHost, remotePath, fileName));
                 request.Method = WebRequestMethods.Ftp.UploadFile;
 
                 // This example assumes the FTP site uses anonymous logon.
@@ -469,14 +461,12 @@ public class EddaUploadFailData : IJob
                 request.Credentials = new NetworkCredential(remoteUser, remotePass);
 
                 // Copy the contents of the file to the request stream.
-                string strlocalFilePah =
-                    AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload");
+                string localFilePah = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload");
 
-                strlocalFilePah += (@"\" + remoteFile + ".txt");
-                if (File.Exists(strlocalFilePah))
+                localFilePah += @"\" + fileName;
+                if (File.Exists(localFilePah))
                 {
-                    StreamReader sourceStream =
-                        new StreamReader(strlocalFilePah, Encoding.GetEncoding("BIG5"));
+                    StreamReader sourceStream = new StreamReader(localFilePah, Encoding.GetEncoding("BIG5"));
                     byte[] fileContents = Encoding.GetEncoding("BIG5").GetBytes(sourceStream.ReadToEnd());
                     sourceStream.Close();
                     request.ContentLength = fileContents.Length;
@@ -490,14 +480,27 @@ public class EddaUploadFailData : IJob
                     Logging.Log("FTP上傳完成, 狀態：" + response.StatusDescription, LogLayer.Util);
                     isOk = true;
                     response.Close();
+                    
+                    WriteLog(string.Format("上傳 {0} 檔案,成功！", fileName));
                 }
             }
             catch (Exception ex)
             {
-                Logging.Log("FTP上傳失敗：" + ex.ToString(), LogState.Error, LogLayer.Util);
+                Logging.Log("FTP上傳失敗：" + ex, LogState.Error, LogLayer.Util);
+                WriteLog(string.Format("上傳 {0} 檔案,失敗！", fileName), LogState.Error);
             }
         }
 
         return isOk;
+    }
+
+    /// <summary>
+    /// 通用log
+    /// </summary>
+    /// <param name="msg">log訊息</param>
+    /// <param name="logState">LogState</param>
+    private void WriteLog(string msg, LogState logState = LogState.Info)
+    {
+        Logging.Log(msg, _jobId, logState, LogLayer.BusinessRule);
     }
 }

@@ -26,6 +26,7 @@ public class jobAutoPay : IJob
         const string strFuncKey = "01";
         string strJobId = "";
         DateTime dtStart = DateTime.Now;
+        string fileName = string.Format("withholding_{0:yyyyMMdd}.txt", dtStart);
 
         try
         {
@@ -57,10 +58,10 @@ public class jobAutoPay : IJob
             {
                 // 取得核印成功需上傳主機的資料
                 DataSet ds = BRAuto_pay_status.GetWithholdingData();
-                // 產生給卡主機的檔案 withholding.txt
-                BRAuto_pay_status.BatchOutput(ds.Tables[0]);
+                // 產生給卡主機的檔案 withholding_yyyyMMdd.txt
+                BRAuto_pay_status.BatchOutput(ds.Tables[0], fileName);
                 // 將檔案上傳至ftp
-                BRAuto_pay_status.UploadToFtp();
+                BRAuto_pay_status.UploadToFtp(fileName);
                 // 上傳成功後更新【EDDA_Auto_Pay】
                 UpdateEddaAutoPayUploadFlag();
             }

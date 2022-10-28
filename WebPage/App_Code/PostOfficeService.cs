@@ -8,6 +8,7 @@
 //*  Ares_jhun          2021/09/28         RQ-2022-019375-000      EDDA需求調整：將郵局核印失敗資料匯入【Auto_Pay_Auth_Fail】
 //*******************************************************************
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using CSIPCommonModel.BusinessRules;
@@ -579,6 +580,9 @@ public class PostOfficeService
         failCount = 0;
         postActiveCount = 0;
 
+        // 查詢需要上送主機的核印失敗代碼
+        List<string> failCodeList = QueryAuthFailData();
+        
         using (OMTransactionScope ts = new OMTransactionScope())
         {
             if (masterID != "" && masterID != "0")
@@ -600,12 +604,11 @@ public class PostOfficeService
 
                                 if (detailOK)
                                 {
-                                    totalCount = totalCount + 1;
+                                    totalCount += 1;
                                 }
 
                                 // 判斷郵局回傳資訊回傳錯誤代碼：若為空白即為正常
                                 postResultCode = CheckPostResultCode(row["StatusType"].ToString().Trim(), row["CheckFlag"].ToString().Trim());
-
                                 if (string.IsNullOrEmpty(postResultCode))
                                 {
                                     hostRow = sendHostData.NewRow();
@@ -635,19 +638,22 @@ public class PostOfficeService
 
                                     sendHostData.Rows.Add(hostRow);
 
-                                    successCount = successCount + 1;
+                                    successCount += 1;
                                 }
                                 else
                                 {
-                                    failCount = failCount + 1;
+                                    failCount += 1;
 
-                                    // 匯入核印失敗資料
-                                    ImportAuthFailData(replyDate, postResultCode, postOfficeTemp.Rows[0]);
+                                    // 只需匯入需要上傳主機的核印失敗資料
+                                    if (failCodeList.IndexOf(postResultCode) > -1)
+                                    {
+                                        ImportAuthFailData(replyDate, postResultCode, postOfficeTemp.Rows[0]);
+                                    }
                                 }
                             }
                             else
                             {
-                                failCount = failCount + 1;
+                                failCount += 1;
                             }
                         }
                         else
@@ -1238,42 +1244,19 @@ public class PostOfficeService
     // 判斷郵局回傳資訊
     
     /// <summary>
-    /// 判斷郵局回傳資訊回傳錯誤代碼：若為空白即為正常
+    /// 判斷郵局回傳資訊回傳錯誤代碼，狀況代號、核印註記皆為空白 或 狀況代號為14、00代表核印成功
     /// </summary>
-    /// <param name="statusType">回覆狀況代號</param>
+    /// <param name="statusType">狀況代號</param>
     /// <param name="checkFlag">核印註記</param>
     /// <returns>失敗代碼</returns>
     private string CheckPostResultCode(string statusType, string checkFlag)
     {
-        if (statusType == "03"      // 已終止代繳
-            || statusType == "06"   // 凍結戶或警示戶
-            || statusType == "07"   // 業務支票專戶
-            || statusType == "08"   // 帳號錯誤
-            || statusType == "09"   // 終止戶
-            || statusType == "10"   // 身分證號不符
-            || statusType == "11"   // 轉出戶
-            || statusType == "12"   // 拒絕往來戶
-            || statusType == "13"   // 無此用戶編號
-            || statusType == "16"   // 管制帳戶
-            || statusType == "17"   // 掛失戶
-            || statusType == "18"   // 異常交易帳戶
-            || statusType == "19"   // 用戶編號非英數字元
-            || statusType == "91"   // 規定期限內未有扣款
-            || statusType == "98")  // 其他
+        if (!string.IsNullOrWhiteSpace(statusType) && !"14".Equals(statusType) && !"00".Equals(statusType))
         {
             return statusType;
         }
 
-        if (checkFlag == "1"        // 局帳號不符
-            || checkFlag == "2"     // 戶名不符
-            || checkFlag == "3"     // 身分證號不符
-            || checkFlag == "4"     // 印鑑不符
-            || checkFlag == "9")    // 其他
-        {
-            return checkFlag;
-        }
-
-        return string.Empty;
+        return !string.IsNullOrWhiteSpace(checkFlag) ? checkFlag : string.Empty;
     }
 
     // 檔案加密
@@ -1355,5 +1338,35 @@ public class PostOfficeService
         {
             BRBase<Entity_SP>.SaveLog(exp.Message);
         }
+    }
+
+    /// <summary>
+    /// 查詢需要上送主機的核印失敗代碼
+    /// </summary>
+    /// <returns></returns>
+    private List<string> QueryAuthFailData()
+    {
+        var list = new List<string>();
+        
+        var sql = @"SELECT PostRtnCode FROM PostOffice_Rtn_Info WHERE NeedSendHost = 'Y' AND RtnType IN ('1', '2')";
+
+        try
+        {
+            SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sql };
+            DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    list.Add(row[0].ToString());
+                }
+            }
+        }
+        catch (Exception exp)
+        {
+            BRBase<Entity_SP>.SaveLog(exp.Message);
+        }
+        
+        return list;
     }
 }
