@@ -256,7 +256,7 @@ public class jobTransUp : IJob
                     JobHelper.SaveLog("無符合資料須上傳", LogState.Info);
                     BRL_BATCH_LOG.Insert(strFuncKey, strJobID, dtStart, "S", "無符合資料須上傳");
                     // 20220815 調整若無資料則產生空檔並上傳至 FTP by Kelton
-                    JobHelper.SendMail(strMailList, strJobID + " 批次執行", MessageHelper.GetMessage("00_00000s000_043"), "成功", dtStart);
+                    JobHelper.SendMail(strMailList, strJobID + " 批次執行", MessageHelper.GetMessage("00_00000000_043"), "成功", dtStart);
                     break;
                 case "2":
                     JobHelper.SaveLog("產生txt檔案失敗", LogState.Error);

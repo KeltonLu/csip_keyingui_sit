@@ -188,6 +188,30 @@ namespace CSIPKeyInGUI.BusinessRules
             string code = "0824406C";
             string strTXT = "";
 
+            // 20221028 調整將成本中心代號改為抓取資料庫設定參數 By Kelton start
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = CommandType.Text;
+            sqlcmd.CommandText = "SELECT PROPERTY_CODE FROM M_PROPERTY_CODE WHERE FUNCTION_KEY = '01' AND PROPERTY_KEY = 'o317_code'";
+            DataSet ds = BRM_PROPERTY_CODE.SearchOnDataSet(sqlcmd, "Connection_CSIP");
+
+            if (ds != null)
+            {
+                DataTable tempdt = ds.Tables[0];
+                if (tempdt != null && tempdt.Rows.Count > 0)
+                {
+                    code = tempdt.Rows[0][0].ToString();
+                }
+                else
+                {
+                    Logging.Log("[FAIL] M_PROPERTY_CODE 查無o317成本中心代號設定資料", LogState.Error, LogLayer.Util);
+                }
+            }
+            else
+            {
+                Logging.Log("[FAIL] 取得 M_PROPERTY_CODE o317成本中心代號設定資料失敗", LogState.Error, LogLayer.Util);
+            }
+            // 20221028 調整將成本中心代號改為抓取資料庫設定參數 By Kelton end
+
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 //表頭”H”+餘額轉置日期(YYYYMMDD)+” 0824406C”( 成本中心代號設為參數)
@@ -235,6 +259,30 @@ namespace CSIPKeyInGUI.BusinessRules
         {
             string code = "0824406C";
             string strTXT = "";
+
+            // 20221028 調整將成本中心代號改為抓取資料庫設定參數 By Kelton start
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.CommandType = CommandType.Text;
+            sqlcmd.CommandText = "SELECT PROPERTY_CODE FROM M_PROPERTY_CODE WHERE FUNCTION_KEY = '01' AND PROPERTY_KEY = 'o317_code'";
+            DataSet ds = BRM_PROPERTY_CODE.SearchOnDataSet(sqlcmd, "Connection_CSIP");
+
+            if (ds != null)
+            {
+                DataTable dt = ds.Tables[0];
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    code = dt.Rows[0][0].ToString();
+                }
+                else
+                {
+                    Logging.Log("[FAIL] M_PROPERTY_CODE 查無o317成本中心代號設定資料", LogState.Error, LogLayer.Util);
+                }
+            }
+            else
+            {
+                Logging.Log("[FAIL] 取得 M_PROPERTY_CODE o317成本中心代號設定資料失敗", LogState.Error, LogLayer.Util);
+            }
+            // 20221028 調整將成本中心代號改為抓取資料庫設定參數 By Kelton end
 
             //表頭”H”+餘額轉置日期(YYYYMMDD)+” 0824406C”( 成本中心代號設為參數)
             strTXT += string.Format("H{0}{1}{2}", DateTime.Parse(DateTime.Now.ToString()).ToString("yyyyMMdd"), code,
