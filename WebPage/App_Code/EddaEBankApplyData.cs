@@ -68,7 +68,8 @@ public class EddaEBankApplyData : IJob
         string batchLogErr = "";
         int impTotalSuccess = 0;
         int impTotalFail = 0;
-        bool executeFlag = false;
+        string jobStatus = string.Empty; // R：上一個排程執行中且未超過一小時(需略過)
+        
         #endregion
 
         try
@@ -90,17 +91,12 @@ public class EddaEBankApplyData : IJob
             #region 檢測JOB是否在執行中
 
             // 判斷JOB是否在執行中
-            var isContinue = CheckJobIsContinue(_jobId, _strFunctionKey, _dateStart, ref strMsgId);
-            if (!isContinue)
-            {
-                return;
-            }
+            var isContinue = CheckJobIsContinue(_jobId, _strFunctionKey, _dateStart, ref strMsgId, ref jobStatus);
+            if (!isContinue) return;
 
             #endregion
 
             // 開始批次作業
-            executeFlag = true;
-
             DateTime dt = DateTime.Now;
             // 批次日期
             string jobDate = string.Format("{0:0000}{1:00}{2:00}", int.Parse(dt.Year.ToString()), dt.Month, dt.Day);
@@ -155,21 +151,22 @@ public class EddaEBankApplyData : IJob
         }
         finally
         {
-            #region 紀錄下次執行時間
-
-            string strMsg = _jobId + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8).ToString();
-            if (context.NextFireTimeUtc.HasValue)
+            // 若上一個排程仍執行中且不超過一小時
+            if (!jobStatus.Equals("R"))
             {
-                strMsg += "  ;下次執行於:" + DateTime.Parse(context.NextFireTimeUtc.ToString()).AddHours(8).ToString();
-            }
+                #region 紀錄下次執行時間
 
-            JobHelper.SaveLog(strMsg, LogState.Info);
+                string strMsg = _jobId + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8);
+                if (context.NextFireTimeUtc.HasValue)
+                {
+                    strMsg += "  ;下次執行於:" + DateTime.Parse(context.NextFireTimeUtc.ToString()).AddHours(8);
+                }
 
-            #endregion
+                JobHelper.SaveLog(strMsg, LogState.Info);
 
-            #region 結束批次作業
-            if (executeFlag)
-            {
+                #endregion
+
+                #region 結束批次作業
                 if (batchLogErr == "")
                 {
                     InsertBatchLog(_jobId, _strFunctionKey, _dateStart, impTotalSuccess, impTotalFail, "S", "");
@@ -178,12 +175,12 @@ public class EddaEBankApplyData : IJob
                 {
                     InsertBatchLog(_jobId, _strFunctionKey, _dateStart, impTotalSuccess, impTotalFail, "F", batchLogErr);
                 }
+
+                BRL_BATCH_LOG.Delete(_strFunctionKey, _jobId, "R");
+                JobHelper.SaveLog(_jobId + " JOB結束", LogState.Info);
+
+                #endregion
             }
-
-            BRL_BATCH_LOG.Delete(_strFunctionKey, _jobId, "R");
-            JobHelper.SaveLog(_jobId + " JOB結束", LogState.Info);
-
-            #endregion
         }
     }
 
@@ -978,8 +975,16 @@ public class EddaEBankApplyData : IJob
         jobInfo.MailSubject = string.Empty;
     }
     
-    // 判斷JOB是否在執行中
-    private static bool CheckJobIsContinue(string jobId, string strFunctionKey, DateTime dateStart, ref string msgId)
+    /// <summary>
+    /// 判斷排程是否要繼續執行
+    /// </summary>
+    /// <param name="jobId">排程代號</param>
+    /// <param name="strFunctionKey">功能代號</param>
+    /// <param name="dateStart">排程開姞時間</param>
+    /// <param name="msgId">訊息代碼(Common/XML/Message.xml)</param>
+    /// <param name="rtnStatus">若判斷上一個排程仍執行中回傳值為「R」</param>
+    /// <returns></returns>
+    private static bool CheckJobIsContinue(string jobId, string strFunctionKey, DateTime dateStart, ref string msgId, ref string rtnStatus)
     {
         bool result = true;
         string jobStatus = JobHelper.SerchJobStatus(jobId);
@@ -1013,6 +1018,7 @@ public class EddaEBankApplyData : IJob
                 }
                 JobHelper.SaveLog("JOB 工作狀態為：正在執行！", LogState.Info);
                 // 返回不執行
+                rtnStatus = "R";
                 result = false;
             }
             else
@@ -1077,7 +1083,6 @@ public class EddaEBankApplyData : IJob
         if (ds == null || ds.Tables[0].Rows.Count == 0) // 無收檔資訊
         {
             jobInfoList.Add(new JobInfo { JobDate = jobDate });
-            // jobInfoList.Add(jobDate);
             return;
         }
         
@@ -1116,7 +1121,6 @@ public class EddaEBankApplyData : IJob
             if (int.Parse(jobDate) <= int.Parse(DateTime.Now.ToString("yyyyMMdd")))
             {
                 jobInfoList.Add(new JobInfo { JobDate = jobDate });
-                // jobInfoList.Add(jobDate);
             }
         }
     }

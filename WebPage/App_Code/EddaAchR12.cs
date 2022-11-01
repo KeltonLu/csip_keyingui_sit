@@ -38,7 +38,7 @@ public class EddaAchR12 : IJob
         string batchLogErr = "";
         int impTotalSuccess = 0;
         int impTotalFail = 0;
-        bool executeFlag = false;
+        string jobStatus = string.Empty; // R：上一個排程執行中且未超過一小時(需略過)
 
         #endregion
 
@@ -53,15 +53,10 @@ public class EddaAchR12 : IJob
             string jobMailTo = _jobDataMap.GetString("mail").Trim();
 
             // 判斷JOB是否在執行中
-            var isContinue = CheckJobIsContinue(jobId, _functionKey, _dateStart, ref strMsgId);
-            if (!isContinue)
-            {
-                return;
-            }
-
+            var isContinue = CheckJobIsContinue(jobId, _functionKey, _dateStart, ref strMsgId, ref jobStatus);
+            if (!isContinue) return;
+            
             // 開始批次作業
-            executeFlag = true;
-
             DateTime dt = DateTime.Now;
             // 批次日期
             string jobDate = string.Format("{0:0000}{1:00}{2:00}", int.Parse(dt.Year.ToString()), dt.Month, dt.Day);
@@ -111,21 +106,22 @@ public class EddaAchR12 : IJob
         }
         finally
         {
-            #region 紀錄下次執行時間
-
-            string strMsg = jobId + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8);
-            if (context.NextFireTimeUtc.HasValue)
+            // 若上一個排程仍執行中且不超過一小時
+            if (!jobStatus.Equals("R"))
             {
-                strMsg += "  ;下次執行於:" + DateTime.Parse(context.NextFireTimeUtc.ToString()).AddHours(8);
-            }
+                #region 紀錄下次執行時間
 
-            JobHelper.SaveLog(strMsg, LogState.Info);
+                var strMsg = jobId + "執行於:" + DateTime.Parse(context.FireTimeUtc.ToString()).AddHours(8);
+                if (context.NextFireTimeUtc.HasValue)
+                {
+                    strMsg += "  ;下次執行於:" + DateTime.Parse(context.NextFireTimeUtc.ToString()).AddHours(8);
+                }
 
-            #endregion
+                JobHelper.SaveLog(strMsg, LogState.Info);
 
-            #region 結束批次作業
-            if (executeFlag)
-            {
+                #endregion
+
+                #region 結束批次作業
                 if (batchLogErr == "")
                 {
                     InsertBatchLog(jobId, _functionKey, _dateStart, impTotalSuccess, impTotalFail, "S", "");
@@ -134,12 +130,12 @@ public class EddaAchR12 : IJob
                 {
                     InsertBatchLog(jobId, _functionKey, _dateStart, impTotalSuccess, impTotalFail, "F", batchLogErr);
                 }
+
+                BRL_BATCH_LOG.Delete(_functionKey, jobId, "R");
+                JobHelper.SaveLog(jobId + " JOB結束", LogState.Info);
+
+                #endregion
             }
-
-            BRL_BATCH_LOG.Delete(_functionKey, jobId, "R");
-            JobHelper.SaveLog(jobId + " JOB結束", LogState.Info);
-
-            #endregion
         }
     }
 
@@ -239,7 +235,7 @@ public class EddaAchR12 : IJob
     /// <param name="impFail">匯入失敗筆數</param>
     /// <param name="strMsg">錯誤訊息</param>
     /// <returns></returns>
-    private static bool FileImportEDDA_ACHR12(string jobDate, string filePath, string fileName, ref int impSuccess, ref int impFail, ref string strMsg)
+    private static bool FileImportEddaAchR12(string jobDate, string filePath, string fileName, ref int impSuccess, ref int impFail, ref string strMsg)
     {
         string sqlText = @"INSERT INTO [EDDA_ACHR12]([BOF], [CDATA], [TDATE], [ReceivingUnitCode], [BOF_Remark], [EOF], [TCOUNT], [EOF_Remark], [BatchDate], [AchFlag], [CreateDate] ) 
                         VALUES (@BOF, @CDATA, @TDATE, @ReceivingUnitCode, @BOF_Remark, @EOF, @TCOUNT, @EOF_Remark, @BatchDate, @AchFlag, @CreateDate )";
@@ -247,7 +243,6 @@ public class EddaAchR12 : IJob
         try
         {
             String openFile = filePath + fileName;
-            string[] arrEddaAchR12File = fileName.Split('_');
 
             #region 檢查檔案匯入檔是否存在
 
@@ -261,7 +256,7 @@ public class EddaAchR12 : IJob
 
             #region 取得fmt格式
 
-            Dictionary<String, int> fmtParam = GetImportFmtEDDA_ACHR12();
+            Dictionary<string, int> fmtParam = GetImportFmtEDDA_ACHR12();
             int fmtTotalLen = 0;
             foreach (var fmt in fmtParam)
             {
@@ -273,10 +268,9 @@ public class EddaAchR12 : IJob
             #region 檢查內文長度是否與fmt格式相符
 
             string[] arrayFile = FileTools.Read(openFile);
-            String rowText = string.Empty;
             foreach (var t in arrayFile)
             {
-                rowText = t;
+                var rowText = t;
                 if (t.StartsWith("BOF") || t.StartsWith("EOF"))
                 {
                     rowText += t; // 首錄加尾錄
@@ -302,8 +296,8 @@ public class EddaAchR12 : IJob
             DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
             if (ds == null || ds.Tables[0].Rows.Count == 0 || ds.Tables[0].Rows[0][0].ToString() == "") // INSERT
             {
-                string fileText = string.Empty;
-                foreach (string t in arrayFile)
+                var fileText = string.Empty;
+                foreach (var t in arrayFile)
                 {
                     if (t.StartsWith("BOF") || t.StartsWith("EOF"))
                     {
@@ -315,7 +309,7 @@ public class EddaAchR12 : IJob
                 int initNum = 0;
                 foreach (var fmt in fmtParam)
                 {
-                    string keyText = fmt.Key.ToString();
+                    string keyText = fmt.Key;
                     int keyLen = fmt.Value;
                     sqlComm.Parameters.Add(new SqlParameter("@" + keyText, fileText.Substring(initNum, keyLen).Trim()));
                     initNum += keyLen;
@@ -382,15 +376,14 @@ public class EddaAchR12 : IJob
     /// <param name="impFail">匯入失敗筆數</param>
     /// <param name="strMsg">錯誤訊息</param>
     /// <returns></returns>
-    private static bool FileImportEDDA_Auto_Pay(string jobDate, string filePath, string fileName, ref int impSuccess, ref int impFail, ref string strMsg)
+    private static bool FileImportEddaAutoPay(string jobDate, string filePath, string fileName, ref int impSuccess, ref int impFail, ref string strMsg)
     {
         string sqlText = @"INSERT INTO [EDDA_Auto_Pay]([BatchDate], [TDATE], [Deal_S_No], [Deal_No], [Sponsor_ID], [Other_Bank_Code_L], [Other_Bank_Acc_No], [Other_Bank_Cus_ID], [Cus_ID], [Apply_Type], [S_DATE], [AuthCode], [S_Remark], [Deal_Type], [Reply_Info], [Remark], [CreateDate]) 
  VALUES (@BatchDate, @TDATE, @Deal_S_No, @Deal_No, @Sponsor_ID, @Other_Bank_Code_L, @Other_Bank_Acc_No, @Other_Bank_Cus_ID, @Cus_ID, @Apply_Type, @S_DATE, @AuthCode, @S_Remark, @Deal_Type, @Reply_Info, @Remark, @CreateDate)";
 
         try
         {
-            String openFile = filePath + fileName;
-            string[] arrEddaAchR12File = fileName.Split('_');
+            var openFile = filePath + fileName;
 
             #region 檢查檔案匯入檔是否存在
 
@@ -404,7 +397,7 @@ public class EddaAchR12 : IJob
 
             #region 取得fmt格式
 
-            Dictionary<String, int> fmtParam = GetImportFmtEDDA_Auto_Pay();
+            Dictionary<string, int> fmtParam = GetImportFmtEDDA_Auto_Pay();
             int fmtTotalLen = 0;
             foreach (var fmt in fmtParam)
             {
@@ -420,18 +413,23 @@ public class EddaAchR12 : IJob
             string[] arrayFile = FileTools.Read(openFile);
             foreach (var t in arrayFile)
             {
-                String rowText = t;
-                if (rowText.Length != fmtTotalLen)
+                if (t.Length != fmtTotalLen)
                 {
                     strMsg = "檔案匯入長度不相符。";
                     return false;
                 }
                 if (t.StartsWith("BOF"))
-                    TDATE = rowText.Substring(10, 8);
+                {
+                    TDATE = t.Substring(9, 8);
+                }
                 if (t.StartsWith("EOF"))
-                    int.TryParse(rowText.Substring(4, 8), out TCOUNT);
+                {
+                    int.TryParse(t.Substring(4, 8), out TCOUNT);
+                }
                 if (!t.StartsWith("BOF") && !t.StartsWith("EOF"))
+                {
                     contentCount++;
+                }
             }
 
             // 檢核尾錄筆數與實際筆數是否相同
@@ -455,10 +453,9 @@ public class EddaAchR12 : IJob
             DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
             if (ds == null || ds.Tables[0].Rows.Count == 0 || ds.Tables[0].Rows[0][0].ToString() == "") // DB完全沒有符合批次日期的資料
             {
-                foreach (string t in arrayFile)
+                foreach (var t in arrayFile)
                 {
-                    string fileText = t;
-                    if (!fileText.StartsWith("BOF") && !fileText.StartsWith("EOF"))
+                    if (!t.StartsWith("BOF") && !t.StartsWith("EOF"))
                     {
                         sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlText };
 
@@ -467,7 +464,7 @@ public class EddaAchR12 : IJob
                         {
                             string keyText = fmt.Key.ToString();
                             int keyLen = fmt.Value;
-                            sqlComm.Parameters.Add(new SqlParameter("@" + keyText, fileText.Substring(initNum, keyLen).Trim()));
+                            sqlComm.Parameters.Add(new SqlParameter("@" + keyText, t.Substring(initNum, keyLen).Trim()));
                             initNum += keyLen;
                         }
                         sqlComm.Parameters.Add(new SqlParameter("@TDATE", TDATE.Trim())); // 主檔交易日期
@@ -479,7 +476,7 @@ public class EddaAchR12 : IJob
                             impSuccess++;
 
                             #region 紀錄 CustomerLog
-                            InsertCustomerLog(fileText.Substring(19, 7).Trim(), fileText.Substring(26, 14).Trim(), fileText.Substring(71, 8).Trim(), fileText.Substring(50, 20).Trim(), "P4", "90000001");
+                            InsertCustomerLog(t.Substring(19, 7).Trim(), t.Substring(26, 14).Trim(), t.Substring(71, 8).Trim(), t.Substring(50, 20).Trim(), "P4", "90000001");
                             #endregion
                         }
                         else
@@ -491,15 +488,14 @@ public class EddaAchR12 : IJob
             }
             else
             {
-                foreach (string t in arrayFile)
+                foreach (var t in arrayFile)
                 {
-                    string fileText = t;
-                    if (!fileText.StartsWith("BOF") && !fileText.StartsWith("EOF"))
+                    if (!t.StartsWith("BOF") && !t.StartsWith("EOF"))
                     {
                         // 查詢 UploadFlag = 'Y' 的資料, 比對檔案內容, 相同的不重複寫入
                         string sqlSelectEDDA_Auto_PayIsUpload = "SELECT [TDATE], [Deal_S_No], [Deal_No], [Sponsor_ID], [Other_Bank_Code_L], [Other_Bank_Acc_No], [Other_Bank_Cus_ID], [Cus_ID], [Apply_Type], [S_DATE], [AuthCode], [S_Remark], [Deal_Type], [Reply_Info] FROM EDDA_Auto_Pay WHERE UploadFlag = 'Y' AND BatchDate = @BatchDate ";
                         sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlSelectEDDA_Auto_PayIsUpload };
-                        sqlComm.Parameters.Add(new SqlParameter("@BatchDate", arrEddaAchR12File[1].ToString().Trim())); // 批次日期, 直接取檔名上的日期
+                        sqlComm.Parameters.Add(new SqlParameter("@BatchDate", jobDate)); // 批次日期
                         DataSet dsEDDA_Auto_PayIsUpload = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
                         bool fileContentExists = false;
                         if (!(dsEDDA_Auto_PayIsUpload == null || dsEDDA_Auto_PayIsUpload.Tables[0].Rows.Count == 0 || dsEDDA_Auto_PayIsUpload.Tables[0].Rows[0][0].ToString() == ""))
@@ -507,7 +503,7 @@ public class EddaAchR12 : IJob
                             foreach (DataRow dr in dsEDDA_Auto_PayIsUpload.Tables[0].Rows)
                             {
                                 string drValues = string.Join("", dr.ItemArray);
-                                if (drValues.Replace(" ", "") == (TDATE + fileText).Replace(" ", ""))
+                                if (drValues.Replace(" ", "") == (TDATE + t).Replace(" ", ""))
                                     fileContentExists = true;
                             }
                         }
@@ -523,7 +519,7 @@ public class EddaAchR12 : IJob
                         {
                             string keyText = fmt.Key.ToString();
                             int keyLen = fmt.Value;
-                            sqlComm.Parameters.Add(new SqlParameter("@" + keyText, fileText.Substring(initNum, keyLen)));
+                            sqlComm.Parameters.Add(new SqlParameter("@" + keyText, t.Substring(initNum, keyLen)));
                             initNum += keyLen;
                         }
                         sqlComm.Parameters.Add(new SqlParameter("@TDATE", TDATE)); // 主檔交易日期
@@ -557,9 +553,9 @@ public class EddaAchR12 : IJob
     /// EDDA_ACHR12 FMT 格式參數
     /// </summary>
     /// <returns></returns>
-    private static Dictionary<String, int> GetImportFmtEDDA_ACHR12()
+    private static Dictionary<string, int> GetImportFmtEDDA_ACHR12()
     {
-        Dictionary<String, int> fmtParam = new Dictionary<String, int>
+        Dictionary<string, int> fmtParam = new Dictionary<string, int>
         {
             {"BOF", 3},
             {"CDATA", 6},
@@ -578,9 +574,9 @@ public class EddaAchR12 : IJob
     /// EDDA_Auto_Pay FMT 格式參數
     /// </summary>
     /// <returns></returns>
-    private static Dictionary<String, int> GetImportFmtEDDA_Auto_Pay()
+    private static Dictionary<string, int> GetImportFmtEDDA_Auto_Pay()
     {
-        Dictionary<String, int> fmtParam = new Dictionary<String, int>
+        Dictionary<string, int> fmtParam = new Dictionary<string, int>
         {
             {"Deal_S_No", 6},
             {"Deal_No", 3},
@@ -811,7 +807,7 @@ public class EddaAchR12 : IJob
         // 匯入ACHR12首錄/尾錄資料
         strMsgId = string.Format("批次日期 : {0}，檔案匯入至EDDA_ACHR12(首錄/尾錄資料)", jobDate);
         JobHelper.SaveLog(strMsgId + "：開始", LogState.Info);
-        if (FileImportEDDA_ACHR12(jobDate, folderPath, eddaAchR12File, ref impSuccess, ref impFail, ref strImpMsg))
+        if (FileImportEddaAchR12(jobDate, folderPath, eddaAchR12File, ref impSuccess, ref impFail, ref strImpMsg))
         {
             JobHelper.SaveLog(strMsgId + "：成功！", LogState.Info);
         }
@@ -830,7 +826,7 @@ public class EddaAchR12 : IJob
         // 匯入印核資料明細
         strMsgId = string.Format("批次日期 : {0}，檔案匯入至EDDA_Auto_Pay", jobDate);
         JobHelper.SaveLog(strMsgId + "：開始", LogState.Info);
-        if (FileImportEDDA_Auto_Pay(jobDate, folderPath, eddaAchR12File, ref impSuccess, ref impFail, ref strImpMsg))
+        if (FileImportEddaAutoPay(jobDate, folderPath, eddaAchR12File, ref impSuccess, ref impFail, ref strImpMsg))
         {
             JobHelper.SaveLog(strMsgId + "：成功！(匯入" + impSuccess + "筆。)", LogState.Info);
         }
@@ -867,8 +863,16 @@ public class EddaAchR12 : IJob
         #endregion
     }
 
-    // 判斷JOB是否在執行中
-    private static bool CheckJobIsContinue(string jobId, string strFunctionKey, DateTime dateStart, ref string msgId)
+    /// <summary>
+    /// 判斷排程是否要繼續執行
+    /// </summary>
+    /// <param name="jobId">排程代號</param>
+    /// <param name="strFunctionKey">功能代號</param>
+    /// <param name="dateStart">排程開姞時間</param>
+    /// <param name="msgId">訊息代碼(Common/XML/Message.xml)</param>
+    /// <param name="rtnStatus">若判斷上一個排程仍執行中回傳值為「R」</param>
+    /// <returns></returns>
+    private static bool CheckJobIsContinue(string jobId, string strFunctionKey, DateTime dateStart, ref string msgId, ref string rtnStatus)
     {
         bool result = true;
         string jobStatus = JobHelper.SerchJobStatus(jobId);
@@ -892,7 +896,7 @@ public class EddaAchR12 : IJob
                     DateTime tempDt;
                     DateTime.TryParse(dtInfo.Rows[0][2].ToString(), out tempDt);
                     TimeSpan ts = DateTime.Now.Subtract(tempDt);
-                    int dayCount = ts.Hours; // 執行中紀錄的開始時間與當天執行時間相差小時
+                    var dayCount = ts.Hours; // 執行中紀錄的開始時間與當天執行時間相差小時
                     if (dayCount > 1)
                     {
                         BRL_BATCH_LOG.Delete(strFunctionKey, jobId, "R");
@@ -902,6 +906,7 @@ public class EddaAchR12 : IJob
                 }
                 JobHelper.SaveLog("JOB 工作狀態為：正在執行！", LogState.Info);
                 // 返回不執行
+                rtnStatus = "R";
                 result = false;
             }
             else
@@ -913,12 +918,22 @@ public class EddaAchR12 : IJob
         catch (Exception ex)
         {
             result = false;
-            JobHelper.Write(jobId, "【FAIL】" + ex.ToString());
+            JobHelper.Write(jobId, "【FAIL】" + ex);
         }
 
         return result;
     }
 
+    /// <summary>
+    /// 新增批次Log
+    /// </summary>
+    /// <param name="jobId">批次ID</param>
+    /// <param name="strFunctionKey">功能代號</param>
+    /// <param name="dateStart">批次開始時間</param>
+    /// <param name="success">成功筆數</param>
+    /// <param name="fail">失敗筆數</param>
+    /// <param name="status">批次執行狀態</param>
+    /// <param name="message">批次訊息</param>
     private static void InsertBatchLog(string jobId, string strFunctionKey, DateTime dateStart, int success, int fail,
         string status, string message)
     {
