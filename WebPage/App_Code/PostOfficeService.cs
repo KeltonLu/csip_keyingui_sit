@@ -1307,7 +1307,7 @@ public class PostOfficeService
     {
         string batchDate = replyDate.Replace("-", "").Replace("/", "");
         
-        string sqlDelete = @"DELETE FROM Auto_Pay_Auth_Fail WHERE UploadFlag <> 'Y' AND DataType = '2' AND BatchDate = @SerialNumber AND DataType = @SerialNumber";
+        string sqlDelete = @"DELETE FROM Auto_Pay_Auth_Fail WHERE UploadFlag <> 'Y' AND DataType = '2' AND BatchDate = @BatchDate AND SerialNumber = @SerialNumber";
         
         string sqlText =
             @"INSERT INTO Auto_Pay_Auth_Fail (BatchDate, SerialNumber, DataType, CustId, ErrorCode, IssueChannel, IssueDate, UploadFlag, CreateDate)

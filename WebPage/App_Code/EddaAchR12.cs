@@ -28,6 +28,8 @@ public class EddaAchR12 : IJob
     private readonly DateTime _dateStart = DateTime.Now; // 開始時間
     private bool _isReRun; // 是否手動執行
     private static JobDataMap _jobDataMap = new JobDataMap();
+    private static int impContentSuccess = 0; //匯入DB成功筆數
+    private static int impContentFail = 0; //匯入DB失敗筆數
 
     public void Execute(JobExecutionContext context)
     {
@@ -55,15 +57,15 @@ public class EddaAchR12 : IJob
             // 判斷JOB是否在執行中
             var isContinue = CheckJobIsContinue(jobId, _functionKey, _dateStart, ref strMsgId, ref jobStatus);
             if (!isContinue) return;
-            
+
             // 開始批次作業
             DateTime dt = DateTime.Now;
             // 批次日期
             string jobDate = string.Format("{0:0000}{1:00}{2:00}", int.Parse(dt.Year.ToString()), dt.Month, dt.Day);
-            
+
             // 檢查排程參數
             CheckParamAndReRun(context, ref jobDate);
-            
+
             // 批次日期清單
             var jobDateList = new List<string>();
 
@@ -77,7 +79,7 @@ public class EddaAchR12 : IJob
                 // 取得執行批次日期清單
                 GetJobDateList(ref jobDateList);
             }
-            
+
             // 開始FTP下載與匯入作業
             foreach (var batchDate in jobDateList)
             {
@@ -210,7 +212,7 @@ public class EddaAchR12 : IJob
                         SELECT A.BatchDate, A.AuthCode, '0', A.Cus_ID, A.Reply_Info, 'EDDA', A.S_DATE + 19110000, 'N', GETDATE()
                         FROM EDDA_Auto_Pay A
                         WHERE A.BatchDate = @BatchDate AND A.Reply_Info IN (SELECT EddaRtnCode FROM EDDA_Rtn_Info WHERE NeedSendHost = 'Y')
-                              AND NOT EXISTS(SELECT * FROM Auto_Pay_Auth_Fail B WHERE B.SerialNumber = A.AuthCode AND B.CustId = A.Cus_ID); ";
+                              AND NOT EXISTS(SELECT * FROM Auto_Pay_Auth_Fail B WHERE B.SerialNumber = A.AuthCode AND B.CustId = A.Cus_ID AND B.BatchDate = @BatchDate);";
         SqlCommand sqlCommand = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlText };
         sqlCommand.Parameters.Add(new SqlParameter("@BatchDate", batchDate)); //批次日期
 
@@ -224,7 +226,7 @@ public class EddaAchR12 : IJob
             return false;
         }
     }
-    
+
     /// <summary>
     /// 首錄尾錄寫進EDDA_ACHR12
     /// </summary>
@@ -354,7 +356,7 @@ public class EddaAchR12 : IJob
                     impFail++;
                 }
             }
-            
+
             #endregion
 
             return impFail == 0;
@@ -365,7 +367,7 @@ public class EddaAchR12 : IJob
             return false;
         }
     }
-    
+
     /// <summary>
     /// 明細錄寫進EDDA_Auto_Pay
     /// </summary>
@@ -449,7 +451,7 @@ public class EddaAchR12 : IJob
             string sqlSelect = "SELECT * FROM EDDA_Auto_Pay WHERE BatchDate = @BatchDate ";
             SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlSelect };
             sqlComm.Parameters.Add(new SqlParameter("@BatchDate", jobDate)); // 批次日期
-            
+
             DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
             if (ds == null || ds.Tables[0].Rows.Count == 0 || ds.Tables[0].Rows[0][0].ToString() == "") // DB完全沒有符合批次日期的資料
             {
@@ -464,6 +466,8 @@ public class EddaAchR12 : IJob
                         {
                             string keyText = fmt.Key.ToString();
                             int keyLen = fmt.Value;
+                            if (t.Contains("Non-Reply") && keyText == "Reply_Info") //匯入檔內容 Remark 為 "Non-Reply" 時, Reply_Info 為 一格空白
+                                keyLen = 1;
                             sqlComm.Parameters.Add(new SqlParameter("@" + keyText, t.Substring(initNum, keyLen).Trim()));
                             initNum += keyLen;
                         }
@@ -513,12 +517,14 @@ public class EddaAchR12 : IJob
 
                         // 寫入
                         sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlText };
-                        
+
                         int initNum = 0;
                         foreach (var fmt in fmtParam)
                         {
                             string keyText = fmt.Key.ToString();
                             int keyLen = fmt.Value;
+                            if (t.Contains("Non-Reply") && keyText == "Reply_Info") //匯入檔內容 Remark 為 "Non-Reply" 時, Reply_Info 為 一格空白
+                                keyLen = 1;
                             sqlComm.Parameters.Add(new SqlParameter("@" + keyText, t.Substring(initNum, keyLen)));
                             initNum += keyLen;
                         }
@@ -569,7 +575,7 @@ public class EddaAchR12 : IJob
 
         return fmtParam;
     }
-    
+
     /// <summary>
     /// EDDA_Auto_Pay FMT 格式參數
     /// </summary>
@@ -629,7 +635,7 @@ public class EddaAchR12 : IJob
             }
         }
     }
-    
+
     /// <summary>
     /// FTP下載與匯入作業
     /// </summary>
@@ -662,7 +668,7 @@ public class EddaAchR12 : IJob
         }
 
         batchLogErr += "";
-        
+
 
         #region FTP Download
         var strMsgId = "FTP下載檔案";
@@ -677,9 +683,9 @@ public class EddaAchR12 : IJob
             string ftpFileName = dt.Rows[0]["FtpFileName"].ToString().Trim();
 
             FTPFactory ftpFactory = new FTPFactory(ftpIp, "", ftpId, ftpPwd, "21", ftpPath, "Y");
-            
+
             // 法金檔案名稱中的日期為「批次日期減一天」
-            string achFileDate = DateTime.ParseExact(jobDate , "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces).AddDays(-1).ToString("yyyyMMdd");
+            string achFileDate = DateTime.ParseExact(jobDate, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces).AddDays(-1).ToString("yyyyMMdd");
 
             // 模糊查詢ftp上面特定的檔案名稱
             string fileNameRLike = ftpFileName.Replace("yyyyMMdd", achFileDate).Replace("HHmmss.txt", "*");
@@ -695,7 +701,7 @@ public class EddaAchR12 : IJob
                 return;
             }
 
-            int max = 0; 
+            int max = 0;
             foreach (var fileName in fileList)
             {
                 if (string.IsNullOrWhiteSpace(fileName)) continue;
@@ -709,7 +715,7 @@ public class EddaAchR12 : IJob
                 max = iFileListName;
                 eddaAchR12File = fileName;
             }
-            
+
             // 檔案名稱不為空白則進行FTP下載檔案
             if (!string.IsNullOrWhiteSpace(eddaAchR12File))
             {
@@ -746,7 +752,7 @@ public class EddaAchR12 : IJob
                 };
                 sqlCommand.Parameters.Add(new SqlParameter("@BatchDate", jobDate)); //批次日期
                 DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlCommand, "Connection_System");
-                if (ds == null || ds.Tables[0].Rows.Count== 0) // 查無存在的批次日期記錄才新增
+                if (ds == null || ds.Tables[0].Rows.Count == 0) // 查無存在的批次日期記錄才新增
                 {
                     sqlText = @"INSERT INTO [EDDA_ACHR12]([BOF], [CDATA], [TDATE], [ReceivingUnitCode], [BOF_Remark], [EOF], [TCOUNT], [EOF_Remark], [BatchDate], [AchFlag], [CreateDate]) 
                         VALUES ('BOF', 'ACHR12', '', '', '', 'EOF', '0', '', @BatchDate, 'N', @CreateDate)";
@@ -771,7 +777,7 @@ public class EddaAchR12 : IJob
 
         #endregion
 
-        string sContentF = "<font size=\"2\">您好!(失敗)<BR><BR>　　您<font color=\"#FF0000\">" + 
+        string sContentF = "<font size=\"2\">您好!(失敗)<BR><BR>　　您<font color=\"#FF0000\">" +
                            "</font>EDDA法金核印資料「收檔失敗」，檔名為<font color=\"#FF0000\">" + eddaAchR12File +
                            "</font>，提醒！請作後續追蹤。";
 
@@ -803,7 +809,6 @@ public class EddaAchR12 : IJob
         string strImpMsg = "";
         int impSuccess = 0;
         int impFail = 0;
-        
         // 匯入ACHR12首錄/尾錄資料
         strMsgId = string.Format("批次日期 : {0}，檔案匯入至EDDA_ACHR12(首錄/尾錄資料)", jobDate);
         JobHelper.SaveLog(strMsgId + "：開始", LogState.Info);
@@ -829,6 +834,7 @@ public class EddaAchR12 : IJob
         if (FileImportEddaAutoPay(jobDate, folderPath, eddaAchR12File, ref impSuccess, ref impFail, ref strImpMsg))
         {
             JobHelper.SaveLog(strMsgId + "：成功！(匯入" + impSuccess + "筆。)", LogState.Info);
+            impContentSuccess += impSuccess;
         }
         else
         {
@@ -839,9 +845,11 @@ public class EddaAchR12 : IJob
             SendMail(mailSender, mailTo, mailSubject + strImpMsg, errorMsg);
 
             batchLogErr += strMsgId + "：" + eddaAchR12File + ",失敗！；";
+            impContentSuccess += impSuccess;
+            impContentFail += impFail;
             return;
         }
-        
+
         #endregion
 
         #region 核印失敗資料匯入【Auto_Pay_Auth_Fail】
@@ -940,6 +948,7 @@ public class EddaAchR12 : IJob
         StringBuilder sbMessage = new StringBuilder();
         sbMessage.Append("成功檔案數：" + success + "。"); //*成功檔案數
         sbMessage.Append("失敗檔案數：" + fail + "。"); //*失敗檔案數
+        sbMessage.Append("明細檔匯入 成功：" + impContentSuccess + "筆，失敗：" + impContentFail + "筆。"); //*明細檔匯入筆數
 
         if (message.Trim() != "")
         {
@@ -950,7 +959,7 @@ public class EddaAchR12 : IJob
         BRL_BATCH_LOG.Insert(strFunctionKey, jobId, dateStart, status, sbMessage.ToString());
 
     }
-    
+
     /// <summary>
     /// 取得法金ACHR12收檔資訊
     /// </summary>
@@ -965,7 +974,7 @@ public class EddaAchR12 : IJob
             CommandType = CommandType.Text,
             CommandText = batchSql
         };
-        
+
         return BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
     }
 
@@ -976,7 +985,7 @@ public class EddaAchR12 : IJob
     private void GetJobDateList(ref List<string> jobDateList)
     {
         var jobDate = DateTime.Now.ToString("yyyyMMdd"); // 預設批次日期(系統日期)
-        
+
         // 取得法金ACHR12收檔資訊
         DataSet ds = GetEddaAchr12Info();
         if (ds == null || ds.Tables[0].Rows.Count == 0) // 無收檔資訊
@@ -984,11 +993,11 @@ public class EddaAchR12 : IJob
             jobDateList.Add(jobDate);
             return;
         }
-        
+
         // 有收檔資訊
         string achDateY = ds.Tables[0].Rows[0]["AchDateY"].ToString().Trim(); // 法金「有」檔案最後日期
         string achDateN = ds.Tables[0].Rows[0]["AchDateN"].ToString().Trim(); // 法金「無」檔案最後日期
-        
+
         // 判斷開始執行的批次日期
         if (!string.IsNullOrEmpty(achDateY) && achDateY.Length == 8)
         {
@@ -999,10 +1008,10 @@ public class EddaAchR12 : IJob
             jobDate = achDateN;
         }
 
-        DateTime tempDt = DateTime.ParseExact(jobDate , "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
+        DateTime tempDt = DateTime.ParseExact(jobDate, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
         TimeSpan ts = DateTime.Now.Subtract(tempDt);
         int dayCount = ts.Days; // 批次日期與系統日期相差天數
-        for (var i = 0; i <= dayCount; i++) 
+        for (var i = 0; i <= dayCount; i++)
         {
             // 「批次日期與系統日期相差不等於0」且存在下載成功的日期「achDateY」，則由上次成功日期「achDateY」「加一天」開始
             if (dayCount != 0 && !string.IsNullOrEmpty(achDateY))
@@ -1023,7 +1032,7 @@ public class EddaAchR12 : IJob
             }
         }
     }
-    
+
     /// <summary>
     /// 檢查排程參數
     /// </summary>
@@ -1039,7 +1048,7 @@ public class EddaAchR12 : IJob
             JobHelper.SaveLog("檢核輸入參數：開始！", LogState.Info);
 
             string strParam = context.JobDetail.JobDataMap["param"].ToString();
-                
+
             if (strParam.Length == 10) // 日期：2022/09/01
             {
                 DateTime tempDt;

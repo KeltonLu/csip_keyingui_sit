@@ -925,14 +925,14 @@ public class ACHR02 : Quartz.IJob
     /// <returns>true or false</returns>
     private static bool ImportAuthFailData(string batchDate)
     {
-        string sqlDelete = @"DELETE FROM Auto_Pay_Auth_Fail WHERE UploadFlag <> 'Y' AND BankType = '1' AND BatchDate = @BatchDate";
+        string sqlDelete = @"DELETE FROM Auto_Pay_Auth_Fail WHERE UploadFlag <> 'Y' AND DataType = '1' AND BatchDate = @BatchDate";
         
         string sqlText =
             @"INSERT INTO Auto_Pay_Auth_Fail (BatchDate, SerialNumber, DataType, CustId, ErrorCode, IssueChannel, IssueDate, UploadFlag, CreateDate)
                 SELECT @BatchDate, LEFT(S_Remark, 13), '1', Cus_ID, Reply_Info, 'CSIP',
                        CONVERT(varchar(4), SUBSTRING(S_DATE, 1, 4) + 1911) + SUBSTRING(S_DATE, 5, 4), 'N', GETDATE()
                 FROM ACHR02_TMP A
-                WHERE NOT EXISTS(SELECT * FROM Auto_Pay_Auth_Fail B WHERE B.ReceiveNumber = LEFT(A.S_Remark, 13))
+                WHERE NOT EXISTS(SELECT * FROM Auto_Pay_Auth_Fail B WHERE B.SerialNumber = LEFT(A.S_Remark, 13))
                  AND Reply_Info IN (SELECT Ach_Rtn_Code FROM Ach_Rtn_Info WHERE NeedSendHost = 'Y')";
 
         try

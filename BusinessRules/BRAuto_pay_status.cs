@@ -115,21 +115,23 @@ UNION
 -- EDDA
 SELECT AUTHCODE,
        CUS_ID,
-       ''                                                                    AS Cus_Name,
-       OTHER_BANK_CODE_L                                                     AS AccNoBank,
-       OTHER_BANK_ACC_NO                                                     AS Acc_No,
-       CASE PayWay WHEN '1' THEN '1' ELSE '0' END                            AS Pay_Way,
-       'Y'                                                                   AS IsUpdateByTXT,
-       '-'                                                                   AS IsCTCB,
-       CONCAT(S_DATE + 19110000, '090000')                                   AS MATAINDATE,
-       CUS_ID                                                                AS Acc_ID,
-       'EDDA'                                                                AS user_id,
-       CASE WHEN ComparisonStatus = '1' THEN EBApplyType ELSE Apply_Type END AS Function_Code,
-       '00881'                                                               AS Popul_NO,
-       SalesEmpoNo                                                           AS Popul_EmpNo,
-       'EDDA'                                                                AS DDMEMO,
-       ''                                                                    AS Case_Class,
-       SalesChannel                                                          AS SALES_CHANNEL
+       ''                                                                                  AS Cus_Name,
+       OTHER_BANK_CODE_L                                                                   AS AccNoBank,
+       OTHER_BANK_ACC_NO                                                                   AS Acc_No,
+       CASE PayWay WHEN '1' THEN '1' ELSE '0' END                                          AS Pay_Way,
+       'Y'                                                                                 AS IsUpdateByTXT,
+       '-'                                                                                 AS IsCTCB,
+       CASE ComparisonStatus
+           WHEN '1' THEN CONCAT(ApplyDate, ApplyTime)
+           ELSE CONCAT(S_DATE + 19110000, '090000') END                                    AS MATAINDATE,
+       CUS_ID                                                                              AS Acc_ID,
+       'EDDA'                                                                              AS user_id,
+       CASE WHEN ComparisonStatus = '1' THEN EBApplyType ELSE Apply_Type END               AS Function_Code,
+       '00881'                                                                             AS Popul_NO,
+       SalesEmpoNo                                                                         AS Popul_EmpNo,
+       'EDDA'                                                                              AS DDMEMO,
+       ''                                                                                  AS Case_Class,
+       CASE WHEN SalesChannel IS NULL OR SalesChannel = '' THEN '04' ELSE SalesChannel END AS SALES_CHANNEL
 FROM EDDA_Auto_Pay
 WHERE UploadFlag = '0' AND ComparisonStatus <> '0' AND Reply_Info IN ('A0', 'A4')";
 
@@ -1289,57 +1291,47 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
             {
                 DataRow row = dt.Rows[i];
                 // 1码 Char(16) ACC-ID       歸戶 ID(左靠右補空白)
-                strTXT += row["Cus_ID"].ToString().Trim().ToUpper().PadRight(16, ' ');
+                strTXT += SubstringAndPadRight(row["Cus_ID"].ToString().Trim().ToUpper(), 16);
 
                 //17码 Char(1) FUNCTION-CODE
-                strTXT += row["Function_Code"].ToString().PadRight(1, ' ');
+                strTXT += SubstringAndPadRight(row["Function_Code"].ToString().Trim(), 1);
 
                 //18码 Char(3)  BK-ID        自扣銀行(042:自行,701:郵局,其它:ACH)
-                string accNoBank = row["AccNoBank"].ToString().Trim();
-                if (accNoBank.Length > 3)
-                {
-                    accNoBank = accNoBank.Substring(0, 3);
-                }
-                strTXT += accNoBank.PadRight(3, ' ');
-
+                strTXT += SubstringAndPadRight(row["AccNoBank"].ToString().Trim(), 3);
+                
                 //21码 Char(26) BK-AC        自扣帳號(左靠右補空白)
-                strTXT += row["Acc_No"].ToString().Trim().PadRight(26, ' ');
+                strTXT += SubstringAndPadRight(row["Acc_No"].ToString().Trim(), 26);
 
                 //47码 Char(1)  DD-TAPE-IND  自扣註記(0,1)
-                strTXT += row["Pay_Way"].ToString().Trim().PadRight(1, ' ');
+                strTXT += SubstringAndPadRight(row["Pay_Way"].ToString().Trim(), 1);
 
                 //48码 Char(11) DD-ID 自扣者 ID(左靠右補空白)
-                strTXT += row["Acc_ID"].ToString().Trim().ToUpper().PadRight(11, ' ');
+                strTXT += SubstringAndPadRight(row["Acc_ID"].ToString().Trim(), 11);
 
                 //59码 Char(14)  MATAIN-DATE(鍵檔日期)  格式:YYYYMMDD(為當日系統日) + MATAIN-TIME Char(6) 格式：HHMMSS(為當日系統時間)
-                strTXT += row["MATAINDATE"].ToString().Trim().PadRight(14, ' ');
+                strTXT += SubstringAndPadRight(row["MATAINDATE"].ToString().Trim(), 14);
 
                 //73码 Char(8)  DD-MEMO   自扣通路來源註記(CSIP)
-                strTXT += row["DDMEMO"].ToString().Trim().PadRight(8, ' ');
-
+                strTXT += SubstringAndPadRight(row["DDMEMO"].ToString().Trim(), 8);
+                
                 //81码 Char(2) SALES-CHANNEL 推廣通路代碼 CSIP為'03'、EDDA為「'04' or '05'」
-                string salesChannel = row["SALES_CHANNEL"].ToString().Trim();
-                if (salesChannel.Length > 2)
-                {
-                    salesChannel = salesChannel.Substring(0, 2);
-                }
-                strTXT += salesChannel.PadRight(2, ' ');
+                strTXT += SubstringAndPadRight(row["SALES_CHANNEL"].ToString().Trim(), 2);
 
                 //83码 Char(5) SALES-UNIT  推廣單位代碼
-                strTXT += row["Popul_NO"].ToString().PadRight(5, ' ');
+                strTXT += SubstringAndPadRight(row["Popul_NO"].ToString().Trim(), 5);
 
                 //88码 Char(8) SALES-EMPO-NO  推廣員員編
-                strTXT += row["Popul_EmpNo"].ToString().PadRight(8, ' ');
+                strTXT += SubstringAndPadRight(row["Popul_EmpNo"].ToString().Trim(), 8);
 
                 //96碼 Char(8) DDST-MATAIN-USER 維護人員
-                var userId = row["user_id"].ToString();
+                var userId = row["user_id"].ToString().Trim();
                 if (userId.Length > 8)
                 {
                     strTXT += userId.Substring(userId.Length - 8).PadRight(8, ' ');
                 }
                 else
                 {
-                    strTXT += userId;
+                    strTXT += userId.PadRight(8, ' ');;
                 }
 
                 //104码 Char(7) FILLER       保留欄
@@ -1349,7 +1341,6 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
 
             }
             strTXT += "EOF";
-            //strTXT += "\r\n";
 
             string strPah = AppDomain.CurrentDomain.BaseDirectory + UtilHelper.GetAppSettings("FileUpload") + "\\" + fileName;
             if (File.Exists(strPah))
@@ -1365,6 +1356,18 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
                 sw.Close();
             }
 
+        }
+
+        /// <summary>
+        /// 若字串超過「指定長度」則進行substring並且將字串左靠右補空白至「指定長度」
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="len"></param>
+        /// <returns></returns>
+        private static string SubstringAndPadRight(string str, int len)
+        {
+            var rtnString = str.Length > len ? str.Substring(0, len) : str;
+            return rtnString.PadRight(len, ' ');
         }
 
         /// <summary>
