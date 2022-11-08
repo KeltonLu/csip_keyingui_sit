@@ -58,6 +58,9 @@ public class EddaAchR12 : IJob
             var isContinue = CheckJobIsContinue(jobId, _functionKey, _dateStart, ref strMsgId, ref jobStatus);
             if (!isContinue) return;
 
+            impContentSuccess = 0;
+            impContentFail = 0;
+
             // 開始批次作業
             DateTime dt = DateTime.Now;
             // 批次日期

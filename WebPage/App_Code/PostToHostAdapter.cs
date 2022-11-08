@@ -377,13 +377,14 @@ public class PostToHostAdapter
         DataTable dtUpdateData = CommonFunction.GetDataTable();
         
         Hashtable htInputP4_JCDKS = new Hashtable(); // 更新使用的第二卡人檔上行
-        CommonFunction.GetViewStateHt(htOutputP4_JCDK, ref htInputP4_JCDKS); // 複製第二卡人檔資料
         
         bool mobilePhoneIsDiff = false; // 行動電話是否有異動
         
         // 若查詢第二卡人檔成功，則異動第二卡人檔(行動電話)，若更新失敗不影響後續流程
         if (jcdkQuery)
         {
+            CommonFunction.GetViewStateHt(htOutputP4_JCDK, ref htInputP4_JCDKS); // 複製第二卡人檔資料
+            
             //*比對<行動電話>
             CommonFunction.ContrastData(htInputP4_JCDKS, dtUpdateData, mobilePhone, "MOBILE_PHONE", BaseHelper.GetShowText("01_01010800_011"));
 

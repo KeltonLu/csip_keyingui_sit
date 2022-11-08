@@ -75,7 +75,7 @@ function CheckInputValue()
                     </tr>
                     <tr class="trEven">
                         <td style="text-align: right; width: 15%">
-                            <cc1:custlabel runat="server" ShowID="01_05040000_010"></cc1:custlabel>：
+                            <cc1:custlabel runat="server" ShowID="01_05030000_010"></cc1:custlabel>：
                         </td>
                         <td style="text-align: left; width: 15%">
                             <cc1:CustDropDownList runat="server" ID="NeedSendHostList" AutoPostBack="False" Width="100px" kind="select">
@@ -84,7 +84,7 @@ function CheckInputValue()
                             </cc1:CustDropDownList>
                         </td>
                         <td align="right" style="width: 15%">
-                            <cc1:custlabel runat="server" ShowID="01_05040000_011"></cc1:custlabel>：
+                            <cc1:custlabel runat="server" ShowID="01_05030000_011"></cc1:custlabel>：
                         </td>
                         <td style="width: 55%">
                             <cc1:custtextbox runat="server" id="txtSendHostMsg" Width="400px" MaxLength="9"></cc1:custtextbox>
