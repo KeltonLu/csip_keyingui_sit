@@ -16,7 +16,9 @@ using Framework.Common.Logging;
 using Framework.WebControls;
 using CSIPCommonModel.EntityLayer;
 using CSIPCommonModel.BusinessRules;
+using CSIPKeyInGUI.BusinessRules;
 using CSIPNewInvoice.EntityLayer_new;
+using Framework.Common.Utility;
 
 public partial class P010503000001 : PageBase
 {
@@ -38,6 +40,9 @@ public partial class P010503000001 : PageBase
             jsBuilder.RegScript(UpdatePanel1, BaseHelper.ClientMsgShow(""));
 
             Show();
+            // 設置每頁顯示記錄最大條數
+            gpList.PageSize = int.Parse(UtilHelper.GetAppSettings("PageSize"));
+            gridView.PageSize = int.Parse(UtilHelper.GetAppSettings("PageSize"));
             btnOK.Enabled = false;
             BindGridView();
         }
@@ -182,6 +187,9 @@ public partial class P010503000001 : PageBase
         var achRtnMsg = txtAchRtnMsg.Text.Trim();
         var needSendHost = NeedSendHostList.SelectedValue;
         var sendHostMsg = txtSendHostMsg.Text.Trim();
+        
+        // 轉全形
+        sendHostMsg = BRCommon.ChangeToSBC(sendHostMsg);
 
         if (string.IsNullOrEmpty(achRtnCode) || string.IsNullOrEmpty(achRtnMsg))
         {
@@ -250,6 +258,9 @@ public partial class P010503000001 : PageBase
         var achRtnMsg = txtAchRtnMsg.Text.Trim();
         var needSendHost = NeedSendHostList.SelectedValue;
         var sendHostMsg = txtSendHostMsg.Text.Trim();
+        
+        // 轉全形
+        sendHostMsg = BRCommon.ChangeToSBC(sendHostMsg);
 
         if (string.IsNullOrEmpty(achRtnCode) || string.IsNullOrEmpty(achRtnMsg))
         {
@@ -333,14 +344,15 @@ public partial class P010503000001 : PageBase
     {
         try
         {
+            int intTotolCount = 0;
             var sql = @"SELECT AchRtnInfoSeq, Ach_Rtn_Code, Ach_Rtn_Msg, NeedSendHost, SendHostMsg FROM Ach_Rtn_Info ORDER BY Ach_Rtn_Code";
             SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sql };
-            DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
+            DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, gpList.CurrentPageIndex, gpList.PageSize, ref intTotolCount, "Connection_System");
             if (ds != null && ds.Tables[0].Rows.Count > 0)
             {
                 gpList.Visible = true;
                 gridView.Visible = true;
-                gpList.RecordCount = ds.Tables[0].Rows.Count;
+                gpList.RecordCount = intTotolCount;
                 gridView.DataSource = ds.Tables[0];
                 gridView.DataBind();
             }

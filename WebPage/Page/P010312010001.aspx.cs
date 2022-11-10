@@ -184,21 +184,30 @@ public partial class P010312010001 : PageBase
             }
 
             int intTotolCount = 0;
-            string sqlText = @"SELECT AuthCode, Other_Bank_Code_L, Cus_ID, Other_Bank_Acc_No, Apply_Type, 
-                                    CASE
-	                                    WHEN UploadFlag IN('0') THEN '待上傳' 
-	                                    WHEN UploadFlag IN('1') THEN '已上傳' 
-	                                    WHEN UploadFlag IN('2') THEN '其他核印失敗集作人工處理' 
-	                                    ELSE '' 
-	                                END AS UploadFlag, 
-                                        Reply_Info, 
-                                    CASE
-	                                    WHEN PayWay IN('0') THEN '繳全額' 
-	                                    WHEN PayWay IN('1') THEN '繳最低額' 
-	                                    ELSE '' 
-	                                END AS PayWay, 
-                                        SalesChannel, ApplyDate, BatchDate 
-                               FROM EDDA_Auto_Pay WHERE BatchDate BETWEEN @BatchDateStart AND @BatchDateEnd ";
+            string sqlText = @"
+            SELECT AuthCode,
+                   Other_Bank_Code_L,
+                   Cus_ID,
+                   Other_Bank_Acc_No,
+                   Apply_Type,
+                   CASE
+                       WHEN UploadFlag = '0' THEN N'待上傳'
+                       WHEN UploadFlag = '1' THEN N'已上傳'
+                       WHEN UploadFlag = '2' THEN N'其他核印失敗集作人工處理'
+                       ELSE ''
+                       END AS UploadFlag,
+                   Reply_Info,
+                   CASE
+                       WHEN PayWay = '0' THEN N'繳全額'
+                       WHEN PayWay = '1' THEN N'繳最低額'
+                       ELSE ''
+                       END AS PayWay,
+                   SalesChannel,
+                   ApplyDate,
+                   BatchDate
+            FROM EDDA_Auto_Pay
+            WHERE BatchDate BETWEEN @BatchDateStart AND @BatchDateEnd";
+            
             SqlCommand sqlComm = new SqlCommand{ CommandType = CommandType.Text, CommandText = sqlText };
             sqlComm.Parameters.Add(new SqlParameter("@BatchDateStart", txtDownloadFileDateStart.Text)); //批次起日
             sqlComm.Parameters.Add(new SqlParameter("@BatchDateEnd", txtDownloadFileDateEnd.Text)); //批次迄日

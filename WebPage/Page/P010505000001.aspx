@@ -70,7 +70,7 @@ function CheckInputValue()
                             <cc1:custlabel runat="server" ShowID="01_05050000_009"></cc1:custlabel>：
                         </td>
                         <td style="text-align: left; width: 55%">
-                            <cc1:custtextbox id="txtEddaRtnMsg" runat="server" Width="400px" MaxLength="9"></cc1:custtextbox>
+                            <cc1:custtextbox id="txtEddaRtnMsg" runat="server" Width="400px" MaxLength="50"></cc1:custtextbox>
                         </td>
                     </tr>
                     <tr class="trEven">

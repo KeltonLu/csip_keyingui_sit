@@ -155,15 +155,15 @@ public class EddaUploadFailData : IJob
                                    APAF.IssueChannel,    -- 申請通路
                                    APAF.IssueDate,       -- 申請日期
                                    CASE APAF.DataType
-                                       WHEN '0' THEN ERI.SendHostMsg
-                                       WHEN '1' THEN ARI.SendHostMsg
-                                       WHEN '2' THEN PRI.SendHostMsg
-                                       END AS FailReason -- 失敗原因
+                                       WHEN '0' THEN left(ltrim(SUBSTRING(ERI.SendHostMsg, 1, 9)) + N'　　　　　　　　　', 9)
+                                       WHEN '1' THEN left(ltrim(SUBSTRING(ARI.SendHostMsg, 1, 9)) + N'　　　　　　　　　', 9)
+                                       WHEN '2' THEN left(ltrim(SUBSTRING(PRI.SendHostMsg, 1, 9)) + N'　　　　　　　　　', 9)
+                                       END AS FailReason -- 失敗原因(長度18：英數空白統一轉換成全形)
                             FROM Auto_Pay_Auth_Fail APAF
                             LEFT JOIN EDDA_Rtn_Info ERI ON ERI.EddaRtnCode = APAF.ErrorCode
                             LEFT JOIN Ach_Rtn_Info ARI ON ARI.Ach_Rtn_Code = APAF.ErrorCode
                             LEFT JOIN PostOffice_Rtn_Info PRI ON PRI.PostRtnCode = APAF.ErrorCode
-                            WHERE APAF.UploadFlag <> 'Y'; ";
+                            WHERE APAF.UploadFlag <> 'Y'";
 
         SqlCommand sqlComm = new SqlCommand();
         sqlComm.CommandType = CommandType.Text;
@@ -189,19 +189,7 @@ public class EddaUploadFailData : IJob
                 content += SubstringAndPadRight(row["ErrorCode"].ToString().Trim(), 2); // 失敗代碼
                 content += SubstringAndPadRight(row["IssueChannel"].ToString().Trim(), 4); // 申請通路
                 content += SubstringAndPadRight(row["IssueDate"].ToString().Trim(), 8); // 申請日期
-
-                //失敗原因
-                var failReason = row["FailReason"].ToString().Trim();
-                var failReasonLength = GetFailReasonLength(failReason); // 取得包含中文的實際長度
-                if (failReasonLength > 20)
-                {
-                    failReason = ChineseSubStr(failReason, 0, 20);
-                }
-                else
-                {
-                    failReason += "".PadRight(20 - failReasonLength, ' ');
-                }
-                content += failReason;
+                content += row["FailReason"].ToString(); // 失敗原因
                 content += "\r\n";
             }
 
@@ -449,7 +437,6 @@ public class EddaUploadFailData : IJob
             string remotePath = dt.Rows[0]["FtpPath"].ToString().Trim();
             string remoteUser = dt.Rows[0]["FtpUserName"].ToString().Trim();
             string remotePass = RedirectHelper.GetDecryptString(dt.Rows[0]["FtpPwd"].ToString().Trim());
-            // string remoteFile = fileName.Trim();
 
             // Get the object used to communicate with the server.
             if (remotePath.Substring(remotePath.Length - 1) != "/")
@@ -520,43 +507,5 @@ public class EddaUploadFailData : IJob
     {
         var rtnString = str.Length > len ? str.Substring(0, len) : str;
         return rtnString.PadRight(len, ' ');
-    }
-
-    /// <summary>
-    /// 取得失敗原因(中文)長度
-    /// </summary>
-    /// <returns></returns>
-    private static int GetFailReasonLength(string str)
-    {
-        // 將字串轉為byte 
-        var byteStr = Encoding.GetEncoding("BIG5").GetBytes(str);
-        // 取byte的長度
-        return byteStr.Length; 
-    }
-    
-    /// <summary>
-    /// 針對中文使用substring
-    /// </summary>
-    /// <param name="str">文字</param>
-    /// <param name="startIndex">開始index</param>
-    /// <param name="length">截取長度</param>
-    /// <returns></returns>
-    private static string ChineseSubStr(string str, int startIndex, int length)
-    {
-        var encoding = Encoding.GetEncoding("BIG5", new EncoderExceptionFallback(), new DecoderReplacementFallback(""));
-        var bytes = encoding.GetBytes(str);
-
-        if (length <= 0)
-            return "";
-
-        if (startIndex + 1 > bytes.Length)
-            return "";
-
-        if (startIndex + length > bytes.Length)
-        {
-            length = bytes.Length - startIndex;
-        }
-
-        return encoding.GetString(bytes, startIndex, length);
     }
 }

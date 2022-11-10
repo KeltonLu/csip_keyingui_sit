@@ -236,7 +236,7 @@ where aps.IsCTCB = 'S' and ap.KeyIn_Flag = '2' and ap.mod_date >= @DateStart and
             string IsNotCTCB = @"
 select a.receive_number, a.Other_Bank_Cus_ID as cus_id, a.cus_name, a.Other_Bank_code_S as accnobank, 
        a.Other_Bank_acc_no as acc_no, a.Other_Bank_pay_way as pay_way, 
-       case when a.ACH_Return_Code = '0' then 
+       case when a.ACH_Return_Code in ('0', '4') then 
             case when a.Pcmc_Return_Code = 'PAGE 00 OF 03' or a.Pcmc_Return_Code = 'PAGE 02 OF 03' then '由電文直接更新(新增自扣帳號)' 
                  when a.Pcmc_Return_Code = 'ERROR:0' then '更新失敗-人工刪除' 
                  when a.Pcmc_Return_Code = 'ERROR:O' then 'O檔(ID/帳號異動)' 
@@ -253,7 +253,7 @@ select a.receive_number, a.Other_Bank_Cus_ID as cus_id, a.cus_name, a.Other_Bank
             end 
             when a.ACH_Return_Code = '1' then 'ACH核印失敗' else 'ACH報送核印中' end as isUpdateByTXT, 
                  '他行' as IsCTCB, substring(mod_date, 1, 4) + '/' + substring(mod_date, 5, 2) + '/' + substring(mod_date, 7, 2) as DocDate, 
-       case when a.ACH_Return_Code = '0' then 
+       case when a.ACH_Return_Code in ('0', '4') then 
             case when a.Pcmc_Return_Code = 'PAGE 00 OF 03' or a.Pcmc_Return_Code = 'PAGE 02 OF 03' then '更新主機完成' 
                  when a.Pcmc_Return_Code = 'ERROR:0' then '人工刪除' 
                  when a.Pcmc_Return_Code = 'ERROR:O' then '待IT完成帳號維護(O),自扣即完成設定' 
@@ -539,7 +539,7 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
             string strSql_IsNotCTCB = " select a.receive_number, " +
                         //" a.cus_id, a.cus_name,a.Other_Bank_code_S as accnobank,a.Other_Bank_acc_no as acc_no,a.Other_Bank_pay_way as pay_way, " +
                         " a.Other_Bank_Cus_ID as cus_id, a.cus_name,a.Other_Bank_code_S as accnobank,a.Other_Bank_acc_no as acc_no,a.Other_Bank_pay_way as pay_way, " +
-                        " case when a.ACH_Return_Code = '0' then " +
+                        " case when a.ACH_Return_Code in ('0', '4') then " +
              "case when a.Pcmc_Return_Code = 'PAGE 00 OF 03' or a.Pcmc_Return_Code='PAGE 02 OF 03' then '由電文直接更新(新增自扣帳號)' " +
                    "when a.Pcmc_Return_Code ='ERROR:0' then '更新失敗-人工刪除'" +
                    "when a.Pcmc_Return_Code ='ERROR:O' then 'O檔(ID/帳號異動)'" +
@@ -553,7 +553,7 @@ where a.Receive_Number = '' and mod_date >= @DateStart and mod_date <= @DateEnd 
                 "case when a.UpFile_Time is NULL then 'PCMC失敗'" +
                      "when a.UpFile_Time is not NULL then 'PCMC失敗'" +
             "else 'PCMC失敗' end end when a.ACH_Return_Code = '1' then 'ACH核印失敗'  else 'ACH報送核印中' end as isUpdateByTXT, '他行'as IsCTCB,substring(mod_date,1,4)+'/'+substring(mod_date,5,2)+'/'+substring(mod_date,7,2) as DocDate, " +
-            " case when a.ACH_Return_Code = '0' then " +
+            " case when a.ACH_Return_Code in ('0', '4') then " +
                  " case when a.Pcmc_Return_Code = 'PAGE 00 OF 03' or a.Pcmc_Return_Code='PAGE 02 OF 03' then '更新主機完成' " +
                 "	   when a.Pcmc_Return_Code ='ERROR:0' then '人工刪除'" +
                 "	   when a.Pcmc_Return_Code ='ERROR:O' then '待IT完成帳號維護(O),自扣即完成設定'" +

@@ -203,30 +203,49 @@ public partial class P010312030001 : PageBase
             if (radComparisonStatus_4.Checked)
                 ComparisonStatus = string.Empty; ;
 
-            string sqlText = @"SELECT BatchDate,
-                                    CASE
-	                                    WHEN ComparisonStatus IN('0') THEN '待比對' 
-	                                    WHEN ComparisonStatus IN('1') THEN '正常' 
-	                                    WHEN ComparisonStatus IN('2') THEN '缺少網銀資料' 
-	                                    WHEN ComparisonStatus IN('3') THEN '網銀異常資料' 
-	                                    ELSE '' 
-	                                END AS ComparisonStatus,
-	                                    UploadTime, Deal_S_No, Deal_No, AuthCode, Cus_ID, Apply_Type, ApplyDate, AccNoBank, AccNo, 
-                                    CASE
-	                                    WHEN PayWay IN('0') THEN '繳全額' 
-	                                    WHEN PayWay IN('1') THEN '繳最低額' 
-	                                    ELSE '' 
-	                                END AS PayWay, 
-                                        Reply_Info, AccID, SalesChannel, SalesUnit, SalesEmpoNo 
-                                    FROM 
-                                        EDDA_Auto_Pay 
-                                    WHERE (BatchDate BETWEEN @StartDate AND @EndDate) ";
-            string sqlOrderBy = "ORDER BY BatchDate";
+            string sqlText = @"
+            SELECT BatchDate,
+                   CASE
+                       WHEN ComparisonStatus = '0' THEN N'待比對'
+                       WHEN ComparisonStatus = '1' THEN N'正常'
+                       WHEN ComparisonStatus = '2' THEN N'缺少網銀資料'
+                       WHEN ComparisonStatus = '3' THEN N'網銀異常資料'
+                       ELSE ''
+                       END AS ComparisonStatus,
+                   UploadTime,
+                   Deal_S_No,
+                   Deal_No,
+                   AuthCode,
+                   Cus_ID,
+                   Apply_Type,
+                   ApplyDate,
+                   AccNoBank,
+                   AccNo,
+                   CASE
+                       WHEN PayWay = '0' THEN N'繳全額'
+                       WHEN PayWay = '1' THEN N'繳最低額'
+                       ELSE ''
+                       END AS PayWay,
+                   Reply_Info,
+                   AccID,
+                   SalesChannel,
+                   SalesUnit,
+                   SalesEmpoNo
+            FROM EDDA_Auto_Pay
+            WHERE BatchDate BETWEEN @StartDate AND @EndDate";
+            
             string sqlWhere = string.Empty;
             if (!string.IsNullOrEmpty(ComparisonStatus))
-                sqlWhere += @"AND ComparisonStatus = @ComparisonStatus ";
+            {
+                sqlWhere += @" AND ComparisonStatus = @ComparisonStatus ";
+            }
             if (!string.IsNullOrEmpty(Cus_ID))
-                sqlWhere += @"AND Cus_ID = @Cus_ID ";
+            {
+                sqlWhere += @" AND Cus_ID = @Cus_ID ";
+            }
+            
+            string sqlOrderBy = " ORDER BY BatchDate";
+
 
             SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sqlText + sqlWhere + sqlOrderBy };
             sqlComm.Parameters.Add(new SqlParameter("@Cus_ID", txtCus_ID.Text)); //客戶ID

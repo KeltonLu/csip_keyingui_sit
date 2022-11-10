@@ -37,7 +37,7 @@ namespace CSIPKeyInGUI.BusinessRules
 
         public const string SEL_ACH_OTHER_BANK_TEMP_R02 = @"select a.Receive_Number,a.Other_Bank_Code_L,c.BankName,a.Other_Bank_Cus_ID," +
                                                           "a.Other_Bank_Acc_No,a.Cus_ID,a.Apply_Type," +
-                                                          "CASE WHEN a.Ach_Return_Code = '0' THEN '成功' ELSE '失敗' END AS R02_flag,d.Ach_Rtn_Code,d.Ach_Rtn_Msg " +
+                                                          "CASE WHEN a.Ach_Return_Code IN ('0', '4') THEN N'成功' ELSE N'失敗' END AS R02_flag,d.Ach_Rtn_Code,d.Ach_Rtn_Msg " +
                                                           "from Other_Bank_Temp a left join batch b on a.Batch_no = b.Batch_no " +
                                                           "left join " +
                                                           "(select bankl.property_code as BankCodeS,bankl.property_name as BankCodeL,bankn.property_name as BankName  " +
@@ -71,7 +71,7 @@ From (select batch_no, count(batch_no) as AllCount, '' as sCount, '' as fCount, 
       select batch_no, '' as AllCount, '' as SCount, '' as fCount, count(batch_no) as nCount
       from Other_Bank_Temp
       where Batch_no >= @Batch_no_start and Batch_no <= @Batch_no_end
-        and ISNULL(Pcmc_Upload_flag, '') <> '1' and ACH_Return_Code = '0'
+        and ISNULL(Pcmc_Upload_flag, '') <> '1' and ACH_Return_Code in ('0', '4')
       group by batch_no) a
 group by batch_no ";
         
@@ -165,7 +165,7 @@ ORDER BY T.Batch_no ";
                             "a.Pcmc_Return_Code,a.Other_Bank_Code_S,a.Other_Bank_Acc_No,a.Other_Bank_Pay_Way," +
                             "a.Other_Bank_Cus_ID,a.bcycle_code,a.Mobile_Phone,a.E_Mail,E_Bill,isnull(b.[user_name],'') as [user_name],a.C1342_Return_Code " +
                         "from Other_Bank_Temp a left join (select distinct user_id,User_name from {0}.dbo.M_USER) as  b on a.[user_id] = b.[user_id] " +
-                        "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end and ISNULL(Pcmc_Upload_flag, '')  <> '1' and ACH_Return_Code = '0' " +
+                        "where Batch_no>=@Batch_no_start and Batch_no<=@Batch_no_end and ISNULL(Pcmc_Upload_flag, '')  <> '1' and ACH_Return_Code in ('0', '4') " +
                         "order by a.Batch_no ";
 
         #endregion
@@ -473,10 +473,15 @@ ORDER BY T.Batch_no ";
                     // 成功/失敗
                     sheet.GetRow(sheet.LastRowNum).GetCell(7).SetCellValue(dtblData_R02.Rows[idx]["R02_flag"].ToString());
                     // 回覆訊息
-                    sheet.GetRow(sheet.LastRowNum).GetCell(8).SetCellValue(dtblData_R02.Rows[idx]["Ach_Rtn_Code"].ToString().Trim() + "：" + dtblData_R02.Rows[idx]["Ach_Rtn_Msg"].ToString().Trim());
-                    if (sheet.GetRow(sheet.LastRowNum).GetCell(8).StringCellValue.ToString() == "：")
+                    var achRtnCode = dtblData_R02.Rows[idx]["Ach_Rtn_Code"].ToString().Trim();
+                    var achRtnMsg = dtblData_R02.Rows[idx]["Ach_Rtn_Msg"].ToString().Trim();
+                    if (string.IsNullOrWhiteSpace(achRtnCode))
                     {
                         sheet.GetRow(sheet.LastRowNum).GetCell(8).SetCellValue("系統內無該錯誤代碼對應訊息");
+                    }
+                    else
+                    {
+                        sheet.GetRow(sheet.LastRowNum).GetCell(8).SetCellValue(achRtnCode + ":" + achRtnMsg);
                     }
                     if (dtblData_R02.Rows[idx]["R02_flag"].ToString().Trim() == "成功")
                     {
@@ -1514,7 +1519,7 @@ ORDER BY T.Batch_no ";
             {
                 if (blSuccess)
                 {
-                    sbWhere.Append(" b.R02_flag in ('2','3') and a.Ach_Return_Code = '0'");
+                    sbWhere.Append(" b.R02_flag in ('2','3') and a.Ach_Return_Code in ('0', '4')");
                 }
                 if (blFault)
                 {

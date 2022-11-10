@@ -16,7 +16,9 @@ using Framework.Common.Logging;
 using Framework.WebControls;
 using CSIPCommonModel.EntityLayer;
 using CSIPCommonModel.BusinessRules;
+using CSIPKeyInGUI.BusinessRules;
 using CSIPNewInvoice.EntityLayer_new;
+using Framework.Common.Utility;
 
 public partial class P010504000001 : PageBase
 {
@@ -38,6 +40,9 @@ public partial class P010504000001 : PageBase
             jsBuilder.RegScript(UpdatePanel1, BaseHelper.ClientMsgShow(""));
 
             Show();
+            // 設置每頁顯示記錄最大條數
+            gpList.PageSize = int.Parse(UtilHelper.GetAppSettings("PageSize"));
+            gridView.PageSize = int.Parse(UtilHelper.GetAppSettings("PageSize"));
             btnOK.Enabled = false;
             BindGridView();
         }
@@ -52,12 +57,12 @@ public partial class P010504000001 : PageBase
     {
         gridView.Columns[0].HeaderText = string.Empty; // 流水號不顯示
         gridView.Columns[1].HeaderText = string.Empty; // 類別代號不顯示
-        gridView.Columns[2].HeaderText = BaseHelper.GetShowText("01_05030000_008");
-        gridView.Columns[3].HeaderText = BaseHelper.GetShowText("01_05030000_009");
-        gridView.Columns[4].HeaderText = BaseHelper.GetShowText("01_05030000_010");
-        gridView.Columns[5].HeaderText = BaseHelper.GetShowText("01_05030000_011");
-        gridView.Columns[6].HeaderText = BaseHelper.GetShowText("01_05030000_012");
-        gridView.Columns[7].HeaderText = BaseHelper.GetShowText("01_05030000_007");
+        gridView.Columns[2].HeaderText = BaseHelper.GetShowText("01_05040000_008");
+        gridView.Columns[3].HeaderText = BaseHelper.GetShowText("01_05040000_009");
+        gridView.Columns[4].HeaderText = BaseHelper.GetShowText("01_05040000_010");
+        gridView.Columns[5].HeaderText = BaseHelper.GetShowText("01_05040000_011");
+        gridView.Columns[6].HeaderText = BaseHelper.GetShowText("01_05040000_012");
+        gridView.Columns[7].HeaderText = BaseHelper.GetShowText("01_05040000_007");
     }
 
     /// <summary>
@@ -182,6 +187,9 @@ public partial class P010504000001 : PageBase
         var postRtnMsg = txtPostRtnMsg.Text.Trim();
         var needSendHost = NeedSendHostList.SelectedValue;
         var sendHostMsg = txtSendHostMsg.Text.Trim();
+        
+        // 轉全形
+        sendHostMsg = BRCommon.ChangeToSBC(sendHostMsg);
 
         if (string.IsNullOrEmpty(rtnType) || string.IsNullOrEmpty(postRtnCode))
         {
@@ -250,6 +258,9 @@ public partial class P010504000001 : PageBase
         var postRtnMsg = txtPostRtnMsg.Text.Trim();
         var needSendHost = NeedSendHostList.SelectedValue;
         var sendHostMsg = txtSendHostMsg.Text.Trim();
+        
+        // 轉全形
+        sendHostMsg = BRCommon.ChangeToSBC(sendHostMsg);
 
         if (string.IsNullOrEmpty(rtnType) || string.IsNullOrEmpty(postRtnCode) ||
             string.IsNullOrEmpty(postRtnMsg))
@@ -335,16 +346,17 @@ public partial class P010504000001 : PageBase
     {
         try
         {
+            int intTotolCount = 0;
             var sql = @"SELECT PostOfficeRtnInfoSeq, RtnType, PostRtnCode, PostRtnMsg, NeedSendHost, SendHostMsg,
                         CASE RtnType WHEN '1' THEN '狀況代號' WHEN '2' THEN '核對註記' ELSE '' END AS RtnTypeName
                         FROM PostOffice_Rtn_Info WHERE RtnType IN ('1', '2') ORDER BY RtnType, PostRtnCode";
             SqlCommand sqlComm = new SqlCommand { CommandType = CommandType.Text, CommandText = sql };
-            DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, "Connection_System");
+            DataSet ds = BRBase<Entity_SP>.SearchOnDataSet(sqlComm, gpList.CurrentPageIndex, gpList.PageSize, ref intTotolCount, "Connection_System");
             if (ds != null && ds.Tables[0].Rows.Count > 0)
             {
                 gpList.Visible = true;
                 gridView.Visible = true;
-                gpList.RecordCount = ds.Tables[0].Rows.Count;
+                gpList.RecordCount = intTotolCount;
                 gridView.DataSource = ds.Tables[0];
                 gridView.DataBind();
             }
